@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg">
+      <statement><p>Evaluate the following limits:</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle \lim_{x\to 5^{-}}  \frac{2}{(x-5)^{3}}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="20"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle \lim_{x\to 0}      \frac{1}{x^{2}(x+7)}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="20"/></cell>
+</row>
+<row>
+<cell>3.</cell>
+<cell><m>\displaystyle \lim_{x\to 3^{+}}  \frac{2}{x-3}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="20"/></cell>
+</row>
+<row>
+<cell>4.</cell>
+<cell><m>\displaystyle \lim_{x\to 5}      \frac{2}{(x-5)^{6}}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0004" characters="20"/></cell>
+</row>
+</tabular>
+</sidebyside>
+<p><em><SMALL>Use <lq/>infinity<rq/> for <lq/><m>\infty</m><rq/> and <lq/>-infinity<rq/> for <lq/><m>-\infty</m><rq/>.</SMALL></em></p>
+</statement>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <solution><p>SOLUTION</p>
+<p><B> 1. </B>  
+ If <m>x</m> is close to <m>5</m> but smaller than <m>5</m>, then the denominator <m>(x-5)^3</m> 
+is a small 
+negative number. So the quotient <m>\frac{2}{(x-5)^3}</m> is a large negative number. Thus 
+<m>\displaystyle \lim_{x\to 5^{-}}  \frac{2}{(x-5)^3}=  -\infty</m>.</p>
+<p><B> 2. </B>
+ If <m>x</m> is close to <m>0</m> , then the denominator <m>x^2(x+7)</m> 
+is a small 
+positive number. So the quotient <m>\frac{1}{x^2(x+7)}</m> is a large positive number. Thus 
+<m>\displaystyle \lim_{x\to 0}  \frac{1}{x^2(x+7)}=  \infty</m>.</p>
+<p><B> 3. </B>
+ If <m>x</m> is close to <m>3</m> but larger than <m>3</m>, then the denominator <m>x-3</m> is a small 
+positive number. So the quotient <m>\frac{2}{x-3}</m> is a large positive number. Thus 
+<m>\displaystyle \lim_{x\to 3^{+}}  \frac{2}{x-3}=  \infty</m>.</p>
+<p><B> 4. </B>
+ If <m>x</m> is close to <m>5</m> , then the denominator <m>(x-5)^6</m> is a small 
+positive number. So the quotient <m>\frac{2}{(x-5)^6}</m> is a large positive number. Thus 
+<m>\displaystyle \lim_{x\to 5}  \frac{2}{(x-5)^6}=  \infty</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg</server-url>
+    <pg source="rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg"/>
+  </webwork-reps>
+</webwork-representations>

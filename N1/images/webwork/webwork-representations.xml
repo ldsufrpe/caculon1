@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="limit-intro-laterais-infinitos/problema14.pg">
+      <statement><p>Aproxime o limite dado numericamente e graficamente.</p>
+<p><m>\lim\limits_{x \to 0} \dfrac {x + 2}{x^2 + 8 x} =</m>  <fillin name="AnSwEr0001" characters="10"/></p>
+<p>(Use "DNE" se o limite não existir)</p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=limit-intro-laterais-infinitos/problema14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=limit-intro-laterais-infinitos/problema14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=limit-intro-laterais-infinitos/problema14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=limit-intro-laterais-infinitos/problema14.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="limit-intro-laterais-infinitos/problema7.pg">
+      <statement><p>A assíntota vertical da curva
+ <me>y=\frac{-8 x^3}{x +3}</me>
+é dada por <m>x=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-3</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=limit-intro-laterais-infinitos/problema7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=limit-intro-laterais-infinitos/problema7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=limit-intro-laterais-infinitos/problema7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=limit-intro-laterais-infinitos/problema7.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="limit-intro-laterais-infinitos/problema8.pg">
+      <statement><p>A  <xref ref="def-assintota-vertical"/> diz que uma função tem uma assíntota vertical <alert> </alert> sempre que o limite à esquerda ou à direita (ou ambos) for infinito positivo ou negativo.</p>
+<p>Por Exemplo, a função<m>f(x)= \dfrac{-2x+1}{(x-7)^2}</m> tem assíntota horizontal em <m>x=7</m>.</p>
+<p>Para cada um dos seguintes limites, insira 'P' para infinito positivo, 'N' para infinito negativo ou 'DNE' quando o limite simplesmente não existir.</p>
+<p><m>\displaystyle{
+         \lim_{x\to 7^-} \dfrac{-2x+1}{(x-7)^2} = }</m><fillin name="AnSwEr0001" characters="10"/></p>
+<p><m>\displaystyle{
+         \lim_{x\to 7^+} \dfrac{-2x+1}{(x-7)^2} = }</m><fillin name="AnSwEr0002" characters="10"/></p>
+<p><m>\displaystyle{
+         \lim_{x\to 7} \dfrac{-2x+1}{(x-7)^2} = }</m> <fillin name="AnSwEr0003" characters="10"/></p>
+</statement>
+      <answer>
+        <p>N</p>
+      </answer>
+      <answer>
+        <p>N</p>
+      </answer>
+      <answer>
+        <p>N</p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=limit-intro-laterais-infinitos/problema8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=limit-intro-laterais-infinitos/problema8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=limit-intro-laterais-infinitos/problema8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=limit-intro-laterais-infinitos/problema8.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="limit-intro-laterais-infinitos/problema11.pg">
+      <statement><p>Para <m>f</m> e <m>a</m> dados. Aproxime o limite do quociente,</p>
+<p><m>\lim\limits_{h \to 0} \frac{f(a+h) - f(a)}{h},</m>
+usando <m>h = \pm 0.1, \pm 0.01</m>.</p>
+<p><m>f(x) =  \sin x, \qquad a = \pi</m></p>
+<p>quando <m>h = 0.1</m>, <m>\frac{f(a+h) - f(a)}{h}</m> = <fillin name="AnSwEr0001" characters="10"/></p>
+<p>quando <m>h = -0.1</m>, <m>\frac{f(a+h) - f(a)}{h}</m> = <fillin name="AnSwEr0002" characters="10"/></p>
+<p>quando <m>h = 0.01</m>, <m>\frac{f(a+h) - f(a)}{h}</m> = <fillin name="AnSwEr0003" characters="10"/></p>
+<p>quando <m>h = -0.01</m>, <m>\frac{f(a+h) - f(a)}{h}</m> = <fillin name="AnSwEr0004" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-0.998334166468281</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.998334166468284</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.999983333416633</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.999983333416657</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=limit-intro-laterais-infinitos/problema11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=limit-intro-laterais-infinitos/problema11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=limit-intro-laterais-infinitos/problema11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=limit-intro-laterais-infinitos/problema11.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="limit-intro-laterais-infinitos/problema12.pg">
+      <statement><p>Por definição, <m>e</m> é o número tal que
+<me>\displaystyle\displaystyle\lim_{h \to 0} \frac{e^h-1}{h}=1.</me>
+Use uma calculadora para estimar os valores dos limites (arredondados para o centésimo mais próximo):
+<me>\displaystyle A=\displaystyle\lim_{h \to
+0} \frac{{2.7}^h-1}{h} \quad \text{and} \quad \displaystyle B=\displaystyle\lim_{h \to
+0} \frac{{2.8}^h-1}{h}.</me></p>
+<p><alert>NOTE</alert>:A partir disso, você deve concluir que <m>e</m> está em algum lugar entre <m>2.7</m> e <m>2.8</m>.</p>
+<p><m>A=</m> <fillin name="AnSwEr0001" characters="10"/></p>
+<p><m>B=</m> <fillin name="AnSwEr0002" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.99</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.03</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=limit-intro-laterais-infinitos/problema12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=limit-intro-laterais-infinitos/problema12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=limit-intro-laterais-infinitos/problema12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=limit-intro-laterais-infinitos/problema12.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="limit-intro-laterais-infinitos/problema13.pg">
+      <statement><p>Adivinhe o valor do limite avaliando a função em valores próximos de onde o limite deve ser executado. (Dica: o número deve parecer familiar.)</p>
+<p><m>\displaystyle \lim_{x \to 0} (1+x)^{1/x}</m></p>
+<p><fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>e</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=limit-intro-laterais-infinitos/problema13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=limit-intro-laterais-infinitos/problema13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=limit-intro-laterais-infinitos/problema13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=limit-intro-laterais-infinitos/problema13.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="limit-intro-laterais-infinitos/problema3.pg">
+      <statement><p>Se a função  <m>f</m> definida por:</p>
+<p><me>f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  2\cr
+\displaystyle{4}\amp \text{if}\ x &gt; 2.\end{cases}</me></p>
+<p>Esboce o gráfico dessa função e encontre as seguintes
+limites, se existirem.</p>
+<p>Use "DNE" para "Não existe".</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow 2^{-}} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="4"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow 2^{+}} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="4"/></cell>
+</row>
+<row>
+<cell>3.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow 2} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="4"/></cell>
+</row>
+</tabular>
+</sidebyside>
+</statement>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=limit-intro-laterais-infinitos/problema3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=limit-intro-laterais-infinitos/problema3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=limit-intro-laterais-infinitos/problema3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=limit-intro-laterais-infinitos/problema3.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="limit-intro-laterais-infinitos/problema5.pg">
+      <statement><p>Seja uma função <m>f</m> definida por:</p>
+<p><me>f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  -1\cr
+\displaystyle{4}\amp \text{if}\ x &gt; -1.\end{cases}</me></p>
+<p>Esboce o gráfico dessa função e encontre as seguintes limites, se existirem.</p>
+<p>Use "DNE" para "Não existe".</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow -1^{-}} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="4"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow -1^{+}} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="4"/></cell>
+</row>
+<row>
+<cell>3.</cell>
+<cell><m>\displaystyle\lim_{x\rightarrow -1} f(x)</m> </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="4"/></cell>
+</row>
+</tabular>
+</sidebyside>
+</statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=limit-intro-laterais-infinitos/problema5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=limit-intro-laterais-infinitos/problema5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=limit-intro-laterais-infinitos/problema5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=limit-intro-laterais-infinitos/problema5.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="limit-intro-laterais-infinitos/problema2.pg">
+      <statement><p>Determine os seguintes limites:</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle \lim_{x\to 0}      \frac{1}{x^{2}(x+7)}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="20"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle \lim_{x\to 3^{+}}  \frac{2}{x-3}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="20"/></cell>
+</row>
+<row>
+<cell>3.</cell>
+<cell><m>\displaystyle \lim_{x\to -7^{-}} \frac{1}{x^{2}(x+7)}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="20"/></cell>
+</row>
+<row>
+<cell>4.</cell>
+<cell><m>\displaystyle \lim_{x\to 3^{-}}  \frac{2}{x-3}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0004" characters="20"/></cell>
+</row>
+</tabular>
+</sidebyside>
+<p>Use "infinity" para "∞" e "-infinity" para "−∞".</p>
+</statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+      <solution><p>Solução</p>
+<p><B> 1. </B>  
+ Se <m>x</m> está próximo <m>0</m> , então o denominador <m>x^2(x+7)</m> 
+é um número pequeno negativo. Portanto, o queciente <m>\frac{1}{x^2(x+7)}</m> é um número grande positivo. Então,
+<m>\displaystyle \lim_{x\to 0}  \frac{1}{x^2(x+7)}=  \infty</m>.</p>
+<p><B> 2. </B>
+ Se <m>x</m> está próximo de <m>3</m> mas maior que <m>3</m>, então o denominador <m>x-3</m> é um número positivo pequeno. Portanto, o quociente <m>\frac{2}{x-3}</m> é um número positivo grande. Então, intuitivamente, temos que 
+<m>\displaystyle \lim_{x\to 3^{+}}  \frac{2}{x-3}=  \infty</m>.</p>
+<p><B> 3. </B>
+ Se <m>x</m> está próximo de <m>-7</m> mas menor que  <m>-7</m>, então o denominador <m>x^2(x+7)</m> 
+é um número pequeno negativo. Portanto, o quociente <m>\frac{1}{x^2(x+7)}</m> é um número grande negativo. Então, intuitivamente, temos que
+<m>\displaystyle \lim_{x\to -7^{-}}  \frac{1}{x^2(x+7)}=  -\infty</m>.</p>
+<p><B> 4. </B>
+ Se <m>x</m> está próximo de <m>3</m> mas é menor que 3 <m>3</m>, então o denominador <m>x-3</m> é um número negativo pequeno. Portanto, o quociente <m>\frac{2}{x-3}</m> é um número negativo grande. Então, intuitivamente, temos que 
+<m>\displaystyle \lim_{x\to 3^{-}}  \frac{2}{x-3}= - \infty</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=limit-intro-laterais-infinitos/problema2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=limit-intro-laterais-infinitos/problema2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=limit-intro-laterais-infinitos/problema2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=limit-intro-laterais-infinitos/problema2.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="limit-intro-laterais-infinitos/problema4.pg">
+      <statement><p>Determine os seguintes limites:</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle\lim_{x\to{(\frac{5}{8})}^+} \frac{31x}{5-8x}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="20"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle\lim_{x\to{(\frac{5}{8})}^-} \frac{31x}{5-8x}</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="20"/></cell>
+</row>
+</tabular>
+</sidebyside>
+<p>Use "infinity" para "∞" e "-infinity" para "−∞".</p>
+</statement>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=limit-intro-laterais-infinitos/problema4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=limit-intro-laterais-infinitos/problema4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=limit-intro-laterais-infinitos/problema4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=limit-intro-laterais-infinitos/problema4.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="limit-intro-laterais-infinitos/problema6.pg">
+      <statement><p>Let
+<me>f(x) = \begin{cases}
+               6         \amp  \text{ if } x \lt 0 \\
+             -x+ 6 \amp  \text{ if } 0 \le x \lt 1 \\
+                3     \amp  \text{ if } x =1 \\
+               6       \amp  \text{ if } x \gt 1.
+            \end{cases}</me>
+Esboce o gráfico dessa função e encontre as seguintes
+limites, se existirem.</p>
+<p>Use "DNE" para "Não existe".</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 0^{-}} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="10"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 0^{+}} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="10"/></cell>
+</row>
+<row>
+<cell>3.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 0} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="10"/></cell>
+</row>
+<row>
+<cell>4.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 1^{-}} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0004" characters="10"/></cell>
+</row>
+<row>
+<cell>5.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 1^{+}} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0005" characters="10"/></cell>
+</row>
+<row>
+<cell>6.</cell>
+<cell><m>\displaystyle \lim_{ x \rightarrow 1} f(x)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0006" characters="10"/></cell>
+</row>
+</tabular>
+</sidebyside>
+</statement>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=limit-intro-laterais-infinitos/problema6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=limit-intro-laterais-infinitos/problema6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=limit-intro-laterais-infinitos/problema6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=limit-intro-laterais-infinitos/problema6.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="limit-intro-laterais-infinitos/problema9.pg">
+      <statement><p>Encontre os limites a seguir.</p>
+<p><m>\displaystyle{
+         \lim_{x\to -2^-}\frac{-3\!\left(x+2\right)}{x^{2}+4x+4}= }</m><fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>\displaystyle{
+         \lim_{x\to -2^+}\frac{-3\!\left(x+2\right)}{x^{2}+4x+4}=}</m><fillin name="AnSwEr0002" characters="20"/></p>
+<p><m>\displaystyle{
+         \lim_{x\to -2}\frac{-3\!\left(x+2\right)}{x^{2}+4x+4}=}</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p>Use "infinity" para "∞",  "-infinity" para "−∞" e 'DNE' quando simplemente o limite não existe.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=limit-intro-laterais-infinitos/problema9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=limit-intro-laterais-infinitos/problema9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=limit-intro-laterais-infinitos/problema9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=limit-intro-laterais-infinitos/problema9.pg</server-url>
+    <pg source="limit-intro-laterais-infinitos/problema9.pg"/>
+  </webwork-reps>
+</webwork-representations>

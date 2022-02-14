@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/projeto_logo_dm_2020_7.png" />
+
+
+
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        \usepackage{color}
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Cálculo Diferencial: N2</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+                    
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+        </introduction>
+    <section>
+    <title> Titulo</title>
+         <objectives>
+            <title>Estrutura</title>
+        
+            <ol>
+                <li>
+                    <p>
+                       texto
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+<introduction>
+        <p>
+            Texto
+        </p>
+    </introduction>
+ <subsection xml:id="subsec-xx">
+    <title>Titulo</title>
+    <definition xml:id="def-xx">
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </definition>
+<example xml:id="ex-1">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="ex-2">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-3">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+</subsection>
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+
+   <subsection xml:id="subsec-xxx">
+    <title>Limites infinitos</title>
+     <introduction>
+      <p>
+Até este ponto, discutimos o que acontece com uma função quando movemos sua entrada <m>x</m> cada vez mais perto de um ponto específico <m>a</m>. Para muitas aplicações de limites, precisamos entender o que acontece com uma função quando sua entrada se torna extremamente grande <mdash/>, por exemplo, o que acontece com uma população em um momento distante no futuro.
+</p>
+
+<p>
+A definição de um limite no infinito tem um sabor semelhante à definição de limites em pontos finitos que vimos acima, mas os detalhes são um pouco diferentes. Também precisamos distinguir entre infinito positivo e negativo. À medida que <m>x</m> se torna muito grande e positivo, ele se move em direção a <m>+\infty</m>, mas quando se torna muito grande e negativo, ele se move em direção a <m>-\infty</m> .
+</p>
+    </introduction>
+ <definition xml:id="def-limites-infinitos">
+        <statement><p>
+Escrevemos
+<md>
+<mrow>
+\lim_{x \to \infty} f(x) = L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+</p>
+
+<p>
+Similarmente, escrevemos
+<md>
+<mrow>
+\lim_{x \to -\infty} f(x) = L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+</p>
+</statement>
+
+    </definition>
+<example xml:id="ex-4">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="ex-5">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-6">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+</subsection>
+<subsection xml:id="sugestao-video-2">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+<subsection xml:id="subsec-xxxxxx">
+    <title>Título</title>
+ <definition xml:id="def-xxxxxxxxx">
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+    </definition>
+<example xml:id="ex-7">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:id="ex-8">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-9">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>   
+    
+</subsection>   
+<subsection xml:id="sugestao-video-3">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+<exercises xml:id="exercises-">
+<exercise>Escrever aqui
+</exercise>
+</exercises>   
+
+</section>
+
+
+
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+
+
+</article>
+
+</pretext>
+
+
+

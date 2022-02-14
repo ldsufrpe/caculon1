@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Limites: N1</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+               
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana 10.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title>O Limite de uma Função </title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                        texto 1
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       texto 2
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto 3
+                    </p>
+                </li>
+
+            </ol>
+            
+        </objectives>
+
+  <introduction>
+        <p>
+            Texto
+        </p>
+    </introduction>
+
+
+<subsection xml:id="ididid">
+    <title>Limite de uma Função</title>
+
+<definition xml:id="def-limite">
+    <statement>
+        <p>
+            O limite de uma função <m>f(x)</m>  com <m>x</m> aproximando-se de <m>a</m> é um número <m>L</m> 
+            com a seguinte propriedade: podemos tornar os valores de <m>f(x)</m> arbitrariamente próxima <m>L</m>, 
+            tomando <m>x</m> suficientemente próximo de <m>a</m> (tende para <m>a</m> por ambos os lados), 
+            mas não igual a <m>a</m>. 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        </p>
+    </statement>
+</definition>
+<p>
+    A notação para limite é
+            <me>
+                \lim_{x \to a} f(x)=L.
+            </me>
+</p>
+
+<paragraphs>
+    <title>Lê-se</title>
+    <p>
+      O limite de <m>f(x)</m>, quando <m>x</m> tende a <m>a</m>, é igual a <m>L</m>. 
+    </p>
+</paragraphs>
+
+
+<p>
+    texto
+</p>
+
+<example xml:id="ex-1">
+<title>Encontrando um limite</title>
+    
+<statement>       
+   
+
+    <p>
+        De acordo com o gráfico abaixo determine os limites a seguir.
+
+        <figure xml:id="fig1-sage">
+            <caption></caption>
+            <image xml:id="image1-sage" width="40%">
+                <description></description>
+                <sageplot>
+                p = plot(x^2-3*x+2, (x, -1/2,3), ymax=2.5, figsize=[4,4], thickness=1.5,axes_labels=['$x$','$y$'], ticks=[[1,2],[1,2,3]]) 
+                p +=arrow((0.5, 0.05), (0.9, 0.05), color='gray', arrowsize=2)
+                p +=arrow((-0.35, 0.05), (0., 0.05), color='gray', arrowsize=2)
+                p +=arrow((1.35, 0.05), (1, 0.05), color='gray', arrowsize=2)
+                p +=arrow((0.35, 0.05), (0, 0.05), color='gray', arrowsize=2)
+                p +=arrow((1.6, 0.05), (2, 0.05), color='gray', arrowsize=2)
+                p +=arrow((2.5, 0.05), (2.07, 0.05), color='gray', arrowsize=2)
+                p += text('$y=x^2-3x+2$', (1.5, 2), fontsize=12)
+                p     
+                </sageplot>
+            </image>
+        </figure>
+    
+    
+    
+    <task>
+       <statement>
+           <p>
+               <m>\displaystyle\lim_{x\to 0}(x^2-3x+2)</m>
+           </p>
+       </statement>
+    
+        <solution>
+            <p>
+                De acordo com a <xref ref="fig1-sage"/>, os valores de função <m>f(x)=x^2-3x+2</m> 
+                se aproxima <m>2</m> quando <m>x</m> se torna cada vez mais próximos de 0 pelos dois lados.
+                Logo, podemos escrever que 
+
+                <me>
+                    \lim_{x\to 0}(x^2-3x+2)=2.
+                </me>
+                
+            </p>
+        </solution>
+      </task>
+       
+      
+       <task>
+       <statement>
+           <p>
+                <m>\displaystyle\lim_{x\to 1}(x^2-3x+2)</m>
+           </p>
+       </statement>        
+        
+       
+        <solution>
+        <p>
+            Observe na <xref ref="fig1-sage"/> que quando <m>x</m> se aproxima de 1, por ambos os lados, 
+            <m>f(x)</m> fica cada vez mais próximo de 0. Assim, 
+            <me>
+                    \lim_{x\to 1}(x^2-3x+2)=0.
+            </me>
+        </p>
+    </solution>
+    </task>
+    <task>
+            
+        <statement>
+           <p>
+                <m>\displaystyle\lim_{x\to 2}(x^2-3x+2)</m>
+           </p>
+       </statement>
+           
+        
+        <solution>
+            <p>
+                Mais uma vez a <xref ref="fig1-sage"/>  indica que os valores de  <m>f(x)</m> também 
+                se aproximam de 0 à medida que <m>x</m> tende para 2. Daí, podemos escrever que 
+                <me>
+                    \lim_{x\to 2}(x^2-3x+2)=0.
+                </me>
+                
+            </p>
+        </solution>
+        </task>
+  </p>
+</statement>
+</example>
+
+<exercise xml:id="exer-1">
+    <statement>
+        <p>
+            Determine <m>\lim\limits_{x\to 1} (2x^2+2)</m>
+        </p>
+    </statement>
+    <answer>
+        <p>
+            4
+        </p>
+    </answer>
+</exercise>
+
+<example xml:id="ex-2">
+<title>Determinando o limite numericamente</title>
+
+
+    <statement>
+        <p>
+        Determine o valor do <m>\displaystyle\lim_{x\to 1}\frac{x-1}{x^2-1}.</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+        Note que o gráfico de <m>f</m> (ver <xref ref="fig2-table-plot"/>)  aponta 
+        que <m>f(x)</m> tende a <m>\frac{1}{2}</m> quando os valores de <m>x</m> 
+        se aproxima de 1 por ambos os lados. A tabela à esquerda da <xref ref="fig2-table-plot"/>
+        dão os valores de <m>f(x)</m> (com precisão de seis
+        casas decimais) para os valores de <m>x</m> que tendem a 1 (mas não são iguais a 1). 
+        Com base nesses valores, podemos escrever
+
+        <me>
+            \displaystyle\lim_{x\to 1}\frac{x-1}{x^2-1}=\frac{1}{2}.
+        </me>
+        
+Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informação 
+<em>não</em>  foi importante para determinar o limite. A <xref ref="def-limite"/> diz que 
+ o limite depende apenas de valores próximos a 1, não em 1.
+           
+   <figure xml:id="fig2-table-plot">
+  <caption> </caption>
+      <image xml:id="image2-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot((x-1)/(x^2-1), (x, -1,2), ymax=2, figsize=[4,4], thickness=1.5, 
+                                                        axes_labels=['$x$','$y$'], ticks=[[-1/2,1, 2],[1,1/2,2]], gridlines=[[1],[1/2]] ) 
+                    p+= plot(x, (x, -0.01,1), linestyle='')
+                    p+= text(r'$y=\dfrac{x-1}{x^2-1}$', (1.5, 1), fontsize=12)
+                    p +=arrow((1.35, 0.05), (1.02, 0.05), color='gray', arrowsize=2)
+                    p +=arrow((0.75, 0.05), (1, 0.05), color='gray', arrowsize=2)
+                    p
+                </sageplot>
+            </image>
+    
+ 
+</figure>
+  <table xml:id="tab-1">    
+    
+  
+    <tabular top="major" halign="center">
+      <row bottom="minor">
+        <cell><m>x\lt 1</m></cell>
+        <cell><m>f(x)</m></cell>
+        <cell><m>x\gt 1</m></cell>
+        <cell><m>f(x)</m></cell>
+      </row>
+      <row>
+        <cell>0.5</cell>
+        <cell>0,666667</cell>
+        <cell>1.5</cell>
+        <cell>0,400000</cell>
+      </row>
+      <row>
+        <cell>0.9</cell>
+        <cell>0,526316</cell>
+        <cell>1.1</cell>
+        <cell>0,476190</cell>
+      </row>
+      <row>
+        <cell>0.99</cell>
+        <cell>0,502513</cell>
+        <cell>1.01</cell>
+        <cell>0,497512</cell>
+      </row>
+      <row>
+        <cell>0.999</cell>
+        <cell>0,500250</cell>
+        <cell>1.001</cell>
+        <cell>0,499750</cell>
+      </row>
+      <row bottom="medium">
+        <cell>0.9999</cell>
+        <cell>0,500025</cell>
+        <cell>1.0001</cell>
+        <cell>0,499975</cell>
+      </row>      
+
+    </tabular>
+    </table>
+   
+     </p>
+    </solution>
+</example>
+
+<exercise xml:id="exer-2">
+    <statement>
+        <p>
+            Seja 
+
+            <me>
+              f(x) = 
+  \begin{cases} 
+  \frac{x-1}{x^2-1}  \amp \text{se } x \neq 1 \\
+   3       \amp \text{se } x = 1
+  \end{cases}. 
+
+            </me>
+    Determine <m>\displaystyle\lim_{x\to 1}f(x).</m>       
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Ver <xref ref="ex-2"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            <m>\frac{1}{2}</m>
+        </p>
+    </answer>
+</exercise>
+
+<example xml:id="ex-3">
+<title>O limite nem sempre existe</title>
+
+
+    <statement>
+        <p>
+            Determine <m>\displaystyle\lim_{x\to 0}\frac{|x|}{x}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+
+         Note que o gráfico de <m>f</m> (ver <xref ref="fig3-table-plot"/>)  sugere
+        que <m>f(x)=-1</m>  para  qualquer valor à esquerda de <m>0</m> e <m>f(x)=1</m> para 
+        qualquer valor à direita de 0. A <xref ref="def-limite"/> 
+        diz que <m>f(x)</m> deve se aproximar de um único número quando <m>x</m> tende a 0 pelos dois lados. 
+        Nesses casos, dizemos que  <em>o limite não existe.</em>
+
+     <figure xml:id="fig3-table-plot">
+  <caption></caption>
+  
+      <image xml:id="image3-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(abs(x)/x, (x, -1, 1), exclude=[0], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], ticks=[[-1,0.5, -0.5,1],[-1,0.5, -0.5,1]])
+                    p+= circle((0,1),0.02,  fill=true, facecolor='white')
+                    p+= circle((0,-1),0.02,  fill=true, facecolor='white')
+                    p+= text(r'$y=\dfrac{|x|}{x}$', (0.5, 0.5), fontsize=12)
+                    p +=arrow((0.25, 0.1/2), (0, 0.1/2), color='gray', arrowsize=2)
+                    p +=arrow((-0.25, 0.1/2), (0., 0.1/2), color='gray', arrowsize=2)
+                    p 
+                    
+                </sageplot>
+            </image>
+
+</figure>
+     
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Se possível, determine <m>\displaystyle\lim_{x\to 3}\frac{|x-3|}{x-3}</m>.
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Veja <xref ref="ex-3"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            O limite não existe.
+        </p>
+    </answer>
+</exercise>
+
+<example xml:id="ex-4">
+<title> Um limite especial: <m> \displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1</m> </title>
+
+<statement>
+    <p>
+        Use  gráfico e uma tabela com aproximações numéricas para verificar que 
+        <me> \displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1</me>.
+    </p>
+</statement>
+    <solution>
+        <p>
+        Observando o gráfico <m>f</m> e a tabela na <xref ref="fig4-table-plot"/> nota-se que
+        <m>f(x)</m> se aproxima de 1 à medida que <m>x</m> se aproxima de 0 por ambos os lados.
+
+
+             <figure xml:id="fig4-table-plot">
+  <caption></caption>   
+      <image xml:id="image4-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(sin(x)/x, (x, -2, 2), exclude=[0], figsize=[4,4], thickness=1.5, 
+                                    axes_labels=['$x$','$y$'], ticks=[[-1,0,1], [1]]) 
+                    p+= plot(x, (x, -0.1,1.25), linestyle='', aspect_ratio=1)
+                    p +=arrow((0.5, 0.1), (0, 0.1), color='gray', arrowsize=2)
+                    p +=arrow((-0.5, 0.1), (0., 0.1), color='gray', arrowsize=2)
+                    p+= text(r'$y=\dfrac{\sin{x}}{x}$', (1, 1.2), fontsize=12)
+
+                    p 
+                </sageplot>
+            </image>
+     
+</figure>
+
+<table xml:id="tab-3">
+    
+<tabular top="major" halign="center">
+      <row bottom="minor">
+        <cell><m>x\lt 0</m></cell>
+        <cell><m>f(x)</m></cell>
+        <cell><m>x\gt 0</m></cell>
+        <cell><m>f(x)</m></cell>
+      </row>
+      <row>
+        <cell>-1</cell>
+        <cell>0,84147098</cell>
+        <cell>1</cell>
+        <cell>0,84147098</cell>
+      </row>
+      <row>
+        <cell>-0,5</cell>
+        <cell>0,95885108</cell>
+        <cell>0,5</cell>
+        <cell>0,95885108</cell>
+      </row>
+      <row>
+        <cell>-0,4</cell>
+        <cell>0,97354586</cell>
+        <cell>0,4</cell>
+        <cell>0,97354586</cell>
+      </row>
+      <row>
+        <cell>-0,3</cell>
+        <cell>0,98506736</cell>
+        <cell>0.3</cell>
+        <cell>0,98506736</cell>
+      </row>
+      <row>
+        <cell>-0,2</cell>
+        <cell>0,99334665</cell>
+        <cell>0.2</cell>
+        <cell>0,99334665</cell>
+      </row>
+      <row>
+        <cell>-0,1</cell>
+        <cell>0,99833417</cell>
+        <cell>0,1</cell>
+        <cell>0,99833417</cell>
+      </row>
+      <row>
+        <cell>-0,05</cell>
+        <cell>0,99958339</cell>
+        <cell>0,05</cell>
+        <cell>0,99958339</cell>
+      </row>
+      <row>
+        <cell>-0,01</cell>
+        <cell>0,99998333</cell>
+        <cell>0,01</cell>
+        <cell>0,99998333</cell>
+      </row>
+      <row>
+        <cell>-0,005</cell>
+        <cell>0,99999583</cell>
+        <cell>0,005</cell>
+        <cell>0,99999583</cell>
+      </row>
+      <row bottom="medium">
+        <cell>-0,001</cell>
+        <cell>0,99999983</cell>
+        <cell>0,001</cell>
+        <cell>0,99999983</cell>
+      </row>
+      
+    </tabular>
+</table>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-5">
+   
+        <p>
+            Determine <m>\lim\limits_{x\to 0}\dfrac{\sin{3x}}{3x}</m>.
+        </p>
+ 
+
+     <solution>
+        <p>
+            Para utilizar o <xref ref="ex-4"/> precisamos fazer <m>t=3x</m> e notar que quando <m>x\to 0</m> temos <m>t\to 0</m>. Logo,
+            segue do <xref ref="ex-4"/> que 
+
+            <me>
+                \lim\limits_{x\to 0}\frac{\sin{3x}}{3x}=\lim\limits_{t\to 0}\frac{\sin{t}}{t}=1.
+            </me>
+            
+        </p>
+    </solution>
+
+
+   
+<!-- <task>
+<statement>
+    <p>
+        <m>f(x)=\dfrac{\sin{9x}}{x}</m>
+    </p>
+</statement>
+<solution>
+    <p>
+    Para aplicarmos o <xref ref="ex-4"/>, vamos primeiro reescrever a função multiplicando e
+dividindo por <m>9</m> : 
+
+<me>
+    \frac{\sin{9x}}{7x}=\frac{9}{7}\cdot\left(\frac{\sin{9x}}{9x}\right)=
+</me>
+
+    </p>
+</solution>
+</task>
+
+
+<task>
+    <statement>
+        <p>
+            <m>f(x)=\dfrac{\cos{x}-1}{x}</m>
+        </p>
+    </statement>
+    <solution>
+    <p>
+        
+    </p>
+</solution>
+</task> -->
+
+
+   
+</example>
+
+<remark>
+<!-- <title>O limite é único </title> -->
+<ol>
+    <li>
+        <p>
+            Deduza que <m>x=1</m> não per
+        </p>
+    </li>
+    <li>
+        <p>
+            Limites por lados opostos são diferentes
+        </p>
+    </li>
+</ol>
+
+
+</remark>
+</subsection>
+
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/fitJZb1KI44"  visual="youtu.be/fitJZb1KI44"> Uma introdução a limites.</url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            <url href="https://youtu.be/T4a7uMIHucE" visual="youtu.be/T4a7uMIHucE"> Como estimar os valores de limites a partir de gráficos.</url>
+        </p>
+    </li>
+<li>
+        <p>
+            <url href="https://youtu.be/AhqKr-2tiic" visual="youtu.be/AhqKr-2tiic">Conexão entre limites e comportamento gráfico.</url>
+        </p>
+    </li>
+    
+<li>
+        <p>
+            <url href="https://youtu.be/6Oq-pkKuoRI" visual="youtu.be/6Oq-pkKuoRI"> 
+            Obtendo  <m>\lim\limits_{x\to 3}\dfrac{x^3-3x^2}{5x-15}</m> usando uma tabela.</url>
+        </p>
+    </li>
+</ul>    
+</subsection>
+
+<subsection xml:id="subsec-limites-laterais">
+    <title>Limites Laterais</title>
+    <definition xml:id="def-laterais">
+        <statement>
+            <p>
+                Escrevemos 
+
+                <me>
+                    \lim_{x\to a^{-}}f(x)=L
+                </me>
+            quando é possível se aproximar arbitrariamente de <m>L</m> à medica que <m>x</m> tende a <m>a</m> 
+            por valores menores que <m>a</m>. Similarmente, escrevemos 
+
+            <me>
+                    \lim_{x\to a^{+}}f(x)=L
+            </me>
+
+             quando é possível se aproximar arbitrariamente de <m>L</m> à medica que <m>x</m> tende a <m>a</m> 
+            por valores maiores que <m>a</m>.
+            </p>
+        </statement>
+    </definition>
+
+<paragraphs>
+    <title>Lê-se</title>
+    <md>
+        <mrow> \lim_{x\to a^{-}}f(x)=L\amp \qquad \ct{Limite de}\, \ctm{f(x)}\ct{, quando}\, \ctm{x}\, \ct{tende a}\, \ctm{a}\, \ct{pela esquerda.} </mrow>
+        <mrow>\lim_{x\to a^{+}}f(x)=L \amp \qquad\ct{Limite de}\, \ctm{f(x)}\ct{, quando}\, \ctm{x}\, \ct{tende a}\,\ctm{a}\, \ct{pela direita.} </mrow>
+    </md>
+</paragraphs>
+<example xml:id="ex-6">
+    
+        <p>
+            Dada a função <m>f(x)=\dfrac{|x-2|}{|x-2|}</m> determine:
+        
+        </p>
+    <task>
+    <statement>
+        <p>
+            <m>\displaystyle\lim_{x\to a^{-}}f(x)</m>
+        </p>
+    </statement>
+      
+        <solution>
+        <p>
+
+        Nota-se no gráfico de <m>f</m> (ver <xref ref="fig5-plot"/>) que quando <m>x</m> tende a 2
+         pela esquerda <m>f(x)=-1</m>. Portanto, o limite pela esquerda é
+
+         <me>
+             \lim_{x\to 2^{-}}\frac{|x-2|}{x-2}=-1.
+         </me>
+         
+        
+
+            <figure xml:id="fig5-plot">    
+    
+            <image xml:id="image5-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(abs(x-2)/(x-2), (x, 1, 3), exclude=[2], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], 
+                            ticks=[[0,1, 2, 3],[-1,1]], gridlines=[[2],[1, -1]])
+                    p+= circle((2,1),0.02,  fill=true, facecolor='white')
+                    p+= circle((2,-1),0.02,  fill=true, facecolor='white')
+                    p+= text(r'$y=\dfrac{|x-2|}{x-2}$', (1, 0.5), fontsize=12)
+                    p +=arrow((2.25, 0.1/2), (2, 0.1/2), color='gray', arrowsize=2)
+                    p +=arrow((1.75, 0.1/2), (2., 0.1/2), color='gray', arrowsize=2)
+                    p +=plot(x, (-0.1,0.1), linestyle='')
+                    p
+
+
+
+                </sageplot>
+            </image>
+    
+  
+</figure>
+        </p>
+    </solution>
+    </task>
+    
+    <task>
+        <statement>
+        <p>
+            <m>\displaystyle\lim_{x\to a^{+}}f(x)</m>
+        </p>
+    </statement>
+        <solution>
+        <p>
+            Nota-se no gráfico de <m>f</m> (ver <xref ref="fig5-plot"/>) que quando <m>x</m> tende a 2
+         pela direita <m>f(x)=1</m>. Portanto, o limite pela direita é
+
+         <me>
+             \lim_{x\to 2^{+}}\frac{|x-2|}{x-2}=1.
+         </me>
+        </p>
+    </solution>
+    </task>
+    
+</example>
+
+<exercise>
+  
+        <p>
+            Para <m>f(x)=\begin{cases} 1 \amp \text{se } x \lt 0\\
+                                        0 \amp \text{se } x \ge 0
+            \end{cases}</m> determine:
+        </p>
+   
+
+    <task>
+        <statement>
+            <p>
+                 <m>\displaystyle\lim_{x\to 0^{-}}f(x)</m>
+            </p>
+        </statement>
+    
+    <answer>
+        <p>
+            1
+        </p>
+    </answer>
+    </task>
+    
+    <task>
+        <statement>
+            <p>
+                 <m>\displaystyle\lim_{x\to 0^{+}}f(x)</m>
+            </p>
+        </statement>
+    
+    <answer>
+        <p>
+            0
+        </p>
+    </answer>
+    </task>
+
+  <task>
+        <statement>
+            <p>
+                   De acordo com a <xref ref="def-limite"/>, o que podemos afirmar sobre 
+            <m>\displaystyle\lim_{x\to 0}f(x)</m>?.
+            </p>
+        </statement>
+    
+    <answer>
+        <p>
+           O limite não existe.
+        </p>
+    </answer>
+    </task>
+</exercise>
+
+<theorem xml:id="thm-laterais">
+    <statement>
+        <p>
+       <m> \displaystyle\lim_{x\to a}f(x)=L</m> se somente se <m> 
+         \displaystyle\lim_{x\to a^{-}}f(x)=L</m> e <m> \displaystyle\lim_{x\to a^{-}}f(x)=L</m>.
+        </p>
+    </statement>
+</theorem>
+
+
+<assemblage xml:id="assemblage-existe-limite">
+    <title>Existência de um Limite</title>
+    <p>
+        Sejam <m>L</m> e <m>a</m> números reais e <m>f</m> uma função, então o limite de
+         <m>f(x)</m> <em>existe</em>  e é igual a <m>L</m> se e somente se os limites laterais 
+         <em>existem</em> 
+         e são também iguais a <m>L</m>.
+
+    </p>
+</assemblage>
+
+<example xml:id="ex-7">
+    
+        <p>
+            Para <m>f(x)=\begin{cases} x^2-\frac{1}{2} \amp \text{se } x \lt 1\\
+                                        x-1 \amp \text{se } x \ge 1
+            \end{cases}</m> determine:
+        </p>
+    <task>
+       <statement>
+           <p>
+               <m>\displaystyle\lim_{x\to 1^{-}}f(x)</m>
+           </p>
+       </statement>
+   
+    <solution>
+        <p>
+        Por definição, se  <m>x\lt 1</m>, temos <m>f(x)=x^2-\frac{1}{2}</m>. Na <xref ref="fig6-plot"/> observa-se que <m>f(x)</m> tende 
+        a <m>\frac{1}{2}</m> quando <m>x</m> tende a 1 pela esquerda. Portanto, 
+
+        <me>\displaystyle\lim_{x\to 1^{-}}f(x)=1</me>
+
+             <figure xml:id="fig6-plot">
+    
+    
+      <image xml:id="image6-sage" width="40%">
+                <description></description>
+                <sageplot>
+            p = plot(x^2-1/2, (x, -1/2, 1), aspect_ratio=1, figsize=[4,4], thickness=1.5, 
+            axes_labels=['$x$','$y$'], ticks=[[-1/2, 1, 3/2],[-1/2,1/2]], gridlines=[[1],[1/2]]) 
+            p+= circle((1,1/2), 0.02,  fill=true, facecolor='white')
+            p+= circle((1,0), 0.02,  fill=true, facecolor='blue')
+            p+= plot(x-1, (x, 1, 3/2))
+            p +=arrow((0.85, 0.1/2), (1,0.1/2), color='gray', arrowsize=2)
+            p +=arrow((1.2, 0.1/3), (1.05,0.1/3), color='gray', arrowsize=2)
+            p   
+                        
+                </sageplot>
+            </image>  
+</figure>
+        </p>
+    </solution>
+     </task>
+
+     <task>
+       <statement>
+           <p>
+             <m>\displaystyle\lim_{x\to 1^{+}}f(x)</m>
+
+           </p>
+       </statement>
+   
+    <solution>
+        <p>
+    
+        Por definição, se  <m>x\ge 1</m>, temos <m>f(x)=x-1</m>. Na <xref ref="fig6-plot"/> observa-se que <m>f(x)</m> tende 
+        a 0 quando <m>x</m> tende a 1 pela direita. Portanto, 
+
+        <me>\displaystyle\lim_{x\to 1^{+}}f(x)=0.</me>
+        </p>
+    </solution>
+     </task>
+
+    <task>
+       <statement>
+           <p>
+             <m>\displaystyle\lim_{x\to 1}f(x)</m> existe?
+
+           </p>
+       </statement>
+   
+    <solution>
+        <p>
+            Os limites à esquerda e à direita de 1 são diferentes.
+             Isso contraria regra de  <xref ref="assemblage-existe-limite" text="title"/>. 
+             Portanto, o limite de <m>f(x)</m> quando <m>x</m> tende a 1 por ambos os lados não existe.
+
+        </p>
+    </solution>
+     </task>
+</example>
+
+<example xml:id="ex-8">
+    <statement>
+        <p>
+            Seja <m>f(x)= 2 + |5x-1|</m>. Encontre <m>\displaystyle\lim_{x\to\frac{1}{5}}f(x)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+           Observe que a formação de  <m>f</m> envolve módulo. Então, podemos transformar-lá em 
+           uma função definida em duas sentenças. Para isso, note que <m>5x-1\gt 0</m> quando 
+           <m>x\gt \frac{1}{5} </m>, daí <m>|5x-1|=5x-1</m>. Por outro lado,   <m>5x-1\le 0</m> quando 
+           <m>x\le \frac{1}{5}</m>, daí <m>|5x-1|=-(5x-1)</m>.  Portanto, podemos escrever
+
+           <me>
+               f(x)= 2 + |5x-1|=\begin{cases} 1 + 5x \amp \text{se } x\ge \frac{1}{5}\\ 3 - 5x\amp \text{se } x\lt \frac{1}{5} \end{cases}.
+           </me>
+           
+           Dessa forma, quando <m> x\ge \frac{1}{5}</m>, <m>f(x)</m> assume <m> 1 + 5x</m>  e quando <m> x\lt \frac{1}{5}</m>, <m>f</m> assume <m>3 - 5x</m>.
+           Na <xref ref="fig7-plot"/> observa-se que <m>\displaystyle\lim_{x\to \frac{1}{5}^{-}}f(x)=2</m> e que 
+           <m>\displaystyle\lim_{x\to \frac{1}{5}^{+}}f(x)=2</m>. Logo, segue do <xref ref="thm-laterais"/> que <m>
+               \displaystyle\lim_{x\to \frac{1}{5}}f(x)=2.
+           </m>
+
+           
+           
+    <figure xml:id="fig7-plot">
+      
+      <image xml:id="image7-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(2 + abs(5*x-1), (x, -1/10, 1/2), ymax=3.5, figsize=[4,4], thickness=1.5, 
+                                axes_labels=['$x$','$y$'], ticks=[[1/5],[3]], tick_formatter=[1/5, 3], gridlines=[[1/5],[3]])
+                    p += plot(x, (0,1/2), linestyle='', aspect_ratio=1/8)    
+                    p +=arrow((0.25, 0.10), (0.2,0.10), color='gray', arrowsize=2)
+                    p +=arrow((0.15, 0.10), (0.2,0.10), color='gray', arrowsize=2)
+                    p += text(r'$y=2+|5x-1|$', (0.4, 1.8), fontsize=12)
+
+                    p 
+                                              
+                        
+                </sageplot>
+            </image>  
+</figure>
+        </p>
+    </solution>
+</example>
+
+
+
+
+
+<exercise>
+    <p>
+          Para <m>f(x)=\begin{cases} 1+x \amp \text{se } x \lt -1\\
+                                        x^2 \amp \text{se } -1\le x \lt 1\\
+                                        2-x \amp \text{se } x\ge 1
+
+            \end{cases}</m> determine:
+    </p>
+
+    <task>
+        <statement>
+            <p>
+                <m>\displaystyle\lim_{x\to -1^{+}}f(x)</m>
+            </p>
+        </statement>
+
+        <answer>
+            <p>
+                0
+            </p>
+        </answer>
+    </task>
+
+     <task>
+        <statement>
+            <p>
+                <m>\displaystyle\lim_{x\to -1^{-}}f(x)</m>
+            </p>
+        </statement>
+
+        <answer>
+            <p>
+                1
+            </p>
+        </answer>
+    </task>
+     <task>
+        <statement>
+            <p>
+                <m>\displaystyle\lim_{x\to 1^{-}}f(x)</m>
+            </p>
+        </statement>
+
+       <answer>
+           <p>
+               1
+           </p>
+       </answer>
+    </task>
+
+     <task>
+        <statement>
+            <p>
+                <m>\displaystyle\lim_{x\to 1^{+}}f(x)</m>
+            </p>
+        </statement>
+
+        <answer>
+            <p>
+                1
+            </p>
+        </answer>
+    </task>
+
+     <task>
+        <statement>
+            <p>
+                 O que é possível  afirmar sobre <m>\displaystyle\lim_{x\to -1}f(x)</m> e 
+                <m>\displaystyle\lim_{x\to 1}f(x)</m>?
+            </p>
+        </statement>
+
+        <answer>
+            <p>
+                <m>\displaystyle\lim_{x\to -1}f(x)</m> não existe e <m>\displaystyle\lim_{x\to 1}f(x)=1</m>.
+            </p>
+        </answer>
+    </task>
+</exercise>
+
+<exercise>
+    <statement>
+         <p>
+            Determine <m>\lim\limits_{x \to \frac{1}{3}}1+|3x-1|.</m>
+        </p>
+    </statement>
+       
+    
+    <hint>
+        <p>
+            Revise <xref ref="ex-8"/>.
+        </p>
+    </hint>
+    <answer>
+        <p>
+            1
+        </p>
+    </answer>
+</exercise>
+
+
+
+</subsection>
+<subsection xml:id="sugestao-video-2">
+    <title>Sugestão de vídeo</title>
+  
+<ul>
+     <li>
+     <p>
+        <url href="https://youtu.be/M6-1RYYNPw4" visual="youtu.be/M6-1RYYNPw4"> Parte 1: limites laterais a partir de gráficos.</url>  
+     </p>
+ </li>    
+ <li>
+     <p>
+        <url href="https://youtu.be/1b9gJID9V8s" visual="youtu.be/1b9gJID9V8s"> Parte 2: limites laterais a partir de gráficos.</url>  
+     </p>
+ </li>   
+
+ <li>
+     <p>
+        <url href="https://youtu.be/ss2tg0iym04" visual="youtu.be/ss2tg0iym04"> Usando tabela para obter limites laterais.</url>  
+     </p>
+ </li>    
+</ul>    
+
+</subsection>
+<subsection xml:id="subsec-limites-no-infinito">
+    <title>Limites no Infinito</title>
+
+    <introduction>
+      <p>
+
+    </p>
+    </introduction>
+ <definition xml:id="def-limites-no-infinito">
+        <statement><p>
+Escrevemos
+<md>
+<mrow>
+\lim_{x \to a} f(x) =  +\infty
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e positivo à medida que tornamos <m>x</m> 
+suficientemente próximos de <m>a</m>, mas não igual a <m>a</m>. 
+</p>
+
+<p>
+Similarmente, escrevemos
+<md>
+<mrow>
+\lim_{x \to a} f(x) = -\infty
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativo à medida que tornamos
+ <m>x</m> suficientemente próximos de <m>a</m>, mas não igual a <m>a</m>. 
+</p>
+</statement>
+
+    </definition>
+<example xml:id="ex-9">
+    
+        <p>
+           Para <m>f(x)=\dfrac{ 2}{ x - 3}</m> determine:
+        </p>
+    
+    <task>
+        <statement>
+            <p>
+             <m> \lim\limits_{x\to 3^-}\dfrac{ 2}{ x - 3}</m>  
+            </p>
+        </statement>
+        <solution>
+            <p>
+        <figure xml:id="fig8-plot">
+      
+            <image xml:id="image8-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(2/(x-3), (x, -1, 4), ymax=10,ymin=-10, figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], ticks=[[3],[10,-10]], detect_poles='show')
+                    p+= text(r'$y=\dfrac{2}{x-3}$', (1, 3), fontsize=12)
+                    p +=arrow((2.5, 0.3), (3,0.3), color='gray', arrowsize=2)
+                    p +=arrow((3.5, 0.3), (3.,0.3), color='gray', arrowsize=2)
+                    p
+                </sageplot>
+            </image>  
+        </figure>
+            </p>
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>
+                <m> \lim\limits_{x\to 3^+}\dfrac{2}{x - 3}</m> 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </task>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+           Para <m>f(x)=\dfrac{1}{ |x - 3|}</m> determine:
+        </p>
+    </statement>
+    <task>
+        <statement>
+            <p>
+             <m> \lim\limits_{x\to 3^-}\dfrac{ 1}{|x - 3|}</m>  
+            </p>
+        </statement>
+        <answer>
+            <p>
+                
+            </p>
+        </answer>
+    </task>
+    <task>
+        <statement>
+            <p>
+                <m> \lim\limits_{x\to 3^+}\dfrac{1}{|x - 3|}</m> 
+            </p>
+        </statement>
+        <answer>
+            <p>
+                
+            </p>
+        </answer>
+    </task>
+</exercise>
+
+<example xml:id="ex-10">
+    <statement>
+        <p>
+            Determine <m>\lim\limits_{x\to 0}\dfrac{2}{x^2}</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+  <figure xml:id="fig9-plot">
+ 
+    
+      <image xml:id="image9-sage" width="40%">
+                <description></description>
+                <sageplot>
+                    p = plot(2/x^2, (x, -3, 3), ymax=10, aspect_ratio=1/2, figsize=[4,4], thickness=1.5, 
+                                axes_labels=['$x$','$y$'], ticks=[[-3,-2,-1, 1,2,3],[8]])
+                    p+= plot(x, (0,1/2), linestyle='')
+                    p +=arrow((0.5, 0.2), (0, 0.2), color='gray', arrowsize=2)
+                    p +=arrow((-0.5, 0.2), (0., 0.2), color='gray', arrowsize=2)
+                    p+= text(r'$y=\dfrac{2}{x^2}$', (2, 3), fontsize=12)
+
+                    p        
+                </sageplot>
+            </image>  
+</figure>
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            <p>
+            Determine <m>\lim\limits_{x\to 0}-\frac{1}{x^2}</m>. 
+        </p>
+        </p>
+    </statement>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<definition xml:id="def-assintota-vertical">
+    <statement>
+        <p>
+            A reta <m>x=a</m> a é chamada assíntota vertical da curva <m>y=f(x)</m> se pelo
+            menos uma das seguintes condições estiver satisfeita:
+    
+            <md>
+                <mrow> \lim\limits_{x\to a}f(x)=+\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=+\infty \amp \lim\limits_{x\to a^{+}}f(x)=+\infty </mrow>
+                <mrow> \lim\limits_{x\to a}f(x)=-\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=-\infty \amp \lim\limits_{x\to a^{+}}f(x)=-\infty </mrow>
+
+                
+               
+            </md>
+        </p>
+    </statement>
+</definition>
+
+<example xml:id="ex-11">
+    
+        <p>
+            Para <m>f(x)=\dfrac{3x}{x-3}</m> determine:
+        </p>
+    
+   <task>
+    <statement>
+        <p>
+            <m>\lim\limits_{x\to 3^{-}}f(x)</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <figure xml:id="fig10-plot">                
+    
+       <image xml:id="image10-sage" width="40%">
+        <description></description>
+            <sageplot>
+                     
+            p = plot(3*x/(x-3), (x, -1,6), ymax=20, ymin=-20,figsize=[4,4], thickness=1.5, 
+            axes_labels=['$x$','$y$'], ticks=[[-2,-1, 1,2,3, 4,5, 6],[8]], detect_poles='show')
+            p+= plot(x, (0,1/2), linestyle='')
+            p +=arrow((2.5, 0.8), (3,0.8), color='gray', arrowsize=2)
+            p +=arrow((3.5, 0.8), (3.,0.8), color='gray', arrowsize=2)
+            p+= text(r'$y=\dfrac{3x}{x-3}$', (5, 12), fontsize=12)
+            p
+            </sageplot>
+        </image>  
+</figure>
+        </p>
+    </solution>
+   </task>
+
+   <task>
+   <statement>
+       <p>
+           <m>\lim\limits_{x\to 3^{-}}f(x)</m>
+       </p>
+   </statement>
+   <solution>
+       <p>
+           
+       </p>
+   </solution>
+   </task>
+</example>
+
+
+
+<exercise>
+    
+        <p>
+           Para <m>f(x)=\dfrac{5x}{x-2}</m> determine:
+        </p>
+    <task>
+        <statement>
+            <p>
+             <m>    \lim\limits_{x\to 2^{-}}f(x) </m>
+            </p>
+        </statement>
+         <answer>
+        <p>
+            
+        </p>
+    </answer>
+    </task>
+        <task>
+        <statement>
+            <p>
+              <m> \lim\limits_{x\to 2^{+}}f(x) </m>
+            </p>
+        </statement>
+         <answer>
+        <p>
+            
+        </p>
+    </answer>
+    </task>
+   
+</exercise>
+
+<!-- <exercise>
+    <webwork source="limit-intro-laterais-infinitos/problema1.pg" />
+</exercise>
+<exercise>
+<webwork source="rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg" />
+</exercise> -->
+
+<subsection xml:id="subsec-assintotas">
+    <title>Assíntotas</title>
+    
+</subsection>
+    
+</subsection>
+
+<subsection xml:id="sugestao-video-3">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+         
+        <url href="https://youtu.be/jGTBSVK_duU" visual="youtu.be/jGTBSVK_duU"> Limites infinitos.</url>  
+    
+          
+        </p>
+    </li>
+
+    <li>
+        <p>
+         
+        <url href="https://youtu.be/sRxYEj69RyU" visual="youtu.be/sRxYEj69RyU"> Limites infinitos: assíntotas.</url>  
+    
+          
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+<subsection xml:id="subsubsec-teconologia">
+    <title>Tecnologia</title>
+
+
+<technology>
+<title>Usando o software SageMath</title>
+
+<introduction>
+    <p>
+    Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema
+    de computação algébrica  <url href="https://www.sagemath.org">SageMath</url>. Com uma sintaxe simples e baseada em <em>Python</em><fn>Linguagem de programação.</fn>
+     O <em> SageMath</em> (abreviaremos como <em> Sage </em>) é <em>open-source</em> <fn>Uso gratuito e de código aberto.</fn> e tem sido bastante utilizado por professores e  estudantes de todos
+      os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser
+      encontrado na página  <url href="https://www.sagectu.com.br"/>. Detalhes sobre os comandos são resumidos em
+      <url href="https://sagectu.com.br/sagecell.html"/>.
+    </p>
+</introduction>
+
+<paragraphs>
+    <title>Sintaxe dos comandos</title>
+    <p>Com o <em> SageMath</em>, usando o comando <c>limt(f, x=a)</c> é possível
+calcular o limite de  <m>f(x)</m> quando  <m>x</m> tende para <m>a</m>. 
+Por exemplo, o <xref ref="ex-2"/> pode ser resolvido com o comando:
+<sage>
+    <input>
+        limit((x-1)/(x^2-1), x=1)
+    </input>
+    <output>
+        1/2
+    </output>
+</sage>
+Sa função depender da variável <m>t</m>  basta declará-la usando o comando <c>var('t')</c>. 
+Vamos exemplificar esse caso calculando <m>\lim\limits_{x\to 0}\dfrac{2\sin{t}}{t}</m>. 
+
+
+<sage>
+    <input>
+    var('t')
+    limit(2*sin(t)/t, t=0)
+    </input>
+    <output>
+       2
+    </output>
+</sage>
+</p>
+</paragraphs>
+<paragraphs>
+    <title>Limites Laterais</title>
+    
+
+Para calcular limites latereais com o <m>Sage</m> basta adicionar o parâmetro <c>dir='-'</c> para 
+o limite à esquerda e <c>dir='+'</c> para o limite à direita. Vamos explificar resolvendo o <xref ref="ex-3"/>.
+<sage>
+    <input>
+    limit(abs(x)/x, x=0, dir='-')       # limite à esquerda de 0.
+    </input>
+    <output>
+           -1
+    </output>
+</sage>
+
+<sage>
+    <input>
+    limit(abs(x)/x, x=0, dir='+')       # limite à direita de 0.
+    </input>
+    <output>
+           1
+    </output>
+</sage>
+</paragraphs>
+
+
+
+
+<p>
+    Nas células acima pode-se notar que os comandos <c>/</c>, <c>*</c>, <c>^</c> <c>+</c>, <c>-</c>, representam a operações de
+    divisão, multiplicação, potenciação,  soma e subtração, respectivamente. Existe muitos outros comandos de operações
+    matemáticas importantes disponíveis em <url href="https://sagectu.com.br/sagecell.html"/>.
+</p>
+
+<activity>
+    <statement>
+        <p>
+            Usando a célula do <em>Sage</em> abaixo, confira todas as operações de limite apresentadas até aqui.
+            
+            <sage>
+                <input>
+
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+
+        </p>
+    </statement>
+</activity>
+
+
+</technology>
+</subsection>
+
+
+
+<exercises xml:id="exercises-">
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema14.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema12.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema13.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema3.pg" />
+</exercise>
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema5.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema2.pg" />
+</exercise>
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema4.pg" />
+</exercise>
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema6.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema9.pg" />
+</exercise>
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema7.pg" />
+</exercise>
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema8.pg" />
+</exercise>
+
+
+
+<exercise>
+<webwork source="limit-intro-laterais-infinitos/problema11.pg" />
+</exercise>
+</exercises>
+
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">STEWART, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+
