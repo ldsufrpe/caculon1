@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+
+
+
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        \usepackage{color}
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Derivada</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+                    
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+        </introduction>
+    <section>
+    <title> A Derivada de uma Função</title>
+         <objectives>
+            <title>Estrutura</title>
+        
+            <ol>
+                <li>
+                    <p>
+                       texto
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+
+
+
+<subsection xml:id="subsec-afim">
+    <title>Equações de uma  reta</title>
+ <definition xml:id="def-afim">
+        <statement>
+            <p>
+                Dados os números reais <m>m\neq 0</m> e <m>b</m> a função  definida por <m>f(x)=mx+b</m>  é dita função afim. 
+            </p>
+        </statement>
+    </definition>
+
+   <p>
+       O  gráfico nde uma função afim é uma reta cuja a inclinação  é <m>m</m>  e cuja intersecção  com o eixo 
+                <m>y</m> é <m>(0,b)</m>. Fazendo <m>y=f(x)</m>, a função afim <m>y=mx+b</m> é também chamada de
+                 <term> equação reduzida da reta</term>.
+                   </p>
+
+  <p>
+    
+
+
+  Dados dois pontos distintos <m>(x_1, y_1)</m>, <m>(x_2, y_2)</m>  a inclinação da reta que passa por esses pontos é dada por 
+    <me>
+        m = \frac{y_2-y_1}{x_2-x_1}. 
+    </me>
+ </p>
+
+ <remark> A inclinação <m>m</m> e a ordenada <m>b</m>, do ponto em que a reta intersecta o eixo <m>x</m>, são também
+  chamados de coeficientes angular e linear, respectivamente.
+ </remark>
+<assemblage xml:id="assemblage-reta">
+    <title>Equação da reta</title>
+    <p>
+       A equação da reta  que tem inclinação <m>m</m> e que passa pelo ponto <m>(x_1, y_1)</m>  pode ser escrita como  
+    
+    <me>
+        y-y_1=m(x-x_1).
+         </me>
+     
+    </p>
+</assemblage>
+    
+    
+     
+<example xml:id="ex-1">
+    <statement>
+        <p>
+            Determine a inclinação da reta que passa pelos pontos <m>(-1,1)</m> e <m> (2,2)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Sendo <m>x_1=-1</m>, <m>y_1=1</m> e <m>x_2=2</m>, <m>y_2=1</m>, pode-se obter a inclinação 
+
+        <me>
+             m = \frac{y_2-y_1}{x_2-x_1} = \frac{2-1}{2-(-1)} = \frac{1}{3}. 
+        </me>
+        
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-2">
+    <statement>
+        <p>
+            Determine a equação da reta que passa pelos pontos <m>(-1,2)</m> e  <m>(1, 1)</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+            Sendo <m>x_1=-1</m>, <m>y_1=2</m> e <m>x_2=1</m>, <m>y_2=1</m>, pode-se obter a inclinação 
+
+        <me>
+             m = \frac{y_2-y_1}{x_2-x_1} = \frac{1-2}{1-(-1)} = -\frac{1}{2}. 
+        </me>
+        Portanto a <xref ref="assemblage-reta" text="title"/> é dada por 
+
+    <me>
+        y-1=-\frac{1}{2}\left(x+1\right).
+    </me>
+    
+        <figure xml:id="fig1">
+    <caption></caption>
+    <image source="images/fig1.svg" width="50%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+
+        </p>
+    </solution>
+</example>
+
+
+
+<example xml:id="ex-3">
+
+
+    <p>
+        Dados <m>m=2</m> e <m>P=(-2,3).</m>
+    </p>
+
+
+<task>
+<statement>
+        <p>
+            Determine a equação da reta que tem inclinação <m>m</m> e passa pelo ponto <m>P</m>.
+        </p>
+    </statement>
+      <solution>
+        <p>
+           A <xref ref="assemblage-reta" text="title"/> que tem inclinação <m>m=2</m> e passa pelo ponto <m>(x_1,y_1)=(-2, 3)</m> é dada por 
+
+                
+          <mdn>
+              <mrow>  y-3=2(x+2). </mrow>
+          </mdn>
+      
+                </p>
+    </solution>
+
+</task>
+
+<task>
+    <statement>
+        <p>
+            Determine onde a reta intersecta o eixo <m>y</m>. 
+        </p>
+    </statement>
+
+<solution>
+    <p>
+        A equação <m>y-3=2(x+2) </m>  pode ser reescrita como <m>y=2x+7</m> que trata-se da função afim (ver <xref ref="def-afim"/>) <m>f(x)=2x+7</m> com <m>b=7</m>. Logo, 
+       a reta intersecta o eixo <m>y</m> no ponto <m>(0,7)</m>.
+
+<figure xml:id="fig2">
+    <caption></caption>
+    <image source="images/fig2.svg" width="50%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+    </p>
+</solution>
+</task>
+</example>    
+  
+
+
+
+<exercise>
+    <statement>
+        <p>
+            Determine a equação da reta que tem uma inclinação 3 e passa pelo ponto <m>(1,-2)</m> .
+        </p>
+    </statement>
+   
+    <answer>
+        <p>
+            <m>y=3x-5</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Determine a equação da reta que passa pelos pontos <m>(2,2)</m> e  <m>(1, 1)</m>. 
+       
+        </p>
+    </statement>
+    
+    <answer>
+        <p>
+            <m>y=x</m>
+        </p>
+    </answer>
+</exercise>   
+
+<subsection xml:id="sugestao-video-0">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/V9twnvQ9QtE"  visual="youtu.be/V9twnvQ9QtE">  Encontrando uma equação da reta que tem inclinação
+        de <m>-\frac{3}{4}</m> e passa pelo ponto <m>(0,8)</m>. 
+         </url>
+
+     </p>
+ </li>
+ <li>
+     <p>
+        <url href="https://youtu.be/NArAu1SPdqE"  visual="youtu.be/NArAu1SPdqE"> 
+      Obtendo a fórmula para a equação da reta.</url>. 
+
+     </p>
+</li>
+
+<li>
+     <p>
+        <url href="https://youtu.be/aWD9PC-1CiA"  visual="youtu.be/aWD9PC-1CiA"> 
+      Obtendo a equação reduzida a partir da equação da reta.</url>. 
+
+     </p>
+</li>
+ 
+</ul>    
+</subsection>
+
+    
+</subsection>   
+
+ <subsection xml:id="subsec-xx">
+    <title>A reta tangente</title>
+    <definition xml:id="def-tangente">
+        <statement>
+            <p>
+             
+             A reta tangente ao gráfico de <m>y=f(x)</m> no ponto  <m>(a, f(a))</m> é 
+             
+              a reta que passa por pelo ponto  <m>(a, f(a))</m> e que tem inclinação 
+
+              <me>
+                  m = \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a},
+              </me>
+            desde que o limite exista.
+            </p>
+        </statement>
+    </definition>
+
+
+
+<figure xml:id="fig11">
+    <caption></caption>
+    <image source="images/derivada1.png" width="60%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+
+<figure xml:id="fig22">
+    <caption></caption>
+    <image source="images/derivada2.png" width="40%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+
+<figure xml:id="fig32">
+    <caption></caption>
+    <image source="images/derivada3.png" width="60%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+
+
+<example xml:id="ex-4">
+    <statement>
+        <p>
+            Determine uma equação da reta tangente à parábola <m>f(x)=x^2</m> no ponto <m>(1, 1)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Sendo <m>(a, f(a))=(1,1)</m> a <xref ref="def-tangente"/>  indica que a reta tangente tem inclinação 
+
+            <md>
+                <mrow> m = \amp \lim\limits_{x\to 1}\frac{f(x)-f(1)}{x-1} =  \lim\limits_{x\to 1}\frac{x^2-1}{x-1}  </mrow>
+                <mrow> =\amp  \lim\limits_{x\to 1}\frac{(x+1)\cancel{(x-1)}}{\cancel{x-1}} \amp \ct{Fatorando o numerador} </mrow>
+                  <mrow> =\amp \lim\limits_{x\to 1}(x+1)=2</mrow> 
+            </md>
+                 
+        Usando a <xref ref="assemblage-reta" text="title"/>, encontramos que a reta tangente no ponto <m>(1,1)</m>  é 
+
+        <me>
+            y-1=2(x-1)
+        </me>
+        
+        que pode ser reescrita como 
+
+        <me>
+            y=2x-1.
+        </me>
+        
+    <figure xml:id="fig3">
+    <caption></caption>
+    <image source="images/fig3.svg" width="50%">
+        <description>(for accessibility)</description>
+    </image>
+    </figure>
+            
+        </p>
+    </solution>
+</example>
+
+<p>
+    Há outra expressão para a inclinação da reta tangente que é, às vezes, mais fácil de ser
+usada. Se <m>h=x-a</m>, então <m>x=a+h</m> e assim, quando <m>x</m> tende a <m>a</m>, <m>h</m> tende a <m>0</m>; dessa forma,
+ a expressão para reta tangente dada na <xref ref="def-tangente"/> é reescrita como
+
+
+    <mdn>
+        <mrow xml:id="eq1">m = \lim\limits_{h\to 0}\frac{f(a+h)-f(a)}{h} </mrow>
+       
+    </mdn>
+                
+              
+
+
+</p>
+
+<example xml:id="ex-5">
+    <statement>
+        <p>
+            Encontre uma equação da reta tangente ao gráfico de <m>f(x)=\frac{2}{x}</m> no ponto <m>(2,1)</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Se <m>f(x)=\frac{2}{x}</m>  então a inclinação da reta em <m>(3,2)</m> é 
+
+
+           <md>
+               <mrow>  m = \amp \lim\limits_{h\to 0}\dfrac{f(2+h)-f(2)}{h} = \lim\limits_{h\to 0}\dfrac{\dfrac{2}{2+h}-1}{h} </mrow>
+                <mrow> =\amp\lim\limits_{h\to 0}\frac{\dfrac{2-(2+h)}{2+h}}{h} </mrow>
+               <mrow> =\amp \lim\limits_{h\to 0}\left(\dfrac{2-(2+h)}{2+h}\cdot \frac{1}{h}\right) </mrow>
+               <mrow> =\amp \lim\limits_{h\to 0}\frac{-\cancel{h}}{\cancel{h}(2+h)}</mrow>
+               <mrow> =\amp \lim\limits_{h\to 0}-\frac{1}{2+h}=-\frac{1}{2}</mrow>.
+           </md>
+        Portanto, uma  <xref ref="assemblage-reta" text="title"/>  tangente no ponto <m>(2,1)</m> é        
+            
+            <me>
+                y-1=-\frac{1}{2}(x-2)
+            </me>
+            que se pode ser reescrita como 
+
+            <me>
+                y= -\frac{1}{2}x + 2.
+            </me>
+                <figure xml:id="fig4">
+    <caption></caption>
+    <image source="images/fig4.svg" width="50%">
+        <description>(for accessibility)</description>
+    </image>
+    </figure>
+        </p>
+    </solution>
+</example>
+<!-- 
+<example xml:id="ex-3">
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example> -->
+
+<exercise>
+    <statement>
+        <p>
+            Encontre uma equação da reta tangente ao gráfico de <m>f(x)=x^2</m> no ponto <m>(-2,4)</m>. 
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+          <m>y-4=-4(x+2)</m>  
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+              Encontre uma equação da reta tangente ao gráfico de <m>f(x)=\frac{3}{x}</m> no ponto <m>(3,1)</m>. 
+        </p>
+    </statement>
+   
+    <answer>
+        <p>
+            <m>y=-\frac{1}{3}x+2</m>
+        </p>
+    </answer>
+</exercise>
+</subsection>
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/tft-xgt_uUk"  visual="youtu.be/tft-xgt_uUk">  Encontrando <m>f'(2)</m> sabendo que a
+         reta tangente ao gráfico de <m>f</m> no ponto <m>(2,3)</m>  passa pelo ponto <m>(7,4)</m>.</url>
+
+     </p>
+ </li>
+ <li>
+     <p>
+        <url href="https://youtu.be/tft-xgt_uUk?t=130"  visual="youtu.be/tft-xgt_uUk?t=130">  Encontrando a equação da reta tangente ao gráfico 
+        de <m>g</m> em <m>x=-1</m> sabendo que <m>g(-1)</m> e <m>g'(-1)=-2</m>.</url>. 
+
+     </p>
+</li>
+
+
+ 
+</ul>    
+</subsection>
+
+
+   <subsection xml:id="subsec-derivada">
+    <title>A Derivada de uma Função</title>
+    <definition xml:id="def-derivada">
+        <statement>
+            <p>
+               Seja <m>f(x)</m> uma função definida em  <m>a</m>.
+A derivada <m>f(x)</m> em <m>x=a</m>, é denotada por
+<m>f'(a)</m> e definida por
+<md>
+<mrow>
+f'(a)=\lim_{h\to 0}\frac{f\big(a+h\big)-f(a)}{h}
+</mrow>
+</md>
+se o limite existir.
+            </p>
+        </statement>
+    </definition>
+
+
+
+<example xml:id="ex-6">
+    <statement>
+        <p>
+            Determine a derivada de <m>f(x)=3x^2-2x</m> em <m>a=1</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Seque da <xref ref="def-derivada"/> que 
+
+        <md>
+            <mrow>f'(1)=\amp \lim\limits_{h\to 0}=\frac{f(1+h)-f(1)}{h} </mrow>
+            <mrow> =\amp \lim\limits_{h\to 0}\frac{3(1+h)^2-2(1+h)-1}{h} </mrow>
+            <mrow> = \amp \lim\limits_{h\to 0}\frac{3h^2 + 4h}{h}=\frac{\cancel{h}(h+4)}{\cancel{h}} </mrow>
+            <mrow> =\amp \lim\limits_{h\to 0}(h+4)=4</mrow>
+        </md>
+
+        </p>
+    </solution>
+</example>
+
+<p>
+    
+
+Se escrevermos <m>x=a+h</m> , então <m>h=x-a</m> e <m>h</m> tende a 0 se, e somente se, <m>x</m> tende a <m>a</m>.
+Consequentemente, uma maneira equivalente de enunciar a <xref ref="def-derivada"/>, como vimos
+na definição  das retas tangentes (ver Equação <xref ref="eq1"/>), é
+
+
+<mdn>
+    <mrow xml:id="eq2"> f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}</mrow>
+</mdn>
+</p>
+<p>
+    A combinação entre a <xref ref="def-tangente"/>  e a Equação <xref ref="eq2"/> permite a afirmação a seguir.
+
+<assemblage xml:id="assemblage-">
+    <!-- <title>Derivada e reta tangente </title> -->
+    <p>
+      A  <term>reta tangente</term> ao gráfico de <m>f</m> no ponto <m>(a, f(a))</m> é a reta que passa por <m>(a, f(a))</m>, 
+      cuja inclinação é igual a <m>f'(a)</m>. 
+
+    </p>
+</assemblage>    
+      
+</p>
+
+<example xml:id="ex-7">
+    <statement>
+        <p>
+            Encontre uma equação da reta tangente ao gráfico de <m>f(x)=3x^2-2x</m> no ponto <m> (1, 1)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Do <xref ref="ex-4"/>, sabemos que a derivada de <m>f(x)=3x^2-2x</m> em <m>a=1</m> é <m> 4</m>. Portanto,
+            a inclinação da reta tangente em <m>(1,1)</m> é <m>f'(1)=4</m>. Dessa forma, uma equação da reta tangente é 
+
+
+            <md>
+                <mrow> y-1=4(x-1) </mrow>
+            </md>
+        ou equivalentemente 
+
+      <me>
+          y=4x-3.
+      </me>
+    <figure xml:id="fig5">
+    <caption></caption>
+    <image source="images/fig5.svg" width="50%">
+        <description>(for accessibility)</description>
+    </image>
+    </figure>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-8">
+    <statement>
+        <p>
+            Determine a derivada de <m>f(x)=\dfrac{2}{x}</m> em <m>x=a</m>. 
+           
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <md>
+                <mrow>f'(a) = \amp \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}  </mrow>
+                <mrow> =\amp \lim_{h\to 0}\dfrac{\dfrac{2}{a+h}-\dfrac{2}{a}}{h} </mrow>
+                <mrow> =\amp  \lim_{h\to 0}\frac{\dfrac{2a-2a-2h}{a(a+h)}}{h}</mrow>
+                <mrow>= \amp \lim_{h\to 0} \frac{-2\cancel{h}}{a(a+h)\cancel{h}}=-\frac{2}{a^2}</mrow>
+                
+            </md>
+
+        Portanto, a derivada de <m>f(x)=\dfrac{2}{x}</m> em <m>x=a</m> é <m>f'(a)=-\dfrac{2}{a^2}</m>
+        </p>
+    </solution>
+</example>
+
+
+
+<exercise>
+    <statement>
+        <p>
+              Determine a derivada de <m>f(x)=x^2-3x+1</m> em <m>x=1</m>. 
+        </p>
+        
+    </statement>
+    <hint>
+        <p>
+           Desenvolva os produtos notáveis e depois simplifique o numerador.
+           </p>
+    </hint>
+    <answer>
+        <p>
+           <m>-1</m>
+        </p>
+    </answer>
+</exercise>
+
+
+<exercise>
+    <statement>
+        <p>
+           Encontre uma equação da reta tangente ao gráfico de  <m>f(x)=x^2-3x+1</m> no ponto <m>(3,1)</m>.
+        </p>
+    </statement>
+    <answer>
+        <p>
+            <m>y=3x-8</m>
+        </p>
+    </answer>
+</exercise>
+</subsection>
+
+<subsection xml:id="sugestao-video-2">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/R0phEcQlHAg"  visual="youtu.be/R0phEcQlHAg">  O conceito de derivada .</url>
+
+     </p>
+ </li>
+    <li>
+        <p>
+          <url href="https://youtu.be/OBNtSEPheP0"  visual="youtu.be/OBNtSEPheP0"> Definição formal da derivada como um limite.</url>
+
+        </p>
+    </li>
+
+    <li>
+        <p>
+         <url href="https://youtu.be/IvgnAp_H9wQ"  visual="youtu.be/IvgnAp_H9wQ"> Definição alternativa de Derivada.</url>
+
+        </p>
+    </li>
+ <li>
+     <p>
+        <url href="https://youtu.be/zD7ok8izsJQ"  visual="youtu.be/zD7ok8izsJQ"> Calculando <m>f'(e)</m> para <m>f(x)=\ln{x}</m>  .</url>
+
+     </p>
+
+     
+ </li>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/VQmIbSJ6dgc"  visual="youtu.be/VQmIbSJ6dgc"> Problema resolvido usando definição de derivada.</url>
+
+     </p>
+
+     
+ </li>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/RCM7p0A3YUg"  visual="youtu.be/RCM7p0A3YUg"> Calculando a derivada de  <m>f(x)=x^2</m> em <m>x=3</m>.</url>
+
+     </p>     
+ </li>
+
+  </ul>    
+</subsection>
+
+
+
+
+<subsection xml:id="subsec-func-derivada">
+    <title>A derivada como função</title>
+    
+<p>
+    Dado qualquer número <m>x</m> para o qual  exista 
+    
+<mdn>
+    <mrow xml:id="eq3"> f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h} </mrow>
+</mdn>
+
+
+podemos associar cada número <m>x</m> ao número <m>f'(x)</m>. Assim, podemos considerar <m>f'(x)</m> como 
+uma nova função, denominada de <term>derivada de <m>f</m> em <m>x</m></term>, cujo domínio são todos os valores de <m>x</m>
+onde o limite acima exista. Geometricamente como a inclinação da reta tangente ao gráfico de <m>f</m> no ponto <m>(x, f(x))</m>. 
+</p>
+
+<example xml:id="ex-9">
+    <statement>
+        <p>
+           Dada <m>f(x)=3x^2-2x</m>,  determine <m>f'(x)</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p> Da Equação <xref ref="eq3"/>, temos
+            <md>
+            <mrow>f'(x)=\amp \lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h} </mrow>
+            <mrow> =\amp \lim\limits_{h\to 0}\frac{3(x+h)^2-2(x+h)-(3x^2-2x)}{h} </mrow>
+            <mrow> =\amp \lim\limits_{h\to 0}\frac{3x^2+6xh+3h^2-2x-2h-3x^2+2x}{h} </mrow>
+            <mrow>= \amp\lim\limits_{h\to 0}\frac{6xh+3h^2-2h}{h} </mrow>
+            <mrow>= \amp\lim\limits_{h\to 0}\frac{\cancel{h}(6x+3x-2}{\cancel{h}} </mrow>
+            <mrow>=\amp \lim\limits_{h\to 0} (6x+3h-2)=6x-2 </mrow>
+            
+        </md>
+
+        Portanto, a derivada de <m>f(x)=3x^2-2x</m> é <m>f'(x)=6x-2</m>.
+        </p>
+    </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Encontre a derivada de <m>f(x)=x^2-3x</m>.
+        </p>
+    </statement>
+
+  <answer>
+      <p>
+          f'(x)=2x-3
+      </p>
+  </answer>
+</exercise>
+
+
+<example xml:id="ex-10">
+    <statement>
+        <p>
+            Para <m>f(x)=\sqrt{x}</m>, encontre <m>f'(x)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <md>
+            <mrow>f'(x)=\amp \lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h} </mrow>
+            <mrow> =\amp \lim\limits_{h\to 0}\frac{\sqrt{x+h}-\sqrt{x}}{h} </mrow>
+            <mrow> =\amp  \lim\limits_{h\to 0}\left(\frac{\sqrt{x+h}-\sqrt{x}}{h}\cdot \frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}\right) </mrow>
+            <mrow>= \amp\lim\limits_{h\to 0}\frac{(x+h)-x}{h(\sqrt{x+h}+\sqrt{x})} </mrow>
+            <mrow>= \amp \lim\limits_{h\to 0}\frac{\cancel{h}}{\cancel{h}(\sqrt{x+h}+\sqrt{x})}</mrow>
+            <mrow>= \amp \lim\limits_{h\to 0}\frac{1}{\sqrt{x}+\sqrt{x}}=\frac{1}{2\sqrt{x}}.</mrow>
+            
+        </md>
+        </p>
+    </solution>
+</example>
+
+
+
+
+
+
+<note>
+<title>Notação</title>
+Para <m>y=f(x)</m> temos as seguintes notações mais comuns para derivada:
+<me>
+    f'(x)= y'=\frac{\dd y}{\dd x}=\frac{\dd f}{\dd x}-\frac{\dd}{\dd x}f(x)= Df(x)= D_xf(x).
+</me>
+
+Além disso, para indicar o valor de uma  derivada <m> \frac{\dd y}{\dd x}</m> em <m>x=a</m> usamos a notação
+
+<me>
+    f'(a)=\frac{\dd y}{\dd x}\Bigg|_{x=a}
+</me>
+
+
+</note>
+
+
+
+<definition xml:id="def-derivavel">
+<statement>
+    <p>
+        Uma função <m>f</m> é derivável em <m>x=a</m> se  <m>f'(a)</m> existir. É
+derivável em um intervalo aberto <m>(a,b)</m> se for derivável em cada valores do intervalo.
+ se for diferenciável em cada número do intervalo.
+    </p>
+</statement>
+
+</definition>
+
+<remark>
+A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(a, +\infty)</m>, <m>(-\infty, a)</m> e <m>(-\infty, +\infty)</m>. 
+</remark>
+
+<example xml:id="ex-11">
+    <statement>
+        <p>
+            A função <m>f(x)=|x|</m> é diferenciável em <m>x=0</m>?
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Da <xref ref="def-derivavel"/> e suponto que <m>f'(0)</m> existe teríamos
+
+            <md>
+                <mrow>f'(0) =\amp =\lim_{h\to 0}\frac{f(0+h)-f(0)}{h}</mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{f(h)-f(0)}{h} </mrow>
+                <mrow> \amp \lim_{h\to 0}\frac{|h|}{h}</mrow>
+            </md>
+
+        Entretanto, os limites laterais valem 
+
+        <md>
+            <mrow>\lim_{h\to 0^-}\frac{|h|}{h}=-1 \qquad \text{e}\qquad \lim_{h\to 0^+}\frac{|h|}{h}=1  </mrow>
+        </md>
+        uma vez que 
+
+        <me>
+            \frac{|h|}{h}=\begin{cases}
+            1 \amp\text{ se } h \gt 0\\
+            0 \amp\text{ se } h\lt 0
+            \end{cases}
+
+        </me>
+        Portanto, já que os limites laterais são distintos, o limite (por ambos os lados) não existe e, consequentemente, <m>f'(0)</m> 
+        não existe; logo, <m>f(x)=|x| </m> não é diferenciável em <m>x=0</m>. 
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-12">
+    <statement>
+        <p>
+            Dada a função <m>f(x)=|x|</m> encontre <m>f'(x)</m>.
+        </p>
+    </statement>
+    <solution>
+        <p> Sendo <m>f(x)=|x|</m> podemos escrevê-la em duas partes. Se <m>x\gt 0</m> então <m>f(x)=x</m> e  se <m>x\lt 0</m> então <m>f(x)=-x</m>. 
+        Daí, podemos escolher <m>h</m> suficientemente pequeno para que <m>x+h\gt 0</m> e portanto <m>|x+h|=x+h</m>. Dessa forma,
+
+
+                <md>
+                <mrow>f'(0) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{|x+h|-|x|}{h} </mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{x+h-x}{h} </mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{h}{h}=1 .</mrow>
+            </md>
+        
+         Logo, para <m>x\gt 0</m> temos <m>f'(x)=1</m>.
+        
+    Por outro lado, para <m>x\lt 0</m> podemos escolher <m>h</m> suficientemente pequeno para que <m>x+h\lt 0</m> e portanto <m>|x+h|=-(x+h)</m>. Dessa forma,
+ 
+    
+         <md>
+                <mrow>f'(0) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{|x+h|-|x|}{h} </mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{-(x+h) + x}{h} </mrow>
+                <mrow>= \amp \lim_{h\to 0}\frac{-h}{h}=-1 .</mrow>
+            </md>
+     Logo, para <m>x\lt 0</m> temos <m>f'(x)=-1</m>. Por fim,  já que <m>f</m>  não é derivável em <m>x=0</m> (ver <xref ref="ex-12"/>) obtemos
+            
+            
+            <me>
+                     f'(x)=\begin{cases}
+            x \amp\text{ se } x \gt 0\\
+            -x \amp\text{ se } x\lt 0
+            \end{cases}
+            </me>
+                
+            
+        </p>
+    </solution>
+</example>
+
+<theorem>
+<statement>
+    <p>
+        Se <m>f</m> for derivável em <m>a</m>, então <m>f</m>é contínua em <m>a</m>. 
+    </p>
+</statement>
+<proof>
+    <p>
+      Veja em  <url href="https://youtu.be/YTRZd0n2j_M" visual="youtu.be/YTRZd0n2j_M"></url>.
+    </p>
+</proof>
+</theorem>
+
+</subsection>
+
+
+<subsection xml:id="sugestao-video-3">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+       
+          
+     <p>
+        <url href="https://youtu.be/haHK02M_SnU"  visual="youtu.be/haHK02M_SnU"> Calculando a derivada de  <m>f(x)=x^2</m> usando limites.</url>
+
+     </p>
+
+     
+ </li>
+        
+ 
+
+    <li>
+        <p>
+        <url href="https://youtu.be/zj5eq91Z808"  visual="youtu.be/zj5eq91Z808"> Relação entre a derivada e a continuidade de uma função.</url>
+ 
+        </p>
+    </li>
+ <li>
+     <p>
+ <url href="https://youtu.be/oOBdYuJYEDw"  visual="youtu.be/oOBdYuJYEDw"> Usando gráfico para encontrar valores de <m>x</m> não é derivável</url>
+
+     </p>
+ </li>
+
+
+<li>
+     <p>
+ <url href="https://youtu.be/Z5v2SnwAVhc"  visual="https://youtu.be/Z5v2SnwAVhc"> 
+ 
+ A função <m>g(x)=\begin{cases} x-1 \, \text{ se } \, x\lt 1\\
+        (x-1)^2\, \text{se } x \geq 1  \end{cases}</m> é derivável em <m>x=1</m>?
+ 
+ 
+ </url>
+
+     </p>
+ </li>
+
+</ul>    
+</subsection>
+
+
+
+<exercises xml:id="exercises-">
+<exercise>Escrever aqui
+</exercise>
+</exercises>   
+
+</section>
+
+
+
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+
+
+</article>
+
+</pretext>
+
+
+
