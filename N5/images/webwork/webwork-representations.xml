@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-derivada-intro-definicao/problema1.pg">
+      <statement><p>Seja <m>\&gt;f(x) = -8x^{2}</m>.</p>
+<p>a) Determine <m>\&gt;f(x+h)</m>: <fillin name="AnSwEr0001" characters="20"/></p>
+<p>b) Determine <m>\&gt;f(x+h)-f(x)</m>: <fillin name="AnSwEr0002" characters="20"/></p>
+<p>c) Determine <m>\&gt; \frac {f(x+h)-f(x)} {h}</m>: <fillin name="AnSwEr0003" characters="20"/></p>
+<p>d) Determine <m>\&gt; f'(x)</m>: <fillin name="AnSwEr0004" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-8\!\left(x+h\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>8x^{2}-8\!\left(x+h\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{8x^{2}-8\!\left(x+h\right)^{2}}{h}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-\left(8\cdot 2x\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-derivada-intro-definicao/problema10.pg">
+      <statement><p>Suponha que <m>f</m> é uma função que satisfaz as seguintes propriedades:</p>
+<p><m>f(x+y) = f(x) + f(y) + x^2y +xy^2</m></p>
+<p>para todos os números reais <m>x</m> e <m>y</m>, e</p>
+<p><m>\displaystyle \lim_{x \to 0} \frac{f(x)}{x} = 1</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="40"/></p>
+<p><alert> Dica: </alert> Use a definição de derivada: <m>f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}</m>.  Observe como você pode reorganizar a fórmula para <m>f(x+y)</m> como: <m>f(x+y)-f(x) = f(y) + x^2y+xy^2</m>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>1+x^{2}</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Use a definição de derivada: <m>f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}</m> e a fórmula para <m>f(x+y)</m>.</p>
+<p><m>f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}</m></p>
+<p><m>= \displaystyle \lim_{h \to 0} \frac{f(x)+f(h)+x^2h+xh^2-f(x)}{h}</m></p>
+<p><m>= \displaystyle \lim_{h \to 0} \frac{f(h)+x^2h+xh^2}{h}</m></p>
+<p><m>= \displaystyle \lim_{h \to 0} \left(\frac{f(h)}{h}+x^2+xh\right)</m></p>
+<p><m>= 1+x^2</m></p>
+<p>Portanto <m>f'(x) = 1+x^2</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-intro-definicao/problema10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-intro-definicao/problema10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-intro-definicao/problema10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-intro-definicao/problema10.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="pretext-derivada-intro-definicao/problema11.pg">
+      <statement><p>Use a definição de derivada para encontrar <m>f'(0)</m> onde:</p>
+<p><me>f(x) = \begin{cases}
+         x^2 \sin \left(\frac{1}{x} \right) \amp  x \neq 0 \\
+         0 \amp   x = 0\\
+       \end{cases}</me></p>
+<p>Se a derivada não existir, insira DNE.</p>
+<p><m>f'(0) =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+<p><alert> Dica: </alert> Você deve acabar tendo que resolver: <me>\lim_{ x \rightarrow 0 } x \sin \left(\frac{1}{x} \right)</me>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Usando a definição da derivada encontramos que:</p>
+<p><m>\displaystyle f'(0) =\lim_{ h \to 0 } \frac{f(0) - f(h)}{h}</m></p>
+<p><m>\displaystyle = \lim_{ h \to 0 } h^2 sin \left(\frac{1}{h} \right) \frac{1}{h}</m></p>
+<p><m>\displaystyle = \lim_{ h \rightarrow 0 } h \sin(\frac{1}{h})</m></p>
+<p><m>\displaystyle = 0</m>, pelo teorema do confronto.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-intro-definicao/problema11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-intro-definicao/problema11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-intro-definicao/problema11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-intro-definicao/problema11.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="pretext-derivada-intro-definicao/problema12.pg">
+      <statement><p>A Derivada à esquerda e à direita de <m>f(x)</m> são definidas como</p>
+<p><m>f'_{-}(x)=\lim\limits_{h\to 0^-}\frac{f(x+h)-f(x)}{h}</m>
+e
+<m>f'_{+}(x)=\lim\limits_{h\to 0^+}\frac{f(x+h)-f(x)}{h},</m></p>
+<p>respectivamente.</p>
+<p>Seja <m>f(x)= |3 + 10 x|</m>.</p>
+<p>Então para <m>x\lt  -\frac{3}{10}</m>, <m>f'(x)=</m><fillin name="AnSwEr0001" characters="25"/>.</p>
+<p>A derivada à esquerda de <m>f(x)</m> em <m>x= -\frac{3}{10}</m> é  <fillin name="AnSwEr0002" characters="20"/>.</p>
+<p>A derivada à direita de <m>f(x)</m> em <m>x= -\frac{3}{10}</m> é <fillin name="AnSwEr0003" characters="20"/>.</p>
+<p><m>f(x)</m> é derivável em <m>x= -\frac{3}{10}</m>? Responda S/N): <fillin name="AnSwEr0004" characters="20"/></p>
+<p>Marque as seguintes afirmações com V se for verdadeira e F, caso contrário:</p>
+<p><fillin name="AnSwEr0005" characters="5"/> <m>f(x)</m> é derivável no intervalo fechado <m>(-\infty,-\frac{3}{10}]</m></p>
+<p><fillin name="AnSwEr0006" characters="5"/> <m>f(x)</m>  é derivável no intervalo oberto <m>(-\infty,-\frac{3}{10})</m></p>
+<p><fillin name="AnSwEr0007" characters="5"/> <m>f(x)</m> é derivável no intervalo fechado <m>[-\frac{3}{10},\infty)</m></p>
+<p><fillin name="AnSwEr0008" characters="5"/> <m>f(x)</m> é derivável no intervalo oberto <m>(-\frac{3}{10},\infty)</m></p>
+</statement>
+      <answer>
+        <p>
+          <m>-10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>N</p>
+      </answer>
+      <answer>
+        <p>F</p>
+      </answer>
+      <answer>
+        <p>V</p>
+      </answer>
+      <answer>
+        <p>F</p>
+      </answer>
+      <answer>
+        <p>V</p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-intro-definicao/problema12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-intro-definicao/problema12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-intro-definicao/problema12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-intro-definicao/problema12.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-derivada-intro-definicao/problema2.pg">
+      <statement><p>Seja<me>f(x) = \frac{1}{x + 2}</me>
+Usando a definição de derivada como um limite determine:</p>
+<p>(i) <m>f'( -6 ) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>(ii) <m>f'( -3 ) =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>(iii) <m>f'( 0 ) =</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p>(iv) <m>f'( 2 ) =</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p>Para evitar calcular quatro limites separados, sugiro que você avalie a derivada no ponto em que <m>x = a</m>. Depois de ter a derivada, você pode simplesmente inserir esses quatro valores para "a" para obter as respostas.</p>
+</statement>
+      <answer>
+        <p>
+          <m>-0.0625</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.25</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.0625</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-intro-definicao/problema2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-intro-definicao/problema2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-intro-definicao/problema2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-intro-definicao/problema2.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-derivada-intro-definicao/problema3.pg">
+      <statement><p><me>f(x)=1 x^3-39 x + 2</me></p>
+<p>Encontre a derivada da função acima usando a definição da derivada.</p>
+<p><fillin name="AnSwEr0001" characters="40"/></p>
+<p>Qual dos seguintes é o domínio da função?</p>
+<p><var form="buttons">
+<li>
+<p>Todos os números reais, exceto 0</p>
+</li>
+<li>
+<p>Números reais positivos</p>
+</li>
+<li>
+<p>Inteiros</p>
+</li>
+<li>
+<p>x= 1</p>
+</li>
+<li>
+<p>Todos os números reais</p>
+</li>
+<li>
+<p>Springfield</p>
+</li>
+<li>
+<p>Números reais não negativos</p>
+</li>
+</var></p>
+<p>Qual dos seguintes é o domínio da função derivada?</p>
+<p><var form="buttons">
+<li>
+<p>Números reais não negativos</p>
+</li>
+<li>
+<p>Inteiros</p>
+</li>
+<li>
+<p>Springfield</p>
+</li>
+<li>
+<p>Todos os números reais, exceto 0</p>
+</li>
+<li>
+<p>x= 1</p>
+</li>
+<li>
+<p>Números reais positivos</p>
+</li>
+<li>
+<p>Todos os números reais</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>3x^{2}-39</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-intro-definicao/problema3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-intro-definicao/problema3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-intro-definicao/problema3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-intro-definicao/problema3.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-derivada-intro-definicao/problema4.pg">
+      <statement><p>Seja
+<me>f(x)= \begin{cases}
+-5x^{2}+6x \amp  \text{for } x \lt  0, \\
+5x^{2}-2 \amp  \text{for } x \geqslant 0.
+\end{cases}</me>
+De acordo com a definição da derivada,
+para calcular <m>f'(0)</m>, precisamos calcular
+o limite à esquerda</p>
+<p><m>\lim \limits _ {x \to 0^-}</m>
+<fillin name="AnSwEr0001" characters="25"/>, que é
+<fillin name="AnSwEr0002" characters="10"/>,</p>
+<p>e o limite à direita</p>
+<p><m>\lim \limits _ {x \to 0^+}</m>
+<fillin name="AnSwEr0003" characters="25"/>, que é
+<fillin name="AnSwEr0004" characters="10"/>.</p>
+<p>Concluimos que
+<m>f'(0)</m> é <fillin name="AnSwEr0005" characters="10"/>.</p>
+<p><alert>Nota:</alert> 
+Se um limite ou derivado for indefinido,
+digite 'indefinido' como sua resposta.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{-5x^{2}+6x+2}{x}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{indefinido}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5x</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{indefinido}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-intro-definicao/problema4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-intro-definicao/problema4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-intro-definicao/problema4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-intro-definicao/problema4.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-derivada-intro-definicao/problema5.pg">
+      <statement><p>Se <m>f(x) = 3 x^2 + 4 x + 7</m>, encontre <m>f'( 3 )</m>, usando a definição de derivada. <m>f'( 3 )</m> é o limite com <m>x\to</m> <fillin name="AnSwEr0001" characters="20"/>
+da expressão</p>
+<p><fillin name="AnSwEr0002" characters="40"/></p>
+<p>O valor deste limite é
+<fillin name="AnSwEr0003" characters="20"/></p>
+<p>Use isso para encontrar a equação da reta tangente à parábola
+  <m>y = 3 x^2  +  7</m>
+no ponto <m>( 3 , 46 )</m>.
+A equação desta reta tangente pode ser escrita na forma</p>
+<p><m>y =</m> <fillin name="AnSwEr0004" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{3x^{2}+4x+7-46}{x-3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>22</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>22x+46-66</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-intro-definicao/problema5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-intro-definicao/problema5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-intro-definicao/problema5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-intro-definicao/problema5.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-derivada-intro-definicao/problema6.pg">
+      <statement><p>Para <m>\small{f(x) = \sqrt{5x+9}}</m>, encontrar <m>\small{f\;'(x)}</m> use a definição
+<m>\small{f\;'(x) = \displaystyle \lim_{h\to 0}} \large{\frac{f(x + h) - f(x)}{h}}</m>.</p>
+<p><m>\small{f\;'(x) =}</m> <fillin name="AnSwEr0001" characters="12"/></p>
+<p>Usando isso, encontre a reta tangente ao gráfico de <m>\small{y = \sqrt{5x+9}}</m> em <m>\small{x = -1}</m>.
+Insira todos os valores como números inteiros ou frações em termos mais baixos (quando o numerador e o denominador não têm qualquer fator comum para além de 1).</p>
+<p><m>\small{y =}</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>5\frac{1}{2\sqrt{5x+9}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.25x+3.25</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Usando a definição de limite da derivada para <m>\small{f(x) = \sqrt{5x+9}}</m>,</p>
+<p><me>\begin{align}
+     \small{f\;'(x)} \amp = \small{\displaystyle \lim_{h\to 0}} \frac{\sqrt{5\!\left(x+h\right)+9}-\sqrt{5x+9}}{h} \\
+     \amp = \small{\displaystyle \lim_{h\to 0}} \left(\frac{\sqrt{5\!\left(x+h\right)+9}-\sqrt{5x+9}}{h}\right) \left(\frac{\sqrt{5\!\left(x+h\right)+9}+\sqrt{5x+9}}{\sqrt{5\!\left(x+h\right)+9}+\sqrt{5x+9}}\right) \\
+     \amp = \small{\displaystyle \lim_{h\to 0}} \frac{5\!\left(x+h\right)+9-5x-9}{h\!\left(\sqrt{5\!\left(x+h\right)+9}+\sqrt{5x+9}\right)} \\
+     \amp = \small{\displaystyle \lim_{h\to 0}} \frac{5}{\sqrt{5\!\left(x+h\right)+9}+\sqrt{5x+9}} \\
+     \amp = \frac{5}{2\sqrt{5x+9}} \\
+  \end{align}</me></p>
+<p>Usando isso, a inclinação da linha tangente em<m>\small{x = -1}</m> é 
+<m>\small{f'(-1) = \normalsize{\frac{5}{2\sqrt{5(-1) + 9}} = {\textstyle\frac{5}{4}}}}</m>.</p>
+<p><m>\small{f(-1) = 2}</m>, então encontramos a equação da reta tangente no ponto
+<m>\small{(-1,2)}</m> e,
+<me>\small{y - 2 =} \normalsize{{\textstyle\frac{5}{4}}} \small{(x  + 1)},</me></p>
+<p>ou</p>
+<p><me>\normalsize{y = {\textstyle\frac{5}{4}}x+{\textstyle\frac{13}{4}}}.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-intro-definicao/problema6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-intro-definicao/problema6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-intro-definicao/problema6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-intro-definicao/problema6.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-derivada-intro-definicao/problema7.pg">
+      <statement><p>Se <m>f(x) =  \sqrt { 4 + 4 x }</m>, determine <m>f'( 4 )</m>, usando a definição de derivada. <m>f'( 4 )</m> é o limite com <m>x\to</m> <fillin name="AnSwEr0001" characters="20"/>
+da expressão</p>
+<p><fillin name="AnSwEr0002" characters="40"/></p>
+<p>O valor deste limite é
+<fillin name="AnSwEr0003" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{\sqrt{4+4x}-4.47214}{x-4}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.447213595499958</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-intro-definicao/problema7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-intro-definicao/problema7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-intro-definicao/problema7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-intro-definicao/problema7.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-derivada-intro-definicao/problema8.pg">
+      <statement><p>Considere a função <m>f(x) = 10x-x^{2}</m>.</p>
+<p>Use a definição de limite para calcular os seguintes o valor das derivadas:</p>
+<p><m>f'(0) =</m> <fillin name="AnSwEr0001" characters="10"/></p>
+<p><m>f'(1) =</m> <fillin name="AnSwEr0002" characters="10"/></p>
+<p><m>f'(2) =</m> <fillin name="AnSwEr0003" characters="10"/></p>
+<p><m>f'(3) =</m> <fillin name="AnSwEr0004" characters="10"/></p>
+<p>Observe que o trabalho para encontrar <m>f(a)</m> é o mesmo, independentemente do valor de
+<m>a</m>. Com base
+em seu trabalho na primeira parte, o que você conjectura é o valor de <m>f'(4)</m>?</p>
+<p><m>f'(4) =</m> <fillin name="AnSwEr0005" characters="10"/></p>
+<p>Que tal <m>f'(5)</m>?</p>
+<p><m>f'(5) =</m> <fillin name="AnSwEr0006" characters="10"/></p>
+<p>(Nota: você não deve usar a definição de limite da derivada para encontrar qualquer valor.)</p>
+</statement>
+      <answer>
+        <p>
+          <m>10</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>8</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><me>f'(0) = \lim_{h\rightarrow 0 } \frac{f(0+h)-f(0)}{h} = \lim_{h\rightarrow 0 } \frac{10\!\left(0+h\right)-\left(0+h\right)^{2}-0}{h}
+= 10</me>    
+<me>f'(1) = \lim_{h\rightarrow 1 } \frac{f(1+h)-f(1)}{h} = \lim_{h\rightarrow 0 } \frac{10\!\left(1+h\right)-\left(1+h\right)^{2}-9}{h}
+= 8</me>    
+<me>f'(2) = \lim_{h\rightarrow 2 } \frac{f(2+h)-f(1)}{h} = \lim_{h\rightarrow 0 } \frac{10\!\left(2+h\right)-\left(2+h\right)^{2}-16}{h}
+= 6</me>    
+<me>f'(3) = \lim_{h\rightarrow 3 } \frac{f(3+h)-f(1)}{h} = \lim_{h\rightarrow 0 } \frac{10\!\left(3+h\right)-\left(3+h\right)^{2}-21}{h}
+= 4</me>    
+Supondo que o padrão continue, temos <m>f'(4)=2</m> and <m>f'(5)=0</m>.
+
+
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-intro-definicao/problema8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-intro-definicao/problema8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-intro-definicao/problema8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-intro-definicao/problema8.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-derivada-intro-definicao/problema9.pg">
+      <statement><p>O limite 
+<m>\displaystyle \lim_{h\to 0} \frac{\left(3+h\right)^{3}-27}{h}</m></p>
+<p>representa <m>f^\prime</m> <m>(a)</m> para alguma função <m>f</m> e alggum número <m>a</m>. 
+Determine <m>f(x)</m> e <m>a</m>.</p>
+<p><m>f(x) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>a=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>x^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Considere <m>f(x)=x^{3}</m>. Então <m>f(x+h)=\left(x+h\right)^{3}</m> com <m>a=3</m>, temos <m>f(a+h)=\left(3+h\right)^{3}</m>
+e <m>f(a)=27</m>.</p>
+<p>Portanto, 
+<m>\displaystyle f'(3)=  \lim_{h\to 0} \frac{\left(3+h\right)^{3}-27}{h}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-intro-definicao/problema9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-intro-definicao/problema9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-intro-definicao/problema9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-intro-definicao/problema9.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema9.pg"/>
+  </webwork-reps>
+</webwork-representations>

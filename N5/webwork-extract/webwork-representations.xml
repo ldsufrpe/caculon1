@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-derivada-intro-definicao/problema1.pg">
+      <statement><p>Seja <m>\&gt;f(x) = -8x^{2}</m>.</p>
+<p>a) Determine <m>\&gt;f(x+h)</m>: <fillin name="AnSwEr0001" characters="20"/></p>
+<p>b) Determine <m>\&gt;f(x+h)-f(x)</m>: <fillin name="AnSwEr0002" characters="20"/></p>
+<p>c) Determine <m>\&gt; \frac {f(x+h)-f(x)} {h}</m>: <fillin name="AnSwEr0003" characters="20"/></p>
+<p>d) Determine <m>\&gt; f'(x)</m>: <fillin name="AnSwEr0004" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-8\!\left(x+h\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>8x^{2}-8\!\left(x+h\right)^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{8x^{2}-8\!\left(x+h\right)^{2}}{h}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-\left(8\cdot 2x\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-intro-definicao/problema1.pg</server-url>
+    <pg source="pretext-derivada-intro-definicao/problema1.pg"/>
+  </webwork-reps>
+</webwork-representations>

@@ -113,14 +113,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                       texto
+                      Determinar uma equação para retas.
                     </p>
                 </li>
+
+                    
+
                 <li>
                     <p>
-                        texto
+                        Encontrar retas tangentes a um gráfico em um ponto especificado.
                     </p>
                 </li>
+
+                <li>
+                        <p>
+                            Utilizar a definição por limite para determinar as derivadas das funções.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Relação entre a derivada e a continuidade.
+                        </p>
+                    </li>
             </ol>
             
         </objectives>
@@ -342,6 +357,38 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
  <subsection xml:id="subsec-xx">
     <title>A reta tangente</title>
+
+
+    <introduction>
+        <p>
+            Seja <m>f</m> uma função e <m>P=(a, f(a))</m> e <m>Q=(x, f(x)</m> (ver <xref ref="fig1-1"/>). A inclinação da reta secante <m>PQ</m> é dada por 
+
+            <mdn>
+                <mrow xml:id="eq-1-1"> \frac{f(x)-f(a)}{x-a}.</mrow>
+            </mdn>
+                
+          
+        Então fazemos <m>Q</m>  se aproximar de <m>P</m> ao longo do gráfico de <m>f(x)</m> ao fazer <m>x</m> tender para <m>a</m> (ver <xref ref="fig2-2"/>).
+        Se o quociente <xref ref="eq-1-1"/> tender para um número <m>m</m> (ou seja, se o limite existir quando <m>x</m> tender a <m>a</m>) podemos dizer que existe uma 
+        tangente tangente que passa por <m>P</m> e tem inclinação <m>m</m>.
+
+<figure xml:id="fig1-1">
+    <caption></caption>
+    <image source="images/derivada1.png" width="60%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+
+<figure xml:id="fig2-2">
+    <caption></caption>
+    <image source="images/derivada2.png" width="40%">
+        <description>(for accessibility)</description>
+    </image>
+</figure>
+        </p>
+    </introduction>
+
+
     <definition xml:id="def-tangente">
         <statement>
             <p>
@@ -360,21 +407,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-<figure xml:id="fig11">
-    <caption></caption>
-    <image source="images/derivada1.png" width="60%">
-        <description>(for accessibility)</description>
-    </image>
-</figure>
 
-<figure xml:id="fig22">
-    <caption></caption>
-    <image source="images/derivada2.png" width="40%">
-        <description>(for accessibility)</description>
-    </image>
-</figure>
-
-<figure xml:id="fig32">
+<figure xml:id="fig3-2">
     <caption></caption>
     <image source="images/derivada3.png" width="60%">
         <description>(for accessibility)</description>
@@ -422,7 +456,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </example>
 
 <p>
-    Há outra expressão para a inclinação da reta tangente que é, às vezes, mais fácil de ser
+  Na Figura <xref ref="fig3-2"/> ilustramos outra possibilidade para a expressão da inclinação da reta tangente que é, às vezes, mais fácil de ser
 usada. Se <m>h=x-a</m>, então <m>x=a+h</m> e assim, quando <m>x</m> tende a <m>a</m>, <m>h</m> tende a <m>0</m>; dessa forma,
  a expressão para reta tangente dada na <xref ref="def-tangente"/> é reescrita como
 
@@ -950,7 +984,7 @@ A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(
     </solution>
 </example>
 
-<theorem>
+<theorem xml:id="th-1">
 <statement>
     <p>
         Se <m>f</m> for derivável em <m>a</m>, então <m>f</m>é contínua em <m>a</m>. 
@@ -962,7 +996,21 @@ A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(
     </p>
 </proof>
 </theorem>
+<p>
+    O <xref ref="ex-11"/> é um exemplo clássico de que a reciproca do <xref ref="th-1"/> não é verdadeira. Ou seja, nem toda função contínua é 
+derivável. Note que a função  <m>f(x)</m>=|x| é continua em <m>(-\infy, +\infty)</m> mas não é derivável em <m>x=0</m>. 
+</p>
+ 
 
+<note>
+O <xref ref="th-1"/> fornece uma maneira bastante útil para determinar quando uma função não é derivável em algum ponto, já que é necessário apenas verificar 
+se a continuidade da função naquele ponto, que em geral pode ser mais simples. 
+</note>
+
+<note>
+Em geral, se o gráfico de uma função <m>f</m> tiver um "salto" (descontinuidade), “bico” ou uma “dobra”, então o gráfico de <m>f</m> não terá tangente nesse ponto e <m>f</m> não
+será derivável ali. 
+</note>
 </subsection>
 
 
@@ -1015,9 +1063,29 @@ A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(
 
 
 
-<exercises xml:id="exercises-">
-<exercise>Escrever aqui
-</exercise>
+<exercises xml:id="exercises-derivada-intro">
+
+<webwork source="pretext-derivada-intro-definicao/problema1.pg" />
+ <webwork source="pretext-derivada-intro-definicao/problema2.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema3.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema4.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema5.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema6.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema7.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema8.pg" />
+
+
+<webwork source="pretext-derivada-intro-definicao/problema9.pg" />
+
+<webwork source="pretext-derivada-intro-definicao/problema10.pg" />
+<webwork source="pretext-derivada-intro-definicao/problema11.pg" />
+<webwork source="pretext-derivada-intro-definicao/problema12.pg" />
 </exercises>   
 
 </section>
