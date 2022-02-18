@@ -138,7 +138,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
   <introduction>
         <p>
-            Texto
+            Em breve .... 
         </p>
     </introduction>
 
@@ -172,9 +172,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </paragraphs>
 
 
-<p>
-    texto
-</p>
 
 <example xml:id="ex-1">
 <title>Encontrando um limite</title>
@@ -627,23 +624,7 @@ dividindo por <m>9</m> :
    
 </example>
 
-<remark>
-<!-- <title>O limite é único </title> -->
-<ol>
-    <li>
-        <p>
-            Deduza que <m>x=1</m> não per
-        </p>
-    </li>
-    <li>
-        <p>
-            Limites por lados opostos são diferentes
-        </p>
-    </li>
-</ol>
 
-
-</remark>
 </subsection>
 
 <subsection xml:id="sugestao-video-1">
@@ -839,19 +820,38 @@ dividindo por <m>9</m> :
         </p>
     </statement>
 </theorem>
+<p>
+    
 
-
+Podemos reformular o <xref ref="thm-laterais"/> escrevendo: 
 <assemblage xml:id="assemblage-existe-limite">
     <title>Existência de um Limite</title>
     <p>
-        Sejam <m>L</m> e <m>a</m> números reais e <m>f</m> uma função, então o limite de
+        <!-- Sejam <m>L</m> e <m>a</m> números reais e <m>f</m> uma função, então o limite de
          <m>f(x)</m> <em>existe</em>  e é igual a <m>L</m> se e somente se os limites laterais 
          <em>existem</em> 
-         e são também iguais a <m>L</m>.
+         e são também iguais a <m>L</m>. -->
+
+
+         <ul>
+    <li>
+        <p>
+           Se qualquer um dos limites laterais não existir quando <m>x</m> tende para <m>a</m>, 
+           ou se ambos existem, mas são diferentes, então o limite quando o limite  quando <m>x</m> tende para <m>a</m>
+           não existe. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Se o limite  quando <m>x</m> tende para <m>a</m> não existe, então os limites são diferentes ou pelo menos um deles não existe.
+        </p>
+    </li>
+</ul>
+
 
     </p>
 </assemblage>
-
+</p>
 <example xml:id="ex-7">
     
         <p>
@@ -979,6 +979,10 @@ dividindo por <m>9</m> :
         </p>
     </solution>
 </example>
+
+
+<!-- <title>O limite é único </title> -->
+
 
 
 
@@ -1397,11 +1401,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
           
         </p>
     </li>
- <li>
-     <p>
-          texto 3<url></url>
-     </p>
- </li>
+
 </ul>    
 </subsection>
 
