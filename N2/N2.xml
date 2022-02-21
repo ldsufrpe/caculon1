@@ -956,7 +956,7 @@ são ambos zero quando <m>h\to 0</m> . Portanto, devemos tentar fatorá-los e ca
 
 
 
-<p>Agora, um exemplo envolvendo radiciação</p>
+<p>Agora, um exemplo envolvendo radiciação:</p>
 
 <example xml:id="eg_zero_cancel_limit_harder"><title> <m>\lim\limits_{x \to 0} \frac{x}{\sqrt{1+x}-1}</m></title>
 
@@ -1004,7 +1004,7 @@ de encontrar os fatores comuns. Podemos simplificar o denominador <m>\sqrt{1+x}-
   \amp \ct{cancelar  $x$}
 </mrow>
 </md>
-So now we have
+A igualdade acima permite calcular o limite com facilidade:
 <md>
 <mrow>
     \lim\limits_{x \to 0} \frac{x}{\sqrt{1+x}-1} \amp=   \lim\limits_{x \to 0} \sqrt{1+x}+1
@@ -1015,6 +1015,36 @@ So now we have
 </p>
 </solution>
 </example>
+
+<exercise>
+  <statement>
+    <p>
+      
+    </p>
+  </statement>
+  <answer>
+    <p>
+      
+    </p>
+  </answer>
+</exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+      
+    </p>
+  </statement>
+  <answer>
+    <p>
+      
+    </p>
+  </answer>
+</exercise>
+
+
+
 </subsection>
 
 
@@ -1148,7 +1178,32 @@ Portanto, pelo  <xref ref="thm_squeeze" text="custom"> teorema do confronto </xr
 </solution>
 </example>
 
+<exercise>
+  <statement>
+    <p>
+      Determine <m>\lim\limits_{x\to 0}x^4\cos{\frac{2}{x}}</m>
+    </p>
+  </statement>
+  <answer>
+    <p>
+      <m>0</m>
+    </p>
+  </answer>
+</exercise>
 
+
+<exercise>
+  <statement>
+    <p>
+      Se <m>4x-9 \leq f(x)\leq x^2-4x+7</m> para todo <m>x\geq</m>, encontre <m>\lim\limits_{x\to 4}f(x).</m>
+    </p>
+  </statement>
+  <answer>
+    <p>
+      <m>7</m>
+    </p>
+  </answer>
+</exercise>
 
 </subsection>
 

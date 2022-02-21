@@ -1013,7 +1013,7 @@ Podemos reformular o <xref ref="thm-laterais"/> escrevendo:
 
         <answer>
             <p>
-                0
+                1
             </p>
         </answer>
     </task>
@@ -1027,7 +1027,7 @@ Podemos reformular o <xref ref="thm-laterais"/> escrevendo:
 
         <answer>
             <p>
-                1
+                0
             </p>
         </answer>
     </task>
