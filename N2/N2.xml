@@ -106,7 +106,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
         </introduction>
     <section>
-    <title> Titulo</title>
+    <title>Propriedades dos Limites </title>
          <objectives>
             <title>Estrutura</title>
         
@@ -124,94 +124,299 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </ol>
             
         </objectives>
+
 <introduction>
-        <p>
-            Texto
-        </p>
-    </introduction>
- <subsection xml:id="subsec-xx">
-    <title>Titulo</title>
-    <definition xml:id="def-xx">
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
-    </definition>
-<example xml:id="ex-1">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-<example xml:id="ex-2">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
+  <p>
+    Aqui aprenderemos como calcular limites de funções que são construídas a partir de funções básicas como: 
+
+<ul>
+  <li>
+    <p>
+      Função constante <m>f(x)=c</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Potência <m>f(x)=x^n</m>, <m>(n\neq 0)</m> 
+    </p>
+  </li>
+
+<li>
+  <p>
+    Trigonométricas: <m>f(x)=\sin{x}</m> ou <m>\cos{x}</m> ou <m>\tan{x}</m>. 
+  </p>
+</li>
+
+<li>
+  <p>
+    Exponencial <m>f(x)=e^x</m>
+  </p>
+</li>
+</ul>
+usando as operações de soma, subtração, divisão e composição.
+  </p>
+</introduction>
+
+
+
+
+<subsection xml:id="subsec-lim-basico"><title>Limites básicos</title>
+
+<p>
+  Começamos com o limites de duas funções muito simples: uma função constante e uma função linear. 
+</p>
+
+
+<assemblage xml:id="th-triviais"><title>Limites especiais</title>
+<p>
+Seja <m>a,c</m> números reais. Os seguintes limites são verdadeiros
+<md>
+<mrow>
+    \lim\limits_{x \to a} c \amp = c \amp \text{ e }\amp\amp
+    \lim\limits_{x \to a} x \amp= a.
+</mrow>
+</md>
+</p>
+
+</assemblage>
+
+
+Em seguida apresentaremos o teorema que sintetiza todas as propriedades aritméticas dos limites:
+
+
+<theorem xml:id="th-prop-limt"><title>Propriedades de limites</title>
+<statement><p>
+Seja m <m>a,c </m> números reais,  <m>f(x)</m> e <m>g(x)</m> funções em que o limite existe quando <m>x</m> tente para <m>a</m>. Então,
+
+
+<ol>
+<li>
+	<m> \lim\limits_{x \to a} ( f(x) + g(x) ) = \lim\limits_{x \to a} f(x) + \lim\limits_{x \to a}g(x)  </m> 
+</li>
+<li>
+	<m> \lim\limits_{x \to a} ( f(x) - g(x) ) = \lim\limits_{x \to a} f(x) - \lim\limits_{x \to a}g(x)  </m> 
+</li>
+<li> <m>\lim\limits_{x \to a} c f(x) = c \lim\limits_{x \to a} c f(x)</m>. </li>
+
+<li>
+  <p>
+   <m> \lim\limits_{x \to a}f(x)g(x)= \lim\limits_{x \to a} f(x) \cdot \lim\limits_{x \to a}g(x)</m>
+  </p>
+</li>
+<li>
+  <p>
+   <m> \lim\limits_{x \to a}\frac{f(x)}{g(x)}= \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a}g(x)} \quad\text{se } \lim\limits_{x \to a}g(x)\neq 0</m>
+  </p>
+</li>
+</ol>
+
+</p></statement>
+<proof>
+  <p>
+    
+  </p>
+</proof>
+</theorem>
+
+<p>
+O <xref ref="th-prop-limt"/> acima mostra que os limites interagem muito simplesmente com a aritmética. 
+Se você for solicitado a encontrar o limite de uma soma, a resposta é apenas a soma dos limites. Da mesma forma, 
+o limite de uma funções multiplicada por uma contante  é apenas o produto entre a constante e o limite. Assim como, 
+o limite de um quociente é o quociente dos limites (desde que o limite do denominador não seja zero).</p> 
+
+
+
+<example xml:id="eg_1_4_1"><title>Cálculos usando propriedades dos limites</title>
+
+<statement>
+  <p>
+    Assuma que <m>\lim\limits_{x \to 1} f(x)=3</m> e <m>\lim\limits_{x \to 1} g(x)=2 </m> e calcule: 
+
+</p>
+
+    
+
+<task>
+  <p>
+    <m>\lim\limits_{x \to 1} 3f(x)</m>
+  </p>
+</task>
+
+<task>
+  <p>
+    <m>\lim\limits_{x \to 1} (3f(x) -g(x))</m>
+  </p>
+</task>
+
+
+<task>
+  <p>
+  <m>  \lim\limits_{x \to 1} f(x) g(x)</m>
+  </p>
+</task>
+<task>
+  <p>
+   <m> \lim\limits_{x \to 1} \dfrac{f(x)}{f(x) -g(x)}</m>
+  </p>
+</task>
+</statement>
+<solution>
+  <p>
+  De acordo com o <xref ref="th-prop-limt"/> temos os seguintes limites quando <m>x</m> tenda a <m>1</m>:
+
+
+<md>
+  <mrow>  \lim\limits_{x \to 1} 3f(x) = \amp 3 \cdot \lim\limits_{x \to 1}f(x) = 3\cdot 3 = 9 </mrow>
+</md>
+
+<md>
+  <mrow>\lim\limits_{x \to 1} (3f(x)-g(x)) = \amp 3\cdot \lim\limits_{x \to 1}f(x) - \lim\limits_{x \to 1}g(x) </mrow>
+  <mrow> = \amp 3\cdot 3-2 = 7</mrow>
+</md>
+
+<md>
+  <mrow> \lim\limits_{x \to 1} f(x) g(x)  = \amp   \lim\limits_{x \to 1} f(x) \cdot\lim\limits_{x \to 1} g(x)</mrow>
+
+  <mrow> = \amp 3\cdot 2 = 6</mrow>
+</md>
+
+E já que <m>\lim\limits_{x \to 1}g(x)\neq 0</m>:
+<md>
+  <mrow> \lim\limits_{x \to 1} \frac{f(x)}{f(x) -g(x)} = \amp \frac{\lim\limits_{x \to 1} f(x)}{\lim\limits_{x \to 1} f(x) - \lim\limits_{x \to 1} g(x)}  </mrow>
+  <mrow>= \amp  \frac{3}{3-2} = 3 </mrow>
+</md>
+
+  </p>
+</solution>
+
 </example>
 
-<example xml:id="ex-3">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
+
+
+<example xml:id="eg_1_4_2"><title>Mais cálculos usando propriedades de limites</title>
+<statement>
+<p>
+Determine <m>\lim\limits_{x \to 3} 4x^2-1</m>
+</p>
+</statement>
+
+<solution>
+  
+<p>
+Usando <xref ref="th-prop-limt" text="custom"> as propriedades de limites </xref>:
+<md>
+<mrow>
+    \lim\limits_{x \to 3} 4x^2-1
+  \amp= \left(   \lim\limits_{x \to 3} 4x^2 \right) -   \lim\limits_{x \to 3} 1
+  \amp \ct{diferença de limites}
+</mrow><mrow>
+  \amp= \left(   \lim\limits_{x \to 3} 4  \cdot   \lim\limits_{x \to 3} x^2 \right) -    \lim\limits_{x \to 3} 1
+  \amp \ct{produto de limites}
+</mrow><mrow>
+  \amp= 4 \cdot \left(   \lim\limits_{x \to 3} x^2 \right) -  1
+  \amp \ct{limite de constante}
+</mrow><mrow>
+  \amp= 4 \cdot \left(   \lim\limits_{x \to 3} x \right) \cdot \left(   \lim\limits_{x \to 3} x  \right)-1
+  \amp\ct{produto de limites}
+</mrow><mrow>
+  \amp= 4 \cdot 3 \cdot 3 - 1
+  \amp \ct{limite de  $x$}
+</mrow><mrow>
+  \amp= 36 - 1
+</mrow><mrow>
+ \amp= 35
+</mrow>
+</md>
+</p>
+</solution>
 </example>
 
 <exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
+  <statement>
+    <p>
+      Determine <m>\lim\limits_{x\to -1}5x^3+3 </m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      O limite do produto (parte 5 de <xi:include href="th-prop-limt" />) é verdadeiro também para três funções. Na 
+      verdade é válida para o produto de <m>n</m> funções.
+    </p>
+  </hint>
+  <answer>
+    <p>
+      8
+    </p>
+  </answer>
 </exercise>
 
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
+
+
+<example xml:id="eg_1_4_3"><title>Limite de uma função racional</title>
+
+<statement>
+  <p>
+   Determine  <m>\lim\limits_{x\to 2} \dfrac{x}{x-1}</m>.
+
+  </p>
+</statement>
+<solution>
+
+<p>
+Para aplicar  o limite do quociente (ver <xref ref="th-prop-limt" text="custom"> Propriedade 5 </xref>), precisamos examinar o numerador e 
+o denominador separadamente e garantir que o limite do denominador seja diferente de zero. 
+<md>
+<mrow>
+  \lim\limits_{x \to 2} x\amp = 2\amp <xref ref="th-triviais" text="title"/>
+</mrow>
+</md>
+
+<md>
+<mrow>
+  \lim\limits_{x \to 2} x-1
+ \amp = \left( \lim\limits_{x \to 2} x \right) - \left(   \lim\limits_{x \to 2} 1 \right)
+ \amp \ct{diferença de limites}
+</mrow><mrow>
+ \amp = 2 - 1
+ \amp \ct{limite de <m>x</m>  e limite de uma constante}
+
+</mrow>
+</md>
+Como o limite do denominador é diferente de zero, usamos as propriedades para obter
+<md>
+<mrow>
+  \lim\limits_{x\to 2} \frac{x}{x-1}\amp= \frac{\lim\limits_{x\to 2} x}{\lim\limits_{x \to
+2}(x-1)}
+</mrow><mrow>
+ \amp= \frac{2}{1}
+</mrow><mrow>
+ \amp= 2
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
 </subsection>
+
+
+
+<exercise>
+  <statement>
+    <p>
+        Determine  <m>\lim\limits_{x\to 1} \dfrac{2x}{x+4}</m>.
+    </p>
+  </statement>
+  <answer>
+    <p>
+      <m>\frac{2}{5}</m>
+    </p>
+  </answer>
+</exercise>
+
+
 <subsection xml:id="sugestao-video-1">
     <title>Sugestão de vídeo</title>
   
@@ -235,115 +440,584 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </ul>    
 </subsection>
 
+<subsection>
 
-   <subsection xml:id="subsec-xxx">
-    <title>Limites infinitos</title>
-     <introduction>
-      <p>
-Até este ponto, discutimos o que acontece com uma função quando movemos sua entrada <m>x</m> cada vez mais perto de um ponto específico <m>a</m>. Para muitas aplicações de limites, precisamos entender o que acontece com uma função quando sua entrada se torna extremamente grande <mdash/>, por exemplo, o que acontece com uma população em um momento distante no futuro.
+
+  <title>Limites das funções racionais</title>
+  
+<p>
+
+
+Devemos ter cuidado ao calcular o limite de uma razão <mdash/> que é a razão dos limites, exceto quando o limite do denominador é zero.
+ Quando o limite do denominador é zero o <xref ref="th-prop-limt"/>  <alert>não se aplica</alert> e 
+ algumas das possibilidade a seguir podem acontecer:</p>
+<p>
+<ol>
+<li>
+<p>	Se o limite do numerador for diferente de zero, o limite do quociente não existe. Então: </p>
+
+   <ul>
+     <li>
+       <p>
+         Se ambos limites laterais (de <m> \frac{f(x)}{g(x)}</m> ) são <m> +\infty</m> 
+         escrevemos <m>\lim\limits_{x \to a} \frac{f(x)}{g(x)} =+\infty</m> (ver <xref ref="fig1"/>).
+       </p>
+     </li>
+
+     <li>
+       <p>
+         Se ambos limites laterais (de <m> \frac{f(x)}{g(x)}</m> ) são <m> -\infty</m> 
+         escrevemos <m>\lim\limits_{x \to a} \frac{f(x)}{g(x)} =-\infty</m> (ver <xref ref="fig2"/>).
+       </p>
+     </li>
+
+
+     <li>
+       <p>
+         Se um dos limites laterais (de <m> \frac{f(x)}{g(x)}</m> ) for <m>+\infty</m> e outro for <m>-\infty</m> simplesmente
+         dizemos que o <alert>limite não existe</alert> (ver <xref ref="fig3"/>). 
+       </p>
+     </li>
+   </ul>
+  
+
+</li>
+
+
+<li>
+<p>
+Se o limite do numerador for zero, então o <xref ref="th-prop-limt"/>  não nos dá informações suficientes para decidir se o limite existe ou não. É possível que
+	<ul>
+	<li>
+		O limite não exista, como é o caso do <m> \lim\limits_{x \to 0} \dfrac{x}{x^2} =  \lim\limits_{x  \to 0} \dfrac{1}{x}</m>.
+	</li>
+	<li>
+		O limite é <m>\pm \infty</m>, como são os casos do  <m>\lim\limits_{x \to 0} \dfrac{2x^2}{x^4} =  \lim\limits_{x  \to 0} \dfrac{2}{x^2} = +\infty</m> ou
+     do <m>\lim\limits_{x \to 0} \dfrac{-2x^2}{x^4} =  \lim\limits_{x\to 0} \dfrac{-2}{x^2} = -\infty</m> (ver <xref ref="fig2"/>).
+	</li>
+	<li> O limite é zero, como por exemplo <m>\lim\limits_{x \to 0} \dfrac{x^2}{x} = 0</m>. </li>
+	<li> O limite existe e é diferente de zero, como por exemplo <m> \lim\limits_{x \to 0} \dfrac{x}{x} =  1</m>.
+	</li>
+	</ul>
 </p>
+</li>
+</ol>
+
+  <figure xml:id="fig1">
+  <caption></caption>
+  <image source="images/image9-sage.svg" width="40%">
+    <description>(for accessibility)</description>
+  </image>
+</figure>
+
+
+  <figure xml:id="fig2">
+  <caption></caption>
+  <image source="images/image9-sage2.svg" width="40%">
+    <description>(for accessibility)</description>
+  </image>
+</figure>
+
+
+ <figure xml:id="fig3">
+  <caption></caption>
+  <image source="images/image9-sage3.svg" width="40%">
+    <description>(for accessibility)</description>
+  </image>
+</figure>
+</p>
+
+
+
+
+<!-- <example xml:id="eg_lim_rat"><title>Be careful with limits of ratios</title>
+
+</example> -->
+
+
+<example xml:id="eg_1_4_4"><title>Mais sobre quociente dos limites</title>
+
 
 <p>
-A definição de um limite no infinito tem um sabor semelhante à definição de limites em pontos finitos que vimos acima, mas os detalhes são um pouco diferentes. Também precisamos distinguir entre infinito positivo e negativo. À medida que <m>x</m> se torna muito grande e positivo, ele se move em direção a <m>+\infty</m>, mas quando se torna muito grande e negativo, ele se move em direção a <m>-\infty</m> .
-</p>
-    </introduction>
- <definition xml:id="def-limites-infinitos">
-        <statement><p>
-Escrevemos
-<md>
-<mrow>
-\lim_{x \to \infty} f(x) = L
-</mrow>
-</md>
-quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+  Determine os limites.
 </p>
 
+<task>
+<statement>
 <p>
-Similarmente, escrevemos
-<md>
-<mrow>
-\lim_{x \to -\infty} f(x) = L
-</mrow>
-</md>
-quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+Determine <m>   \lim\limits_{x \to 2} \dfrac{2x-3}{x^2+5x-6}</m>.  
 </p>
 </statement>
 
-    </definition>
-<example xml:id="ex-4">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-<example xml:id="ex-5">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
+<solution>
+
+
+<p>
+Como esse é o limite de uma razão, calculamos o limite do numerador e do denominador separadamente. Começaremos pelo numerador:
+
+<md>
+<mrow>
+    \lim\limits_{x \to 2} 2x-3
+  \amp= \left(   \lim\limits_{x \to 2} 2x \right) - \left(   \lim\limits_{x \to 2} 3 \right)
+  \amp\ct{Diferença de limites}\,
+</mrow><mrow>
+  \amp= 2 \cdot \left(   \lim\limits_{x \to 2} x \right) -3
+  \amp \ct{Produto de limites e limite de uma constante}\,
+</mrow><mrow>
+  \amp= 2 \cdot 2 -3
+  \amp  \ct{limite de $x$}\,
+</mrow><mrow>
+  \amp= 1
+</mrow>
+</md>
+Agora é a vez do denominador:
+<md>
+<mrow>
+    \lim\limits_{x \to 2} x^2+5x-6
+  \amp= \left(   \lim\limits_{x \to 2} x^2 \right) + \left(   \lim\limits_{x \to 2} 5x \right)
+  - \left(   \lim\limits_{x \to 2} 6 \right)
+  \amp \!\!\!\!\!\!\ct{soma de limites}\,
+</mrow><mrow>
+  \amp= \left(   \lim\limits_{x \to 2} x \right)\cdot \left(   \lim\limits_{x \to 2} x \right)
+  + 5 \cdot \left(   \lim\limits_{x \to 2} x \right) - 6  \amp\ct{Produto de limites e limite de uma constante}\,
+</mrow>
+ 
+<mrow>
+  \amp= 2 \cdot 2 + 5 \cdot 2 - 6
+  \amp \ct{limite de $x$}\,
+</mrow><mrow>
+  \amp= 8
+</mrow>
+</md>
+Como o limite do denominador é diferente de zero, podemos obter nosso resultado tomando o quociente dos limites separados.
+<md>
+<mrow>
+  \lim\limits_{x \to 2} \frac{2x-3}{x^2+5x-6}
+  \amp= \frac{     \lim\limits_{x \to 2} 2x-3}{     \lim\limits_{x \to 2} x^2+5x-6} = \frac{1}{8}
+</mrow>
+</md>
+</p>
+</solution>
+</task>
+<task>
+<statement>
+<p>
+Determine <m>   \lim\limits_{x \to 1} \dfrac{2x-3}{x^2+5x-6}</m>.  
+</p>
+</statement>
+
+<solution>
+<p>
+O caso anterior tudo funcionou de forma simples uma vez que o limite do denominador é diferente de zero. Neste caso, quando tomarmos o limite como <m>x \to 1</m>,
+ o limite do numerador é:
+<md>
+<mrow>
+    \lim\limits_{x \to 1} 2x-3 \amp= 2 \cdot 1 - 3 = -1
+</mrow>
+</md>
+E o limite do denominador vale
+<md>
+<mrow>
+    \lim\limits_{x \to 1} x^2 +5x-6 \amp= 1 \cdot 1 + 5 - 6 = 0
+</mrow>
+</md>
+
+ Observe o gráfico de <m>f(x)</m> na <xref ref="fig4"/> e note que o limite lateral à esquerda 
+ é <m>+\infty</m> e à direita é <m>-\infty</m>. Como o limite do numerador é diferente de zero e o  limite do denominador é zero, o limite do quociente <md>
+<mrow>
+  \lim\limits_{x \to 1} \frac{2x-3}{x^2+5x-6}
+  
+</mrow>
+</md>
+não existe.
+</p>
+<figure xml:id="fig4">
+  <caption></caption>
+  <image source="images/image9-sage.svg" width="40%">
+    <description>(for accessibility)</description>
+  </image>
+   
+    
+  
+</figure>
+
+</solution>
+</task>
 </example>
 
-<example xml:id="ex-6">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
+
+
+
+<warning>
+
+<p>
+É importante salientar que não é correto escrever
+<md>
+<mrow>
+  \lim\limits_{x \to 1} \frac{2x-3}{x^2+5x-6}
+  \amp= \frac{-1}{0}. \amp \ct{limite não existe}
+</mrow>
+</md>
+Porque só podemos escrever
+<md>
+<mrow>
+    \lim\limits_{x \to a} \frac{f(x)}{g(x)}
+  \amp= \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x) }
+</mrow>
+</md>
+quando o limite do denominador não é zero.
+</p>
+</warning>
 
 <exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
+  <statement>
+    <p>
+      Determine <m>\lim\limits_{x\to 0}\dfrac{3x}{x^3}</m>.
+    </p>
+  </statement>
+
+  <answer>
+    <p>
+      <m>+\infty</m>
+    </p>
+  </answer>
 </exercise>
 
+
 <exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
+  <statement>
+    <p>
+      Se possível, determine <m>\lim\limits_{x\to 5}\dfrac{2x}{x-5}</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Calcule os limites laterais.
+    </p>
+  </hint>
+  <answer>
+    <p>
+      Não existe. Pois os limites laterais são <m>+\infty</m> e <m>-\infty</m>. 
+    </p>
+  </answer>
 </exercise>
+
+<p>
+Agora apresentaremos mais duas regras para calcular limites de potência e raízes de funções. Iniciamos com a propriedade que 
+pode ser obtida a partir da aplicação repetidamente do produto  de limites para <m>f(x)=g(x)</m>.
+</p>
+
+<assemblage xml:id="thm_lim_powers"><title>Propriedade da Potência</title>
+<p>
+Se <m>n</m> um inteiro positivo, <m>a</m> um número real então
+<md>
+<mrow>
+    \lim\limits_{x \to a} [f(x)]^n \amp= \left[\lim\limits_{x \to a} f(x) \right]^n,
+
+</mrow>
+</md>
+desde que o limite o limite de <m>f(x)</m>, quando <m>x\to a</m>, exista. Neste caso, podemos dizer que o
+limite da potência é a potência dos limites.
+
+
+</p>
+
+</assemblage>
+
+<p>
+  A combinação de um dos  <xref ref="th-triviais" text="title"/> e a <xref ref="thm_lim_powers" text="title"/> gera uma forma de obter outro limite muito comum e útil. 
+    Se <m>n</m> um inteiro positivo, <m>a</m> um número real então
+
+<mdn>
+  <mrow> \lim\limits_{x \to a} x^n = a^n.</mrow>
+</mdn>
+  
+  </p>
+
+
+<assemblage xml:id="assemblage-limite-raiz">
+  <title>Propriedade da Raiz</title>
+  <p>
+    Se  <m>n</m> um inteiro positivo par, <m>a</m> um número real e <m>\lim\limits_{x\to a}f(x)>0</m> então 
+
+<md>
+<mrow>
+    \lim\limits_{x \to a} \sqrt[n]{f(x)}= \sqrt[n]{\lim\limits_{x \to a} f(x)}.
+  
+</mrow>
+</md>
+
+  </p>
+</assemblage>
+
+ 
+
+<note>
+
+<p>
+ Observe que devemos ter cuidado ao extrair raízes de limites que podem ser números negativos. 
+ Para ver por que, considere o caso <m>n=2</m> na  <xref ref="assemblage-limite-raiz" text="title"/>, o limite
+<md>
+<mrow>
+    \lim\limits_{x \to 4} \sqrt{x} \amp= \sqrt{4} = 2 \amp \ct{uso correto da propriedade}
+    </mrow>
+ <mrow>   \lim\limits_{x \to 4}  \sqrt{-x}  \amp= \sqrt{-4} \amp  \ct{não é um número real}
+ 
+</mrow>
+</md>
+Para avaliar adequadamente tais limites, precisamos usar números complexos que estão além do escopo deste texto.
+</p>
+
+
+</note>
+
+
+
+<example xml:id="eg_1_4_5"><title><m>     \lim\limits_{x \to 2} \sqrt[3]{4x^2-3}</m></title>
+<p>
+Da <xref ref="assemblage-limite-raiz" text="title"/>:
+<md>
+<mrow>
+    \lim\limits_{x \to 2} \sqrt[3]{4x^2-3} \amp=
+  \sqrt[3]{ (\lim\limits_{x\to 2} 4x^2) -  (\lim\limits_{x \to 2} 3)}
+</mrow><mrow>
+  \amp= \sqrt[3]{4 \cdot 2^2  - 3 }
+</mrow><mrow>
+  \amp= \sqrt[3]{16-3}
+</mrow><mrow>
+  \amp= \sqrt[3]{13}
+</mrow>
+</md>
+</p></example>
+
+
+<exercise>
+  <statement>
+    <p>
+      Determine <m> \lim\limits_{x \to 2}\sqrt[4]{3x^4-2x-28}.</m>
+    </p>
+  </statement>
+  <answer>
+    <p>
+      2
+    </p>
+  </answer>
+</exercise>
+
+<p>
+Ao combinar os últimos teoremas, podemos tornar a avaliação de limites de polinômios e funções racionais muito mais fácil:</p>
+
+<theorem xml:id="th-poli-racionais"><title>Limite de polinômios e funções racionais</title>
+<statement><p>
+Sejam <m>P(x)</m> e <m>Q(x)</m> polinômios  e seja <m>R(x)=\frac{P(x)}{Q(x)}</m> uma função racional. Então
+<md>
+<mrow>
+    \lim\limits_{x \to a} P(x) \amp= P(a)
+</mrow>
+</md>
+e se  <m>Q(a)\neq 0</m>  então
+<md>
+<mrow>
+    \lim\limits_{x \to a} R(x) \amp= R(a).</mrow>
+</md>
+
+</p></statement>
+</theorem>
+
+<p>
+O <xref ref="th-poli-racionais"/> torna os exemplos apresentados até aqui mais fáceis de calcular:
+
+<me>
+      \lim\limits_{x \to 2} \frac{2x-3}{x^2+5x-6} =   \frac{4-3}{4+10-6} =   \frac{1}{8}
+</me>
+
+<me>
+      \lim\limits_{x\to 2} (4x^2-1) = 16-1 = 15
+</me>
+<me>
+      \lim\limits_{x\to 2} \frac{x}{x-1} =   \frac{2}{2-1} = 2
+</me>
+
+</p>
+
+<p>
+É claro que os limites de polinômios são muito fáceis, enquanto os de funções racionais são fáceis, exceto quando o denominador pode ir a zero. Vimos exemplos onde o limite resultante não existe, e alguns onde existe. Agora trabalhamos para explicar isso de forma mais sistemática. O exemplo a seguir 
+demonstra que às vezes é possível levar o limite de uma função racional a um ponto em que o denominador é zero.
+ </p>
+
+<example xml:id="eg_zero_cancel_limit"><title>Numerador e denominador tendem para <m>0</m></title>
+
+<statement>
+  <p>
+    Determine <m> \lim\limits_{x \to 1} \dfrac{x^3-x^2}{x-1}.</m>
+    </p>
+</statement>
+<solution>
+
+<p>
+Aplicando os limites os limites de numerador e denominador separadamente obtemos
+<md>
+<mrow>
+      \lim\limits_{x \to 1} x^3-x^2 \amp= 1-1 = 0
+</mrow>
+<mrow>
+      \lim\limits_{x \to 1} x-1 \amp= 1-1 = 0
+</mrow>
+</md>
+
+Uma vez que o denominador é zero, não podemos aplicar o <xref ref="th-poli-racionais"/>.
+ Fazendo uma análise crítica, note que a medida que ambos, numerador e denominador tendem para
+  zero quando <m>x\to 1</m> é possível haver termos comuns que podem ser cancelados. Então vamos manipular 
+  um pouco mais a expressão e então calcular  o limite:
+
+</p>
+
+<p>
+
+<md>
+<mrow>
+  \lim\limits_{x \to 1}\frac{x^3-x^2}{x-1} \amp= \lim\limits_{x \to 1}\frac{x^2\cancel{(x-1)}}{\cancel{x-1}} \amp \ct{Cancelamento}
+  </mrow>
+  <mrow> \amp=\lim\limits_{x \to 1}x^2=1^2=1. \amp \ct{Limite da potência}</mrow>.
+
+</md>
+
+De fato, quando analisamos o gráfico de <m>f</m> na <xref ref="fig-00"/> notamos que a estratégia do cancelamento de termos faz sentido. 
+Note que a imagem de <m>f(x)</m> difere de <m>x^2</m> apenas em  <m>x=1</m>, o que é irrelevante em  termos de limite já que estamos 
+interessados no que acontece com <m>f(x)</m> quando <m>x</m> está próximo de <m>1</m> e não necessariamente em <m>x=1</m>.
+
+<figure xml:id="fig-00">
+  <caption></caption>
+  <image source="images/rat1.svg" width="40%"/>
+</figure>
+
+</p>
+
+</solution>
+</example>
+
+<p>No teorema a seguir formalizamos o raciocínio da <term> estratégia do cancelamento</term> utilizada no
+ <xref ref="eg_zero_cancel_limit"/>. </p>
+
+<theorem xml:id="th-cancel">
+<statement><p>
+Se <m>f(x) = g(x)</m> exceto quando <m>x=a</m> então
+ <m>     \lim\limits_{x\to a} f(x) =   \lim\limits_{x\to a}  g(x), </m> desde que o limite  <m>g</m> exista.
+</p></statement>
+</theorem>
+
+
+
+<p>
+  Um indicativo para usar a estratégia do cancelamento (fundamentada pelo <xref ref="th-cancel"/>) é quando 
+  os limites de ambos numerador e denominador tendem a zero. Isso muitas vezes indica que exista um fator comum entre numerador 
+  e denominador que pode ser cancelado. No caso do <xref ref="eg_zero_cancel_limit"/> esse fator foi <m>(x-1)</m>.
+</p>
+
+<example xml:id="eg_easy_0on0_limit"><title><m> \lim\limits_{h \to 0} \frac{(1+h)^2-1}{h}</m></title>
+
+
+
+
+<statement>
+  <p>
+    Calcule o limite  <m>\lim\limits_{h \to 0} \dfrac{(1+h)^2-1}{h}</m>. 
+ 
+  </p>
+</statement>
+
+<solution>
+  
+<p>
+<md>
+<mrow>
+    \lim\limits_{h \to 0} \frac{(1+h)^2-1}{h}
+</mrow>
+</md>
+Se tentarmos usar a <xref ref="th-prop-limt"/>, veremos que o limite do numerador e o limite do denominador
+são ambos zero quando <m>h\to 0</m> . Portanto, devemos tentar fatorá-los e cancelar qualquer fator comum. Isto dá
+<md>
+<mrow>
+    \lim\limits_{h \to 0} \frac{(1+h)^2-1}{h}
+  =\amp   \lim\limits_{h \to 0} \frac{1+2h+h^2-1}{h}</mrow>
+  <mrow> =\amp\lim\limits_{h \to 0} \frac{\cancel{h}(2+h)}{\cancel{h}}
+</mrow><mrow>
+  =\amp   \lim\limits_{h \to 0} (2+h)
+</mrow><mrow>
+  =\amp 2
+ </mrow>
+</md>
+</p>
+</solution>
+</example>
+
+
+
+
+
+<p>Agora, um exemplo envolvendo radiciação</p>
+
+<example xml:id="eg_zero_cancel_limit_harder"><title> <m>\lim\limits_{x \to 0} \frac{x}{\sqrt{1+x}-1}</m></title>
+
+<statement>
+  <p>
+    Determine o limite <m>\lim\limits_{x \to 0} \dfrac{x}{\sqrt{1+x}-1}</m>.
+  </p>
+</statement>
+
+<solution>
+  <p>
+
+Se tentarmos usar as propriedade de limites teremos ambos numerador e denominador iguais a zero quando <m>x\to 0</m>:
+<md>
+<mrow>
+    \lim\limits_{x \to 0} x \amp= 0
+</mrow><mrow>
+    \lim\limits_{x \to 0} \sqrt{1+x}-1 \amp= \sqrt{   \lim\limits_{x \to 0} 1+x}-1 = 1-1 =0
+</mrow>
+</md>
+Isso sugere um fator comum que pode ser cancelado. Como o numerador e o denominador não são polinômios, temos que tentar outra forma 
+de encontrar os fatores comuns. Podemos simplificar o denominador <m>\sqrt{1+x}-1</m>, eliminando a raiz quadrada,
+ pela multiplicação do seu conjugado <m>\sqrt{1+x}+1</m>.
+<md>
+<mrow>
+  \frac{x}{\sqrt{1+x}-1}
+  \amp=\frac{x}{\sqrt{1+x}-1} \times \frac{\sqrt{1+x}+1}{\sqrt{1+x}+1}
+  \amp \ct{multiplica por $\frac{\text{conjugate}}{\text{conjugate}}=1$}
+</mrow><mrow>
+    \amp=\frac{x \left( \sqrt{1+x}+1\right)}
+  {\left(\sqrt{1+x}-1\right)\left(\sqrt{1+x}+1\right)}
+  \amp \ct{organize as coisas}
+</mrow><mrow>
+    \amp=\frac{x \left( \sqrt{1+x}+1\right)}
+  {\left(\sqrt{1+x}\right)^2 - 1\cdot 1}
+  \amp\!\!\!\!\!\!\! \ct{$(a\!-\!b)(a\!+\!b)=a^2\!-\!b^2$}
+</mrow><mrow>
+    \amp=\frac{x \left( \sqrt{1+x}+1\right)}
+  {1+x - 1}
+  \amp 
+</mrow><mrow>
+    \amp=\frac{\cancel{x} \left( \sqrt{1+x}+1\right)}{\cancel{x}}
+</mrow><mrow>
+  \amp= \sqrt{1+x}+1
+  \amp \ct{cancelar  $x$}
+</mrow>
+</md>
+So now we have
+<md>
+<mrow>
+    \lim\limits_{x \to 0} \frac{x}{\sqrt{1+x}-1} \amp=   \lim\limits_{x \to 0} \sqrt{1+x}+1
+</mrow><mrow>
+  \amp= \sqrt{1+0}+1 = 2
+</mrow>
+</md>
+</p>
+</solution>
+</example>
 </subsection>
+
+
 <subsection xml:id="sugestao-video-2">
     <title>Sugestão de vídeo</title>
   
@@ -366,90 +1040,126 @@ quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à 
  </li>
 </ul>    
 </subsection>
-<subsection xml:id="subsec-xxxxxx">
-    <title>Título</title>
- <definition xml:id="def-xxxxxxxxx">
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
-    </definition>
-<example xml:id="ex-7">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-<example xml:id="ex-8">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
 
-<example xml:id="ex-9">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
+<subsection xml:id="subsec-confronto">
+  <title>O Teorema do Confronto</title>
+  
+<theorem>
+<statement>
+  <p>
+    Seja <m>a</m> um número real e <m>f,g</m> funções tais que <m>f(x)\leq g(x)</m> 
+    para todo <m>x</m> próximo de  <m>a</m>, exceto possivelmente em <m>x=a</m>, então
 
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
-
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>   
+    <me>
+      \lim\limits_{x \to a} f(x) \leq   \lim\limits_{x \to a} g(x).  
+    </me>
     
-</subsection>   
+  </p>
+</statement>
+</theorem>
+
+
+<theorem xml:id="thm_squeeze"><title>Teorema do confronto</title>
+<statement><p>
+Seja <m>a</m> um número real e <m>f,g,h</m> funções tais que <m>f(x) \leq g(x) \leq h(x)</m>
+
+para todo <m>x</m> próximo de  <m>a</m>, exceto possivelmente em <m>x=a</m>. Então se 
+<md>
+<mrow>
+      \lim\limits_{x \to a} f(x) \amp=   \lim\limits_{x \to a} h(x) = L
+</mrow>
+</md>
+teremos
+<md>
+<mrow>
+	  \lim\limits_{x \to a} g(x) \amp= L. 
+</mrow>
+</md>
+</p></statement>
+</theorem>
+
+
+<p>
+Usando o teorema acima, podemos calcular o limite de funções com expressões complicadas.
+</p>
+
+<example xml:id="eg_1_4_8"><title><m>     \lim\limits_{x \to 0} x^2 \sin(\pi/x) </m></title>
+<statement>
+  <p>
+    Determine <m>\lim\limits_{x \to 0} x^2 \sin(\pi/x)</m>.
+  </p>
+</statement>
+<solution>
+
+<p>
+Já que  <m>-1 \leq \sin(t) \leq 1</m> para todo número  <m>t</m>, temos 
+<md>
+<mrow>
+  -1 \leq \sin(\pi /x ) \leq 1 \amp\amp \text{para todo } x \neq 0
+</mrow>
+</md>
+multiplicando por  <m>x^2</m> veremos que 
+<md>
+<mrow>
+  -x^2 \leq x^2 \sin(\pi /x ) \leq x^2 \amp\amp \text{para todo } x\neq0
+</mrow>
+</md>
+
+Como <me>     \lim\limits_{x \to 0} x^2 =   \lim\limits_{x \to 0} (-x^2) = 0</me>  o  <xref ref="thm_squeeze" text="custom"> teorema do confronto </xref>
+fornece 
+<md>
+<mrow>
+    \lim\limits_{x \to 0} x^2 \sin(\pi/x) \amp= 0. 
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+
+<example xml:id="eg_1_4_9"><title>Outro exemplo com o teorema do confronto </title>
+<statement>
+<p>
+Suponha que <m>f(x)</m>  é função que satisfaz  <m>1 \leq f(x) \leq x^2-2x+2</m>. 
+Determine  <m>\lim\limits_{x \to 1} f(x)</m>.
+</p>
+</statement>
+
+<solution>
+<p>
+Já estamos supridos com uma desigualdade, então é provável que ela nos ajude.
+ Devemos examinar os limites de cada lado para ver se eles são os mesmos:
+<md>
+<mrow>
+    \lim\limits_{x \to 1} 1 \amp= 1
+</mrow><mrow>
+    \lim\limits_{x \to 1} (x^2-2x+2) \amp= 1-2+2 = 1
+</mrow>
+</md>
+Então observamos que a função <m>f(x)</m> limitada entre duas funções que tende para <m>1</m> quando <m>x \to 1</m>.
+Portanto, pelo  <xref ref="thm_squeeze" text="custom"> teorema do confronto </xref> teremos
+
+<md>
+<mrow>
+    \lim\limits_{x \to 1} f(x) \amp =1.
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+
+
+</subsection>
+
+
+
+
+
+
+
+
+
 <subsection xml:id="sugestao-video-3">
     <title>Sugestão de vídeo</title>
   
@@ -472,6 +1182,44 @@ quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à 
  </li>
 </ul>    
 </subsection>
+
+
+   <!-- <subsection xml:id="subsec-xxx">
+    <title>Limites infinitos</title>
+     <introduction>
+      <p>
+Até este ponto, discutimos o que acontece com uma função quando movemos sua entrada <m>x</m> cada vez mais perto de um ponto específico <m>a</m>. Para muitas aplicações de limites, precisamos entender o que acontece com uma função quando sua entrada se torna extremamente grande <mdash/>, por exemplo, o que acontece com uma população em um momento distante no futuro.
+</p>
+
+<p>
+A definição de um limite no infinito tem um sabor semelhante à definição de limites em pontos finitos que vimos acima, mas os detalhes são um pouco diferentes. Também precisamos distinguir entre infinito positivo e negativo. À medida que <m>x</m> se torna muito grande e positivo, ele se move em direção a <m>+\infty</m>, mas quando se torna muito grande e negativo, ele se move em direção a <m>-\infty</m> .
+</p>
+    </introduction>
+ <definition xml:id="def-limites-infinitos">
+        <statement><p>
+Escrevemos
+<md>
+<mrow>
+  \lim\limits_{x \to \infty} f(x) = L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+</p>
+
+<p>
+Similarmente, escrevemos
+<md>
+<mrow>
+  \lim\limits_{x \to -\infty} f(x) = L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+</p>
+</statement>
+
+    </definition> -->
+
+
 
 <exercises xml:id="exercises-">
 <exercise>Escrever aqui

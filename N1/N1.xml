@@ -118,17 +118,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                        texto 1
+                        Estabelecer a noção intuitiva de limite.
                     </p>
                 </li>
                 <li>
                     <p>
-                       texto 2
+                       Estabelecer a noção intuitiva de limite laterais.
                     </p>
                 </li>
                 <li>
                     <p>
-                        texto 3
+                        Estabelecer a noção intuitiva de limite infinitos.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Apresentar a definição de assíntotas verticais.
                     </p>
                 </li>
 
@@ -1156,11 +1162,20 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
     <task>
         <statement>
             <p>
-             <m> \lim\limits_{x\to 3^-}\dfrac{ 2}{ x - 3}</m>  
+             <m> \lim\limits_{x\to 3^+}\dfrac{ 2}{ x - 3}</m>  
             </p>
         </statement>
         <solution>
             <p>
+        Se <m>x</m> está próximo de <m>3</m> mas maior que <m>3</m>, então o denominador <m>x-3</m> é um 
+        número positivo pequeno. Portanto, o quociente <m>\frac{2}{x-3}</m> é um número positivo grande. 
+        Então, intuitivamente, <me>\lim\limits_{x\to 3^+}\dfrac{ 2}{ x - 3}=+\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig8-plot"/>,
+        colabora com o nosso resulta. 
+
+            
+        
+         
+
         <figure xml:id="fig8-plot">
       
             <image xml:id="image8-sage" width="40%">
@@ -1180,23 +1195,26 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
     <task>
         <statement>
             <p>
-                <m> \lim\limits_{x\to 3^+}\dfrac{2}{x - 3}</m> 
+                <m> \lim\limits_{x\to 3^-}\dfrac{2}{x - 3}</m> 
             </p>
         </statement>
         <solution>
             <p>
-                
+                  Se <m>x</m> está próximo de <m>3</m> mas menor que <m>3</m>, então o denominador <m>x-3</m> é um 
+        número negativo pequeno. Portanto, o quociente <m>\frac{2}{x-3}</m> é um número negativo grande. 
+        Então, intuitivamente, <me>\lim\limits_{x\to 3^-}\dfrac{ 2}{ x - 3}=-\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig8-plot"/>,
+        colabora com o nosso resulta. 
             </p>
         </solution>
     </task>
 </example>
 
 <exercise>
-    <statement>
+   
         <p>
            Para <m>f(x)=\dfrac{1}{ |x - 3|}</m> determine:
         </p>
-    </statement>
+    
     <task>
         <statement>
             <p>
@@ -1205,7 +1223,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
         </statement>
         <answer>
             <p>
-                
+                <m>+\infty</m>
             </p>
         </answer>
     </task>
@@ -1217,13 +1235,13 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
         </statement>
         <answer>
             <p>
-                
+                <m>+\infty</m>
             </p>
         </answer>
     </task>
 </exercise>
 
-<example xml:id="ex-10">
+<!-- <example xml:id="ex-10">
     <statement>
         <p>
             Determine <m>\lim\limits_{x\to 0}\dfrac{2}{x^2}</m>. 
@@ -1265,24 +1283,8 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
             
         </p>
     </answer>
-</exercise>
+</exercise> -->
 
-<definition xml:id="def-assintota-vertical">
-    <statement>
-        <p>
-            A reta <m>x=a</m> a é chamada assíntota vertical da curva <m>y=f(x)</m> se pelo
-            menos uma das seguintes condições estiver satisfeita:
-    
-            <md>
-                <mrow> \lim\limits_{x\to a}f(x)=+\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=+\infty \amp \lim\limits_{x\to a^{+}}f(x)=+\infty </mrow>
-                <mrow> \lim\limits_{x\to a}f(x)=-\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=-\infty \amp \lim\limits_{x\to a^{+}}f(x)=-\infty </mrow>
-
-                
-               
-            </md>
-        </p>
-    </statement>
-</definition>
 
 <example xml:id="ex-11">
     
@@ -1293,11 +1295,18 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
    <task>
     <statement>
         <p>
-            <m>\lim\limits_{x\to 3^{-}}f(x)</m>
+            <m>\lim\limits_{x\to 3^{+}}f(x)</m>
         </p>
     </statement>
     <solution>
         <p>
+
+         Se <m>x</m> está próximo de <m>3</m> mas maior que <m>3</m>, então o denominador <m>x-3</m> é um 
+        número positivo pequeno e  <m>2x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número positivo grande. 
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{ 3x}{ x - 3}=+\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig10-plot"/>,
+        colabora com o nosso resulta. 
+
+
             <figure xml:id="fig10-plot">                
     
        <image xml:id="image10-sage" width="40%">
@@ -1326,7 +1335,10 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
    </statement>
    <solution>
        <p>
-           
+           Se <m>x</m> está próximo de <m>3</m> mas menor que <m>3</m>, então o denominador <m>x-3</m> é um 
+        número negativo pequeno e  <m>2x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número negativo grande. 
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^-}\dfrac{ 3x}{ x - 3}=+\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig10-plot"/>,
+        colabora com o nosso resulta. 
        </p>
    </solution>
    </task>
@@ -1337,7 +1349,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
 <exercise>
     
         <p>
-           Para <m>f(x)=\dfrac{5x}{x-2}</m> determine:
+           Para <m>f(x)=-\dfrac{5x}{x-2}</m> determine:
         </p>
     <task>
         <statement>
@@ -1347,7 +1359,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
         </statement>
          <answer>
         <p>
-            
+            <m>+\infty</m>
         </p>
     </answer>
     </task>
@@ -1359,13 +1371,39 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
         </statement>
          <answer>
         <p>
-            
+             <m>+\infty</m>
         </p>
     </answer>
     </task>
    
 </exercise>
 
+<definition xml:id="def-assintota-vertical">
+<title>Assíntotas verticais</title>
+
+
+    <statement>
+        <p>
+            A reta <m>x=a</m> a é chamada assíntota vertical da curva <m>y=f(x)</m> se pelo
+            menos uma das seguintes condições estiver satisfeita:
+    
+            <md>
+                <mrow> \lim\limits_{x\to a}f(x)=+\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=+\infty \amp \lim\limits_{x\to a^{+}}f(x)=+\infty </mrow>
+                <mrow> \lim\limits_{x\to a}f(x)=-\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=-\infty \amp \lim\limits_{x\to a^{+}}f(x)=-\infty </mrow>
+
+                
+               
+            </md>
+        </p>
+    </statement>
+</definition>
+
+<p>
+    
+
+ De acordo com a definição de assintota vertical a reta <m>x=3</m> é uma assintota vertical
+  ao gráfico da função <m>f(x)=\dfrac{3x}{3-x}</m> já que <m>\lim\limits_{x\to 3^-}\dfrac{ 3x}{ x - 3}=+\infty</m> ou
+  <m> \lim\limits_{x\to 3^+}\dfrac{ 3x}{ x - 3}=+\infty</m> como foi mostrad no <xref ref="ex-11"/>. Vamos a mais um exemplo a seguir.</p>
 <!-- <exercise>
     <webwork source="limit-intro-laterais-infinitos/problema1.pg" />
 </exercise>
@@ -1373,10 +1411,51 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
 <webwork source="rochesterLibrary/setLimitsRates3Infinite/ns2_2_xxx.pg" />
 </exercise> -->
 
-<subsection xml:id="subsec-assintotas">
-    <title>Assíntotas</title>
-    
-</subsection>
+<example xml:id="ex-12">
+    <statement>
+        <p>
+            Encontre as assíntotas verticais para <m>f(x)=\dfrac{x^2-2x}{3x-2x^2}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Uma vez que <me>f(x)=\dfrac{x^2+1}{3x-2x^2}=\dfrac{x^2+1}{x(3-2x)}</me>
+            existem assíntotas verticais em pontencial nas raízes do denominador <m>x(3-2x)</m>. De fato, 
+            o denominado é zero quando <m>x=0</m> e <m>x=\frac{3}{2}</m>. Além disso, o limite do numerador, digamos,  
+            quando <m>x\to 0^{+}</m> e quando <m>x\to (\frac{3}{2})^{+}</m> é positivo.        
+            
+        </p>  
+         
+            
+<p>            
+Se <m>x</m> está próximo de <m>0</m> mas maior que <m>0</m>, então o denominador <m>x(3-2x)</m> é um 
+        número positivo pequeno. Portanto, o quociente <m>\dfrac{x^2-2x}{3x-2x^2}</m> é um número positivo grande. 
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=+\infty.</me>
+        
+    Analogamente, 
+
+Se <m>x</m> está próximo de <m>\frac{3}{2}</m> mas maior que <m>\frac{3}{2}</m>, então o denominador <m>x(3-2x)</m> é um 
+        número negativo pequeno. Portanto, o quociente <m>\dfrac{x^2-2x}{3x-2x^2}</m> é um número negativo grande. 
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=-\infty.</me>
+     
+    Por fim, de acordo com a <xref ref="def-assintota-vertical"/> as retas <m>x=0</m> e <m>x=\frac{3}{2}</m> são assíntotas verticas 
+    ao gráfico de <m>f(x)=\dfrac{x^2-2x}{3x-2x^2}</m>.
+    </p>
+    </solution>
+</example>
+
+<exercise>
+  <statement>
+    <p>
+      Encontre as assintototas verticais da função <m>\frac{2}{(x-2)^2}</m>.
+    </p>
+  </statement>
+  <answer>
+    <p>
+      A reta <m>x=4</m> é a única assíntota vertical.
+    </p>
+  </answer>
+</exercise>
     
 </subsection>
 
