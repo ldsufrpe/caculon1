@@ -428,13 +428,14 @@ Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informa�
       <image xml:id="image3-sage" width="40%">
                 <description></description>
                 <sageplot>
-                    p = plot(abs(x)/x, (x, -1, 1), exclude=[0], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], ticks=[[-1,0.5, -0.5,1],[-1,0.5, -0.5,1]])
-                    p+= circle((0,1),0.02,  fill=true, facecolor='white')
-                    p+= circle((0,-1),0.02,  fill=true, facecolor='white')
-                    p+= text(r'$y=\dfrac{|x|}{x}$', (0.5, 0.5), fontsize=12)
-                    p +=arrow((0.25, 0.1/2), (0, 0.1/2), color='gray', arrowsize=2)
-                    p +=arrow((-0.25, 0.1/2), (0., 0.1/2), color='gray', arrowsize=2)
-                    p 
+                p = plot((x-1)/(x^2-1), (x, -1,2), ymax=2, figsize=[4,4], thickness=1.5, 
+                                                        axes_labels=['$x$','$y$'], ticks=[[-1/2,1, 2],[1,1/2,2]], gridlines=[[1],[1/2]], exclude=[1] ) 
+                p+= plot(x, (x, -0.01,1), linestyle='')
+                p+= text(r'$y=\dfrac{x-1}{x^2-1}$', (1.5, 1), fontsize=12)
+                p +=arrow((1.35, 0.05), (1.02, 0.05), color='gray', arrowsize=2)
+                p +=arrow((0.75, 0.05), (1, 0.05), color='gray', arrowsize=2)
+                p +=  circle((1,1/2),0.025,  fill=true, facecolor='white')
+                p 
                     
                 </sageplot>
             </image>
@@ -483,14 +484,14 @@ Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informa�
       <image xml:id="image4-sage" width="40%">
                 <description></description>
                 <sageplot>
-                    p = plot(sin(x)/x, (x, -2, 2), exclude=[0], figsize=[4,4], thickness=1.5, 
-                                    axes_labels=['$x$','$y$'], ticks=[[-1,0,1], [1]]) 
-                    p+= plot(x, (x, -0.1,1.25), linestyle='', aspect_ratio=1)
-                    p +=arrow((0.5, 0.1), (0, 0.1), color='gray', arrowsize=2)
-                    p +=arrow((-0.5, 0.1), (0., 0.1), color='gray', arrowsize=2)
-                    p+= text(r'$y=\dfrac{\sin{x}}{x}$', (1, 1.2), fontsize=12)
-
-                    p 
+                p = plot(sin(x)/x, (x, -2, 2), exclude=[0], figsize=[4,4], thickness=1.5, 
+                                                    axes_labels=['$x$','$y$'], ticks=[[-1,0,1], [1]]) 
+                p+= plot(x, (x, -0.1,1.25), linestyle='', aspect_ratio=1)
+                p +=arrow((0.5, 0.1), (0, 0.1), color='gray', arrowsize=2)
+                p +=arrow((-0.5, 0.1), (0., 0.1), color='gray', arrowsize=2)
+                p+= text(r'$y=\dfrac{\sin{x}}{x}$', (1, 1.2), fontsize=12)
+                p +=  circle((0,1),0.03,  fill=true, facecolor='white')
+                p
                 </sageplot>
             </image>
      
