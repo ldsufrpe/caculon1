@@ -1019,12 +1019,17 @@ A igualdade acima permite calcular o limite com facilidade:
 <exercise>
   <statement>
     <p>
-      
+      Determine <m>\lim\limits_{x\to -3}\dfrac{x^2+x-6}{x+3}</m>. 
     </p>
   </statement>
+  <hint>
+    <p>
+      Fatore <m>x^2+x-6</m>. 
+    </p>
+  </hint>
   <answer>
     <p>
-      
+      -5
     </p>
   </answer>
 </exercise>
@@ -1033,12 +1038,17 @@ A igualdade acima permite calcular o limite com facilidade:
 <exercise>
   <statement>
     <p>
-      
+      Determine  <m>\lim\limits_{x\to 0}\dfrac{\sqrt{x+1}-1}{x}  </m>. 
     </p>
   </statement>
+  <hint>
+    <p>
+      Simplifique a expressão multiplicando numerador e denominador por <m>\sqrt{x+1}-1</m>. 
+    </p>
+  </hint>
   <answer>
     <p>
-      
+      <m>\frac{1}{2}</m>
     </p>
   </answer>
 </exercise>

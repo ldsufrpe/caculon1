@@ -313,16 +313,17 @@ Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informa�
            
    <figure xml:id="fig2-table-plot">
   <caption> </caption>
-      <image xml:id="image2-sage" width="40%">
+      <image xml:id="image3-sage" width="40%">
                 <description></description>
                 <sageplot>
-                    p = plot((x-1)/(x^2-1), (x, -1,2), ymax=2, figsize=[4,4], thickness=1.5, 
-                                                        axes_labels=['$x$','$y$'], ticks=[[-1/2,1, 2],[1,1/2,2]], gridlines=[[1],[1/2]] ) 
-                    p+= plot(x, (x, -0.01,1), linestyle='')
-                    p+= text(r'$y=\dfrac{x-1}{x^2-1}$', (1.5, 1), fontsize=12)
-                    p +=arrow((1.35, 0.05), (1.02, 0.05), color='gray', arrowsize=2)
-                    p +=arrow((0.75, 0.05), (1, 0.05), color='gray', arrowsize=2)
-                    p
+                p = plot((x-1)/(x^2-1), (x, -1,2), ymax=2, figsize=[4,4], thickness=1.5, 
+                                                        axes_labels=['$x$','$y$'], ticks=[[-1/2,1, 2],[1,1/2,2]], gridlines=[[1],[1/2]], exclude=[1] ) 
+                p+= plot(x, (x, -0.01,1), linestyle='')
+                p+= text(r'$y=\dfrac{x-1}{x^2-1}$', (1.5, 1), fontsize=12)
+                p +=arrow((1.35, 0.05), (1.02, 0.05), color='gray', arrowsize=2)
+                p +=arrow((0.75, 0.05), (1, 0.05), color='gray', arrowsize=2)
+                p +=  circle((1,1/2),0.025,  fill=true, facecolor='white')
+                p 
                 </sageplot>
             </image>
     
@@ -425,17 +426,18 @@ Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informa�
      <figure xml:id="fig3-table-plot">
   <caption></caption>
   
-      <image xml:id="image3-sage" width="40%">
+      <image xml:id="image33-sage" width="40%">
                 <description></description>
                 <sageplot>
-                p = plot((x-1)/(x^2-1), (x, -1,2), ymax=2, figsize=[4,4], thickness=1.5, 
-                                                        axes_labels=['$x$','$y$'], ticks=[[-1/2,1, 2],[1,1/2,2]], gridlines=[[1],[1/2]], exclude=[1] ) 
-                p+= plot(x, (x, -0.01,1), linestyle='')
-                p+= text(r'$y=\dfrac{x-1}{x^2-1}$', (1.5, 1), fontsize=12)
-                p +=arrow((1.35, 0.05), (1.02, 0.05), color='gray', arrowsize=2)
-                p +=arrow((0.75, 0.05), (1, 0.05), color='gray', arrowsize=2)
-                p +=  circle((1,1/2),0.025,  fill=true, facecolor='white')
-                p 
+                p = plot(abs(x)/(x), (x, -1, 1), exclude=[0], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], 
+                            ticks=[[],[-1,1]])
+                p+= circle((0,1),0.03,  fill=true, facecolor='white')
+                p+= circle((0,-1),0.03,  fill=true, facecolor='white')
+                p+= text(r'$y=\dfrac{|x|}{x}$', (1, 0.5), fontsize=12)
+                p +=arrow((0.25, 0.1/3), (0.01, 0.1/3), color='gray', arrowsize=2)
+                p +=arrow((-0.25, 0.1/3), (-0.01,0.1/3), color='gray', arrowsize=2)
+                p +=plot(x, (-0.1,0.1), linestyle='')
+                p
                     
                 </sageplot>
             </image>
@@ -725,15 +727,15 @@ dividindo por <m>9</m> :
             <image xml:id="image5-sage" width="40%">
                 <description></description>
                 <sageplot>
-                    p = plot(abs(x-2)/(x-2), (x, 1, 3), exclude=[2], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], 
-                            ticks=[[0,1, 2, 3],[-1,1]], gridlines=[[2],[1, -1]])
-                    p+= circle((2,1),0.02,  fill=true, facecolor='white')
-                    p+= circle((2,-1),0.02,  fill=true, facecolor='white')
-                    p+= text(r'$y=\dfrac{|x-2|}{x-2}$', (1, 0.5), fontsize=12)
-                    p +=arrow((2.25, 0.1/2), (2, 0.1/2), color='gray', arrowsize=2)
-                    p +=arrow((1.75, 0.1/2), (2., 0.1/2), color='gray', arrowsize=2)
-                    p +=plot(x, (-0.1,0.1), linestyle='')
-                    p
+                p = plot(abs(x)/(x), (x, -1, 1), exclude=[0], figsize=[4,4], thickness=1.5, axes_labels=['$x$','$y$'], 
+                                            ticks=[[],[-1,1]])
+                p+= circle((0,1),0.03,  fill=true, facecolor='white')
+                p+= circle((0,-1),0.03,  fill=true, facecolor='white')
+                p+= text(r'$y=\dfrac{|x|}{x}$', (1, 0.5), fontsize=12)
+                p +=arrow((0.25, 0.1/3), (0.01, 0.1/3), color='gray', arrowsize=2)
+                p +=arrow((-0.25, 0.1/3), (-0.01,0.1/3), color='gray', arrowsize=2)
+                p +=plot(x, (-0.1,0.1), linestyle='')
+                p
 
 
 
