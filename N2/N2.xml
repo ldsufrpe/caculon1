@@ -1287,23 +1287,27 @@ Portanto, pelo  <xref ref="thm_squeeze" text="custom"> teorema do confronto </xr
 
 
 <subsection xml:id="sugestao-video-3">
-    <title>Sugestão de vídeo</title>
+    <title>Sugestão de vídeos</title>
   
 <ul>
     <li>
-        <p>
-          Problema Resolvido: texto 1.<url></url>
+       
+          <p>
+             <url href="https://youtu.be/6n1rJsR8Ekg"  visual="https://youtu.be/6n1rJsR8Ekg"> Introdução ao teorema do confronto.</url>
         </p>
-    </li>
+       
+     </li>
 
     <li>
         <p>
-            Problema Resolvido:  texto 2.<url></url>
+             <url href="https://youtu.be/PcTUaKANXPo"  visual="https://youtu.be/PcTUaKANXPo"> Uma demonstração para <m>\lim\limits_{x\to 0}\dfrac{\sin{x}}{x}=1</m> .</url>
         </p>
     </li>
  <li>
      <p>
-          texto 3<url></url>
+         <p>
+             <url href="https://youtu.be/9qR8vwOc6J8"  visual="youtu.be/9qR8vwOc6J8"> Calculando  <m>\lim\limits_{x\to 0}\dfrac{1-\cos{x}}{x}</m> .</url>
+        </p>
      </p>
  </li>
 </ul>    
