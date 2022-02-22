@@ -1064,28 +1064,58 @@ será derivável ali.
 
 
 <exercises xml:id="exercises-derivada-intro">
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema1.pg" />
+</exercise>
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema2.pg" />
+</exercise>
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema3.pg" />
+</exercise>
+ 
 
-<webwork source="pretext-derivada-intro-definicao/problema1.pg" />
- <webwork source="pretext-derivada-intro-definicao/problema2.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema4.pg" />
+</exercise>
 
-<webwork source="pretext-derivada-intro-definicao/problema3.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema5.pg" />
 
-<webwork source="pretext-derivada-intro-definicao/problema4.pg" />
+</exercise>
 
-<webwork source="pretext-derivada-intro-definicao/problema5.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema6.pg" />
+</exercise>
 
-<webwork source="pretext-derivada-intro-definicao/problema6.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema7.pg" />
 
-<webwork source="pretext-derivada-intro-definicao/problema7.pg" />
+</exercise>
 
-<webwork source="pretext-derivada-intro-definicao/problema8.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema8.pg" />
 
+</exercise>
 
-<webwork source="pretext-derivada-intro-definicao/problema9.pg" />
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema9.pg" />
 
-<webwork source="pretext-derivada-intro-definicao/problema10.pg" />
-<webwork source="pretext-derivada-intro-definicao/problema11.pg" />
-<webwork source="pretext-derivada-intro-definicao/problema12.pg" />
+</exercise>
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema10.pg" />
+
+</exercise>
+
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema11.pg" />
+
+</exercise>
+
+<exercise>
+    <webwork source="pretext-derivada-intro-definicao/problema12.pg" />
+
+</exercise>
 </exercises>   
 
 </section>
