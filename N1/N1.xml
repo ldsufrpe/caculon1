@@ -1605,12 +1605,13 @@ o limite à esquerda e <c>dir='+'</c> para o limite à direita. Vamos explificar
 </subsection>
 
 
-
 <exercises xml:id="exercises-">
 
 <exercise>
 <webwork source="limit-intro-laterais-infinitos/problema14.pg" />
 </exercise>
+
+
 <exercise>
 <webwork source="limit-intro-laterais-infinitos/problema12.pg" />
 </exercise>

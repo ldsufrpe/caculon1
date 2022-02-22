@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg">
+      <statement><p>Suppose <m>f</m> and <m>g</m> are functions satisfying</p>
+<p><ul>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} f(x) = 0}</m>,</p>
+</li>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} g(x) = 0}</m>, and</p>
+</li>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} \frac{f(x)}{g(x)} = 2 }</m>.</p>
+</li>
+</ul></p>
+<p>What can be said about the relative sizes of <m>f(x)</m> and <m>g(x)</m> as <m>x</m> approaches <m>7</m>?  Select all that apply.</p>
+<p><var form="checkboxes">
+<li>
+<p><m>g(x) \approx 2 f(x)</m> for <m>x</m> near <m>7</m>.</p>
+</li>
+<li>
+<p>Values of <m>f(x)</m> are about 2 times as large as values of <m>g(x)</m> as <m>x</m> approaches <m>7</m>.</p>
+</li>
+<li>
+<p>Values of <m>g(x)</m> are about 2 times as large as values of <m>f(x)</m> as <m>x</m> approaches <m>7</m>.</p>
+</li>
+<li>
+<p><m>f(x) \approx 2 g(x)</m> for <m>x</m> near <m>7</m>.</p>
+</li>
+<li>
+<p>Nothing definitive can be said.</p>
+</li>
+</var></p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg</server-url>
+    <pg source="Library/Hope/Calc1/APEX_01_03_Limits_analytical/Reading_Q_04.pg"/>
+  </webwork-reps>
+</webwork-representations>

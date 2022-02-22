@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-21T22:38:26-03:00       *-->
+<!--*       on 2022-02-22T14:24:15-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -131,21 +145,22 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">texto</p></li>
-<li id="li-2"><p id="p-4">texto</p></li>
-</ol></article><section class="introduction" id="introduction-2"><p id="p-5">Aqui aprenderemos como calcular limites de funções que são construídas a partir de funções básicas como:</p>
+<li id="li-1"><p id="p-3">Calcular limites de funções mais complicadas.</p></li>
+<li id="li-2"><p id="p-4">Calcular limites de funções racionais.</p></li>
+<li id="li-3"><p id="p-5">Apresentar o teorema do confronto.</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Aqui aprenderemos como calcular limites de funções que são construídas a partir de funções básicas como:</p>
 <ul class="disc">
-<li id="li-3"><p id="p-6">Função constante <span class="process-math">\(f(x)=c\)</span></p></li>
-<li id="li-4"><p id="p-7">Potência <span class="process-math">\(f(x)=x^n\text{,}\)</span> <span class="process-math">\((n\neq 0)\)</span></p></li>
-<li id="li-5"><p id="p-8">Trigonométricas: <span class="process-math">\(f(x)=\sin{x}\)</span> ou <span class="process-math">\(\cos{x}\)</span> ou <span class="process-math">\(\tan{x}\text{.}\)</span></p></li>
-<li id="li-6"><p id="p-9">Exponencial <span class="process-math">\(f(x)=e^x\)</span></p></li>
+<li id="li-4"><p id="p-7">Função constante <span class="process-math">\(f(x)=c\)</span></p></li>
+<li id="li-5"><p id="p-8">Potência <span class="process-math">\(f(x)=x^n\text{,}\)</span> <span class="process-math">\((n\neq 0)\)</span></p></li>
+<li id="li-6"><p id="p-9">Trigonométricas: <span class="process-math">\(f(x)=\sin{x}\)</span> ou <span class="process-math">\(\cos{x}\)</span> ou <span class="process-math">\(\tan{x}\text{.}\)</span></p></li>
+<li id="li-7"><p id="p-10">Exponencial <span class="process-math">\(f(x)=e^x\)</span></p></li>
 </ul>
 <p class="continuation">usando as operações de soma, subtração, divisão e composição.</p></section><section class="subsection" id="subsec-lim-basico"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Limites básicos</span>
 </h3>
-<p id="p-10">Começamos com o limites de duas funções muito simples: uma função constante e uma função linear.</p>
+<p id="p-11">Começamos com o limites de duas funções muito simples: uma função constante e uma função linear.</p>
 <article class="assemblage assemblage-like" id="th-triviais"><h4 class="heading"><span class="title">Limites especiais.</span></h4>
-<p id="p-11">Seja <span class="process-math">\(a,c\)</span> números reais. Os seguintes limites são verdadeiros</p>
+<p id="p-12">Seja <span class="process-math">\(a,c\)</span> números reais. Os seguintes limites são verdadeiros</p>
 <div class="displaymath process-math" id="md-1">
 \begin{align*}
 \lim\limits_{x \to a} c \amp = c \amp \text{ e }\amp\amp
@@ -154,25 +169,25 @@ true);
 </div></article><article class="theorem theorem-like" id="th-prop-limt"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Propriedades de limites.</span>
 </h4>
-<p id="p-12">Seja m <span class="process-math">\(a,c \)</span> números reais,  <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> funções em que o limite existe quando <span class="process-math">\(x\)</span> tente para <span class="process-math">\(a\text{.}\)</span> Então,</p>
+<p id="p-13">Seja m <span class="process-math">\(a,c \)</span> números reais,  <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> funções em que o limite existe quando <span class="process-math">\(x\)</span> tente para <span class="process-math">\(a\text{.}\)</span> Então,</p>
 <ol class="decimal">
-<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\displaystyle \lim\limits_{x \to a} ( f(x) + g(x) ) = \lim\limits_{x \to a} f(x) + \lim\limits_{x \to a}g(x)  \)</span></p></li>
-<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \lim\limits_{x \to a} ( f(x) - g(x) ) = \lim\limits_{x \to a} f(x) - \lim\limits_{x \to a}g(x)  \)</span></p></li>
-<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\lim\limits_{x \to a} c f(x) = c \lim\limits_{x \to a} c f(x)\text{.}\)</span></p></li>
-<li id="li-10"><p id="p-13"><span class="process-math">\(\displaystyle \lim\limits_{x \to a}f(x)g(x)= \lim\limits_{x \to a} f(x) \cdot \lim\limits_{x \to a}g(x)\)</span></p></li>
-<li id="li-11"><p id="p-14"><span class="process-math">\(\displaystyle \lim\limits_{x \to a}\frac{f(x)}{g(x)}= \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a}g(x)} \quad\text{se } \lim\limits_{x \to a}g(x)\neq 0\)</span></p></li>
-</ol></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-15"></p></article></div>
-<p id="p-16">O <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a> acima mostra que os limites interagem muito simplesmente com a aritmética. Se você for solicitado a encontrar o limite de uma soma, a resposta é apenas a soma dos limites. Da mesma forma, o limite de uma funções multiplicada por uma contante  é apenas o produto entre a constante e o limite. Assim como, o limite de um quociente é o quociente dos limites (desde que o limite do denominador não seja zero).</p>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \lim\limits_{x \to a} ( f(x) + g(x) ) = \lim\limits_{x \to a} f(x) + \lim\limits_{x \to a}g(x)  \)</span></p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\displaystyle \lim\limits_{x \to a} ( f(x) - g(x) ) = \lim\limits_{x \to a} f(x) - \lim\limits_{x \to a}g(x)  \)</span></p></li>
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\lim\limits_{x \to a} c f(x) = c \lim\limits_{x \to a} c f(x)\text{.}\)</span></p></li>
+<li id="li-11"><p id="p-14"><span class="process-math">\(\displaystyle \lim\limits_{x \to a}f(x)g(x)= \lim\limits_{x \to a} f(x) \cdot \lim\limits_{x \to a}g(x)\)</span></p></li>
+<li id="li-12"><p id="p-15"><span class="process-math">\(\displaystyle \lim\limits_{x \to a}\frac{f(x)}{g(x)}= \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a}g(x)} \quad\text{se } \lim\limits_{x \to a}g(x)\neq 0\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-16"></p></article></div>
+<p id="p-17">O <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a> acima mostra que os limites interagem muito simplesmente com a aritmética. Se você for solicitado a encontrar o limite de uma soma, a resposta é apenas a soma dos limites. Da mesma forma, o limite de uma funções multiplicada por uma contante  é apenas o produto entre a constante e o limite. Assim como, o limite de um quociente é o quociente dos limites (desde que o limite do denominador não seja zero).</p>
 <article class="example example-like" id="eg_1_4_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_1"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Cálculos usando propriedades dos limites.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_1"><article class="example example-like"><p id="p-17">Assuma que <span class="process-math">\(\lim\limits_{x \to 1} f(x)=3\)</span> e <span class="process-math">\(\lim\limits_{x \to 1} g(x)=2 \)</span> e calcule:</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_1"><article class="example example-like"><p id="p-18">Assuma que <span class="process-math">\(\lim\limits_{x \to 1} f(x)=3\)</span> e <span class="process-math">\(\lim\limits_{x \to 1} g(x)=2 \)</span> e calcule:</p>
 <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-18"><span class="process-math">\(\lim\limits_{x \to 1} 3f(x)\)</span></p></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-19"><span class="process-math">\(\lim\limits_{x \to 1} (3f(x) -g(x))\)</span></p></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-20"><span class="process-math">\(\lim\limits_{x \to 1} f(x) g(x)\)</span></p></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-21"><span class="process-math">\(\lim\limits_{x \to 1} \dfrac{f(x)}{f(x) -g(x)}\)</span></p></article><div class="solutions">
+<p id="p-19"><span class="process-math">\(\lim\limits_{x \to 1} 3f(x)\)</span></p></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-20"><span class="process-math">\(\lim\limits_{x \to 1} (3f(x) -g(x))\)</span></p></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-21"><span class="process-math">\(\lim\limits_{x \to 1} f(x) g(x)\)</span></p></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-22"><span class="process-math">\(\lim\limits_{x \to 1} \dfrac{f(x)}{f(x) -g(x)}\)</span></p></article><div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-22">De acordo com o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a> temos os seguintes limites quando <span class="process-math">\(x\)</span> tenda a <span class="process-math">\(1\text{:}\)</span></p>
+<p id="p-23">De acordo com o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a> temos os seguintes limites quando <span class="process-math">\(x\)</span> tenda a <span class="process-math">\(1\text{:}\)</span></p>
 <div class="displaymath process-math" id="md-2">
 \begin{align*}
 \lim\limits_{x \to 1} 3f(x) = \amp 3 \cdot \lim\limits_{x \to 1}f(x) = 3\cdot 3 = 9 
@@ -201,10 +216,10 @@ true);
 </div></article></div>
 <article class="example example-like" id="eg_1_4_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_2"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mais cálculos usando propriedades de limites.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_2"><article class="example example-like"><p id="p-23">Determine <span class="process-math">\(\lim\limits_{x \to 3} 4x^2-1\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_2"><article class="example example-like"><p id="p-24">Determine <span class="process-math">\(\lim\limits_{x \to 3} 4x^2-1\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<p id="p-24">Usando <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">as propriedades de limites</a>:</p>
+<p id="p-25">Usando <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">as propriedades de limites</a>:</p>
 <div class="displaymath process-math" id="md-6">
 \begin{align*}
 \lim\limits_{x \to 3} 4x^2-1
@@ -226,17 +241,17 @@ true);
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-25">Determine <span class="process-math">\(\lim\limits_{x\to -1}5x^3+3 \text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-26">Determine <span class="process-math">\(\lim\limits_{x\to -1}5x^3+3 \text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-26">O limite do produto (parte 5 de <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>) é verdadeiro também para três funções. Na verdade é válida para o produto de <span class="process-math">\(n\)</span> funções.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-27">8</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-27">O limite do produto (parte 5 de <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>) é verdadeiro também para três funções. Na verdade é válida para o produto de <span class="process-math">\(n\)</span> funções.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-28">8</p></div></div>
 </div></article></div>
 <article class="example example-like" id="eg_1_4_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_3"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Limite de uma função racional.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_3"><article class="example example-like"><p id="p-28">Determine  <span class="process-math">\(\lim\limits_{x\to 2} \dfrac{x}{x-1}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_3"><article class="example example-like"><p id="p-29">Determine  <span class="process-math">\(\lim\limits_{x\to 2} \dfrac{x}{x-1}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-29">Para aplicar  o limite do quociente (ver <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Propriedade 5</a>), precisamos examinar o numerador e o denominador separadamente e garantir que o limite do denominador seja diferente de zero.</p>
+<p id="p-30">Para aplicar  o limite do quociente (ver <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Propriedade 5</a>), precisamos examinar o numerador e o denominador separadamente e garantir que o limite do denominador seja diferente de zero.</p>
 <div class="displaymath process-math" id="md-7">
 \begin{align*}
 \lim\limits_{x \to 2} x\amp = 2\amp \knowl{./knowl/th-triviais.html}{\text{Limites especiais}}
@@ -263,39 +278,39 @@ true);
 </div></div>
 </div></article></div></section><article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-30">Determine  <span class="process-math">\(\lim\limits_{x\to 1} \dfrac{2x}{x+4}\text{.}\)</span></p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-31">Determine  <span class="process-math">\(\lim\limits_{x\to 1} \dfrac{2x}{x+4}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-31"><span class="process-math">\(\frac{2}{5}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-32"><span class="process-math">\(\frac{2}{5}\)</span></p></div></div>
 </div></article></div>
 <section class="subsection" id="sugestao-video-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-12"><p id="p-32"><a class="external" href="https://youtu.be/C8T-Z5BxU4U" target="_blank">Propriedades dos limites.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p></li>
-<li id="li-13"><p id="p-33"><a class="external" href="https://youtu.be/YV_H5iDIQus" target="_blank">Usando o gráficos para calcular <span class="process-math">\(\lim\limits_{x\to 0}f(x)h(x)\)</span>  .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
-<li id="li-14"><p id="p-34"><a class="external" href="https://youtu.be/MvxKCvgb9Yw" target="_blank">Limite de funções definidas por partes.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
-<li id="li-15"><p id="p-35"><a class="external" href="https://youtu.be/f86F09MIgEw" target="_blank">Outra sobre limite de funções definidas por partes.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
-<li id="li-16"><p id="p-36"><a class="external" href="https://youtu.be/f86F09MIgEw" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to 3^-}\dfrac{|x-3|}{x-3}\)</span> e <span class="process-math">\(\lim\limits_{x\to 3^+}\dfrac{|x-3|}{x-3} \text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-13"><p id="p-33"><a class="external" href="https://youtu.be/C8T-Z5BxU4U" target="_blank">Propriedades dos limites.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p></li>
+<li id="li-14"><p id="p-34"><a class="external" href="https://youtu.be/YV_H5iDIQus" target="_blank">Usando o gráficos para calcular <span class="process-math">\(\lim\limits_{x\to 0}f(x)h(x)\)</span>  .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
+<li id="li-15"><p id="p-35"><a class="external" href="https://youtu.be/MvxKCvgb9Yw" target="_blank">Limite de funções definidas por partes.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
+<li id="li-16"><p id="p-36"><a class="external" href="https://youtu.be/f86F09MIgEw" target="_blank">Outra sobre limite de funções definidas por partes.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
+<li id="li-17"><p id="p-37"><a class="external" href="https://youtu.be/f86F09MIgEw" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to 3^-}\dfrac{|x-3|}{x-3}\)</span> e <span class="process-math">\(\lim\limits_{x\to 3^+}\dfrac{|x-3|}{x-3} \text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
 </ul></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Limites das funções racionais</span>
 </h3>
-<p id="p-37">Devemos ter cuidado ao calcular o limite de uma razão — que é a razão dos limites, exceto quando o limite do denominador é zero. Quando o limite do denominador é zero o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>  <em class="alert">não se aplica</em> e algumas das possibilidade a seguir podem acontecer:</p>
-<ol id="p-38" class="decimal">
-<li id="li-17">
-<p id="p-39">Se o limite do numerador for diferente de zero, o limite do quociente não existe. Então:</p>
+<p id="p-38">Devemos ter cuidado ao calcular o limite de uma razão — que é a razão dos limites, exceto quando o limite do denominador é zero. Quando o limite do denominador é zero o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>  <em class="alert">não se aplica</em> e algumas das possibilidade a seguir podem acontecer:</p>
+<ol id="p-39" class="decimal">
+<li id="li-18">
+<p id="p-40">Se o limite do numerador for diferente de zero, o limite do quociente não existe. Então:</p>
 <ul class="disc">
-<li id="li-18"><p id="p-40">Se ambos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) são <span class="process-math">\(+\infty\)</span> escrevemos <span class="process-math">\(\lim\limits_{x \to a} \frac{f(x)}{g(x)} =+\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.7">Figura 1.7</a>).</p></li>
-<li id="li-19"><p id="p-41">Se ambos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) são <span class="process-math">\(-\infty\)</span> escrevemos <span class="process-math">\(\lim\limits_{x \to a} \frac{f(x)}{g(x)} =-\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.8">Figura 1.8</a>).</p></li>
-<li id="li-20"><p id="p-42">Se um dos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) for <span class="process-math">\(+\infty\)</span> e outro for <span class="process-math">\(-\infty\)</span> simplesmente dizemos que o <em class="alert">limite não existe</em> (ver <a href="" class="xref" data-knowl="./knowl/fig3.html" title="Figura 1.9">Figura 1.9</a>).</p></li>
+<li id="li-19"><p id="p-41">Se ambos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) são <span class="process-math">\(+\infty\)</span> escrevemos <span class="process-math">\(\lim\limits_{x \to a} \frac{f(x)}{g(x)} =+\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig1.html" title="Figura 1.7">Figura 1.7</a>).</p></li>
+<li id="li-20"><p id="p-42">Se ambos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) são <span class="process-math">\(-\infty\)</span> escrevemos <span class="process-math">\(\lim\limits_{x \to a} \frac{f(x)}{g(x)} =-\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.8">Figura 1.8</a>).</p></li>
+<li id="li-21"><p id="p-43">Se um dos limites laterais (de <span class="process-math">\(\frac{f(x)}{g(x)}\)</span> ) for <span class="process-math">\(+\infty\)</span> e outro for <span class="process-math">\(-\infty\)</span> simplesmente dizemos que o <em class="alert">limite não existe</em> (ver <a href="" class="xref" data-knowl="./knowl/fig3.html" title="Figura 1.9">Figura 1.9</a>).</p></li>
 </ul>
 </li>
-<li id="li-21">
-<p id="p-43">Se o limite do numerador for zero, então o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>  não nos dá informações suficientes para decidir se o limite existe ou não. É possível que</p>
+<li id="li-22">
+<p id="p-44">Se o limite do numerador for zero, então o <a href="" class="xref" data-knowl="./knowl/th-prop-limt.html" title="Teorema 1.1: Propriedades de limites">Teorema 1.1</a>  não nos dá informações suficientes para decidir se o limite existe ou não. É possível que</p>
 <ul class="disc">
-<li id="li-22"><p id="p-derived-li-22">O limite não exista, como é o caso do <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{x^2} =  \lim\limits_{x  \to 0} \dfrac{1}{x}\text{.}\)</span></p></li>
-<li id="li-23"><p id="p-derived-li-23">O limite é <span class="process-math">\(\pm \infty\text{,}\)</span> como são os casos do  <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{2x^2}{x^4} =  \lim\limits_{x  \to 0} \dfrac{2}{x^2} = +\infty\)</span> ou do <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{-2x^2}{x^4} =  \lim\limits_{x\to 0} \dfrac{-2}{x^2} = -\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.8">Figura 1.8</a>).</p></li>
-<li id="li-24"><p id="p-derived-li-24">O limite é zero, como por exemplo <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x^2}{x} = 0\text{.}\)</span></p></li>
-<li id="li-25"><p id="p-derived-li-25">O limite existe e é diferente de zero, como por exemplo <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{x} =  1\text{.}\)</span></p></li>
+<li id="li-23"><p id="p-derived-li-23">O limite não exista, como é o caso do <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{x^2} =  \lim\limits_{x  \to 0} \dfrac{1}{x}\text{.}\)</span></p></li>
+<li id="li-24"><p id="p-derived-li-24">O limite é <span class="process-math">\(\pm \infty\text{,}\)</span> como são os casos do  <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{2x^2}{x^4} =  \lim\limits_{x  \to 0} \dfrac{2}{x^2} = +\infty\)</span> ou do <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{-2x^2}{x^4} =  \lim\limits_{x\to 0} \dfrac{-2}{x^2} = -\infty\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig2.html" title="Figura 1.8">Figura 1.8</a>).</p></li>
+<li id="li-25"><p id="p-derived-li-25">O limite é zero, como por exemplo <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x^2}{x} = 0\text{.}\)</span></p></li>
+<li id="li-26"><p id="p-derived-li-26">O limite existe e é diferente de zero, como por exemplo <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{x} =  1\text{.}\)</span></p></li>
 </ul>
 </li>
 </ol>
@@ -305,12 +320,12 @@ true);
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <article class="example example-like" id="eg_1_4_4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_4"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Mais sobre quociente dos limites.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_4"><article class="example example-like"><p id="p-44">Determine os limites.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_4"><article class="example example-like"><p id="p-45">Determine os limites.</p>
 <article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-45">Determine <span class="process-math">\(\lim\limits_{x \to 2} \dfrac{2x-3}{x^2+5x-6}\text{.}\)</span></p>
+<p id="p-46">Determine <span class="process-math">\(\lim\limits_{x \to 2} \dfrac{2x-3}{x^2+5x-6}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-46">Como esse é o limite de uma razão, calculamos o limite do numerador e do denominador separadamente. Começaremos pelo numerador:</p>
+<p id="p-47">Como esse é o limite de uma razão, calculamos o limite do numerador e do denominador separadamente. Começaremos pelo numerador:</p>
 <div class="displaymath process-math" id="md-10">
 \begin{align*}
 \lim\limits_{x \to 2} 2x-3
@@ -346,10 +361,10 @@ true);
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-47">Determine <span class="process-math">\(\lim\limits_{x \to 1} \dfrac{2x-3}{x^2+5x-6}\text{.}\)</span></p>
+<p id="p-48">Determine <span class="process-math">\(\lim\limits_{x \to 1} \dfrac{2x-3}{x^2+5x-6}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-48">O caso anterior tudo funcionou de forma simples uma vez que o limite do denominador é diferente de zero. Neste caso, quando tomarmos o limite como <span class="process-math">\(x \to 1\text{,}\)</span> o limite do numerador é:</p>
+<p id="p-49">O caso anterior tudo funcionou de forma simples uma vez que o limite do denominador é diferente de zero. Neste caso, quando tomarmos o limite como <span class="process-math">\(x \to 1\text{,}\)</span> o limite do numerador é:</p>
 <div class="displaymath process-math" id="md-13">
 \begin{align*}
 \lim\limits_{x \to 1} 2x-3 \amp= 2 \cdot 1 - 3 = -1
@@ -375,7 +390,7 @@ true);
 <article class="warning remark-like" id="warning-1"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h4>
-<p id="p-49">É importante salientar que não é correto escrever</p>
+<p id="p-50">É importante salientar que não é correto escrever</p>
 <div class="displaymath process-math" id="md-16">
 \begin{align*}
 \lim\limits_{x \to 1} \frac{2x-3}{x^2+5x-6}
@@ -391,41 +406,41 @@ true);
 </div>
 <p class="continuation">quando o limite do denominador não é zero.</p></article><article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-50">Determine <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{3x}{x^3}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-51">Determine <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{3x}{x^3}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-51"><span class="process-math">\(+\infty\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-52"><span class="process-math">\(+\infty\)</span></p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-52">Se possível, determine <span class="process-math">\(\lim\limits_{x\to 5}\dfrac{2x}{x-5}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-53">Se possível, determine <span class="process-math">\(\lim\limits_{x\to 5}\dfrac{2x}{x-5}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-53">Calcule os limites laterais.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-54">Não existe. Pois os limites laterais são <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-54">Calcule os limites laterais.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-55">Não existe. Pois os limites laterais são <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\text{.}\)</span></p></div></div>
 </div></article></div></section><section class="subsection" id="sugestao-video-11"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-26"><p id="p-55"><a class="external" href="https://youtu.be/oak8Sdqdtl0" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to 2}\dfrac{x^2+x-6}{x-2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
-<li id="li-27"><p id="p-56"><a class="external" href="https://youtu.be/78Icli2_6_Q" target="_blank">Calculando limites laterais para <span class="process-math">\(f(x)=-\dfrac{1}{(x-1)^2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
+<li id="li-27"><p id="p-56"><a class="external" href="https://youtu.be/oak8Sdqdtl0" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to 2}\dfrac{x^2+x-6}{x-2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
+<li id="li-28"><p id="p-57"><a class="external" href="https://youtu.be/78Icli2_6_Q" target="_blank">Calculando limites laterais para <span class="process-math">\(f(x)=-\dfrac{1}{(x-1)^2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
 </ul></section><section class="subsection" id="subsec-mais-prop-limites"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Mais propriedades de limites</span>
 </h3>
-<p id="p-57">Agora apresentaremos mais duas regras para calcular limites de potência e raízes de funções. Iniciamos com a propriedade que pode ser obtida a partir da aplicação repetidamente do produto  de limites para <span class="process-math">\(f(x)=g(x)\text{.}\)</span></p>
+<p id="p-58">Agora apresentaremos mais duas regras para calcular limites de potência e raízes de funções. Iniciamos com a propriedade que pode ser obtida a partir da aplicação repetidamente do produto  de limites para <span class="process-math">\(f(x)=g(x)\text{.}\)</span></p>
 <article class="assemblage assemblage-like" id="thm_lim_powers"><h4 class="heading"><span class="title">Propriedade da Potência.</span></h4>
-<p id="p-58">Se <span class="process-math">\(n\)</span> um inteiro positivo, <span class="process-math">\(a\)</span> um número real então</p>
+<p id="p-59">Se <span class="process-math">\(n\)</span> um inteiro positivo, <span class="process-math">\(a\)</span> um número real então</p>
 <div class="displaymath process-math" id="md-18">
 \begin{align*}
 \lim\limits_{x \to a} [f(x)]^n \amp= \left[\lim\limits_{x \to a} f(x) \right]^n,
 \end{align*}
 </div>
-<p class="continuation">desde que o limite o limite de <span class="process-math">\(f(x)\text{,}\)</span> quando <span class="process-math">\(x\to a\text{,}\)</span> exista. Neste caso, podemos dizer que o limite da potência é a potência dos limites.</p></article><p id="p-59">A combinação de um dos  <a href="" class="xref" data-knowl="./knowl/th-triviais.html" title="[assemblage]: Limites especiais">Limites especiais</a> e a <a href="" class="xref" data-knowl="./knowl/thm_lim_powers.html" title="[assemblage]: Propriedade da Potência">Propriedade da Potência</a> gera uma forma de obter outro limite muito comum e útil. Se <span class="process-math">\(n\)</span> um inteiro positivo, <span class="process-math">\(a\)</span> um número real então</p>
+<p class="continuation">desde que o limite o limite de <span class="process-math">\(f(x)\text{,}\)</span> quando <span class="process-math">\(x\to a\text{,}\)</span> exista. Neste caso, podemos dizer que o limite da potência é a potência dos limites.</p></article><p id="p-60">A combinação de um dos  <a href="" class="xref" data-knowl="./knowl/th-triviais.html" title="[assemblage]: Limites especiais">Limites especiais</a> e a <a href="" class="xref" data-knowl="./knowl/thm_lim_powers.html" title="[assemblage]: Propriedade da Potência">Propriedade da Potência</a> gera uma forma de obter outro limite muito comum e útil. Se <span class="process-math">\(n\)</span> um inteiro positivo, <span class="process-math">\(a\)</span> um número real então</p>
 <div class="displaymath process-math" id="mdn-1">
 \begin{gather}
 \lim\limits_{x \to a} x^n = a^n.\tag{1.1}
 \end{gather}
 </div>
 <article class="assemblage assemblage-like" id="assemblage-limite-raiz"><h4 class="heading"><span class="title">Propriedade da Raiz.</span></h4>
-<p id="p-60">Se  <span class="process-math">\(n\)</span> um inteiro positivo par, <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(\lim\limits_{x\to a}f(x)&gt;0\)</span> então</p>
+<p id="p-61">Se  <span class="process-math">\(n\)</span> um inteiro positivo par, <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(\lim\limits_{x\to a}f(x)&gt;0\)</span> então</p>
 <div class="displaymath process-math" id="md-19">
 \begin{gather*}
 \lim\limits_{x \to a} \sqrt[n]{f(x)}= \sqrt[n]{\lim\limits_{x \to a} f(x)}.
@@ -433,7 +448,7 @@ true);
 </div></article><article class="note remark-like" id="note-1"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h4>
-<p id="p-61">Observe que devemos ter cuidado ao extrair raízes de limites que podem ser números negativos. Para ver por que, considere o caso <span class="process-math">\(n=2\)</span> na  <a href="" class="xref" data-knowl="./knowl/assemblage-limite-raiz.html" title="[assemblage]: Propriedade da Raiz">Propriedade da Raiz</a>, o limite</p>
+<p id="p-62">Observe que devemos ter cuidado ao extrair raízes de limites que podem ser números negativos. Para ver por que, considere o caso <span class="process-math">\(n=2\)</span> na  <a href="" class="xref" data-knowl="./knowl/assemblage-limite-raiz.html" title="[assemblage]: Propriedade da Raiz">Propriedade da Raiz</a>, o limite</p>
 <div class="displaymath process-math" id="md-20">
 \begin{align*}
 \lim\limits_{x \to 4} \sqrt{x} \amp= \sqrt{4} = 2 \amp \ct{uso correto da propriedade}\\
@@ -442,7 +457,7 @@ true);
 </div>
 <p class="continuation">Para avaliar adequadamente tais limites, precisamos usar números complexos que estão além do escopo deste texto.</p></article><article class="example example-like" id="eg_1_4_5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_5"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{x \to 2} \sqrt[3]{4x^2-3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_5"><article class="example example-like"><p id="p-62">Da <a href="" class="xref" data-knowl="./knowl/assemblage-limite-raiz.html" title="[assemblage]: Propriedade da Raiz">Propriedade da Raiz</a>:</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_5"><article class="example example-like"><p id="p-63">Da <a href="" class="xref" data-knowl="./knowl/assemblage-limite-raiz.html" title="[assemblage]: Propriedade da Raiz">Propriedade da Raiz</a>:</p>
 <div class="displaymath process-math" id="md-21">
 \begin{align*}
 \lim\limits_{x \to 2} \sqrt[3]{4x^2-3} \amp=
@@ -454,15 +469,15 @@ true);
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-63">Determine <span class="process-math">\(\lim\limits_{x \to 2}\sqrt[4]{3x^4-2x-28}.\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-64">Determine <span class="process-math">\(\lim\limits_{x \to 2}\sqrt[4]{3x^4-2x-28}.\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-64">2</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-65">2</p></div></div>
 </div></article></div>
-<p id="p-65">Ao combinar os últimos teoremas, podemos tornar a avaliação de limites de polinômios e funções racionais muito mais fácil:</p>
+<p id="p-66">Ao combinar os últimos teoremas, podemos tornar a avaliação de limites de polinômios e funções racionais muito mais fácil:</p>
 <article class="theorem theorem-like" id="th-poli-racionais"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Limite de polinômios e funções racionais.</span>
 </h4>
-<p id="p-66">Sejam <span class="process-math">\(P(x)\)</span> e <span class="process-math">\(Q(x)\)</span> polinômios  e seja <span class="process-math">\(R(x)=\frac{P(x)}{Q(x)}\)</span> uma função racional. Então</p>
+<p id="p-67">Sejam <span class="process-math">\(P(x)\)</span> e <span class="process-math">\(Q(x)\)</span> polinômios  e seja <span class="process-math">\(R(x)=\frac{P(x)}{Q(x)}\)</span> uma função racional. Então</p>
 <div class="displaymath process-math" id="md-22">
 \begin{align*}
 \lim\limits_{x \to a} P(x) \amp= P(a)
@@ -473,7 +488,7 @@ true);
 \begin{align*}
 \lim\limits_{x \to a} R(x) \amp= R(a).
 \end{align*}
-</div></article><p id="p-67">O <a href="" class="xref" data-knowl="./knowl/th-poli-racionais.html" title="Teorema 1.18: Limite de polinômios e funções racionais">Teorema 1.18</a> torna os exemplos apresentados até aqui mais fáceis de calcular:</p>
+</div></article><p id="p-68">O <a href="" class="xref" data-knowl="./knowl/th-poli-racionais.html" title="Teorema 1.18: Limite de polinômios e funções racionais">Teorema 1.18</a> torna os exemplos apresentados até aqui mais fáceis de calcular:</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim\limits_{x \to 2} \frac{2x-3}{x^2+5x-6} =   \frac{4-3}{4+10-6} =   \frac{1}{8}
@@ -489,13 +504,13 @@ true);
 \lim\limits_{x\to 2} \frac{x}{x-1} =   \frac{2}{2-1} = 2
 \end{equation*}
 </div>
-<p id="p-68">É claro que os limites de polinômios são muito fáceis, enquanto os de funções racionais são fáceis, exceto quando o denominador pode ir a zero. Vimos exemplos onde o limite resultante não existe, e alguns onde existe. Agora trabalhamos para explicar isso de forma mais sistemática. O exemplo a seguir demonstra que às vezes é possível levar o limite de uma função racional a um ponto em que o denominador é zero.</p>
+<p id="p-69">É claro que os limites de polinômios são muito fáceis, enquanto os de funções racionais são fáceis, exceto quando o denominador pode ir a zero. Vimos exemplos onde o limite resultante não existe, e alguns onde existe. Agora trabalhamos para explicar isso de forma mais sistemática. O exemplo a seguir demonstra que às vezes é possível levar o limite de uma função racional a um ponto em que o denominador é zero.</p>
 <article class="example example-like" id="eg_zero_cancel_limit"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_zero_cancel_limit"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Numerador e denominador tendem para <span class="process-math">\(0\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_zero_cancel_limit"><article class="example example-like"><p id="p-69">Determine <span class="process-math">\(\lim\limits_{x \to 1} \dfrac{x^3-x^2}{x-1}.\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_zero_cancel_limit"><article class="example example-like"><p id="p-70">Determine <span class="process-math">\(\lim\limits_{x \to 1} \dfrac{x^3-x^2}{x-1}.\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-70">Aplicando os limites os limites de numerador e denominador separadamente obtemos</p>
+<p id="p-71">Aplicando os limites os limites de numerador e denominador separadamente obtemos</p>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}
 \lim\limits_{x \to 1} x^3-x^2 \amp= 1-1 = 0\\
@@ -513,14 +528,14 @@ true);
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 </div></div>
 </div></article></div>
-<p id="p-72">No teorema a seguir formalizamos o raciocínio da <dfn class="terminology">estratégia do cancelamento</dfn> utilizada no <a href="" class="xref" data-knowl="./knowl/eg_zero_cancel_limit.html" title="Exemplo 1.19: Numerador e denominador tendem para 0">Exemplo 1.19</a>.</p>
+<p id="p-73">No teorema a seguir formalizamos o raciocínio da <dfn class="terminology">estratégia do cancelamento</dfn> utilizada no <a href="" class="xref" data-knowl="./knowl/eg_zero_cancel_limit.html" title="Exemplo 1.19: Numerador e denominador tendem para 0">Exemplo 1.19</a>.</p>
 <article class="theorem theorem-like" id="th-cancel"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
 </h4>
-<p id="p-73">Se <span class="process-math">\(f(x) = g(x)\)</span> exceto quando <span class="process-math">\(x=a\)</span> então <span class="process-math">\(\lim\limits_{x\to a} f(x) =   \lim\limits_{x\to a}  g(x), \)</span> desde que o limite  <span class="process-math">\(g\)</span> exista.</p></article><p id="p-74">Um indicativo para usar a estratégia do cancelamento (fundamentada pelo <a href="" class="xref" data-knowl="./knowl/th-cancel.html" title="Teorema 1.21">Teorema 1.21</a>) é quando os limites de ambos numerador e denominador tendem a zero. Isso muitas vezes indica que exista um fator comum entre numerador e denominador que pode ser cancelado. No caso do <a href="" class="xref" data-knowl="./knowl/eg_zero_cancel_limit.html" title="Exemplo 1.19: Numerador e denominador tendem para 0">Exemplo 1.19</a> esse fator foi <span class="process-math">\((x-1)\text{.}\)</span></p>
+<p id="p-74">Se <span class="process-math">\(f(x) = g(x)\)</span> exceto quando <span class="process-math">\(x=a\)</span> então <span class="process-math">\(\lim\limits_{x\to a} f(x) =   \lim\limits_{x\to a}  g(x), \)</span> desde que o limite  <span class="process-math">\(g\)</span> exista.</p></article><p id="p-75">Um indicativo para usar a estratégia do cancelamento (fundamentada pelo <a href="" class="xref" data-knowl="./knowl/th-cancel.html" title="Teorema 1.21">Teorema 1.21</a>) é quando os limites de ambos numerador e denominador tendem a zero. Isso muitas vezes indica que exista um fator comum entre numerador e denominador que pode ser cancelado. No caso do <a href="" class="xref" data-knowl="./knowl/eg_zero_cancel_limit.html" title="Exemplo 1.19: Numerador e denominador tendem para 0">Exemplo 1.19</a> esse fator foi <span class="process-math">\((x-1)\text{.}\)</span></p>
 <article class="example example-like" id="eg_easy_0on0_limit"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_easy_0on0_limit"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{h \to 0} \frac{(1+h)^2-1}{h}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_easy_0on0_limit"><article class="example example-like"><p id="p-75">Calcule o limite  <span class="process-math">\(\lim\limits_{h \to 0} \dfrac{(1+h)^2-1}{h}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_easy_0on0_limit"><article class="example example-like"><p id="p-76">Calcule o limite  <span class="process-math">\(\lim\limits_{h \to 0} \dfrac{(1+h)^2-1}{h}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
 <div class="displaymath process-math" id="md-26">
@@ -540,13 +555,13 @@ true);
 </div>
 </div></div>
 </div></article></div>
-<p id="p-77">Agora, um exemplo envolvendo radiciação:</p>
+<p id="p-78">Agora, um exemplo envolvendo radiciação:</p>
 <article class="example example-like" id="eg_zero_cancel_limit_harder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_zero_cancel_limit_harder"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{x \to 0} \frac{x}{\sqrt{1+x}-1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_zero_cancel_limit_harder"><article class="example example-like"><p id="p-78">Determine o limite <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{\sqrt{1+x}-1}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_zero_cancel_limit_harder"><article class="example example-like"><p id="p-79">Determine o limite <span class="process-math">\(\lim\limits_{x \to 0} \dfrac{x}{\sqrt{1+x}-1}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-79">Se tentarmos usar as propriedade de limites teremos ambos numerador e denominador iguais a zero quando <span class="process-math">\(x\to 0\text{:}\)</span></p>
+<p id="p-80">Se tentarmos usar as propriedade de limites teremos ambos numerador e denominador iguais a zero quando <span class="process-math">\(x\to 0\text{:}\)</span></p>
 <div class="displaymath process-math" id="md-28">
 \begin{align*}
 \lim\limits_{x \to 0} x \amp= 0\\
@@ -584,31 +599,31 @@ true);
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-80">Determine <span class="process-math">\(\lim\limits_{x\to -3}\dfrac{x^2+x-6}{x+3}\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-81">Determine <span class="process-math">\(\lim\limits_{x\to -3}\dfrac{x^2+x-6}{x+3}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-81">Fatore <span class="process-math">\(x^2+x-6\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-82">-5</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-82">Fatore <span class="process-math">\(x^2+x-6\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-83">-5</p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-7"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-7"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-83">Determine  <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sqrt{x+1}-1}{x}  \text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><p id="p-84">Determine  <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sqrt{x+1}-1}{x}  \text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-84">Simplifique a expressão multiplicando numerador e denominador por <span class="process-math">\(\sqrt{x+1}-1\text{.}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-85"><span class="process-math">\(\frac{1}{2}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-85">Simplifique a expressão multiplicando numerador e denominador por <span class="process-math">\(\sqrt{x+1}-1\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-86"><span class="process-math">\(\frac{1}{2}\)</span></p></div></div>
 </div></article></div></section><section class="subsection" id="sugestao-video-2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.6</span> <span class="title">Sugestão de vídeo</span>
 </h3>
 <ul class="disc">
-<li id="li-28"><p id="p-86"><a class="external" href="https://youtu.be/4GTpQ9w6dOA" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to -1}\dfrac{x+1}{\sqrt{x+5}-2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
-<li id="li-29"><p id="p-87"><a class="external" href="https://youtu.be/tznS24BBV88" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to -1}\dfrac{1-\cos{\theta}}{2\sin^2{\theta}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p></li>
-<li id="li-30"><p id="p-88"><a class="external" href="https://youtu.be/tGj8PlsHoUM" target="_blank">Calculando limites laterais para <span class="process-math">\(f(x)=\dfrac{x}{1-\cos{(x-2)}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
+<li id="li-29"><p id="p-87"><a class="external" href="https://youtu.be/4GTpQ9w6dOA" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to -1}\dfrac{x+1}{\sqrt{x+5}-2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
+<li id="li-30"><p id="p-88"><a class="external" href="https://youtu.be/tznS24BBV88" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to -1}\dfrac{1-\cos{\theta}}{2\sin^2{\theta}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p></li>
+<li id="li-31"><p id="p-89"><a class="external" href="https://youtu.be/tGj8PlsHoUM" target="_blank">Calculando limites laterais para <span class="process-math">\(f(x)=\dfrac{x}{1-\cos{(x-2)}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
 </ul></section><section class="subsection" id="subsec-confronto"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.7</span> <span class="title">O Teorema do Confronto</span>
 </h3>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
 </h4>
-<p id="p-89">Seja <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(f,g\)</span> funções tais que <span class="process-math">\(f(x)\leq g(x)\)</span> para todo <span class="process-math">\(x\)</span> próximo de  <span class="process-math">\(a\text{,}\)</span> exceto possivelmente em <span class="process-math">\(x=a\text{,}\)</span> então</p>
+<p id="p-90">Seja <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(f,g\)</span> funções tais que <span class="process-math">\(f(x)\leq g(x)\)</span> para todo <span class="process-math">\(x\)</span> próximo de  <span class="process-math">\(a\text{,}\)</span> exceto possivelmente em <span class="process-math">\(x=a\text{,}\)</span> então</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim\limits_{x \to a} f(x) \leq   \lim\limits_{x \to a} g(x).  
@@ -616,7 +631,7 @@ true);
 </div></article><article class="theorem theorem-like" id="thm_squeeze"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema do confronto.</span>
 </h4>
-<p id="p-90">Seja <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(f,g,h\)</span> funções tais que <span class="process-math">\(f(x) \leq g(x) \leq h(x)\)</span> para todo <span class="process-math">\(x\)</span> próximo de  <span class="process-math">\(a\text{,}\)</span> exceto possivelmente em <span class="process-math">\(x=a\text{.}\)</span> Então se</p>
+<p id="p-91">Seja <span class="process-math">\(a\)</span> um número real e <span class="process-math">\(f,g,h\)</span> funções tais que <span class="process-math">\(f(x) \leq g(x) \leq h(x)\)</span> para todo <span class="process-math">\(x\)</span> próximo de  <span class="process-math">\(a\text{,}\)</span> exceto possivelmente em <span class="process-math">\(x=a\text{.}\)</span> Então se</p>
 <div class="displaymath process-math" id="md-31">
 \begin{align*}
 \lim\limits_{x \to a} f(x) \amp=   \lim\limits_{x \to a} h(x) = L
@@ -627,13 +642,13 @@ true);
 \begin{align*}
 \lim\limits_{x \to a} g(x) \amp= L. 
 \end{align*}
-</div></article><p id="p-91">Usando o teorema acima, podemos calcular o limite de funções com expressões complicadas.</p>
+</div></article><p id="p-92">Usando o teorema acima, podemos calcular o limite de funções com expressões complicadas.</p>
 <article class="example example-like" id="eg_1_4_8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_8"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\lim\limits_{x \to 0} x^2 \sin(\pi/x) \)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_8"><article class="example example-like"><p id="p-92">Determine <span class="process-math">\(\lim\limits_{x \to 0} x^2 \sin(\pi/x)\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_8"><article class="example example-like"><p id="p-93">Determine <span class="process-math">\(\lim\limits_{x \to 0} x^2 \sin(\pi/x)\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-93">Já que  <span class="process-math">\(-1 \leq \sin(t) \leq 1\)</span> para todo número  <span class="process-math">\(t\text{,}\)</span> temos</p>
+<p id="p-94">Já que  <span class="process-math">\(-1 \leq \sin(t) \leq 1\)</span> para todo número  <span class="process-math">\(t\text{,}\)</span> temos</p>
 <div class="displaymath process-math" id="md-33">
 \begin{align*}
 -1 \leq \sin(\pi /x ) \leq 1 \amp\amp \text{para todo } x \neq 0
@@ -661,10 +676,10 @@ true);
 </div></article></div>
 <article class="example example-like" id="eg_1_4_9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_4_9"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span><span class="space"> </span><span class="title">Outro exemplo com o teorema do confronto.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_9"><article class="example example-like"><p id="p-94">Suponha que <span class="process-math">\(f(x)\)</span>  é função que satisfaz  <span class="process-math">\(1 \leq f(x) \leq x^2-2x+2\text{.}\)</span> Determine  <span class="process-math">\(\lim\limits_{x \to 1} f(x)\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_4_9"><article class="example example-like"><p id="p-95">Suponha que <span class="process-math">\(f(x)\)</span>  é função que satisfaz  <span class="process-math">\(1 \leq f(x) \leq x^2-2x+2\text{.}\)</span> Determine  <span class="process-math">\(\lim\limits_{x \to 1} f(x)\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-95">Já estamos supridos com uma desigualdade, então é provável que ela nos ajude. Devemos examinar os limites de cada lado para ver se eles são os mesmos:</p>
+<p id="p-96">Já estamos supridos com uma desigualdade, então é provável que ela nos ajude. Devemos examinar os limites de cada lado para ver se eles são os mesmos:</p>
 <div class="displaymath process-math" id="md-36">
 \begin{align*}
 \lim\limits_{x \to 1} 1 \amp= 1\\
@@ -681,26 +696,235 @@ true);
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-8"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-8"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-96">Determine <span class="process-math">\(\lim\limits_{x\to 0}x^4\cos{\frac{2}{x}}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-8"><article class="exercise exercise-like"><p id="p-97">Determine <span class="process-math">\(\lim\limits_{x\to 0}x^4\cos{\frac{2}{x}}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-97"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(0\)</span></p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-9"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-9"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-98">Se <span class="process-math">\(4x-9 \leq f(x)\leq x^2-4x+7\)</span> para todo <span class="process-math">\(x\geq\text{,}\)</span> encontre <span class="process-math">\(\lim\limits_{x\to 4}f(x).\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-9"><article class="exercise exercise-like"><p id="p-99">Se <span class="process-math">\(4x-9 \leq f(x)\leq x^2-4x+7\)</span> para todo <span class="process-math">\(x\geq\text{,}\)</span> encontre <span class="process-math">\(\lim\limits_{x\to 4}f(x).\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-99"><span class="process-math">\(7\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-100"><span class="process-math">\(7\)</span></p></div></div>
 </div></article></div></section><section class="subsection" id="sugestao-video-3"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.8</span> <span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-31"><p id="p-100"><a class="external" href="https://youtu.be/6n1rJsR8Ekg" target="_blank">Introdução ao teorema do confronto.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a></p></li>
-<li id="li-32"><p id="p-101"><a class="external" href="https://youtu.be/PcTUaKANXPo" target="_blank">Uma demonstração para <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sin{x}}{x}=1\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a></p></li>
-<li id="li-33"><p id="p-102"><p id="p-103"><a class="external" href="https://youtu.be/9qR8vwOc6J8" target="_blank">Calculando  <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{1-\cos{x}}{x}\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a></p></p></li>
+<li id="li-32"><p id="p-101"><a class="external" href="https://youtu.be/6n1rJsR8Ekg" target="_blank">Introdução ao teorema do confronto.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a></p></li>
+<li id="li-33"><p id="p-102"><a class="external" href="https://youtu.be/PcTUaKANXPo" target="_blank">Uma demonstração para <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sin{x}}{x}=1\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a></p></li>
+<li id="li-34"><p id="p-103"><p id="p-104"><a class="external" href="https://youtu.be/9qR8vwOc6J8" target="_blank">Calculando  <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{1-\cos{x}}{x}\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a></p></p></li>
 </ul></section><section class="exercises" id="exercises-"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.9</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/C8T-Z5BxU4U</code></div></div>
+<article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-105">Dado que <span class="process-math">\(\lim_{x \to 3} f(x) = 8\)</span> e <span class="process-math">\(\lim_{x \to 3} g(x) = 4\text{,}\)</span> calcule</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to 3} \frac{f(x) + g(x)}{7 f(x)}.
+\end{equation*}
+</div>
+<p class="continuation"><em class="emphasis">(Se o limite não existe, insira “DNE”.)</em></p>
+<p id="p-106">Limite =  <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-107"><span class="process-math">\(0.214286\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-108">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ x \rightarrow -1 } \frac {x - 4 }{ 5 x^2 -6 x +6 }.
+\end{equation*}
+</div>
+<p class="continuation"><em class="emphasis">(Se o limite não existir, insira “DNE”.)</em></p>
+<p id="p-109">Limite =  <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-110"><span class="process-math">\(-0.294118\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-111">Dado que <span class="process-math">\(\lim_{x \to 4} g(x) = 3\text{,}\)</span> determine</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to 4} \sqrt{g(x)}.
+\end{equation*}
+</div>
+<p class="continuation"><em class="emphasis">(Se o limite não existir, insira “DNE”.)</em></p>
+<p id="p-112">Limite =  <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-113"><span class="process-math">\(1.73205\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-114">Suponha</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\rightarrow a} g(x) = 0, \ \ 
+\lim_{x\rightarrow a} f(x) = 5, \ \
+\lim_{x\rightarrow a} h(x) = -1.
+\end{equation*}
+</div>
+<p id="p-115">Encontre os seguintes limites, se eles existirem. Insira <em class="alert">DNE</em> se o limite não existir.</p></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-116">Avalie o limite supondo que <span class="process-math">\(\lim\limits_{x \to 3} f(x) = 1\)</span> e <span class="process-math">\(\lim\limits_{x \to 3} g(x) = 3\text{:}\)</span></p>
+<p id="p-117"><span class="process-math">\(\lim\limits_{x \to 3} f(x) g(x) =\)</span>  <span class="fillin" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-118"><span class="process-math">\(3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><p id="p-119"><span class="process-math">\(\lim\limits_{x \to 3} f(x) g(x) = \lim\limits_{x \to 3} f(x) \cdot \lim\limits_{x \to 3} g(x) = 1 \cdot 3 =3\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-120">Se <span class="process-math">\(\displaystyle{\lim_{x\rightarrow a} f(x)=0}\)</span> e <span class="process-math">\(\displaystyle{\lim_{x\rightarrow a} g(x)=0}\text{,}\)</span> então <span class="process-math">\(\displaystyle{\lim_{x\rightarrow a} \frac{f(x)}{g(x)}}\)</span></p>
+<p id="p-121"><ul style="list-style:circle;">
+<li id="li-35"><p id="p-122">é igual a 1.</p></li>
+<li id="li-36"><p id="p-123">é igual a <span class="process-math">\(\infty\text{.}\)</span></p></li>
+<li id="li-37"><p id="p-124">deve existir.</p></li>
+<li id="li-38"><p id="p-125">não existe.</p></li>
+<li id="li-39"><p id="p-126">não pode ser determinado porque não há informações suficientes.</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-127">A resposta correta é <em class="alert">E</em>. <span class="process-math">\(\frac{0}{0}\)</span> não é necessariamente igual a <span class="process-math">\(1\text{,}\)</span> e divisão por zero nem sempre torna uma quantidade infinita.</p>
+<p id="p-128">O limite não precisa existir. Por exemplo, se <span class="process-math">\(f(x)=0\)</span> e <span class="process-math">\(g(x) = 0\)</span> para todo <span class="process-math">\(x\text{,}\)</span> então para qualquer <span class="process-math">\(a\)</span> o limite <span class="process-math">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}\)</span> não existe.</p>
+<p id="p-129">Além disso, o limite pode existir. Por exemplo, se <span class="process-math">\(f(x) = 2 x\)</span> e <span class="process-math">\(g(x) = x\text{,}\)</span> então tomando <span class="process-math">\(a = 0\)</span> temos <span class="process-math">\(\displaystyle{\lim_{x\rightarrow a} f(x)=0}\)</span> e <span class="process-math">\(\displaystyle{\lim_{x\rightarrow a} g(x)=0}\)</span> e o limite <span class="process-math">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}\)</span> existe e é igual a <span class="process-math">\(2\text{.}\)</span> De fato, se <span class="process-math">\(2\)</span> for substituído por <span class="process-math">\(k\text{,}\)</span> então <span class="process-math">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = k\text{,}\)</span> o que mostra que o limite pode ter qualquer valor <span class="process-math">\(k\text{.}\)</span></p>
+<p id="p-130">Assim, há não há informações suficientes para responder à pergunta.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-131">Suponha <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> são funções satisfazendo</p>
+<ul id="p-132" class="disc">
+<li id="li-40"><p id="p-133"><span class="process-math">\(\displaystyle{\lim_{x \to 7} f(x) = 0}\text{,}\)</span></p></li>
+<li id="li-41"><p id="p-134"><span class="process-math">\(\displaystyle{\lim_{x \to 7} g(x) = 0}\text{,}\)</span> e</p></li>
+<li id="li-42"><p id="p-135"><span class="process-math">\(\displaystyle{\lim_{x \to 7} \frac{f(x)}{g(x)} = 8 }\text{.}\)</span></p></li>
+</ul>
+<p id="p-136">O que pode ser dito sobre os tamanhos relativos de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> à medida que <span class="process-math">\(x\)</span> se aproxima de <span class="process-math">\(7\text{?}\)</span> Selecione todas as opções aplicáveis.</p>
+<p id="p-137"><ul style="list-style:circle;">
+<li id="li-43"><p id="p-138">Os valores de <span class="process-math">\(f(x)\)</span> são cerca de 8 vezes maiores que os valores de <span class="process-math">\(g(x)\)</span> quando <span class="process-math">\(x\)</span> se aproxima de <span class="process-math">\(7\text{.}\)</span></p></li>
+<li id="li-44"><p id="p-139">Os valores de <span class="process-math">\(g(x)\)</span> são cerca de 8 vezes maiores que os valores de <span class="process-math">\(f(x)\)</span> quando <span class="process-math">\(x\)</span> se aproxima de <span class="process-math">\(7\text{.}\)</span></p></li>
+<li id="li-45"><p id="p-140"><span class="process-math">\(f(x) \approx 8 g(x)\)</span> para <span class="process-math">\(x\)</span> perto de <span class="process-math">\(7\text{.}\)</span></p></li>
+<li id="li-46"><p id="p-141"><span class="process-math">\(g(x) \approx 8 f(x)\)</span> para <span class="process-math">\(x\)</span> perto de <span class="process-math">\(7\text{.}\)</span></p></li>
+<li id="li-47"><p id="p-142">Nada definitivo pode ser dito.</p></li>
+</ul></p></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-143">Use fatoração para calcular esse limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ t \rightarrow y } \frac { { t }^2- y^2 } { { t }^5- y^5 }
+\end{equation*}
+</div>
+<p id="p-145">Dica: Se você quiser uma dica, tente fazer isso numericamente para alguns valores de t e y.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-146"><span class="process-math">\(0.4y^{-3}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-147">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ t \rightarrow 1 } \frac { { t }^3- t }  { { t }^2- 1 }.
+\end{equation*}
+</div>
+<p class="continuation"><em class="emphasis">(Se o limite não existir, insira“DNE”.)</em></p>
+<p id="p-148">Limite =  <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-149"><span class="process-math">\(1\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-19"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-150">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{t\to -8} \frac{t^2 - 64 }{4 t^2+ 41 t+ 72 }
+\end{equation*}
+</div>
+<p class="continuation">insira <em class="alert">DNE</em> se o limite não existir.</p>
+<p id="p-151">Limite = <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-152"><span class="process-math">\(0.695652173913043\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-153"><em class="alert">Solução.:</em></p>
+<div class="displaymath process-math" id="p-154">
+\begin{equation*}
+\lim_{t \to -8} \frac{t^2 - 64 }{4 t^2+ 41 t+ 72 }
+= \lim_{t \to -8} \frac{ (t  + 8)(t  - 8) }{(4 t + 9)(t  + 8)}
+= \lim_{t \to -8} \frac{ t  - 8 }{4 t + 9}
+= \frac{(-8)  - 8}{4(-8) + 9}
+= \frac{-16}{-23}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-20"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-155">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{ x \rightarrow 2 } \frac{|x - 2|}{x - 2}
+\end{equation*}
+</div>
+<p class="continuation">Insira <em class="alert">DNE</em> se o limite não existir.</p>
+<p id="p-156">Limite = <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-157"><span class="process-math">\(\text{DNE}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-158">Solução.</p>
+<p id="p-159">Seja <span class="process-math">\(f(x) = \frac{|x-2|}{x-2}\text{.}\)</span></p>
+<p id="p-160"><span class="process-math">\(f(x) =\begin{cases}
+\frac{-(x-2)}{x-2} \amp   x \lt  2\\
+\frac{x-2}{x-2} \amp  x &gt; 2\\
+\end{cases}\)</span></p>
+<p id="p-161"><span class="process-math">\(f(x) =\begin{cases}
+-1 \amp   x \lt  2\\
+1 \amp  x &gt; 2\\
+\end{cases}\)</span></p>
+<p id="p-162">A partir disso, deve ficar claro que <span class="process-math">\(\displaystyle \lim_{ x \rightarrow 2 } \frac{|x - 2|}{x - 2}\)</span> não existe.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-21"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-163">Determine o limite</p>
+<p id="p-164"><span class="process-math">\(\displaystyle \lim_{ y \rightarrow 81 } \frac { 81 - y }  { 9 - \sqrt{y} }=\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-165"><span class="process-math">\(18\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-22"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-166">Determine o limite, se existir. Se um limite <em class="emphasis">não existir,</em> insira "DNE".</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{h \to 0} \frac{\sqrt{4+h}-2}{h}
+\end{equation*}
+</div>
+<p id="p-167">Limite: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-168"><span class="process-math">\(\frac{1}{2\cdot 2}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-23"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-169">Determine o limite:</p>
+<p id="p-170"><span class="process-math">\(\lim\limits_{x \to a} \dfrac {\sqrt x - \sqrt a} {6(x - a)}   =\)</span>  <span class="fillin" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-171"><span class="process-math">\(\frac{1}{12\sqrt{a}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-172"><em class="alert">Solução.:</em></p>
+<p id="p-173"><span class="process-math">\(\lim\limits_{x \to a} \frac {\sqrt x - \sqrt a} {6(x - a)} = \lim\limits_{x \to a} \frac {\sqrt x - \sqrt a}{6(\sqrt x - \sqrt a)(\sqrt x + \sqrt a)} = \lim\limits_{x \to a} \frac {1}{6(\sqrt x + \sqrt a)}= \frac {1}{12 \sqrt a}\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-24"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-174">Use o teorema do confronto para calcular o limite:</p>
+<p id="p-175"><span class="process-math">\(\lim\limits_{x \to 0 } {x \cos(6/x)} =\)</span>  <span class="fillin" role="img" aria-label="6-character blank" style="width: 2.727272727272727em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-176"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-177"><em class="alert">Solução.:</em></p>
+<p id="p-178">Provamos primeiro o limite à direita e depois o limite à esquerda. Suponha x&gt;0. Como <span class="process-math">\(-1 \leq \cos \frac {6}{x} \leq 1\text{,}\)</span> a multiplicação por <span class="process-math">\(x\)</span> (positivo) resulta em <span class="process-math">\(-x \leq x \cos \frac {6} {x} \leq x\text{.}\)</span> O teorema do confronto implica que <span class="process-math">\(\lim\limits_{x \to 0+} -x \leq \lim\limits_{x \to 0+} x \cos \frac {6}{x} \leq \lim\ limites_{x \to 0+} x\text{,}\)</span> então <span class="process-math">\(0 \leq \lim\limits_{x \to 0+} x \cos \frac {6}{x} \leq 0\text{.}\)</span> Isso nos dá <span class="process-math">\(\lim\limits_{x \to 0+} x \cos \frac {6}{x} = 0\text{.}\)</span> Por outro lado, suponha que <span class="process-math">\(x\lt 0\text{.}\)</span> <span class="process-math">\(-1 \leq \cos \frac {6}{x} \leq 1\)</span> multiplicado por <span class="process-math">\(x\)</span> nos dá <span class="process-math">\(x \leq x \cos \frac {6}{x} \leq -x\)</span> e podemos aplicar o teorema do confronto novamente para obter <span class="process-math">\(\lim\limits_{x \to 0-} x \cos \frac {6}{x} = 0\text{.}\)</span> Portanto:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{x \to 0} x \cos \frac {6}{x} = 0.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-25"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<p id="p-179">Use o teorema de compressão para calcular o limite <span class="process-math">\(\displaystyle \lim_{x\to 8} f(x)\text{,}\)</span> se</p>
+<div class="displaymath process-math">
+\begin{equation*}
+16 x - 64 \leq f(x) \leq x^2 \qquad \textrm{em} \; [6, 10].
+\end{equation*}
+</div>
+<p class="continuation">Insira <em class="alert">DNE</em> se o limite não existir.</p>
+<p id="p-180">Limite = <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-181"><span class="process-math">\(64\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-182"><em class="alert">Solução.:</em></p>
+<div class="displaymath process-math" id="p-183">
+\begin{equation*}
+\lim_{x \to 8} (16 x - 64) = 16(8) - 64 = 64.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to 8} x^2 = (8)^2 = 64.
+\end{equation*}
+</div>
+<p class="continuation">Pelo teorema do confronto, <span class="process-math">\(\displaystyle \lim_{x\to 8} f(x) = 64\text{.}\)</span></p>
+</div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/C8T-Z5BxU4U</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/YV_H5iDIQus</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/MvxKCvgb9Yw</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/f86F09MIgEw</code></div></div>

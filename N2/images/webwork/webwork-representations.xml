@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-propriedades-razoes-teorema-confronto/problem1.pg">
+      <statement><p>Dado que <m>\lim_{x \to 3} f(x) = 8</m> e
+<m>\lim_{x \to 3} g(x) = 4</m>, calcule
+<me>\lim_{x \to 3} \frac{f(x) + g(x)}{7 f(x)}.</me>
+<em>(Se o limite não existe, insira <lq/>DNE<rq/>.)</em></p>
+<p>Limite =  <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.214286</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem1.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-propriedades-razoes-teorema-confronto/problem10.pg">
+      <statement><p>Determine o limite
+<me>\lim_{t\to -8} \frac{t^2 - 64 }{4 t^2+ 41 t+ 72 }</me>
+insira <alert> DNE </alert> se o limite não existir.</p>
+<p>Limite = <fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.695652173913043</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p><me>\lim_{t \to -8} \frac{t^2 - 64 }{4 t^2+ 41 t+ 72 }
+  = \lim_{t \to -8} \frac{ (t  + 8)(t  - 8) }{(4 t + 9)(t  + 8)}
+  = \lim_{t \to -8} \frac{ t  - 8 }{4 t + 9}
+  = \frac{(-8)  - 8}{4(-8) + 9}
+  = \frac{-16}{-23}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem10.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="pretext-propriedades-razoes-teorema-confronto/problem11.pg">
+      <statement><p>Determine o limite
+<me>\lim_{ x \rightarrow 2 } \frac{|x - 2|}{x - 2}</me>
+Insira <alert> DNE </alert> se o limite não existir.</p>
+<p>Limite = <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{DNE}</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Seja <m>f(x) = \frac{|x-2|}{x-2}</m>.</p>
+<p><m>f(x) =\begin{cases}
+         \frac{-(x-2)}{x-2} \amp   x \lt  2\\
+         \frac{x-2}{x-2} \amp  x &gt; 2\\
+       \end{cases}</m></p>
+<p><m>f(x) =\begin{cases}
+         -1 \amp   x \lt  2\\
+         1 \amp  x &gt; 2\\
+       \end{cases}</m></p>
+<p>A partir disso, deve ficar claro que <m>\displaystyle \lim_{ x \rightarrow 2 } \frac{|x - 2|}{x - 2}</m> não existe.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem11.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="pretext-propriedades-razoes-teorema-confronto/problem12.pg">
+      <statement><p>Determine o limite</p>
+<p><m>\displaystyle \lim_{ y \rightarrow 81 } \frac { 81 - y }  { 9 - \sqrt{y} }=</m>
+<fillin name="AnSwEr0001" characters="10"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>18</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem12.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="pretext-propriedades-razoes-teorema-confronto/problem13.pg">
+      <statement><p>Determine o limite, se existir. Se um limite <em> não existir, </em> insira "DNE".
+<me>\lim_{h \to 0} \frac{\sqrt{4+h}-2}{h}</me></p>
+<p>Limite: <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2\cdot 2}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem13.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="pretext-propriedades-razoes-teorema-confronto/problem14.pg">
+      <statement><p>Determine o limite:</p>
+<p><m>\lim\limits_{x \to a} \dfrac {\sqrt x - \sqrt a} {6(x - a)}   =</m>  <fillin name="AnSwEr0001" characters="6"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{12\sqrt{a}}</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p><m>\lim\limits_{x \to a} \frac {\sqrt x - \sqrt a} {6(x - a)} = \lim\limits_{x \to a} \frac {\sqrt x - \sqrt a}{6(\sqrt x - \sqrt a)(\sqrt x + \sqrt a)} = \lim\limits_{x \to a} \frac {1}{6(\sqrt x + \sqrt a)}= \frac {1}{12 \sqrt a}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem14.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="pretext-propriedades-razoes-teorema-confronto/problem15.pg">
+      <statement><p>Use o teorema do confronto para calcular o limite:</p>
+<p><m>\lim\limits_{x \to 0 } {x \cos(6/x)} =</m>  <fillin name="AnSwEr0001" characters="6"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Provamos primeiro o limite à direita e depois o limite à esquerda. Suponha x&gt;0. Como <m>-1 \leq \cos \frac {6}{x} \leq 1</m>, a multiplicação por <m>x</m> (positivo) resulta em <m>-x \leq x \cos \frac {6} {x} \leq x</m>. O teorema do confronto implica que <m>\lim\limits_{x \to 0+} -x \leq \lim\limits_{x \to 0+} x \cos \frac {6}{x} \leq \lim\ limites_{x \to 0+} x</m>, então <m>0 \leq \lim\limits_{x \to 0+} x \cos \frac {6}{x} \leq 0</m>. Isso nos dá <m>\lim\limits_{x \to 0+} x \cos \frac {6}{x} = 0</m>. Por outro lado, suponha que <m>x\lt 0</m>. <m>-1 \leq \cos \frac {6}{x} \leq 1</m> multiplicado por <m>x</m> nos dá <m>x \leq x \cos \frac {6}{x} \leq -x</m> e podemos aplicar o teorema do confronto novamente para obter <m>\lim\limits_{x \to 0-} x \cos \frac {6}{x} = 0</m>. Portanto:
+<me>\lim\limits_{x \to 0} x \cos \frac {6}{x} = 0.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem15.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="pretext-propriedades-razoes-teorema-confronto/problem16.pg">
+      <statement><p>Use o teorema de compressão para calcular o limite
+<m>\displaystyle \lim_{x\to 8} f(x)</m>,
+se
+<me>16 x - 64 \leq f(x) \leq x^2 \qquad \textrm{em} \; [6, 10].</me>
+Insira <alert> DNE </alert> se o limite não existir.</p>
+<p>Limite = <fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>64</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p><me>\lim_{x \to 8} (16 x - 64) = 16(8) - 64 = 64.</me>
+<me>\lim_{x \to 8} x^2 = (8)^2 = 64.</me>
+Pelo teorema do confronto, <m>\displaystyle \lim_{x\to 8} f(x) = 64</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem16.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-propriedades-razoes-teorema-confronto/problem2.pg">
+      <statement><p>Determine o limite
+<me>\lim_{ x \rightarrow -1 } \frac {x - 4 }{ 5 x^2 -6 x +6 }.</me>
+<em>(Se o limite não existir, insira <lq/>DNE<rq/>.)</em></p>
+<p>Limite =  <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-0.294118</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem2.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-propriedades-razoes-teorema-confronto/problem3.pg">
+      <statement><p>Dado que 
+<m>\lim_{x \to 4} g(x) = 3</m>, determine
+<me>\lim_{x \to 4} \sqrt{g(x)}.</me>
+<em>(Se o limite não existir, insira <lq/>DNE<rq/>.)</em></p>
+<p>Limite =  <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>1.73205</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem3.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-propriedades-razoes-teorema-confronto/problem4.pg">
+      <statement><p>Suponha
+<me>\lim_{x\rightarrow a} g(x) = 0, \ \ 
+\lim_{x\rightarrow a} f(x) = 5, \ \
+\lim_{x\rightarrow a} h(x) = -1.</me></p>
+<p>Encontre os seguintes limites, se eles existirem.  
+Insira <alert> DNE </alert> se o limite não existir.</p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem4.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-propriedades-razoes-teorema-confronto/problem5.pg">
+      <statement><p>Avalie o limite supondo que <m>\lim\limits_{x \to 3} f(x) = 1</m> e <m>\lim\limits_{x \to 3} g(x) = 3</m>:</p>
+<p><m>\lim\limits_{x \to 3} f(x) g(x) =</m>  <fillin name="AnSwEr0001" characters="4"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <solution><p><m>\lim\limits_{x \to 3} f(x) g(x) = \lim\limits_{x \to 3} f(x) \cdot \lim\limits_{x \to 3} g(x) = 1 \cdot 3 =3</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem5.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-propriedades-razoes-teorema-confronto/problem6.pg">
+      <statement><p>Se <m>\displaystyle{\lim_{x\rightarrow a} f(x)=0}</m> e 
+<m>\displaystyle{\lim_{x\rightarrow a} g(x)=0}</m>, então 
+<m>\displaystyle{\lim_{x\rightarrow a} \frac{f(x)}{g(x)}}</m></p>
+<p><var form="buttons">
+<li>
+<p>é igual a 1.</p>
+</li>
+<li>
+<p>é igual a <m>\infty</m>.</p>
+</li>
+<li>
+<p>deve existir.</p>
+</li>
+<li>
+<p>não existe.</p>
+</li>
+<li>
+<p>não pode ser determinado porque não há informações suficientes.</p>
+</li>
+</var></p>
+</statement>
+      <solution><p>A resposta correta é <alert>E</alert>.
+<m>\frac{0}{0}</m> não é necessariamente igual a <m>1</m>, e divisão por zero
+nem sempre torna uma quantidade infinita.</p>
+<p>O limite não precisa existir. Por exemplo, se <m>f(x)=0</m> e
+<m>g(x) = 0</m> para todo <m>x</m>, então para qualquer <m>a</m> o limite
+<m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}</m> não existe.</p>
+<p>Além disso, o limite pode existir. Por exemplo, se <m>f(x) = 2 x</m> e <m>g(x) = x</m>, então tomando <m>a = 0</m> temos
+  <m>\displaystyle{\lim_{x\rightarrow a} f(x)=0}</m> e
+<m>\displaystyle{\lim_{x\rightarrow a} g(x)=0}</m>
+e o limite <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}</m> existe e é igual a <m>2</m>. De fato, se <m>2</m> for substituído por <m>k</m>, então <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = k</m>, o que mostra que o limite pode ter qualquer valor <m>k</m>.</p>
+<p>Assim, há não há informações suficientes para responder à pergunta.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem6.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-propriedades-razoes-teorema-confronto/problem7.pg">
+      <statement><p>Suponha <m>f</m> e <m>g</m> são funções satisfazendo</p>
+<p><ul>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} f(x) = 0}</m>,</p>
+</li>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} g(x) = 0}</m>, e</p>
+</li>
+<li>
+<p><m>\displaystyle{\lim_{x \to 7} \frac{f(x)}{g(x)} = 8 }</m>.</p>
+</li>
+</ul></p>
+<p>O que pode ser dito sobre os tamanhos relativos de <m>f(x)</m> e <m>g(x)</m> à medida que <m>x</m> se aproxima de <m>7</m>? Selecione todas as opções aplicáveis.</p>
+<p><var form="checkboxes">
+<li>
+<p>Os valores de <m>f(x)</m> são cerca de 8 vezes maiores que os valores de <m>g(x)</m> quando <m>x</m> se aproxima de <m>7</m>.</p>
+</li>
+<li>
+<p>Os valores de <m>g(x)</m> são cerca de 8 vezes maiores que os valores de <m>f(x)</m> quando <m>x</m> se aproxima de <m>7</m>.</p>
+</li>
+<li>
+<p><m>f(x) \approx 8 g(x)</m> para <m>x</m> perto de <m>7</m>.</p>
+</li>
+<li>
+<p><m>g(x) \approx 8 f(x)</m> para <m>x</m> perto de <m>7</m>.</p>
+</li>
+<li>
+<p>Nada definitivo pode ser dito.</p>
+</li>
+</var></p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem7.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-propriedades-razoes-teorema-confronto/problem8.pg">
+      <statement><p>Use fatoração para calcular esse limite
+<me>\lim_{ t \rightarrow y } \frac { { t }^2- y^2 } { { t }^5- y^5 }</me></p>
+<p><fillin name="AnSwEr0001" characters="25"/></p>
+<p>Dica: Se você quiser uma dica, tente fazer isso numericamente para alguns valores de t e y.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0.4y^{-3}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem8.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-propriedades-razoes-teorema-confronto/problem9.pg">
+      <statement><p>Determine o limite
+<me>\lim_{ t \rightarrow 1 } \frac { { t }^3- t }  { { t }^2- 1 }.</me>
+<em>(Se o limite não existir, insira<lq/>DNE<rq/>.)</em></p>
+<p>Limite =  <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-propriedades-razoes-teorema-confronto/problem9.pg</server-url>
+    <pg source="pretext-propriedades-razoes-teorema-confronto/problem9.pg"/>
+  </webwork-reps>
+</webwork-representations>
