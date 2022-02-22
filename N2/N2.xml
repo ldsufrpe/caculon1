@@ -341,7 +341,7 @@ Usando <xref ref="th-prop-limt" text="custom"> as propriedades de limites </xref
 
   <hint>
     <p>
-      O limite do produto (parte 5 de <xi:include href="th-prop-limt" />) é verdadeiro também para três funções. Na 
+      O limite do produto (parte 5 de <xref ref="th-prop-limt"/>) é verdadeiro também para três funções. Na 
       verdade é válida para o produto de <m>n</m> funções.
     </p>
   </hint>
@@ -418,24 +418,43 @@ Como o limite do denominador é diferente de zero, usamos as propriedades para o
 
 
 <subsection xml:id="sugestao-video-1">
-    <title>Sugestão de vídeo</title>
+    <title>Sugestão de vídeos</title>
   
 <ul>
     <li>
         <p>
-          Problema Resolvido: texto 1.<url></url>
+          <url href="https://youtu.be/C8T-Z5BxU4U"  visual="youtu.be/C8T-Z5BxU4U"> Propriedades dos limites.</url>
+
         </p>
     </li>
 
     <li>
         <p>
-            Problema Resolvido:  texto 2.<url></url>
+           <url href="https://youtu.be/YV_H5iDIQus"  visual="youtu.be/YV_H5iDIQus"> Usando o gráficos para calcular <m>\lim\limits_{x\to 0}f(x)h(x)</m>  .</url>
         </p>
     </li>
  <li>
-     <p>
-          texto 3<url></url>
-     </p>
+     
+         <p>
+           <url href="https://youtu.be/MvxKCvgb9Yw"  visual="youtu.be/MvxKCvgb9Yw"> Limite de funções definidas por partes.</url>
+        </p>
+     
+ </li>
+
+ <li>
+     
+         <p>
+           <url href="https://youtu.be/f86F09MIgEw"  visual="youtu.be/f86F09MIgEw"> Outra sobre limite de funções definidas por partes.</url>
+        </p>
+     
+ </li>
+
+ <li>
+     
+         <p>
+           <url href="https://youtu.be/f86F09MIgEw"  visual="youtu.be/f86F09MIgEw"> Calculando <m>\lim\limits_{x\to 3^-}\dfrac{|x-3|}{x-3}</m> e <m>\lim\limits_{x\to 3^+}\dfrac{|x-3|}{x-3} </m>.</url>
+        </p>
+     
  </li>
 </ul>    
 </subsection>
@@ -702,6 +721,42 @@ quando o limite do denominador não é zero.
     </p>
   </answer>
 </exercise>
+</subsection>
+
+
+
+
+<subsection xml:id="sugestao-video-11">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    
+
+
+
+ <li>
+     
+         <p>
+           <url href="https://youtu.be/oak8Sdqdtl0"  visual="youtu.be/oak8Sdqdtl0"> Calculando <m>\lim\limits_{x\to 2}\dfrac{x^2+x-6}{x-2}</m>.</url>
+        </p>
+</li>
+        <li>
+        
+        <p>
+             <url href="https://youtu.be/78Icli2_6_Q"  visual="youtu.be/78Icli2_6_Q"> Calculando limites laterais para <m>f(x)=-\dfrac{1}{(x-1)^2}</m>.</url>
+        </p>
+
+    
+    </li>
+
+
+</ul>    
+</subsection>
+
+
+<subsection xml:id="subsec-mais-prop-limites">
+  <title>Mais propriedades de limites</title>
+  
 
 <p>
 Agora apresentaremos mais duas regras para calcular limites de potência e raízes de funções. Iniciamos com a propriedade que 
@@ -1063,21 +1118,27 @@ A igualdade acima permite calcular o limite com facilidade:
   
 <ul>
     <li>
-        <p>
-          Problema Resolvido: texto 1.<url></url>
+     
+         <p>
+           <url href="https://youtu.be/4GTpQ9w6dOA"  visual="youtu.be/4GTpQ9w6dOA"> Calculando <m>\lim\limits_{x\to -1}\dfrac{x+1}{\sqrt{x+5}-2}</m>.</url>
         </p>
-    </li>
+     
+ </li>
 
     <li>
         <p>
-            Problema Resolvido:  texto 2.<url></url>
+             <url href="https://youtu.be/tznS24BBV88"  visual="youtu.be/tznS24BBV88"> Calculando <m>\lim\limits_{x\to -1}\dfrac{1-\cos{\theta}}{2\sin^2{\theta}}</m>.</url>
         </p>
     </li>
- <li>
-     <p>
-          texto 3<url></url>
-     </p>
- </li>
+
+
+     <li>
+       
+          <p>
+             <url href="https://youtu.be/tGj8PlsHoUM"  visual="youtu.be/tGj8PlsHoUM"> Calculando limites laterais para <m>f(x)=\dfrac{x}{1-\cos{(x-2)}}</m>.</url>
+        </p>
+       
+     </li>
 </ul>    
 </subsection>
 
