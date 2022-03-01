@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-23T21:49:12-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Encontre <span class="process-math">\(y''\)</span> se <span class="process-math">\(y=y^3+xy+x^3\text{.}\)</span></p>
+<p><em class="alert">Solução</em> Este problema diz respeito a alguma função <span class="process-math">\(y(x)\)</span> que não é nos foi dado explicitamente. Tudo o que nos é dito é que <span class="process-math">\(y(x)\)</span> satisfaz</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y(x)^3+xy(x)+x^3
+\tag{E1}
+\end{equation*}
+</div>
+<p class="continuation">para todos os <span class="process-math">\(x\text{.}\)</span> Somos solicitados a encontrar <span class="process-math">\(y''(x)\text{.}\)</span> Não podemos resolver isso equação para obter uma fórmula explícita para <span class="process-math">\(y(x)\text{.}\)</span> Então usamos implícito diferenciação, como fizemos no Exemplo <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_DIFFimpldiffD" missing or not unique]</code>. Ou seja, aplicamos <span class="process-math">\(\diff{}{x}\)</span> para ambos os lados de (E1). Isto dá</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x)=3y(x)^2\,y'(x)+y(x)+x\,y'(x)+3x^2
+\tag{E2}
+\end{equation*}
+</div>
+<p class="continuation">que podemos resolver para <span class="process-math">\(y'(x)\text{,}\)</span> movendo todos os <span class="process-math">\(y'(x)\)</span> para a esquerda lado, dando</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\big[1-x-3y(x)^2\grande]y'(x) = y(x)+3x^2
+\end{equation*}
+</div>
+<p class="continuation">e depois dividindo.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x) = \frac{y(x)+3x^2}{1-x-3y(x)^2}
+\tag{E3}
+\end{equation*}
+</div>
+<p class="continuation">Para obter <span class="process-math">\(y''(x)\text{,}\)</span> temos duas opções.</p>
+<p><em class="emphasis">Método 1.</em> Aplique <span class="process-math">\(\diff{}{x}\)</span> em ambos os lados de (E2). Isto dá</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y''(x)=3y(x)^2\,y''(x)+6y(x)\,y'(x)^2+2y'(x)+x\,y''(x )+6x
+\end{equation*}
+</div>
+<p class="continuation">Agora podemos resolver para <span class="process-math">\(y''(x)\text{,}\)</span> dando</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y''(x) = \frac{6x+2y'(x)+6y(x)y'(x)^2}{1-x-3y(x)^2}
+\tag{E4}
+\end{equation*}
+</div>
+<p class="continuation">Então podemos substituir em (E3), dando</p>
+<div class="displaymath process-math">
+\begin{align*}
+\amp y''(x) = 2\frac{3x+ \frac{y(x)+3x^2}{1-x-3y(x)^2}
++3y(x) \big(\frac{y(x)+3x^2}{1-x-3y(x)^2}\big)^2}
+{1-x-3y(x)^2}\\
+\amp= 2\frac{3x{[1\!-\!x\!-\!3y(x)^2]}^2+ [y(x)\!+\!3x^2][1\ !-\!x\!-\!3y(x)^2]
++3y(x) {[y(x)\!+\!3x^2]}^2}{{[1-x-3y(x)^2]}^3}
+\end{align*}
+</div></article></body>
+</html>

@@ -677,14 +677,14 @@ dividindo por <m>9</m> :
                 <me>
                     \lim_{x\to a^{-}}f(x)=L
                 </me>
-            quando é possível se aproximar arbitrariamente de <m>L</m> à medica que <m>x</m> tende a <m>a</m> 
+            quando é possível se aproximar arbitrariamente de <m>L</m> à medida que <m>x</m> tende a <m>a</m> 
             por valores menores que <m>a</m>. Similarmente, escrevemos 
 
             <me>
                     \lim_{x\to a^{+}}f(x)=L
             </me>
 
-             quando é possível se aproximar arbitrariamente de <m>L</m> à medica que <m>x</m> tende a <m>a</m> 
+             quando é possível se aproximar arbitrariamente de <m>L</m> à medida que <m>x</m> tende a <m>a</m> 
             por valores maiores que <m>a</m>.
             </p>
         </statement>

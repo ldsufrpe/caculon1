@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+
+
+
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        \usepackage{color}
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Cálculo Diferencial: N6</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+                    
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária <q>Introduction.</q></p>
+        </introduction>
+    <section>
+    <title>Regras de Derivação </title>
+         <objectives>
+            <title>Estrutura</title>
+        
+            <ol>
+                <li>
+                    <p>
+                       texto
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto
+                    </p>
+                </li>
+            </ol>
+            
+        </objectives>
+
+<introduction>
+    <p>
+        Escrever
+    </p>
+</introduction>
+
+ <subsection xml:id="subsec-regras-basicas">
+    <title>Regras essenciais</title>
+<p>
+Iniciamos com o tipo de funções mais simples: a função constante <m>f(x)=c</m>. A derivada de <m>f</m> em <m>x</m> é: 
+<me>
+    f'(x)=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}=\lim\limits_{h\to 0}\frac{c-c}{h}=0.
+</me>
+Dessa forma, pode afirmar a igualdade a seguir: 
+</p>
+
+<assemblage xml:id="assemblage-derivada-constante">
+    <title>Derivada de uma constante</title>
+    <p>
+        Se <m>c</m> é um numero real, então 
+        <me>
+            \frac{\dd}{\dd x}[c]=0.
+        </me>
+        
+    </p>
+</assemblage>
+
+<example xml:id="ex-1">
+<title>Determinação de derivadas de funções constantes</title>
+
+
+    
+        <p>
+           Determine a derivada das funções constantes.
+        </p>
+    
+
+<task>
+   <statement>
+       <p>
+           <m>f(x)=5</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+            <m>f'(x)=\dfrac{\dd}{\dd x}[5]=0</m>
+        </p>
+    </solution>
+</task>
+
+
+<task>
+   <statement>
+       <p>
+           <m>y=-\sqrt{2}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+            <m>y'=\dfrac{\dd}{\dd x}[-\sqrt{2}]=0</m>
+        </p>
+    </solution>
+</task>
+
+
+ 
+</example>
+
+<p>
+    Usando a definição de derivada, sem muito trabalho, podemos encontrar as fórmulas:
+
+    <me>
+   \dfrac{\dd}{\dd x}[x]=1,   \,\,  \dfrac{\dd}{\dd x}[x^2]=2x \,\, \text{e } \,\dfrac{\dd}{\dd x}[x^3]=3x^2
+    </me>    
+</p>
+Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obter um resultado mais geral.
+
+
+<theorem xml:id="th-derivada-regra-potencia">
+<title>Regra da potência</title>
+
+<statement>
+    <p>
+        Se <m>n</m> for um número inteiro positivo, então 
+        <me>\dfrac{\dd}{\dd x}\left[x^n\right]=nx^{n-1}.</me>
+    </p>
+</statement>
+<proof>
+    <p>
+        depois
+    </p>
+</proof>
+</theorem>
+<example xml:id="ex-2">
+    <title>Encontrando derivadas usando a regra da potência</title>
+    
+    
+        <p>
+            Determine as derivadas das funções a seguir:
+        </p>
+   
+
+<task>
+   <statement>
+       <p>
+           <m>f(x)=x^5</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+            <m>f'(x)=\dfrac{\dd}{\dd x}[x^5]=5x^4</m>
+        </p>
+    </solution>
+</task>
+
+
+<task>
+   <statement>
+       <p>
+           <m>y(t)=t^{100}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+            <m>\dfrac{\dd y}{\dd t}=\dfrac{\dd}{\dd t}[t^{100}]=100t^{99}</m>
+        </p>
+    </solution>
+</task>
+</example>
+
+
+<p>
+    Embora a <xref ref="th-derivada-regra-potencia" text="title"/> esteja apresentada apenas para números 
+    inteiros positivos de <m>x</m>, não há dificuldade em mostrar que a mesma fórmula também vale com quais potências inteiras. Por exemplo, 
+    para <m>n=-2</m>
+    <me>
+        \dfrac{\dd}{\dd x}[x^{-2}]= -2x^{(-2-1)}=-2x^{-3}.
+    </me>
+  Além disso, a partir da definição de derivada também podemos obter 
+
+  <me>
+       \dfrac{\dd}{\dd x}[\sqrt{x}]=\frac{1}{2\sqrt{x}}
+  </me>
+  que em outros termos fica 
+
+  <me>
+      \dfrac{\dd}{\dd x}[x^{1/2}]=\frac{1}{2}x^{-\frac{1}{2}} = \frac{1}{2}x^{(\frac{1}{2}-1)}.
+  </me>
+  Ou seja, a <xref ref="th-derivada-regra-potencia" text="title"/> também é válida para <m>n=\frac{1}{2}</m>. De fato,
+  podemos generalizá-la para qualquer número real <m>\alpha</m>.
+</p>
+
+<assemblage xml:id="assemblage-regra-potencia-estendida">
+    <title>Regra da potência geral</title>
+    <p>
+        Se <m>\alpha</m> for um número real qualquer, então 
+        <md>
+            <mrow>\dfrac{\dd}{\dd x}[x^{\alpha}]\amp=rx^{\alpha-1} </mrow>
+        </md>
+    </p>
+</assemblage>
+
+
+
+<example xml:id="ex-3">
+<title>Aplicando a regra da potência mais geral</title>
+
+
+<p>
+    Encontre as derivadas das expressões a seguir:
+</p>
+  <task>
+   <statement>
+       <p>
+      
+          <m>f(x)=\dfrac{1}{x^3}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+         Da <xref ref="assemblage-regra-potencia-estendida" text="title"/> temos:
+
+        <md>
+            <mrow>f'(x)=\amp\dfrac{\dd}{\dd x}\left[\dfrac{1}{x^3}\right]= \dfrac{\dd}{\dd x}\left[x^{ -3}\right]</mrow>
+            <mrow>=\amp -3x^{-4}</mrow>
+        </md>
+
+        </p>
+    </solution>
+</task>
+
+
+<task>
+   <statement>
+       <p>
+       
+           <m>h(x)=x^e</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+            Da <xref ref="assemblage-regra-potencia-estendida" text="title"/> temos:
+
+            <md>
+                <mrow> \dfrac{\dd h}{\dd x}\amp =\dfrac{\dd}{\dd x}\left[x^e\right] </mrow>
+                <mrow> \amp= ex^{e-1} </mrow>
+            </md>
+        </p>
+    </solution>
+</task>
+
+<task>
+   <statement>
+       <p>
+           <m>y=\dfrac{1}{x}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+         Da <xref ref="assemblage-regra-potencia-estendida" text="title"/> temos:
+           <md>
+               <mrow> y'= \amp\dfrac{\dd}{\dd x}\left[\frac{1}{x}\right]=\dfrac{\dd}{\dd x}\left[x^{-1}\right]  </mrow>
+               <mrow> =\amp -1x^{(-1-1)}=-x^{-2} </mrow>
+               <mrow>= \amp -\frac{1}{x^2} </mrow>
+           </md>
+        </p>
+    </solution>
+</task>
+
+
+<task>
+   <statement>
+       <p>
+           <m>y(t)=t^{\frac{2}{3}}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+        Da <xref ref="assemblage-regra-potencia-estendida" text="title"/> temos:
+
+        <md>
+            <mrow> \dfrac{\dd y}{\dd t}=\amp \dfrac{\dd}{\dd t}\left[t^{\frac{2}{3}}\right]  </mrow>
+            <mrow> =\amp \frac{2}{3}x^{\left(\frac{2}{3}-1\right)}= \frac{2}{3}x^{-\frac{1}{3}} </mrow>
+        </md>
+        </p>
+    </solution>
+</task>
+
+<task>
+   <statement>
+       <p>
+           <m>g(x)=\sqrt[5]{x}</m>
+       </p>
+   </statement>
+
+   <solution>
+        <p>
+        Da <xref ref="assemblage-regra-potencia-estendida" text="title"/> temos:
+        <md>
+            <mrow> \dfrac{\dd g}{\dd x}=\amp\dfrac{\dd}{\dd x}\left[x^{\frac{1}{5}}\right] </mrow>
+            <mrow> =\amp \frac{1}{5}x^{-\frac{4}{5}} </mrow>
+        </md>
+        </p>
+    </solution>
+</task>
+</example>
+
+<p>
+    De uma forma simplificada a derivada é o limite de uma expressão quando <m>h\to 0</m> (ou <m>x\to a</m> dependendo da definição escolhida). 
+    Sabemos que o limite de  uma constante  vezes uma função  é igual a constante multiplicada pelo limite da função. 
+    Com esse raciocínio apontar que essa regra também é válida para derivadas. 
+     
+</p>
+
+
+
+<theorem xml:id="th-derivada-mult-constante">
+<title>Regra do múltiplo por constante</title>
+
+
+<statement>
+    <p>
+        Se <m>f</m> for derivável em <m>x</m> e <m>c</m> for um número real qualquer, então 
+
+        <me>
+            \frac{\dd }{\dd x}\left[cf(x)\right]=c \frac{\dd }{\dd x}\left[f(x)\right].
+        </me>
+        
+    </p>
+</statement>
+<proof>
+    <p>
+        depois
+    </p>
+</proof>
+</theorem>
+
+<aside>
+    <p>
+        A regra apresentada no <xref ref="th-derivada-mult-constante"/> também pode ser escrita como 
+        <me>
+            (cf(x))'=cf'(x)
+        </me>
+        
+    </p>
+</aside>
+
+<example xml:id="ex-3b">
+<title>Aplicando a regra do múltiplo por constante</title>
+
+
+   
+        <p>
+            Determine a derivada das expressões a seguir:
+        </p>
+   
+<task>
+    
+<statement>
+    <p>
+     
+        <m>f(x)=3x^6</m>
+    </p>
+</statement>
+    <solution>
+        <p>
+           
+
+           <md>
+               <mrow>f'(x)=\frac{\dd }{\dd x}\left[3x^6\right]  \amp = 3\frac{\dd }{\dd x}\left[x^6\right]\amp \ct{Regra do múltiplo por constante.} </mrow>
+               <mrow>  \amp =  18x^5  = 3(6x^5) \amp \ct{Regra da potência.} </mrow>
+           </md>
+            
+        </p>
+    </solution>
+</task>
+
+<task>
+    
+<statement>
+    <p>
+        <m>g(x)=-x^7</m>
+    </p>
+</statement>
+    <solution>
+        <p>
+            <md>
+                <mrow>\frac{\dd g}{\dd x}\amp=\frac{\dd }{\dd x}\left[-x^7\right] = -1\frac{\dd }{\dd x}\left[x^7\right]\amp \ct{Regra do múltiplo por constante.}  </mrow>
+                <mrow> \amp = -7x^6\amp \ct{Regra da potência.} </mrow>
+            </md>
+        </p>
+    </solution>
+</task>
+<task>
+   
+<statement>
+    <p>
+        <m>y = \dfrac{e}{x}</m>
+    </p>
+</statement>
+    <solution>
+        <p>
+            <md>
+                <mrow>\frac{\dd y}{\dd x}\amp=\frac{\dd }{\dd x}\left[ \dfrac{e}{x}\right] = e\frac{\dd }{\dd x}\left[ \dfrac{1}{x}\right]=e\frac{\dd }{\dd x}\left[x^{-1}\right] \amp \ct{Regra do múltiplo por constante.}  </mrow>
+                <mrow> \amp = -e x^{-2}=-\frac{e}{x^2}\amp \ct{Regra da potência.} </mrow>
+            </md>
+        </p>
+    </solution>
+</task>
+</example>
+
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+Até aqui estamos obtendo derivadas de expressões muito simples. O resultado que apresentamos 
+a seguir vai permitir calcular derivadas de funções definidas pelas operações de adição e subtração. 
+<theorem xml:id="th-derivada-regra-soma-sub"><title>Regras da soma e diferença</title>
+<statement>
+    <p>
+        Supondo que <m>f</m> e <m>g</m> são deriváveis em <m>x</m>, 
+        então as funções  <m>f+g</m> e <m>f-g</m> são também deriváveis. Além disso,
+        
+        <md>
+            <mrow xml:id="th-soma1"> \frac{\dd }{\dd x}\left[f(x)+g(x)\right] = \frac{\dd }{\dd x}\left[f(x)\right]+ \frac{\dd }{\dd x}\left[g(x)\right] </mrow>
+        </md>
+        <md>
+            <mrow xml:id="th-soma2"> \frac{\dd }{\dd x}\left[f(x)+g(x)\right]= \frac{\dd }{\dd x}\left[f(x)\right]- \frac{\dd }{\dd x}\left[g(x)\right] </mrow>
+        </md>
+    </p>
+</statement>
+<proof>
+    <p>
+        depois
+    </p>
+</proof>
+</theorem>
+
+<aside>
+<p>
+    As regras apresentadas no <xref ref="th-derivada-regra-soma-sub"/> também pode ser escritas como 
+    <me>
+        (f+g)'=f'+ g'
+    </me>
+    
+    <me>
+        (f+g)'=f'- g'
+    </me>
+
+</p>    
+</aside>
+<example xml:id="ex-4">
+<title>Derivando funções definidas por adição e subtração</title>
+
+
+    <p>
+        Determine a derivada das expressões a seguir.
+    </p>
+
+    <task>
+  <statement>
+        <p>
+            <m>f(x)=3x^5 + 2x^{-1}</m>
+        </p>
+    </statement>
+      <solution>
+        <p>
+         <md>
+             <mrow>  f'(x)\amp= \frac{\dd }{\dd x}\left[3x^5+ x^{-1}\right] = \frac{\dd }{\dd x}\left[3x^5\right] + \frac{\dd }{\dd x}\left[2x^{-1}\right]  \amp \ct{Regra da soma.}</mrow>
+             <mrow>  \amp = 3\frac{\dd }{\dd x}\left[x^5\right] + 2\frac{\dd }{\dd x}\left[x^{-1}\right] \amp \ct{Regra do múltiplo por constante.}  </mrow>
+             <mrow> \amp = 15x^4 - \frac{2}{x^2} \amp \ct{Regra da potência geral.} </mrow>
+         </md>
+        </p>
+    </solution>
+    </task>
+
+        <task>
+  <statement>
+        <p>
+            <m>g(x)=\dfrac{\sqrt{x}-4x}{\sqrt{x}}</m>
+        </p>
+    </statement>
+      <solution>
+        <p>
+        Até o momento não sabemos como calcular derivada do quociente de funções. Portanto, neste momento precisamos transformas
+        a expressão na subtração de duas outras como a seguir: 
+
+        <me>
+            \dfrac{\sqrt{x}-4x}{\sqrt{x}}= \frac{\sqrt{x}}{\sqrt{x}} - \frac{4x}{\sqrt{x}}. 
+        </me>
+        A partir da igualdade acima temos 
+            <md>
+                <mrow> g'(x)\amp =\frac{\dd }{\dd x}\left[\dfrac{\sqrt{x}-4x}{\sqrt{x}}\right] = \frac{\dd }{\dd x}\left[1-4\sqrt{x}\right] = \frac{\dd }{\dd x}\left[1\right] - \frac{\dd }{\dd x}\left[4\sqrt{x}\right]\amp \ct{Regra da diferença.} </mrow>
+                <mrow> \amp = 0 - 4\left(\frac{1}{2\sqrt{x}}\right)=-\frac{2}{\sqrt{x}} \amp \ct{Derivada da constante e regra da diferença.} </mrow>
+                
+            </md>
+        </p>
+    </solution>
+    </task>
+  
+</example>
+
+<note>
+As <xref ref="th-derivada-regra-soma-sub" text="title"/> podem ser facilmente estendidas para três ou mais funções. Por exemplo, 
+agrupando <m>f</m>, <m>g</m>  e <m>h</m> na operação de adição e aplicando a fórmula da <xref ref="th-soma1" text="custom"> soma </xref> duas vezes, obtemos 
+
+<me>
+    (f+g+h)'=[(f+g +h)]'= (f+g)'+ h' = (f'+g'+h')
+</me>
+
+</note>
+<example xml:id="ex-5"><title>Derivando expressões com mais de dois termos</title>
+
+
+    <statement>
+        <p>
+            Sabendo que <m>2x^4+ 4x^2-7x+1</m> determine <m>\dfrac{\dd y}{\dd x}. </m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Com as regras de derivação apresentadas até aqui:
+            <md>
+                <mrow> \frac{\dd y}{\dd x}  \amp = \frac{\dd }{\dd x}\left[2x^4+ 4x^2-7x+1\right] </mrow>
+                <mrow> \amp = \frac{\dd }{\dd x}\left[2x^4\right] + \frac{\dd }{\dd x}\left[4x^2\right]- \frac{\dd }{\dd x}\left[7x\right]+ \frac{\dd }{\dd x}\left[1\right]  </mrow>
+                <mrow> \amp = 8x^3+ 8x - 7</mrow>
+            </md>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="ex-7">
+<title>Reta tangente horizontal</title>
+
+
+    <statement>
+        <p>
+            Dada <m>f(x)=x^3-3x+4</m>. Determine, se existirem, os pontos em que o gráfico de <m>f</m> tem reta tangente horizontal.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Qualquer reta horizontal tem inclinação zero, em particular, as retas tangentes. Portanto, já que a inclinação da reta 
+            tangente ao gráfico de <m>f</m> é dado por <m>f'(x)</m>, devemos encontrar os valores de <m>x</m> tais que <m>f'(x)=0</m>. 
+            Calculando a derivada obtemos, 
+            <me>
+                 \frac{\dd y}{\dd x}\left[ x^3-3x+4 \right] = 3x^2-3.
+            </me>
+        Logo, precisamos encontrar os valores de  <m>x</m> que satisfaçam <m>3x^2-3=0</m>. 
+        Facilmente chegamos a <m>x=-1</m> e <m>x=1</m>. Como <m>f(-1)=6</m> e <m>f(1)=2</m>,  os pontos do gráfico
+         onde as retas horizontais ocorrem são <m>(-1, 6)</m> e <m>(1,2)</m>.
+
+        </p>
+    </solution>
+</example>
+
+
+
+</subsection>
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+
+
+
+
+
+  <subsection xml:id="subsec-derivada-produto-quociente">
+    <title>Regras do produto e do quociente</title>
+   
+   <p>
+       Em breve
+   </p>
+
+<theorem xml:id="th-regra-produto"><title>Regra do produto</title>
+
+
+<statement>
+    <p>
+        Se <m>f</m> e <m>g</m> são deriváveis em <m>x</m>, então o produto <m>f\cdot g</m> também é derivável.
+        Além disso, 
+        <me>
+            \frac{\dd}{\dd x}\left[f(x)g(x)\right] = f(x) \frac{\dd}{\dd x}\left[g(x)\right] + g(x) \frac{\dd}{\dd x}\left[f(x)\right]
+        </me>
+        
+    </p>
+</statement>
+<proof>
+<p>
+Seja <m>P(x)=f(x)\, g(x)</m>, o produto de nossas duas funções. A derivada de <m>P</m> é dada por
+<md>
+<mrow>
+  P'(x) \amp= \lim_{h \to 0} \frac{P(x+h)-P(x)}{h}
+</mrow>
+</md>
+Novamente vamos focar no numerador dentro do limite e massageá-lo na forma que precisamos. Para simplificar essas manipulações, defina
+<md>
+<mrow>
+F(h) \amp= \frac{f(x+h)-f(x)}{h} \amp \text{ e } \amp\amp
+G(h) \amp= \frac{g(x+h)-g(x)}{h}.
+</mrow>
+<intertext>Então podemos escrever</intertext><mrow>
+  f(x+h)\amp= f(x)+hF(h) \amp\text{e} \amp\amp g(x+h)\amp=g(x)+hG(h).
+</mrow>
+<intertext>Também podemos escrever</intertext><mrow>
+  f'(x) \amp= \lim_{h\to0} F(h) \amp \text{e}\amp\amp
+  g'(x) \amp= \lim_{h\to0} G(h).
+</mrow>
+</md>
+Então, de volta ao numerador:
+<md>
+<mrow>
+\amp P(x+h)-P(x)
+=f(x+h)\cdot g(x+h)-f(x) \cdot g(x) \amp \text{substituir}
+</mrow><mrow>
+\amp=[f(x)+ hF(h)]\ [g(x)+hG(h)]-f(x) \cdot g(x) \amp \text{expandir}
+</mrow><mrow>
+\amp=f(x)g(x) + f(x)\cdot hG(h) + hF(h)\cdot g(x) + h^2 F(h)\cdot G(h) -f( x) \cdot
+g(x)\hskip-0,5in
+</mrow><mrow>
+\amp= f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2F(h) \cdot G(h).
+</mrow>
+</md>
+Armado com isso, voltamos à definição da derivada:
+<md>
+<mrow>
+P'(x)
+\amp=\lim_{h\to 0}\frac{P(x+h)-P(x)}{h}
+</mrow><mrow>
+\amp= \lim_{h\to 0} \frac{f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2 F(h) \cdot
+G(h) }{h}
+</mrow><mrow>
+\amp= \left(\lim_{h\to 0} \frac{f(x) \cdot h G(h)}{h}\right)
+ + \left(\lim_{h\to 0} \frac{h F(h) \cdot g(x)}{h}\right)
+ + \left(\lim_{h\to 0} \frac{h^2 F(h) \cdot G(h) }{h}\right)
+</mrow><mrow>
+\amp= \left(\lim_{h\to 0} f(x) \cdot G(h)\right)
+ + \left(\lim_{h\to 0} F(h) \cdot g(x)\right)
+ + \left(\lim_{h\to 0} h F(h) \cdot G(h)\right)
+</mrow>
+<intertext>Agora, como <m>f(x)</m> e <m>g(x)</m> não mudam quando enviamos <m>h</m> para zero, podemos puxá-los para fora . Também podemos escrever o terceiro termo como o produto de 3 limites:</intertext>
+<mrow>
+\amp= \left(f(x) \lim_{h\to 0} G(h)\right)
+ + \left(g(x) \lim_{h\to 0} F(h)\right)
+ + \left(\lim_{h\to 0} h\right) \cdot \left(\lim_{h\to0} F(h)\right) \cdot
+\left(\lim_{h\to0} G(h)\right)
+</mrow><mrow>
+\amp= f(x) \cdot g'(x) + g(x)\cdot f'(x) + 0 \cdot f'(x) \cdot g'(x)
+</mrow><mrow>
+\amp= f(x) \cdot g'(x) + g(x) \cdot f'(x).
+</mrow>
+</md>
+E assim recuperamos a regra do produto.
+</p>
+</proof>
+</theorem>
+
+<aside>
+<p>
+ A  <xref ref="th-regra-produto"/> pode ser também escrita como 
+
+ <me>
+     (f\cdot g)' = f\cdot g' + g\cdot f'
+ </me>
+ 
+</p>
+    
+</aside>
+
+<example xml:id="ex-9">
+<title>Derivando o produto de duas expressões</title>
+
+
+    <statement>
+        <p>
+            Determine <m>\dfrac{\dd}{\dd x}</m> sabendo que <m>y=(2x^3-2)(3x^3+x)</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Aplicando a <xref ref="th-regra-produto" text="title"/>, obtemos 
+            <md>
+                <mrow>\dfrac{\dd y}{\dd x} \amp = \frac{\dd}{\dd x}\left[ (2x^3-2)(3x^3+x)\right]</mrow>
+                <mrow> \amp =(2x^3-2)\frac{\dd}{\dd x}\left[(3x^3+x)\right] + (3x^3+x)\frac{\dd}{\dd x}\left[(2x^3-2)\right]  </mrow>
+                <mrow> \amp = (2x^3-2)(9x^2+1) + (3x^3+x)(6x^2)</mrow>
+                <mrow> \amp = 36  x^{5} + 8 x^{3} - 18 x^{2} - 2.</mrow>
+            </md>
+
+        Em alguns casos realizar o produto antes da derivação pode ser útil. Portanto, fazendo
+
+        <me>
+        y =(2x^3-2)(3x^3+x)   = 6 x^{6} + 2  x^{4} - 6  x^{3} - 2  x
+        </me>
+        encontramos o mesmo resultado sem utilizar a regra do produto:
+        <md>
+            <mrow> \frac{\dd y}{\dd x}\amp =\frac{\dd}{\dd x}\left[6 x^{6} + 2  x^{4} - 6  x^{3} - 2x\right] </mrow>
+            <mrow> \amp = 6\frac{\dd}{\dd x}[x^6] + 2\frac{\dd}{\dd x}[x^4] -6 \frac{\dd}{\dd x}[x^3]-2\frac{\dd}{\dd x}[x]</mrow>
+            <mrow> \amp = 36  x^{5} + 8  x^{3} - 18 x^{2} - 2.</mrow>
+        </md>
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="ex-10">
+<title>Mais uma derivada do produto</title>
+
+
+    <statement>
+        <p>
+            Determine <m>\dfrac{\dd g}{\dd t}</m> sabendo que <m>g(t)=(2+t)\sqrt{t}</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+              Aplicando a <xref ref="th-regra-produto" text="title"/>, obtemos 
+
+              <md>
+                  <mrow>\frac{\dd g}{\dd x} \amp =\frac{\dd }{\dd x}\left[(1+t)\sqrt{t}\right] </mrow>
+                  <mrow> \amp = (2+t)\frac{\dd }{\dd t}\left[\sqrt{t}\right] + \sqrt{t}\frac{\dd }{\dd t}[2+t] </mrow>                 
+                  <mrow> \amp = \frac{2+t}{2\sqrt{t}}+ \sqrt{t}=\frac{2+3t}{2\sqrt{t}}.</mrow>
+              </md>
+        </p>
+    </solution>
+</example>
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            
+        </p>
+    </statement>
+    <hint>
+        <p>
+            
+        </p>
+    </hint>
+    <answer>
+        <p>
+            
+        </p>
+    </answer>
+</exercise>
+</subsection>
+
+<theorem xml:id="th-regra-quociente"><title>Regra do quociente</title>
+
+
+<statement>
+    <p>
+        Se <m>f</m> e <m>g</m> são deriváveis em <m>x</m> e <m>g(x)\neq 0</m>, então o quociente <m>\dfrac{f}{g}</m> também é derivável.
+        Além disso, 
+        <me>
+            \frac{\dd}{\dd x}\left[\frac{f(x)}{g(x)} \right] = \frac{g(x) \frac{\dd}{\dd x}\left[f(x)\right] - f(x) \frac{\dd}{\dd x}\left[g(x)\right]}{[g(x)]^2}
+        </me>
+        
+    </p>
+</statement>
+<proof>
+<p>
+Vamos supor que <m>g(x) \neq 0</m> e que <m>f(x)</m> e <m>g(x)</m> são deriváveis, o que significa
+que os limites que definem <m>f'(x)</m>, <m>g'(x)</m> existem.
+<ul>
+<li>
+Na primeira parte, provamos a regra do quociente sob a suposição de que <m>f(x)/g(x)</m> é derivável.
+</li><li>
+Na segunda parte, provamos que <m>1/g(x)</m> derivável. Uma vez que sabemos que
+<m>1/g(x)</m> é derivável, a regra do produto implica que <m>f(x)/g(x)</m> é
+derivável.
+</li>
+</ul>
+</p>
+
+<p>
+<em>Parte 1.</em> Escreva <m>Q(x)=\frac{f(x)}{g(x)}</m>. Então <m>f(x) = g(x)\,Q(x)</m> de modo que 
+<m>f'(x) = g'(x)\,Q(x) + g(x) \,Q'(x)</m>, pela <xref ref="th-regra-produto" text="title"/>, e
+<md>
+<mrow>
+Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
+       = \frac{f'(x)-g'(x)\,\frac{f(x)}{g(x)}}{g(x)}
+</mrow><mrow>
+      \amp= \frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}
+</mrow>
+</md>
+
+<em>Parte 2.</em>
+<p>
+    Por definição
+<md>
+<mrow>
+\dfrac{\dd}{\dd x}\left[\frac{1}{g(x)}\right]
+\amp=\lim_{h\rightarrow 0}\frac{1}{h}\left[\frac{1}{g(x+h)}-\frac{1}{g(x)}\right]
+=\lim_{h\rightarrow 0}\frac{g(x)-g(x+h)}{h\,g(x)\,g(x+h)}
+</mrow><mrow>
+\amp=-\lim_{h\rightarrow 0}\frac{1}{g(x)}\ \frac{1}{g(x+h)}\
+                                        \frac{g(x+h)-g(x)}{h}
+</mrow><mrow>
+\amp=-\frac{1}{g(x)}\
+   \lim_{h\rightarrow 0}\frac{1}{g(x+h)}\
+   \lim_{h\rightarrow 0}\frac{g(x+h)-g(x)}{h}
+</mrow><mrow>
+\amp=-\frac{1}{g(x)^2}g'(x)
+</mrow>
+</md>
+</p>
+</p>
+</proof>
+</theorem>
+
+<aside>
+<p>
+ A  <xref ref="th-regra-quociente"/> pode ser também escrita como 
+
+ <me>
+     \left(\frac{f}{g}\right)' = \frac{g\cdot f' - f\cdot g'}{g^2}
+ </me>
+ 
+</p>
+    
+</aside>
+
+<example xml:id="ex-11"> <title>Derivando uma função racional</title>
+
+
+    <statement>
+        <p>
+            Sabendo que  <m>f(x)=\dfrac{x^3+2x^2-1}{x+5}</m> determine <m>\dfrac{\dd f}{\dd x} </m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Aplicando a <xref ref="th-regra-quociente"/>, obtemos 
+            <md>
+                <mrow>\frac{\dd f}{\dd x} \amp = \frac{\dd}{\dd x} \left[\dfrac{x^3+2x^2-1}{x+5}\right] 
+                 </mrow>
+                <mrow> \amp = \frac{(x+5)\frac{\dd}{\dd x}[x^3+2x^2-1] - (x^3+2x^2-1)\frac{\dd}{\dd x}[x+5] }{(x+5)^2}  </mrow>
+                <mrow> \amp = \frac{(x+5)(3x^2+4x)-(x^3+2x^2-1)(1)}{(x+5)^2} </mrow>
+                <mrow> \amp = \frac{(3x^3+19x^2+20x)-(x^3+2x^2-1)}{(x+5)^2}  </mrow>
+                <mrow> \amp = \frac{2x^3+17x^2+20x+1}{(x+5)^2}.  </mrow>
+            </md>
+
+        </p>
+    </solution>
+</example>
+
+<subsection xml:id="subsec-exponenciais">
+    <title>Derivada da função exponencial</title>
+    
+</subsection>
+
+
+
+
+<lemma xml:id="lema-limit-e">
+<statement>
+    <p>Seja <m>e</m> o número de Euler, então
+        <me>
+            \lim\limits_{h\to 0}\frac{e^h-1}{h}=1.
+        </me>
+        
+    </p>
+</statement>
+</lemma>
+<aside>
+    <p>
+        O número de Euler <m>e</m> também é conhecido como número de Napier, em homenagem a John Napier, número de Neper.
+    </p>
+</aside>
+
+<p>
+    Se <m>f(x)=e^x</m>, então segue definição de derivada e do <xref ref="lema-limit-e"/> que 
+</p>
+<md>
+    <mrow> \frac{\dd }{\dd x}[e^x] \amp = \lim\limits_{h\to 0}\frac{e^{x+h} - e^x}{h} =\lim\limits_{h\to 0}\frac{e^xe^h - e^x}{h} </mrow>
+        <mrow> \amp =\lim\limits_{h\to 0}\left[e^x\left(\frac{e^h - 1 }{h}\right)\right] </mrow>
+        <mrow> \amp =e^x\cdot\lim\limits_{h\to 0}\left(\frac{e^h - 1 }{h}\right)=e^x</mrow>
+        
+
+</md>
+
+<assemblage xml:id="assemblage-">
+    <title>Derivada da Função exponencial de base <m>e</m> </title>
+    <p>
+        <me>
+            \frac{\dd}{\dd x}[e^x]=e^x 
+        </me>
+        
+    </p>
+</assemblage>
+
+
+
+
+<example xml:id="ex-12"><title>Equação da reta tangente </title>
+
+
+    <statement>
+        <p>
+            Encontre a equação da reta tangente ao gráfico da função dada por <m>y=\dfrac{e^x}{1+x^2}</m> no ponto <m>(1, \frac{e}{2})</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Aplicando a <xref ref="th-regra-quociente"/>, obtemos 
+
+            <md>
+                <mrow> \frac{\dd y}{\dd x} \amp \frac{(1+x^2)\frac{\dd }{\dd x}[e^x]}{(1+x^2)^2} </mrow>
+                <mrow> \amp = \frac{(1+x^2)e^x - e^x(2x)}{(1+x^2)^2} \amp \ct{ Derivada da função exponencial de base $e$.} </mrow>
+                <mrow> \amp = \frac{e^x(1-x)^2}{(1+x^2)^2}  </mrow>
+            </md>
+
+        Portanto,  a inclinação da reta tangente em <m>(1, \frac{e}{2})</m> vale 
+        <me>
+            \frac{\dd y}{\dd x}\left|Big|_{x=1}\right.= 0.
+        </me>
+        
+        Isto é, a reta tangente em <m>(1, \frac{e}{2})</m> é horizontal, e sua equação é <m>y=\frac{e}{2}</m>. 
+
+
+        </p>
+    </solution>
+</example>
+
+<subsection xml:id="sugestao-video-2">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+
+<subsection xml:id="subsec-derivada-alta-ordem">
+    <title>Derivada de ordem superior</title>
+    
+
+
+<p>A operação de diferenciação toma como entrada uma função,
+<m>f(x)</m>, e produz como saída outra função, <m>f'(x)</m>. Agora <m>f'(x)</m> é
+mais uma vez uma função. Então, podemos diferenciá-lo novamente, supondo que
+é diferenciável, para criar uma terceira função, chamada de segunda
+derivada de <m>f</m>. E podemos derivar a segunda derivada novamente
+para criar uma quarta função, chamada terceira derivada de <m>f</m>.
+E assim por diante.</p>
+<definition xml:id="not_higherOrdDeriv">
+<statement><p>
+<ul>
+<li> <m>f''(x)</m> e <m>f^{(2)}(x)</m> e <m>\dfrac{\dd^2 f}{\dd x^2}( x)</m> todos significam
+<m>\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)</m>
+</li>
+<li> <m>f'''(x)</m> e <m>f^{(3)}(x)</m> e <m>\dfrac{\dd^3 f}{\dd x^3}(x)</m> todos significam
+<m>\dfrac{\dd }{\dd x}\big(\frac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big)</m>
+</li>
+<li> <m>f^{(4)}(x)</m> e <m>\dfrac{\dd^4 f}{\dd x^4}(x)</m> ambos significam
+<m>\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big) \big)</m>
+</li>
+<li> e assim por diante.
+</li>
+</ul>
+</p></statement>
+</definition>
+
+<example><title>Derivada de ordem maior que 2</title>
+
+
+    <statement>
+        <p>
+            Seja <m>f(x)= 3x^4-2x^3+x^2-4x+2</m>. Encontre <m>f'(x)</m>, <m>f''(x)</m>, <m>f'''(x)</m>, <m>f^{(4)}</m>, <m>f^{(5)}</m>. 
+
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <md>
+                <mrow>f'(x) \amp = 12x^3-6x^2+2x-4 </mrow>
+                <mrow>f''(x)\amp  = 36x^2-12x+2 </mrow>
+                <mrow> f'''(x)\amp = 72x-12</mrow>
+                <mrow> f^{(4)}(x)\amp= 72 </mrow>
+                <mrow>f^{(5)}(x) \amp=0 </mrow>
+            </md>
+            Note que para todo  <m>n\geq 5</m> temos <m>f^{(n)}(x) </m>.
+        </p>
+    </solution>
+</example>
+
+
+<example xml:id="eg_higherOrdDerivA"><title>Derivadas de <m>x^n</m></title>
+<statement>
+    <p>
+        Mostre que se <m>n</m> e <m>m</m> são números naturais com <m>m>n</m>  então <m>\dfrac{\dd^n}{\dd x^n}[x^n]=0.</m>
+    </p>
+</statement>
+<solution>
+  
+
+<p>
+Seja <m>n</m> um número natural e seja <m>f(x)= x^n</m>. Então
+<md>
+<mrow>
+\dfrac{\dd }{\dd x}[x^n]\amp=nx^{n-1}
+</mrow><mrow>
+\frac{\dd^2 }{\dd x^2}[x^n] \amp=\frac{\dd }{\dd x}\big(nx^{n-1}\big)=n(n-1)x^{n-2}
+</mrow><mrow>
+\dfrac{\dd^3 }{\dd x^3}[x^n]\amp=\frac{\dd }{\dd x}\big(n(n-1)x^{n-2}\big)=n(n-1)(n -2)x^{n-3}
+</mrow>
+</md>
+Cada vez que derivamos, reduzimos o expoente, que é exatamente um menor que o expoente anterior reduzido,
+ e reduzimos o expoente em um. Quando tivermos derivado <m>n-1</m> vezes,
+o expoente diminuiu para <m>n-(n-1)=1</m> e reduzimos o
+fatores <m>n(n-1)(n-2)\cdots 2</m>. Assim
+<md>
+<mrow>
+\dfrac{\dd^{n-1} }{\dd x^{n-1}}[x^n]\amp=n(n-1)(n-2)\cdots 2x
+</mrow>
+</md>
+e
+<md>
+<mrow>
+\dfrac{\dd^{n} }{\dd x^{n}}[x^n]\amp=n(n-1)(n-2)\cdots 1
+</mrow>
+</md>
+O produto dos primeiros <m>n</m> números naturais, <m>1\cdot 2\cdot 3\cdot \cdots
+\cdot n,</m> é chamado <q><m>n</m> fatorial</q> e é denotado como <m>n!</m>. Então podemos também
+escrever
+<md>
+<mrow>
+\dfrac{\dd^{n} }{\dd x^{n}}[x^n] \amp=n!
+</mrow>
+</md>
+Se <m>m \gt n</m>, então
+<md>
+<mrow>
+\dfrac{\dd^{m} }{\dd x^{m}}[x^n]\amp=0.
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+
+
+</subsection>   
+
+
+<subsection xml:id="subsec-derivada-trigonometricas">
+    <title>Derivada das funções trigonométricas</title>
+Para provar algumas afirmações sobre a derivada de funções trigonométricas vamos precisas dos resultados a seguir. 
+    <lemma xml:id="lema-limit-trig">
+<statement>
+    <p>
+        <me>
+            \lim\limits_{h\to 0}\frac{\sin{h}}{h}=1 \quad \text{e} \quad  \lim\limits_{h\to 0}\frac{1-\cos{h}}{h}=0
+        </me>
+        
+    </p>
+</statement>
+<proof>
+    <p>
+        depois
+    </p>
+</proof>
+</lemma>
+
+<p>Para prosseguir para as derivadas gerais de <m>\sin x</m> e <m>\cos x</m>
+vamos usar o acima
+dois resultados e algumas identidades trigonométricas. Lembre-se da adição
+fórmulas
+
+</p>
+
+<p><md>
+<mrow>
+  \sin(a+b) \amp= \sin(a) \cos(b) + \cos(a) \sin(b)
+</mrow><mrow>
+  \cos(a+b) \amp= \cos(a) \cos(b) - \sin(a) \sin(b)
+</mrow>
+</md>
+Para calcular a derivada de <m>\sin(x)</m> começamos com a definição da
+derivada:
+<md>
+<mrow>
+\frac{\dd}{\dd x}\sin x
+\amp=\lim_{h\to 0}\frac{\sin (x+h)-\sin x}{h}
+</mrow><mrow>
+\amp=\lim_{h\to 0}\frac{\sin x\cos h +\cos x\sin h-\sin x}{h}
+</mrow><mrow>
+\amp=\lim_{h\to 0}\bigg[\sin x\frac{\cos h-1}{h}
+                            +\cos x\frac{\sin h-0}{h}\bigg]
+</mrow><mrow>
+\amp=\sin x\left( \lim_{h\to 0}\frac{\cos h-1}{h}\right)
+   +\left( \cos x\ \lim_{h\to 0}\frac{\sin h}{h}\right) \amp  \ct{Aplique o }\, <xref ref="lema-limit-trig"/>
+</mrow><mrow>
+\amp=\sin x\cdot 0
+   + \cos x\cdot 1 
+</mrow><mrow>
+\amp=\cos x
+</mrow>
+</md>
+O cálculo da derivada de <m>\cos x</m> é muito semelhante.
+<md>
+<mrow>
+\frac{\dd}{\dd x}\cos x
+\amp=\lim_{h\to 0}\frac{\cos (x+h)-\cos x}{h}
+</mrow><mrow>
+\amp=\lim_{h\to 0}\frac{\cos x\cos h -\sin x\sin h-\cos x}{h}
+</mrow><mrow>
+\amp=\lim_{h\to 0}\bigg[\cos x\frac{\cos h-1}{h}
+                            -\sin x\frac{\sin h-0}{h}\bigg]
+</mrow><mrow>
+\amp=\cos x\ \lim_{h\to 0}\frac{\cos h-1}{h}
+  \ -\ \sin x\ \lim_{h\to 0}\frac{\sin h-0}{h}
+</mrow><mrow>
+\amp=\cos x\left( \lim_{h\to 0}\frac{\cos h-1}{h}\right)
+   -  \sin x\left( \lim_{h\to 0}\frac{\sin h}{h}\right) \amp  \ct{Aplique o }\, <xref ref="lema-limit-trig"/>
+</mrow><mrow>
+\amp=\cos x\cdot 0
+   - \sin x\cdot 1 
+</mrow><mrow>
+\amp=-\sin{x}
+</mrow>
+</md>
+Agora encontramos as derivadas de <m>\sin x</m> e <m>\cos x</m>,
+<em>desde que <m>x</m> seja medido em radianos</em>.
+</p>
+
+<assemblage xml:id="assemblage-">
+    <title>Derivada do seno e cosseno</title>
+    <p>
+       
+<me>
+\frac{\dd}{\dd x}[\sin x] =\cos x \quad \text{e}\quad 
+\frac{\dd}{\dd x}[\cos x] =-\sin x
+
+</me>
+</p>
+</assemblage>
+
+<example><title>Regra do produto envolvendo <m> \sin{x} </m> </title>
+
+
+    <statement>
+        <p>
+            Se <m>y=x^2\sin{x}</m> determine <m>\dfrac{\dd y}{\dd x}</m>. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Aplicando a <xref ref="th-regra-produto"/>, obtemos 
+        <md>
+            <mrow> \dfrac{\dd y}{\dd x} \amp = x^2\dfrac{\dd }{\dd x}[\sin{x}] + \sin{x}\dfrac{\dd }{\dd x}[x^2]  </mrow>
+            <mrow> \amp = x^2\cons{x} + 2x\sin{x}</mrow>
+        
+        </md>
+    </p>
+    </solution>
+</example>
+
+<paragraphs>
+    <title>Outras funções trigonométricas</title>
+    
+
+<p>Agora é fácil obter as derivadas do restante
+funções trigonométricas usando identidades trigonométricas básicas e o
+regra do quociente. Lembrar
+<fn>Você realmente deveria. Se você não fizer isso, pegue um
+dê uma olhada rápida no apêndice apropriado.</fn>
+ aquele
+<md>
+<mrow>
+  \tan x\amp= \frac{\sin x}{\cos x} \amp \cot x \amp= \frac{\cos x}{\sin x}=
+\frac{1}{\tan x}
+</mrow><mrow>
+  \csc x\amp= \frac{1}{\sin x} \amp \sec x \amp= \frac{1}{\cos x}
+</mrow>
+</md>
+Então, pela regra do quociente,
+<md alinhamento="alignat">
+<mrow>
+\frac{\dd}{\dd x}[\tan x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{\sin x}{\cos x} \right]\amp
+\amp=\frac{\overbrace{\big({\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}\cos x
+       -\sin x\overbrace{\big({\frac{\dd}{\dd x}\cos x}\big)}^{-\sin x}}
+                         {\cos^2 x} \amp
+\amp=\sec^2 x
+</mrow><mrow>
+\frac{\dd}{\dd x}\,[\csc x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{1}{\sin x}\right] \amp
+\amp=-\frac{\overbrace{\big({\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}}
+                         {\sin^2 x} \amp
+\amp=-\csc x\cot x
+</mrow><mrow>
+\frac{\dd}{\dd x}\,[\sec x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{1}{\cos x} \right]\amp
+\amp=-\frac{\overbrace{\big({\frac{\dd}{\dd x}}\cos x\big)}^{-\sin x}}
+                         {\cos^2 x} \amp
+\amp=\sec x\tan x
+</mrow><mrow>
+\frac{\dd}{\dd x}\cot x
+\amp=\frac{\dd}{\dd x}\,\left[\frac{\cos x}{\sin x} \right]\amp
+\amp=\frac{ \overbrace{\big({\frac{\dd}{\dd x}}\cos x\big)}^{-\sin x}\sin x
+       -\cos x\overbrace{{\big(\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}}
+                         {\sin^2 x} \amp
+\amp=-\csc^2x
+</mrow>
+</md>
+</p>
+</paragraphs>
+
+
+
+<p>Para resumir todo esse trabalho, podemos escrevê-lo como um teorema:</p>
+
+<assemblage xml:id="assemblage-derivada-trig-resumo"><title>Derivada de funções trigonométricas</title>
+<p>
+
+
+<me>
+    \frac{\dd}{\dd x} [\sin x ] = \cos{x} \quad  \quad \frac{\dd}{\dd x} [\cos x]= - \sin x
+</me>
+
+<me>
+     \frac{\dd}{\dd x} [\tan x] = \sec^2 x \quad \quad \frac{\dd}{\dd x} [\cot x] = -\csc^2 x
+  
+</me>
+
+<me>
+    \frac{\dd}{\dd x}[ \csc x]   = -\csc x \cot x   \quad  \quad \frac{\dd}{\dd x} [\sec x] = \sec x \tan x
+</me>
+
+
+
+<!-- <md>
+    <mrow>  \frac{\dd}{\dd x} [\sin x ]\amp =\cos{x}  \amp  \quad \frac{\dd}{\dd x} [\cos x]= - \sin x \amp</mrow>
+    <mrow>  \frac{\dd}{\dd x} [\tan x] \amp=\sec^2x \amp  \quad  \frac{\dd}{\dd x} [\cot x] = -\csc^2 x\amp </mrow>
+    <mrow>  </mrow>
+</md> -->
+
+</p>
+</assemblage>
+
+
+
+
+
+</subsection>
+
+<subsection xml:id="sugestao-video-3">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+          Problema Resolvido: texto 1.<url></url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Problema Resolvido:  texto 2.<url></url>
+        </p>
+    </li>
+ <li>
+     <p>
+          texto 3<url></url>
+     </p>
+ </li>
+</ul>    
+</subsection>
+
+
+<exercises xml:id="exercises-">
+<exercise>Escrever aqui
+</exercise>
+</exercises>   
+
+</section>
+
+
+
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">Stewart, James <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+
+
+</article>
+
+</pretext>
+
+
+

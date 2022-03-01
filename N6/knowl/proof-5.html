@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-23T23:06:44-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Demonstração</span></h3>
+<p>Vamos supor que <span class="process-math">\(g(x) \neq 0\)</span> e que <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> são deriváveis, o que significa que os limites que definem <span class="process-math">\(f'(x)\text{,}\)</span> <span class="process-math">\(g'(x)\)</span> existem.</p>
+<ul class="disc">
+<li><p>Na primeira parte, provamos a regra do quociente sob a suposição de que <span class="process-math">\(f(x)/g(x)\)</span> é derivável.</p></li>
+<li><p>Na segunda parte, provamos que <span class="process-math">\(1/g(x)\)</span> derivável. Uma vez que sabemos que <span class="process-math">\(1/g(x)\)</span> é derivável, a regra do produto implica que <span class="process-math">\(f(x)/g(x)\)</span> é derivável.</p></li>
+</ul>
+<p><em class="emphasis">Parte 1.</em> Escreva <span class="process-math">\(Q(x)=\frac{f(x)}{g(x)}\text{.}\)</span> Então <span class="process-math">\(f(x) = g(x)\,Q(x)\)</span> de modo que <span class="process-math">\(f'(x) = g'(x)\,Q(x) + g(x) \,Q'(x)\text{,}\)</span> pela <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Regra do produto</a>, e</p>
+<div class="displaymath process-math">
+\begin{align*}
+Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
+= \frac{f'(x)-g'(x)\,\frac{f(x)}{g(x)}}{g(x)}\\
+\amp= \frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<p class="continuation"><em class="emphasis">Parte 2.</em> <p>Por definição</p><div class="displaymath process-math">
+\begin{align*}
+\dfrac{\dd}{\dd x}\left[\frac{1}{g(x)}\right]
+\amp=\lim_{h\rightarrow 0}\frac{1}{h}\left[\frac{1}{g(x+h)}-\frac{1}{g(x)}\right]
+=\lim_{h\rightarrow 0}\frac{g(x)-g(x+h)}{h\,g(x)\,g(x+h)}\\
+\amp=-\lim_{h\rightarrow 0}\frac{1}{g(x)}\ \frac{1}{g(x+h)}\
+\frac{g(x+h)-g(x)}{h}\\
+\amp=-\frac{1}{g(x)}\
+\lim_{h\rightarrow 0}\frac{1}{g(x+h)}\
+\lim_{h\rightarrow 0}\frac{g(x+h)-g(x)}{h}\\
+\amp=-\frac{1}{g(x)^2}g'(x)
+\end{align*}
+</div></p></article><span class="incontext"><a href="section-1.html#proof-5" class="internal">em contexto</a></span>
+</body>
+</html>

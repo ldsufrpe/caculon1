@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-02-23T23:06:43-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Regras de Derivação</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Cálculo Diferencial: N6</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Regras de Derivação</span></a><ul>
+<li><a href="section-1.html#subsec-regras-basicas" data-scroll="subsec-regras-basicas" class="internal">Regras essenciais</a></li>
+<li><a href="section-1.html#sugestao-video-1" data-scroll="sugestao-video-1" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#subsec-derivada-produto-quociente" data-scroll="subsec-derivada-produto-quociente" class="internal">Regras do produto e do quociente</a></li>
+<li><a href="section-1.html#subsec-exponenciais" data-scroll="subsec-exponenciais" class="internal">Derivada da função exponencial</a></li>
+<li><a href="section-1.html#sugestao-video-2" data-scroll="sugestao-video-2" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#subsec-derivada-alta-ordem" data-scroll="subsec-derivada-alta-ordem" class="internal">Derivada de ordem superior</a></li>
+<li><a href="section-1.html#subsec-derivada-trigonometricas" data-scroll="subsec-derivada-trigonometricas" class="internal">Derivada das funções trigonométricas</a></li>
+<li><a href="section-1.html#sugestao-video-3" data-scroll="sugestao-video-3" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#exercises-" data-scroll="exercises-" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Regras de Derivação</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">texto</p></li>
+<li id="li-2"><p id="p-4">texto</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-5">Escrever</p></section><section class="subsection" id="subsec-regras-basicas"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Regras essenciais</span>
+</h3>
+<p id="p-6">Iniciamos com o tipo de funções mais simples: a função constante <span class="process-math">\(f(x)=c\text{.}\)</span> A derivada de <span class="process-math">\(f\)</span> em <span class="process-math">\(x\)</span> é:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}=\lim\limits_{h\to 0}\frac{c-c}{h}=0.
+\end{equation*}
+</div>
+<p class="continuation">Dessa forma, pode afirmar a igualdade a seguir:</p>
+<article class="assemblage assemblage-like" id="assemblage-derivada-constante"><h4 class="heading"><span class="title">Derivada de uma constante.</span></h4>
+<p id="p-7">Se <span class="process-math">\(c\)</span> é um numero real, então</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd}{\dd x}[c]=0.
+\end{equation*}
+</div></article><article class="example example-like" id="ex-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Determinação de derivadas de funções constantes.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-1"><article class="example example-like"><p id="p-8">Determine a derivada das funções constantes.</p>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-9"><span class="process-math">\(f(x)=5\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-10"><span class="process-math">\(f'(x)=\dfrac{\dd}{\dd x}[5]=0\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-11"><span class="process-math">\(y=-\sqrt{2}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-12"><span class="process-math">\(y'=\dfrac{\dd}{\dd x}[-\sqrt{2}]=0\)</span></p></div></div>
+</div></article></article></div>
+<p id="p-13">Usando a definição de derivada, sem muito trabalho, podemos encontrar as fórmulas:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\dd}{\dd x}[x]=1,   \,\,  \dfrac{\dd}{\dd x}[x^2]=2x \,\, \text{e } \,\dfrac{\dd}{\dd x}[x^3]=3x^2
+\end{equation*}
+</div>
+<article class="theorem theorem-like" id="th-derivada-regra-potencia"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Regra da potência.</span>
+</h4>
+<p id="p-14">Se <span class="process-math">\(n\)</span> for um número inteiro positivo, então</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\dd}{\dd x}\left[x^n\right]=nx^{n-1}.
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-15">depois</p></article></div>
+<article class="example example-like" id="ex-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrando derivadas usando a regra da potência.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-16">Determine as derivadas das funções a seguir:</p>
+<article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-17"><span class="process-math">\(f(x)=x^5\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-18"><span class="process-math">\(f'(x)=\dfrac{\dd}{\dd x}[x^5]=5x^4\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-19"><span class="process-math">\(y(t)=t^{100}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-20"><span class="process-math">\(\dfrac{\dd y}{\dd t}=\dfrac{\dd}{\dd t}[t^{100}]=100t^{99}\)</span></p></div></div>
+</div></article></article></div>
+<p id="p-21">Embora a <a href="" class="xref" data-knowl="./knowl/th-derivada-regra-potencia.html" title="Teorema 1.2: Regra da potência">Regra da potência</a> esteja apresentada apenas para números inteiros positivos de <span class="process-math">\(x\text{,}\)</span> não há dificuldade em mostrar que a mesma fórmula também vale com quais potências inteiras. Por exemplo, para <span class="process-math">\(n=-2\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\dd}{\dd x}[x^{-2}]= -2x^{(-2-1)}=-2x^{-3}.
+\end{equation*}
+</div>
+<p class="continuation">Além disso, a partir da definição de derivada também podemos obter</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\dd}{\dd x}[\sqrt{x}]=\frac{1}{2\sqrt{x}}
+\end{equation*}
+</div>
+<p class="continuation">que em outros termos fica</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\dd}{\dd x}[x^{1/2}]=\frac{1}{2}x^{-\frac{1}{2}} = \frac{1}{2}x^{(\frac{1}{2}-1)}.
+\end{equation*}
+</div>
+<p class="continuation">Ou seja, a <a href="" class="xref" data-knowl="./knowl/th-derivada-regra-potencia.html" title="Teorema 1.2: Regra da potência">Regra da potência</a> também é válida para <span class="process-math">\(n=\frac{1}{2}\text{.}\)</span> De fato, podemos generalizá-la para qualquer número real <span class="process-math">\(\alpha\text{.}\)</span></p>
+<article class="assemblage assemblage-like" id="assemblage-regra-potencia-estendida"><h4 class="heading"><span class="title">Regra da potência geral.</span></h4>
+<p id="p-22">Se <span class="process-math">\(\alpha\)</span> for um número real qualquer, então</p>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+\dfrac{\dd}{\dd x}[x^{\alpha}]\amp=rx^{\alpha-1} 
+\end{align*}
+</div></article><article class="example example-like" id="ex-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Aplicando a regra da potência mais geral.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-23">Encontre as derivadas das expressões a seguir:</p>
+<article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-24"><span class="process-math">\(f(x)=\dfrac{1}{x^3}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-25">Da <a href="" class="xref" data-knowl="./knowl/assemblage-regra-potencia-estendida.html" title="[assemblage]: Regra da potência geral">Regra da potência geral</a> temos:</p>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+f'(x)=\amp\dfrac{\dd}{\dd x}\left[\dfrac{1}{x^3}\right]= \dfrac{\dd}{\dd x}\left[x^{ -3}\right]\\
+=\amp -3x^{-4}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-26"><span class="process-math">\(h(x)=x^e\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-27">Da <a href="" class="xref" data-knowl="./knowl/assemblage-regra-potencia-estendida.html" title="[assemblage]: Regra da potência geral">Regra da potência geral</a> temos:</p>
+<div class="displaymath process-math" id="md-3">
+\begin{align*}
+\dfrac{\dd h}{\dd x}\amp =\dfrac{\dd}{\dd x}\left[x^e\right] \\
+\amp= ex^{e-1} 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-28"><span class="process-math">\(y=\dfrac{1}{x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-29">Da <a href="" class="xref" data-knowl="./knowl/assemblage-regra-potencia-estendida.html" title="[assemblage]: Regra da potência geral">Regra da potência geral</a> temos:</p>
+<div class="displaymath process-math" id="md-4">
+\begin{align*}
+y'= \amp\dfrac{\dd}{\dd x}\left[\frac{1}{x}\right]=\dfrac{\dd}{\dd x}\left[x^{-1}\right]  \\
+=\amp -1x^{(-1-1)}=-x^{-2} \\
+= \amp -\frac{1}{x^2} 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-30"><span class="process-math">\(y(t)=t^{\frac{2}{3}}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-31">Da <a href="" class="xref" data-knowl="./knowl/assemblage-regra-potencia-estendida.html" title="[assemblage]: Regra da potência geral">Regra da potência geral</a> temos:</p>
+<div class="displaymath process-math" id="md-5">
+\begin{align*}
+\dfrac{\dd y}{\dd t}=\amp \dfrac{\dd}{\dd t}\left[t^{\frac{2}{3}}\right]  \\
+=\amp \frac{2}{3}x^{\left(\frac{2}{3}-1\right)}= \frac{2}{3}x^{-\frac{1}{3}} 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-32"><span class="process-math">\(g(x)=\sqrt[5]{x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-33">Da <a href="" class="xref" data-knowl="./knowl/assemblage-regra-potencia-estendida.html" title="[assemblage]: Regra da potência geral">Regra da potência geral</a> temos:</p>
+<div class="displaymath process-math" id="md-6">
+\begin{align*}
+\dfrac{\dd g}{\dd x}=\amp\dfrac{\dd}{\dd x}\left[x^{\frac{1}{5}}\right] \\
+=\amp \frac{1}{5}x^{-\frac{4}{5}} 
+\end{align*}
+</div>
+</div></div>
+</div></article></article></div>
+<p id="p-34">De uma forma simplificada a derivada é o limite de uma expressão quando <span class="process-math">\(h\to 0\)</span> (ou <span class="process-math">\(x\to a\)</span> dependendo da definição escolhida). Sabemos que o limite de  uma constante  vezes uma função  é igual a constante multiplicada pelo limite da função. Com esse raciocínio apontar que essa regra também é válida para derivadas.</p>
+<article class="theorem theorem-like" id="th-derivada-mult-constante"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Regra do múltiplo por constante.</span>
+</h4>
+<p id="p-35">Se <span class="process-math">\(f\)</span> for derivável em <span class="process-math">\(x\)</span> e <span class="process-math">\(c\)</span> for um número real qualquer, então</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd }{\dd x}\left[cf(x)\right]=c \frac{\dd }{\dd x}\left[f(x)\right].
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-36">depois</p></article></div>
+<aside class="aside aside-like" id="aside-1"><p id="p-37">A regra apresentada no <a href="" class="xref" data-knowl="./knowl/th-derivada-mult-constante.html" title="Teorema 1.5: Regra do múltiplo por constante">Teorema 1.5</a> também pode ser escrita como</p>
+<div class="displaymath process-math">
+\begin{equation*}
+(cf(x))'=cf'(x)
+\end{equation*}
+</div></aside><article class="example example-like" id="ex-3b"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3b"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Aplicando a regra do múltiplo por constante.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3b"><article class="example example-like"><p id="p-38">Determine a derivada das expressões a seguir:</p>
+<article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-39"><span class="process-math">\(f(x)=3x^6\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="displaymath process-math" id="md-7">
+\begin{align*}
+f'(x)=\frac{\dd }{\dd x}\left[3x^6\right]  \amp = 3\frac{\dd }{\dd x}\left[x^6\right]\amp \ct{Regra do múltiplo por constante.} \\
+\amp =  18x^5  = 3(6x^5) \amp \ct{Regra da potência.} 
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-41"><span class="process-math">\(g(x)=-x^7\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><div class="displaymath process-math" id="md-8">
+\begin{align*}
+\frac{\dd g}{\dd x}\amp=\frac{\dd }{\dd x}\left[-x^7\right] = -1\frac{\dd }{\dd x}\left[x^7\right]\amp \ct{Regra do múltiplo por constante.}  \\
+\amp = -7x^6\amp \ct{Regra da potência.} 
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-43"><span class="process-math">\(y = \dfrac{e}{x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="displaymath process-math" id="md-9">
+\begin{align*}
+\frac{\dd y}{\dd x}\amp=\frac{\dd }{\dd x}\left[ \dfrac{e}{x}\right] = e\frac{\dd }{\dd x}\left[ \dfrac{1}{x}\right]=e\frac{\dd }{\dd x}\left[x^{-1}\right] \amp \ct{Regra do múltiplo por constante.}  \\
+\amp = -e x^{-2}=-\frac{e}{x^2}\amp \ct{Regra da potência.} 
+\end{align*}
+</div></div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-45"></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-46"></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-47"></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-48"></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-49"></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-50"></p></div></div>
+</div></article></div>
+<article class="theorem theorem-like" id="th-derivada-regra-soma-sub"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Regras da soma e diferença.</span>
+</h4>
+<p id="p-51">Supondo que <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> são deriváveis em <span class="process-math">\(x\text{,}\)</span> então as funções  <span class="process-math">\(f+g\)</span> e <span class="process-math">\(f-g\)</span> são também deriváveis. Além disso,</p>
+<div class="displaymath process-math" id="md-10">
+\begin{gather*}
+\frac{\dd }{\dd x}\left[f(x)+g(x)\right] = \frac{\dd }{\dd x}\left[f(x)\right]+ \frac{\dd }{\dd x}\left[g(x)\right] 
+\end{gather*}
+</div>
+<div class="displaymath process-math" id="md-11">
+\begin{gather*}
+\frac{\dd }{\dd x}\left[f(x)+g(x)\right]= \frac{\dd }{\dd x}\left[f(x)\right]- \frac{\dd }{\dd x}\left[g(x)\right] 
+\end{gather*}
+</div></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-52">depois</p></article></div>
+<aside class="aside aside-like" id="aside-2"><p id="p-53">As regras apresentadas no <a href="" class="xref" data-knowl="./knowl/th-derivada-regra-soma-sub.html" title="Teorema 1.9: Regras da soma e diferença">Teorema 1.9</a> também pode ser escritas como</p>
+<div class="displaymath process-math">
+\begin{equation*}
+(f+g)'=f'+ g'
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(f+g)'=f'- g'
+\end{equation*}
+</div></aside><article class="example example-like" id="ex-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-4"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Derivando funções definidas por adição e subtração.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-54">Determine a derivada das expressões a seguir.</p>
+<article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-55"><span class="process-math">\(f(x)=3x^5 + 2x^{-1}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="displaymath process-math" id="md-12">
+\begin{align*}
+f'(x)\amp= \frac{\dd }{\dd x}\left[3x^5+ x^{-1}\right] = \frac{\dd }{\dd x}\left[3x^5\right] + \frac{\dd }{\dd x}\left[2x^{-1}\right]  \amp \ct{Regra da soma.}\\
+\amp = 3\frac{\dd }{\dd x}\left[x^5\right] + 2\frac{\dd }{\dd x}\left[x^{-1}\right] \amp \ct{Regra do múltiplo por constante.}  \\
+\amp = 15x^4 - \frac{2}{x^2} \amp \ct{Regra da potência geral.} 
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-14"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-57"><span class="process-math">\(g(x)=\dfrac{\sqrt{x}-4x}{\sqrt{x}}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-58">Até o momento não sabemos como calcular derivada do quociente de funções. Portanto, neste momento precisamos transformas a expressão na subtração de duas outras como a seguir:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{\sqrt{x}-4x}{\sqrt{x}}= \frac{\sqrt{x}}{\sqrt{x}} - \frac{4x}{\sqrt{x}}. 
+\end{equation*}
+</div>
+<p class="continuation">A partir da igualdade acima temos</p>
+<div class="displaymath process-math" id="md-13">
+\begin{align*}
+g'(x)\amp =\frac{\dd }{\dd x}\left[\dfrac{\sqrt{x}-4x}{\sqrt{x}}\right] = \frac{\dd }{\dd x}\left[1-4\sqrt{x}\right] = \frac{\dd }{\dd x}\left[1\right] - \frac{\dd }{\dd x}\left[4\sqrt{x}\right]\amp \ct{Regra da diferença.} \\
+\amp = 0 - 4\left(\frac{1}{2\sqrt{x}}\right)=-\frac{2}{\sqrt{x}} \amp \ct{Derivada da constante e regra da diferença.} 
+\end{align*}
+</div>
+</div></div>
+</div></article></article></div>
+<article class="note remark-like" id="note-1"><h4 class="heading">
+<span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h4>As <a href="" class="xref" data-knowl="./knowl/th-derivada-regra-soma-sub.html" title="Teorema 1.9: Regras da soma e diferença">Regras da soma e diferença</a> podem ser facilmente estendidas para três ou mais funções. Por exemplo, agrupando <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(g\)</span>  e <span class="process-math">\(h\)</span> na operação de adição e aplicando a fórmula da <a href="" class="xref" data-knowl="./knowl/th-soma1.html" title="Equação">soma</a> duas vezes, obtemos<div class="displaymath process-math">
+\begin{equation*}
+(f+g+h)'=[(f+g +h)]'= (f+g)'+ h' = (f'+g'+h')
+\end{equation*}
+</div></article><article class="example example-like" id="ex-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-5"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Derivando expressões com mais de dois termos.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-59">Sabendo que <span class="process-math">\(2x^4+ 4x^2-7x+1\)</span> determine <span class="process-math">\(\dfrac{\dd y}{\dd x}. \)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-60">Com as regras de derivação apresentadas até aqui:</p>
+<div class="displaymath process-math" id="md-14">
+\begin{align*}
+\frac{\dd y}{\dd x}  \amp = \frac{\dd }{\dd x}\left[2x^4+ 4x^2-7x+1\right] \\
+\amp = \frac{\dd }{\dd x}\left[2x^4\right] + \frac{\dd }{\dd x}\left[4x^2\right]- \frac{\dd }{\dd x}\left[7x\right]+ \frac{\dd }{\dd x}\left[1\right]  \\
+\amp = 8x^3+ 8x - 7
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-7"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Reta tangente horizontal.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-7"><article class="example example-like"><p id="p-61">Dada <span class="process-math">\(f(x)=x^3-3x+4\text{.}\)</span> Determine, se existirem, os pontos em que o gráfico de <span class="process-math">\(f\)</span> tem reta tangente horizontal.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-62">Qualquer reta horizontal tem inclinação zero, em particular, as retas tangentes. Portanto, já que a inclinação da reta tangente ao gráfico de <span class="process-math">\(f\)</span> é dado por <span class="process-math">\(f'(x)\text{,}\)</span> devemos encontrar os valores de <span class="process-math">\(x\)</span> tais que <span class="process-math">\(f'(x)=0\text{.}\)</span> Calculando a derivada obtemos,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd y}{\dd x}\left[ x^3-3x+4 \right] = 3x^2-3.
+\end{equation*}
+</div>
+<p class="continuation">Logo, precisamos encontrar os valores de  <span class="process-math">\(x\)</span> que satisfaçam <span class="process-math">\(3x^2-3=0\text{.}\)</span> Facilmente chegamos a <span class="process-math">\(x=-1\)</span> e <span class="process-math">\(x=1\text{.}\)</span> Como <span class="process-math">\(f(-1)=6\)</span> e <span class="process-math">\(f(1)=2\text{,}\)</span>  os pontos do gráfico onde as retas horizontais ocorrem são <span class="process-math">\((-1, 6)\)</span> e <span class="process-math">\((1,2)\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="sugestao-video-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-3"><p id="p-63">Problema Resolvido: texto 1.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-4"><p id="p-64">Problema Resolvido:  texto 2.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-5"><p id="p-65">texto 3<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+</ul></section><section class="subsection" id="subsec-derivada-produto-quociente"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Regras do produto e do quociente</span>
+</h3>
+<p id="p-66">Em breve</p>
+<article class="theorem theorem-like" id="th-regra-produto"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Regra do produto.</span>
+</h4>
+<p id="p-67">Se <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> são deriváveis em <span class="process-math">\(x\text{,}\)</span> então o produto <span class="process-math">\(f\cdot g\)</span> também é derivável. Além disso,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd}{\dd x}\left[f(x)g(x)\right] = f(x) \frac{\dd}{\dd x}\left[g(x)\right] + g(x) \frac{\dd}{\dd x}\left[f(x)\right]
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-68">Seja <span class="process-math">\(P(x)=f(x)\, g(x)\text{,}\)</span> o produto de nossas duas funções. A derivada de <span class="process-math">\(P\)</span> é dada por</p>
+<div class="displaymath process-math" id="md-15">
+\begin{align*}
+P'(x) \amp= \lim_{h \to 0} \frac{P(x+h)-P(x)}{h}
+\end{align*}
+</div>
+<p class="continuation">Novamente vamos focar no numerador dentro do limite e massageá-lo na forma que precisamos. Para simplificar essas manipulações, defina</p>
+<div class="displaymath process-math" id="md-16">
+\begin{align*}
+F(h) \amp= \frac{f(x+h)-f(x)}{h} \amp \text{ e } \amp\amp
+G(h) \amp= \frac{g(x+h)-g(x)}{h}.\\
+\end{align*}
+<p class="intertext">Então podemos escrever</p>
+\begin{align*}
+f(x+h)\amp= f(x)+hF(h) \amp\text{e} \amp\amp g(x+h)\amp=g(x)+hG(h).\\
+\end{align*}
+<p class="intertext">Também podemos escrever</p>
+\begin{align*}
+f'(x) \amp= \lim_{h\to0} F(h) \amp \text{e}\amp\amp
+g'(x) \amp= \lim_{h\to0} G(h).
+\end{align*}
+</div>
+<p class="continuation">Então, de volta ao numerador:</p>
+<div class="displaymath process-math" id="md-17">
+\begin{align*}
+\amp P(x+h)-P(x)
+=f(x+h)\cdot g(x+h)-f(x) \cdot g(x) \amp \text{substituir}\\
+\amp=[f(x)+ hF(h)]\ [g(x)+hG(h)]-f(x) \cdot g(x) \amp \text{expandir}\\
+\amp=f(x)g(x) + f(x)\cdot hG(h) + hF(h)\cdot g(x) + h^2 F(h)\cdot G(h) -f( x) \cdot
+g(x)\hskip-0,5in\\
+\amp= f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2F(h) \cdot G(h).
+\end{align*}
+</div>
+<p class="continuation">Armado com isso, voltamos à definição da derivada:</p>
+<div class="displaymath process-math" id="md-18">
+\begin{align*}
+P'(x)
+\amp=\lim_{h\to 0}\frac{P(x+h)-P(x)}{h}\\
+\amp= \lim_{h\to 0} \frac{f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2 F(h) \cdot
+G(h) }{h}\\
+\amp= \left(\lim_{h\to 0} \frac{f(x) \cdot h G(h)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h F(h) \cdot g(x)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h^2 F(h) \cdot G(h) }{h}\right)\\
+\amp= \left(\lim_{h\to 0} f(x) \cdot G(h)\right)
++ \left(\lim_{h\to 0} F(h) \cdot g(x)\right)
++ \left(\lim_{h\to 0} h F(h) \cdot G(h)\right)\\
+\end{align*}
+<p class="intertext">Agora, como <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> não mudam quando enviamos <span class="process-math">\(h\)</span> para zero, podemos puxá-los para fora . Também podemos escrever o terceiro termo como o produto de 3 limites:</p>
+\begin{align*}
+\amp= \left(f(x) \lim_{h\to 0} G(h)\right)
++ \left(g(x) \lim_{h\to 0} F(h)\right)
++ \left(\lim_{h\to 0} h\right) \cdot \left(\lim_{h\to0} F(h)\right) \cdot
+\left(\lim_{h\to0} G(h)\right)\\
+\amp= f(x) \cdot g'(x) + g(x)\cdot f'(x) + 0 \cdot f'(x) \cdot g'(x)\\
+\amp= f(x) \cdot g'(x) + g(x) \cdot f'(x).
+\end{align*}
+</div>
+<p class="continuation">E assim recuperamos a regra do produto.</p></article></div>
+<aside class="aside aside-like" id="aside-3"><p id="p-69">A  <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Teorema 1.14</a> pode ser também escrita como</p>
+<div class="displaymath process-math">
+\begin{equation*}
+(f\cdot g)' = f\cdot g' + g\cdot f'
+\end{equation*}
+</div></aside><article class="example example-like" id="ex-9"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-9"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Derivando o produto de duas expressões.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-9"><article class="example example-like"><p id="p-70">Determine <span class="process-math">\(\dfrac{\dd}{\dd x}\)</span> sabendo que <span class="process-math">\(y=(2x^3-2)(3x^3+x)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-71">Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Regra do produto</a>, obtemos</p>
+<div class="displaymath process-math" id="md-19">
+\begin{align*}
+\dfrac{\dd y}{\dd x} \amp = \frac{\dd}{\dd x}\left[ (2x^3-2)(3x^3+x)\right]\\
+\amp =(2x^3-2)\frac{\dd}{\dd x}\left[(3x^3+x)\right] + (3x^3+x)\frac{\dd}{\dd x}\left[(2x^3-2)\right]  \\
+\amp = (2x^3-2)(9x^2+1) + (3x^3+x)(6x^2)\\
+\amp = 36  x^{5} + 8 x^{3} - 18 x^{2} - 2.
+\end{align*}
+</div>
+<p class="continuation">Em alguns casos realizar o produto antes da derivação pode ser útil. Portanto, fazendo</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y =(2x^3-2)(3x^3+x)   = 6 x^{6} + 2  x^{4} - 6  x^{3} - 2  x
+\end{equation*}
+</div>
+<p class="continuation">encontramos o mesmo resultado sem utilizar a regra do produto:</p>
+<div class="displaymath process-math" id="md-20">
+\begin{align*}
+\frac{\dd y}{\dd x}\amp =\frac{\dd}{\dd x}\left[6 x^{6} + 2  x^{4} - 6  x^{3} - 2x\right] \\
+\amp = 6\frac{\dd}{\dd x}[x^6] + 2\frac{\dd}{\dd x}[x^4] -6 \frac{\dd}{\dd x}[x^3]-2\frac{\dd}{\dd x}[x]\\
+\amp = 36  x^{5} + 8  x^{3} - 18 x^{2} - 2.
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex-10"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-10"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Mais uma derivada do produto.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-10"><article class="example example-like"><p id="p-72">Determine <span class="process-math">\(\dfrac{\dd g}{\dd t}\)</span> sabendo que <span class="process-math">\(g(t)=(2+t)\sqrt{t}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<p id="p-73">Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Regra do produto</a>, obtemos</p>
+<div class="displaymath process-math" id="md-21">
+\begin{align*}
+\frac{\dd g}{\dd x} \amp =\frac{\dd }{\dd x}\left[(1+t)\sqrt{t}\right] \\
+\amp = (2+t)\frac{\dd }{\dd t}\left[\sqrt{t}\right] + \sqrt{t}\frac{\dd }{\dd t}[2+t] \\
+\amp = \frac{2+t}{2\sqrt{t}}+ \sqrt{t}=\frac{2+3t}{2\sqrt{t}}.
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-74"></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-75"></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-76"></p></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-77"></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Dica</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-78"></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-79"></p></div></div>
+</div></article></div></section><article class="theorem theorem-like" id="th-regra-quociente"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Regra do quociente.</span>
+</h3>
+<p id="p-80">Se <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> são deriváveis em <span class="process-math">\(x\)</span> e <span class="process-math">\(g(x)\neq 0\text{,}\)</span> então o quociente <span class="process-math">\(\dfrac{f}{g}\)</span> também é derivável. Além disso,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd}{\dd x}\left[\frac{f(x)}{g(x)} \right] = \frac{g(x) \frac{\dd}{\dd x}\left[f(x)\right] - f(x) \frac{\dd}{\dd x}\left[g(x)\right]}{[g(x)]^2}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-81">Vamos supor que <span class="process-math">\(g(x) \neq 0\)</span> e que <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> são deriváveis, o que significa que os limites que definem <span class="process-math">\(f'(x)\text{,}\)</span> <span class="process-math">\(g'(x)\)</span> existem.</p>
+<ul class="disc">
+<li id="li-6"><p id="p-derived-li-6">Na primeira parte, provamos a regra do quociente sob a suposição de que <span class="process-math">\(f(x)/g(x)\)</span> é derivável.</p></li>
+<li id="li-7"><p id="p-derived-li-7">Na segunda parte, provamos que <span class="process-math">\(1/g(x)\)</span> derivável. Uma vez que sabemos que <span class="process-math">\(1/g(x)\)</span> é derivável, a regra do produto implica que <span class="process-math">\(f(x)/g(x)\)</span> é derivável.</p></li>
+</ul>
+<p id="p-82"><em class="emphasis">Parte 1.</em> Escreva <span class="process-math">\(Q(x)=\frac{f(x)}{g(x)}\text{.}\)</span> Então <span class="process-math">\(f(x) = g(x)\,Q(x)\)</span> de modo que <span class="process-math">\(f'(x) = g'(x)\,Q(x) + g(x) \,Q'(x)\text{,}\)</span> pela <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Regra do produto</a>, e</p>
+<div class="displaymath process-math" id="md-22">
+\begin{align*}
+Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
+= \frac{f'(x)-g'(x)\,\frac{f(x)}{g(x)}}{g(x)}\\
+\amp= \frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<p class="continuation"><em class="emphasis">Parte 2.</em> <p id="p-83">Por definição</p><div class="displaymath process-math" id="md-23">
+\begin{align*}
+\dfrac{\dd}{\dd x}\left[\frac{1}{g(x)}\right]
+\amp=\lim_{h\rightarrow 0}\frac{1}{h}\left[\frac{1}{g(x+h)}-\frac{1}{g(x)}\right]
+=\lim_{h\rightarrow 0}\frac{g(x)-g(x+h)}{h\,g(x)\,g(x+h)}\\
+\amp=-\lim_{h\rightarrow 0}\frac{1}{g(x)}\ \frac{1}{g(x+h)}\
+\frac{g(x+h)-g(x)}{h}\\
+\amp=-\frac{1}{g(x)}\
+\lim_{h\rightarrow 0}\frac{1}{g(x+h)}\
+\lim_{h\rightarrow 0}\frac{g(x+h)-g(x)}{h}\\
+\amp=-\frac{1}{g(x)^2}g'(x)
+\end{align*}
+</div></p></article></div>
+<aside class="aside aside-like" id="aside-4"><p id="p-84">A  <a href="" class="xref" data-knowl="./knowl/th-regra-quociente.html" title="Teorema 1.19: Regra do quociente">Teorema 1.19</a> pode ser também escrita como</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\frac{f}{g}\right)' = \frac{g\cdot f' - f\cdot g'}{g^2}
+\end{equation*}
+</div></aside><article class="example example-like" id="ex-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-11"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Derivando uma função racional.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-11"><article class="example example-like"><p id="p-85">Sabendo que  <span class="process-math">\(f(x)=\dfrac{x^3+2x^2-1}{x+5}\)</span> determine <span class="process-math">\(\dfrac{\dd f}{\dd x} \text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">
+<p id="p-86">Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-quociente.html" title="Teorema 1.19: Regra do quociente">Teorema 1.19</a>, obtemos</p>
+<div class="displaymath process-math" id="md-24">
+\begin{align*}
+\frac{\dd f}{\dd x} \amp = \frac{\dd}{\dd x} \left[\dfrac{x^3+2x^2-1}{x+5}\right] \\
+\amp = \frac{(x+5)\frac{\dd}{\dd x}[x^3+2x^2-1] - (x^3+2x^2-1)\frac{\dd}{\dd x}[x+5] }{(x+5)^2}  \\
+\amp = \frac{(x+5)(3x^2+4x)-(x^3+2x^2-1)(1)}{(x+5)^2} \\
+\amp = \frac{(3x^3+19x^2+20x)-(x^3+2x^2-1)}{(x+5)^2}  \\
+\amp = \frac{2x^3+17x^2+20x+1}{(x+5)^2}.  
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<section class="subsection" id="subsec-exponenciais"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Derivada da função exponencial</span>
+</h3></section><article class="lemma theorem-like" id="lema-limit-e"><h3 class="heading">
+<span class="type">Lema</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
+</h3>
+<p id="p-87">Seja <span class="process-math">\(e\)</span> o número de Euler, então</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{h\to 0}\frac{e^h-1}{h}=1.
+\end{equation*}
+</div></article><aside class="aside aside-like" id="aside-5"><p id="p-88">O número de Euler <span class="process-math">\(e\)</span> também é conhecido como número de Napier, em homenagem a John Napier, número de Neper.</p></aside><p id="p-89">Se <span class="process-math">\(f(x)=e^x\text{,}\)</span> então segue definição de derivada e do <a href="" class="xref" data-knowl="./knowl/lema-limit-e.html" title="Lema 1.21">Lema 1.21</a> que</p>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+\frac{\dd }{\dd x}[e^x] \amp = \lim\limits_{h\to 0}\frac{e^{x+h} - e^x}{h} =\lim\limits_{h\to 0}\frac{e^xe^h - e^x}{h} \\
+\amp =\lim\limits_{h\to 0}\left[e^x\left(\frac{e^h - 1 }{h}\right)\right] \\
+\amp =e^x\cdot\lim\limits_{h\to 0}\left(\frac{e^h - 1 }{h}\right)=e^x
+\end{align*}
+</div>
+<article class="assemblage assemblage-like" id="assemblage-"><h3 class="heading"><span class="title">Derivada da Função exponencial de base <span class="process-math">\(e\)</span>.</span></h3>
+<div class="displaymath process-math" id="p-90">
+\begin{equation*}
+\frac{\dd}{\dd x}[e^x]=e^x 
+\end{equation*}
+</div></article><article class="example example-like" id="ex-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-12"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Equação da reta tangente.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-12"><article class="example example-like"><p id="p-91">Encontre a equação da reta tangente ao gráfico da função dada por <span class="process-math">\(y=\dfrac{e^x}{1+x^2}\)</span> no ponto <span class="process-math">\((1, \frac{e}{2})\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<p id="p-92">Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-quociente.html" title="Teorema 1.19: Regra do quociente">Teorema 1.19</a>, obtemos</p>
+<div class="displaymath process-math" id="md-26">
+\begin{align*}
+\frac{\dd y}{\dd x} \amp \frac{(1+x^2)\frac{\dd }{\dd x}[e^x]}{(1+x^2)^2} \\
+\amp = \frac{(1+x^2)e^x - e^x(2x)}{(1+x^2)^2} \amp \ct{ Derivada da função exponencial de base $e$.} \\
+\amp = \frac{e^x(1-x)^2}{(1+x^2)^2}  
+\end{align*}
+</div>
+<p class="continuation">Portanto,  a inclinação da reta tangente em <span class="process-math">\((1, \frac{e}{2})\)</span> vale</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd y}{\dd x}\left|Big|_{x=1}\right.= 0.
+\end{equation*}
+</div>
+<p class="continuation">Isto é, a reta tangente em <span class="process-math">\((1, \frac{e}{2})\)</span> é horizontal, e sua equação é <span class="process-math">\(y=\frac{e}{2}\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<section class="subsection" id="sugestao-video-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-8"><p id="p-93">Problema Resolvido: texto 1.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-9"><p id="p-94">Problema Resolvido:  texto 2.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-10"><p id="p-95">texto 3<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+</ul></section><section class="subsection" id="subsec-derivada-alta-ordem"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.6</span> <span class="title">Derivada de ordem superior</span>
+</h3>
+<p id="p-96">A operação de diferenciação toma como entrada uma função, <span class="process-math">\(f(x)\text{,}\)</span> e produz como saída outra função, <span class="process-math">\(f'(x)\text{.}\)</span> Agora <span class="process-math">\(f'(x)\)</span> é mais uma vez uma função. Então, podemos diferenciá-lo novamente, supondo que é diferenciável, para criar uma terceira função, chamada de segunda derivada de <span class="process-math">\(f\text{.}\)</span> E podemos derivar a segunda derivada novamente para criar uma quarta função, chamada terceira derivada de <span class="process-math">\(f\text{.}\)</span> E assim por diante.</p>
+<article class="definition definition-like" id="not_higherOrdDeriv"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
+</h4>
+<ul id="p-97" class="disc">
+<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(f''(x)\)</span> e <span class="process-math">\(f^{(2)}(x)\)</span> e <span class="process-math">\(\dfrac{\dd^2 f}{\dd x^2}( x)\)</span> todos significam <span class="process-math">\(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\)</span></p></li>
+<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(f'''(x)\)</span> e <span class="process-math">\(f^{(3)}(x)\)</span> e <span class="process-math">\(\dfrac{\dd^3 f}{\dd x^3}(x)\)</span> todos significam <span class="process-math">\(\dfrac{\dd }{\dd x}\big(\frac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big)\)</span></p></li>
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(f^{(4)}(x)\)</span> e <span class="process-math">\(\dfrac{\dd^4 f}{\dd x^4}(x)\)</span> ambos significam <span class="process-math">\(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big) \big)\)</span></p></li>
+<li id="li-14"><p id="p-derived-li-14">e assim por diante.</p></li>
+</ul></article><article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Derivada de ordem maior que 2.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"><p id="p-98">Seja <span class="process-math">\(f(x)= 3x^4-2x^3+x^2-4x+2\text{.}\)</span> Encontre <span class="process-math">\(f'(x)\text{,}\)</span> <span class="process-math">\(f''(x)\text{,}\)</span> <span class="process-math">\(f'''(x)\text{,}\)</span> <span class="process-math">\(f^{(4)}\text{,}\)</span> <span class="process-math">\(f^{(5)}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+f'(x) \amp = 12x^3-6x^2+2x-4 \\
+f''(x)\amp  = 36x^2-12x+2 \\
+f'''(x)\amp = 72x-12\\
+f^{(4)}(x)\amp= 72 \\
+f^{(5)}(x) \amp=0 
+\end{align*}
+</div>
+<p class="continuation">Note que para todo  <span class="process-math">\(n\geq 5\)</span> temos <span class="process-math">\(f^{(n)}(x) \text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="eg_higherOrdDerivA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_higherOrdDerivA"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Derivadas de <span class="process-math">\(x^n\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_higherOrdDerivA"><article class="example example-like"><p id="p-100">Mostre que se <span class="process-math">\(n\)</span> e <span class="process-math">\(m\)</span> são números naturais com <span class="process-math">\(m&gt;n\)</span>  então <span class="process-math">\(\dfrac{\dd^n}{\dd x^n}[x^n]=0.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
+<p id="p-101">Seja <span class="process-math">\(n\)</span> um número natural e seja <span class="process-math">\(f(x)= x^n\text{.}\)</span> Então</p>
+<div class="displaymath process-math" id="md-28">
+\begin{align*}
+\dfrac{\dd }{\dd x}[x^n]\amp=nx^{n-1}\\
+\frac{\dd^2 }{\dd x^2}[x^n] \amp=\frac{\dd }{\dd x}\big(nx^{n-1}\big)=n(n-1)x^{n-2}\\
+\dfrac{\dd^3 }{\dd x^3}[x^n]\amp=\frac{\dd }{\dd x}\big(n(n-1)x^{n-2}\big)=n(n-1)(n -2)x^{n-3}
+\end{align*}
+</div>
+<p class="continuation">Cada vez que derivamos, reduzimos o expoente, que é exatamente um menor que o expoente anterior reduzido, e reduzimos o expoente em um. Quando tivermos derivado <span class="process-math">\(n-1\)</span> vezes, o expoente diminuiu para <span class="process-math">\(n-(n-1)=1\)</span> e reduzimos o fatores <span class="process-math">\(n(n-1)(n-2)\cdots 2\text{.}\)</span> Assim</p>
+<div class="displaymath process-math" id="md-29">
+\begin{align*}
+\dfrac{\dd^{n-1} }{\dd x^{n-1}}[x^n]\amp=n(n-1)(n-2)\cdots 2x
+\end{align*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" id="md-30">
+\begin{align*}
+\dfrac{\dd^{n} }{\dd x^{n}}[x^n]\amp=n(n-1)(n-2)\cdots 1
+\end{align*}
+</div>
+<p class="continuation">O produto dos primeiros <span class="process-math">\(n\)</span> números naturais, <span class="process-math">\(1\cdot 2\cdot 3\cdot \cdots
+\cdot n,\)</span> é chamado “<span class="process-math">\(n\)</span> fatorial” e é denotado como <span class="process-math">\(n!\text{.}\)</span> Então podemos também escrever</p>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+\dfrac{\dd^{n} }{\dd x^{n}}[x^n] \amp=n!
+\end{align*}
+</div>
+<p class="continuation">Se <span class="process-math">\(m \gt n\text{,}\)</span> então</p>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+\dfrac{\dd^{m} }{\dd x^{m}}[x^n]\amp=0.
+\end{align*}
+</div>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsec-derivada-trigonometricas"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.7</span> <span class="title">Derivada das funções trigonométricas</span>
+</h3>
+<article class="lemma theorem-like" id="lema-limit-trig"><h4 class="heading">
+<span class="type">Lema</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
+</h4>
+<div class="displaymath process-math" id="p-102">
+\begin{equation*}
+\lim\limits_{h\to 0}\frac{\sin{h}}{h}=1 \quad \text{e} \quad  \lim\limits_{h\to 0}\frac{1-\cos{h}}{h}=0
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-103">depois</p></article></div>
+<p id="p-104">Para prosseguir para as derivadas gerais de <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\)</span> vamos usar o acima dois resultados e algumas identidades trigonométricas. Lembre-se da adição fórmulas</p>
+<div class="displaymath process-math" id="md-33">
+\begin{align*}
+\sin(a+b) \amp= \sin(a) \cos(b) + \cos(a) \sin(b)\\
+\cos(a+b) \amp= \cos(a) \cos(b) - \sin(a) \sin(b)
+\end{align*}
+</div>
+<p class="continuation">Para calcular a derivada de <span class="process-math">\(\sin(x)\)</span> começamos com a definição da derivada:</p>
+<div class="displaymath process-math" id="md-34">
+\begin{align*}
+\frac{\dd}{\dd x}\sin x
+\amp=\lim_{h\to 0}\frac{\sin (x+h)-\sin x}{h}\\
+\amp=\lim_{h\to 0}\frac{\sin x\cos h +\cos x\sin h-\sin x}{h}\\
+\amp=\lim_{h\to 0}\bigg[\sin x\frac{\cos h-1}{h}
++\cos x\frac{\sin h-0}{h}\bigg]\\
+\amp=\sin x\left( \lim_{h\to 0}\frac{\cos h-1}{h}\right)
++\left( \cos x\ \lim_{h\to 0}\frac{\sin h}{h}\right) \amp  \ct{Aplique o }\, \knowl{./knowl/lema-limit-trig.html}{\text{Lema 1.26}}\\
+\amp=\sin x\cdot 0
++ \cos x\cdot 1 \\
+\amp=\cos x
+\end{align*}
+</div>
+<p class="continuation">O cálculo da derivada de <span class="process-math">\(\cos x\)</span> é muito semelhante.</p>
+<div class="displaymath process-math" id="md-35">
+\begin{align*}
+\frac{\dd}{\dd x}\cos x
+\amp=\lim_{h\to 0}\frac{\cos (x+h)-\cos x}{h}\\
+\amp=\lim_{h\to 0}\frac{\cos x\cos h -\sin x\sin h-\cos x}{h}\\
+\amp=\lim_{h\to 0}\bigg[\cos x\frac{\cos h-1}{h}
+-\sin x\frac{\sin h-0}{h}\bigg]\\
+\amp=\cos x\ \lim_{h\to 0}\frac{\cos h-1}{h}
+\ -\ \sin x\ \lim_{h\to 0}\frac{\sin h-0}{h}\\
+\amp=\cos x\left( \lim_{h\to 0}\frac{\cos h-1}{h}\right)
+-  \sin x\left( \lim_{h\to 0}\frac{\sin h}{h}\right) \amp  \ct{Aplique o }\, \knowl{./knowl/lema-limit-trig.html}{\text{Lema 1.26}}\\
+\amp=\cos x\cdot 0
+- \sin x\cdot 1 \\
+\amp=-\sin{x}
+\end{align*}
+</div>
+<p class="continuation">Agora encontramos as derivadas de <span class="process-math">\(\sin x\)</span> e <span class="process-math">\(\cos x\text{,}\)</span> <em class="emphasis">desde que <span class="process-math">\(x\)</span> seja medido em radianos</em>.</p>
+<article class="assemblage assemblage-like" id="assemblage-"><h4 class="heading"><span class="title">Derivada do seno e cosseno.</span></h4>
+<div class="displaymath process-math" id="p-106">
+\begin{equation*}
+\frac{\dd}{\dd x}[\sin x] =\cos x \quad \text{e}\quad 
+\frac{\dd}{\dd x}[\cos x] =-\sin x
+\end{equation*}
+</div></article><article class="example example-like" id="example-14"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-14"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Regra do produto envolvendo <span class="process-math">\(\sin{x} \)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like"><p id="p-107">Se <span class="process-math">\(y=x^2\sin{x}\)</span> determine <span class="process-math">\(\dfrac{\dd y}{\dd x}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">
+<p id="p-108">Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-produto.html" title="Teorema 1.14: Regra do produto">Teorema 1.14</a>, obtemos</p>
+<div class="displaymath process-math" id="md-36">
+\begin{align*}
+\dfrac{\dd y}{\dd x} \amp = x^2\dfrac{\dd }{\dd x}[\sin{x}] + \sin{x}\dfrac{\dd }{\dd x}[x^2]  \\
+\amp = x^2\cons{x} + 2x\sin{x}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Outras funções trigonométricas.</span></h4>
+<p id="p-109">Agora é fácil obter as derivadas do restante funções trigonométricas usando identidades trigonométricas básicas e o regra do quociente. Lembrar <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> aquele</p>
+<div class="displaymath process-math" id="md-37">
+\begin{align*}
+\tan x\amp= \frac{\sin x}{\cos x} \amp \cot x \amp= \frac{\cos x}{\sin x}=
+\frac{1}{\tan x}\\
+\csc x\amp= \frac{1}{\sin x} \amp \sec x \amp= \frac{1}{\cos x}
+\end{align*}
+</div>
+<p class="continuation">Então, pela regra do quociente,</p>
+<div class="displaymath process-math" id="md-38">
+\begin{align*}
+\frac{\dd}{\dd x}[\tan x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{\sin x}{\cos x} \right]\amp
+\amp=\frac{\overbrace{\big({\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}\cos x
+-\sin x\overbrace{\big({\frac{\dd}{\dd x}\cos x}\big)}^{-\sin x}}
+{\cos^2 x} \amp
+\amp=\sec^2 x\\
+\frac{\dd}{\dd x}\,[\csc x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{1}{\sin x}\right] \amp
+\amp=-\frac{\overbrace{\big({\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}}
+{\sin^2 x} \amp
+\amp=-\csc x\cot x\\
+\frac{\dd}{\dd x}\,[\sec x]
+\amp=\frac{\dd}{\dd x}\,\left[\frac{1}{\cos x} \right]\amp
+\amp=-\frac{\overbrace{\big({\frac{\dd}{\dd x}}\cos x\big)}^{-\sin x}}
+{\cos^2 x} \amp
+\amp=\sec x\tan x\\
+\frac{\dd}{\dd x}\cot x
+\amp=\frac{\dd}{\dd x}\,\left[\frac{\cos x}{\sin x} \right]\amp
+\amp=\frac{ \overbrace{\big({\frac{\dd}{\dd x}}\cos x\big)}^{-\sin x}\sin x
+-\cos x\overbrace{{\big(\frac{\dd}{\dd x}}\sin x\big)}^{\cos x}}
+{\sin^2 x} \amp
+\amp=-\csc^2x
+\end{align*}
+</div></section><p id="p-110">Para resumir todo esse trabalho, podemos escrevê-lo como um teorema:</p>
+<article class="assemblage assemblage-like" id="assemblage-derivada-trig-resumo"><h4 class="heading"><span class="title">Derivada de funções trigonométricas.</span></h4>
+<div class="displaymath process-math" id="p-111">
+\begin{equation*}
+\frac{\dd}{\dd x} [\sin x ] = \cos{x} \quad  \quad \frac{\dd}{\dd x} [\cos x]= - \sin x
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd}{\dd x} [\tan x] = \sec^2 x \quad \quad \frac{\dd}{\dd x} [\cot x] = -\csc^2 x
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dd}{\dd x}[ \csc x]   = -\csc x \cot x   \quad  \quad \frac{\dd}{\dd x} [\sec x] = \sec x \tan x
+\end{equation*}
+</div></article></section><section class="subsection" id="sugestao-video-3"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.8</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-15"><p id="p-112">Problema Resolvido: texto 1.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-16"><p id="p-113">Problema Resolvido:  texto 2.<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+<li id="li-17"><p id="p-114">texto 3<a class="external" href="" target="_blank"><code class="code-inline tex2jax_ignore"></code></a></p></li>
+</ul></section><section class="exercises" id="exercises-"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.9</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Você realmente deveria. Se você não fizer isso, pegue um dê uma olhada rápida no apêndice apropriado.</div></div>
+</div></main>
+</div>
+</body>
+</html>
