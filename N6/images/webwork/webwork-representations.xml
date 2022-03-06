@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-derivada-regras-basicas-exp-trig/problem1.pg">
+      <statement><p>Seja <m>\displaystyle f(x)=  \frac {1}  {\sqrt[5]{x}}</m>.  Determine:</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell><m>f'(1)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="30"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell><m>f'(7)</m></cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="30"/></cell>
+</row>
+</tabular>
+</sidebyside>
+</statement>
+      <answer>
+        <p>
+          <m>-0.2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.0193603</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem1.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-derivada-regras-basicas-exp-trig/problem11.pg">
+      <statement><p>Seja
+<m>f(x) = 2 x^{1/4}(x^3 - 11).</m>
+Determine os seguintes valores específicos de <m>f'</m>:</p>
+<p>1. <m>f'(2)</m> = <fillin name="AnSwEr0001" characters="40"/></p>
+<p>2. <m>f'(6)</m> = <fillin name="AnSwEr0002" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{2}{4}\cdot 2^{\frac{1}{4}-1}\!\left(2^{3}-11\right)+2\cdot 2^{\frac{1}{4}}\cdot 3\cdot 2^{2}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{2}{4}\cdot 6^{\frac{1}{4}-1}\!\left(6^{3}-11\right)+2\cdot 6^{\frac{1}{4}}\cdot 3\cdot 6^{2}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem11.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="pretext-derivada-regras-basicas-exp-trig/problem12.pg">
+      <statement><p>Determine a derivada da função <m>g(t) = -2 t^{5} e^t + 2 \sin t \cos t</m>.</p>
+<p><m>g'(t) =</m><fillin name="AnSwEr0001" characters="25"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>-2t^{4}\!\left(5+t\right)e^{t}+2\cos^{2}\!\left(t\right)-2\sin^{2}\!\left(t\right)</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Usando a regra do produto em cada termo</p>
+<p><me>\begin{array}{rcl}
+    g'(t) \amp =\amp  [(-2 t^{5})(e^t) + (-10 t^{4})(e^t)]
+    + 2 [ (\sin t)(-\sin t) + (\cos t)(\cos t)] \\
+    \amp \amp \\
+    \amp =\amp  -2 t^{4}(5 + t)e^t - 2 \sin^2 t + 2 \cos^2 t
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem12.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="pretext-derivada-regras-basicas-exp-trig/problem13.pg">
+      <statement><p>Determine a derivada da função <m>f(x) = x^{6} e^x \sec x</m>.</p>
+<p><m>f'(x) =</m><fillin name="AnSwEr0001" characters="25"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>6x^{5}e^{x}\sec\!\left(x\right)+x^{6}e^{x}\sec\!\left(x\right)+x^{6}e^{x}\sec\!\left(x\right)\tan\!\left(x\right)</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Use a Regra do Produto duas vezes.</p>
+<p><me>\begin{array}{rcl}
+    f'(x) \amp =\amp  x^{6} \cdot \frac{d}{dx}[ e^x \sec x]
+    + \frac{d}{dx}[ x^{6} ] \cdot (e^x \sec x) \\
+    \amp =\amp  x^{6}\left( e^x \frac{d}{dx}[ \sec x ] + \frac{d}{dx}[e^x] \sec x \right)
+        + 6 x^{5} (e^x \sec x) \\
+    \amp =\amp  x^{6} (e^x( \sec x \tan x) + e^x \sec x) + 6 x^{5} e^x \sec x \\
+    \amp =\amp  x^{6} e^x( \sec x \tan x) + x^{6} e^x \sec x + 6 x^{5} e^x \sec x \\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem13.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="pretext-derivada-regras-basicas-exp-trig/problem14.pg">
+      <statement><p>Encontre a equação da reta tangente ao gráfico de
+  <m>f(x) = 4 x \cos x</m>
+no ponto <m>( \pi , -4 \pi)</m>. A equação desta reta tangente pode ser escrita na forma <m>y = mx+b</m>, onde</p>
+<p><m>m =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>e <m>b =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><p>A Regra do produto fornece:
+<me>f'(x) = 4 \cos x - 4 x \sin x</me>
+A inclinação da reta tangente em  <m>( \pi , -4 \pi)</m> 
+<me>m = f'(\pi) = -4</me>
+Portanto, a equação da reta tangente é
+<me>y  + 4 \pi = -4 (x - \pi) \quad \text{ou}  \quad y = -4 x</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem14.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="pretext-derivada-regras-basicas-exp-trig/problem15.pg">
+      <statement><p>Determine <m>f'(x)</m> para <me>f(x)=\frac{2\sin\!\left(x\right)}{3x^{2}+2\sin\!\left(x\right)}</me></p>
+<p><m>f'(x)  =</m> <fillin name="AnSwEr0001" characters="60"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{6x^{2}\cos\!\left(x\right)-12x\sin\!\left(x\right)}{\left(3x^{2}+2\sin\!\left(x\right)\right)^{2}}</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p>Usando a regra do quociente para derivar temos,
+<me>f'(x)=\frac{d}{dx}\left(\frac{2\sin\!\left(x\right)}{3x^{2}+2\sin\!\left(x\right)}\right)=\frac{2\cos\!\left(x\right)\!\left(3x^{2}+2\sin\!\left(x\right)\right)-2\sin\!\left(x\right)\!\left(3\cdot 2x+2\cos\!\left(x\right)\right)}{\left(3x^{2}+2\sin\!\left(x\right)\right)^{2}}=\frac{6x^{2}\cos\!\left(x\right)-12x\sin\!\left(x\right)}{\left(3x^{2}+2\sin\!\left(x\right)\right)^{2}}</me>
+ou
+<me>f'(x)=\frac{6 x[x \cos(x)-2 \sin(x)]}{[3 x^2 +2 \sin(x)]^2}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem15.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="pretext-derivada-regras-basicas-exp-trig/problem16.pg">
+      <statement><p>Determine a derivada de <m>f</m> usando a regra apropriada ou combinação de regras.<me>f(x)=\frac{e^{x}}{\left(e^{x}+4\right)\!\left(x+5\right)}</me></p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{e^{x}\!\left(4x+20-e^{x}-4\right)}{\left(e^{x}+4\right)^{2}\!\left(x+5\right)^{2}}</m>
+        </p>
+      </answer>
+      <solution><p>Para determinar <m>f'(x)</m> iniciamos com a Regra do Quociente
+<me>f'(x)= \frac{(e^x+4)(x+5)\frac{d}{dx}[e^x]-e^x\frac{d}{dx}[(e^x+4)(x+5)]}{((e^x+4)(x+5))^2}.</me>
+Em seguida, lembre que <m>\frac{d}{dx}[e^x]=e^x</m>, e use a regra do produto para obter
+<me>\frac{d}{dx}[(e^x+4)(x+5)]=\frac{d}{dx}[e^x+4](x+5)+(e^x+4)\frac{d}{dx}[x+5]</me>
+que é
+<me>(e^x)(x+5)+(e^x+4)(1).</me>
+Portanto,
+<me>f'(x)= \frac{(e^x+4)(x+5)\cdot e^x-e^x\cdot (e^x(x+5)+(e^x+4))}{((e^x+4)(x+5))^2}</me>
+e após fatorar <m>e^x</m> no numerador, expandindo <m>(e^x+4)(x+5)=xe^x+5\cdot e^x+4 x+4\cdot 5</m>, e distribuindo o sinal de menos, temos
+<me>f'(x)=\frac{e^x(xe^x+4 x+5 e^x - xe^x-5 e^x-e^x-4)}{((e^x+4)(x+5))^2}</me>
+que simplifica para
+<me>f'(x)=\frac{e^x(4 x -  e^x-4)}{((e^x+4)(x+5))^2}.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem16.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="pretext-derivada-regras-basicas-exp-trig/problem19.pg">
+      <statement><p>Calcule a derivada usando a regra apropriada ou combinação de regras. <me>g(z)=\frac{z^{2}-z-2}{z-2}\frac{z^{2}-4z+4}{z-2}</me></p>
+<p><m>g'(z) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2z-1</m>
+        </p>
+      </answer>
+      <solution><p>.</p>
+<p>Seja 
+<me>g(z)=\frac{z^{2}-z-2}{z-2}\frac{z^{2}-4z+4}{z-2}=\frac{\left(z-2\right)\!\left(z+1\right)}{z-2}\frac{\left(z-2\right)\!\left(z-2\right)}{z-2}.</me>
+<m>g(z)=\left(z+1\right)\!\left(z-2\right)</m>, assumindo <m>z \ne 2</m> e <m>z \ne 2</m>, de onde
+<me>g'(z)=(z-2)(1)+(z+1)(1)=2z-1.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem19.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem19.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem19.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem19.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="pretext-derivada-regras-basicas-exp-trig/problem17.pg">
+      <statement><p>Determine <m>f'( x )</m> usando a Regra do Quociente se
+<me>f(x) =  \frac { 7 - x^2 } { 3 + x^2 }.</me>
+<m>f'( x ) =</m> <fillin name="AnSwEr0001" characters="48"/></p>
+<p>Encontre <m>f'( 2 )</m>.</p>
+<p><m>f'( 2 )=</m><fillin name="AnSwEr0002" characters="48"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{-2x\!\left(3+x^{2}\right)-\left(7-x^{2}\right)\cdot 2x}{\left(3+x^{2}\right)^{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{-2\cdot 2\cdot \left(3+2^{2}\right)-\left(7-2^{2}\right)\cdot 2\cdot 2}{\left(3+2^{2}\right)^{2}}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem17.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem17.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem17.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem17.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
+    <static seed="18" source="pretext-derivada-regras-basicas-exp-trig/problem18.pg">
+      <statement><p>Seja  <m>f(x) = \displaystyle \frac{6 x^2}{3 x + 2}</m>.</p>
+<p>a) Encontre a equação da reta tangente a <m>f</m> em
+<m>(3, 54/11)</m>.</p>
+<p><m>y =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+<p>b) Encontre a equação da reta normal a <m>f</m> em 
+<m>(3, 54/11)</m>.</p>
+<p><m>y =</m> <fillin name="AnSwEr0002" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>1.93388\!\left(x-3\right)+4.90909</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>(-0.517094)\!\left(x-3\right)+4.90909</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Iniciamos calculando a derivada. Então fazemos <m>x = 3</m> para encontrar a inclinação.</p>
+<p><me>\begin{array}{rcl}
+    f'(x) \amp =\amp  \displaystyle
+    \frac{(3 x + 2)( 12 x) - (6 x^2)( 3 )}{ (3 x + 2)^2 }\\
+    \amp \amp \\
+     \amp =\amp  \displaystyle
+    \frac{ 18 x^2 + 24 x }{ (3 x + 2)^2 }\\
+    \amp \amp \\
+    m = f'(3) \amp =\amp  \frac{234}{121}
+  \end{array}</me>
+Usando a forma ponto-inclinação, 
+<me>\begin{array}{rcl}
+    y - \frac{54}{11} \amp =\amp  \frac{234}{121}(x - 3) \\
+    \amp \amp \\
+    y \amp =\amp  \frac{234}{121}(x - 3) + \frac{54}{11}
+  \end{array}</me></p>
+<p>A inclinação da reta normal é o recíproco negativo da
+inclinação da tangente, neste caso: <m>-\frac{121}{234}</m>.
+Em seguida, usando a forma ponto inclinação mais uma vez,
+<me>\begin{array}{rcl}
+    y - \frac{54}{11} \amp =\amp  -\frac{121}{234}(x - 3) \\
+    \amp \amp \\
+    y \amp =\amp  -\frac{121}{234}(x - 3) + \frac{54}{11}
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem18.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem18.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem18.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem18.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem18.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
+    <static seed="19" source="pretext-derivada-regras-basicas-exp-trig/problem20.pg">
+      <statement><p>Determine a derivada indicada.
+<me>\dfrac{d^2 y}{dx^2} \biggr| _{x=7}\quad\text{ onde } \quad y = \frac{1}{x^{3}}+5x^{2}</me></p>
+<p>Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3\cdot 4\cdot 1\cdot 7^{-5}+2\cdot 5</m>
+        </p>
+      </answer>
+      <solution><p>Seja <m>y = \frac{1}{x^{3}}+5x^{2}</m>.  Então <m>\frac{dy}{dx} = (-3)x^{-4}+10x</m> e <m>\frac{d^2 y}{dx^2} = 12x^{-5}+10</m>.  Portanto,
+<me>\frac{d^2 y}{dx^2}| _{x=7} = 12(7)^{-5} + 10 = 10.0007</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem20.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-derivada-regras-basicas-exp-trig/problem2.pg">
+      <statement><p>A reta <m>y = 5 x + 764</m> é tangente ao gráfico de
+<m>y = 2 x^3 + 3 x^2  - 175 x + 8</m>
+no ponto <fillin name="AnSwEr0001" characters="20"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(-6,734\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem2.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="pretext-derivada-regras-basicas-exp-trig/problem21.pg">
+      <statement><p>Determine a segunda e a terceira derivada de <m>y=4 x - \frac{2}{x}</m>.</p>
+<p><m>y''=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>y'''=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>(-4)x^{-3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>12x^{-4}</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Seja</p>
+<p><m>y=4 x - 2 x^{-1}</m></p>
+<p>Então,</p>
+<p><m>y'=4 + 2 x^{-2}</m></p>
+<p><m>y''= -4 x^{-3}</m></p>
+<p><m>y'''= 12 x^{-4}</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem21.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="pretext-derivada-regras-basicas-exp-trig/problem22.pg">
+      <statement><p>Determine a segunda e a terceira derivada de
+<me>y = 3x^{4}-8x^{2}+5x</me></p>
+<p><m>y'' =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>y''' =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>36x^{2}-16</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>72x</m>
+        </p>
+      </answer>
+      <solution><p>Seja <m>y = 3x^{4}-8x^{2}+5x</m>.  Então <m>y' = 12x^{3}-16x+5</m>, <m>y'' = 36x^{2}-16</m>, e <m>y''' = 72x</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem22.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem22.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem22.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem22.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="pretext-derivada-regras-basicas-exp-trig/problem23.pg">
+      <statement><p>Determine as quatro primeiras derivadas de <m>h(t) = -5 t^2  - 9 e^t</m>.</p>
+<p>a) <m>h'(t) =</m><fillin name="AnSwEr0001" characters="10"/></p>
+<p>b) <m>h''(t) =</m><fillin name="AnSwEr0002" characters="10"/></p>
+<p>c) <m>h'''(t) =</m><fillin name="AnSwEr0003" characters="10"/></p>
+<p>d) <m>h^{(4)}(t) =</m><fillin name="AnSwEr0004" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-10t+\left(-9\right)e^{t}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-10+\left(-9\right)e^{t}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-9e^{t}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-9e^{t}</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Relembre <m>\frac{d}{dx}[ e^x ] = e^x</m>.</p>
+<p><me>\begin{array}{rcl}
+    h(t) \amp =\amp  -5 t^2  - 9 e^t \\
+    \amp \amp \\
+    h'(t) \amp =\amp  -10 t  - 9 e^t \\
+    \amp \amp \\
+    h''(t) \amp =\amp  -10  - 9 e^t \\
+    \amp \amp \\
+    h'''(t) \amp =\amp  -9 e^t \\
+    \amp \amp \\
+    h^{(4)}(t) \amp =\amp  -9 e^t \\
+    \amp \amp \\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem23.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem23.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem23.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem23.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem23.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-23" ww-id="webwork-23">
+    <static seed="23" source="pretext-derivada-regras-basicas-exp-trig/problem24.pg">
+      <statement><p>Determine as primeiras quatro derivadas de <m>g(x) = -6 \cos x</m>.</p>
+<p>a) <m>g'(x) =</m><fillin name="AnSwEr0001" characters="10"/></p>
+<p>b) <m>g''(x) =</m><fillin name="AnSwEr0002" characters="10"/></p>
+<p>c) <m>g'''(x) =</m><fillin name="AnSwEr0003" characters="10"/></p>
+<p>d) <m>g^{(4)}(x) =</m><fillin name="AnSwEr0004" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>6\sin\!\left(x\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6\cos\!\left(x\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-6\sin\!\left(x\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-6\cos\!\left(x\right)</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Use as regras <m>\frac{d}{dx}[ \sin x ] = \cos x</m> e
+<m>\frac{d}{dx}[ \cos x ] = -\sin x</m>.</p>
+<p><me>\begin{array}{rcl}
+    g(x) \amp =\amp  -6 \cos x \\
+    \amp \amp \\
+    g'(x) \amp =\amp   + 6 \sin x \\
+    \amp \amp \\
+    g''(x) \amp =\amp   + 6 \cos x \\
+    \amp \amp \\
+    g'''(x) \amp =\amp  -6 \sin x \\
+    \amp \amp \\
+    g^{(4)}(x) \amp =\amp  -6 \cos x \\
+    \amp \amp \\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem24.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem24.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem24.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem24.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem24.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-24" ww-id="webwork-24">
+    <static seed="24" source="pretext-derivada-regras-basicas-exp-trig/problem25.pg">
+      <statement><p>Seja <m>f(x) = 7 x \cos x</m>.  Determine as derivadas solicitadas.</p>
+<p>a) <m>f'(x) =</m><fillin name="AnSwEr0001" characters="25"/></p>
+<p>b) <m>f''(x) =</m><fillin name="AnSwEr0002" characters="25"/></p>
+<p>c) <m>f'''(x) =</m><fillin name="AnSwEr0003" characters="25"/></p>
+<p>d) <m>f^{(4)}(x) =</m><fillin name="AnSwEr0004" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>7\!\left(-x\sin\!\left(x\right)+\cos\!\left(x\right)\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>7\!\left(-x\cos\!\left(x\right)-2\sin\!\left(x\right)\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>7\!\left(x\sin\!\left(x\right)-3\cos\!\left(x\right)\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>7\!\left(x\cos\!\left(x\right)+4\sin\!\left(x\right)\right)</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução.:</alert></p>
+<p>Use a Regra do Produto e combine termos semelhantes para cada derivada.<me>\begin{array}{rcl}
+   f'(x) \amp =\amp  7( -x \sin x + \cos x) \\
+   f''(x) \amp =\amp  7(-x \cos x - 2\sin x) \\
+   f'''(x) \amp =\amp  7(x \sin x - 3\cos x) \\
+   f^{(4)}(x) \amp =\amp  7( x \cos x + 4\sin x) \\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem25.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem25.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem25.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem25.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem25.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-derivada-regras-basicas-exp-trig/problem3.pg">
+      <statement><p>Encontre todos os valores de <m>x</m> em que as retas tangentes para<m>y=x^{4}</m> e <m>y=x^{5}</m> são paralelas.</p>
+<p><m>x =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0, \frac{4}{5}</m>
+        </p>
+      </answer>
+      <solution><p>Seja <m>f(x)=x^{4}</m> e seja <m>g(x)=x^{5}</m>. Os dois gráficos têm retas tangentes paralelas em todos os <m>x</m> onde <m>f'(x)=g'(x)</m>.
+<me>f'(x) = g'(x)</me>
+<me>4x^{3} = 5x^{4}</me>
+<me>4x^{3}-5x^{4} = 0</me>
+<me>x^{3}\!\left(4-5x\right) = 0</me>
+portanto, <m>x=0</m> ou <m>x=\frac{4}{5}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem3.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-derivada-regras-basicas-exp-trig/problem4.pg">
+      <statement><p>Determine os coeficientes <m>a</m> e <m>b</m> tais que <m>p(x)=x^{2}+ax+b</m> satisfaz <m>p(1)=5</m> e <m>p'(1)=1</m>.</p>
+<p><m>a =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p><m>b =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <solution><p>Seja <m>p(x)=x^{2}+ax+b</m> satisfazendo <m>p(1)=5</m> e <m>p'(1)=1</m>.
+Já que <m>p'(x)=2x+a</m>, isto implica que <m>5=p(1)=1+a+b</m> e <m>1=p'(1)=2+a</m>;
+i.e., <m>a=-1</m> e <m>b=5</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem4.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-derivada-regras-basicas-exp-trig/problem5.pg">
+      <statement><p>Para que valor(es) de <m>x</m> o gráfico de <m>f(x)=10x^{3}+15x^{2}+90</m> tem reta tangente horizontal?</p>
+<p><m>x =</m>  <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0, -1</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem5.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-derivada-regras-basicas-exp-trig/problem6.pg">
+      <statement><p>Calcule a derivada da função dada.</p>
+<p><me>f(x) = (-4 x^2 + 3 x + 9)\frac{14 x - 1}{-4 x^2 + 3 x + 9}</me></p>
+<p><m>f'(x) =</m><fillin name="AnSwEr0001" characters="25"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>14</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução:</alert></p>
+<p>Sempre procure por manipulações de algebricas que simplifiquem a função.</p>
+<p><me>f(x) = (-4 x^2 + 3 x + 9)\frac{14 x - 1}{-4 x^2 + 3 x + 9} = 14 x - 1,</me>
+Assim, <m>f'(x) = 14</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem6.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-derivada-regras-basicas-exp-trig/problem7.pg">
+      <statement><p>Se <m>f(x) = e^{8} + \ln (7)</m>,</p>
+<p>então <m>f'(x) =</m> <fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><p>Solução.</p>
+<p><m>f(x)</m> é apenas uma constante.  Portanto, <m>f'(x)=0</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem7.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-derivada-regras-basicas-exp-trig/problem9.pg">
+      <statement><p>Seja <m>g(s) = e^{s}(s^{4} + 4)</m>.</p>
+<p>a) Encontre a equação da reta tangente a <m>g</m> em <m>(0, 4)</m>.</p>
+<p><m>y =</m> <fillin name="AnSwEr0001" characters="25"/></p>
+<p>b) Encontre a equação da reta tangente a <m>g</m> em <m>(0, 4)</m>.</p>
+<p><m>y =</m> <fillin name="AnSwEr0002" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>4s+4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>(-0.25)s+4</m>
+        </p>
+      </answer>
+      <solution><p><alert> Solução:</alert></p>
+<p>Primeiro encontre a derivada. Em seguida, insira <m>s = 0</m> para encontrar a inclinação.</p>
+<p><me>\begin{array}{rcl}
+     g'(s) \amp =\amp  e^{s}( 4 s^{3}) + e^{s}( s^{4} + 4 )\\
+     g'(0) \amp =\amp  e^0(4 \cdot 0^{3}) + e^0(0^{4} + 4)\\
+     \amp =\amp  4
+   \end{array}</me>
+Usando a forma ponto-inclinação, <m>y - 4 = 4(s - 0)</m>, ou,
+<m>y =  + 4</m>.</p>
+<p>A inclinação da linha normal é o recíproco negativo da
+inclinação da tangente, neste caso: <m>-1/4</m>.
+Então, usando ponto-inclinação mais uma vez,
+<m>y - 4 = -1/4(s - 0)</m>, ou,
+<m>y = -\frac{1}{4} s + 4</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem9.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem9.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-derivada-regras-basicas-exp-trig/problem10.pg">
+      <statement><p>Seja <m>f(x) = (9 x^3 + 9 x + 11)(4 x^4  - 3 x^3  - 10)</m>.  Encontre a derivada solicitada.</p>
+<p><m>f^{(9)}(x) =</m><fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <solution><p><alert> Soluçãon:</alert></p>
+<p>A função é um polinômio de grau 7, que podemos observar
+sem multiplicar os fatores. Portanto, qualquer derivada
+<m>f^{(n)}</m> com <m>n \geq 8</m> será 0.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regras-basicas-exp-trig/problem10.pg</server-url>
+    <pg source="pretext-derivada-regras-basicas-exp-trig/problem10.pg"/>
+  </webwork-reps>
+</webwork-representations>

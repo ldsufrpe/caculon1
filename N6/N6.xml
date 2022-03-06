@@ -111,14 +111,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <title>Estrutura</title>
         
             <ol>
+               <li>
+                   <p>
+                       Determinar derivadas de funções polinomiais.
+                   </p>
+               </li>
+
+               <li>
+                   <p>
+                       Determinar derivadas usando Regras aritméticas.
+                   </p>
+               </li>
                 <li>
                     <p>
-                       texto
+                       Determinar derivadas de funções usando Regra do Produto.
                     </p>
                 </li>
                 <li>
                     <p>
-                        texto
+                        Determinar derivadas de funções usando Regra do Quociente.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Determinar derivadas de ordem superior.
                     </p>
                 </li>
             </ol>
@@ -127,7 +144,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <introduction>
     <p>
-        Escrever
+    Calcular derivadas usando a definição fatalmente requer calcular um limite que muitas vezes é bastante complicado. Porém, felizmente, existem regras que simplificam bastante a derivação.
     </p>
 </introduction>
 
@@ -284,6 +301,7 @@ Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obte
   podemos generalizá-la para qualquer número real <m>\alpha</m>.
 </p>
 
+
 <assemblage xml:id="assemblage-regra-potencia-estendida">
     <title>Regra da potência geral</title>
     <p>
@@ -411,6 +429,96 @@ Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obte
 </p>
 
 
+<exercise>
+ <p>
+     Determine as derivadas das funções a seguir:
+ </p>
+<task>
+<statement>
+    <p>
+       <m> f(x)=\pi</m>
+    </p>
+</statement>
+    <answer>
+        <p>
+            0
+        </p>
+    </answer>
+</task>
+
+
+<task>
+<statement>
+    <p>
+        <m>y(s)=s^{2022}</m>
+    </p>
+</statement>
+    <answer>
+        <p>
+            <m>2022s^{2021}</m>
+        </p>
+    </answer>
+</task>
+
+
+
+<task>
+<statement>
+    <p>
+        <m>g(x)=x^{-3}</m>
+    </p>
+</statement>
+    <answer>
+        <p>
+            <m>-3x^{-4}</m>
+        </p>
+    </answer>
+</task>
+
+
+<task>
+ <statement>
+     <p>
+         <m>y(x)=\sqrt[3]{x}</m>
+     </p>
+ </statement>
+ <answer>
+    <p>
+        <m>\frac{1}{3x^{\frac{2}{3}}}</m>
+    </p>
+</answer>
+</task>
+
+<task>
+  <statement>
+      <p>
+          <m>f(x)=\dfrac{2}{x^4}</m>
+      </p>
+  </statement>
+
+  <answer>
+      <p>
+          <m>-\frac{8}{x^{5}}</m>
+      </p>
+  </answer>
+</task>
+
+
+  <task>
+  <statement>
+      <p>
+          <m>y=x^{\pi}</m>
+      </p>
+  </statement>
+
+  <answer>
+      <p>
+          <m>\pi x^{\pi - 1}</m>
+      </p>
+  </answer>
+</task>
+
+</exercise>
 
 <theorem xml:id="th-derivada-mult-constante">
 <title>Regra do múltiplo por constante</title>
@@ -509,24 +617,56 @@ Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obte
 
 
 <exercise>
+
+<p>
+    Determine a derivada de cada função.
+</p>
+<task>
     <statement>
         <p>
-            
+            <m>y=2x^{\frac{1}{2}}</m>
         </p>
     </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
+
     <answer>
         <p>
-            
+            <m>\frac{1}{\sqrt{x}}</m>
         </p>
     </answer>
+    </task>
+
+
+<task>
+    <statement>
+        <p>
+            <m>f(x)= \frac{4}{5}x^2</m>
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\frac{8}{5}x</m>
+        </p>
+    </answer>
+    </task>
+
+
+<task>
+    <statement>
+        <p>
+            <m>f(x)= \frac{7}{3x^{-2}}</m>
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\frac{14}{3}x</m>
+        </p>
+    </answer>
+    </task>
 </exercise>
 
-<exercise>
+<!-- <exercise>
     <statement>
         <p>
             
@@ -542,7 +682,7 @@ Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obte
             
         </p>
     </answer>
-</exercise>
+</exercise> -->
 
 Até aqui estamos obtendo derivadas de expressões muito simples. O resultado que apresentamos 
 a seguir vai permitir calcular derivadas de funções definidas pelas operações de adição e subtração. 
@@ -685,7 +825,54 @@ agrupando <m>f</m>, <m>g</m>  e <m>h</m> na operação de adição e aplicando a
     </solution>
 </example>
 
+<exercise>
+    <statement>
+        <p>
+            Determine a derivada de <m>f(x)=x^3-4x+3</m>
+        </p>
+    </statement>
 
+    <answer>
+        <p>
+            <m>3x^2-4</m>
+        </p>
+    </answer>
+</exercise>
+
+
+<exercise>
+    <statement>
+        <p>
+            Determine a equação da reta tangente ao gráfico de <m>y=-\frac{1}{2}x^4+3x^3-2x</m> no ponto <m>\left(-1, -\frac{3}{2}\right)</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>y=9x+\frac{15}{9}</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Encontre os pontos do gráfico da função <m>f(x)=2x^3+ 3x^2-12x+1</m> em que a reta tangente é horizontal.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>(-2, 21)</m> e <m>(1, -6)</m>
+        </p>
+    </answer>
+</exercise>
+
+<investigation>
+<p>
+    O gráfico da função <m>f(x)=2e^x+3x+5x^3</m> pode ter retas tangente com inclinação igual a <m>2</m> ? Justifique.
+</p>
+</investigation>
 
 </subsection>
 <subsection xml:id="sugestao-video-1">
@@ -748,10 +935,13 @@ agrupando <m>f</m>, <m>g</m>  e <m>h</m> na operação de adição e aplicando a
 
   <subsection xml:id="subsec-derivada-produto-quociente">
     <title>Regras do produto e do quociente</title>
-   
-   <p>
-       Em breve
+   <introduction>
+     <p>
+      Veremos agora mais duas regras de derivação: produto e quociente. Ambas são um pouco mais complicadas que as 
+      regras anteriores, porém, são extremamente úteis.
    </p>
+   </introduction>
+   
 
 <theorem xml:id="th-regra-produto"><title>Regra do produto</title>
 
@@ -907,17 +1097,13 @@ E assim recuperamos a regra do produto.
 <exercise>
     <statement>
         <p>
-            
+            Determine a derivada de <m>g(x)=(3x-2x^2)(5+4x)</m>.
         </p>
     </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
+    
     <answer>
         <p>
-            
+            <m>-24x^2+4x+15</m>
         </p>
     </answer>
 </exercise>
@@ -925,17 +1111,13 @@ E assim recuperamos a regra do produto.
 <exercise>
     <statement>
         <p>
-            
+            Determine a derivada de <m>f(x)=\left(\dfrac{1}{x}+1\right)(x-1)</m>.
         </p>
     </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
+
     <answer>
         <p>
-            
+            <m>\frac{x^2+1}{x^2}</m>
         </p>
     </answer>
 </exercise>
@@ -1041,6 +1223,23 @@ Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
     </solution>
 </example>
 
+<exercise>
+    <statement>
+        <p>
+            Determine a derivada de <m>f(x)=\dfrac{x-1}{2x+3}</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\dfrac{5}{(2x+3)^2}</m>
+        </p>
+    </answer>
+</exercise>
+
+
+
+
 <subsection xml:id="subsec-exponenciais">
     <title>Derivada da função exponencial</title>
     
@@ -1102,22 +1301,36 @@ Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
             Aplicando a <xref ref="th-regra-quociente"/>, obtemos 
 
             <md>
-                <mrow> \frac{\dd y}{\dd x} \amp \frac{(1+x^2)\frac{\dd }{\dd x}[e^x]}{(1+x^2)^2} </mrow>
+                <mrow> \frac{\dd y}{\dd x} =\amp \frac{(1+x^2)\frac{\dd }{\dd x}[e^x]}{(1+x^2)^2} </mrow>
                 <mrow> \amp = \frac{(1+x^2)e^x - e^x(2x)}{(1+x^2)^2} \amp \ct{ Derivada da função exponencial de base $e$.} </mrow>
                 <mrow> \amp = \frac{e^x(1-x)^2}{(1+x^2)^2}  </mrow>
             </md>
 
         Portanto,  a inclinação da reta tangente em <m>(1, \frac{e}{2})</m> vale 
         <me>
-            \frac{\dd y}{\dd x}\left|Big|_{x=1}\right.= 0.
+            \frac{\dd y}{\dd x}\Big|_{x=1}= 0.
         </me>
         
-        Isto é, a reta tangente em <m>(1, \frac{e}{2})</m> é horizontal, e sua equação é <m>y=\frac{e}{2}</m>. 
+        Isto é, a reta tangente em <m>\left(1, \dfrac{e}{2}\right)</m> é horizontal, e sua equação é <m>y=\dfrac{e}{2}</m>. 
 
 
         </p>
     </solution>
 </example>
+
+<exercise>
+    <statement>
+        <p>
+            Determine, se existirem, os valores de <m>x</m> para os quais <m>f(x)=e^x-2x</m> tenha uma reta horizontal.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>x=\ln{2}</m>
+        </p>
+    </answer>
+</exercise>
 
 
 <subsection xml:id="sugestao-video-2">
@@ -1184,7 +1397,7 @@ E assim por diante.</p>
 <m>\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)</m>
 </li>
 <li> <m>f'''(x)</m> e <m>f^{(3)}(x)</m> e <m>\dfrac{\dd^3 f}{\dd x^3}(x)</m> todos significam
-<m>\dfrac{\dd }{\dd x}\big(\frac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big)</m>
+<m>\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big)</m>
 </li>
 <li> <m>f^{(4)}(x)</m> e <m>\dfrac{\dd^4 f}{\dd x^4}(x)</m> ambos significam
 <m>\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}\big(\dfrac{\dd }{\dd x}f(x)\big)\big) \big)</m>
@@ -1271,10 +1484,21 @@ Se <m>m \gt n</m>, então
 </p>
 </solution>
 </example>
-
-
-
 </subsection>   
+
+<exercise>
+    <statement>
+        <p>
+            Determine <m>f^{5}(x)</m> para <m>f(x)=3x^4 + x^3 + x^2 + x + e^x +1</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>e^x</m>
+        </p>
+    </answer>
+</exercise>
 
 
 <subsection xml:id="subsec-derivada-trigonometricas">
@@ -1487,8 +1711,39 @@ Então, pela regra do quociente,
 </assemblage>
 
 
+<exercise>
+    <statement>
+        <p>
+            Determine a derivada de <m>y=x^3\cos{x}</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\dfrac{\dd y}{\dd x}=x^{3} \sin\left(x\right) + 3 \, x^{2} \cos\left(x\right)</m>
+        </p>
+    </answer>
+</exercise>
 
 
+<exercise>
+    <statement>
+        <p>
+            Usando a Regra do Quociente derive <m>f(x)=\dfrac{\sec{x}}{1+\tan{x}}</m>
+        </p>
+    </statement>
+    <hint>
+        <p>
+            Para simplificar use a identidade <m>\tan{x}^2+1=\sec{x}^2</m>. 
+        </p>
+    </hint>
+
+    <answer>
+        <p>
+            <m>\dfrac{\sec{x}(\tan{x}-1)}{(1+ \tan{x})^2}</m>
+        </p>
+    </answer>
+</exercise>
 
 </subsection>
 
@@ -1536,8 +1791,109 @@ Então, pela regra do quociente,
 </subsection>
 
 
-<exercises xml:id="exercises-">
-<exercise>Escrever aqui
+<exercises xml:id="exercises-derivada-N6">
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem1.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem2.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem3.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem4.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem5.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem6.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem7.pg" />
+</exercise>
+
+<!-- <exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem8.pg" />
+</exercise> -->
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem9.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem10.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem11.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem12.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem13.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem14.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem15.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem16.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem19.pg" />
+</exercise>
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem17.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem18.pg" />
+</exercise>
+
+
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem20.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem21.pg" />
+</exercise>
+
+
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem22.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem23.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem24.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-derivada-regras-basicas-exp-trig/problem25.pg" />
 </exercise>
 </exercises>   
 

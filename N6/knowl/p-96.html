@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-05T21:13:21-03:00       *-->
+<!--*       on 2022-03-06T16:00:28-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,22 +14,65 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Parágrafo</span></h4>
-<p>Aplicando a <a href="" class="xref" data-knowl="./knowl/th-regra-quociente.html" title="Teorema 1.19: Regra do quociente">Teorema 1.19</a>, obtemos</p>
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Seja <span class="process-math">\(P(x)=f(x)\, g(x)\text{,}\)</span> o produto de nossas duas funções. A derivada de <span class="process-math">\(P\)</span> é dada por</p>
 <div class="displaymath process-math">
 \begin{align*}
-\frac{\dd y}{\dd x} \amp \frac{(1+x^2)\frac{\dd }{\dd x}[e^x]}{(1+x^2)^2} \\
-\amp = \frac{(1+x^2)e^x - e^x(2x)}{(1+x^2)^2} \amp \ct{ Derivada da função exponencial de base $e$.} \\
-\amp = \frac{e^x(1-x)^2}{(1+x^2)^2}  
+P'(x) \amp= \lim_{h \to 0} \frac{P(x+h)-P(x)}{h}
 \end{align*}
 </div>
-<p class="continuation">Portanto,  a inclinação da reta tangente em <span class="process-math">\((1, \frac{e}{2})\)</span> vale</p>
+<p class="continuation">Novamente vamos focar no numerador dentro do limite e manipulá-lo na forma que precisamos. Para simplificar essas manipulações, defina</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\frac{\dd y}{\dd x}\left|Big|_{x=1}\right.= 0.
-\end{equation*}
+\begin{align*}
+F(h) \amp= \frac{f(x+h)-f(x)}{h} \amp \text{ e } \amp\amp
+G(h) \amp= \frac{g(x+h)-g(x)}{h}.\\
+\end{align*}
+<p class="intertext">Então podemos escrever</p>
+\begin{align*}
+f(x+h)\amp= f(x)+hF(h) \amp\text{e} \amp\amp g(x+h)\amp=g(x)+hG(h).\\
+\end{align*}
+<p class="intertext">Também podemos escrever</p>
+\begin{align*}
+f'(x) \amp= \lim_{h\to0} F(h) \amp \text{e}\amp\amp
+g'(x) \amp= \lim_{h\to0} G(h).
+\end{align*}
 </div>
-<p class="continuation">Isto é, a reta tangente em <span class="process-math">\((1, \frac{e}{2})\)</span> é horizontal, e sua equação é <span class="process-math">\(y=\frac{e}{2}\text{.}\)</span></p>
+<p class="continuation">Então, de volta ao numerador:</p>
+<div class="displaymath process-math">
+\begin{align*}
+\amp P(x+h)-P(x)
+=f(x+h)\cdot g(x+h)-f(x) \cdot g(x) \amp \text{substituir}\\
+\amp=[f(x)+ hF(h)]\ [g(x)+hG(h)]-f(x) \cdot g(x) \amp \text{expandir}\\
+\amp=f(x)g(x) + f(x)\cdot hG(h) + hF(h)\cdot g(x) + h^2 F(h)\cdot G(h) -f( x) \cdot
+g(x)\hskip-0,5in\\
+\amp= f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2F(h) \cdot G(h).
+\end{align*}
+</div>
+<p class="continuation">Armado com isso, voltamos à definição da derivada:</p>
+<div class="displaymath process-math">
+\begin{align*}
+P'(x)
+\amp=\lim_{h\to 0}\frac{P(x+h)-P(x)}{h}\\
+\amp= \lim_{h\to 0} \frac{f(x) \cdot hG(h) + hF(h) \cdot g(x) + h^2 F(h) \cdot
+G(h) }{h}\\
+\amp= \left(\lim_{h\to 0} \frac{f(x) \cdot h G(h)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h F(h) \cdot g(x)}{h}\right)
++ \left(\lim_{h\to 0} \frac{h^2 F(h) \cdot G(h) }{h}\right)\\
+\amp= \left(\lim_{h\to 0} f(x) \cdot G(h)\right)
++ \left(\lim_{h\to 0} F(h) \cdot g(x)\right)
++ \left(\lim_{h\to 0} h F(h) \cdot G(h)\right)\\
+\end{align*}
+<p class="intertext">Agora, como <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> não mudam quando enviamos <span class="process-math">\(h\)</span> para zero, podemos puxá-los para fora . Também podemos escrever o terceiro termo como o produto de 3 limites:</p>
+\begin{align*}
+\amp= \left(f(x) \lim_{h\to 0} G(h)\right)
++ \left(g(x) \lim_{h\to 0} F(h)\right)
++ \left(\lim_{h\to 0} h\right) \cdot \left(\lim_{h\to0} F(h)\right) \cdot
+\left(\lim_{h\to0} G(h)\right)\\
+\amp= f(x) \cdot g'(x) + g(x)\cdot f'(x) + 0 \cdot f'(x) \cdot g'(x)\\
+\amp= f(x) \cdot g'(x) + g(x) \cdot f'(x).
+\end{align*}
+</div>
+<p class="continuation">E assim recuperamos a regra do produto.</p>
 <span class="incontext"><a href="section-1.html#p-96" class="internal">em contexto</a></span>
 </body>
 </html>
