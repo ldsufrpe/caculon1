@@ -216,7 +216,10 @@ Com um pouco mais de trabalho, a partir da definição da derivada, pode-se obte
 </statement>
 <proof>
     <p>
-        depois
+        
+
+    <url href="https://youtu.be/3ahKO2UKhNY" visual="youtu.be/3ahKO2UKhNY"> Vídeo </url>
+
     </p>
 </proof>
 </theorem>
@@ -691,18 +694,48 @@ agrupando <m>f</m>, <m>g</m>  e <m>h</m> na operação de adição e aplicando a
 <ul>
     <li>
         <p>
-          Problema Resolvido: texto 1.<url></url>
+         <url href="https://youtu.be/W8QdwWyP0jY" visual="youtu.be/W8QdwWyP0jY">Regra da potência.</url>
+
         </p>
     </li>
 
     <li>
         <p>
-            Problema Resolvido:  texto 2.<url></url>
+            <url href="https://youtu.be/V3YH8k6mgzM" visual="youtu.be/V3YH8k6mgzM">Derivando <m>\dfrac{1}{x}</m>, <m>\sqrt[3]{x}</m> e <m>\sqrt[3]{x^2}</m> .</url>
         </p>
     </li>
  <li>
      <p>
-          texto 3<url></url>
+            <url href="https://youtu.be/oMg8K972HMc" visual="youtu.be/oMg8K972HMc">Regras de derivação.</url>
+     </p>
+
+
+ </li>
+  <li>
+     <p>
+        <url href="https://youtu.be/u3oigVqhJZA" visual="youtu.be/u3oigVqhJZA">Exercício Resolvido: erro na aplicação das regras de derivação.</url>
+
+     </p>
+ </li>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/xehwj2Pny9U" visual="youtu.be/xehwj2Pny9U"> Calculando a derivada da função polinomial <m>f(x)=x^5+2x^3-x^2</m> .</url>
+
+     </p>
+ </li>
+
+ <li>
+     <p>
+                 <url href="https://youtu.be/wOpmrssv0k4" visual="youtu.be/wOpmrssv0k4"> Derivando <m>g(x)=\dfrac{2}{x^3}-\dfrac{1}{x^2}</m> .</url>
+
+     </p>
+ </li>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/hTmDN1EmbvQ" visual="youtu.be/hTmDN1EmbvQ"> Encontrando a reta tangente de <m>f(x)=x^3-6x^2+x-5</m> em <m>x=1</m>.</url>
+
      </p>
  </li>
 </ul>    
@@ -741,7 +774,7 @@ Seja <m>P(x)=f(x)\, g(x)</m>, o produto de nossas duas funções. A derivada de 
   P'(x) \amp= \lim_{h \to 0} \frac{P(x+h)-P(x)}{h}
 </mrow>
 </md>
-Novamente vamos focar no numerador dentro do limite e massageá-lo na forma que precisamos. Para simplificar essas manipulações, defina
+Novamente vamos focar no numerador dentro do limite e manipulá-lo na forma que precisamos. Para simplificar essas manipulações, defina
 <md>
 <mrow>
 F(h) \amp= \frac{f(x+h)-f(x)}{h} \amp \text{ e } \amp\amp
@@ -1086,26 +1119,48 @@ Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
     </solution>
 </example>
 
+
 <subsection xml:id="sugestao-video-2">
     <title>Sugestão de vídeos</title>
   
 <ul>
     <li>
         <p>
-          Problema Resolvido: texto 1.<url></url>
+        <url href="https://youtu.be/Oz7nyql0ars" visual="youtu.be/Oz7nyql0ars"> Regra do produto.</url>
+
         </p>
     </li>
 
-    <li>
-        <p>
-            Problema Resolvido:  texto 2.<url></url>
-        </p>
-    </li>
+
  <li>
      <p>
-          texto 3<url></url>
+            <url href="https://youtu.be/pxAQ4lw4f_E" visual="youtu.be/pxAQ4lw4f_E"> Interpretando a derivada de <m>e^x</m> .</url>
      </p>
  </li>
+
+ <li>
+     <p>
+        <url href="https://youtu.be/hxjz_T_tUHA" visual="youtu.be/hxjz_T_tUHA"> Regra do quociente.</url>
+     </p>
+ </li>
+
+ <li>
+     <p>
+    <url href="https://youtu.be/23vS9Ez75UA" visual="youtu.be/23vS9Ez75UA"> Derivando <m>y=\dfrac{5-3x}{x^2+3x}</m>.</url>
+
+     </p>
+ </li>
+<li>
+    <p>
+           <url href="https://youtu.be/luhr0RMKwrA" visual="youtu.be/luhr0RMKwrA">  Encontrando a reta tangente para 
+ <m>y=\dfrac{e^x}{2+ x^3}</m> que passa pelo ponto <m>(1, \frac{e}{3})</m> .</url>
+
+    </p>
+</li>
+
+
+    
+
 </ul>    
 </subsection>
 
@@ -1235,9 +1290,22 @@ Para provar algumas afirmações sobre a derivada de funções trigonométricas 
     </p>
 </statement>
 <proof>
-    <p>
-        depois
+  
+  <li>
+      <p>
+          <p>
+        <url href="https://youtu.be/PcTUaKANXPo" visual="youtu.be/PcTUaKANXPo"> Demonstração para <m>\lim\limits_{h\to 0}\dfrac{\sin{h}}{h}=1</m> (vídeo).</url>
     </p>
+      </p>
+  </li>
+
+  <li>
+      <p>
+        <url href="https://youtu.be/9qR8vwOc6J8" visual="youtu.be/9qR8vwOc6J8"> Demonstração para <m>\lim\limits_{h\to 0}\dfrac{1-\cos{h}}{h}=0</m> (vídeo).</url>
+
+      </p>
+  </li>
+    
 </proof>
 </lemma>
 
@@ -1303,7 +1371,7 @@ Agora encontramos as derivadas de <m>\sin x</m> e <m>\cos x</m>,
 <em>desde que <m>x</m> seja medido em radianos</em>.
 </p>
 
-<assemblage xml:id="assemblage-">
+<assemblage xml:id="assemblage-trig">
     <title>Derivada do seno e cosseno</title>
     <p>
        
@@ -1428,22 +1496,42 @@ Então, pela regra do quociente,
     <title>Sugestão de vídeos</title>
   
 <ul>
+    
     <li>
         <p>
-          Problema Resolvido: texto 1.<url></url>
+            <url href="https://youtu.be/UxsCxjOWyLk" visual="youtu.be/UxsCxjOWyLk"> Calculando <m>\dfrac{\dd}{\dd x}[e^x\cos{x}]</m> .</url>
+        </p>
+    </li>
+ 
+
+ 
+
+
+<li>
+    <p>
+        <url href="https://youtu.be/z_sbcpUVq_Q" visual="youtu.be/z_sbcpUVq_Q"> Sobre a derivada de <m>\cos{x}</m>, <m>\sin{x}</m> .</url>
+    </p>
+</li>
+
+<li>
+    <p>
+    <url href="https://youtu.be/xq1RQvRSMUk" visual="youtu.be/xq1RQvRSMUk"> Derivando <m>g(x)=7\sin{x}-3\cos{x}-\left(\frac{\pi}{\sqrt[3]{x}}\right)^2</m> .</url>
+
+    </p>
+</li>
+    <li>
+        <p>
+                <url href="https://youtu.be/BmmMSDFbrcU" visual="youtu.be/BmmMSDFbrcU"> Derivanda da <m>\tan{x}</m> e <m>\cot{x}</m> .</url>
+
+        </p>
+    </li>
+    <li>
+        <p>
+            <url href="https://youtu.be/EafJfTkNPwE" visual="youtu.be/EafJfTkNPwE"> Derivada da <m>\sec{x}</m> e <m>\csc{x}</m> .</url>
+
         </p>
     </li>
 
-    <li>
-        <p>
-            Problema Resolvido:  texto 2.<url></url>
-        </p>
-    </li>
- <li>
-     <p>
-          texto 3<url></url>
-     </p>
- </li>
 </ul>    
 </subsection>
 

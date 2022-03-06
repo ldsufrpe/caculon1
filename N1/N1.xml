@@ -1305,7 +1305,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
         <p>
 
          Se <m>x</m> está próximo de <m>3</m> mas maior que <m>3</m>, então o denominador <m>x-3</m> é um 
-        número positivo pequeno e  <m>2x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número positivo grande. 
+        número positivo pequeno e  <m>3x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número positivo grande. 
         Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{ 3x}{ x - 3}=+\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig10-plot"/>,
         colabora com o nosso resulta. 
 
@@ -1339,8 +1339,8 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
    <solution>
        <p>
            Se <m>x</m> está próximo de <m>3</m> mas menor que <m>3</m>, então o denominador <m>x-3</m> é um 
-        número negativo pequeno e  <m>2x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número negativo grande. 
-        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^-}\dfrac{ 3x}{ x - 3}=+\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig10-plot"/>,
+        número negativo pequeno e  <m>3x</m> está próximo de <m>9</m>. Portanto, o quociente <m>\frac{3x}{x-3}</m> é um número negativo grande. 
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^-}\dfrac{ 3x}{ x - 3}=-\infty.</me> O gráfico de <m>f</m>, na   <xref ref="fig10-plot"/>,
         colabora com o nosso resulta. 
        </p>
    </solution>

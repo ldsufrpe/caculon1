@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-01T12:18:21-03:00       *-->
+<!--*       on 2022-03-05T21:13:46-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,9 +13,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Make *any* pre with class 'sagecell-sage' an executable Sage cell
     // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+    sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
                            linked: true,
                            languages: ['sage'],
                            evalButtonText: 'Executar (Sage)'});
@@ -24,10 +24,10 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Parágrafo</span></h6>
-<p>Com o <em class="emphasis">SageMath</em>, usando o comando <code class="code-inline tex2jax_ignore">limt(f, x=a)</code> é possível calcular o limite de  <span class="process-math">\(f(x)\)</span> quando  <span class="process-math">\(x\)</span> tende para <span class="process-math">\(a\text{.}\)</span> Por exemplo, o <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.5: Determinando o limite numericamente">Exemplo 1.5</a> pode ser resolvido com o comando: <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">limit((x-1)/(x^2-1), x=1)
-</script></div> Sa função depender da variável <span class="process-math">\(t\)</span>  basta declará-la usando o comando <code class="code-inline tex2jax_ignore">var('t')</code>. Vamos exemplificar esse caso calculando <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{2\sin{t}}{t}\text{.}\)</span> <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">var('t')
+<p>Com o <em class="emphasis">SageMath</em>, usando o comando <code class="code-inline tex2jax_ignore">limt(f, x=a)</code> é possível calcular o limite de  <span class="process-math">\(f(x)\)</span> quando  <span class="process-math">\(x\)</span> tende para <span class="process-math">\(a\text{.}\)</span> Por exemplo, o <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.5: Determinando o limite numericamente">Exemplo 1.5</a> pode ser resolvido com o comando: <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">limit((x-1)/(x^2-1), x=1)
+</script></pre> Sa função depender da variável <span class="process-math">\(t\)</span>  basta declará-la usando o comando <code class="code-inline tex2jax_ignore">var('t')</code>. Vamos exemplificar esse caso calculando <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{2\sin{t}}{t}\text{.}\)</span> <pre class="ptx-sagecell sagecell-sage" id="sage-2"><script type="text/x-sage">var('t')
 limit(2*sin(t)/t, t=0)
-</script></div></p>
+</script></pre></p>
 <span class="incontext"><a href="section-1.html#p-117" class="internal">em contexto</a></span>
 </body>
 </html>
