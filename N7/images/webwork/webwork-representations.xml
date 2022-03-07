@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-derivada-regra-da-cadeia/problem1.pg">
+      <statement><p>Seja  <m>f(x) = \sqrt{2x^{2}+5x+3}</m>. Determine:</p>
+<p>1. <m>f'( x ) =</m> <fillin name="AnSwEr0001" characters="40"/></p>
+<p>2. <m>f'( 5 ) =</m> <fillin name="AnSwEr0002" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2\sqrt{2x^{2}+5x+3}}\!\left(2\cdot 2x+5\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.41535</m>
+        </p>
+      </answer>
+      <solution><p>SOLUTION</p>
+<p>Usando a Regra da Cadeia temos
+<me>\begin{array}{rcl} f'(x) \amp =\amp  \displaystyle  \frac{1}{2} (2 x^2 + 5 x + 3 )^{-1/2} \frac{d}{dx}
+(2 x^2 + 5 x + 3 )
+\\ \amp =\amp  \frac{1}{2} (2 x^2 + 5 x + 3 )^{-1/2} 
+(4 x + 5 )
+\end{array}</me>
+Substituindo <m>x = 5</m> prodizimos:
+<me>f'(5)  = \frac{1}{2} (78)^{-1/2} (25) =\frac{12.5}{\sqrt{78}}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem1.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-derivada-regra-da-cadeia/problem10.pg">
+      <statement><p>Determinte a derivada indicada.</p>
+<p><m>\dfrac{d}{dx}\left(e^{x^3}+\log_{4}(\pi)\right)</m>  =  <fillin name="AnSwEr0001" characters="35"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3x^{2}e^{x^{3}}</m>
+        </p>
+      </answer>
+      <solution><p>A resposta segue de <m>\frac{d}{dx}\left(e^{x^3}+\log_{4}(\pi)\right) = 3 x^2 e^{x^3}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="pretext-derivada-regra-da-cadeia/problem10.pg">
+      <statement><p>Determinte a derivada indicada.</p>
+<p><m>\dfrac{d}{dx}\left(e^{x^3}+\log_{3}(\pi)\right)</m>  =  <fillin name="AnSwEr0001" characters="35"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>3x^{2}e^{x^{3}}</m>
+        </p>
+      </answer>
+      <solution><p>A resposta segue de <m>\frac{d}{dx}\left(e^{x^3}+\log_{3}(\pi)\right) = 3 x^2 e^{x^3}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem10.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem10.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="pretext-derivada-regra-da-cadeia/problem11.pg">
+      <statement><p>1. Seja <m>f(x) =\sqrt{4+15x^{4}}</m>.  Determine <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="60"/></p>
+<p>2. Seja  <m>f(x) =e^{\sqrt{4+15x^{4}}}</m>.  Determine <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0002" characters="60"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2\sqrt{4+15x^{4}}}\cdot 15\cdot 4x^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>e^{\sqrt{4+15x^{4}}}\frac{1}{2\sqrt{4+15x^{4}}}\cdot 15\cdot 4x^{3}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem11.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="pretext-derivada-regra-da-cadeia/problem12.pg">
+      <statement><p>Seja  <m>f(x) = \displaystyle \frac{5}{\left(6x^{2}-4x+1\right)^{4}}</m>.  Encontre <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-\frac{5\cdot 4\!\left(6x^{2}-4x+1\right)^{3}\!\left(6\cdot 2x-4\right)}{\left(\left(6x^{2}-4x+1\right)^{4}\right)^{2}}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem12.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem12.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="pretext-derivada-regra-da-cadeia/problem13.pg">
+      <statement><p>Dada as seguintes funções <m>f(u)=u^{7/2}</m> e <m>g(x)=x^{8}+1</m>. Determine:</p>
+<p>1. <m>f(g(x))=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>2. <m>f'(u)=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>3. <m>f'(g(x))=</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p>4. <m>g'(x)=</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p>5. <m>(f\circ g)'(x)=</m> <fillin name="AnSwEr0005" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(x^{8}+1\right)^{\frac{7}{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}u^{\frac{7}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}\!\left(x^{8}+1\right)^{\frac{7}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>8x^{8-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}\!\left(x^{8}+1\right)^{\frac{7}{2}-1}\cdot 8x^{8-1}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=14&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="pretext-derivada-regra-da-cadeia/problem13.pg">
+      <statement><p>Dada as seguintes funções <m>f(u)=u^{7/2}</m> e <m>g(x)=x^{8}+1</m>. Determine:</p>
+<p>1. <m>f(g(x))=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>2. <m>f'(u)=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>3. <m>f'(g(x))=</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p>4. <m>g'(x)=</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p>5. <m>(f\circ g)'(x)=</m> <fillin name="AnSwEr0005" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(x^{8}+1\right)^{\frac{7}{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}u^{\frac{7}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}\!\left(x^{8}+1\right)^{\frac{7}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>8x^{8-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{7}{2}\!\left(x^{8}+1\right)^{\frac{7}{2}-1}\cdot 8x^{8-1}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=15&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="pretext-derivada-regra-da-cadeia/problem13.pg">
+      <statement><p>Dada as seguintes funções <m>f(u)=u^{9/2}</m> e <m>g(x)=x^{10}+1</m>. Determine:</p>
+<p>1. <m>f(g(x))=</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>2. <m>f'(u)=</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>3. <m>f'(g(x))=</m> <fillin name="AnSwEr0003" characters="20"/></p>
+<p>4. <m>g'(x)=</m> <fillin name="AnSwEr0004" characters="20"/></p>
+<p>5. <m>(f\circ g)'(x)=</m> <fillin name="AnSwEr0005" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(x^{10}+1\right)^{\frac{9}{2}}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{9}{2}u^{\frac{9}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{9}{2}\!\left(x^{10}+1\right)^{\frac{9}{2}-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>10x^{10-1}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{9}{2}\!\left(x^{10}+1\right)^{\frac{9}{2}-1}\cdot 10x^{10-1}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=16&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem13.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="pretext-derivada-regra-da-cadeia/problem14.pg">
+      <statement><p>Seja  <m>f(x) = -9 \sin ( \cos ( x ^{7} ))</m></p>
+<p><m>f'( x ) =</m> <fillin name="AnSwEr0001" characters="30"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>+9\cdot 7x^{7-1}\cos\!\left(\cos\!\left(x^{7}\right)\right)\sin\!\left(x^{7}\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=17&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem14.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-18" ww-id="webwork-18">
+    <static seed="18" source="pretext-derivada-regra-da-cadeia/problem15.pg">
+      <statement><p>Seja  <m>f(x) = \tan (5 x)</m>.</p>
+<p>Então <m>f'( x ) =</m> <fillin name="AnSwEr0001" characters="50"/>,</p>
+<p>e <m>f'( 1 ) =</m> <fillin name="AnSwEr0002" characters="50"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{1}{\cos^{2}\!\left(5x\right)}\cdot 5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>62.1394</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=18&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem15.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-19" ww-id="webwork-19">
+    <static seed="19" source="pretext-derivada-regra-da-cadeia/problem16.pg">
+      <statement><p>Se  <m>f(x) = \sin(e^{2 x})</m>, determine <m>f'( x )</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2e^{2x}\cos\!\left(e^{2x}\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=19&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem16.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-derivada-regra-da-cadeia/problem2.pg">
+      <statement><p>Seja  <m>f(x) =\displaystyle \frac{1}{\left(x^{5}-7x+3\right)^{7}}</m>.  Determine <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-\frac{7\!\left(5x^{4}-7\right)\!\left(x^{5}-7x+3\right)^{6}}{\left(\left(x^{5}-7x+3\right)^{7}\right)^{2}}</m>
+        </p>
+      </answer>
+      <solution><p>Fazendo  <m>u(x) = x^{5}-7x+3</m> na fórmula derivada generalizada para <m>\frac{1}{u^{7}}</m> produz</p>
+<p><m>\displaystyle \frac{d \;\left(x^{5}-7x+3\right)^{7}}{dx}  = \frac{d \; [\frac{1}{u^{7}}]}{dx} = -\frac{7u^{6}}{\left(u^{7}\right)^{2}} \frac{du}{dx} = -\frac{7\!\left(5x^{4}-7\right)\!\left(x^{5}-7x+3\right)^{6}}{\left(\left(x^{5}-7x+3\right)^{7}\right)^{2}}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem2.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-20" ww-id="webwork-20">
+    <static seed="20" source="pretext-derivada-regra-da-cadeia/problem17.pg">
+      <statement><p>1. Seja  <m>f(x) =\sin^{2}\!\left(x\right)</m>.  Determine <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+<p>2. Seja <m>f(x) =\sin\!\left(x^{2}\right)</m>.  Determine <m>f'(x)</m>.</p>
+<p><m>f'(x) =</m> <fillin name="AnSwEr0002" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2\sin\!\left(x\right)\cos\!\left(x\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2x\cos\!\left(x^{2}\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem17.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem17.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem17.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=20&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem17.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-21" ww-id="webwork-21">
+    <static seed="21" source="pretext-derivada-regra-da-cadeia/problem18.pg">
+      <statement><p>Seja <m>y = \left(x+\sin\!\left(x\right)\right)^{3}</m>. Determine <m>g(x)</m> e <m>f(x)</m> de modo que <m>y = ( f \circ g ) ( x)</m>, e calcule a derivada usando a Regra da Cadeia.</p>
+<p>1. <m>f(x) =</m> <fillin name="AnSwEr0001" characters="20"/></p>
+<p>2. <m>g(x) =</m> <fillin name="AnSwEr0002" characters="20"/></p>
+<p>3. <m>(f \circ g) ' =</m> <fillin name="AnSwEr0003" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>x^{3}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>x+\sin\!\left(x\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3\!\left(1+1\cos\!\left(x\right)\right)\!\left(1x+1\sin\!\left(x\right)\right)^{2}</m>
+        </p>
+      </answer>
+      <solution><p>Seja <m>f(x)= x^{3}</m>, <m>g(x)= x+\sin\!\left(x\right)</m>, e
+<m>(f \circ g ) (x) = \left(x+\sin\!\left(x\right)\right)^{3}</m>. Então</p>
+<p><m>\frac{dy}{dx} = f'(g(x)) g'(x) =3 (x+\sin\!\left(x\right))^{2} (1+\cos\!\left(x\right)).</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem18.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem18.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem18.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=21&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem18.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem18.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="pretext-derivada-regra-da-cadeia/problem19.pg">
+      <statement><p>Calcule a derivada da função dada.</p>
+<p><me>g(t) = 6 (-5 \sin t  - 9 \cos t)^{5}</me></p>
+<p><m>g'(t) =</m><fillin name="AnSwEr0001" characters="25"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>30\!\left(-5\sin\!\left(t\right)+\left(-9\right)\cos\!\left(t\right)\right)^{4}\!\left(-5\cos\!\left(t\right)-\left(-9\right)\sin\!\left(t\right)\right)</m>
+        </p>
+      </answer>
+      <solution><p>Use a regra da cadeia com a função de dentro <m>u = -5 \sin t  - 9 \cos t</m>
+e a função de fora <m>y = 6 u^{5}</m>.</p>
+<p><me>\begin{array}{rcl}
+    g'(t) \amp =\amp  \displaystyle\frac{dy}{du} \cdot \frac{du}{dt}\\
+    \amp \amp \\
+    \amp =\amp  30 u^{4} (-5 \cos t  + 9 \sin t) \\
+    \amp =\amp  30 (-5 \sin t  - 9 \cos t)^{4} (-5 \cos t  + 9 \sin t) \\
+  \end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem19.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem19.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem19.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=22&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem19.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-23" ww-id="webwork-23">
+    <static seed="23" source="pretext-derivada-regra-da-cadeia/problem20.pg">
+      <statement><p>Encontre uma equação da reta tangente ao gráfico de 
+<me>y = \sin(7 x) + \cos(2 x)</me></p>
+<p>no ponto
+<m>(\frac{\pi}{6},\; y(\frac{\pi}{6}) )</m>.
+Rata tangente:</p>
+<p><m>y =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\sin\!\left(\frac{7\pi }{6}\right)+\cos\!\left(\frac{2\pi }{6}\right)+\left(7\cos\!\left(\frac{7\pi }{6}\right)-2\sin\!\left(\frac{2\pi }{6}\right)\right)\!\left(x-\frac{\pi }{6}\right)</m>
+        </p>
+      </answer>
+      <solution><p>A derivada da função é 
+<me>\frac{dy}{dx} =7  \cos(7 x) - 2 \sin(2 x)</me>
+A inclinação da reta tangente no ponto
+ <m>(\frac{\pi}{6},\; y(\frac{\pi}{6}) )</m>
+é
+<me>\left.\frac{dy}{dx}\right|_{x=\pi/6}  =
+7  \cos\left({\textstyle\frac{7}{6}} \pi\right) - 2 \sin\left({\textstyle\frac{1}{3}} \pi \right) 
+= -\frac{9}{2}\sqrt{3}</me>
+Temos <me>y\left(\frac{\pi}{6}\right) = \sin\left({\textstyle\frac{7}{6}} \pi\right) + \cos\left( {\textstyle\frac{1}{3}} \pi\right)=  0</me> 
+então a equação da reta tangente é
+<me>y =  \left( -\frac{9}{2}\sqrt{3}\right) \left(x- \frac{\pi}{6}\right)</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem20.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem20.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem20.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=23&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem20.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem20.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-24" ww-id="webwork-24">
+    <static seed="24" source="pretext-derivada-regra-da-cadeia/problem21.pg">
+      <statement><p>Seja <m>y = (6 + \cos^2{x})^{13}</m></p>
+<p><m>\displaystyle \frac{dy}{dx} =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-2\cos\!\left(x\right)\sin\!\left(x\right)\cdot 13\!\left(6+\cos^{2}\!\left(x\right)\right)^{12}</m>
+        </p>
+      </answer>
+      <solution><p>Aplicando a Regra da Cadeia duas vezes, obtemos:
+<me>\begin{array}{rcl} \frac{dy}{dx} \amp =\amp  13 (6 + \cos^2{x})^{12} \cdot \frac{d}{dx} (6 + \cos^2{x}) \quad \text{by the chain rule}\\
+\amp =\amp  13 (6 + \cos^2{x})^{12} \cdot 2 \cdot \cos x \cdot \frac{d}{dx}( \cos x) 
+\quad \text{by the chain rule}
+\\ \amp =\amp  13 (6 + \cos^2{x})^{12} \cdot 2 \cdot \cos x \cdot ( -\sin x)
+\\ \amp =\amp  -26 \cos x \sin x (6 + \cos^2{x})^{12}  
+\end{array}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem21.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem21.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem21.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=24&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem21.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-25" ww-id="webwork-25">
+    <static seed="25" source="pretext-derivada-regra-da-cadeia/problem22.pg">
+      <statement><p>Seja  <m>y = \sqrt{8  - 5 \tan{x}}</m>. Determine:</p>
+<p><m>\displaystyle \frac{dy}{dx} =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>(-2.5)\sec^{2}\!\left(x\right)\!\left(8+\left(-5\right)\tan\!\left(x\right)\right)^{-0.5}</m>
+        </p>
+      </answer>
+      <solution><p><me>\frac{dy}{dx} = \frac{1}{2} (8  - 5 \tan{x})^{-1/2} \frac{d}{dx} (8  - 5 \tan{x} ) =  \frac{1}{2} (8  - 5 \tan{x})^{-1/2} (-5 \sec^2 x)
+ =   \frac{-2.5 \sec^2 x}{ \sqrt{8  - 5 \tan{x}}}</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=25&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem22.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=25&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem22.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=25&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem22.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=25&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem22.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem22.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-derivada-regra-da-cadeia/problem3.pg">
+      <statement><p>Encontre a equação da reta tangente ao gráfico de <m>y(x) =\frac{4x}{\sqrt{1-x^{2}}}</m> em <m>x = 0</m>.</p>
+<p>A equação da reta tangente é <m>y =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>4x</m>
+        </p>
+      </answer>
+      <solution><p>Use a regra do produto. Em seguinda, use  <m>\small{u(x) = 1-x^{2}}</m> para aplicar a regra de potência de funções  para <m>u^{-{\textstyle\frac{1}{2}}}</m> obtendo:</p>
+<p><m>y'(x)=\displaystyle \frac{d}{dx}\left[ \frac{4x}{\sqrt{1-x^{2}}} \right]  = \frac{4}{\sqrt{1-x^{2}}}+\left(4x\right)\left(-{\textstyle\frac{1}{2}}\right)\frac{1}{\left(1-x^{2}\right)^{1.5}}\left(-2x\right) =  \frac{4}{\sqrt{1-x^{2}}}+\frac{4x^{2}}{\left(1-x^{2}\right)^{{\textstyle\frac{3}{2}}}}</m>.</p>
+<p>Assim,  quando <m>x = 0</m>, <m>y =  0</m> e <m>y'(0) =  4</m></p>
+<p>Portanto, a equação da reta tangente é <m>y = 4 x</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem3.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-derivada-regra-da-cadeia/problem4.pg">
+      <statement><p>Dado que  <m>\small{f'(x)} =\displaystyle \sqrt{3x+6}</m> e <m>g(x) = x^{2}-3</m>, encontre <m>\small{F'(x)}</m> se <m>F(x) = f(g(x))</m>.</p>
+<p><m>\small{F'(x) =}</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2x\sqrt{3x^{2}-3}</m>
+        </p>
+      </answer>
+      <solution><p>Uma vez que  <m>\small{f'(x)} =\displaystyle \sqrt{3x+6}</m> e <m>g'(x) = 2x</m>,</p>
+<p>e
+ <m>\dfrac{d}{dx}\left( f(g(x))\right)  = f'(g(x))g'(x)</m></p>
+<p>temos
+ <m>\small{f'(x)}  = 2x\sqrt{3\!\left(x^{2}-3\right)+6} = 2x\sqrt{3x^{2}-3}</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem4.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-derivada-regra-da-cadeia/problem5.pg">
+      <statement><p>Encontre a equação da reta tangente ao gráfico de <m>y(x) =8\!\left(x-\frac{1}{x}\right)^{3}</m> em <m>x =</m> 2 .</p>
+<p>A equação da reta tangente é <m>y =</m> <fillin name="AnSwEr0001" characters="50"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>67.5x-108</m>
+        </p>
+      </answer>
+      <solution><p>Fazendo  <m>\small{u(x)} = x-\frac{1}{x}</m> e usando a regra de  derivada da potência de funções <m>\small{u^3}</m> temos</p>
+<p><m>\displaystyle \frac{d \;\left[8\!\left(x-\frac{1}{x}\right)^{3}\right]}{dx}  = \frac{d \;\small{\left(8 u^3\right)} }{du}\frac{du}{dx}   =  24\!\left(x-\frac{1}{x}\right)^{2}\!\left(1+\frac{1}{x^{2}}\right)</m>.</p>
+<p>Assim, quando  <m>x = 2</m>, <m>y =  27</m> e <m>y'(2) =  67.5</m></p>
+<p>Portanto, a equação da reta tangente é <m>y = 27 +67.5(x-2) = 67.5x-108</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem5.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-derivada-regra-da-cadeia/problem6.pg">
+      <statement><p>Seja  <m>F(x)= f(f(x))</m> e <m>G(x)=(F(x))^{2}</m> e suponha que</p>
+<p><me>f(7)=2, \quad f(2)=2, \quad f'(2)=13, \quad f'(7)=9</me></p>
+<p>Determine <m>F'(7)</m> e <m>G'(7)</m>.</p>
+<p><m>F'(7)=</m> <fillin name="AnSwEr0001" characters="10"/></p>
+<p><m>G'(7)=</m> <fillin name="AnSwEr0002" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>13\cdot 9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2\cdot 2\cdot 13\cdot 9</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem6.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-derivada-regra-da-cadeia/problem7.pg">
+      <statement><p>Suponha <m>\displaystyle y = e^{4/x^{4}} + 4/e^{x^{2}}</m>.  Determine  <m>D_{x}y</m>.</p>
+<p><m>D_{x}y =</m> <fillin name="AnSwEr0001" characters="40"/></p>
+<p><alert> Dica:</alert> Aplique a regra da cadeia e observe o sinal certo.</p>
+</statement>
+      <answer>
+        <p>
+          <m>-\left(\frac{16e^{\frac{4}{x^{4}}}}{x^{5}}+\frac{8x}{e^{x^{2}}}\right)</m>
+        </p>
+      </answer>
+      <solution><p>Usando <m>D_x e^x = e^x</m> e a Regra da Cadeia
+dá <m>\displaystyle D_x y = -\frac{16}{x^{5}} e^{4/x^{4}} - \frac{8 x }{e^{x^2}}</m></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem7.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-derivada-regra-da-cadeia/problem8.pg">
+      <statement><p>Determine <m>D_{x}y</m> se <m>\displaystyle y = e^{ -5/x^{3}}</m></p>
+<p><m>D_{x}y</m>  = <fillin name="AnSwEr0001" characters="40"/></p>
+<p><alert> Dica:</alert> Lembre-se da definição da derivada do
+função exponencial natural e use a regra da cadeia.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{3\cdot 5}{x^{3+1}}e^{\frac{-5}{x^{3}}}</m>
+        </p>
+      </answer>
+      <solution><p>Usando <m>D_x e^x = e^x</m> e a regra da cadeia
+dá <m>\displaystyle D_x y = \left(\frac{15}{x^{4}}\right)e^{-5/x^{3}}</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem8.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-derivada-regra-da-cadeia/problem9.pg">
+      <statement><p>Suponha que <m>f(x) = (6x+6)^{1/4}.</m></p>
+<p>1. Encontre uma equação para a reta tangente ao gráfico de <m>f(x)</m> em
+<m>x = 2</m>.</p>
+<p>Rata tangente: <m>y</m> = <fillin name="AnSwEr0001" characters="30"/></p>
+<p>2. Encontre todos os valores de <m>x</m> onde a reta tangente
+é horizontal e insira-os como uma lista separada por vírgulas (por exemplo,
+<em> 2,-3,6</em>). Se não houver nenhum, escreva
+<em>none</em>.</p>
+<p>Valor(es) de <m>x</m> = <fillin name="AnSwEr0002" characters="30"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.171647\!\left(x-2\right)+2.05977</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\text{none}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem9.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem9.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem9.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-derivada-regra-da-cadeia/problem9.pg</server-url>
+    <pg source="pretext-derivada-regra-da-cadeia/problem9.pg"/>
+  </webwork-reps>
+</webwork-representations>

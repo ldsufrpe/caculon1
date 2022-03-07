@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-06T18:34:01-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrando a regra do quociente da Regra da Cadeia.</span>
+</h4>
+<p>We can also use the chain rule to recover Corollary <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor_diff_recip" missing or not unique]</code> and from there we can use the product rule to recover the quotient rule.</p>
+<p>We want to differentiate <span class="process-math">\(F(x) = \frac{1}{g(x)}\)</span> so set <span class="process-math">\(f(u) = \frac{1}{u}\)</span> and <span class="process-math">\(u=g(x)\text{.}\)</span> Then the chain rule tells us</p>
+<div class="displaymath process-math">
+\begin{align*}
+\dfrac{\dd }{\dd x} \left\{\frac{1}{g(x)}\right\} = \dfrac{\dd F}{\dd x}
+\amp= \dfrac{\dd f}{\dd u} \cdot \diff{u}{x}\\
+\amp= \frac{-1}{u^2} \cdot g'(x)\\
+\amp= -\frac{g'(x)}{g(x)^2}.
+\end{align*}
+</div>
+<p class="continuation">Once we know this, a quick application of the product rule will give us the quotient rule.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\amp\dfrac{\dd }{\dd x} \left\{ \frac{f(x)}{g(x)} \right\}
+= \dfrac{\dd }{\dd x} \left\{ f(x) \cdot \frac{1}{g(x)}  \right\} \amp \text{use PR}\\
+\amp= f'(x)\cdot \frac{1}{g(x)}  + f(x) \cdot \dfrac{\dd }{\dd x} \left\{\frac{1}{g(x)}\right\} \amp
+\text{use the result from above}\\
+\amp= f'(x)\cdot \frac{1}{g(x)}  - f(x) \cdot \frac{g'(x)}{g(x)^2} \amp
+\text{place over a common denominator}\\
+\amp= \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g(x)^2}
+\end{align*}
+</div>
+<p class="continuation">which is exactly the quotient rule.</p></article><span class="incontext"><a href="section-1.html#eg_2_9_4" class="internal">em contexto</a></span>
+</body>
+</html>
