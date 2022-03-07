@@ -204,7 +204,7 @@ Aqui está outra versão da regra da cadeia que torna essa ideia mais explícita
 </proof>
 </theorem>
 
-<p> Este formulário específico é fácil de lembrar porque parece que podemos apenas
+<p> A igualdade do <xref ref="th-regra-cadeia-3"/>  é fácil de lembrar porque parece que podemos apenas
 <q>cancelar</q> o <m>\mathrm{d}u</m> entre os dois termos.
   <md>
 <mrow>
@@ -216,10 +216,10 @@ Aqui está outra versão da regra da cadeia que torna essa ideia mais explícita
 
 <p>Claro, <m>\mathrm{d}u</m> não é, por si só, um número ou variável <fn>Neste contexto, 
 <m>\mathrm{d}u</m> é chamado um diferencial. Existem maneiras de entendê-los e manipulá-los no cálculo, 
-mas eles estão além do escopo do texto.</fn> que pode ser cancelado. Mas isso ainda é um bom auxiliar para memorização.
+mas eles estão além do escopo do texto.</fn> que pode ser cancelada. Mas isso ainda é um bom auxiliar para memorização.
 </p>
 
-<p>A parte mais difícil de aplicar a regra da cadeia é reconhecer quando a função que você está 
+<p>A parte mais difícil de aplicar a Regra da Cadeia é reconhecer quando a função que você está 
 tentando diferenciar é realmente a composição de duas funções mais simples. Isso requer um pouco de prática.
  Vamos iniciar com alguns exemplos simples.
 </p>
@@ -239,7 +239,7 @@ tentando diferenciar é realmente a composição de duas funções mais simples.
  Seja  <m>f(u) = u^5</m> e <m>g(x) = \sin(x)</m>. Em seguida defina 
 <m>F(x) = f\big(g(x)\big) = \big(\sin(x)\big)^5</m>.Para encontrar a derivada de 
  <m>F(x)</m> podemos simplesmente  <xref ref="th-regra-cadeia-1" text="title"/>. Inciamos, portanto, 
- calculados as derivadas envolvidas:
+ calculando as derivadas envolvidas:
 <md>
 <mrow>
   f(u) \amp= u^5 \amp f'(u) \amp= 5u^4
@@ -286,8 +286,8 @@ Em seguida, siga os mesmos passos e chegamos a
 
 
 
-<p> O <xref ref="eg_DIFFchainruleA"/> mostra uma das maneiras pelas quais a regra da cadeia aparece com muita frequência, 
-quando precisamos diferenciar o poder de alguma função mais simples. De maneira mais geral, temos o seguinte.</p>
+<p> O <xref ref="eg_DIFFchainruleA"/> mostra uma das maneiras pelas quais a Regra da Cadeia aparece com muita frequência, 
+quando precisamos diferenciar a potência de alguma função mais simples. De maneira mais geral, temos o seguinte.</p>
 
 <assemblage xml:id="assemblage-cadeia-potencia">
 <title>Derivada da potência de uma função</title>
@@ -326,6 +326,15 @@ quando precisamos diferenciar o poder de alguma função mais simples. De maneir
 
 
 <example xml:id="eg_2_9_2"><title>Derivada de <m>\cos(3x-2)</m></title>
+
+<statement>
+    <p>
+        Determine a derivava em <m>x</m> para <m>y=\cos(3x-2)</m>.
+    </p>
+</statement>
+<solution>
+ 
+
 <p>
  Fazendo <m>f(u) = \cos(u)</m> e <m>g(x) = 3x-2</m> 
  podemos escrever 
@@ -356,7 +365,7 @@ Então a <xref ref="th-regra-cadeia-1" text="title"/> fornece:
 </mrow>
 </md>
 </p>
-
+</solution>
 </example>
 
 
@@ -468,17 +477,27 @@ f'(u)\amp=75 u^{74}
 </mrow><mrow>
 g(x)\amp=1+3x \amp
 g'(x)\amp=3
-</mrow><mrow>
-F(x)\amp=f\big(g(x)\big)=g(x)^{75}=\big(1+3x\big)^{75}
 </mrow>
 </md>
-Então <xref ref="th-regra-cadeia-2" text="title"/> fornece:
+Já que 
+
+<me>
+    
+F(x)=f\big(g(x)\big)=g(x)^{75}=\big(1+3x\big)^{75}
+
+</me>
+
+
+ <xref ref="th-regra-cadeia-2" text="title"/> fornece:
 <md>
 <mrow>
 F'(x)\amp= f'\big(g(x)\big)\,g'(x)
-     = 75\, g(x)^{74} \,g'(x)
-     = 75\, \big(1+3x\big)^{74} \cdot 3
-</mrow><mrow>
+     
+     
+</mrow>
+<mrow> \amp = 75\, g(x)^{74} \,g'(x)</mrow>
+<mrow> \amp = 75\, \big(1+3x\big)^{74} \cdot 3</mrow>
+<mrow>
      \amp= 225\, \big(1+3x\big)^{74}
 </mrow>
 </md>
@@ -544,19 +563,31 @@ f'(u)\amp=\cos u
 </mrow><mrow>
 g(x)\amp=x^2 \amp
 g'(x)\amp=2x
-</mrow><mrow>
-F(x)\amp=f\big(g(x)\big)=\sin\big(g(x)\big)=\sin(x^2)
 </mrow>
 </md>
-Então <xref ref="th-regra-cadeia-2" text="title"/> fornece:
+
+Já que 
+
+<me>
+ 
+F(x)=f\big(g(x)\big)=\sin\big(g(x)\big)=\sin(x^2)
+
+</me>
+
+<xref ref="th-regra-cadeia-2" text="title"/> fornece:
 <md>
 <mrow>
 F'(x)\amp= f'\big(g(x)\big)\,g'(x)
-     = \cos\big(g(x)\big) \,g'(x)
-     = \cos(x^2) \cdot 2x
-</mrow><mrow>
+     
+     
+</mrow>
+<mrow> \amp = \cos\big(g(x)\big) \,g'(x)</mrow>
+<mrow> \amp = \cos(x^2) \cdot 2x </mrow>
+<mrow>
      \amp= 2x\cos(x^2)
 </mrow>
+
+
 </md>
 </p>
 </solution>
@@ -596,16 +627,25 @@ f'(u)\amp=\tfrac{1}{3}u^{-\tfrac{2}{3}}
 </mrow><mrow>
 g(x)\amp=\sin(x^2) \amp
 g'(x)\amp=2x\cos(x^2)
-</mrow><mrow>
-F(x)\amp=f\big(g(x)\big)=\root{3}\of{g(x)}=\root{3}\of{\sin(x^2)}
 </mrow>
 </md>
-O calculo de  <m>g'(x)</m> acima, foi feito no <xref ref="eg_DIFFchainB"/>.
-Portanto, <xref ref="th-regra-cadeia-2" text="title"/> fornece:
+
+
+Lembre que as contas para obter <m>g'(x)</m> acima, foi feito no <xref ref="eg_DIFFchainB"/>.
+Portanto, uma vez que  
+<me>
+
+F(x)=f\big(g(x)\big)=\root{3}\of{g(x)}=\root{3}\of{\sin(x^2)}
+
+</me>
+
+
+<xref ref="th-regra-cadeia-2" text="title"/> fornece:
 <md>
 <mrow>
-F'(x)\amp= f'\big(g(x)\big)\,y'(x)
-     = \tfrac{1}{3} g(x)^{-\tfrac{2}{3}} \cdot 2x\cos(x^2)
+F'(x)\amp= f'\big(g(x)\big)\,g'(x)</mrow>
+<mrow> \amp  = \tfrac{1}{3} g(x)^{-\tfrac{2}{3}} \cdot 2x\cos(x^2) 
+    
 </mrow><mrow>
      \amp= \frac{2x}{3}\,\frac{\cos(x^2)}{[\sin(x^2)]^{\frac{2}{3}}}
 </mrow>
@@ -630,12 +670,19 @@ F'(x)\amp= f'\big(g(x)\big)\,y'(x)
             <md>
                 <mrow> f(u)\amp = e^u \amp  f'(u)=e^u  </mrow>
                 <mrow> g(x)\amp =\sin{x}\amp g'(x)=\cos{x}</mrow>
-                <mrow> F(x)\amp = f(g(x))=e^{\sin{x}} </mrow>
+                
             </md>
-        Portanto, <xref ref="th-regra-cadeia-2" text="title"/> fornece:
+
+        Já que <me>
+             F(x) = f(g(x))=e^{\sin{x}}
+        </me>
+        
+         <xref ref="th-regra-cadeia-2" text="title"/> fornece:
 
         <md>
-            <mrow>  F'(x)\amp=f'(g(x))g'(x)= e^{g(x)}g'(x)=e^{\sin{x}}\cos{x}</mrow>
+            <mrow>  F'(x)\amp=f'(g(x))g'(x)</mrow>
+            <mrow> \amp = e^{g(x)}g'(x) </mrow>
+            <mrow> \amp = e^{\sin{x}}\cos{x}</mrow>
         </md>
            
         

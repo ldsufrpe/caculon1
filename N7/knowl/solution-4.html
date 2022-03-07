@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-06T22:37:13-03:00       *-->
+<!--*       on 2022-03-07T12:36:42-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,27 +16,17 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.11.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.10.1</span><span class="period">.</span>
 </h4>
-<p>Esta é uma versão concreta do <a href="" class="xref" data-knowl="./knowl/eg_DIFFchainaxb.html" title="Exemplo 1.10: Derivada de f(ax+b)">Exemplo 1.10</a>. Devemos encontrar a derivada de uma função que é construída primeiro calculando <span class="process-math">\(1+3x\)</span> e depois tomando  <span class="process-math">\(75\)</span>-ésima potência do resultado. Então</p>
+<p>Defina <span class="process-math">\(g(x) = ax+b\text{.}\)</span> Então</p>
 <div class="displaymath process-math">
 \begin{align*}
-f(u)\amp=u^{75} \amp
-f'(u)\amp=75 u^{74}\\
-g(x)\amp=1+3x \amp
-g'(x)\amp=3\\
-F(x)\amp=f\big(g(x)\big)=g(x)^{75}=\big(1+3x\big)^{75}
+\dfrac{\dd }{\dd x} f(ax+b) \amp= \dfrac{\dd }{\dd x} f\big(g(x)\big)\\
+\amp= f'\big(g(x)\big) \cdot g'(x)\\
+\amp= f'(ax+b) \cdot a
 \end{align*}
 </div>
-<p class="continuation">Então <a href="" class="xref" data-knowl="./knowl/th-regra-cadeia-2.html" title="Teorema 1.2: A Regra da Cadeia — version 2">A Regra da Cadeia — version 2</a> fornece:</p>
-<div class="displaymath process-math">
-\begin{align*}
-F'(x)\amp= f'\big(g(x)\big)\,g'(x)
-= 75\, g(x)^{74} \,g'(x)
-= 75\, \big(1+3x\big)^{74} \cdot 3\\
-\amp= 225\, \big(1+3x\big)^{74}
-\end{align*}
-</div>
+<p class="continuation">Portanto, a derivada de <span class="process-math">\(f(ax+b)\)</span> em relação a <span class="process-math">\(x\)</span> é apenas <span class="process-math">\(a f'(ax+b)\text{.}\)</span></p>
 </div>
 <span class="incontext"><a href="section-1.html#solution-4" class="internal">em contexto</a></span>
 </body>
