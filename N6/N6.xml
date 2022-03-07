@@ -753,7 +753,7 @@ a seguir vai permitir calcular derivadas de funções definidas pelas operaçõe
     </statement>
       <solution>
         <p>
-        Até o momento não sabemos como calcular derivada do quociente de funções. Portanto, neste momento precisamos transformas
+        Até o momento não sabemos como calcular derivada do quociente de funções. Portanto, neste momento precisamos transformar 
         a expressão na subtração de duas outras como a seguir: 
 
         <me>
@@ -1383,10 +1383,10 @@ Q'(x) \amp= \frac{f'(x)-g'(x)\,Q(x)}{g(x)}
     
 
 
-<p>A operação de diferenciação toma como entrada uma função,
+<p>A operação de derivação toma como entrada uma função,
 <m>f(x)</m>, e produz como saída outra função, <m>f'(x)</m>. Agora <m>f'(x)</m> é
-mais uma vez uma função. Então, podemos diferenciá-lo novamente, supondo que
-é diferenciável, para criar uma terceira função, chamada de segunda
+mais uma vez uma função. Então, podemos derivá-la novamente, supondo que
+é derivável, para criar uma terceira função, chamada de segunda
 derivada de <m>f</m>. E podemos derivar a segunda derivada novamente
 para criar uma quarta função, chamada terceira derivada de <m>f</m>.
 E assim por diante.</p>
@@ -1452,10 +1452,9 @@ Seja <m>n</m> um número natural e seja <m>f(x)= x^n</m>. Então
 \dfrac{\dd^3 }{\dd x^3}[x^n]\amp=\frac{\dd }{\dd x}\big(n(n-1)x^{n-2}\big)=n(n-1)(n -2)x^{n-3}
 </mrow>
 </md>
-Cada vez que derivamos, reduzimos o expoente, que é exatamente um menor que o expoente anterior reduzido,
- e reduzimos o expoente em um. Quando tivermos derivado <m>n-1</m> vezes,
-o expoente diminuiu para <m>n-(n-1)=1</m> e reduzimos o
-fatores <m>n(n-1)(n-2)\cdots 2</m>. Assim
+Cada vez que derivamos, reduzimos o expoente, que é exatamente uma unidade menor que o expoente anterior reduzido. Quando tivermos derivado <m>n-1</m> vezes,
+o expoente diminuiu para <m>n-(n-1)=1</m> e  os  
+fatores ficam <m>n(n-1)(n-2)\cdots 2</m>. Assim
 <md>
 <mrow>
 \dfrac{\dd^{n-1} }{\dd x^{n-1}}[x^n]\amp=n(n-1)(n-2)\cdots 2x

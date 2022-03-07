@@ -174,7 +174,7 @@ usando as operações de soma, subtração, divisão e composição.
 </p>
 
 
-<assemblage xml:id="th-triviais"><title>Limites especiais</title>
+<assemblage xml:id="th-triviais"><title>Limites essenciais</title>
 <p>
 Seja <m>a,c</m> números reais. Os seguintes limites são verdadeiros
 <md>
@@ -241,7 +241,7 @@ o limite de um quociente é o quociente dos limites (desde que o limite do denom
 
 </p>
 
-    
+ 
 
 <task>
   <p>
@@ -266,31 +266,31 @@ o limite de um quociente é o quociente dos limites (desde que o limite do denom
    <m> \lim\limits_{x \to 1} \dfrac{f(x)}{f(x) -g(x)}</m>
   </p>
 </task>
-</statement>
+</statement>   
 <solution>
   <p>
   De acordo com o <xref ref="th-prop-limt"/> temos os seguintes limites quando <m>x</m> tenda a <m>1</m>:
 
 
 <md>
-  <mrow>  \lim\limits_{x \to 1} 3f(x) = \amp 3 \cdot \lim\limits_{x \to 1}f(x) = 3\cdot 3 = 9 </mrow>
+  <mrow>  \lim\limits_{x \to 1} 3f(x) \amp = 3 \cdot \lim\limits_{x \to 1}f(x) = 3\cdot 3 = 9 </mrow>
 </md>
 
 <md>
-  <mrow>\lim\limits_{x \to 1} (3f(x)-g(x)) = \amp 3\cdot \lim\limits_{x \to 1}f(x) - \lim\limits_{x \to 1}g(x) </mrow>
-  <mrow> = \amp 3\cdot 3-2 = 7</mrow>
+  <mrow>\lim\limits_{x \to 1} (3f(x)-g(x))  \amp= 3\cdot \lim\limits_{x \to 1}f(x) - \lim\limits_{x \to 1}g(x) </mrow>
+  <mrow>  \amp = 3\cdot 3-2 = 7</mrow>
 </md>
 
 <md>
-  <mrow> \lim\limits_{x \to 1} f(x) g(x)  = \amp   \lim\limits_{x \to 1} f(x) \cdot\lim\limits_{x \to 1} g(x)</mrow>
+  <mrow> \lim\limits_{x \to 1} f(x) g(x)   \amp =   \lim\limits_{x \to 1} f(x) \cdot\lim\limits_{x \to 1} g(x)</mrow>
 
-  <mrow> = \amp 3\cdot 2 = 6</mrow>
+  <mrow>  \amp = 3\cdot 2 = 6</mrow>
 </md>
 
 E já que <m>\lim\limits_{x \to 1}g(x)\neq 0</m>:
 <md>
-  <mrow> \lim\limits_{x \to 1} \frac{f(x)}{f(x) -g(x)} = \amp \frac{\lim\limits_{x \to 1} f(x)}{\lim\limits_{x \to 1} f(x) - \lim\limits_{x \to 1} g(x)}  </mrow>
-  <mrow>= \amp  \frac{3}{3-2} = 3 </mrow>
+  <mrow> \lim\limits_{x \to 1} \frac{f(x)}{f(x) -g(x)}  \amp  =\frac{\lim\limits_{x \to 1} f(x)}{\lim\limits_{x \to 1} f(x) - \lim\limits_{x \to 1} g(x)}  </mrow>
+  <mrow>  \amp =  \frac{3}{3-2} = 3 </mrow>
 </md>
 
   </p>
@@ -303,7 +303,7 @@ E já que <m>\lim\limits_{x \to 1}g(x)\neq 0</m>:
 <example xml:id="eg_1_4_2"><title>Mais cálculos usando propriedades de limites</title>
 <statement>
 <p>
-Determine <m>\lim\limits_{x \to 3} 4x^2-1</m>
+Determine <m>\lim\limits_{x \to 3} 4x^2-1</m>. 
 </p>
 </statement>
 
@@ -473,8 +473,8 @@ Como o limite do denominador é diferente de zero, usamos as propriedades para o
 <p>
 
 
-Devemos ter cuidado ao calcular o limite de uma razão <mdash/> que é a razão dos limites, exceto quando o limite do denominador é zero.
- Quando o limite do denominador é zero o <xref ref="th-prop-limt"/>  <alert>não se aplica</alert> e 
+Devemos ter cuidado ao calcular o limite de um quociente <mdash/> que é o quociente dos limites, exceto quando o limite do denominador é zero.
+ Quando o limite do denominador é zero o <xref ref="th-prop-limt"/>  <alert>não se aplica</alert>, e 
  algumas das possibilidade a seguir podem acontecer:</p>
 <p>
 <ol>
@@ -766,7 +766,7 @@ quando o limite do denominador não é zero.
 
 <p>
 Agora apresentaremos mais duas regras para calcular limites de potência e raízes de funções. Iniciamos com a propriedade que 
-pode ser obtida a partir da aplicação repetidamente do produto  de limites para <m>f(x)=g(x)</m>.
+pode ser obtida a partir da aplicação repetida do produto  de limites para <m>f(x)=g(x)</m>.
 </p>
 
 <assemblage xml:id="thm_lim_powers"><title>Propriedade da Potência</title>
@@ -928,7 +928,7 @@ Aplicando os limites os limites de numerador e denominador separadamente obtemos
 </md>
 
 Uma vez que o denominador é zero, não podemos aplicar o <xref ref="th-poli-racionais"/>.
- Fazendo uma análise crítica, note que a medida que ambos, numerador e denominador tendem para
+ Fazendo uma análise crítica, note que à medida que ambos, numerador e denominador tendem para
   zero quando <m>x\to 1</m> é possível haver termos comuns que podem ser cancelados. Então vamos manipular 
   um pouco mais a expressão e então calcular  o limite:
 
@@ -1001,12 +1001,12 @@ são ambos zero quando <m>h\to 0</m> . Portanto, devemos tentar fatorá-los e ca
 <md>
 <mrow>
     \lim\limits_{h \to 0} \frac{(1+h)^2-1}{h}
-  =\amp   \lim\limits_{h \to 0} \frac{1+2h+h^2-1}{h}</mrow>
-  <mrow> =\amp\lim\limits_{h \to 0} \frac{\cancel{h}(2+h)}{\cancel{h}}
+  \amp =   \lim\limits_{h \to 0} \frac{1+2h+h^2-1}{h}</mrow>
+  <mrow> \amp =\lim\limits_{h \to 0} \frac{\cancel{h}(2+h)}{\cancel{h}}
 </mrow><mrow>
-  =\amp   \lim\limits_{h \to 0} (2+h)
+  \amp =   \lim\limits_{h \to 0} (2+h)
 </mrow><mrow>
-  =\amp 2
+  \amp = 2
  </mrow>
 </md>
 </p>
@@ -1166,7 +1166,7 @@ A igualdade acima permite calcular o limite com facilidade:
 </theorem>
 
 
-<theorem xml:id="thm_squeeze"><title>Teorema do confronto</title>
+<theorem xml:id="thm_squeeze"><title>Teorema do Confronto</title>
 <statement><p>
 Seja <m>a</m> um número real e <m>f,g,h</m> funções tais que <m>f(x) \leq g(x) \leq h(x)</m>
 
@@ -1212,7 +1212,7 @@ multiplicando por  <m>x^2</m> veremos que
 </mrow>
 </md>
 
-Como <me>     \lim\limits_{x \to 0} x^2 =   \lim\limits_{x \to 0} (-x^2) = 0</me>  o  <xref ref="thm_squeeze" text="custom"> teorema do confronto </xref>
+Como <me>     \lim\limits_{x \to 0} x^2 =   \lim\limits_{x \to 0} (-x^2) = 0</me>  o  <xref ref="thm_squeeze" text="title">  </xref>
 fornece 
 <md>
 <mrow>
