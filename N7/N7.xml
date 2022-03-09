@@ -443,11 +443,47 @@ Portanto, a derivada de <m>f(ax+b)</m> em relação a <m>x</m> é apenas <m>a f'
     </p>
 </assemblage>
 
-
-
-
 </subsection>
 
+<subsection xml:id="subsec-vídeos-1">
+    <title>Sugestão de vídeos</title>
+
+
+    <ul>
+        <li>
+            <p>
+                <url href="https://youtu.be/sgYtbgQWcKw"  visual="youtu.be/sgYtbgQWcKw"> Entendendo a Regra da Cadeia.</url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+                <url href="https://youtu.be/w6XQ8T9Hm9k"  visual="youtu.be/w6XQ8T9Hm9k"> Principais erros na Regra da Cadeia.</url>
+            </p>
+        </li>
+
+
+        <li>
+            <p>
+                <url href="https://youtu.be/lan53jZ0h5s"  visual="https://youtu.be/lan53jZ0h5s"> Identificando funções compostas.</url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+                <url href="https://youtu.be/VHIAgBLx7dc"  visual="https://youtu.be/VHIAgBLx7dc"> Calculando a derivada de <m>\cos^3{x}</m> usando a Regra da Cadeia.</url>
+            </p>
+        </li>
+
+        <li>
+            <p>
+                <url href="https://youtu.be/5QPoCjLqfhM"  visual="youtu.be/5QPoCjLqfhM"> Calculando a derivada de <m>\sqrt{3x^2-x}</m> usando a Regra da Cadeia.</url>
+            </p>
+        </li>
+    </ul>
+    
+</subsection>
+    
 
 
 <subsection>
@@ -803,7 +839,26 @@ então <xref ref="th-regra-cadeia-3" text="title"/> fornece:
 
 </subsection>
 
+<subsection xml:id="subsec-videos-2">
+    <title>Sugestão de vídeos</title>
 
+    <ul>
+        <li>
+            <p>
+                <url href="https://youtu.be/3ioxIfHTbAY"  visual="https://youtu.be/3ioxIfHTbAY"> Calculando <m>\dfrac{\dd}{\dd x}\left[\sqrt[4]{x^3+4x^2+7} \right]</m> .</url>
+            </p>
+        </li>
+
+         <li>
+            <p>
+                <url href="https://youtu.be/PyRtQQGCsB8"  visual="https://youtu.be/PyRtQQGCsB8"> Encontre  <m>\dfrac{\dd y}{\dd x}</m> para  <m> y=\sec{\left(\frac{3\pi}{2}-x\right)}</m> .</url>
+            </p>
+        </li>
+
+
+    </ul>
+    
+</subsection>
 
 
 

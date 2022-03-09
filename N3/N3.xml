@@ -820,6 +820,81 @@ Portanto, <m>\sin(x)\geq 0</m> quando <m>x\in[0,\pi]</m> ou <m>x\in [2\pi,3\pi]<
 
 </example>
 
+</subsection>
+
+<subsection xml:id="subsec-tvi">
+  <title>Sugestão de Vídeos</title>
+
+<ul>
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/VglKgsmUglk"  visual="youtu.be/VglKgsmUglk"> Tipos de descontinuidade.</url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/bUcr2cQhMp0"  visual="https://youtu.be/bUcr2cQhMp0"> Continuidade em um ponto.</url>
+        </p>
+    </li>
+
+     <li>
+        <p>
+           
+          <url href="https://youtu.be/xVQjzhGk3H4"  visual="youtu.be/xVQjzhGk3H4"> Problema resolvido (gráfico).</url>
+        </p>
+    </li>
+
+
+        <li>
+        <p>
+           
+          <url href="https://youtu.be/Z3A-kakc2WA"  visual="youtu.be/Z3A-kakc2WA"> A função <m>g(x)=\begin{cases}\log{3x} \, \text{ se  }\, 0\lt x \lt 3  \\ (4-x)\log{9}\, \text{ se } \, x\geq 3\end{cases}</m> é contínua em 3?</url>
+        </p>
+    </li>
+
+
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/0wcKI7Uy7jg"  visual="youtu.be/0wcKI7Uy7jg">A função <m>g(x)=\begin{cases}\ln{x} \, \text{ se  }\, 0\lt x \geq 2   \\ x^2\ln{x}\, \text{ se } \, x\gt 2\end{cases}</m> é contínua em 2?.</url>
+        </p>
+    </li>
+
+
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/_I8AiyZjSWc"  visual="youtu.be/_I8AiyZjSWc"> Continuidade em um intervalo.</url>
+        </p>
+    </li>
+
+
+
+  <li>
+        <p>
+           
+          <url href="https://youtu.be/uB7mY6Mw3EA"  visual="youtu.be/uB7mY6Mw3EA"> As funções <m>e^x</m> e <m>\sqrt{x}</m> são contínuas em todos os números reais?</url>
+        </p>
+    </li>
+
+
+  <li>
+        <p>
+           
+          <url href="https://youtu.be/6JlBI56u9DA"  visual="youtu.be/6JlBI56u9DA"> Quais das funções <m>\ln{(x-3)}</m> e <m>e^{x-3}</m> são contínuas em <m>x=3</m> ?</url>
+        </p>
+    </li>
+</ul>
+  
+</subsection>
+
+
+<subsection xml:id="subsec-TVI">
+  <title>Localizando zeros de funções</title>
+
 <p>
 Funções contínuas são muito boas (matematicamente falando). As funções do <q>mundo real</q> tendem a ser contínuas (embora nem sempre). 
 O aspecto chave que os torna bons é o fato de que eles não <q>saltam</q>.
@@ -896,7 +971,7 @@ então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da d
     
     <figure xml:id="fig-TVI">
       <caption></caption>
-      <image xml:id="image-TVI">
+      <image xml:id="image-TVI" width="50%">
         <description></description>
         <sageplot>
           p = plot(4*x^3-6*x^2 + 3*x-2, (x, 0, 2.5), aspect_ratio=1/17, figsize=[4,3], thickness=1.5, exclude=[1], 
@@ -932,6 +1007,40 @@ então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da d
 </exercise>
 
 </subsection>
+
+
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+
+
+  <li>
+        <p>
+           
+          <url href="https://youtu.be/eG7COw9m7Yw"  visual="youtu.be/eG7COw9m7Yw">  Entendendo o Teorema do Valor Intermediário</url>
+        </p>
+    </li>
+
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/ZDLmZnQgR1c"  visual="youtu.be/ZDLmZnQgR1c">  Usando o Teorema do Valor Intermediário</url>
+        </p>
+    </li>
+
+
+        <li>
+        <p>
+           
+          <url href="https://youtu.be/qqPNheykyE4"  visual="youtu.be/qqPNheykyE4">  Encontrando zeros de funções</url>
+        </p>
+    </li>
+
+
+</ul>    
+</subsection>
+
   
 <exercises xml:id="exercises-continuas-N3">
 <!-- 
