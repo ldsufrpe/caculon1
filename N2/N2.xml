@@ -203,7 +203,7 @@ Seja m <m>a,c </m> números reais,  <m>f(x)</m> e <m>g(x)</m> funções em que o
 <li>
 	<m> \lim\limits_{x \to a} ( f(x) - g(x) ) = \lim\limits_{x \to a} f(x) - \lim\limits_{x \to a}g(x)  </m> 
 </li>
-<li> <m>\lim\limits_{x \to a} c f(x) = c \lim\limits_{x \to a} c f(x)</m>. </li>
+<li> <m>\lim\limits_{x \to a} c f(x) = c \lim\limits_{x \to a} f(x)</m>. </li>
 
 <li>
   <p>
@@ -1430,7 +1430,7 @@ quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à 
 
 <references xml:id="references-backmatter">
     <title>Referências</title>
-    <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-1 Differential Calculus. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-1 Differential Calculus. </title> 2021.</biblio>
   
     <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal></journal>, 2021.</biblio>
     <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
