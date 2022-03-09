@@ -125,329 +125,535 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             
         </objectives>
 
- <subsection xml:id="subsec-xx">
-    <title>Titulo</title>
-    <definition xml:id="def-xx">
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
-    </definition>
+<subsection><title>Continuity</title>
+
+<p>
+We have seen that computing the limits some functions <mdash/> polynomials and  rational functions <mdash/> is very easy because
+<md>
+<mrow>
+  \lim_{x \to a} f(x) \amp= f(a).
+</mrow>
+</md>
+That is, the the limit as <m>x</m> approaches <m>a</m> is just <m>f(a)</m>. Roughly speaking,  the reason we can compute the limit this way is that these functions do not  have any abrupt jumps near <m>a</m>.
+</p>
+
+<p>
+Many other functions have this property, <m>\sin(x)</m> for example. A function  with this property is called <q>continuous</q> and there is a precise mathematical definition  for it. If you do not recall interval notation, then now is a good time to take a quick  look back at Definition<nbsp/><xref ref="def_intervals"/>.
+</p>
+
+<definition xml:id="def_1_6_1">
+<statement><p>
+Uma função <m>f(x)</m> é contínua em <m>a</m> se
+<md>
+<mrow>
+	\lim_{x \to a} f(x) \amp= f(a).
+</mrow>
+</md>
+</p></statement>
+</definition>
+
+<p>
+Se uma função não é contínua em <m>a</m> então dizemos que ela é <term>descontínua</term> em <m>a</m>.
+ Quando <m>f</m> é contínua em todos os pontos dizemos simplesmente que <m>f</m> é contínua, sem especificar o ponto. 
+Quando escrevemos que <m>f(x)</m> é contínua no intervalo aberto <m>(a,b)</m> então a função é contínua em todo ponto <m>c \in (a,b)</m>.</p>
+
+<assemblage xml:id="assemblage-continuidade">
+    <title>Consequências da continuidade</title>
+  <p>
+Quando uma função <m>f</m> é contínua em <m>x=a</m>, sabemos imediatamente que
+<ol>
+<li> <m>f(a)</m> existe </li>
+<li> <m>\displaystyle \lim_{x \to a^-}f(x)</m> existe e é igual a <m>f(a)</m>, e </li>
+<li> <m>\displaystyle \lim_{x \to a^+}f(x)</m> existe e é igual a <m>f(a)</m>. </li>
+</ol>
+</p>
+</assemblage>
+
+
+</subsection>
+
+<subsection><title>Continuidade laterais</title>
+
+<p>
+Observe que na <xref ref="def_1_6_1"/>  evitamos dizer qualquer coisa sobre se a função é ou não contínua nas extremidades do intervalo, ou seja é <m >f(x)</m> contínuo em <m>x=a</m> ou <m>x=b</m>. Isso porque falar de
+continuidade nas extremidades de um intervalo pode ser um pouco delicada.
+</p>
+
+<p>
+Em muitas situações nos será dada uma função <m>f(x)</m> definida em um intervalo fechado <m>[a,b]</m>. Por exemplo, podemos ter:
+<md>
+<mrow>
+  f(x) \amp= \frac{x+1}{x+2} \amp \text{para } x \in [0,1].
+</mrow>
+</md>
+Para qualquer <m>0 \leq x \leq 1</m> sabemos o valor de <m>f(x)</m>. Entretanto, para <m>x \lt 0</m> ou <m>x \gt 1</m> não sabemos nada sobre a função <mdash/> na verdade ela não foi definida.
+</p>
+
+<p>
+Agora, considere o que significa <m>f(x)</m> ser contínuo em <m>x=0</m>. Precisamos ter
+<md>
+<mrow>
+  \lim_{x\to 0} f(x) \amp= f(0),
+</mrow>
+</md>
+no entanto, isso implica que os limites laterais
+<md>
+<mrow>
+  \lim_{x\to 0^+} f(x) \amp= f(0) \amp \text{e}\amp\amp \lim_{x\to 0^-} f(x) \amp= f (0)
+</mrow>
+</md>
+Agora, o primeiro desses limites laterais envolve examinar o comportamento de <m>f(x)</m> para <m>x \gt 0</m>. Como isso envolve olhar para os pontos para os quais <m>f(x)</m> está definido, isso é algo que podemos fazer. 
+Por outro lado, o segundo limite lateral exige que entendamos o comportamento de <m>f(x)</m> para <m>x \lt 0</m>. Isso não podemos fazer porque a função não foi definida para <m>x \lt 0</m>.
+</p>
+
+<p>
+Uma maneira de contornar esse problema é generalizar a ideia de continuidade para continuidade lateral, da mesma forma que fizemos para obter limites laterais.
+</p>
+<definition  xml:id="def_1_6_2"> 
+<statement><p>
+  Uma função <m>f(x)</m> é contínua à direita em <m>a</m> se
+  <md>
+<mrow>
+    \lim_{x\to a^+} f(x) \amp= f(a).
+  </mrow>
+</md>
+  Analogamente,  <m>f(x)</m> é contínua à esquerda em <m>a</m> se
+  <md>
+<mrow>
+    \lim_{x\to a^-} f(x) \amp= f(a)
+  </mrow>
+</md>
+</p></statement>
+</definition>
+
+<p>
+Usando a definição de continuidade lateral, podemos agora definir o que significa uma função ser contínua em um intervalo fechado.</p>
+
+<definition xml:id="def_1_6_3"> 
+<statement><p>
+ Uma função <m>f(x)</m> é contínua em um intervalo fechado <m>[a,b]</m> quando
+<ul>
+<li> <m>f(x)</m> é contínua em <m>(a,b)</m>,
+</li>
+<li> <m>f(x)</m>é contínua à direita em  <m>a</m>, e
+</li>
+<li> <m>f(x)</m> é contínua à esquerda em  <m>b</m>.
+</li>
+</ul>
+
+</p></statement>
+</definition>
+
+<p>
+    No que as condições apresentadas na  <xref ref="def_1_6_3"/> são equivalentes a:
+<md>
+<mrow>
+   \lim_{x\to a^+} f(x) \amp= f(a) \amp \text{e }\amp\amp  \lim_{x\to b^-} f(x) \amp= f(b).
+</mrow>
+</md>
+</p>
+
+</subsection>
+
+<subsection><title>Alguns exemplos sobre continuidade</title>
+
 <example xml:id="ex-1">
     <statement>
         <p>
+            Estude a continuidade da função 
             
+            <md>
+                <mrow> f(x) \amp= \begin{cases} x\amp x \lt 1 \\ x+2 \amp x\geq 1 \end{cases} </mrow>.
+
+            </md>
+
         </p>
     </statement>
     <solution>
+
+            <figure xml:id="fg1">
+                <caption></caption>
+            </figure>
+
         <p>
-            
+            Quando <m>x \lt 1</m> então <m>f(x)</m> é uma reta (e, portanto, um polinômio) e; logo, é contínua em todos os pontos <m>x \lt 1</m>. 
+            Da mesma forma, quando <m>x \gt 1</m> a função é uma reta e, portanto, é contínua em todos os pontos <m>x \gt 1</m>. 
+            O único ponto que pode ser uma descontinuidade é em <m>x=1</m>. Note que os limites laterais são diferentes.
+            Portanto, o limite em <m>x=1</m> não existe e, consequentemente, a função é descontínua em <m>x=1</m>.
+        
         </p>
     </solution>
 </example>
+
 <example xml:id="ex-2">
     <statement>
         <p>
+             Estude a continuidade da função 
             
+            <md>
+                <mrow> g(x) \amp= \begin{cases} \tfrac{1}{x^2}\amp x\neq 0  \\ 0 \amp x=0\end{cases}</mrow>.
+
+            </md>
         </p>
     </statement>
     <solution>
+    <figure xml:id="fig2">
+        <caption></caption>
+    </figure>
         <p>
-            
+    Observe que quando <m>x \neq 0</m> o <m>g(x)</m> é uma função racional e, portanto, é contínua em todos os pontos de seu domínio (que são todos os reais exceto <m>x=0</m>). 
+    Assim, o único ponto em que <m>g(x)</m> pode ser descontínuo é em <m>x=0</m>. Note que nenhum dos limites laterais existe em <m>x=0</m>, então o limite não existe em <m>x=0</m>. 
+    Portanto, a função é descontínua em <m>x=0</m>.
         </p>
     </solution>
 </example>
+
 
 <example xml:id="ex-3">
     <statement>
         <p>
+              Estude a continuidade da função 
             
+            <md>
+                <mrow> h(x) \amp= \begin{cases}\frac{x^3-x^2}{x-1} \amp x\neq 1 \\ 0 \amp x=1 \end{cases}</mrow>.
+
+            </md>
         </p>
     </statement>
     <solution>
+
+     <figure xml:id="fig3">
+                        <caption></caption>
+                    </figure>
         <p>
-            
+        Esse caso é similar aos anteriores. Note que para <m>x \neq 1</m> <m>h(x)</m> é uma função racional, e portanto,  contínua. 
+        Resta verificar o caso em <m>x=1</m>. Por definição de <m>h(x)</m>, <m>h(1) = 0</m>. Vamos calcular o limite quando <m>x\to 1</m> 
+         e depois verificar se está de acordo com a <xref ref="def_1_6_1"/>. Para isso,
+<md>
+<mrow>
+\frac{x^3-x^2}{x-1} \amp= \frac{x^2(x-1)}{x-1} = x^2
+</mrow>
+</md>
+Então <m>\displaystyle\lim_{x \to 1} \frac{x^3-x^2}{x-1} = \lim_{x \to 1} x^2 = 1\neq h(1)</m>. Portanto, <m>h</m> é descontínua em <m>x=1</m>.
         </p>
     </solution>
 </example>
 
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
 
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
-</subsection>
-<subsection xml:id="sugestao-video-1">
-    <title>Sugestão de vídeo</title>
-  
+
+
+<p>
+Os  <xref first="ex-1" last="ex-3"/> ilustram diferentes tipos de descontinuidade.
 <ul>
-    <li>
-        <p>
-          Problema Resolvido: texto 1.<url></url>
-        </p>
-    </li>
+<li>
+A função <m>f(x)</m> tem uma <q>descontinuidade de salto</q> porque a função <q>salta</q> de um valor 
+finito à esquerda para outro valor à direita.</li>
+<li>
+	A função <m>g(x)</m>, tem o que chamamos de  <q>descontinuidade infinita</q> uma vez que <m>\displaystyle\lim\limits_{x\to 0} f(x) =+\infty</m>.
+</li>
+<li>
+A função <m>h(x)</m>, tem uma <q>descontinuidade removível</q> porque podemos tornar a função contínua nesse ponto redefinindo a função nesse ponto. 
+Ou seja, definindo <m>h(1)=1</m>. Isto é,<md>
+	<mrow>
+	  h(x) \amp= \begin{cases}
+		\frac{x^3-x^2}{x-1} \amp x\neq 1
+	</mrow><mrow>
+		1 \amp x=1
+		\end{cases}
+	</mrow>
+	</md>
+</li>
+</ul>
+</p>
 
-    <li>
-        <p>
-            Problema Resolvido:  texto 2.<url></url>
-        </p>
-    </li>
- <li>
-     <p>
-          texto 3<url></url>
-     </p>
+<p>
+Mostrar que uma função é contínua pode ser trabalhoso, mas assim como as regras de limite nos ajudam a calcular limites
+ complicados em termos de limites mais simples, podemos usá-las para mostrar que funções complicadas são contínuas
+  dividindo-as em partes mais simples.</p>
+
+<theorem xml:id="thm_arith_cont"><title>Propriedades da função contínua</title>
+<statement><p>
+ Sejam  <m>f(x)</m> e <m>g(x)</m> funções contínuas em <m>a</m> e <m>c</m> uma constante. Então as funções a seguir são também contínuas em <m>x=a</m>:
+<ol>
+<li> <m>f(x) + g(x)</m>  
+
  </li>
-</ul>    
-</subsection>
 
-
-   <subsection xml:id="subsec-xxx">
-    <title>Título</title>
-    <definition xml:id="def-xxx">
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
-    </definition>
-<example xml:id="ex-4">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-<example xml:id="ex-5">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-
-<example xml:id="ex-6">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
-
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
-</subsection>
-<subsection xml:id="sugestao-video-2">
-    <title>Sugestão de vídeo</title>
-  
-<ul>
-    <li>
-        <p>
-          Problema Resolvido: texto 1.<url></url>
-        </p>
-    </li>
-
-    <li>
-        <p>
-            Problema Resolvido:  texto 2.<url></url>
-        </p>
-    </li>
  <li>
-     <p>
-          texto 3<url></url>
-     </p>
+    <m>f(x) - g(x)</m>
  </li>
-</ul>    
-</subsection>
-<subsection xml:id="subsec-xxxxxx">
-    <title>Título</title>
- <definition xml:id="def-xxxxxxxxx">
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
-    </definition>
-<example xml:id="ex-7">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-<example xml:id="ex-8">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
+<li> <m>c f(x)</m></li>
 
-<example xml:id="ex-9">
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <solution>
-        <p>
-            
-        </p>
-    </solution>
-</example>
-
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>
-
-<exercise>
-    <statement>
-        <p>
-            
-        </p>
-    </statement>
-    <hint>
-        <p>
-            
-        </p>
-    </hint>
-    <answer>
-        <p>
-            
-        </p>
-    </answer>
-</exercise>   
+<li>
     
-</subsection>   
-<subsection xml:id="sugestao-video-3">
-    <title>Sugestão de vídeo</title>
+         <m>f(x) g(x)</m>
+    
+</li>
+<li> <m>\frac{f(x)}{g(x)}</m> desde que <m>g(a) \neq 0</m>. </li>
+</ol>
+</p></statement>
+</theorem>
+Acima afirmamos que polinômios e funções racionais são contínuas (tendo cuidado com domínios de funções racionais <mdash/> devemos evitar que os denominadores sejam zero) 
+nossos próximos passos tem a intenção de formalizar estas afirmações.
+
+<lemma xml:id="lem_1_6_1">
+<statement><p>
+ Seja  <m>c </m> uma constante. As funções
+<md>
+<mrow>
+  f(x) \amp= x \amp g(x) \amp= c
+</mrow>
+</md>
+são contínuas em todos os números rais.
+</p></statement>
+</lemma>
+
+
+<p>
+Agora, como podemos obter qualquer polinômio e qualquer função racional adicionando, subtraindo,
+ multiplicando e dividindo cuidadosamente as funções <m>f(x)=x</m> e <m>g(x)=c</m>,
+ o <xref ref="lem_1_6_1"/> acima combina com o  <xref ref="thm_arith_cont"/> para nos dar o resultado que queremos:
+</p>
+
+<theorem><title>Continuidade de polinômios e funções racionais</title>
+<statement><p>
+Todo polinômio é contínuo em todos os lugares. Da mesma forma, toda função racional é contínua,
+ exceto onde seu denominador é zero (ou seja, em todo o seu domínio).</p></statement>
+</theorem>
+
+<p>Com um pouco mais de trabalho, esse resultado pode ser estendido para tipos mais amplos de funções::</p>
+
+<theorem xml:id="th-tipos-continuas">
+<statement><p>
+As seguintes funções são contínuas em todos os seus domínios<ul>
+<li> funções polinomiais e  racionais </li>
+<li> funções raízes e potência </li>
+<li> funções trigonométricas e suas inversas </li>
+<li> funções exponencial e o logarítmica </li>
+</ul>
+</p></statement>
+</theorem>
+
+<p>
+Usando uma combinação dos resultados acima, você pode mostrar que muitas funções complicadas são contínuas, 
+exceto em alguns pontos (geralmente onde o denominador é igual a zero).</p>
+
+<example xml:id="ex-4"><title>Continuidade de <m>\frac{\sin(x)}{2+\cos(x)}</m></title>
+
+<statement>
   
-<ul>
-    <li>
-        <p>
-          Problema Resolvido: texto 1.<url></url>
-        </p>
-    </li>
+    <p>
+Onde a função <m>f(x) = \dfrac{\sin(x)}{2+\cos(x)}</m> é contínua?
 
-    <li>
-        <p>
-            Problema Resolvido:  texto 2.<url></url>
-        </p>
-    </li>
- <li>
-     <p>
-          texto 3<url></url>
-     </p>
- </li>
-</ul>    
+  </p>
+</statement>
+<solution>
+
+
+
+<p>
+
+A função é uma razão de duas partes <mdash/> então a ideia geral é verificar se o numerador é contínuo, o denominador é contínuo e se o denominador pode ser zero.
+O numerador é <m>\sin(x)</m> que é <q>contínuo em seu domínio</q> de acordo com o <xref ref="th-tipos-continuas"/> .
+ Seu domínio são todos os números reais. O denominador é a soma de <m>2</m> e <m>\cos(x)</m>. Como <m>2</m> é uma constante, ela é contínua em todos os números reais. 
+ Da mesma forma (acabamos de verificar as coisas para o ponto anterior), sabemos que <m>\cos(x)</m> é contínuo em todos os reais. Portanto, o denominador é contínuo.
+ Precisamos agora verificar se o denominado se anula. Para isso lembre que
+
+
+	<md>
+	<mrow>
+	  -1 \leq \cos(x) \leq 1
+	</mrow>
+	<intertext>quando somamos 2 em ambos os lados obtemos</intertext>
+	<mrow>
+	  1 \leq 2+\cos(x) \leq 3
+	</mrow>
+	</md>
+Portanto, não importa o valor de <m>x</m>, <m>2+\cos(x) \geq 1</m> e, portanto, o denominador não pode se anular.
+Então o numerador é contínuo, o denominador é contínuo e o denominador não se anula em nenhum ponto, então a função
+ é contínua em todos os números reais.
+
+</p>
+</solution>
+</example>
+
+<example xml:id="ex-5">
+  <statement>
+    <p>
+      Onde a função <m>\displaystyle f(x)=\frac{\sin(x)}{x^2-5x+6}</m> é contínua?
+
+    </p>
+  </statement>
+  <solution>
+    <p>
+     De acordo com o <xref ref="th-tipos-continuas"/>  o numerador e o denominador de <m>f</m> são contínua funções contínuas. 
+     Uma vez que o denominador <m>x^2-5x+6=(x-2)(x-3)</m> se anula em <m>x=2,3</m>. Portanto, a função é contínua em todos os lugares, exceto possivelmente em <m>x=2,3</m>.
+ Para verificar se a função realmente é descontínua nesses pontos, basta verificar se o numerador é diferente de zero em <m>x=2,3</m>. 
+  De fato, sabemos que <m>\sin(x)</m> é zero somente quando <m>x = n\pi</m> (para qualquer inteiro <m>n</m>).
+   Portanto, <m>\sin(2),\sin(3) \neq 0</m>. Assim, o numerador é diferente de zero, enquanto o denominador é zero e,
+    portanto, <m>x=2,3</m> realmente são pontos de descontinuidade.
+    </p>
+  </solution>
+</example>
+
+<remark>
+<p>
+  Observe que no <xref ref="ex-5"/> levanta um ponto sutil sobre a verificação de continuidade quando o numerador e o denominador são <em>simultaneamente</em> zero. Existem alguns resultados possíveis neste caso e precisamos de ferramentas mais sofisticadas para analisar adequadamente o comportamento das funções próximas a esses pontos. 
+</p>
+</remark>
+
+<p>
+Outra forma de combinar as funções contínuas <m>f</m> e <m>g</m> para obter novas funções contínuas é
+formar a função composta <m>f\circ g</m>. 
+</p>
+
+<theorem xml:id="thm_comp_cont"><title>Composição e continuidade</title>
+<statement><p>
+Se <m>f</m>é contínua em  <m>b</m> e <m>\displaystyle \lim_{x \to a} g(x) = b</m> então
+ <m>\displaystyle \lim_{x\to a} f(g(x)) = f(b)</m>. Isto é,
+<md>
+<mrow>
+   \lim_{x \to a} f\left( g(x) \right) \amp= f\left( \lim_{x \to a} g(x) \right)
+  </mrow>
+</md>
+</p></statement>
+</theorem>
+
+<p>
+  Em outras palavras, o <xref ref="thm_comp_cont"/> diz que:  se <m>g</m> é contínua em <m>a</m> e <m>f</m> é contínua em <m>g(a)</m> então a função composta
+ <m>(f \circ g)(x) = f(g(x))</m> é contínua em <m>a</m>. Então, quando compomos duas funções contínuas, obtemos uma nova função contínua.
+
+
+</p>
+
+<example xml:id="eg_1_6_3"><title>Continuidade de funções compostas</title>
+
+  <p>
+    Indique onde as seguintes funções são contínuas.
+  </p>
+<task>
+<statement>
+  <p>
+    <m>  f(x) = \sin\left( x^2 +\cos(x) \right)</m>
+  </p>
+</statement>
+<solution>
+  <p>
+Nosso primeiro passo deve ser quebrar as funções em partes e estudá-las. Quando os juntarmos novamente, 
+devemos tomar cuidado para não dividir por zero, ou cair fora do domínio.
+A função <m>f(x)</m> é a composição de <m>\sin(x)</m> com <m>x^2+\cos(x)</m>. Cada um desses termos, <m>\sin(x), x^2</m> e <m> \cos(x)</m>
+ são  funções contínuas. Portanto, a soma <m>x^2+\cos(x)</m> é contínua. E, portanto, a composição de <m>\sin(x)</m> e <m>x^2+\cos(x)</m> 
+ é contínua em todos os reais.
+  </p>
+</solution>
+
+</task>
+
+<task>
+<statement>
+  <p>
+    <m> g(x) = \sqrt{\sin(x)}</m>
+  </p>
+</statement>
+<solution>
+  <p>
+A função <m>g(x)</m> é a composição de <m>\sqrt{x}</m> com <m>\sin(x)</m>. Observe que <m>\sqrt{x}</m> é contínuo em seu domínio 
+<m>x \geq 0</m> e que <m>\sin(x)</m> é contínua, mas é negativo em muitos lugares (ver <xref ref="figsix"/>).
+Para que <m>g(x)</m> seja definido e contínuo, devemos restringir <m>x</m> para que <m>\sin(x) \geq 0</m>.
+
+<figure xml:id="figsix">
+  <caption></caption>
+  <image source="images/sinx" width="50%"/>
+</figure>
+
+
+
+
+
+Portanto, <m>\sin(x)\geq 0</m> quando <m>x\in[0,\pi]</m> ou <m>x\in [2\pi,3\pi]</m> ou <m>x\in[-2\pi,-\pi]</m> ou<ellipsis/>. Para ser mais preciso, <m>\sin(x)</m> 
+é positivo quando <m>x \in [2n\pi,(2n+1)\pi]</m> para qualquer inteiro <m>n</m>. Portanto, <m>g(x)</m> é contínua quando <m>x \n [2 n\pi,(2n+1)\pi]</m> para qualquer número inteiro <m>n</m> .
+</p>
+
+
+  
+</solution>
+
+</task>
+
+</example>
+
+<p>
+Funções contínuas são muito boas (matematicamente falando). As funções do <q>mundo real</q> tendem a ser contínuas (embora nem sempre). 
+O aspecto chave que os torna bons é o fato de que eles não <q>saltam</q>.
+</p>
+<p>
+A ausência de tais saltos leva ao seguinte teorema que, embora possa ser bastante confuso à primeira vista, 
+na verdade diz algo muito natural <mdash/> até óbvio. Ele diz, a grosso modo, que, à medida que você desenha 
+o gráfico <m>y=f(x)</m> começando em <m>x=a</m> e terminando em <m>x=b</m>, <m>y</m> muda continuamente de <m>y=f(a)</m> 
+para <m>y=f(b)</m>, sem saltos e, consequentemente, <m> y</m> deve assumir todos os valores entre <m>f(a)</m> e <m>f(b)</m> 
+pelo menos uma vez. 
+</p>
+<theorem xml:id="thm_ivt"><title>Teorema do Valor Intermediário (TVI)</title>
+<statement><p>
+Seja <m>a \lt b</m> e seja <m>f</m> uma função contínua em  <m>a\leq x \leq b</m>. Se <m>d</m> é um valor qualquer entre <m>f(a)</m> 
+e <m>f(b)</m> então existe algum número <m>c \in [a, b]</m> tal que <m>f(c) = d</m>.</p></statement>
+</theorem>
+
+
+
+<sidebyside widht="100%">
+<image source="images/IVT"/>
+</sidebyside>
+
+<p>
+O <xref ref="thm_ivt"/> teorema diz que se <m>f(x)</m> é uma função contínua em todo o intervalo <m>a \leq x \leq b</m> então 
+como <m>x</m> se move de <m>a</m> a <m>b</m>, <m>f(x)</m> assume todos os valores entre <m>f(a)</m> e <m>f (b)</m>
+ pelo menos uma vez. Em outras palavras, se <m>f</m> não alcançar um valor entre <m>f(a)</m> e <m>f(b)</m> então 
+ <m>f</m> não pode ser contínuo em <m>[a,b]</m>.</p>
+
+<p>
+Não é difícil se convencer de que a continuidade do <m>f</m> é crucial para o <xref ref="" text="costum"> TVI </xref> . Sem ele pode-se construir rapidamente exemplos de funções que contradizem o teorema. 
+Veja a figura abaixo para alguns exemplos não contínuos:</p>
+
+<sidebyside width="90%">
+<image source="images/IVT2"/>
+</sidebyside>
+
+<p>
+No exemplo da esquerda, vemos que uma função descontínua pode <q>saltar</q> sobre o valor <m>Y</m> que escolhemos, 
+então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da direita demonstra por que precisamos ter cuidado
+ com as extremidades do intervalo. Em particular, uma função deve ser contínua em todo o intervalo <m>[a,b]</m>
+  <em>incluindo</em> os extremos do intervalo. Se apenas exigíssemos que a função fosse contínua em <m>(a,b)</m> 
+  (tão estritamente entre <m>a</m> e <m>b</m>), então a função poderia <q >pular</q> sobre o valor
+   <m>Y</m> em <m>a</m> ou <m>b</m>.</p>
+
+<example>
+  <statement>
+    <p>
+      Mostre que existe uma raiz da equação   <me>4x^3-6x^2+3x-2=0</me> entre <m>1</m> e <m>2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Seja <m>f(x)=4x^3-6x^2+3x-2 </m>. Para resolver o problema devemos encontrar um número <m>c</m> entre <m>1</m> e <m>2</m> 
+      tal que  <m>f(c)=0</m>. Portanto, para se adequar ao  <xref ref="" text="costum"> TVI </xref>, 
+      vamos tomar <m>a=1</m> e <m>b=2</m> e <m>d=0</m>. Contudo, 
+
+      <me>
+        f(1) =4-6+3-2=-1\lt 0
+      </me>
+      e 
+      <me>
+        f(2)= 32-24+6-2=12\gt 0.
+      </me>
+    Logo, <m>f(1)\lt 0\lt f(2)</m>, ou seja, <m>d=0</m> é um número entre <m>f(1)</m> e <m>f(2)</m>, como queríamos. Agora, já que 
+    <m>f</m>
+    </p>
+  </solution>
+</example>
+
 </subsection>
-
-<exercises xml:id="exercises-">
-<exercise>Escrever aqui
-</exercise>
-</exercises>   
+    
 
 </section>
 
