@@ -161,7 +161,8 @@ Uma função <m>f(x)</m> é contínua em <m>a</m> se
 <p>
 Se uma função não é contínua em <m>a</m> então dizemos que ela é <term>descontínua</term> em <m>a</m>.
  Quando <m>f</m> é contínua em todos os pontos dizemos simplesmente que <m>f</m> é contínua, sem especificar o ponto. 
-Quando escrevemos que <m>f(x)</m> é contínua no intervalo aberto <m>(a,b)</m> então a função é contínua em todo ponto <m>c \in (a,b)</m>.</p>
+Quando escrevemos que <m>f(x)</m> é contínua no intervalo aberto <m>(a,b)</m> então a função é contínua em todo ponto <m>c \in (a,b)</m>. 
+</p>
 
 <assemblage xml:id="assemblage-continuidade">
     <title>Consequências da continuidade</title>
@@ -175,6 +176,78 @@ Quando uma função <m>f</m> é contínua em <m>x=a</m>, sabemos imediatamente q
 </p>
 </assemblage>
 
+<example> <title>Continuidade de polinômios</title>
+
+
+  <statement>
+    <p>
+      Investigue a continuidade de <m>f(x)= x^2+3x-5</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Lembre que o domínio de uma função polinomial são todos os números reais. Agora observe que para todo <m>a\in \mathbb{R}</m>: 
+
+      <md>
+        <mrow>\lim\limits_{x\to a} f(x) \amp =\lim\limits_{x\to a} (x^2+3x-5) </mrow>
+        <mrow> \amp = a^2 +3a-5 = f(a)  \quad \ct{direto das propriedades de limites}</mrow> 
+        
+      </md>
+      Portanto, pela <xref ref="def_1_6_1"/> <m>f(x)</m> é continua em todos os pontos.
+    </p>
+  </solution>
+</example>
+<exercise>
+    <statement>
+        <p>
+           Investigue a continuidade de  <m>f(x)=x^3-2x</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            Contínua em todos os pontos já que satisfaz <m>\lim\limits_{x\to a}f(x)=f(a)</m>. 
+        </p>
+    </answer>
+</exercise>
+
+<example><title>Continuidade de uma função racional</title>
+
+
+  <statement>
+    <p>
+      Investigue a continuidade da função racional <m>f(x)=\dfrac{x^2-1}{x-1)}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      O domínio de <m>f(x)</m> consiste em todos os números reais exceto <m>x=1</m>. Logo, para para <m>a\neq 1</m> temos:
+
+
+      <md>
+        <mrow>\lim\limits_{x\to a} f(x) \amp =\lim\limits_{x\to a} \dfrac{x^2-1}{x-1)} </mrow>
+        <mrow> \amp =\frac{a^2-1}{a-1}= f(a)  \quad \ct{direto das propriedades de limites}</mrow> 
+      </md>
+
+      Note que <m>a-1</m> nunca será zero uma vez que <m>a=1</m> não pertence ao domínio de <m>f(x)</m>.  
+      Portanto, pela <xref ref="def_1_6_1"/> <m>f(x)</m> é continua nos intervalos abertos <m>(-\infty, 1)</m> e <m>(1, +\infty)</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Investigue a continuidade de <m>f(x)=\dfrac{2}{x^2+2}</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            A função é contínuo em todos os pontos. Ou seja, em <m>(-\infty, +\infty)</m>.
+        </p>
+    </answer>
+</exercise>
 
 </subsection>
 
@@ -232,6 +305,9 @@ Uma maneira de contornar esse problema é generalizar a ideia de continuidade pa
 </p></statement>
 </definition>
 
+
+
+
 <p>
 Usando a definição de continuidade lateral, podemos agora definir o que significa uma função ser contínua em um intervalo fechado.</p>
 
@@ -259,9 +335,94 @@ Usando a definição de continuidade lateral, podemos agora definir o que signif
 </md>
 </p>
 
+
+
+<example>
+  <statement>
+    <p>
+      Investigue a continuidade de <m>f(x)=\sqrt{3-x}</m>. 
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Observe que <m>f(x)</m> está definida para todos os valores de <m>x</m> menores que <m>3</m>. Além disso, 
+
+      <md>
+        <mrow> \lim\limits_{x\to 3^-} f(x)\amp = \lim_{x\to 3^-}\sqrt{x-3} </mrow>
+        <mrow> \amp = 0= f(3) </mrow>.
+      </md>
+      Logo, <m>f(x)</m> é contínua à esquerda em <m>x=3</m>. Observe também que para <m>x\lt 3</m> a função <m>f</m> satisfaz a <xref ref="def_1_6_1"/>. 
+      Portanto, a função <m>f(x)</m> é contínua no intervalo <m>(-\infty, 3]</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+                  Investigue a continuidade de <m>f(x)=\sqrt{x-2}</m>. 
+
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            Contínua no intervalo <m> [2, \infty]</m>.
+        </p>
+    </answer>
+</exercise>
+
+
+<example>
+  <statement>
+    <p>
+      Investigue a continuidade de   <md>
+                <mrow> f(x) \amp= \begin{cases} 5-x\amp -1\leq x\leq 2  \\ x^2-1 \amp 2 \leq x\leq 3 \end{cases} </mrow>.
+
+            </md>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      De imediato podemos afirmar que as funções polinomiais são <m>5-x</m> e <m>x^2-1</m> são contínuas, 
+      em particular são contínuas no intervalos  <m>[-1,2]</m> e <m>(2, 3]</m>, respectivamente.Portanto, para concluir que 
+      <m>f(x)</m> é contínua no seu domínio, isto é, no intervalo <m>[-1, 3]</m>, é necessário investigar a continuidade em <m>x=2</m>. 
+      Das igualdade igualdades 
+
+      <md>
+        <mrow>  \lim\limits_{x\to 2^-} f(x)\amp =  \lim_{x\to 2^-} (5-x)=3=f(2)</mrow>
+        <mrow>  \lim\limits_{x\to 2^-} f(x)\amp =  \lim_{x\to 2^-} (x^2-1)=3=f(2)</mrow>
+      </md>
+ concluímos que 
+ <me>
+   \lim\limits_{x\to 2^-} f(x)=3=f(2).
+ </me>
+ Portanto, segue da <xref ref="def_1_6_1"/> que <m>f</m> é contínua em <m>x=2</m>, e como consequência da <xref ref="def_1_6_3"/>, 
+ é continua em todo o intervalo fechado <m>[-1,3]</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Investigue a continuidade de <md>
+                <mrow> f(x) \amp= \begin{cases} x+2\amp -1\leq x\leq 3  \\ 14-x^2 \amp 3 \leq x\leq 5 \end{cases} </mrow>.
+
+            </md>
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            Contínua no intervalo fechado <m>[-1, 5]</m>.
+        </p>
+    </answer>
+</exercise>
+
 </subsection>
 
-<subsection><title>Alguns exemplos sobre continuidade</title>
+<subsection><title>Mais exemplos sobre continuidade</title>
 
 <example xml:id="ex-1">
     <statement>
@@ -516,9 +677,29 @@ Então o numerador é contínuo, o denominador é contínuo e o denominador não
 
 <remark>
 <p>
-  Observe que no <xref ref="ex-5"/> levanta um ponto sutil sobre a verificação de continuidade quando o numerador e o denominador são <em>simultaneamente</em> zero. Existem alguns resultados possíveis neste caso e precisamos de ferramentas mais sofisticadas para analisar adequadamente o comportamento das funções próximas a esses pontos. 
+  Observe que no <xref ref="ex-5"/> levanta um ponto sutil sobre a verificação de continuidade quando o numerador e o denominador são 
+  <em>simultaneamente</em> zero. Existem alguns resultados possíveis neste caso e precisamos de ferramentas mais sofisticadas para analisar 
+  adequadamente o comportamento das funções próximas a esses pontos. 
 </p>
 </remark>
+
+
+<exercise>
+    <statement>
+        <p>
+            Explique por que a função <m>f(x)=\dfrac{\sin{x}}{x+1}</m> é contínua em todo seu domínio.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+           De acordo com <xref ref="th-tipos-continuas"/> <m>\sin{x}</m> como <m>x+1</m> são contínuas. Segue do <xref ref="thm_arith_cont"/> 
+           o quociente destas expressões também é uma função contínua, 
+           já que onde o denominador se anula apenas em <m>x=-1</m>, mas que não pertence ao domínio de <m>f(x)</m>. 
+
+        </p>
+    </answer>
+</exercise>
 
 <p>
 Outra forma de combinar as funções contínuas <m>f</m> e <m>g</m> para obter novas funções contínuas é
@@ -675,6 +856,22 @@ então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da d
     </p>
   </solution>
 </example>
+
+<exercise>
+    <statement>
+        <p>
+           Mostre que existe uma raiz da equação <m>x^4+x-3=0</m> entre <m>1</m> e <m>2</m>.
+        </p>
+    </statement>
+
+    <hint>
+      <p>
+        Faça <m>f(x)=x^4+x-3</m>. Verifique que  <m>f(1)\lt 0\lt f(2)</m> e use o <xref ref="thm_ivt" text="costum"> TVI </xref>.
+      </p>
+    </hint>
+
+  
+</exercise>
 
 </subsection>
   
