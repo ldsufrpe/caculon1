@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-continuidade/problem2.pg">
+      <statement><p>Abaixo estão seis afirmações sobre funções. Associe cada instrução a uma das funções mostradas abaixo que MELHOR corresponde a essa instrução.</p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-continuidade/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-continuidade/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-continuidade/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-continuidade/problem2.pg</server-url>
+    <pg source="pretext-continuidade/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-continuidade/problem13.pg">
+      <statement><p>Esboce o gráfico da função <m>f</m> para determinar o tipo de descontinuidade em cada valor <m>x</m>.
+<me>f(x) = \begin{cases}
+x^2+2, \amp \text{ se } x \lt  -3     \\
+-5, \amp \text{ se } x = -3       \\
+-5 x+ 2, \amp \text{ se } -3 \lt  x \le 0 \\
+\displaystyle \frac{-4 x}{(x-3)^2}, \amp \text{ se } 0 \lt  x \lt  3 \\
+\displaystyle \frac{1}{x^2+1}, \amp \text{ se } 3 \le x \\
+\end{cases}</me></p>
+<p><var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>removível</p>
+</li>
+<li>
+<p>salto</p>
+</li>
+<li>
+<p>infinita</p>
+</li>
+</var> <alert> 1. </alert>  Que tipo de descontinuidade <m>f</m> tem em <m>x=-3</m>?</p>
+<p><var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>removível</p>
+</li>
+<li>
+<p>salto</p>
+</li>
+<li>
+<p>infinita</p>
+</li>
+</var> <alert> 2. </alert>  Que tipo de descontinuidade <m>f</m> tem em <m>x=0</m>?</p>
+<p><var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>removível</p>
+</li>
+<li>
+<p>salto</p>
+</li>
+<li>
+<p>infinita</p>
+</li>
+</var> <alert> 3. </alert>  Que tipo de descontinuidade <m>f</m> tem em <m>x=3</m>?</p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-continuidade/problem13.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-continuidade/problem13.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-continuidade/problem13.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-continuidade/problem13.pg</server-url>
+    <pg source="pretext-continuidade/problem13.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-11" ww-id="webwork-11">
+    <static seed="11" source="pretext-continuidade/problem14.pg">
+      <statement><p>Determine se o Teorema do Valor Intermediário implica que a equação <m>x^3-3x  - 5.9 =0</m> tem uma raiz no intervalo <m>(0,1)</m>.</p>
+<p>O Teorema do Valor Intermediário <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>faz</p>
+</li>
+<li>
+<p>não faz</p>
+</li>
+</var> implicar que a equação acima tem uma raiz nesse intervalo.</p>
+</statement>
+      <solution><p>Se <m>f(x) = x^3-3x  - 5.9</m>. A função <m>f</m> é contínua no intervalo fechado <m>[ 0,1]</m>. Temos
+<me>f(0)= -5.9 \lt  0 \quad \text{and} \quad f(1) = -7.9 \lt  0</me>
+Uma ves que <m>f(1)\lt f(0)\lt 0</m>, o Teorema do Valor Intermediário não implica que exista um número <m>c</m> em  <m>(0,1)</m> tal que <m>f(c) = 0</m>, isto é,  o teorema não implica que a equação <m>x^3-3x  - 5.9 =0</m>  tenha uma raiz no intervalo  <m>(0,1)</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-continuidade/problem14.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-continuidade/problem14.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-continuidade/problem14.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=11&amp;sourceFilePath=pretext-continuidade/problem14.pg</server-url>
+    <pg source="pretext-continuidade/problem14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="pretext-continuidade/problem15.pg">
+      <statement><p>Seja <m>f</m> contínua em <m>[4, 12]</m>, em que
+<m>f(4) = 18</m> e <m>f(12) = 10</m>.  Podemos concluir que um valor
+<m>4 \lt  c \lt  12</m> exista tal que <m>f(c) = 1</m> ?</p>
+<p><var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>Não, não há informações suficientes</p>
+</li>
+<li>
+<p>Sim, por causa do teorema do valor intermediário</p>
+</li>
+</var></p>
+</statement>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-continuidade/problem15.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-continuidade/problem15.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-continuidade/problem15.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=12&amp;sourceFilePath=pretext-continuidade/problem15.pg</server-url>
+    <pg source="pretext-continuidade/problem15.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="pretext-continuidade/problem16.pg">
+      <statement><p>Considere a função <m>f(x) = 3 x^3 + 4 x^2 + 3</m>. Para quais valores de <m>k</m> o Teorema do Valor Intermediário nos diz que
+existe um <m>c</m> no intervalo <m>[0,1]</m> tal que <m>f(c) = k</m>?</p>
+<p><fillin name="AnSwEr0001" characters="5"/> <m>\le k \le</m> <fillin name="AnSwEr0002" characters="5"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3+4+3</m>
+        </p>
+      </answer>
+      <solution><p>Observe que se <m>c=0</m> temos <m>f(c) = f(0) = 3</m> e se <m>c=1</m>
+da mesma forma <m>f(c) = f(1) = 3 + 4 + 3 = 10</m>. Assim, como <m>f</m> é contínua, podemos aplicar o Teorema do Valor Intermediário e dizer que para qualquer <m>k</m> entre 3 e 10 podemos encontrar um valor <m>c</m> tal que <m>f(c) ) = k</m>. Assim o intervalo é
+<me>3 \le k \le 10.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-continuidade/problem16.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-continuidade/problem16.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-continuidade/problem16.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=13&amp;sourceFilePath=pretext-continuidade/problem16.pg</server-url>
+    <pg source="pretext-continuidade/problem16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-continuidade/problem3.pg">
+      <statement><p>Encontre o valor da constante <m>c</m> que torna a função abaixo contínua em <m>(-\infty,\infty)</m>.
+<me>f(y) = \begin{cases}\displaystyle{cy+6}\amp \text{if}\ y\in \left(-\infty ,5\right]\cr
+\displaystyle{cy^{2}-6}\amp \text{if}\ y\in \left(5,\infty \right)\end{cases}</me></p>
+<p><m>c=</m> <fillin name="AnSwEr0001" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.6</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-continuidade/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-continuidade/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-continuidade/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-continuidade/problem3.pg</server-url>
+    <pg source="pretext-continuidade/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-continuidade/problem4.pg">
+      <statement><p>Mostre que <me>f(x) = \begin{cases}\displaystyle{4x-1}\amp \text{if}\ x \lt  9\cr
+\displaystyle{\frac{1}{x+6}}\amp \text{if}\ x \ge 9\end{cases}</me> tem uma descontinuidade de salto em <m>9</m> calculando o limite quando <m>x</m> se aproxima de 9 pela esquerda e pela direita.</p>
+<p><m>\displaystyle{\lim_{x\to 9^-}f(x)} =</m><fillin name="AnSwEr0001" characters="15"/></p>
+<p><m>\displaystyle{\lim_{x\to 9^+}f(x)} =</m><fillin name="AnSwEr0002" characters="15"/></p>
+<p>Esboce o gráfico de <m>f</m>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>35</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.0666667</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-continuidade/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-continuidade/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-continuidade/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-continuidade/problem4.pg</server-url>
+    <pg source="pretext-continuidade/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-continuidade/problem5.pg">
+      <statement><p>Dê o(s) intervalo(s) em que a função é contínua.
+<me>h(k) = \sqrt{5 - k} + \sqrt{k + 8}</me></p>
+<p><fillin name="AnSwEr0001" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left[-8,5\right]</m>
+        </p>
+      </answer>
+      <solution><p>O primeiro radical implica que  <m>5 - k  \geq 0 \;\Rightarrow\; 
+k \leq 5</m>.
+O segundo implica que <m>k + 8  \geq 0 \;\Rightarrow\; 
+k \geq -8</m>.  Juntas, essas duas restrições fornecem
+<m>-8 \leq k \leq 5</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-continuidade/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-continuidade/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-continuidade/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-continuidade/problem5.pg</server-url>
+    <pg source="pretext-continuidade/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-continuidade/problem6.pg">
+      <statement><p>Determine se <m>f</m> é contínua nos valores indicados.
+<me>f(x) = \begin{cases}
+	1  \amp  x = 0 \\
+	\frac{\sin x}{x}  \amp   x \neq 0 
+	\end{cases}</me></p>
+<p>1.  <m>x = 0</m>.  <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>contínua</p>
+</li>
+<li>
+<p>descontínua</p>
+</li>
+</var></p>
+<p>2. <m>x = -4\pi</m>. <var form="popup">
+<li>
+<p>?</p>
+</li>
+<li>
+<p>contínua</p>
+</li>
+<li>
+<p>descontínua</p>
+</li>
+</var></p>
+</statement>
+      <solution><p>Para <m>x = 0</m>, verifique se o limite <m>f(0)</m>:
+<me>\lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{\sin x}{x} = 1 = f(0).</me></p>
+<p>A função é contínua em <m>x = -4\pi</m> porque é o
+quociente de duas funções contínuas e o denominador
+é diferente de zero.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-continuidade/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-continuidade/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-continuidade/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-continuidade/problem6.pg</server-url>
+    <pg source="pretext-continuidade/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-continuidade/problem7.pg">
+      <statement><p>Dados os intervalos nos quais a função é contínua.
+<me>f(x) = \sqrt{7 - e^{x}}</me></p>
+<p><fillin name="AnSwEr0001" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(-\infty ,1.94591014905531\right]</m>
+        </p>
+      </answer>
+      <solution><p>Por causa do radical, exigimos<m>7 - e^x \geq 0 \;
+\Rightarrow \; 7 \geq e^x \;\Rightarrow\; \ln 7 \geq x</m>.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-continuidade/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-continuidade/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-continuidade/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-continuidade/problem7.pg</server-url>
+    <pg source="pretext-continuidade/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-continuidade/problem8.pg">
+      <statement><p>Dê o(s) intervalo(s) em que a função é contínua.<me>g(t) = \frac{1}{\sqrt{64 - t^2}}</me></p>
+<p><fillin name="AnSwEr0001" characters="60"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(-8,8\right)</m>
+        </p>
+      </answer>
+      <solution><p>O radical implica<m>64 - t^2  \geq 0 \;\Rightarrow\; 
+-8 \leq t \leq 8</m>, no entanto, excluímos <m>t = \pm8</m> porque
+esses valores causariam divisão por zero.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-continuidade/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-continuidade/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-continuidade/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-continuidade/problem8.pg</server-url>
+    <pg source="pretext-continuidade/problem8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-continuidade/problem11.pg">
+      <statement><p>Dizemos que <m>f(x)</m> tem discontinuidade de <alert> salto </alert> em <m>x=a</m> se:</p>
+<p><alert> 1.</alert>  <m>\displaystyle{
+                       \lim_{x\to a^-}f(x)}</m> existe.</p>
+<p><alert> 2.</alert>  <m>\displaystyle{
+                       \lim_{x\to a^+}f(x)}</m> existe.</p>
+<p><alert> 3.</alert> Os limites à esquerda e à direita direita não são iguais.</p>
+<p>Seja <m>f(x) =
+       \begin{cases}
+           8 x - 3, \amp \text{if}\ x\lt 9\\
+           \frac{1}{x+9}, \amp \text{if}\ x\geq 9 
+       \end{cases}</m></p>
+<p>Mostre que <m>f(x)</m> tem uma descontinuidade de salto em <m>x=9</m> calculando os limites da esquerda e da direita em <m>x=9</m>.</p>
+<p><m>\displaystyle{
+         \lim_{x\to 9^-}f(x)}=</m><fillin name="AnSwEr0001" characters="15"/></p>
+<p><m>\displaystyle{
+         \lim_{x\to 9^+}f(x)}=</m><fillin name="AnSwEr0002" characters="15"/></p>
+<p>Tente esborçar o gráfico de <m>f(x)</m>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>69</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.0555555555555556</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-continuidade/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-continuidade/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-continuidade/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-continuidade/problem11.pg</server-url>
+    <pg source="pretext-continuidade/problem11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-continuidade/problem12.pg">
+      <statement><p>Determine os pontos em que a função é descontínua e indique o tipo de descontinuidade: removível, salto, infinito ou nenhum destes.</p>
+<p><m>\displaystyle  f(x)= \frac {x - 6} {\mid x - 5 \mid}</m></p>
+<p><m>x=</m> <fillin name="AnSwEr0001" characters="4"/></p>
+<p><ol>
+<li>
+<p>Escolha o tipo</p>
+</li>
+</ol></p>
+</statement>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <solution><p>A função  <m>\displaystyle \frac {x - 6} {\mid x - 5 \mid}</m> é descontínua em <m>x=5</m>, onde existe uma descontinuidade infinita.</p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-continuidade/problem12.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-continuidade/problem12.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-continuidade/problem12.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-continuidade/problem12.pg</server-url>
+    <pg source="pretext-continuidade/problem12.pg"/>
+  </webwork-reps>
+</webwork-representations>
