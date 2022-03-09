@@ -800,7 +800,7 @@ limite da potência é a potência dos limites.
 <assemblage xml:id="assemblage-limite-raiz">
   <title>Propriedade da Raiz</title>
   <p>
-    Se  <m>n</m> um inteiro positivo par, <m>a</m> um número real e <m>\lim\limits_{x\to a}f(x)>0</m> então 
+    Se  <m>n</m> um inteiro positivo, <m>a</m> um número real e <m>\lim\limits_{x\to a}f(x)>0</m> então 
 
 <md>
 <mrow>
