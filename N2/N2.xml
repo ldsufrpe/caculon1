@@ -530,7 +530,7 @@ Se o limite do numerador for zero, então o <xref ref="th-prop-limt"/>  não nos
 
   <figure xml:id="fig1">
   <caption></caption>
-  <image source="images/fig1.svg" width="40%">
+  <image source="images/image9-sage.svg" width="40%">
     <description>(for accessibility)</description>
   </image>
 </figure>
