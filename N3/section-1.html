@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-08T21:05:27-03:00       *-->
+<!--*       on 2022-03-08T21:45:59-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -109,62 +109,64 @@ true);
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
 <li class="link active">
 <a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Continuidade e Propriedades das Funções Contínuas</span></a><ul>
-<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Continuity</a></li>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Continuidade</a></li>
 <li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Continuidade laterais</a></li>
 <li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">Alguns exemplos sobre continuidade</a></li>
+<li><a href="section-1.html#sec-propriedade" data-scroll="sec-propriedade" class="internal">Propriedades das funções contínuas</a></li>
+<li><a href="section-1.html#exercises-continuas-N3" data-scroll="exercises-continuas-N3" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content">
-<section class="section" id="section-1"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-1"><h2 class="heading hide-type">
 <span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Continuidade e Propriedades das Funções Contínuas</span>
 </h2>
 <article class="objectives goal-like" id="objectives-1"><h3 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">texto</p></li>
-<li id="li-2"><p id="p-4">texto</p></li>
+<li id="li-1"><p id="p-3">Distinguir quando uma função é contínua ou não em um ponto.</p></li>
+<li id="li-2"><p id="p-4">Apresentar as propriedades das funções contínuas.</p></li>
+<li id="li-3"><p id="p-5">Resolver problemas utilizando o Teorema do Valor Intermediário.</p></li>
 </ol></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Continuity</span>
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Continuidade</span>
 </h3>
-<p id="p-5">We have seen that computing the limits some functions — polynomials and  rational functions — is very easy because</p>
+<p id="p-6">Vimos que calcular os limites de algumas funções — polinômios e funções racionais — é muito fácil porque</p>
 <div class="displaymath process-math" id="md-1">
 \begin{align*}
 \lim_{x \to a} f(x) \amp= f(a).
 \end{align*}
 </div>
-<p class="continuation">That is, the the limit as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> is just <span class="process-math">\(f(a)\text{.}\)</span> Roughly speaking,  the reason we can compute the limit this way is that these functions do not  have any abrupt jumps near <span class="process-math">\(a\text{.}\)</span></p>
-<p id="p-6">Many other functions have this property, <span class="process-math">\(\sin(x)\)</span> for example. A function  with this property is called “continuous” and there is a precise mathematical definition  for it. If you do not recall interval notation, then now is a good time to take a quick  look back at Definition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "def_intervals" missing or not unique]</code>.</p>
+<p class="continuation">Ou seja, o limite quando <span class="process-math">\(x\)</span> se aproxima de <span class="process-math">\(a\)</span> é apenas <span class="process-math">\(f(a)\text{.}\)</span> Grosso modo, a razão pela qual podemos calcular o limite dessa maneira é que essas funções não têm saltos abruptos perto de <span class="process-math">\(a\text{.}\)</span></p>
+<p id="p-7">Muitas outras funções têm esta propriedade, <span class="process-math">\(\sin(x)\)</span> por exemplo. Uma função com esta propriedade é chamada <dfn class="terminology">contínua</dfn> e existe uma definição matemática precisa para ela.</p>
 <article class="definition definition-like" id="def_1_6_1"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
-<p id="p-7">Uma função <span class="process-math">\(f(x)\)</span> é contínua em <span class="process-math">\(a\)</span> se</p>
+<p id="p-8">Uma função <span class="process-math">\(f(x)\)</span> é contínua em <span class="process-math">\(a\)</span> se</p>
 <div class="displaymath process-math" id="md-2">
 \begin{align*}
 \lim_{x \to a} f(x) \amp= f(a).
 \end{align*}
-</div></article><p id="p-8">Se uma função não é contínua em <span class="process-math">\(a\)</span> então dizemos que ela é <dfn class="terminology">descontínua</dfn> em <span class="process-math">\(a\text{.}\)</span> Quando <span class="process-math">\(f\)</span> é contínua em todos os pontos dizemos simplesmente que <span class="process-math">\(f\)</span> é contínua, sem especificar o ponto. Quando escrevemos que <span class="process-math">\(f(x)\)</span> é contínua no intervalo aberto <span class="process-math">\((a,b)\)</span> então a função é contínua em todo ponto <span class="process-math">\(c \in (a,b)\text{.}\)</span></p>
+</div></article><p id="p-9">Se uma função não é contínua em <span class="process-math">\(a\)</span> então dizemos que ela é <dfn class="terminology">descontínua</dfn> em <span class="process-math">\(a\text{.}\)</span> Quando <span class="process-math">\(f\)</span> é contínua em todos os pontos dizemos simplesmente que <span class="process-math">\(f\)</span> é contínua, sem especificar o ponto. Quando escrevemos que <span class="process-math">\(f(x)\)</span> é contínua no intervalo aberto <span class="process-math">\((a,b)\)</span> então a função é contínua em todo ponto <span class="process-math">\(c \in (a,b)\text{.}\)</span></p>
 <article class="assemblage assemblage-like" id="assemblage-continuidade"><h4 class="heading"><span class="title">Consequências da continuidade.</span></h4>
-<p id="p-9">Quando uma função <span class="process-math">\(f\)</span> é contínua em <span class="process-math">\(x=a\text{,}\)</span> sabemos imediatamente que</p>
+<p id="p-10">Quando uma função <span class="process-math">\(f\)</span> é contínua em <span class="process-math">\(x=a\text{,}\)</span> sabemos imediatamente que</p>
 <ol class="decimal">
-<li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(f(a)\)</span> existe</p></li>
-<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(\displaystyle \lim_{x \to a^-}f(x)\)</span> existe e é igual a <span class="process-math">\(f(a)\text{,}\)</span> e</p></li>
-<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(\displaystyle \lim_{x \to a^+}f(x)\)</span> existe e é igual a <span class="process-math">\(f(a)\text{.}\)</span></p></li>
+<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(f(a)\)</span> existe</p></li>
+<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(\displaystyle \lim_{x \to a^-}f(x)\)</span> existe e é igual a <span class="process-math">\(f(a)\text{,}\)</span> e</p></li>
+<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(\displaystyle \lim_{x \to a^+}f(x)\)</span> existe e é igual a <span class="process-math">\(f(a)\text{.}\)</span></p></li>
 </ol></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Continuidade laterais</span>
 </h3>
-<p id="p-10">Observe que na <a href="" class="xref" data-knowl="./knowl/def_1_6_1.html" title="Definição 1.1">Definição 1.1</a>  evitamos dizer qualquer coisa sobre se a função é ou não contínua nas extremidades do intervalo, ou seja é <span class="process-math">\(f(x)\)</span> contínuo em <span class="process-math">\(x=a\)</span> ou <span class="process-math">\(x=b\text{.}\)</span> Isso porque falar de continuidade nas extremidades de um intervalo pode ser um pouco delicada.</p>
-<p id="p-11">Em muitas situações nos será dada uma função <span class="process-math">\(f(x)\)</span> definida em um intervalo fechado <span class="process-math">\([a,b]\text{.}\)</span> Por exemplo, podemos ter:</p>
+<p id="p-11">Observe que na <a href="" class="xref" data-knowl="./knowl/def_1_6_1.html" title="Definição 1.1">Definição 1.1</a>  evitamos dizer qualquer coisa sobre se a função é ou não contínua nas extremidades do intervalo, ou seja é <span class="process-math">\(f(x)\)</span> contínuo em <span class="process-math">\(x=a\)</span> ou <span class="process-math">\(x=b\text{.}\)</span> Isso porque falar de continuidade nas extremidades de um intervalo pode ser um pouco delicada.</p>
+<p id="p-12">Em muitas situações nos será dada uma função <span class="process-math">\(f(x)\)</span> definida em um intervalo fechado <span class="process-math">\([a,b]\text{.}\)</span> Por exemplo, podemos ter:</p>
 <div class="displaymath process-math" id="md-3">
 \begin{align*}
 f(x) \amp= \frac{x+1}{x+2} \amp \text{para } x \in [0,1].
 \end{align*}
 </div>
 <p class="continuation">Para qualquer <span class="process-math">\(0 \leq x \leq 1\)</span> sabemos o valor de <span class="process-math">\(f(x)\text{.}\)</span> Entretanto, para <span class="process-math">\(x \lt 0\)</span> ou <span class="process-math">\(x \gt 1\)</span> não sabemos nada sobre a função — na verdade ela não foi definida.</p>
-<p id="p-12">Agora, considere o que significa <span class="process-math">\(f(x)\)</span> ser contínuo em <span class="process-math">\(x=0\text{.}\)</span> Precisamos ter</p>
+<p id="p-13">Agora, considere o que significa <span class="process-math">\(f(x)\)</span> ser contínuo em <span class="process-math">\(x=0\text{.}\)</span> Precisamos ter</p>
 <div class="displaymath process-math" id="md-4">
 \begin{align*}
 \lim_{x\to 0} f(x) \amp= f(0),
@@ -177,11 +179,11 @@ f(x) \amp= \frac{x+1}{x+2} \amp \text{para } x \in [0,1].
 \end{align*}
 </div>
 <p class="continuation">Agora, o primeiro desses limites laterais envolve examinar o comportamento de <span class="process-math">\(f(x)\)</span> para <span class="process-math">\(x \gt 0\text{.}\)</span> Como isso envolve olhar para os pontos para os quais <span class="process-math">\(f(x)\)</span> está definido, isso é algo que podemos fazer. Por outro lado, o segundo limite lateral exige que entendamos o comportamento de <span class="process-math">\(f(x)\)</span> para <span class="process-math">\(x \lt 0\text{.}\)</span> Isso não podemos fazer porque a função não foi definida para <span class="process-math">\(x \lt 0\text{.}\)</span></p>
-<p id="p-13">Uma maneira de contornar esse problema é generalizar a ideia de continuidade para continuidade lateral, da mesma forma que fizemos para obter limites laterais.</p>
+<p id="p-14">Uma maneira de contornar esse problema é generalizar a ideia de continuidade para continuidade lateral, da mesma forma que fizemos para obter limites laterais.</p>
 <article class="definition definition-like" id="def_1_6_2"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h4>
-<p id="p-14">Uma função <span class="process-math">\(f(x)\)</span> é contínua à direita em <span class="process-math">\(a\)</span> se</p>
+<p id="p-15">Uma função <span class="process-math">\(f(x)\)</span> é contínua à direita em <span class="process-math">\(a\)</span> se</p>
 <div class="displaymath process-math" id="md-6">
 \begin{align*}
 \lim_{x\to a^+} f(x) \amp= f(a).
@@ -192,16 +194,16 @@ f(x) \amp= \frac{x+1}{x+2} \amp \text{para } x \in [0,1].
 \begin{align*}
 \lim_{x\to a^-} f(x) \amp= f(a)
 \end{align*}
-</div></article><p id="p-15">Usando a definição de continuidade lateral, podemos agora definir o que significa uma função ser contínua em um intervalo fechado.</p>
+</div></article><p id="p-16">Usando a definição de continuidade lateral, podemos agora definir o que significa uma função ser contínua em um intervalo fechado.</p>
 <article class="definition definition-like" id="def_1_6_3"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h4>
-<p id="p-16">Uma função <span class="process-math">\(f(x)\)</span> é contínua em um intervalo fechado <span class="process-math">\([a,b]\)</span> quando</p>
-<ul class="disc">
-<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(f(x)\)</span> é contínua em <span class="process-math">\((a,b)\text{,}\)</span></p></li>
-<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(f(x)\)</span>é contínua à direita em  <span class="process-math">\(a\text{,}\)</span> e</p></li>
-<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(f(x)\)</span> é contínua à esquerda em  <span class="process-math">\(b\text{.}\)</span></p></li>
-</ul></article><p id="p-17">No que as condições apresentadas na  <a href="" class="xref" data-knowl="./knowl/def_1_6_3.html" title="Definição 1.3">Definição 1.3</a> são equivalentes a:</p>
+<p id="p-17">Uma função <span class="process-math">\(f(x)\)</span> é contínua em um intervalo fechado <span class="process-math">\([a,b]\)</span> quando</p>
+<ol class="decimal">
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(f(x)\)</span> é contínua em <span class="process-math">\((a,b)\text{,}\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(f(x)\)</span>é contínua à direita em  <span class="process-math">\(a\text{,}\)</span> e</p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(f(x)\)</span> é contínua à esquerda em  <span class="process-math">\(b\text{.}\)</span></p></li>
+</ol></article><p id="p-18">No que as condições apresentadas na  <a href="" class="xref" data-knowl="./knowl/def_1_6_3.html" title="Definição 1.3">Definição 1.3</a> são equivalentes a:</p>
 <div class="displaymath process-math" id="md-8">
 \begin{align*}
 \lim_{x\to a^+} f(x) \amp= f(a) \amp \text{e }\amp\amp  \lim_{x\to b^-} f(x) \amp= f(b).
@@ -211,7 +213,7 @@ f(x) \amp= \frac{x+1}{x+2} \amp \text{para } x \in [0,1].
 </h3>
 <article class="example example-like" id="ex-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-1"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-1"><article class="example example-like"><p id="p-18">Estude a continuidade da função</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-1"><article class="example example-like"><p id="p-19">Estude a continuidade da função</p>
 <div class="displaymath process-math" id="md-9">
 \begin{align*}
 f(x) \amp= \begin{cases} x\amp x \lt 1 \\ x+2 \amp x\geq 1 \end{cases} 
@@ -219,12 +221,12 @@ f(x) \amp= \begin{cases} x\amp x \lt 1 \\ x+2 \amp x\geq 1 \end{cases}
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<figure class="figure figure-like" id="fg1"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-19">Quando <span class="process-math">\(x \lt 1\)</span> então <span class="process-math">\(f(x)\)</span> é uma reta (e, portanto, um polinômio) e; logo, é contínua em todos os pontos <span class="process-math">\(x \lt 1\text{.}\)</span> Da mesma forma, quando <span class="process-math">\(x \gt 1\)</span> a função é uma reta e, portanto, é contínua em todos os pontos <span class="process-math">\(x \gt 1\text{.}\)</span> O único ponto que pode ser uma descontinuidade é em <span class="process-math">\(x=1\text{.}\)</span> Note que os limites laterais são diferentes. Portanto, o limite em <span class="process-math">\(x=1\)</span> não existe e, consequentemente, a função é descontínua em <span class="process-math">\(x=1\text{.}\)</span></p>
+<figure class="figure figure-like" id="fg1"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-20">Quando <span class="process-math">\(x \lt 1\)</span> então <span class="process-math">\(f(x)\)</span> é uma reta (e, portanto, um polinômio) e; logo, é contínua em todos os pontos <span class="process-math">\(x \lt 1\text{.}\)</span> Da mesma forma, quando <span class="process-math">\(x \gt 1\)</span> a função é uma reta e, portanto, é contínua em todos os pontos <span class="process-math">\(x \gt 1\text{.}\)</span> O único ponto que pode ser uma descontinuidade é em <span class="process-math">\(x=1\text{.}\)</span> Note que os limites laterais são diferentes. Portanto, o limite em <span class="process-math">\(x=1\)</span> não existe e, consequentemente, a função é descontínua em <span class="process-math">\(x=1\text{.}\)</span></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="ex-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-2"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-20">Estude a continuidade da função</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-21">Estude a continuidade da função</p>
 <div class="displaymath process-math" id="md-10">
 \begin{align*}
 g(x) \amp= \begin{cases} \tfrac{1}{x^2}\amp x\neq 0  \\ 0 \amp x=0\end{cases}
@@ -232,12 +234,12 @@ g(x) \amp= \begin{cases} \tfrac{1}{x^2}\amp x\neq 0  \\ 0 \amp x=0\end{cases}
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<figure class="figure figure-like" id="fig2"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-21">Observe que quando <span class="process-math">\(x \neq 0\)</span> o <span class="process-math">\(g(x)\)</span> é uma função racional e, portanto, é contínua em todos os pontos de seu domínio (que são todos os reais exceto <span class="process-math">\(x=0\)</span>). Assim, o único ponto em que <span class="process-math">\(g(x)\)</span> pode ser descontínuo é em <span class="process-math">\(x=0\text{.}\)</span> Note que nenhum dos limites laterais existe em <span class="process-math">\(x=0\text{,}\)</span> então o limite não existe em <span class="process-math">\(x=0\text{.}\)</span> Portanto, a função é descontínua em <span class="process-math">\(x=0\text{.}\)</span></p>
+<figure class="figure figure-like" id="fig2"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-22">Observe que quando <span class="process-math">\(x \neq 0\)</span> o <span class="process-math">\(g(x)\)</span> é uma função racional e, portanto, é contínua em todos os pontos de seu domínio (que são todos os reais exceto <span class="process-math">\(x=0\)</span>). Assim, o único ponto em que <span class="process-math">\(g(x)\)</span> pode ser descontínuo é em <span class="process-math">\(x=0\text{.}\)</span> Note que nenhum dos limites laterais existe em <span class="process-math">\(x=0\text{,}\)</span> então o limite não existe em <span class="process-math">\(x=0\text{.}\)</span> Portanto, a função é descontínua em <span class="process-math">\(x=0\text{.}\)</span></p>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="ex-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-22">Estude a continuidade da função</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-23">Estude a continuidade da função</p>
 <div class="displaymath process-math" id="md-11">
 \begin{align*}
 h(x) \amp= \begin{cases}\frac{x^3-x^2}{x-1} \amp x\neq 1 \\ 0 \amp x=1 \end{cases}
@@ -245,7 +247,7 @@ h(x) \amp= \begin{cases}\frac{x^3-x^2}{x-1} \amp x\neq 1 \\ 0 \amp x=1 \end{case
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<figure class="figure figure-like" id="fig3"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-23">Esse caso é similar aos anteriores. Note que para <span class="process-math">\(x \neq 1\)</span> <span class="process-math">\(h(x)\)</span> é uma função racional, e portanto,  contínua. Resta verificar o caso em <span class="process-math">\(x=1\text{.}\)</span> Por definição de <span class="process-math">\(h(x)\text{,}\)</span> <span class="process-math">\(h(1) = 0\text{.}\)</span> Vamos calcular o limite quando <span class="process-math">\(x\to 1\)</span> e depois verificar se está de acordo com a <a href="" class="xref" data-knowl="./knowl/def_1_6_1.html" title="Definição 1.1">Definição 1.1</a>. Para isso,</p>
+<figure class="figure figure-like" id="fig3"><figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-24">Esse caso é similar aos anteriores. Note que para <span class="process-math">\(x \neq 1\)</span> <span class="process-math">\(h(x)\)</span> é uma função racional, e portanto,  contínua. Resta verificar o caso em <span class="process-math">\(x=1\text{.}\)</span> Por definição de <span class="process-math">\(h(x)\text{,}\)</span> <span class="process-math">\(h(1) = 0\text{.}\)</span> Vamos calcular o limite quando <span class="process-math">\(x\to 1\)</span> e depois verificar se está de acordo com a <a href="" class="xref" data-knowl="./knowl/def_1_6_1.html" title="Definição 1.1">Definição 1.1</a>. Para isso,</p>
 <div class="displaymath process-math" id="md-12">
 \begin{align*}
 \frac{x^3-x^2}{x-1} \amp= \frac{x^2(x-1)}{x-1} = x^2
@@ -254,11 +256,11 @@ h(x) \amp= \begin{cases}\frac{x^3-x^2}{x-1} \amp x\neq 1 \\ 0 \amp x=1 \end{case
 <p class="continuation">Então <span class="process-math">\(\displaystyle\lim_{x \to 1} \frac{x^3-x^2}{x-1} = \lim_{x \to 1} x^2 = 1\neq h(1)\text{.}\)</span> Portanto, <span class="process-math">\(h\)</span> é descontínua em <span class="process-math">\(x=1\text{.}\)</span></p>
 </div></div>
 </div></article></div>
-<p id="p-24">Os  <a href="" class="xref" data-knowl="./knowl/ex-1.html" title="Exemplo 1.4">Exemplo 1.4–1.8</a> ilustram diferentes tipos de descontinuidade.</p>
+<p id="p-25">Os  <a href="" class="xref" data-knowl="./knowl/ex-1.html" title="Exemplo 1.4">Exemplo 1.4–1.8</a> ilustram diferentes tipos de descontinuidade.</p>
 <ul class="disc">
-<li id="li-9"><p id="p-derived-li-9">A função <span class="process-math">\(f(x)\)</span> tem uma “descontinuidade de salto” porque a função “salta” de um valor finito à esquerda para outro valor à direita.</p></li>
-<li id="li-10"><p id="p-derived-li-10">A função <span class="process-math">\(g(x)\text{,}\)</span> tem o que chamamos de  “descontinuidade infinita” uma vez que <span class="process-math">\(\displaystyle\lim\limits_{x\to 0} f(x) =+\infty\text{.}\)</span></p></li>
-<li id="li-11"><p id="p-derived-li-11">A função <span class="process-math">\(h(x)\text{,}\)</span> tem uma “descontinuidade removível” porque podemos tornar a função contínua nesse ponto redefinindo a função nesse ponto. Ou seja, definindo <span class="process-math">\(h(1)=1\text{.}\)</span> Isto é,<div class="displaymath process-math" id="md-13">
+<li id="li-10"><p id="p-derived-li-10">A função <span class="process-math">\(f(x)\)</span> tem uma “descontinuidade de salto” porque a função “salta” de um valor finito à esquerda para outro valor à direita.</p></li>
+<li id="li-11"><p id="p-derived-li-11">A função <span class="process-math">\(g(x)\text{,}\)</span> tem o que chamamos de  “descontinuidade infinita” uma vez que <span class="process-math">\(\displaystyle\lim\limits_{x\to 0} f(x) =+\infty\text{.}\)</span></p></li>
+<li id="li-12"><p id="p-derived-li-12">A função <span class="process-math">\(h(x)\text{,}\)</span> tem uma “descontinuidade removível” porque podemos tornar a função contínua nesse ponto redefinindo a função nesse ponto. Ou seja, definindo <span class="process-math">\(h(1)=1\text{.}\)</span> Isto é,<div class="displaymath process-math" id="md-13">
 \begin{align*}
 h(x) \amp= \begin{cases}
 \frac{x^3-x^2}{x-1} \amp x\neq 1\\
@@ -267,47 +269,50 @@ h(x) \amp= \begin{cases}
 \end{align*}
 </div></p></li>
 </ul>
-<p id="p-25">Mostrar que uma função é contínua pode ser trabalhoso, mas assim como as regras de limite nos ajudam a calcular limites complicados em termos de limites mais simples, podemos usá-las para mostrar que funções complicadas são contínuas dividindo-as em partes mais simples.</p>
+<p id="p-26">Mostrar que uma função é contínua pode ser trabalhoso, mas assim como as regras de limite nos ajudam a calcular limites complicados em termos de limites mais simples, podemos usá-las para mostrar que funções complicadas são contínuas dividindo-as em partes mais simples.</p></section><section class="subsection" id="sec-propriedade"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Propriedades das funções contínuas</span>
+</h3>
 <article class="theorem theorem-like" id="thm_arith_cont"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Propriedades da função contínua.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Propriedades aritméticas.</span>
 </h4>
-<p id="p-26">Sejam  <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> funções contínuas em <span class="process-math">\(a\)</span> e <span class="process-math">\(c\)</span> uma constante. Então as funções a seguir são também contínuas em <span class="process-math">\(x=a\text{:}\)</span></p>
+<p id="p-27">Sejam  <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> funções contínuas em <span class="process-math">\(a\)</span> e <span class="process-math">\(c\)</span> uma constante. Então as funções a seguir são também contínuas em <span class="process-math">\(x=a\text{:}\)</span></p>
 <ol class="decimal">
-<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(\displaystyle f(x) + g(x)\)</span></p></li>
-<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle f(x) - g(x)\)</span></p></li>
-<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle c f(x)\)</span></p></li>
-<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle f(x) g(x)\)</span></p></li>
-<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\frac{f(x)}{g(x)}\)</span> desde que <span class="process-math">\(g(a) \neq 0\text{.}\)</span></p></li>
-</ol></article>—<article class="lemma theorem-like" id="lem_1_6_1"><h4 class="heading">
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle f(x) + g(x)\)</span></p></li>
+<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle f(x) - g(x)\)</span></p></li>
+<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle c f(x)\)</span></p></li>
+<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\displaystyle f(x) g(x)\)</span></p></li>
+<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(\frac{f(x)}{g(x)}\)</span> desde que <span class="process-math">\(g(a) \neq 0\text{.}\)</span></p></li>
+</ol></article><p id="p-28">Acima afirmamos que polinômios e funções racionais são contínuas (tendo cuidado com domínios de funções racionais — devemos evitar que os denominadores sejam zero) nossos próximos passos tem a intenção de formalizar estas afirmações.</p>
+<article class="lemma theorem-like" id="lem_1_6_1"><h4 class="heading">
 <span class="type">Lema</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h4>
-<p id="p-27">Seja  <span class="process-math">\(c \)</span> uma constante. As funções</p>
+<p id="p-29">Seja  <span class="process-math">\(c \)</span> uma constante. As funções</p>
 <div class="displaymath process-math" id="md-14">
 \begin{align*}
 f(x) \amp= x \amp g(x) \amp= c
 \end{align*}
 </div>
-<p class="continuation">são contínuas em todos os números rais.</p></article><p id="p-28">Agora, como podemos obter qualquer polinômio e qualquer função racional adicionando, subtraindo, multiplicando e dividindo cuidadosamente as funções <span class="process-math">\(f(x)=x\)</span> e <span class="process-math">\(g(x)=c\text{,}\)</span> o <a href="" class="xref" data-knowl="./knowl/lem_1_6_1.html" title="Lema 1.11">Lema 1.11</a> acima combina com o  <a href="" class="xref" data-knowl="./knowl/thm_arith_cont.html" title="Teorema 1.10: Propriedades da função contínua">Teorema 1.10</a> para nos dar o resultado que queremos:</p>
+<p class="continuation">são contínuas em todos os números rais.</p></article><p id="p-30">Agora, como podemos obter qualquer polinômio e qualquer função racional adicionando, subtraindo, multiplicando e dividindo cuidadosamente as funções <span class="process-math">\(f(x)=x\)</span> e <span class="process-math">\(g(x)=c\text{,}\)</span> o <a href="" class="xref" data-knowl="./knowl/lem_1_6_1.html" title="Lema 1.11">Lema 1.11</a> acima combina com o  <a href="" class="xref" data-knowl="./knowl/thm_arith_cont.html" title="Teorema 1.10: Propriedades aritméticas">Teorema 1.10</a> para nos dar o resultado que queremos:</p>
 <article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Continuidade de polinômios e funções racionais.</span>
 </h4>
-<p id="p-29">Todo polinômio é contínuo em todos os lugares. Da mesma forma, toda função racional é contínua, exceto onde seu denominador é zero (ou seja, em todo o seu domínio).</p></article><p id="p-30">Com um pouco mais de trabalho, esse resultado pode ser estendido para tipos mais amplos de funções::</p>
+<p id="p-31">Todo polinômio é contínuo em todos os lugares. Da mesma forma, toda função racional é contínua, exceto onde seu denominador é zero (ou seja, em todo o seu domínio).</p></article><p id="p-32">Com um pouco mais de trabalho, esse resultado pode ser estendido para tipos mais amplos de funções::</p>
 <article class="theorem theorem-like" id="th-tipos-continuas"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h4>
-<p id="p-31">As seguintes funções são contínuas em todos os seus domínios</p>
+<p id="p-33">As seguintes funções são contínuas em todos os seus domínios</p>
 <ul class="disc">
-<li id="li-17"><p id="p-derived-li-17">funções polinomiais e  racionais</p></li>
-<li id="li-18"><p id="p-derived-li-18">funções raízes e potência</p></li>
-<li id="li-19"><p id="p-derived-li-19">funções trigonométricas e suas inversas</p></li>
-<li id="li-20"><p id="p-derived-li-20">funções exponencial e o logarítmica</p></li>
-</ul></article><p id="p-32">Usando uma combinação dos resultados acima, você pode mostrar que muitas funções complicadas são contínuas, exceto em alguns pontos (geralmente onde o denominador é igual a zero).</p>
+<li id="li-18"><p id="p-derived-li-18">funções polinomiais e  racionais</p></li>
+<li id="li-19"><p id="p-derived-li-19">funções raízes e potência</p></li>
+<li id="li-20"><p id="p-derived-li-20">funções trigonométricas e suas inversas</p></li>
+<li id="li-21"><p id="p-derived-li-21">funções exponencial e o logarítmica</p></li>
+</ul></article><p id="p-34">Usando uma combinação dos resultados acima, você pode mostrar que muitas funções complicadas são contínuas, exceto em alguns pontos (geralmente onde o denominador é igual a zero).</p>
 <article class="example example-like" id="ex-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-4"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Continuidade de <span class="process-math">\(\frac{\sin(x)}{2+\cos(x)}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-33">Onde a função <span class="process-math">\(f(x) = \dfrac{\sin(x)}{2+\cos(x)}\)</span> é contínua?</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-35">Onde a função <span class="process-math">\(f(x) = \dfrac{\sin(x)}{2+\cos(x)}\)</span> é contínua?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-34">A função é uma razão de duas partes — então a ideia geral é verificar se o numerador é contínuo, o denominador é contínuo e se o denominador pode ser zero. O numerador é <span class="process-math">\(\sin(x)\)</span> que é “contínuo em seu domínio” de acordo com o <a href="" class="xref" data-knowl="./knowl/th-tipos-continuas.html" title="Teorema 1.13">Teorema 1.13</a> . Seu domínio são todos os números reais. O denominador é a soma de <span class="process-math">\(2\)</span> e <span class="process-math">\(\cos(x)\text{.}\)</span> Como <span class="process-math">\(2\)</span> é uma constante, ela é contínua em todos os números reais. Da mesma forma (acabamos de verificar as coisas para o ponto anterior), sabemos que <span class="process-math">\(\cos(x)\)</span> é contínuo em todos os reais. Portanto, o denominador é contínuo. Precisamos agora verificar se o denominado se anula. Para isso lembre que</p>
+<p id="p-36">A função é uma razão de duas partes — então a ideia geral é verificar se o numerador é contínuo, o denominador é contínuo e se o denominador pode ser zero. O numerador é <span class="process-math">\(\sin(x)\)</span> que é “contínuo em seu domínio” de acordo com o <a href="" class="xref" data-knowl="./knowl/th-tipos-continuas.html" title="Teorema 1.13">Teorema 1.13</a> . Seu domínio são todos os números reais. O denominador é a soma de <span class="process-math">\(2\)</span> e <span class="process-math">\(\cos(x)\text{.}\)</span> Como <span class="process-math">\(2\)</span> é uma constante, ela é contínua em todos os números reais. Da mesma forma (acabamos de verificar as coisas para o ponto anterior), sabemos que <span class="process-math">\(\cos(x)\)</span> é contínuo em todos os reais. Portanto, o denominador é contínuo. Precisamos agora verificar se o denominado se anula. Para isso lembre que</p>
 <div class="displaymath process-math" id="md-15">
 \begin{gather*}
 -1 \leq \cos(x) \leq 1\\
@@ -321,178 +326,75 @@ f(x) \amp= x \amp g(x) \amp= c
 </div></div>
 </div></article></div>
 <article class="example example-like" id="ex-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-5"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-35">Onde a função <span class="process-math">\(\displaystyle f(x)=\frac{\sin(x)}{x^2-5x+6}\)</span> é contínua?</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Continuidade de  <span class="process-math">\(\frac{\sin(x)}{x^2-5x+6}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-37">Onde a função <span class="process-math">\(\displaystyle f(x)=\frac{\sin(x)}{x^2-5x+6}\)</span> é contínua?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-36">De acordo com o <a href="" class="xref" data-knowl="./knowl/th-tipos-continuas.html" title="Teorema 1.13">Teorema 1.13</a>  o numerador e o denominador de <span class="process-math">\(f\)</span> são contínua funções contínuas. Uma vez que o denominador <span class="process-math">\(x^2-5x+6=(x-2)(x-3)\)</span> se anula em <span class="process-math">\(x=2,3\text{.}\)</span> Portanto, a função é contínua em todos os lugares, exceto possivelmente em <span class="process-math">\(x=2,3\text{.}\)</span> Para verificar se a função realmente é descontínua nesses pontos, basta verificar se o numerador é diferente de zero em <span class="process-math">\(x=2,3\text{.}\)</span> De fato, sabemos que <span class="process-math">\(\sin(x)\)</span> é zero somente quando <span class="process-math">\(x = n\pi\)</span> (para qualquer inteiro <span class="process-math">\(n\)</span>). Portanto, <span class="process-math">\(\sin(2),\sin(3) \neq 0\text{.}\)</span> Assim, o numerador é diferente de zero, enquanto o denominador é zero e, portanto, <span class="process-math">\(x=2,3\)</span> realmente são pontos de descontinuidade.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-38">De acordo com o <a href="" class="xref" data-knowl="./knowl/th-tipos-continuas.html" title="Teorema 1.13">Teorema 1.13</a>  o numerador e o denominador de <span class="process-math">\(f\)</span> são contínua funções contínuas. Uma vez que o denominador <span class="process-math">\(x^2-5x+6=(x-2)(x-3)\)</span> se anula em <span class="process-math">\(x=2,3\text{.}\)</span> Portanto, a função é contínua em todos os lugares, exceto possivelmente em <span class="process-math">\(x=2,3\text{.}\)</span> Para verificar se a função realmente é descontínua nesses pontos, basta verificar se o numerador é diferente de zero em <span class="process-math">\(x=2,3\text{.}\)</span> De fato, sabemos que <span class="process-math">\(\sin(x)\)</span> é zero somente quando <span class="process-math">\(x = n\pi\)</span> (para qualquer inteiro <span class="process-math">\(n\)</span>). Portanto, <span class="process-math">\(\sin(2),\sin(3) \neq 0\text{.}\)</span> Assim, o numerador é diferente de zero, enquanto o denominador é zero e, portanto, <span class="process-math">\(x=2,3\)</span> realmente são pontos de descontinuidade.</p></div></div>
 </div></article></div>
 <article class="remark remark-like" id="remark-1"><h4 class="heading">
 <span class="type">Nota</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h4>
-<p id="p-37">Observe que no <a href="" class="xref" data-knowl="./knowl/ex-5.html" title="Exemplo 1.15">Exemplo 1.15</a> levanta um ponto sutil sobre a verificação de continuidade quando o numerador e o denominador são <em class="emphasis">simultaneamente</em> zero. Existem alguns resultados possíveis neste caso e precisamos de ferramentas mais sofisticadas para analisar adequadamente o comportamento das funções próximas a esses pontos.</p></article><p id="p-38">Outra forma de combinar as funções contínuas <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> para obter novas funções contínuas é formar a função composta <span class="process-math">\(f\circ g\text{.}\)</span></p>
+<p id="p-39">Observe que no <a href="" class="xref" data-knowl="./knowl/ex-5.html" title="Exemplo 1.15: Continuidade de  \frac{\sin(x)}{x^2-5x+6}">Exemplo 1.15</a> levanta um ponto sutil sobre a verificação de continuidade quando o numerador e o denominador são <em class="emphasis">simultaneamente</em> zero. Existem alguns resultados possíveis neste caso e precisamos de ferramentas mais sofisticadas para analisar adequadamente o comportamento das funções próximas a esses pontos.</p></article><p id="p-40">Outra forma de combinar as funções contínuas <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> para obter novas funções contínuas é formar a função composta <span class="process-math">\(f\circ g\text{.}\)</span></p>
 <article class="theorem theorem-like" id="thm_comp_cont"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Composição e continuidade.</span>
 </h4>
-<p id="p-39">Se <span class="process-math">\(f\)</span>é contínua em  <span class="process-math">\(b\)</span> e <span class="process-math">\(\displaystyle \lim_{x \to a} g(x) = b\)</span> então <span class="process-math">\(\displaystyle \lim_{x\to a} f(g(x)) = f(b)\text{.}\)</span> Isto é,</p>
+<p id="p-41">Se <span class="process-math">\(f\)</span>é contínua em  <span class="process-math">\(b\)</span> e <span class="process-math">\(\displaystyle \lim_{x \to a} g(x) = b\)</span> então <span class="process-math">\(\displaystyle \lim_{x\to a} f(g(x)) = f(b)\text{.}\)</span> Isto é,</p>
 <div class="displaymath process-math" id="md-16">
 \begin{align*}
 \lim_{x \to a} f\left( g(x) \right) \amp= f\left( \lim_{x \to a} g(x) \right)
 \end{align*}
-</div></article><p id="p-40">Em outras palavras, o <a href="" class="xref" data-knowl="./knowl/thm_comp_cont.html" title="Teorema 1.17: Composição e continuidade">Teorema 1.17</a> diz que:  se <span class="process-math">\(g\)</span> é contínua em <span class="process-math">\(a\)</span> e <span class="process-math">\(f\)</span> é contínua em <span class="process-math">\(g(a)\)</span> então a função composta <span class="process-math">\((f \circ g)(x) = f(g(x))\)</span> é contínua em <span class="process-math">\(a\text{.}\)</span> Então, quando compomos duas funções contínuas, obtemos uma nova função contínua.</p>
+</div></article><p id="p-42">Em outras palavras, o <a href="" class="xref" data-knowl="./knowl/thm_comp_cont.html" title="Teorema 1.17: Composição e continuidade">Teorema 1.17</a> diz que:  se <span class="process-math">\(g\)</span> é contínua em <span class="process-math">\(a\)</span> e <span class="process-math">\(f\)</span> é contínua em <span class="process-math">\(g(a)\)</span> então a função composta <span class="process-math">\((f \circ g)(x) = f(g(x))\)</span> é contínua em <span class="process-math">\(a\text{.}\)</span> Então, quando compomos duas funções contínuas, obtemos uma nova função contínua.</p>
 <article class="example example-like" id="eg_1_6_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_6_3"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Continuidade de funções compostas.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_6_3"><article class="example example-like"><p id="p-41">Indique onde as seguintes funções são contínuas.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_6_3"><article class="example example-like"><p id="p-43">Indique onde as seguintes funções são contínuas.</p>
 <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-42"><span class="process-math">\(f(x) = \sin\left( x^2 +\cos(x) \right)\)</span></p>
+<p id="p-44"><span class="process-math">\(f(x) = \sin\left( x^2 +\cos(x) \right)\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-43">Nosso primeiro passo deve ser quebrar as funções em partes e estudá-las. Quando os juntarmos novamente, devemos tomar cuidado para não dividir por zero, ou cair fora do domínio. A função <span class="process-math">\(f(x)\)</span> é a composição de <span class="process-math">\(\sin(x)\)</span> com <span class="process-math">\(x^2+\cos(x)\text{.}\)</span> Cada um desses termos, <span class="process-math">\(\sin(x), x^2\)</span> e <span class="process-math">\(\cos(x)\)</span> são  funções contínuas. Portanto, a soma <span class="process-math">\(x^2+\cos(x)\)</span> é contínua. E, portanto, a composição de <span class="process-math">\(\sin(x)\)</span> e <span class="process-math">\(x^2+\cos(x)\)</span> é contínua em todos os reais.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-45">Nosso primeiro passo deve ser quebrar as funções em partes e estudá-las. Quando os juntarmos novamente, devemos tomar cuidado para não dividir por zero, ou cair fora do domínio. A função <span class="process-math">\(f(x)\)</span> é a composição de <span class="process-math">\(\sin(x)\)</span> com <span class="process-math">\(x^2+\cos(x)\text{.}\)</span> Cada um desses termos, <span class="process-math">\(\sin(x), x^2\)</span> e <span class="process-math">\(\cos(x)\)</span> são  funções contínuas. Portanto, a soma <span class="process-math">\(x^2+\cos(x)\)</span> é contínua. E, portanto, a composição de <span class="process-math">\(\sin(x)\)</span> e <span class="process-math">\(x^2+\cos(x)\)</span> é contínua em todos os reais.</p></div></div>
 </div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-44"><span class="process-math">\(g(x) = \sqrt{\sin(x)}\)</span></p>
+<p id="p-46"><span class="process-math">\(g(x) = \sqrt{\sin(x)}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-45">A função <span class="process-math">\(g(x)\)</span> é a composição de <span class="process-math">\(\sqrt{x}\)</span> com <span class="process-math">\(\sin(x)\text{.}\)</span> Observe que <span class="process-math">\(\sqrt{x}\)</span> é contínuo em seu domínio <span class="process-math">\(x \geq 0\)</span> e que <span class="process-math">\(\sin(x)\)</span> é contínua, mas é negativo em muitos lugares (ver <a href="" class="xref" data-knowl="./knowl/figsix.html" title="Figura 1.19">Figura 1.19</a>). Para que <span class="process-math">\(g(x)\)</span> seja definido e contínuo, devemos restringir <span class="process-math">\(x\)</span> para que <span class="process-math">\(\sin(x) \geq 0\text{.}\)</span> <figure class="figure figure-like" id="figsix"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sinx.svg" role="img" class="contained"></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-47">A função <span class="process-math">\(g(x)\)</span> é a composição de <span class="process-math">\(\sqrt{x}\)</span> com <span class="process-math">\(\sin(x)\text{.}\)</span> Observe que <span class="process-math">\(\sqrt{x}\)</span> é contínuo em seu domínio <span class="process-math">\(x \geq 0\)</span> e que <span class="process-math">\(\sin(x)\)</span> é contínua, mas é negativo em muitos lugares (ver <a href="" class="xref" data-knowl="./knowl/figsix.html" title="Figura 1.19">Figura 1.19</a>). Para que <span class="process-math">\(g(x)\)</span> seja definido e contínuo, devemos restringir <span class="process-math">\(x\)</span> para que <span class="process-math">\(\sin(x) \geq 0\text{.}\)</span> <figure class="figure figure-like" id="figsix"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/sinx.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Portanto, <span class="process-math">\(\sin(x)\geq 0\)</span> quando <span class="process-math">\(x\in[0,\pi]\)</span> ou <span class="process-math">\(x\in [2\pi,3\pi]\)</span> ou <span class="process-math">\(x\in[-2\pi,-\pi]\)</span> ou…. Para ser mais preciso, <span class="process-math">\(\sin(x)\)</span> é positivo quando <span class="process-math">\(x \in [2n\pi,(2n+1)\pi]\)</span> para qualquer inteiro <span class="process-math">\(n\text{.}\)</span> Portanto, <span class="process-math">\(g(x)\)</span> é contínua quando <span class="process-math">\(x \n [2 n\pi,(2n+1)\pi]\)</span> para qualquer número inteiro <span class="process-math">\(n\)</span> .</p></div></div>
 </div></article></article></div>
-<p id="p-46">Funções contínuas são muito boas (matematicamente falando). As funções do “mundo real” tendem a ser contínuas (embora nem sempre). O aspecto chave que os torna bons é o fato de que eles não “saltam”.</p>
-<p id="p-47">A ausência de tais saltos leva ao seguinte teorema que, embora possa ser bastante confuso à primeira vista, na verdade diz algo muito natural — até óbvio. Ele diz, a grosso modo, que, à medida que você desenha o gráfico <span class="process-math">\(y=f(x)\)</span> começando em <span class="process-math">\(x=a\)</span> e terminando em <span class="process-math">\(x=b\text{,}\)</span> <span class="process-math">\(y\)</span> muda continuamente de <span class="process-math">\(y=f(a)\)</span> para <span class="process-math">\(y=f(b)\text{,}\)</span> sem saltos e, consequentemente, <span class="process-math">\(y\)</span> deve assumir todos os valores entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> pelo menos uma vez.</p>
+<p id="p-48">Funções contínuas são muito boas (matematicamente falando). As funções do “mundo real” tendem a ser contínuas (embora nem sempre). O aspecto chave que os torna bons é o fato de que eles não “saltam”.</p>
+<p id="p-49">A ausência de tais saltos leva ao seguinte teorema que, embora possa ser bastante confuso à primeira vista, na verdade diz algo muito natural — até óbvio. Ele diz, a grosso modo, que, à medida que você desenha o gráfico <span class="process-math">\(y=f(x)\)</span> começando em <span class="process-math">\(x=a\)</span> e terminando em <span class="process-math">\(x=b\text{,}\)</span> <span class="process-math">\(y\)</span> muda continuamente de <span class="process-math">\(y=f(a)\)</span> para <span class="process-math">\(y=f(b)\text{,}\)</span> sem saltos e, consequentemente, <span class="process-math">\(y\)</span> deve assumir todos os valores entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> pelo menos uma vez.</p>
 <article class="theorem theorem-like" id="thm_ivt"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema do Valor Intermediário (TVI).</span>
 </h4>
-<p id="p-48">Seja <span class="process-math">\(a \lt b\)</span> e seja <span class="process-math">\(f\)</span> uma função contínua em  <span class="process-math">\(a\leq x \leq b\text{.}\)</span> Se <span class="process-math">\(d\)</span> é um valor qualquer entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> então existe algum número <span class="process-math">\(c \in [a, b]\)</span> tal que <span class="process-math">\(f(c) = d\text{.}\)</span></p></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/IVT.svg" role="img" class="contained"></div></div></div>
-<p id="p-49">O <a href="" class="xref" data-knowl="./knowl/thm_ivt.html" title="Teorema 1.20: Teorema do Valor Intermediário (TVI)">Teorema 1.20</a> teorema diz que se <span class="process-math">\(f(x)\)</span> é uma função contínua em todo o intervalo <span class="process-math">\(a \leq x \leq b\)</span> então como <span class="process-math">\(x\)</span> se move de <span class="process-math">\(a\)</span> a <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(f(x)\)</span> assume todos os valores entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f (b)\)</span> pelo menos uma vez. Em outras palavras, se <span class="process-math">\(f\)</span> não alcançar um valor entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> então <span class="process-math">\(f\)</span> não pode ser contínuo em <span class="process-math">\([a,b]\text{.}\)</span></p>
-<p id="p-50">Não é difícil se convencer de que a continuidade do <span class="process-math">\(f\)</span> é crucial para o <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "" missing or not unique]</code> . Sem ele pode-se construir rapidamente exemplos de funções que contradizem o teorema. Veja a figura abaixo para alguns exemplos não contínuos:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/IVT2.svg" role="img" class="contained"></div></div></div>
-<p id="p-51">No exemplo da esquerda, vemos que uma função descontínua pode “saltar” sobre o valor <span class="process-math">\(Y\)</span> que escolhemos, então não há valor de <span class="process-math">\(x\)</span> que implique em <span class="process-math">\(f(x)=Y\text{.}\)</span> O gráfico da direita demonstra por que precisamos ter cuidado com as extremidades do intervalo. Em particular, uma função deve ser contínua em todo o intervalo <span class="process-math">\([a,b]\)</span> <em class="emphasis">incluindo</em> os extremos do intervalo. Se apenas exigíssemos que a função fosse contínua em <span class="process-math">\((a,b)\)</span> (tão estritamente entre <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span>), então a função poderia “pular” sobre o valor <span class="process-math">\(Y\)</span> em <span class="process-math">\(a\)</span> ou <span class="process-math">\(b\text{.}\)</span></p>
-<p id="p-52">If you are still confused then here is a “real-world” example</p>
-<article class="example example-like" id="eg_1_6_4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_6_4"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">The IVT in the “real world”.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_6_4"><article class="example example-like"><p id="p-53">You are climbing the Grouse-grind <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> with a friend — call him Bob. Bob was eager and started at 9am. Bob,  while very eager, is also very clumsy; he sprained his ankle somewhere  along the path and has stopped moving at 9:21am and is just sitting <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> enjoying the  view. You get there late and start climbing at 10am and being quite fit you get to the  top at 11am. The IVT implies that at some time between 10am and 11am you  meet up with Bob.</p>
-<p id="p-54">You can translate this situation into the form of the IVT as follows. Let <span class="process-math">\(t\)</span>  be time and let <span class="process-math">\(a = \)</span> 10am and <span class="process-math">\(b=\)</span> 11am. Let <span class="process-math">\(g(t)\)</span> be your distance along the trail. Hence <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> <span class="process-math">\(g(a) = 0\)</span> and  <span class="process-math">\(g(b) = 2.9km\text{.}\)</span> Since you are a mortal, your position along the trail is a  continuous function — no helicopters or teleportation or… We have no idea  where Bob is sitting, except that he is somewhere between <span class="process-math">\(g(a)\)</span> and  <span class="process-math">\(g(b)\text{,}\)</span> call this point <span class="process-math">\(Y\text{.}\)</span> The IVT guarantees that there is some time <span class="process-math">\(c\)</span>  between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> (so between 10am and 11am) with <span class="process-math">\(g(c) = Y\)</span> (and your  position will be the same as Bob's).</p></article></div>
-<p id="p-55">Aside from finding Bob sitting by the side of the trail, one of the most  important applications of the IVT is determining where a function is zero. For  quadratics we know (or should know) that</p>
-<div class="displaymath process-math" id="md-17">
-\begin{align*}
-ax^2+bx+c \amp= 0 \amp \text{ when } x \amp= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
-\end{align*}
+<p id="p-50">Seja <span class="process-math">\(a \lt b\)</span> e seja <span class="process-math">\(f\)</span> uma função contínua em  <span class="process-math">\(a\leq x \leq b\text{.}\)</span> Se <span class="process-math">\(d\)</span> é um valor qualquer entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> então existe algum número <span class="process-math">\(c \in [a, b]\)</span> tal que <span class="process-math">\(f(c) = d\text{.}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/IVT.svg" role="img" class="contained"></div></div></div></article><p id="p-51">O <a href="" class="xref" data-knowl="./knowl/thm_ivt.html" title="Teorema 1.20: Teorema do Valor Intermediário (TVI)">Teorema 1.20</a> diz que se <span class="process-math">\(f(x)\)</span> é uma função contínua em todo o intervalo <span class="process-math">\(a \leq x \leq b\)</span> então como <span class="process-math">\(x\)</span> se move de <span class="process-math">\(a\)</span> a <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(f(x)\)</span> assume todos os valores entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f (b)\)</span> pelo menos uma vez. Em outras palavras, se <span class="process-math">\(f\)</span> não alcançar um valor entre <span class="process-math">\(f(a)\)</span> e <span class="process-math">\(f(b)\)</span> então <span class="process-math">\(f\)</span> não pode ser contínuo em <span class="process-math">\([a,b]\text{.}\)</span></p>
+<p id="p-52">Não é difícil se convencer de que a continuidade do <span class="process-math">\(f\)</span> é crucial para o <a href="" class="xref" data-knowl="./knowl/thm_ivt.html" title="Teorema 1.20: Teorema do Valor Intermediário (TVI)">TVI 1.20</a> . Sem ele pode-se construir rapidamente exemplos de funções que contradizem o teorema. Veja a figura abaixo para alguns exemplos não contínuos:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/IVT2.svg" role="img" class="contained"></div></div></div>
+<p id="p-53">No gráfico da esquerda, vemos que uma função descontínua pode “saltar” sobre o valor <span class="process-math">\(Y\)</span> que escolhemos, então não há valor de <span class="process-math">\(x\)</span> que implique em <span class="process-math">\(f(x)=Y\text{.}\)</span> O gráfico da direita demonstra por que precisamos ter cuidado com as extremidades do intervalo. Em particular, uma função deve ser contínua em todo o intervalo <span class="process-math">\([a,b]\)</span> <em class="emphasis">incluindo</em> os extremos do intervalo. Se apenas exigíssemos que a função fosse contínua em <span class="process-math">\((a,b)\)</span> (tão estritamente entre <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span>), então a função poderia “pular” sobre o valor <span class="process-math">\(Y\)</span> em <span class="process-math">\(a\)</span> ou <span class="process-math">\(b\text{.}\)</span></p>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Localizando raízes de equações.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-54">Mostre que existe uma raiz da equação</p>
+<div class="displaymath process-math">
+\begin{equation*}
+4x^3-6x^2+3x-2=0
+\end{equation*}
 </div>
-<p class="continuation">While the Babylonians could (mostly, but not quite) do the above, the corresponding  formula for solving a cubic is uglier and that for a quartic is uglier still. One of  the most famous results in mathematics demonstrates that no such  formula exists for quintics or higher degree polynomials <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>.</p>
-<p id="p-56">So even for polynomials we cannot, in general, write down explicit  formulae for their zeros and have to make do with numerical approximations —  i.e. write down the root as a decimal expansion to whatever precision we desire.  For more complicated functions we have no choice — there is no reason that the  zeros should be expressible as nice neat little formulas. At the same time,  finding the zeros of a function:</p>
-<div class="displaymath process-math" id="md-18">
-\begin{align*}
-f(x) \amp= 0
-\end{align*}
+<p class="continuation">entre <span class="process-math">\(1\)</span> e <span class="process-math">\(2\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-55">Seja <span class="process-math">\(f(x)=4x^3-6x^2+3x-2 \text{.}\)</span> Para resolver o problema devemos encontrar um número <span class="process-math">\(c\)</span> entre <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> tal que  <span class="process-math">\(f(c)=0\text{.}\)</span> Portanto, para se adequar ao  <a href="" class="xref" data-knowl="./knowl/thm_ivt.html" title="Teorema 1.20: Teorema do Valor Intermediário (TVI)">TVI 1.20</a>, vamos tomar <span class="process-math">\(a=1\)</span> e <span class="process-math">\(b=2\)</span> e <span class="process-math">\(d=0\text{.}\)</span> Contudo,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+f(1) =4-6+3-2=-1\lt 0
+\end{equation*}
 </div>
-<p class="continuation">or solving equations of the form <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p>
-<div class="displaymath process-math" id="md-19">
-\begin{align*}
-g(x) \amp= h(x)
-\end{align*}
+<p class="continuation">e</p>
+<div class="displaymath process-math">
+\begin{equation*}
+f(2)= 32-24+6-2=12\gt 0.
+\end{equation*}
 </div>
-<p class="continuation">can be a crucial step in many mathematical proofs and applications.</p>
-<p id="p-57">For this reason there is a considerable body of mathematics which focuses just  on finding the zeros of functions. The IVT provides a very simple way to  “locate” the zeros of a function. In particular, if we know a continuous  function is  negative at a point <span class="process-math">\(x=a\)</span> and positive at another point <span class="process-math">\(x=b\text{,}\)</span> then  there must (by the IVT) be a point <span class="process-math">\(x=c\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> where <span class="process-math">\(f(c)=0\text{.}\)</span></p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/%20.svg" role="img" class="contained"></div></div></div>
-<p id="p-58">Consider the leftmost of the above figures. It depicts a continuous function  that is negative at <span class="process-math">\(x=a\)</span> and positive at <span class="process-math">\(x=b\text{.}\)</span> So choose <span class="process-math">\(Y=0\)</span> and apply the  IVT — there must be some <span class="process-math">\(c\)</span> with <span class="process-math">\(a \leq c \leq b\)</span> so that <span class="process-math">\(f(c) = Y = 0\text{.}\)</span>  While this doesn't tell us <span class="process-math">\(c\)</span> exactly, it does give us bounds on the possible positions  of at least one zero — there must be at least one c obeying <span class="process-math">\(a \le c \le b\text{.}\)</span></p>
-<p id="p-59">See middle figure. To get better bounds we could test a point half-way between  <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> So set <span class="process-math">\(a' = \frac{a+b}{2}\text{.}\)</span> In this example we see that <span class="process-math">\(f(a')\)</span>  is  negative. Applying the IVT again tells us there is some <span class="process-math">\(c\)</span> between <span class="process-math">\(a'\)</span> and  <span class="process-math">\(b\)</span>  so that <span class="process-math">\(f(c) = 0\text{.}\)</span> Again — we don't have <span class="process-math">\(c\)</span> exactly, but we have halved the  range of values it could take.</p>
-<p id="p-60">Look at the rightmost figure and do it again — test the point half-way between  <span class="process-math">\(a'\)</span> and <span class="process-math">\(b\text{.}\)</span> In this example we see that <span class="process-math">\(f(b')\)</span> is positive. Applying the IVT  tells us that there is some <span class="process-math">\(c\)</span> between <span class="process-math">\(a'\)</span> and <span class="process-math">\(b'\)</span> so that <span class="process-math">\(f(c) = 0\text{.}\)</span> This  new range is a quarter of the length of the original. If we keep doing this  process the range will halve each time until we know that the zero is inside  some tiny range of possible values. This process is called the bisection method.</p>
-<p id="p-61">Consider the following zero-finding example</p>
-<article class="example example-like" id="eg_pre_bisection"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_pre_bisection"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Show that <span class="process-math">\(f(x)=x-1+\sin(\pi x/2)\)</span> has a zero.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_pre_bisection"><article class="example example-like"><p id="p-62">Show that the function <span class="process-math">\(f(x) = x-1+\sin(\pi x/2)\)</span> has a zero  in <span class="process-math">\(0 \leq x \leq 1\text{.}\)</span></p>
-<p id="p-63">This question has been set up nicely to lead us towards using the IVT;  we are  already given a nice interval on which to look. In general we might have to  test a few points and experiment a bit with a calculator before we can  start narrowing down a range.</p>
-<p id="p-64">Let us start by testing the endpoints of the interval we are given</p>
-<div class="displaymath process-math" id="md-20">
-\begin{align*}
-f(0) \amp= 0 - 1 + \sin(0) = -1  \lt  0\\
-f(1) \amp= 1-1+\sin(\pi/2) = 1  \gt  0
-\end{align*}
-</div>
-<p class="continuation">So we know a point where <span class="process-math">\(f\)</span> is positive and one where it is negative. So by  the IVT there is a point in between where it is zero.</p>
-<p id="p-65"><em class="emphasis">BUT</em> in order to apply the IVT we have to show that the function is  continuous, and we cannot simply write</p>
-<blockquote class="blockquote" id="blockquote-1"><p id="p-66">it is continuous</p></blockquote>
-<p id="p-67">We need to explain to the reader <em class="emphasis">why</em> it is continuous. That is — we  have to prove it.</p>
-<p id="p-68">So to write up our answer we can put something like the following —  keeping in mind we need to tell the reader what we are doing so they can follow along easily.</p>
-<ul class="disc">
-<li id="li-21"><p id="p-derived-li-21">We will use the IVT to prove that there is a zero in <span class="process-math">\([0,1]\text{.}\)</span></p></li>
-<li id="li-22">
-<p id="p-69">First we must show that the function is continuous.</p>
-<ul class="circle">
-<li id="li-23"><p id="p-derived-li-23">Since <span class="process-math">\(x-1\)</span> is a polynomial it is continuous everywhere.</p></li>
-<li id="li-24"><p id="p-derived-li-24">The function <span class="process-math">\(\sin(\pi x/2)\)</span> is a trigonometric function and is also  continuous everywhere.</p></li>
-<li id="li-25"><p id="p-derived-li-25">The sum of two continuous functions is also continuous, so <span class="process-math">\(f(x)\)</span> is  continuous everywhere.</p></li>
-</ul>
-</li>
-<li id="li-26"><p id="p-derived-li-26">Let <span class="process-math">\(a=0, b=1\text{,}\)</span> then<div class="displaymath process-math" id="md-21">
-\begin{align*}
-f(0) \amp= 0 - 1 + \sin(0) = -1  \lt  0\\
-f(1) \amp= 1-1+\sin(\pi/2) = 1  \gt  0
-\end{align*}
-</div></p></li>
-<li id="li-27"><p id="p-derived-li-27">The function is negative at <span class="process-math">\(x=0\)</span> and positive at <span class="process-math">\(x=1\text{.}\)</span> Since the  function is continuous we know there is a point <span class="process-math">\(c \in [0,1]\)</span> so that <span class="process-math">\(f(c) =  0\text{.}\)</span></p></li>
-</ul>
-<p class="continuation">Notice that though we have not used full sentences in our explanation here, we  are still using words. Your mathematics, unless it is very straight-forward  computation, should contain words as well as symbols.</p>
-<p id="p-70">The zero of this function is actually located at about <span class="process-math">\(x=0.4053883559\text{.}\)</span></p></article></div>
-<p id="p-71">The bisection method is really just the idea that we can keep repeating the above  reasoning (with a calculator handy). Each iteration will tell us the location of the zero  more precisely. The following example illustrates this.</p>
-<article class="example example-like" id="eg_bisection"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_bisection"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Using the bisection method.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_bisection"><article class="example example-like"><p id="p-72">Use the bisection method to find a zero of</p>
-<div class="displaymath process-math" id="md-22">
-\begin{align*}
-f(x) \amp= x-1+\sin(\pi x/2)
-\end{align*}
-</div>
-<p class="continuation">that lies between <span class="process-math">\(0\)</span> and <span class="process-math">\(1\text{.}\)</span></p>
-<p id="p-73">So we start with the two points we worked out above:</p>
-<ul class="disc">
-<li id="li-28"><p id="p-derived-li-28"><span class="process-math">\(a=0, b=1\)</span> and<div class="displaymath process-math" id="md-23">
-\begin{align*}
-f(0) \amp= -1\\
-f(1) \amp= 1
-\end{align*}
-</div></p></li>
-<li id="li-29"><p id="p-derived-li-29">Test the point in the middle <span class="process-math">\(x = \frac{0+1}{2} = 0.5\)</span><div class="displaymath process-math" id="md-24">
-\begin{align*}
-f(0.5) \amp= 0.2071067813  \gt  0
-\end{align*}
-</div></p></li>
-<li id="li-30"><p id="p-derived-li-30">So our new interval will be <span class="process-math">\([0,0.5]\)</span> since the function is negative at  <span class="process-math">\(x=0\)</span> and positive at <span class="process-math">\(x=0.5\)</span></p></li>
-</ul>
-<p class="continuation">Repeat</p>
-<ul class="disc">
-<li id="li-31"><p id="p-derived-li-31"><span class="process-math">\(a=0, b=0.5\)</span> where <span class="process-math">\(f(0) \lt 0\)</span> and <span class="process-math">\(f(0.5) \gt 0\text{.}\)</span></p></li>
-<li id="li-32"><p id="p-derived-li-32">Test the point in the middle <span class="process-math">\(x = \frac{0+0.5}{2} = 0.25\)</span><div class="displaymath process-math" id="md-25">
-\begin{align*}
-f(0.25) \amp= -0.3673165675  \lt  0
-\end{align*}
-</div></p></li>
-<li id="li-33"><p id="p-derived-li-33">So our new interval will be <span class="process-math">\([0.25,0.5]\)</span> since the function is negative  at <span class="process-math">\(x=0.25\)</span> and positive at <span class="process-math">\(x=0.5\)</span></p></li>
-</ul>
-<p class="continuation">Repeat</p>
-<ul class="disc">
-<li id="li-34"><p id="p-derived-li-34"><span class="process-math">\(a=0.25, b=0.5\)</span> where <span class="process-math">\(f(0.25) \lt 0\)</span> and <span class="process-math">\(f(0.5) \gt 0\text{.}\)</span></p></li>
-<li id="li-35"><p id="p-derived-li-35">Test the point in the middle <span class="process-math">\(x = \frac{0.25+0.5}{2} = 0.375\)</span><div class="displaymath process-math" id="md-26">
-\begin{align*}
-f(0.375) \amp= -0.0694297669  \lt  0
-\end{align*}
-</div></p></li>
-<li id="li-36"><p id="p-derived-li-36">So our new interval will be <span class="process-math">\([0.375,0.5]\)</span> since the function is negative  at <span class="process-math">\(x=0.375\)</span> and positive at <span class="process-math">\(x=0.5\)</span></p></li>
-</ul>
-<p class="continuation">Below is an illustration of what we have observed so far together with a plot of the  actual function.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/ivt_eg.svg" role="img" class="contained"></div></div></div>
-<p id="p-74">And one final iteration:</p>
-<ul class="disc">
-<li id="li-37"><p id="p-derived-li-37"><span class="process-math">\(a=0.375, b=0.5\)</span> where <span class="process-math">\(f(0.375) \lt 0\)</span> and <span class="process-math">\(f(0.5) \gt 0\text{.}\)</span></p></li>
-<li id="li-38"><p id="p-derived-li-38">Test the point in the middle <span class="process-math">\(x = \frac{0.375+0.5}{2} = 0.4375\)</span><div class="displaymath process-math" id="md-27">
-\begin{align*}
-f(0.4375) \amp= 0.0718932843 \gt 0
-\end{align*}
-</div></p></li>
-<li id="li-39"><p id="p-derived-li-39">So our new interval will be <span class="process-math">\([0.375,0.4375]\)</span> since the function is  negative at <span class="process-math">\(x=0.375\)</span> and positive at <span class="process-math">\(x=0.4375\)</span></p></li>
-</ul>
-<p class="continuation">So without much work we know the location of a zero inside a range of length  <span class="process-math">\(0.0625 = 2^{-4}\text{.}\)</span> Each iteration will halve the length of the range and we  keep going until we reach the precision we need, though it is much easier to  program a computer to do it.</p></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">If you don't know it then google it.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Hopefully he remembered to carry something warm.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">It's amazing what facts you can find on Wikipedia.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">The similar  (but uglier) formula for solving cubics took until the 15th century and the  work of del Ferro and Cardano (and Cardano's student Ferrari). A similar (but  even uglier) formula for quartics was also found by Ferrari. The extremely  famous  Abel-Ruffini Theorem (nearly by Ruffini in the late 18th century and  completely by Abel in early 19th century) demonstrates  that a similar formula  for the zeros of a quintic does not exist. Note that the theorem does  <em class="emphasis">not</em> say that quintics do not have zeros; rather it says that the zeros  cannot in general be expressed using a finite combination of addition,  multiplication, division, powers and roots. The interested student should also  look up Évariste Galois and his contributions to this area.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">In fact both of these are the same because we  can write <span class="process-math">\(f(x)=g(x)-h(x)\)</span> and then the zeros of <span class="process-math">\(f(x)\)</span> are exactly when <span class="process-math">\(g(x)=h(x)\text{.}\)</span>
+<p class="continuation">Logo, <span class="process-math">\(f(1)\lt 0\lt f(2)\text{,}\)</span> ou seja, <span class="process-math">\(d=0\)</span> é um número entre <span class="process-math">\(f(1)\)</span> e <span class="process-math">\(f(2)\text{,}\)</span> como queríamos. Agora, já que <span class="process-math">\(f\)</span> é contínua (pois é um polinômio), o <a href="" class="xref" data-knowl="./knowl/thm_ivt.html" title="Teorema 1.20: Teorema do Valor Intermediário (TVI)">Teorema do Valor Intermediário (TVI)</a> afirma que existe um número <span class="process-math">\(c\)</span> entre <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> tal <span class="process-math">\(f(c)=0\text{.}\)</span> Ou seja, a equação <span class="process-math">\(4x^3-6x^2+3x-2=0\)</span> tem pelo menos uma raiz <span class="process-math">\(c\)</span> em <span class="process-math">\((1, 2)\text{.}\)</span></p>
 </div></div>
-</div></main>
+</div></article></div></section><section class="exercises" id="exercises-continuas-N3"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.5</span> <span class="title">Exercícios</span>
+</h3></section></section></div></main>
 </div>
 </body>
 </html>

@@ -113,32 +113,38 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                       texto
+                       Distinguir quando uma função é contínua ou não em um ponto.
                     </p>
                 </li>
                 <li>
                     <p>
-                        texto
+                       Apresentar as propriedades das funções contínuas.
                     </p>
+                </li>
+                <li>
+                  <p>
+                    Resolver problemas utilizando o Teorema do Valor Intermediário.
+                  </p>
                 </li>
             </ol>
             
         </objectives>
 
-<subsection><title>Continuity</title>
+<subsection><title>Continuidade</title>
 
 <p>
-We have seen that computing the limits some functions <mdash/> polynomials and  rational functions <mdash/> is very easy because
+Vimos que calcular os limites de algumas funções <mdash/> polinômios e funções racionais <mdash/> é muito fácil porque
 <md>
 <mrow>
-  \lim_{x \to a} f(x) \amp= f(a).
+   \lim_{x \to a} f(x) \amp= f(a).
 </mrow>
 </md>
-That is, the the limit as <m>x</m> approaches <m>a</m> is just <m>f(a)</m>. Roughly speaking,  the reason we can compute the limit this way is that these functions do not  have any abrupt jumps near <m>a</m>.
+Ou seja, o limite quando <m>x</m> se aproxima de <m>a</m> é apenas <m>f(a)</m>. Grosso modo, a razão pela qual podemos calcular o limite dessa maneira é que essas funções não têm saltos abruptos perto de <m>a</m>.
 </p>
 
 <p>
-Many other functions have this property, <m>\sin(x)</m> for example. A function  with this property is called <q>continuous</q> and there is a precise mathematical definition  for it. If you do not recall interval notation, then now is a good time to take a quick  look back at Definition<nbsp/><xref ref="def_intervals"/>.
+Muitas outras funções têm esta propriedade, <m>\sin(x)</m> por exemplo. Uma função com esta propriedade é chamada <term>contínua</term> 
+e existe uma definição matemática precisa para ela. 
 </p>
 
 <definition xml:id="def_1_6_1">
@@ -232,14 +238,14 @@ Usando a definição de continuidade lateral, podemos agora definir o que signif
 <definition xml:id="def_1_6_3"> 
 <statement><p>
  Uma função <m>f(x)</m> é contínua em um intervalo fechado <m>[a,b]</m> quando
-<ul>
+<ol>
 <li> <m>f(x)</m> é contínua em <m>(a,b)</m>,
 </li>
 <li> <m>f(x)</m>é contínua à direita em  <m>a</m>, e
 </li>
 <li> <m>f(x)</m> é contínua à esquerda em  <m>b</m>.
 </li>
-</ul>
+</ol>
 
 </p></statement>
 </definition>
@@ -371,7 +377,13 @@ Mostrar que uma função é contínua pode ser trabalhoso, mas assim como as reg
  complicados em termos de limites mais simples, podemos usá-las para mostrar que funções complicadas são contínuas
   dividindo-as em partes mais simples.</p>
 
-<theorem xml:id="thm_arith_cont"><title>Propriedades da função contínua</title>
+
+</subsection>
+
+<subsection xml:id="sec-propriedade">
+  <title>Propriedades das funções contínuas</title>
+
+<theorem xml:id="thm_arith_cont"><title>Propriedades aritméticas</title>
 <statement><p>
  Sejam  <m>f(x)</m> e <m>g(x)</m> funções contínuas em <m>a</m> e <m>c</m> uma constante. Então as funções a seguir são também contínuas em <m>x=a</m>:
 <ol>
@@ -393,8 +405,12 @@ Mostrar que uma função é contínua pode ser trabalhoso, mas assim como as reg
 </ol>
 </p></statement>
 </theorem>
-Acima afirmamos que polinômios e funções racionais são contínuas (tendo cuidado com domínios de funções racionais <mdash/> devemos evitar que os denominadores sejam zero) 
+
+<p>
+  Acima afirmamos que polinômios e funções racionais são contínuas (tendo cuidado com domínios de funções racionais <mdash/> devemos evitar que os denominadores sejam zero) 
 nossos próximos passos tem a intenção de formalizar estas afirmações.
+</p>
+
 
 <lemma xml:id="lem_1_6_1">
 <statement><p>
@@ -477,7 +493,9 @@ Então o numerador é contínuo, o denominador é contínuo e o denominador não
 </solution>
 </example>
 
-<example xml:id="ex-5">
+<example xml:id="ex-5"> <title>Continuidade de  <m>\frac{\sin(x)}{x^2-5x+6}</m> </title>
+
+
   <statement>
     <p>
       Onde a função <m>\displaystyle f(x)=\frac{\sin(x)}{x^2-5x+6}</m> é contínua?
@@ -596,38 +614,43 @@ pelo menos uma vez.
 <theorem xml:id="thm_ivt"><title>Teorema do Valor Intermediário (TVI)</title>
 <statement><p>
 Seja <m>a \lt b</m> e seja <m>f</m> uma função contínua em  <m>a\leq x \leq b</m>. Se <m>d</m> é um valor qualquer entre <m>f(a)</m> 
-e <m>f(b)</m> então existe algum número <m>c \in [a, b]</m> tal que <m>f(c) = d</m>.</p></statement>
+e <m>f(b)</m> então existe algum número <m>c \in [a, b]</m> tal que <m>f(c) = d</m>.</p>
+
+<sidebyside widht="70%">
+<image source="images/IVT"/>
+</sidebyside>
+</statement>
 </theorem>
 
 
 
-<sidebyside widht="100%">
-<image source="images/IVT"/>
-</sidebyside>
+
 
 <p>
-O <xref ref="thm_ivt"/> teorema diz que se <m>f(x)</m> é uma função contínua em todo o intervalo <m>a \leq x \leq b</m> então 
+O <xref ref="thm_ivt"/> diz que se <m>f(x)</m> é uma função contínua em todo o intervalo <m>a \leq x \leq b</m> então 
 como <m>x</m> se move de <m>a</m> a <m>b</m>, <m>f(x)</m> assume todos os valores entre <m>f(a)</m> e <m>f (b)</m>
  pelo menos uma vez. Em outras palavras, se <m>f</m> não alcançar um valor entre <m>f(a)</m> e <m>f(b)</m> então 
  <m>f</m> não pode ser contínuo em <m>[a,b]</m>.</p>
 
 <p>
-Não é difícil se convencer de que a continuidade do <m>f</m> é crucial para o <xref ref="" text="costum"> TVI </xref> . Sem ele pode-se construir rapidamente exemplos de funções que contradizem o teorema. 
+Não é difícil se convencer de que a continuidade do <m>f</m> é crucial para o <xref ref="thm_ivt" text="costum"> TVI </xref> . Sem ele pode-se construir rapidamente exemplos de funções que contradizem o teorema. 
 Veja a figura abaixo para alguns exemplos não contínuos:</p>
 
-<sidebyside width="90%">
+<sidebyside width="80%">
 <image source="images/IVT2"/>
 </sidebyside>
 
 <p>
-No exemplo da esquerda, vemos que uma função descontínua pode <q>saltar</q> sobre o valor <m>Y</m> que escolhemos, 
+No gráfico da esquerda, vemos que uma função descontínua pode <q>saltar</q> sobre o valor <m>Y</m> que escolhemos, 
 então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da direita demonstra por que precisamos ter cuidado
  com as extremidades do intervalo. Em particular, uma função deve ser contínua em todo o intervalo <m>[a,b]</m>
   <em>incluindo</em> os extremos do intervalo. Se apenas exigíssemos que a função fosse contínua em <m>(a,b)</m> 
   (tão estritamente entre <m>a</m> e <m>b</m>), então a função poderia <q >pular</q> sobre o valor
    <m>Y</m> em <m>a</m> ou <m>b</m>.</p>
 
-<example>
+<example> <title>Localizando raízes de equações</title>
+
+ 
   <statement>
     <p>
       Mostre que existe uma raiz da equação   <me>4x^3-6x^2+3x-2=0</me> entre <m>1</m> e <m>2</m>.
@@ -636,7 +659,7 @@ então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da d
   <solution>
     <p>
       Seja <m>f(x)=4x^3-6x^2+3x-2 </m>. Para resolver o problema devemos encontrar um número <m>c</m> entre <m>1</m> e <m>2</m> 
-      tal que  <m>f(c)=0</m>. Portanto, para se adequar ao  <xref ref="" text="costum"> TVI </xref>, 
+      tal que  <m>f(c)=0</m>. Portanto, para se adequar ao  <xref ref="thm_ivt" text="costum"> TVI </xref>, 
       vamos tomar <m>a=1</m> e <m>b=2</m> e <m>d=0</m>. Contudo, 
 
       <me>
@@ -647,13 +670,18 @@ então não há valor de <m>x</m> que implique em <m>f(x)=Y</m>. O gráfico da d
         f(2)= 32-24+6-2=12\gt 0.
       </me>
     Logo, <m>f(1)\lt 0\lt f(2)</m>, ou seja, <m>d=0</m> é um número entre <m>f(1)</m> e <m>f(2)</m>, como queríamos. Agora, já que 
-    <m>f</m>
+    <m>f</m> é contínua (pois é um polinômio), o <xref ref="thm_ivt" text="title"/> afirma que existe um número <m>c</m> entre 
+    <m>1</m> e <m>2</m> tal <m>f(c)=0</m>. Ou seja, a equação <m>4x^3-6x^2+3x-2=0</m> tem pelo menos uma raiz <m>c</m> em <m>(1, 2)</m>.
     </p>
   </solution>
 </example>
 
 </subsection>
-    
+  
+<exercises xml:id="exercises-continuas-N3">
+
+  
+</exercises>
 
 </section>
 
