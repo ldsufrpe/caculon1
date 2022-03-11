@@ -1719,7 +1719,7 @@ Então, pela regra do quociente,
 
     <answer>
         <p>
-            <m>\dfrac{\dd y}{\dd x}=x^{3} \sin\left(x\right) + 3 \, x^{2} \cos\left(x\right)</m>
+            <m>\dfrac{\dd y}{\dd x}=-x^{3} \sin\left(x\right) + 3 \, x^{2} \cos\left(x\right)</m>
         </p>
     </answer>
 </exercise>
