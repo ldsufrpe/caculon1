@@ -2,5 +2,6 @@
     "cSpell.enableFiletypes": [
         "xml"
     ],
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "livePreview.defaultPreviewPath": "/N4/section-1.html"
 }

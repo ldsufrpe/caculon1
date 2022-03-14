@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Limites: N4</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+               
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana 10.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title>Limites no Infinito </title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                        texto 11
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       texto 2
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto 3
+                    </p>
+                </li>
+
+            </ol>
+            
+        </objectives>
+
+  <introduction>
+        <p>
+            Texto
+        </p>
+    </introduction>
+
+
+<subsection><title>Limites no Infinito</title>
+
+
+<p>
+A definição de um limite no infinito tem uma certa semelhança com a definição de limites em um número real que vimos anteriormente, 
+mas os detalhes são um pouco diferentes. Aqui vamos discutir sobre a distinção entre infinito positivo e negativo. À medida que 
+<m>x</m> se torna muito grande e positivo, ele se move em direção a <m>+\infty</m>, mas quando se torna muito grande e negativo,
+ ele se move em direção a <m>-\infty</m> .
+</p>
+
+
+<definition xml:id="def_1_5_1"><title>Limits at infinity <mdash/> informal</title>
+<statement><p>
+Escrevemos
+<md>
+<mrow>
+\lim_{x \to \infty} f(x) \amp= L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e positivo.
+</p>
+
+<p>
+Analogamente, escrevemos
+<md>
+<mrow>
+\lim_{x \to -\infty} f(x) \amp= L
+</mrow>
+</md>
+quando o valor da função <m>f(x)</m> se aproxima cada vez mais de <m>L</m> à medida que tornamos <m>x</m> cada vez maior e negativo.</p>
+</statement>
+</definition>
+
+
+<paragraphs>
+    <title>Limites para <m>+\infty</m> e <m>-\infty</m></title>
+    
+</paragraphs>
+
+<p>Considere os gráficos de duas funções a seguir:</p>
+
+<sidebyside width="80%">
+<image source="images/lim7.svg"/>
+</sidebyside>
+
+<p>
+As linhas horizontais pontilhadas indicam o comportamento quando <m>x</m> se torna muito grande. A função
+ à esquerda tem limite quando <m>x \to \infty</m> e quando <m>x \to -\infty</m> desde que a função 
+ <q>se estabeleça</q> para um determinado valor. Por outro lado, a função à direita não tem um limite quando <m>x \to -\infty</m> já que a função fica cada vez maior.
+</p>
+
+
+<p>
+Da mesma forma quando apresentamos limites com <m>x\to a</m>, vamos iniciar nosso estudo de limites infinitos apresentando 
+alguns resultados bem simples.
+</p>
+
+<theorem xml:id="thm_basic_lim_inf">
+<statement><p>
+Seja  uma constante então os seguintes limites são verdadeiros
+<md>
+<mrow>
+  \lim_{x \to \infty} c \amp= c \amp \lim_{x \to -\infty} c \amp= c
+</mrow><mrow>
+  \lim_{x \to \infty} \frac{1}{x} \amp= 0 \amp \lim_{x \to -\infty} \frac{1}{x} \amp= 0
+</mrow>
+</md>
+</p></statement>
+</theorem>
+
+<p>Novamente, esses limites interagem bem com a aritmética:</p>
+
+<theorem><title>Aritmética dos limites infinitos</title>
+<statement><p>
+Sejam <m>f(x), g(x)</m> ser duas funções para as quais os limites
+<md>
+<mrow>
+  \lim_{x \to \infty} f(x)\amp=F \amp \lim_{x \to \infty} g(x) \amp=G
+</mrow>
+</md>
+exitem. Então os seguintes limites são verdadeiros
+<md>
+<mrow>
+  \lim_{x \to \infty} f(x) \pm g(x) \amp= F \pm G
+</mrow>
+</md>
+<md>
+<mrow>
+  \lim_{x \to \infty} f(x) g(x) \amp= F  G
+</mrow>
+</md>
+<md>
+<mrow>
+  \lim_{x \to \infty} \frac{f(x)}{ g(x) } \amp= \frac{F}{G} \amp \text{desde que } G \neq 0
+</mrow>
+</md>
+
+e para números reais <m>p</m>
+<md>
+<mrow>
+  \lim_{x \to \infty} f(x)^p \amp= F^p 
+</mrow>
+</md>
+ desde que  <m> F^p</m> e <m>f(x)^p</m> são definidas para todos <m>x</m>. Os resultados análogos valem para os limites de <m>-\infty</m>.
+</p></statement>
+</theorem>
+
+
+
+<theorem xml:id="thm-limi-inf-potencia">
+    <statement>
+        <p>
+            Se <m>r</m> for um número racional, então 
+
+            <me>
+                \lim\limits_{x\to \infty}\frac{1}{x^r}=0.
+            </me>
+        Se <m>r>0</m> for um número racional tal que <m>x^r</m> seja definida para todo <m>x</m>, então 
+
+            <me>
+                \lim\limits_{x\to -\infty}\frac{1}{x^r}=0.
+            </me>
+            
+
+        </p>
+    </statement>
+</theorem>
+
+<observation>
+<p>
+    Observe que <xref ref="thm-limi-inf-potencia"/> toma cuidado em evitar raízes quadradas de números
+    negativos ou mesmo qualquer raiz par de um número negativo. Por isso precisamos que <m>x^r</m>
+    seja definida para todo <m>x</m>, quando precisamos fazer <m>x\to -\infty</m>. Por exemplo, 
+
+<ul>
+<li>
+	<m>\displaystyle \lim_{x \to \infty} \frac{1}{x^{1/2}} = 0</m>, mas <m>\displaystyle \lim_{x \to  -\infty} \frac{1}{x^{1/2}}</m> não existe, pois <m>x^{1/2}</m> 
+    não está definida para <m>x \lt 0</m>.
+</li>
+<li>
+	Por outro lado,  <m>x^{4/3}</m> está definida para valores negativos de <m>x</m>  e <m>\displaystyle \lim_{x \to -\infty} \frac{1}{x^{4/3}} = 0</m>.
+</li>
+</ul>
+
+</p>
+
+</observation>
+
+
+
+
+<p>
+Nossa primeira aplicação de limites no infinito será examinar o comportamento de uma função racional para <m>x</m> muito grande. 
+</p>
+
+<example xml:id="eg_1_5_2"><title><m>\displaystyle \lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}</m></title>
+
+<statement>
+    <p>
+       Determine o limite:
+<md>
+<mrow>
+\lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}
+</mrow>
+</md>
+    </p>
+</statement>
+
+<solution>
+
+
+<p>
+
+À medida que <m>x</m> se torna muito grande, é o termo <m>x^2</m> que dominará tanto no numerador quanto no denominador e 
+os outros termos se tornam irrelevantes. Ou seja, para <m>x</m> muito grande, <m>x^2</m> é muito maior que <m>x</m> ou qualquer 
+constante. Então, retiramos essas partes dominantes colocando esses termos em evidência:
+<md>
+<mrow>
+  \frac{x^2-3x+4}{3x^2+8x+1}
+  \amp= \frac{x^2 \left(1-\frac{3}{x}+\frac{4}{x^2}\right)}
+  {x^2 \left(3+\frac{8}{x}+\frac{1}{x^2} \right)}
+</mrow><mrow>
+  \amp= \frac{1-\frac{3}{x}+\frac{4}{x^2}}
+  {3+\frac{8}{x}+\frac{1}{x^2}} \amp \ct{ remover os fatores comuns}
+</mrow>
+</md>
+<md>
+<mrow>
+  \lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}
+  \amp= \lim_{x \to \infty} \frac{1-\frac{3}{x}+\frac{4}{x^2}}
+  {3+\frac{8}{x}+\frac{1}{x^2}}
+</mrow><mrow>
+  \amp= \frac{\displaystyle \lim_{x \to \infty}\left(1-\frac{3}{x}+\frac{4}{x^2}\right)}
+{\displaystyle \lim_{x \to \infty}\left(3+\frac{8}{x}+\frac{1}{x^2} \right)}
+\amp \ct{aritméticas dos limites}
+</mrow><mrow>
+  \amp= \frac{\displaystyle \lim_{x \to \infty} 1
+  - \lim_{x \to \infty} \frac{3}{x} + \lim_{x \to \infty} \frac{4}{x^2}}
+{\displaystyle \lim_{x \to \infty} 3
+ + \lim_{x \to \infty} \frac{8}{x}+ \lim_{x \to \infty} \frac{1}{x^2} }
+\amp \ct{aritméticas dos limites}
+</mrow><mrow>
+  \amp= \frac{1+0+0}{3+0+0}  = \frac{1}{3}
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+<p>A exemplo a seguir é um pouco mais complicado.</p>
+
+<example xml:id="ex-2"><title>Limite envolvendo radicais</title>
+<statement>
+
+
+<p>
+Encontre  <m>\lim\limits_{x \to \infty}\dfrac{\sqrt{4x^2+1}}{5x-1}</m>. 
+</p>
+</statement>
+<solution>
+
+
+<p>
+Vamos iniciar identificando o termo dominante no numerador e denominador e então colocá-lo em evidência. Veja que o denominador é dominado por <m>5x</m>.
+ A maior contribuição para o numerador vem do termo <m>4x^2</m> dentro da raiz quadrada. Quando extraímos <m>x^2</m> para fora da raiz quadrada, 
+ele se torna <m>x</m>, então o numerador é dominado por <m>x \cdot \sqrt{4} = 2x</m>. Para mostrar isso mais explicitamente, reescrevemos o numerador 
+
+
+	<md>
+	<mrow>
+	  \sqrt{4x^2+1} \amp= \sqrt{x^2 (4+1/x^2)} = \sqrt{x^2} \sqrt{4+1/x^2} =
+	x\sqrt{4+1/x^2}.
+	</mrow>
+	</md>
+Portanto, o limite quando <m>x \to \infty</m> é
+
+
+<md>
+	<mrow>
+	 \lim_{x \to \infty} \frac{\sqrt{4x^2+1}}{5x-1}
+	 \amp= \lim_{x \to \infty} \frac{x \sqrt{4+1/x^2}}{x(5-1/x)}
+	</mrow><mrow>
+	 \amp= \lim_{x \to \infty} \frac{\sqrt{4+1/x^2}}{5-1/x}
+	</mrow><mrow>
+	 \amp = \frac{2}{5}. 
+	</mrow>
+	</md>
+</p>
+</solution>
+</example>
+
+<p>
+Agora vamos pensar também no limite da mesma função do <xref ref="ex-2"/>, mas agora com <m>x \rightarrow -\infty</m>.
+Há algo sutil acontecendo por causa da raiz quadrada. Primeiro considere a função <fn>
+Apenas para mudar as coisas, vamos usar <m>t</m> e <m>h(t)</m> em vez dos onipresentes <m>x</m> e <m>f(x)</m>.
+</fn>
+</p>
+
+<p>
+<md>
+<mrow>
+  h(t) \amp= \sqrt{t^2}
+</mrow>
+</md>
+Avaliando isso em <m>t=7</m> temos 
+<md>
+<mrow>
+  h(7) \amp= \sqrt{ 7^2 } = \sqrt{49} = 7
+</mrow>
+</md>
+Teremos a mesma coisa para qualquer <m>t \geq 0</m>. Para qualquer <m>t \ge 0</m>, <m>h(t)=\sqrt{t^2}</m> retorna exatamente <m>t</m>.
+ No entanto, agora considere a função em <m>t=-3</m>
+
+<md>
+<mrow>
+  h(-3) \amp= \sqrt{ (-3)^2 } = \sqrt{9} = 3 = - (-3)
+</mrow>
+</md>
+ou seja, a função está retornando <m>-1</m> vezes o valor de entrada da função <m>h</m> .</p>
+
+<p>
+Isso ocorre porque quando definimos <m>\sqrt{\text{ }}</m>, definimos como a raiz quadrada <em>positiva</em>, ou seja, 
+a função <m>\sqrt{t}</m> nunca pode retornar um número negativo. Assim, sendo mais cuidadoso
+<md>
+<mrow>
+  h(t) \amp= \sqrt{t^2} = | t |
+</mrow>
+</md>
+Onde o <m>|t|</m> é o valor absoluto de <m>t</m>. Você talvez esteja acostumado a pensar em valor absoluto como <q>remover o sinal de menos</q>, mas isso não é muito correto.
+
+A <xref ref="fig-2"/> apresenta o gráfico de uma função por partes definida por 
+
+
+<md>
+<mrow>
+  |x| \amp= \begin{cases} x \amp x \geq 0 \\ -x \amp x  \lt  0 \end{cases}
+</mrow>
+
+</md>
+
+
+    
+
+Portanto nossa função <m>h(t)</m> é de fato
+<md>
+<mrow>
+  h(t) \amp= \sqrt{t^2} =
+	  \begin{cases}
+          t \amp t \geq 0 \\
+	  -t \amp t  \lt  0
+         \end{cases}
+</mrow>
+</md>
+
+
+
+Então, quando avaliamos <m>h(-7)</m> vale
+<md>
+<mrow>
+  h(-7) \amp= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7).
+</mrow>
+</md>
+Agora estamos prontos para examinar o limite como <m>x \to -\infty</m> em <xref ref="ex-2" text="custom"> nosso exemplo anterior.</xref> 
+
+
+<figure xml:id="fig-2">
+    <caption></caption>
+    <image xml:id="image-sage-2" width="40%">
+        <description></description>
+        <sageplot>
+            p = plot(abs(x), -1,1, thickness=1.5,axes_labels=['$x$','$y$'], ticks=[[-1, 1],[1,-1]], figsize=[4,3]) 
+            p+= text(r'$y=|x|$', (1, 1/2), fontsize=12)
+            p
+        </sageplot>
+    </image>
+</figure>
+</p>
+
+<example xml:id="ex-3"><title>Outro limite envolvendo radicais <mdash/> continuação</title>
+<statement>
+<p>
+Encontre  <m>\lim\limits_{x \to -\infty}\dfrac{\sqrt{4x^2+1}}{5x-1}</m>. 
+</p>
+</statement>
+
+
+<solution>
+ 
+<p>
+Novamente vamos tentar descobrir qual é o maior termo no numerador e no denominador e evidenciá-lo. 
+Como estamos tomando o limite como <m>x \to -\infty</m>, devemos pensar em <m>x</m> como um grande número negativo. 
+O denominador é dominado por <m>5x</m>. A maior contribuição para o numerador vem do <m>4x^2</m> dentro da raiz quadrada. Quando movemos o <m>x^2</m> para fora de uma raiz quadrada,
+ ele se torna <m>|x| = -x</m> (já que estamos tomando o limite como <m>x \to -\infty</m>), então o numerador é dominado por <m>-x\cdot\sqrt{4} = - 2x</m>. Assim, o numerador fica  
+
+ 	<md>
+	<mrow>
+	  \sqrt{4x^2+1} \amp= \sqrt{x^2 (4+1/x^2)}  = \sqrt{x^2} \sqrt{4+1/x^2}
+	</mrow><mrow>
+	  \amp= |x|\sqrt{4+1/x^2} \qquad \ct{ e já que $x \lt 0$ temos}
+	</mrow><mrow>
+	  \amp = -x\sqrt{4+1/x^2}
+	</mrow>
+	</md>
+
+
+	Assim o limite com <m>x \to -\infty</m> é
+	<md>
+	<mrow>
+	 \lim_{x \to -\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+	 \amp= \lim_{x \to -\infty} \frac{-x \sqrt{4+1/x^2}}{x(5-1/x)}
+	</mrow><mrow>
+	 \amp= \lim_{x \to -\infty} \frac{-\sqrt{4+1/x^2}}{5-1/x}
+	</mrow><mrow>
+	 \amp = -\frac{2}{5}
+	</mrow>
+	</md>
+
+</p>
+</solution></example>
+
+<p>
+Portanto, o limite como <m>x \to -\infty</m> é quase o mesmo, mas ganhamos um sinal de menos. Este <alert>definitivamente não</alert> é o caso em geral <mdash/> você tem que pensar em cada exemplo separadamente.
+</p>
+
+<p>
+A  <xref ref="fig-3"/> colabora com a afirmação acima.
+
+<figure xml:id="fig-3">
+    <caption></caption>
+   <image xml:id="image-sage-3" width="50%">
+      <description></description>
+   <sageplot>
+        p = plot(sqrt(4*x^2+1)/(5*x - 1), -2,2, ymax=5, ymin=-5, detect_poles='show', thickness=1.5,axes_labels=['$x$','$y$'], ticks=[[-2, 2],[1,-1]], figsize=[5,4]) 
+        
+        p+= text(r'$y=\dfrac{\sqrt{4x^2+1}}{5x-1}$', (1, 2), fontsize=12)
+        p
+   </sageplot>
+    
+       
+   </image>
+</figure>
+
+</p>
+
+<example xml:id="ex-4"><title>Não tente adicionar e subtrair infinito</title>
+
+<statement>
+    <p>
+       Determine o seguinte limite:
+<md>
+<mrow>
+  \lim_{x \to \infty} \left( x^{7/5}-x \right)
+</mrow>
+</md>
+    </p>
+</statement>
+<solution>
+
+<p>
+
+Neste caso, <alert>não</alert> podemos usar a aritmética dos limites para escrever isso como
+<md>
+<mrow>
+  \lim_{x \to \infty} \left( x^{7/5}-x \right)
+  \amp= \left( \lim_{x \to \infty} x^{7/5}\right)
+  - \left( \lim_{x \to \infty} x \right)
+</mrow><mrow>
+  \amp= \infty -\infty
+</mrow>
+</md>
+pois o limite não existe. Só podemos usar as regras de limite quando os limites existem. Ao invés disso, devemos fazer uma análise cuidadosa dos termos envolvidos.
+</p>
+
+<p>
+Note que quando <m>x</m> for muito grande, <m>x^{7/5} = x\cdot x^{2/5}</m> será muito maior que <m>x</m>, então o termo <m>x^{7/5}</m> dominará o termo <m>x</m>. Então fatore <m>x^{7/5}</m> e reescreva como<md>
+<mrow>
+  x^{7/5}-x \amp= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right).
+</mrow>
+</md>
+Considere o que acontece com cada um dos fatores com <m>x \to \infty</m>: 
+<ul>
+<li>
+Para <m>x</m> grande, <m>x^{7/5} \gt x</m> (isso é verdade para qualquer <m>x \gt 1</m>). No limite com <m>x \to +\infty</m>, <m>x</m> 
+se torna arbitrariamente grande e positivo, e <m>x^{7/5}</m> deve ser maior ainda assim, segue que	<md>
+	<mrow>
+	  \lim_{x \to \infty} x^{7/5} \amp= + \infty.
+	</mrow>
+	</md>
+</li>
+<li>
+	Por outro lado, <m>(1-x^{-2/5})</m> se aproxima cada vez mais de <m>1</m> <mdash/> podemos usar a aritmética dos limites para escrever isso como
+	<md>
+	<mrow>
+	  \lim_{x \to \infty} (1-x^{-2/5}) \amp= \lim_{x \to \infty} 1 - \lim_{x \to
+	\infty} x^{-2/5} = 1-0 = 1
+	</mrow>
+	</md>
+</li>
+</ul>
+Assim, o produto desses dois fatores será cada vez maior (e positivo) à medida que <m>x</m> se move para o infinito. Daí temos
+<md>
+<mrow>
+  \lim_{x \to \infty} x^{7/5} \left(1 - 1/x^{2/5} \right) \amp= + \infty
+</mrow>
+</md>.
+</p>
+
+
+</solution>
+
+</example>
+<p>
+Mas lembre-se que <m>+\infty</m> e <m>-\infty</m> não são números; a última equação no <xref ref="ex-4"/> é uma abreviação (atalho) para não escrever <q>a função se torna arbitrariamente grande</q>.
+</p>
+
+
+
+<p>
+Na seção anterior vimos que limites finitos e aritmética interagem funcionam bem. Isso nos permitiu calcular os limites de funções mais 
+complicadas em termos de funções mais simples. Quando os limites das funções vão para mais ou menos infinito, ficamos um pouco mais restritos no que podemos deduzir. 
+O próximo teorema apresenta alguns resultados referentes à soma, diferença, razão e produto de limites infinitos 
+<mdash/> infelizmente em muitos casos não podemos fazer afirmações gerais e os resultados dependerão dos detalhes do problema em questão.
+</p>
+
+
+<theorem xml:id="thm_arith_inf_lim"><title>Aritmética de limites infinitos</title>
+<statement><p>
+Sejam <m>a,c,H </m> constantes e <m>f,g,h</m> funções definidas em um intervalo que contém <m>a</m> (mas não precisam ser definidas em <m>x=a</m>), de modo que
+<md>
+<mrow>
+  \lim_{x \to a} f(x) \amp= +\infty \amp
+  \lim_{x \to a} g(x) \amp= +\infty \amp
+  \lim_{x \to a} h(x) \amp= H
+</mrow>
+</md>
+<ul>
+<li> <m>\displaystyle \lim_{x \to a} ( f(x) + g(x) ) = +\infty</m> </li>
+<li> <m>\displaystyle \lim_{x \to a} ( f(x) + h(x) ) = +\infty</m> </li>
+<li> <m>\displaystyle \lim_{x \to a} ( f(x) - g(x) )</m> indeterminado </li>
+<li> <m>\displaystyle \lim_{x \to a} ( f(x) - h(x) ) = +\infty</m> </li>
+<li>
+	<m>\displaystyle \lim_{x \to a} c f(x) =
+	\begin{cases}
+	 +\infty \amp c \gt 0 \\
+	0 \amp c=0 \\
+	-\infty \amp c \lt 0
+	\end{cases}
+	</m>
+</li>
+<li> <m>\displaystyle \lim_{x \to a} ( f(x) \cdot g(x) ) = +\infty</m>. </li>
+<li>
+	<m>\displaystyle \lim_{x \to a} f(x) h(x) =
+	\begin{cases}
+	 +\infty \amp H \gt 0 \\
+	-\infty \amp H \lt 0\\
+	\text{undetermined} \amp H=0
+	\end{cases}
+	</m>
+</li>
+<li> <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}</m>indeterminado</li>
+<li>
+	<m>\displaystyle \lim_{x \to a} \frac{f(x)}{h(x)} =
+	\begin{cases}
+	+\infty \amp H \gt 0 \\
+	-\infty \amp H \lt 0\\
+	\text{undetermined} \amp H=0
+	\end{cases}</m>
+</li>
+<li> <m>\displaystyle \lim_{x \to a} \frac{h(x)}{f(x)} = 0</m> </li>
+<li>
+	<m>\displaystyle \lim_{x \to a} f(x)^p =
+	\begin{cases}
+	+\infty \amp p \gt 0 \\
+	0 \amp p \lt 0\\
+	1 \amp p=0
+	\end{cases}</m>
+</li>
+</ul>
+</p></statement>
+</theorem>
+
+<p>
+Observe que por <q>indeterminado</q> queremos dizer que o limite pode ou não existir, 
+mas não pode ser determinado a partir das informações fornecidas no teorema. Considere o exemplo a seguir.</p>
+
+<example xml:id="ex-5"><title>Atenção com a aritmética de limites infinitos</title>
+<statement>
+    <p>
+        Consider the following 3 functions:
+<md>
+<mrow>
+f(x)\amp=x^{-2} \amp g(x)\amp=2x^{-2} \amp h(x)\amp=x^{-2}-1.
+</mrow>
+<intertext>Seus limites com <m>x \to 0</m> são:</intertext>
+<mrow>
+\lim_{x\to0} f(x) \amp= +\infty \amp
+\lim_{x\to0} g(x) \amp= +\infty \amp
+\lim_{x\to0} h(x) \amp= +\infty.
+</mrow>
+</md>
+Tente calcular os limites com  <m>x \to 0</m> para <m>f-g</m>, <m>f-h</m> e <m>g-h</m>.
+    </p>
+</statement>
+<solution>
+O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferenças, porque a diferença de dois limites infinitos pode ser mais infinito,
+ menos infinito ou algum número finito, dependendo dos detalhes do problema. Para se convencer veja os casos a seguir:
+<p>
+
+<md>
+<mrow>
+  \lim_{x\to0} \left( f(x)-g(x) \right) \amp= \lim_{x\to0} -x^{-2} = -\infty
+</mrow><mrow>
+  \lim_{x\to0} \left( f(x)-h(x) \right) \amp= \lim_{x\to0} 1 = 1
+</mrow><mrow>
+  \lim_{x\to0} \left( g(x)-h(x) \right) \amp= \lim_{x\to0} x^{-2}+1 = +\infty
+</mrow>
+</md>
+</p>
+</solution>
+</example>
+
+</subsection>
+
+
+
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+         <url href="" visual=""> Texto.</url>
+
+        </p>
+    </li>
+
+</ul>    
+</subsection>
+
+<subsection xml:id="subsec-assintotas-horizontais">
+    <title>Assintotas Horizontais</title>
+
+<definition xml:id="def-assintota-horizontal">
+    <statement>
+        <p>
+            A reta <m>y=L</m> é chamada de assintota horizontal ao gráfico da função <m>y=f(x)</m> se 
+
+            <md>
+                <mrow>\lim\limits_{x\to +\infty}f(x)=L \amp \quad \text{ou} \quad \lim\limits_{x\to \infty}f(x)=L </mrow>.
+            </md>
+        </p>
+    </statement>
+</definition>
+<p>
+    Se visitarmos o <xref ref="ex-3"/> e o <xref ref="ex-4"/>,  além da  <xref ref="fig-3"/>, podemos notar que as retas <m>y=\frac{2}{3}</m> e
+<m>y=-\frac{2}{3}</m> são assintotas horizontais ao gráfico de  <m>f(x)=\dfrac{\sqrt{4x^2+1}}{5x-1}.</m>
+</p>
+
+<example><title>Assintotas Horizontais</title>
+
+
+    <statement>
+        <p>
+            Verifique se <m>f(x)=\dfrac{x^2-1}{x^2+1}</m> possui assintotas horizontais.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Observe que 
+
+            <md>
+                <mrow>\lim\limits_{x\to +\infty}\dfrac{x^2-1}{x^2+1} \amp =  \lim\limits_{x \to +\infty}\frac{x^2\left(1 - \dfrac{1}{x^2}\right)}{x^2\left(1 + \dfrac{1}{x^2}\right)}</mrow>
+                <mrow> \amp = \frac{\lim\limits_{x\to +\infty} 1- \lim\limits_{x\to +\infty}\dfrac{1}{x^2}}{\lim\limits_{x\to +\infty} 1+ \lim\limits_{x\to +\infty}\dfrac{1}{x^2}} </mrow>
+                <md>
+                    <mrow> \amp =\frac{1-0}{1+0}=1 </mrow>
+                </md>
+            </md>
+        </p>
+
+        Procedendo da mesma forma para <m>x\to -\infty</m> chegaremos ao mesmo resultado. Portanto, de acordo com <xref ref="def-assintota-horizontal"/>
+        a reta <m>y=1</m> é uma assintota horizontal ao gráfico de <m>f(x)</m>. A <xref ref="fig-4"/> mostra o gráfico e sua assintota horizontal.
+
+
+        <figure xml:id="fig-4">
+            <caption></caption>
+            <image xml:id="image-sage-4" width="50%">
+                <description></description>
+                <sageplot>
+                    p = plot((x^2-1)/(x^2+1), -10,10, detect_poles='show', thickness=1.5,axes_labels=['$x$','$y$'], ticks=[[-10, 10],[1,-1]]) 
+                    p+= plot(1.0, (x, -10,10), linestyle="dashed", color="lightgray",figsize=[6,4])
+                    p+= text(r'$y=\dfrac{x^2-1}{x^2+1}$', (5, 1/2), fontsize=12)
+                    p
+                </sageplot>
+                
+            </image>
+        </figure>
+        
+    </solution>
+</example>
+</subsection>
+
+<exercises xml:id="exercises-">
+<exercise>Escrever aqui
+</exercise>
+</exercises>
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">STEWART, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+
