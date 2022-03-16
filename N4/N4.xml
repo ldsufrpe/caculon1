@@ -118,29 +118,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <ol>
                 <li>
                     <p>
-                        texto 11
+                        Determinar limites quando <m>x</m> se torna absolutamente grande.
                     </p>
                 </li>
                 <li>
                     <p>
-                       texto 2
+                       Identificar Assíntotas Horizontais
                     </p>
                 </li>
-                <li>
-                    <p>
-                        texto 3
-                    </p>
-                </li>
-
+                
             </ol>
             
         </objectives>
 
-  <introduction>
-        <p>
-            Texto
-        </p>
-    </introduction>
 
 
 <subsection><title>Limites no Infinito</title>
@@ -352,6 +342,20 @@ constante. Então, retiramos essas partes dominantes colocando esses termos em e
 </solution>
 </example>
 
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\lim\limits_{x\to +\infty}\frac{3x^2-x-2}{5x^2+4x+1}</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+           <m> \frac{3}{5}</m>
+        </p>
+    </answer>
+</exercise>
+
 <p>A exemplo a seguir é um pouco mais complicado.</p>
 
 <example xml:id="ex-2"><title>Limite envolvendo radicais</title>
@@ -547,6 +551,20 @@ A  <xref ref="fig-3"/> colabora com a afirmação acima.
 
 </p>
 
+<exercise>
+    <statement>
+        <p>
+            Examine o limite <m>f(x)=\dfrac{\sqrt{2x^2+1}}{3x-5}</m> quando <m>x\to +\infty</m> e <m>x\to -\infty</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+          <m>  \lim\limits_{x\to +\infty}f(x)= \frac{\sqrt{2}}{3}</m> e <m> \lim\limits_{x\to -\infty}f(x)= -\frac{\sqrt{2}}{3}</m>.
+        </p>
+    </answer>
+</exercise>
+
 <example xml:id="ex-4"><title>Não tente adicionar e subtrair infinito</title>
 
 <statement>
@@ -724,11 +742,89 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
 </solution>
 </example>
 
+
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\lim\limits_{x\to +\infty}(x^2-x)</m>
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>+\infty</m>
+        </p>
+    </answer>
+</exercise>
+
+<example>
+<title>Limites da diferença envolvendo radicais</title>
+
+
+  <statement>
+    <p>
+      Determine <m>\lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Com <m>x\to +\infty</m> ambos os termos, <m>\sqrt{x^2+1}</m> e <m>x</m>,  se tornam arbitrariamente grandes. Logo, é difícil
+      afirmar o que acontece com a diferença; nesta caso, vamos fazer algumas manipulações algébricas para reescrever a função. Iniciamos multiplicando 
+      o numerador e o denominador pelo conjugado radical:
+
+      <aside>
+        <p>
+          Alguns chamas esta estratégia de multiplicação do conjugado radical tanto no numerado quanto no denominador de <term>Multiplicação da expressão por 1</term>
+        </p>
+      </aside>
+
+      <md>
+        <mrow> \lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right)\amp = \lim\limits_{x\to +\infty}\left[\left(\sqrt{x^2+1}-x\right)\frac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}+x}\right] </mrow>
+        <mrow> \amp = \lim\limits_{x\to +\infty}\frac{(x^2+1)-x^2}{\sqrt{x^2+1}+x} \quad  \ct{depois da multiplicação dos numeradores.}</mrow>
+               <mrow> \amp = \lim\limits_{x\to +\infty}\frac{1}{\sqrt{x^2+1}+x}  \quad \ct{Simplificando o numerador}.</mrow>
+      </md>
+      Agora note que o denominador da ultima expressão acima é positivamente grande à medida que <m>x\to+\infty</m>. Logo, 
+
+      <me>
+        \lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right) = \lim\limits_{x\to +\infty}\frac{1}{\sqrt{x^2+1}+x} =0
+      </me>
+      A <xref ref="fig-4a"/> ilustra este resultado.
+
+      <figure xml:id="fig-4a">
+        <caption></caption>
+        <image xml:id="image-sage4a" width="40%">
+          <description></description>
+          <sageplot>
+            p = plot(sqrt(x^2+1)-x, -2,5, detect_poles='show', thickness=1.5,axes_labels=['$x$','$y$'], ticks=[[0, 1],[1]], figsize=[4,4]) 
+            p+= plot(0, (x, -2,2), linestyle="" ,figsize=[4,4])
+            p+= text(r'$y=\sqrt{x^2+1}-x$', (1.5, 3), fontsize=12)
+            p
+          </sageplot>
+        </image>
+      </figure>
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <statement>
+        <p>
+            Determine <m>\lim\limits_{x\to +\infty}\left(x-\sqrt{x^2+3}\right)</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            0
+        </p>
+    </answer>
+</exercise>
+
 </subsection>
 
 
 
-<subsection xml:id="sugestao-video-1">
+<!-- <subsection xml:id="sugestao-video-1">
     <title>Sugestão de vídeos</title>
   
 <ul>
@@ -740,7 +836,7 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
     </li>
 
 </ul>    
-</subsection>
+</subsection> -->
 
 <subsection xml:id="subsec-assintotas-horizontais">
     <title>Assintotas Horizontais</title>
@@ -802,11 +898,173 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
         
     </solution>
 </example>
+
+
+<exercise>
+  
+        <p>
+            Para <m>f(x)=\dfrac{\sqrt{2x^2+1}}{3x-5}</m>.
+        </p>
+ <task>
+ <statement>
+   <p>
+     Esboce o gráfico e tente verifique se existem assíntotas verticais e horizontais. 
+   </p>
+ </statement>
+   <answer>
+     <p>
+      É difícil ver isso no gráficos. Entretanto, além de um assintota vertical há duas assintotas horizontais.
+     </p>
+   </answer>
+ </task>
+ <task>
+<statement>
+  <p>
+    Calcule o limite de <m>f(x)</m> tanto para <m>x\to +\infty</m> quanto para <m>x\to -\infty</m>.
+  </p>
+</statement>
+<answer>
+  <p>
+    <m>\lim\limits_{x\to +\infty}f(x)=\frac{1}{3}\sqrt{2}</m> e  <m>\lim\limits_{x\to -\infty}f(x)=-\frac{1}{3}\sqrt{2}</m>
+  </p>
+</answer>
+ </task>
+
+</exercise>
 </subsection>
 
-<exercises xml:id="exercises-">
-<exercise>Escrever aqui
+
+
+
+
+<subsection xml:id="sugestao-video-1">
+    <title>Sugestão de vídeos</title>
+  
+<ul>
+    <li>
+        <p>
+           
+          <url href="https://youtu.be/Lz32NT5Pjws"  visual="youtu.be/Lz32NT5Pjws"> O conceito de limites infinitos.</url>
+        </p>
+    </li>
+
+        <li>
+        <p>
+           
+          <url href="https://youtu.be/4sYqjfd7G3E"  visual="youtu.be/4sYqjfd7G3E"> Resolvendo limites no infinito a partir do gráfico.</url>
+        </p>
+    </li>
+
+        <li>
+        <p>
+           
+          <url href="https://youtu.be/Q3RemCuNL4Q"  visual="youtu.be/Q3RemCuNL4Q"> Limite de <m>f(x)=\dfrac{4x^5-3x^2+3}{6x^5-100x^2-10}</m> quando <m>x\to \pm \infty</m>.</url>
+        </p>
+    </li>
+
+        <li>
+        <p>
+           
+          <url href="https://youtu.be/UC4sOwLy6U0"  visual="youtu.be/UC4sOwLy6U0"> Limites infinitos de funções racionais: várias situações.</url>
+        </p>
+    </li>
+
+            <li>
+        <p>
+           
+          <url href="https://youtu.be/GLRmPlYWeOs"  visual="youtu.be/GLRmPlYWeOs"> Limite de <m>f(x)=\dfrac{x}{\sqrt{x^2+1}}</m> quando <m>x\to \pm \infty</m>.</url>
+        </p>
+    </li>
+
+
+            <li>
+        <p>
+           
+          <url href="https://youtu.be/60lGzvHhCqc"  visual="youtu.be/60lGzvHhCqc"> Calculando <m>\lim\limits_{x\to -\infty}\dfrac{\sqrt{4x^4-x}}{2x^2+3}</m> .</url>
+        </p>
+    </li>
+ 
+    <li>
+
+       <p>
+           
+          <url href="https://youtu.be/2syUO7A39FMc"  visual="youtu.be/2syUO7A39FM"> Usando Teorema do Confronto para calcular: <m>\lim\limits_{x\to +\infty}\dfrac{\cos{x}}{x^2-1}</m> .</url>
+        </p>
+    </li>
+
+
+        <li>
+
+       <p>
+           
+          <url href="https://youtu.be/-FUkWpRfgEo"  visual="youtu.be/-FUkWpRfgEo"> Limite de  <m>\lim\limits_{x\to +\infty}\dfrac{x^2+1}{\sin{x}}</m> não existe.</url>
+        </p>
+    </li>
+
+        <li>
+
+       <p>
+           
+          <url href="https://youtu.be/XKpGrkeTTlQo"  visual="youtu.be/XKpGrkeTTlQ"> Calculando <m>\lim\limits_{x\to +\infty} \sqrt{100+x}-\sqrt{x} </m>.</url>
+        </p>
+    </li>
+</ul>    
+
+   
+</subsection>
+
+
+
+<exercises xml:id="exercises-limite-no-infinito">
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem1.pg" />
 </exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem2.pg" />
+</exercise>
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem3.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem4.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem5.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem6.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem7.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem8.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem9.pg" />
+</exercise>
+
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem10.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem11.pg" />
+</exercise>
+
+<exercise>
+<webwork source="pretext-limite-no-infinito/problem12.pg" />
+</exercise>
+
 </exercises>
 
 </section>

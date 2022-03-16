@@ -442,7 +442,7 @@ Observe que <m>x=1</m> não pertence ao domínio de <m>f</m> e que essa informa�
                 </sageplot>
             </image>
 
-</figure>
+    </figure>
      
         </p>
     </solution>
@@ -991,8 +991,6 @@ Podemos reformular o <xref ref="thm-laterais"/> escrevendo:
 
 
 <!-- <title>O limite é único </title> -->
-
-
 
 
 

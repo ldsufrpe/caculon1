@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-14T19:41:50-03:00       *-->
+<!--*       on 2022-03-16T18:00:00-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -110,9 +124,9 @@ true);
 <li class="link active">
 <a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Limites no Infinito</span></a><ul>
 <li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Limites no Infinito</a></li>
-<li><a href="section-1.html#sugestao-video-1" data-scroll="sugestao-video-1" class="internal">Sugestão de vídeos</a></li>
 <li><a href="section-1.html#subsec-assintotas-horizontais" data-scroll="subsec-assintotas-horizontais" class="internal">Assintotas Horizontais</a></li>
-<li><a href="section-1.html#exercises-" data-scroll="exercises-" class="internal">Exercícios</a></li>
+<li><a href="section-1.html#sugestao-video-1" data-scroll="sugestao-video-1" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#exercises-limite-no-infinito" data-scroll="exercises-limite-no-infinito" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
@@ -126,47 +140,46 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">texto 11</p></li>
-<li id="li-2"><p id="p-4">texto 2</p></li>
-<li id="li-3"><p id="p-5">texto 3</p></li>
-</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Texto</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<li id="li-1"><p id="p-3">Determinar limites quando <span class="process-math">\(x\)</span> se torna absolutamente grande.</p></li>
+<li id="li-2"><p id="p-4">Identificar Assíntotas Horizontais</p></li>
+</ol></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Limites no Infinito</span>
 </h3>
-<p id="p-7">A definição de um limite no infinito tem uma certa semelhança com a definição de limites em um número real que vimos anteriormente, mas os detalhes são um pouco diferentes. Aqui vamos discutir sobre a distinção entre infinito positivo e negativo. À medida que <span class="process-math">\(x\)</span> se torna muito grande e positivo, ele se move em direção a <span class="process-math">\(+\infty\text{,}\)</span> mas quando se torna muito grande e negativo, ele se move em direção a <span class="process-math">\(-\infty\)</span> .</p>
+<p id="p-5">A definição de um limite no infinito tem uma certa semelhança com a definição de limites em um número real que vimos anteriormente, mas os detalhes são um pouco diferentes. Aqui vamos discutir sobre a distinção entre infinito positivo e negativo. À medida que <span class="process-math">\(x\)</span> se torna muito grande e positivo, ele se move em direção a <span class="process-math">\(+\infty\text{,}\)</span> mas quando se torna muito grande e negativo, ele se move em direção a <span class="process-math">\(-\infty\)</span> .</p>
 <article class="definition definition-like" id="def_1_5_1"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Limits at infinity — informal.</span>
 </h4>
-<p id="p-8">Escrevemos</p>
+<p id="p-6">Escrevemos</p>
 <div class="displaymath process-math" id="md-1">
 \begin{align*}
 \lim_{x \to \infty} f(x) \amp= L
 \end{align*}
 </div>
 <p class="continuation">quando o valor da função <span class="process-math">\(f(x)\)</span> se aproxima cada vez mais de <span class="process-math">\(L\)</span> à medida que tornamos <span class="process-math">\(x\)</span> cada vez maior e positivo.</p>
-<p id="p-9">Analogamente, escrevemos</p>
+<p id="p-7">Analogamente, escrevemos</p>
 <div class="displaymath process-math" id="md-2">
 \begin{align*}
 \lim_{x \to -\infty} f(x) \amp= L
 \end{align*}
 </div>
-<p class="continuation">quando o valor da função <span class="process-math">\(f(x)\)</span> se aproxima cada vez mais de <span class="process-math">\(L\)</span> à medida que tornamos <span class="process-math">\(x\)</span> cada vez maior e negativo.</p></article><section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Limites para <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\)</span>.</span></h4></section><p id="p-10">Considere os gráficos de duas funções a seguir:</p>
+<p class="continuation">quando o valor da função <span class="process-math">\(f(x)\)</span> se aproxima cada vez mais de <span class="process-math">\(L\)</span> à medida que tornamos <span class="process-math">\(x\)</span> cada vez maior e negativo.</p></article><section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Limites para <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\)</span>.</span></h4></section><p id="p-8">Considere os gráficos de duas funções a seguir:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/lim7.svg" class="contained"></div></div></div>
-<p id="p-11">As linhas horizontais pontilhadas indicam o comportamento quando <span class="process-math">\(x\)</span> se torna muito grande. A função à esquerda tem limite quando <span class="process-math">\(x \to \infty\)</span> e quando <span class="process-math">\(x \to -\infty\)</span> desde que a função “se estabeleça” para um determinado valor. Por outro lado, a função à direita não tem um limite quando <span class="process-math">\(x \to -\infty\)</span> já que a função fica cada vez maior.</p>
-<p id="p-12">Da mesma forma quando apresentamos limites com <span class="process-math">\(x\to a\text{,}\)</span> vamos iniciar nosso estudo de limites infinitos apresentando alguns resultados bem simples.</p>
+<p id="p-9">As linhas horizontais pontilhadas indicam o comportamento quando <span class="process-math">\(x\)</span> se torna muito grande. A função à esquerda tem limite quando <span class="process-math">\(x \to \infty\)</span> e quando <span class="process-math">\(x \to -\infty\)</span> desde que a função “se estabeleça” para um determinado valor. Por outro lado, a função à direita não tem um limite quando <span class="process-math">\(x \to -\infty\)</span> já que a função fica cada vez maior.</p>
+<p id="p-10">Da mesma forma quando apresentamos limites com <span class="process-math">\(x\to a\text{,}\)</span> vamos iniciar nosso estudo de limites infinitos apresentando alguns resultados bem simples.</p>
 <article class="theorem theorem-like" id="thm_basic_lim_inf"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h4>
-<p id="p-13">Seja  uma constante então os seguintes limites são verdadeiros</p>
+<p id="p-11">Seja  uma constante então os seguintes limites são verdadeiros</p>
 <div class="displaymath process-math" id="md-3">
 \begin{align*}
 \lim_{x \to \infty} c \amp= c \amp \lim_{x \to -\infty} c \amp= c\\
 \lim_{x \to \infty} \frac{1}{x} \amp= 0 \amp \lim_{x \to -\infty} \frac{1}{x} \amp= 0
 \end{align*}
-</div></article><p id="p-14">Novamente, esses limites interagem bem com a aritmética:</p>
+</div></article><p id="p-12">Novamente, esses limites interagem bem com a aritmética:</p>
 <article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética dos limites infinitos.</span>
 </h4>
-<p id="p-15">Sejam <span class="process-math">\(f(x), g(x)\)</span> ser duas funções para as quais os limites</p>
+<p id="p-13">Sejam <span class="process-math">\(f(x), g(x)\)</span> ser duas funções para as quais os limites</p>
 <div class="displaymath process-math" id="md-4">
 \begin{align*}
 \lim_{x \to \infty} f(x)\amp=F \amp \lim_{x \to \infty} g(x) \amp=G
@@ -197,7 +210,7 @@ true);
 <p class="continuation">desde que  <span class="process-math">\(F^p\)</span> e <span class="process-math">\(f(x)^p\)</span> são definidas para todos <span class="process-math">\(x\text{.}\)</span> Os resultados análogos valem para os limites de <span class="process-math">\(-\infty\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-limi-inf-potencia"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h4>
-<p id="p-16">Se <span class="process-math">\(r\)</span> for um número racional, então</p>
+<p id="p-14">Se <span class="process-math">\(r\)</span> for um número racional, então</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim\limits_{x\to \infty}\frac{1}{x^r}=0.
@@ -211,14 +224,14 @@ true);
 </div></article><article class="observation remark-like" id="observation-1"><h4 class="heading">
 <span class="type">Observação</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h4>
-<p id="p-17">Observe que <a href="" class="xref" data-knowl="./knowl/thm-limi-inf-potencia.html" title="Teorema 1.4">Teorema 1.4</a> toma cuidado em evitar raízes quadradas de números negativos ou mesmo qualquer raiz par de um número negativo. Por isso precisamos que <span class="process-math">\(x^r\)</span> seja definida para todo <span class="process-math">\(x\text{,}\)</span> quando precisamos fazer <span class="process-math">\(x\to -\infty\text{.}\)</span> Por exemplo,</p>
+<p id="p-15">Observe que <a href="" class="xref" data-knowl="./knowl/thm-limi-inf-potencia.html" title="Teorema 1.4">Teorema 1.4</a> toma cuidado em evitar raízes quadradas de números negativos ou mesmo qualquer raiz par de um número negativo. Por isso precisamos que <span class="process-math">\(x^r\)</span> seja definida para todo <span class="process-math">\(x\text{,}\)</span> quando precisamos fazer <span class="process-math">\(x\to -\infty\text{.}\)</span> Por exemplo,</p>
 <ul class="disc">
-<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{1}{x^{1/2}} = 0\text{,}\)</span> mas <span class="process-math">\(\displaystyle \lim_{x \to  -\infty} \frac{1}{x^{1/2}}\)</span> não existe, pois <span class="process-math">\(x^{1/2}\)</span> não está definida para <span class="process-math">\(x \lt 0\text{.}\)</span></p></li>
-<li id="li-5"><p id="p-derived-li-5">Por outro lado,  <span class="process-math">\(x^{4/3}\)</span> está definida para valores negativos de <span class="process-math">\(x\)</span>  e <span class="process-math">\(\displaystyle \lim_{x \to -\infty} \frac{1}{x^{4/3}} = 0\text{.}\)</span></p></li>
-</ul></article><p id="p-18">Nossa primeira aplicação de limites no infinito será examinar o comportamento de uma função racional para <span class="process-math">\(x\)</span> muito grande.</p>
+<li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{1}{x^{1/2}} = 0\text{,}\)</span> mas <span class="process-math">\(\displaystyle \lim_{x \to  -\infty} \frac{1}{x^{1/2}}\)</span> não existe, pois <span class="process-math">\(x^{1/2}\)</span> não está definida para <span class="process-math">\(x \lt 0\text{.}\)</span></p></li>
+<li id="li-4"><p id="p-derived-li-4">Por outro lado,  <span class="process-math">\(x^{4/3}\)</span> está definida para valores negativos de <span class="process-math">\(x\)</span>  e <span class="process-math">\(\displaystyle \lim_{x \to -\infty} \frac{1}{x^{4/3}} = 0\text{.}\)</span></p></li>
+</ul></article><p id="p-16">Nossa primeira aplicação de limites no infinito será examinar o comportamento de uma função racional para <span class="process-math">\(x\)</span> muito grande.</p>
 <article class="example example-like" id="eg_1_5_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_1_5_2"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_5_2"><article class="example example-like"><p id="p-19">Determine o limite:</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_1_5_2"><article class="example example-like"><p id="p-17">Determine o limite:</p>
 <div class="displaymath process-math" id="md-9">
 \begin{gather*}
 \lim_{x \to \infty} \frac{x^2-3x+4}{3x^2+8x+1}
@@ -226,7 +239,7 @@ true);
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-20">À medida que <span class="process-math">\(x\)</span> se torna muito grande, é o termo <span class="process-math">\(x^2\)</span> que dominará tanto no numerador quanto no denominador e os outros termos se tornam irrelevantes. Ou seja, para <span class="process-math">\(x\)</span> muito grande, <span class="process-math">\(x^2\)</span> é muito maior que <span class="process-math">\(x\)</span> ou qualquer constante. Então, retiramos essas partes dominantes colocando esses termos em evidência:</p>
+<p id="p-18">À medida que <span class="process-math">\(x\)</span> se torna muito grande, é o termo <span class="process-math">\(x^2\)</span> que dominará tanto no numerador quanto no denominador e os outros termos se tornam irrelevantes. Ou seja, para <span class="process-math">\(x\)</span> muito grande, <span class="process-math">\(x^2\)</span> é muito maior que <span class="process-math">\(x\)</span> ou qualquer constante. Então, retiramos essas partes dominantes colocando esses termos em evidência:</p>
 <div class="displaymath process-math" id="md-10">
 \begin{align*}
 \frac{x^2-3x+4}{3x^2+8x+1}
@@ -254,9 +267,15 @@ true);
 </div>
 </div></div>
 </div></article></div>
+<article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-19">Determine <span class="process-math">\(\lim\limits_{x\to +\infty}\frac{3x^2-x-2}{5x^2+4x+1}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-20"><span class="process-math">\(\frac{3}{5}\)</span></p></div></div>
+</div></article></div>
 <p id="p-21">A exemplo a seguir é um pouco mais complicado.</p>
 <article class="example example-like" id="ex-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-2"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Limite envolvendo radicais.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Limite envolvendo radicais.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-22">Encontre  <span class="process-math">\(\lim\limits_{x \to \infty}\dfrac{\sqrt{4x^2+1}}{5x-1}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
@@ -278,7 +297,7 @@ x\sqrt{4+1/x^2}.
 </div>
 </div></div>
 </div></article></div>
-<p id="p-24">Agora vamos pensar também no limite da mesma função do <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.7: Limite envolvendo radicais">Exemplo 1.7</a>, mas agora com <span class="process-math">\(x \rightarrow -\infty\text{.}\)</span> Há algo sutil acontecendo por causa da raiz quadrada. Primeiro considere a função <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+<p id="p-24">Agora vamos pensar também no limite da mesma função do <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.8: Limite envolvendo radicais">Exemplo 1.8</a>, mas agora com <span class="process-math">\(x \rightarrow -\infty\text{.}\)</span> Há algo sutil acontecendo por causa da raiz quadrada. Primeiro considere a função <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
 <div class="displaymath process-math" id="md-14">
 \begin{align*}
 h(t) \amp= \sqrt{t^2}
@@ -303,7 +322,7 @@ h(-3) \amp= \sqrt{ (-3)^2 } = \sqrt{9} = 3 = - (-3)
 h(t) \amp= \sqrt{t^2} = | t |
 \end{align*}
 </div>
-<p class="continuation">Onde o <span class="process-math">\(|t|\)</span> é o valor absoluto de <span class="process-math">\(t\text{.}\)</span> Você talvez esteja acostumado a pensar em valor absoluto como “remover o sinal de menos”, mas isso não é muito correto. A <a href="" class="xref" data-knowl="./knowl/fig-2.html" title="Figura 1.8">Figura 1.8</a> apresenta o gráfico de uma função por partes definida por</p>
+<p class="continuation">Onde o <span class="process-math">\(|t|\)</span> é o valor absoluto de <span class="process-math">\(t\text{.}\)</span> Você talvez esteja acostumado a pensar em valor absoluto como “remover o sinal de menos”, mas isso não é muito correto. A <a href="" class="xref" data-knowl="./knowl/fig-2.html" title="Figura 1.9">Figura 1.9</a> apresenta o gráfico de uma função por partes definida por</p>
 <div class="displaymath process-math" id="md-18">
 \begin{align*}
 |x| \amp= \begin{cases} x \amp x \geq 0 \\ -x \amp x  \lt  0 \end{cases}
@@ -325,10 +344,10 @@ t \amp t \geq 0 \\
 h(-7) \amp= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7).
 \end{align*}
 </div>
-<p class="continuation">Agora estamos prontos para examinar o limite como <span class="process-math">\(x \to -\infty\)</span> em <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.7: Limite envolvendo radicais">nosso exemplo anterior.</a> <figure class="figure figure-like" id="fig-2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-sage-2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p class="continuation">Agora estamos prontos para examinar o limite como <span class="process-math">\(x \to -\infty\)</span> em <a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.8: Limite envolvendo radicais">nosso exemplo anterior.</a> <figure class="figure figure-like" id="fig-2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-sage-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
 <article class="example example-like" id="ex-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Outro limite envolvendo radicais — continuação.</span>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Outro limite envolvendo radicais — continuação.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-27">Encontre  <span class="process-math">\(\lim\limits_{x \to -\infty}\dfrac{\sqrt{4x^2+1}}{5x-1}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
@@ -352,11 +371,17 @@ h(-7) \amp= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7).
 </div></div>
 </div></article></div>
 <p id="p-29">Portanto, o limite como <span class="process-math">\(x \to -\infty\)</span> é quase o mesmo, mas ganhamos um sinal de menos. Este <em class="alert">definitivamente não</em> é o caso em geral — você tem que pensar em cada exemplo separadamente.</p>
-<p id="p-30">A  <a href="" class="xref" data-knowl="./knowl/fig-3.html" title="Figura 1.10">Figura 1.10</a> colabora com a afirmação acima. <figure class="figure figure-like" id="fig-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-3.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-30">A  <a href="" class="xref" data-knowl="./knowl/fig-3.html" title="Figura 1.11">Figura 1.11</a> colabora com a afirmação acima. <figure class="figure figure-like" id="fig-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-3.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-31">Examine o limite <span class="process-math">\(f(x)=\dfrac{\sqrt{2x^2+1}}{3x-5}\)</span> quando <span class="process-math">\(x\to +\infty\)</span> e <span class="process-math">\(x\to -\infty\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-32"><span class="process-math">\(\lim\limits_{x\to +\infty}f(x)= \frac{\sqrt{2}}{3}\)</span> e <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)= -\frac{\sqrt{2}}{3}\text{.}\)</span></p></div></div>
+</div></article></div>
 <article class="example example-like" id="ex-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-4"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Não tente adicionar e subtrair infinito.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-31">Determine o seguinte limite:</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Não tente adicionar e subtrair infinito.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-33">Determine o seguinte limite:</p>
 <div class="displaymath process-math" id="md-23">
 \begin{gather*}
 \lim_{x \to \infty} \left( x^{7/5}-x \right)
@@ -364,7 +389,7 @@ h(-7) \amp= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7).
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-32">Neste caso, <em class="alert">não</em> podemos usar a aritmética dos limites para escrever isso como</p>
+<p id="p-34">Neste caso, <em class="alert">não</em> podemos usar a aritmética dos limites para escrever isso como</p>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}
 \lim_{x \to \infty} \left( x^{7/5}-x \right)
@@ -374,7 +399,7 @@ h(-7) \amp= \sqrt{ (-7)^2 } = \sqrt{49} = 7 = -(-7).
 \end{align*}
 </div>
 <p class="continuation">pois o limite não existe. Só podemos usar as regras de limite quando os limites existem. Ao invés disso, devemos fazer uma análise cuidadosa dos termos envolvidos.</p>
-<p id="p-33">Note que quando <span class="process-math">\(x\)</span> for muito grande, <span class="process-math">\(x^{7/5} = x\cdot x^{2/5}\)</span> será muito maior que <span class="process-math">\(x\text{,}\)</span> então o termo <span class="process-math">\(x^{7/5}\)</span> dominará o termo <span class="process-math">\(x\text{.}\)</span> Então fatore <span class="process-math">\(x^{7/5}\)</span> e reescreva como</p>
+<p id="p-35">Note que quando <span class="process-math">\(x\)</span> for muito grande, <span class="process-math">\(x^{7/5} = x\cdot x^{2/5}\)</span> será muito maior que <span class="process-math">\(x\text{,}\)</span> então o termo <span class="process-math">\(x^{7/5}\)</span> dominará o termo <span class="process-math">\(x\text{.}\)</span> Então fatore <span class="process-math">\(x^{7/5}\)</span> e reescreva como</p>
 <div class="displaymath process-math" id="md-25">
 \begin{align*}
 x^{7/5}-x \amp= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right).
@@ -382,12 +407,12 @@ x^{7/5}-x \amp= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right).
 </div>
 <p class="continuation">Considere o que acontece com cada um dos fatores com <span class="process-math">\(x \to \infty\text{:}\)</span></p>
 <ul class="disc">
-<li id="li-6"><p id="p-derived-li-6">Para <span class="process-math">\(x\)</span> grande, <span class="process-math">\(x^{7/5} \gt x\)</span> (isso é verdade para qualquer <span class="process-math">\(x \gt 1\)</span>). No limite com <span class="process-math">\(x \to +\infty\text{,}\)</span> <span class="process-math">\(x\)</span> se torna arbitrariamente grande e positivo, e <span class="process-math">\(x^{7/5}\)</span> deve ser maior ainda assim, segue que<div class="displaymath process-math" id="md-26">
+<li id="li-5"><p id="p-derived-li-5">Para <span class="process-math">\(x\)</span> grande, <span class="process-math">\(x^{7/5} \gt x\)</span> (isso é verdade para qualquer <span class="process-math">\(x \gt 1\)</span>). No limite com <span class="process-math">\(x \to +\infty\text{,}\)</span> <span class="process-math">\(x\)</span> se torna arbitrariamente grande e positivo, e <span class="process-math">\(x^{7/5}\)</span> deve ser maior ainda assim, segue que<div class="displaymath process-math" id="md-26">
 \begin{align*}
 \lim_{x \to \infty} x^{7/5} \amp= + \infty.
 \end{align*}
 </div></p></li>
-<li id="li-7"><p id="p-derived-li-7">Por outro lado, <span class="process-math">\((1-x^{-2/5})\)</span> se aproxima cada vez mais de <span class="process-math">\(1\)</span> — podemos usar a aritmética dos limites para escrever isso como<div class="displaymath process-math" id="md-27">
+<li id="li-6"><p id="p-derived-li-6">Por outro lado, <span class="process-math">\((1-x^{-2/5})\)</span> se aproxima cada vez mais de <span class="process-math">\(1\)</span> — podemos usar a aritmética dos limites para escrever isso como<div class="displaymath process-math" id="md-27">
 \begin{align*}
 \lim_{x \to \infty} (1-x^{-2/5}) \amp= \lim_{x \to \infty} 1 - \lim_{x \to
 \infty} x^{-2/5} = 1-0 = 1
@@ -402,12 +427,12 @@ x^{7/5}-x \amp= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right).
 </div>
 </div></div>
 </div></article></div>
-<p id="p-34">Mas lembre-se que <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\)</span> não são números; a última equação no <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.11: Não tente adicionar e subtrair infinito">Exemplo 1.11</a> é uma abreviação (atalho) para não escrever “a função se torna arbitrariamente grande”.</p>
-<p id="p-35">Na seção anterior vimos que limites finitos e aritmética interagem funcionam bem. Isso nos permitiu calcular os limites de funções mais complicadas em termos de funções mais simples. Quando os limites das funções vão para mais ou menos infinito, ficamos um pouco mais restritos no que podemos deduzir. O próximo teorema apresenta alguns resultados referentes à soma, diferença, razão e produto de limites infinitos — infelizmente em muitos casos não podemos fazer afirmações gerais e os resultados dependerão dos detalhes do problema em questão.</p>
+<p id="p-36">Mas lembre-se que <span class="process-math">\(+\infty\)</span> e <span class="process-math">\(-\infty\)</span> não são números; a última equação no <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.13: Não tente adicionar e subtrair infinito">Exemplo 1.13</a> é uma abreviação (atalho) para não escrever “a função se torna arbitrariamente grande”.</p>
+<p id="p-37">Na seção anterior vimos que limites finitos e aritmética interagem funcionam bem. Isso nos permitiu calcular os limites de funções mais complicadas em termos de funções mais simples. Quando os limites das funções vão para mais ou menos infinito, ficamos um pouco mais restritos no que podemos deduzir. O próximo teorema apresenta alguns resultados referentes à soma, diferença, razão e produto de limites infinitos — infelizmente em muitos casos não podemos fazer afirmações gerais e os resultados dependerão dos detalhes do problema em questão.</p>
 <article class="theorem theorem-like" id="thm_arith_inf_lim"><h4 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética de limites infinitos.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Aritmética de limites infinitos.</span>
 </h4>
-<p id="p-36">Sejam <span class="process-math">\(a,c,H \)</span> constantes e <span class="process-math">\(f,g,h\)</span> funções definidas em um intervalo que contém <span class="process-math">\(a\)</span> (mas não precisam ser definidas em <span class="process-math">\(x=a\)</span>), de modo que</p>
+<p id="p-38">Sejam <span class="process-math">\(a,c,H \)</span> constantes e <span class="process-math">\(f,g,h\)</span> funções definidas em um intervalo que contém <span class="process-math">\(a\)</span> (mas não precisam ser definidas em <span class="process-math">\(x=a\)</span>), de modo que</p>
 <div class="displaymath process-math" id="md-29">
 \begin{align*}
 \lim_{x \to a} f(x) \amp= +\infty \amp
@@ -416,41 +441,41 @@ x^{7/5}-x \amp= x^{7/5} \left(1 - \frac{1}{x^{2/5}} \right).
 \end{align*}
 </div>
 <ul class="disc">
-<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) + g(x) ) = +\infty\)</span></p></li>
-<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) + h(x) ) = +\infty\)</span></p></li>
-<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\displaystyle \lim_{x \to a} ( f(x) - g(x) )\)</span> indeterminado</p></li>
-<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) - h(x) ) = +\infty\)</span></p></li>
-<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} c f(x) =
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) + g(x) ) = +\infty\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) + h(x) ) = +\infty\)</span></p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\displaystyle \lim_{x \to a} ( f(x) - g(x) )\)</span> indeterminado</p></li>
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} ( f(x) - h(x) ) = +\infty\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} c f(x) =
 \begin{cases}
 +\infty \amp c \gt 0 \\
 0 \amp c=0 \\
 -\infty \amp c \lt 0
 \end{cases}\)</span></p></li>
-<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle \lim_{x \to a} ( f(x) \cdot g(x) ) = +\infty\text{.}\)</span></p></li>
-<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} f(x) h(x) =
+<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(\displaystyle \lim_{x \to a} ( f(x) \cdot g(x) ) = +\infty\text{.}\)</span></p></li>
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} f(x) h(x) =
 \begin{cases}
 +\infty \amp H \gt 0 \\
 -\infty \amp H \lt 0\\
 \text{undetermined} \amp H=0
 \end{cases}\)</span></p></li>
-<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}\)</span>indeterminado</p></li>
-<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} \frac{f(x)}{h(x)} =
+<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}\)</span>indeterminado</p></li>
+<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} \frac{f(x)}{h(x)} =
 \begin{cases}
 +\infty \amp H \gt 0 \\
 -\infty \amp H \lt 0\\
 \text{undetermined} \amp H=0
 \end{cases}\)</span></p></li>
-<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} \frac{h(x)}{f(x)} = 0\)</span></p></li>
-<li id="li-18"><p id="p-derived-li-18"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} f(x)^p =
+<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} \frac{h(x)}{f(x)} = 0\)</span></p></li>
+<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(\displaystyle \displaystyle \lim_{x \to a} f(x)^p =
 \begin{cases}
 +\infty \amp p \gt 0 \\
 0 \amp p \lt 0\\
 1 \amp p=0
 \end{cases}\)</span></p></li>
-</ul></article><p id="p-37">Observe que por “indeterminado” queremos dizer que o limite pode ou não existir, mas não pode ser determinado a partir das informações fornecidas no teorema. Considere o exemplo a seguir.</p>
+</ul></article><p id="p-39">Observe que por “indeterminado” queremos dizer que o limite pode ou não existir, mas não pode ser determinado a partir das informações fornecidas no teorema. Considere o exemplo a seguir.</p>
 <article class="example example-like" id="ex-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-5"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Atenção com a aritmética de limites infinitos.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-38">Consider the following 3 functions:</p>
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Atenção com a aritmética de limites infinitos.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-40">Consider the following 3 functions:</p>
 <div class="displaymath process-math" id="md-30">
 \begin{align*}
 f(x)\amp=x^{-2} \amp g(x)\amp=2x^{-2} \amp h(x)\amp=x^{-2}-1.\\
@@ -464,7 +489,7 @@ f(x)\amp=x^{-2} \amp g(x)\amp=2x^{-2} \amp h(x)\amp=x^{-2}-1.\\
 </div>
 <p class="continuation">Tente calcular os limites com  <span class="process-math">\(x \to 0\)</span> para <span class="process-math">\(f-g\text{,}\)</span> <span class="process-math">\(f-h\)</span> e <span class="process-math">\(g-h\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">O <a href="" class="xref" data-knowl="./knowl/thm_arith_inf_lim.html" title="Teorema 1.12: Aritmética de limites infinitos">Teorema 1.12</a> não pode nos ajudar a calcular essas diferenças, porque a diferença de dois limites infinitos pode ser mais infinito, menos infinito ou algum número finito, dependendo dos detalhes do problema. Para se convencer veja os casos a seguir: <div class="displaymath process-math" id="md-31">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">O <a href="" class="xref" data-knowl="./knowl/thm_arith_inf_lim.html" title="Teorema 1.14: Aritmética de limites infinitos">Teorema 1.14</a> não pode nos ajudar a calcular essas diferenças, porque a diferença de dois limites infinitos pode ser mais infinito, menos infinito ou algum número finito, dependendo dos detalhes do problema. Para se convencer veja os casos a seguir: <div class="displaymath process-math" id="md-31">
 \begin{align*}
 \lim_{x\to0} \left( f(x)-g(x) \right) \amp= \lim_{x\to0} -x^{-2} = -\infty\\
 \lim_{x\to0} \left( f(x)-h(x) \right) \amp= \lim_{x\to0} 1 = 1\\
@@ -472,40 +497,274 @@ f(x)\amp=x^{-2} \amp g(x)\amp=2x^{-2} \amp h(x)\amp=x^{-2}-1.\\
 \end{align*}
 </div>
 </div></div>
-</div></article></div></section><section class="subsection" id="sugestao-video-1"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de vídeos</span>
-</h3>
-<ul class="disc"><li id="li-19"><p id="p-40"><a class="external" href="" target="_blank">Texto.</a></p></li></ul></section><section class="subsection" id="subsec-assintotas-horizontais"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Assintotas Horizontais</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-3"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-3"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-3"><article class="exercise exercise-like"><p id="p-42">Determine <span class="process-math">\(\lim\limits_{x\to +\infty}(x^2-x)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-43"><span class="process-math">\(+\infty\)</span></p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Limites da diferença envolvendo radicais.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-44">Determine <span class="process-math">\(\lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-45">Com <span class="process-math">\(x\to +\infty\)</span> ambos os termos, <span class="process-math">\(\sqrt{x^2+1}\)</span> e <span class="process-math">\(x\text{,}\)</span>  se tornam arbitrariamente grandes. Logo, é difícil afirmar o que acontece com a diferença; nesta caso, vamos fazer algumas manipulações algébricas para reescrever a função. Iniciamos multiplicando o numerador e o denominador pelo conjugado radical: <aside class="aside aside-like" id="aside-1"><p id="p-46">Alguns chamas esta estratégia de multiplicação do conjugado radical tanto no numerado quanto no denominador de <dfn class="terminology">Multiplicação da expressão por 1</dfn></p></aside></p>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+\lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right)\amp = \lim\limits_{x\to +\infty}\left[\left(\sqrt{x^2+1}-x\right)\frac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}+x}\right] \\
+\amp = \lim\limits_{x\to +\infty}\frac{(x^2+1)-x^2}{\sqrt{x^2+1}+x} \quad  \ct{depois da multiplicação dos numeradores.}\\
+\amp = \lim\limits_{x\to +\infty}\frac{1}{\sqrt{x^2+1}+x}  \quad \ct{Simplificando o numerador}.
+\end{align*}
+</div>
+<p class="continuation">Agora note que o denominador da ultima expressão acima é positivamente grande à medida que <span class="process-math">\(x\to+\infty\text{.}\)</span> Logo,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{x\to +\infty}\left(\sqrt{x^2+1}-x\right) = \lim\limits_{x\to +\infty}\frac{1}{\sqrt{x^2+1}+x} =0
+\end{equation*}
+</div>
+<p class="continuation">A <a href="" class="xref" data-knowl="./knowl/fig-4a.html" title="Figura 1.18">Figura 1.18</a> ilustra este resultado. <figure class="figure figure-like" id="fig-4a"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-sage4a.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-4"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-47">Determine <span class="process-math">\(\lim\limits_{x\to +\infty}\left(x-\sqrt{x^2+3}\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-48">0</p></div></div>
+</div></article></div></section><section class="subsection" id="subsec-assintotas-horizontais"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Assintotas Horizontais</span>
 </h3>
 <article class="definition definition-like" id="def-assintota-horizontal"><h4 class="heading">
-<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
 </h4>
-<p id="p-41">A reta <span class="process-math">\(y=L\)</span> é chamada de assintota horizontal ao gráfico da função <span class="process-math">\(y=f(x)\)</span> se</p>
-<div class="displaymath process-math" id="md-32">
+<p id="p-49">A reta <span class="process-math">\(y=L\)</span> é chamada de assintota horizontal ao gráfico da função <span class="process-math">\(y=f(x)\)</span> se</p>
+<div class="displaymath process-math" id="md-33">
 \begin{align*}
 \lim\limits_{x\to +\infty}f(x)=L \amp \quad \text{ou} \quad \lim\limits_{x\to \infty}f(x)=L 
 \end{align*}
-</div></article><p id="p-42">Se visitarmos o <a href="" class="xref" data-knowl="./knowl/ex-3.html" title="Exemplo 1.9: Outro limite envolvendo radicais — continuação">Exemplo 1.9</a> e o <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.11: Não tente adicionar e subtrair infinito">Exemplo 1.11</a>,  além da  <a href="" class="xref" data-knowl="./knowl/fig-3.html" title="Figura 1.10">Figura 1.10</a>, podemos notar que as retas <span class="process-math">\(y=\frac{2}{3}\)</span> e <span class="process-math">\(y=-\frac{2}{3}\)</span> são assintotas horizontais ao gráfico de  <span class="process-math">\(f(x)=\dfrac{\sqrt{4x^2+1}}{5x-1}.\)</span></p>
-<article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h4 class="heading">
-<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Assintotas Horizontais.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-43">Verifique se <span class="process-math">\(f(x)=\dfrac{x^2-1}{x^2+1}\)</span> possui assintotas horizontais.</p>
+</div></article><p id="p-50">Se visitarmos o <a href="" class="xref" data-knowl="./knowl/ex-3.html" title="Exemplo 1.10: Outro limite envolvendo radicais — continuação">Exemplo 1.10</a> e o <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.13: Não tente adicionar e subtrair infinito">Exemplo 1.13</a>,  além da  <a href="" class="xref" data-knowl="./knowl/fig-3.html" title="Figura 1.11">Figura 1.11</a>, podemos notar que as retas <span class="process-math">\(y=\frac{2}{3}\)</span> e <span class="process-math">\(y=-\frac{2}{3}\)</span> são assintotas horizontais ao gráfico de  <span class="process-math">\(f(x)=\dfrac{\sqrt{4x^2+1}}{5x-1}.\)</span></p>
+<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Assintotas Horizontais.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-51">Verifique se <span class="process-math">\(f(x)=\dfrac{x^2-1}{x^2+1}\)</span> possui assintotas horizontais.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-44">Observe que</p>
-<div class="displaymath process-math" id="md-33">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-52">Observe que</p>
+<div class="displaymath process-math" id="md-34">
 \begin{align*}
 \lim\limits_{x\to +\infty}\dfrac{x^2-1}{x^2+1} \amp =  \lim\limits_{x \to +\infty}\frac{x^2\left(1 - \dfrac{1}{x^2}\right)}{x^2\left(1 + \dfrac{1}{x^2}\right)}\\
 \amp = \frac{\lim\limits_{x\to +\infty} 1- \lim\limits_{x\to +\infty}\dfrac{1}{x^2}}{\lim\limits_{x\to +\infty} 1+ \lim\limits_{x\to +\infty}\dfrac{1}{x^2}} 
 \end{align*}
-</div> Procedendo da mesma forma para <span class="process-math">\(x\to -\infty\)</span> chegaremos ao mesmo resultado. Portanto, de acordo com <a href="" class="xref" data-knowl="./knowl/def-assintota-horizontal.html" title="Definição 1.14">Definição 1.14</a> a reta <span class="process-math">\(y=1\)</span> é uma assintota horizontal ao gráfico de <span class="process-math">\(f(x)\text{.}\)</span> A <a href="" class="xref" data-knowl="./knowl/fig-4.html" title="Figura 1.16">Figura 1.16</a> mostra o gráfico e sua assintota horizontal. <figure class="figure figure-like" id="fig-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-4.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div> Procedendo da mesma forma para <span class="process-math">\(x\to -\infty\)</span> chegaremos ao mesmo resultado. Portanto, de acordo com <a href="" class="xref" data-knowl="./knowl/def-assintota-horizontal.html" title="Definição 1.20">Definição 1.20</a> a reta <span class="process-math">\(y=1\)</span> é uma assintota horizontal ao gráfico de <span class="process-math">\(f(x)\text{.}\)</span> A <a href="" class="xref" data-knowl="./knowl/fig-4.html" title="Figura 1.22">Figura 1.22</a> mostra o gráfico e sua assintota horizontal. <figure class="figure figure-like" id="fig-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-4.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
 </div></div>
-</div></article></div></section><section class="exercises" id="exercises-"><h3 class="heading hide-type">
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
+<span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-53">Para <span class="process-math">\(f(x)=\dfrac{\sqrt{2x^2+1}}{3x-5}\text{.}\)</span></p>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-54">Esboce o gráfico e tente verifique se existem assíntotas verticais e horizontais.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-55">É difícil ver isso no gráficos. Entretanto, além de um assintota vertical há duas assintotas horizontais.</p></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-56">Calcule o limite de <span class="process-math">\(f(x)\)</span> tanto para <span class="process-math">\(x\to +\infty\)</span> quanto para <span class="process-math">\(x\to -\infty\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-57"><span class="process-math">\(\lim\limits_{x\to +\infty}f(x)=\frac{1}{3}\sqrt{2}\)</span> e  <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)=-\frac{1}{3}\sqrt{2}\)</span></p></div></div>
+</div></article></article></div></section><section class="subsection" id="sugestao-video-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-18"><p id="p-58"><a class="external" href="https://youtu.be/Lz32NT5Pjws" target="_blank">O conceito de limites infinitos.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
+<li id="li-19"><p id="p-59"><a class="external" href="https://youtu.be/4sYqjfd7G3E" target="_blank">Resolvendo limites no infinito a partir do gráfico.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
+<li id="li-20"><p id="p-60"><a class="external" href="https://youtu.be/Q3RemCuNL4Q" target="_blank">Limite de <span class="process-math">\(f(x)=\dfrac{4x^5-3x^2+3}{6x^5-100x^2-10}\)</span> quando <span class="process-math">\(x\to \pm \infty\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
+<li id="li-21"><p id="p-61"><a class="external" href="https://youtu.be/UC4sOwLy6U0" target="_blank">Limites infinitos de funções racionais: várias situações.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-22"><p id="p-62"><a class="external" href="https://youtu.be/GLRmPlYWeOs" target="_blank">Limite de <span class="process-math">\(f(x)=\dfrac{x}{\sqrt{x^2+1}}\)</span> quando <span class="process-math">\(x\to \pm \infty\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
+<li id="li-23"><p id="p-63"><a class="external" href="https://youtu.be/60lGzvHhCqc" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to -\infty}\dfrac{\sqrt{4x^4-x}}{2x^2+3}\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
+<li id="li-24"><p id="p-64"><a class="external" href="https://youtu.be/2syUO7A39FMc" target="_blank">Usando Teorema do Confronto para calcular: <span class="process-math">\(\lim\limits_{x\to +\infty}\dfrac{\cos{x}}{x^2-1}\)</span> .</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
+<li id="li-25"><p id="p-65"><a class="external" href="https://youtu.be/-FUkWpRfgEo" target="_blank">Limite de  <span class="process-math">\(\lim\limits_{x\to +\infty}\dfrac{x^2+1}{\sin{x}}\)</span> não existe.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p></li>
+<li id="li-26"><p id="p-66"><a class="external" href="https://youtu.be/XKpGrkeTTlQo" target="_blank">Calculando <span class="process-math">\(\lim\limits_{x\to +\infty} \sqrt{100+x}-\sqrt{x} \text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
+</ul></section><section class="exercises" id="exercises-limite-no-infinito"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">1.4</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Apenas para mudar as coisas, vamos usar <span class="process-math">\(t\)</span> e <span class="process-math">\(h(t)\)</span> em vez dos onipresentes <span class="process-math">\(x\)</span> e <span class="process-math">\(f(x)\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-67">Determine os seguintes limites:</p>
+<p id="p-68">1. <span class="process-math">\(\displaystyle \lim_{ x \to \infty } \frac{2}{e^{x}+5}=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-69">2. <span class="process-math">\(\displaystyle \lim_{ x \to -\infty } \frac{2}{e^{x}+5} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-70"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-71"><span class="process-math">\(0.4\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-72">Determine os seguintes limites:</p>
+<p id="p-73">1. <span class="process-math">\(\displaystyle \lim_{x \rightarrow \infty} \left( \sqrt{x^2   - 6 x + 1} -x \right) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-74">2. <span class="process-math">\(\displaystyle\lim_{x \rightarrow -\infty} \left( \sqrt{x^2   - 6 x + 1} -x \right) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-75"><span class="process-math">\(-3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-76"><span class="process-math">\(\text{INF}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-77">Determine os seguintes limites:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1.</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\lim_{x\to\infty}  \frac{5x^{3}-2x^{2}-2x}{5-10x-5x^{3}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2.</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\displaystyle\lim_{x\to-\infty} \frac{5x^{3}-2x^{2}-2x}{5-10x-5x^{3}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></td>
+</tr>
+</table></div></div></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-78"><span class="process-math">\(-1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-79"><span class="process-math">\(-1\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-80">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to -\infty} \frac{x^3- x^2+ 4 x-1}{1 - 2 x^2}
+\end{equation*}
+</div>
+<p id="p-81">Limite: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-82"><span class="process-math">\(\text{INF}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-83">Observe que o numerador tem um grau maior que o denominador. Para valores <em class="alert">muito grandes de</em> negativos de <span class="process-math">\(x\text{,}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^3- x^2+ 4 x-1}{1 - 2 x^2} \approx
+\frac{x^3}{-2 x^2} = \frac{x}{-2} \to \infty.
+\end{equation*}
+</div>
 </div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-84">Determine o limite</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to \infty} \frac{x^3+ x^2 - 2 x+ 7 }{8  - 2 x}
+\end{equation*}
+</div>
+<p id="p-85">Limite: <span class="fillin" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-86"><span class="process-math">\(\text{-INF}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-87">Observe que o numerador tem um grau maior que o denominador. Para valores muito grandes de <span class="process-math">\(x\text{,}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^3+ x^2 - 2 x+ 7 }{8  - 2 x} \approx
+\frac{x^3}{-2 x} = \frac{x^2}{-2} \to -\infty.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-88">Determine <span class="process-math">\(\displaystyle\lim_{x \to \infty} \frac{x^2+\cos(x)}{x^2+2010}\)</span></p>
+<p id="p-89">Limite: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-90"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-91">Já que  <span class="process-math">\(-1 \le \cos(x) \le 1\text{,}\)</span> temos <span class="process-math">\(\frac{x^2-1}{x^2+2010} \le\frac{x^2+cos(x)}{x^2+2010} \le \frac{x^2+1}{x^2+2010}\text{.}\)</span></p>
+<p id="p-92">Vamos focar em:</p>
+<p id="p-93"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{x^2+1}{x^2+2010}\)</span></p>
+<p id="p-94"><span class="process-math">\(\displaystyle = \lim_{x \to \infty} \frac{1+\frac{1}{x^2}}{1+\frac{2010}{x^2}}\)</span></p>
+<p id="p-95"><span class="process-math">\(=1\text{.}\)</span></p>
+<p id="p-96">Analogamente:</p>
+<p id="p-97"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{x^2-1}{x^2+2010} = 1\)</span></p>
+<p id="p-98">Portanto, pelo teorema do confronto:</p>
+<p id="p-99"><span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{x^2+\cos(x)}{x^2+2010} =  1\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-100">Determine os limites a seguir:</p>
+<p id="p-101">1. <span class="process-math">\(\displaystyle\lim_{ x \rightarrow \infty } \frac {\sqrt{ 9 + 8 x^2 }  }{ 8 + 4 x  } =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-102">2. <span class="process-math">\(\displaystyle\lim_{ x \rightarrow -\infty } \frac {\sqrt{ 9 + 8 x^2 }  }{ 8 + 4 x  } =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-103"><span class="process-math">\(0.707106781186548\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-104"><span class="process-math">\(-0.707106781186548\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-105">Uma função tem uma assíntota horizontal <em class="alert"></em> se o limite no infinito existir ou o limite no infinito negativo existir.</p>
+<p id="p-106">Mostre que cada uma das seguintes funções tem uma assíntota horizontal calculando o limite dado.</p>
+<p id="p-107">1. <span class="process-math">\(\displaystyle{
+\lim_{x\to\infty}\frac{-14 x}{3+2 x}= }\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-108">2. <span class="process-math">\(\displaystyle{
+\lim_{x\to-\infty}\frac{3 x-6}{x^3+11 x-7}= }\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-109">3. <span class="process-math">\(\displaystyle{
+\lim_{x\to\infty}\frac{x^2-15 x -5}{13-6 x^2}= }\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-110">4. <span class="process-math">\(\displaystyle{
+\lim_{x\to\infty}\frac{\sqrt{x^2+15 x}}{14-12 x}= }\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-111">5. <span class="process-math">\(\displaystyle{
+\lim_{x\to-\infty}\frac{\sqrt{x^2+15 x}}{14-12 x}= }\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-112"><span class="process-math">\(-7\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-113"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-114"><span class="process-math">\(-0.166667\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-115"><span class="process-math">\(-0.0833333\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-116"><span class="process-math">\(0.0833333\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-117">Determine o limite a seguir:</p>
+<p id="p-118"><span class="process-math">\(\displaystyle \lim_{x\to -\infty} \frac{6x^{3}+6x+1}{2-\left(5x^{3}+2x^{2}\right)}\)</span></p>
+<p id="p-119">Limite = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-120"><span class="process-math">\(-{\textstyle\frac{6}{5}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like"><div class="displaymath process-math" id="p-121">
+\begin{equation*}
+\displaystyle \lim_{x\to -\infty} \frac{6x^{3}+6x+1}{2-\left(5x^{3}+2x^{2}\right)}=\displaystyle \lim_{x\to -\infty} \frac{6+\frac{6}{x^{2}}+\frac{1}{x^{3}}}{-\left(5+\frac{2}{x}\right)+\frac{2}{x^{3}}}=-{\textstyle\frac{6}{5}}
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-122">Determine o limite a seguir:</p>
+<p id="p-123"><span class="process-math">\(\displaystyle \lim_{x\to -\infty} \frac{4x-x^{3}+9}{5x^{3}+5x^{2}+3}\)</span></p>
+<p id="p-124">Limite = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-125"><span class="process-math">\(-{\textstyle\frac{1}{5}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="displaymath process-math" id="p-126">
+\begin{equation*}
+\displaystyle \lim_{x\to -\infty} \frac{4x-x^{3}+9}{5x^{3}+5x^{2}+3}=\displaystyle \lim_{x\to -\infty} \frac{-1+\frac{4}{x^{2}}+\frac{9}{x^{3}}}{5+\frac{5}{x}+\frac{3}{x^{3}}}=-{\textstyle\frac{1}{5}}
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-127">Determine o limite a seguir:</p>
+<div class="displaymath process-math" id="p-128">
+\begin{equation*}
+\displaystyle \lim_{x\to +\infty} (2x^{3}-3x^{2}-2x-8)
+\end{equation*}
+</div>
+<p id="p-129">Limite = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-130"><span class="process-math">\(\infty \)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="displaymath process-math" id="p-131">
+\begin{equation*}
+\displaystyle \lim_{x\to +\infty} (2x^{3}-3x^{2}-2x-8)=2 \lim_{x\to +\infty} x^3=+\infty
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-132">Determine o limite a seguir:</p>
+<div class="displaymath process-math" id="p-133">
+\begin{equation*}
+\displaystyle \lim_{x\to \infty} \frac{3-6e^{x}}{6+5e^{x}}
+\end{equation*}
+</div>
+<p id="p-134">Limite = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-135"><span class="process-math">\(-{\textstyle\frac{6}{5}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-136">SOLUTION</p>
+<div class="displaymath process-math" id="p-137">
+\begin{equation*}
+\displaystyle \lim_{x\to \infty} \frac{3-6e^{x}}{6+5e^{x}}= \lim_{x\to \infty} \frac{3e^{-x}-6}{6e^{-x}+5}=-{\textstyle\frac{6}{5}}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Apenas para mudar as coisas, vamos usar <span class="process-math">\(t\)</span> e <span class="process-math">\(h(t)\)</span> em vez dos onipresentes <span class="process-math">\(x\)</span> e <span class="process-math">\(f(x)\text{.}\)</span>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/Lz32NT5Pjws</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/4sYqjfd7G3E</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/Q3RemCuNL4Q</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/UC4sOwLy6U0</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/GLRmPlYWeOs</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/60lGzvHhCqc</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/2syUO7A39FM</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/-FUkWpRfgEo</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/XKpGrkeTTlQ</code></div></div>
 </div></main>
 </div>
 </body>
