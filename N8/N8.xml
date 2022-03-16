@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<pretext  xml:lang="pt-BR">
+
+    <docinfo>
+    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+
+
+
+       
+        <macros>
+        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+        \newcommand{ctm}[1]{\color{gray}{#1}}
+
+        \newcommand{\doubler}[1]{2#1}
+        \newcommand{\dd}{\mathrm{d}}
+        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+        \DeclareMathOperator{\arcsec}{arc \,sec}
+        \DeclareMathOperator{\sin}{sen}
+        \DeclareMathOperator{\arcsin}{arc \,sen}
+        \DeclareMathOperator{\arccos}{arc \,cos}
+        \DeclareMathOperator{\csc}{cossec}
+        \DeclareMathOperator{\tan}{tg}
+        \DeclareMathOperator{\arctan}{arc\,tg}
+        \DeclareMathOperator{\cot}{cotg}
+        </macros>
+       
+        <latex-image-preamble>
+        \usepackage{tikz}
+      <!--  \usepackage{pgfplots}               % loads tikz package-->
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
+        
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Derivada: N8</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>                    
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+               
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana 10.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária </p>
+        </introduction>
+    <section>
+    <title>O Logaritmo Natural  </title>
+    
+         
+        <objectives>
+            <title>Estrutura</title>
+           
+            <ol>
+                <li>
+                    <p>
+                        texto 1
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       texto 2
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        texto 3
+                    </p>
+                </li>
+
+            </ol>
+            
+        </objectives>
+
+<introduction>
+<p>
+The chain rule opens the way to understanding derivatives of more complicated
+function. Not only compositions of known functions as we have seen the
+examples of the previous section, but also functions which are defined
+implicitly.
+</p>
+
+<p>Consider the logarithm base <m>e</m> <mdash/> <m>\log_e(x)</m> is the power that <m>e</m> must be
+raised to to give <m>x</m>.  That is, <m>\log_e(x)</m> is defined by
+<md>
+<mrow>
+  e^{\log_e x} &amp;= x
+</mrow>
+</md>
+i.e. <mdash/> it is the inverse of the exponential function with base <m>e</m>.  Since this
+choice of base works so cleanly and easily with respect to differentiation,
+this base turns out to be (arguably) the most natural choice for the base
+of the logarithm. And as we saw in our whirlwind review of
+logarithms in Section<nbsp/><xref ref="sec_exp_func"/>, it is easy to use logarithms of
+one base to compute logarithms with another base:
+<md>
+<mrow>
+  \log_q x &amp;= \frac{\log_e x}{\log_e q}
+</mrow>
+</md>
+So we are (relatively) free to choose a base which is convenient for our
+purposes.
+</p>
+
+<p>The logarithm with base <m>e</m>, is called the <q>natural logarithm</q>. The
+<q>naturalness</q> of logarithms base <m>e</m> is exactly that this choice of base
+works very nicely in calculus (and so wider mathematics) in ways that other
+bases do not
+<fn>The interested reader should head to Wikipedia and look
+up the natural logarithm.</fn>
+. There are several different <q>standard</q> notations
+for the logarithm base
+<m>e</m>;
+<md>
+<mrow>
+  \log_e x = \log x = \ln x.
+</mrow>
+</md>
+We recommend that you be able to recognise all of these.
+</p>
+
+<p>In this text we will write the natural logarithm as <q><m>\log</m></q> with no base.
+The reason for this choice is that base <m>e</m> is the standard choice of base for
+logarithms in mathematics
+<fn>In other disciplines other bases are
+natural; in computer science, since numbers are stored in binary it makes sense
+to use the binary logarithm <mdash/> i.e. base 2. While in some sciences and finance, it makes
+sense to use the decimal logarithm <mdash/> i.e. base 10.</fn>
+</p>
+
+<p>The natural logarithm inherits many properties of general
+logarithms
+<fn>Again take a quick look at the whirlwind review of
+logarithms in Section<nbsp/><xref ref="sec_exp_func"/>.</fn>
+. So, for all <m>x,y \gt 0</m> the following
+hold:
+<ul>
+<li> <m>e^{\log x}=x</m>,
+</li>
+<li> for any real number <m>X</m>, <m>\log \big(e^X\big)=X</m>,
+</li>
+<li> for any <m>a \gt 1</m>, <m>\log_a x=\tfrac{\log x}{\log a}</m> and <m>\log
+x=\tfrac{\log_a x}{\log_a e}</m>
+</li>
+<li> <m>\log 1=0</m>, <m>\log e=1</m>
+</li>
+<li> <m>\log(xy)=\log x+\log y</m>
+</li>
+<li> <m>\log\big(\tfrac{x}{y}\big)=\log x-\log y</m>,
+      <m>\log\big(\tfrac{1}{y}\big)=-\log y</m>
+</li>
+<li> <m>\log(x^X)=X\log x</m>
+</li>
+<li> <m>\lim\limits_{x\rightarrow\infty}\log x=\infty</m>,
+           <m>\lim\limits_{x\rightarrow0}\log x=-\infty</m>
+</li>
+</ul>
+And finally we should remember that <m>\log x</m> has domain (i.e. is defined for) <m>x  \gt  0</m> and range (i.e. takes all values in) <m>-\infty  \lt x  \lt \infty</m>.
+</p>
+
+<sidebyside width="66%">
+<image source="images/logGraph"/>
+</sidebyside>
+
+<p>To compute the derivative of <m>\log x</m> we could attempt to start with the limit
+definition of the derivative
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x}\log x &amp;= \lim_{h \to 0} \frac{\log(x+h) - \log(x)}{h}
+</mrow><mrow>
+  &amp;= \lim_{h\to 0} \frac{\log( (x+h)/x )}{h}
+</mrow><mrow>
+  &amp;= \text{um\dots}
+</mrow>
+</md>
+This doesn't look good. But all is not lost <mdash/> we have the chain rule, and we
+know that the logarithm satisfies the equation:
+<md>
+<mrow>
+  x &amp;= e^{\log x}
+</mrow>
+</md>
+Since both sides of the equation are the same function, both sides of the equation
+have the same derivative. i.e. we are using
+<fn>Notice that just because the
+derivatives are the same, doesn't mean the original functions are the same.
+Both <m>f(x)=x^2</m> and <m>g(x)=x^2+3</m> have derivative <m>f'(x)=g'(x)=2x</m>, but <m>f(x)
+\neq g(x)</m>. </fn>
+</p>
+
+<p><md>
+<mrow>
+  \text{ if } f(x)=g(x) \text{ for all $x$, then } f'(x) = g'(x)
+</mrow>
+</md>
+So now differentiate both sides:
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} x &amp;= \dfrac{\dd}{\dd x} e^{\log x}
+</mrow>
+<intertext>The left-hand side is easy, and the right-hand side we can process
+using the chain rule with <m>f(u)=e^u</m> and <m>u=\log x</m>. </intertext><mrow>
+  1 &amp;= \diff{f}{u} \cdot \diff{u}{x}
+</mrow><mrow>
+  &amp;= e^u \cdot
+\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{what we want to compute}
+</mrow><mrow>
+ </mrow>
+<intertext>Recall that <m>e^u = e^{\log x} = x</m>, so </intertext><mrow>
+ 1 &amp;= x \cdot
+\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{now what?}
+</mrow>
+<intertext>We can now just rearrange this equation to make the thing we want
+the subject:</intertext><mrow>
+ \dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+</mrow>
+</md>
+</p>
+
+<p>Thus we have proved:</p>
+<theorem xml:id="thm_diff_log">
+<statement><p>
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+</mrow>
+</md>
+where <m>\log x</m> is the logarithm base <m>e</m>.
+</p></statement>
+</theorem>
+
+<example xml:id="eg_2_10_1"><title>The derivative of <m>\log 3x</m></title>
+<p>
+ Let <m>f(x) = \log 3x</m>. Find <m>f'(x)</m>.
+</p>
+
+<p>There are two ways to approach this <mdash/> we can simplify then differentiate, or
+differentiate and then simplify. Neither is difficult.
+<ul>
+<li> Simplify and then differentiate:
+  <md>
+<mrow>
+  f(x) &amp;= \log 3x &amp; \text{log of a product}
+</mrow><mrow>
+  &amp;= \log 3 + \log x
+</mrow><mrow>
+  f'(x) &amp;= \dfrac{\dd}{\dd x} \log 3 + \dfrac{\dd}{\dd x} \log x
+</mrow><mrow>
+  &amp;= \frac{1}{x}.
+</mrow>
+</md>
+</li>
+<li> Differentiation and then simplify:
+  <md>
+<mrow>
+  f'(x) &amp;= \dfrac{\dd}{\dd x} \log(3x) &amp; \text{chain rule}
+</mrow><mrow>
+  &amp;= \frac{1}{3x} \cdot 3
+</mrow><mrow>
+  &amp;= \frac{1}{x}
+</mrow>
+</md>
+</li>
+</ul>
+</p>
+</example>
+
+<example xml:id="eg_2_10_2"><title>The derivative of <m>\log cx</m></title>
+<p>Notice that we can extend the previous example for any positive constant <mdash/> not
+just 3. Let <m>c\gt 0</m> be a constant, then
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} \log cx &amp;= \dfrac{\dd}{\dd x}\left(\log c + \log x \right)
+</mrow><mrow>
+  &amp;= \frac{1}{x}
+</mrow>
+</md>
+</p></example>
+
+<example xml:id="eg_diff_log_abs_x"><title>The derivative of <m>\log|x|</m></title>
+<p>
+ We can push this further still. Let <m>g(x) = \log | x |</m>, then
+<fn>It's
+probably a good moment to go back and look at Example<nbsp/><xref ref="eg_diff_abs"/>.</fn>
+</p>
+
+<p><ul>
+<li> If <m>x \gt 0</m>, <m>|x|= x</m> and so
+<md>
+<mrow>
+  g'(x) &amp;= \dfrac{\dd}{\dd x} \log x = \frac{1}{x}
+</mrow>
+</md>
+</li>
+<li> If <m>x\lt 0</m> then <m>|x|= -x</m>. If <m>|h|</m> is strictly smaller than <m>|x|</m>, 
+then we also have  that <m>x+h\lt 0</m> and <m>|x+h|=-(x+h)=|x|-h</m>. 
+Write <m>X=|x|</m> and <m>H=-h</m>. Then, by the definition of the derivative,
+<md><mrow>
+  g'(x) &amp;= \lim_{h\rightarrow 0} \frac{\log|x+h|-\log|x|}{h}
+        = \lim_{h\rightarrow 0} \frac{\log(|x|-h)-\log|x|}{h} 
+</mrow><mrow>
+        &amp;= \lim_{H\rightarrow 0} \frac{\log(X+H)-\log X}{-H}
+        = -\lim_{H\rightarrow 0} \frac{\log(X+H)-\log X}{H} 
+</mrow><mrow>
+        &amp;=-\dfrac{\dd}{\dd x}\log X =-\frac{1}{X} = -\frac{1}{|x|} 
+</mrow><mrow>
+        &amp;=\frac{1}{x}
+</mrow>
+</md>
+</li>
+<li> Since <m>\log 0</m> is undefined, <m>g'(0)</m> does not exist.
+</li>
+</ul>
+Putting this together gives:
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} \log | x | &amp;= \frac{1}{x}
+</mrow>
+</md>
+</p></example>
+
+<example xml:id="eg_diff_power"><title>The derivative of <m>x^a</m></title>
+<p>
+Just after Corollary<nbsp/><xref ref="cor_DIFFxtoa"/>, we said that we would, in the future, find the derivative of <m>x^a</m> for all real numbers. The future is here. 
+Let <m>x\gt 0</m> and <m>a</m> be any real number. Exponentiating both sides of <m>\log\big(x^a\big)=a\log x</m> gives us <m>x^a=e^{a\log x}</m> and then
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} x^a &amp;= \dfrac{\dd}{\dd x} e^{a\log x}
+                  = e^{a\log x} \dfrac{\dd}{\dd x}(a\log x) &amp;\text{by the chain rule} 
+</mrow><mrow>
+                &amp;=\frac{a}{x} e^{a\log x}
+                  =\frac{a}{x} x^a 
+</mrow><mrow>
+                &amp;=a x^{a-1}
+</mrow>
+</md>
+as expected.
+</p>
+</example>
+
+
+<p>We can extend Theorem<nbsp/><xref ref="thm_diff_log"/> to compute the derivative of
+logarithms of other bases in a straightforward way. Since for any positive <m>a
+\neq 1</m>:
+<md>
+<mrow>
+  \log_a x &amp;= \frac{\log x}{\log a} = \frac{1}{\log a} \cdot \log x &amp;
+\text{since $a$ is a constant}
+</mrow><mrow>
+  \dfrac{\dd}{\dd x} \log_a x &amp;= \frac{1}{\log a} \cdot \frac{1}{x}
+</mrow>
+</md>
+</p>
+</introduction>
+
+
+
+
+<subsection><title>Back to <m>\mathbf{\dfrac{\dd}{\dd x} a^x}</m></title>
+
+<p>We can also now finally get around to computing the derivative of <m>a^x</m> (which
+we started to do back in Section<nbsp/><xref ref="sec_exp_func"/>).
+<md>
+<mrow>
+  f(x) &amp;= a^x &amp; \text{take log of both sides}
+</mrow><mrow>
+  \log f(x) &amp;= x \log a &amp; \text{exponentiate both sides base $e$}
+</mrow><mrow>
+  f(x) &amp;= e^{x \log a} &amp; \text{chain rule}
+</mrow><mrow>
+  f'(x) &amp;= e^{x \log a} \cdot \log a
+</mrow><mrow>
+  &amp;= a^x \cdot \log a
+</mrow>
+</md>
+Notice that we could have also done the following:
+<md>
+<mrow>
+  f(x) &amp;= a^x &amp; \text{take log of both sides}
+</mrow><mrow>
+  \log f(x) &amp;= x \log a &amp; \text{differentiate both sides}
+</mrow><mrow>
+  \dfrac{\dd}{\dd x} \left( \log f(x) \right) &amp;=
+\log a
+</mrow>
+<intertext>We then process the left-hand side using the chain rule</intertext><mrow>
+  f'(x) \cdot \frac{1}{f(x)} &amp;= \log a
+</mrow><mrow>
+  f'(x) &amp;= f(x) \cdot \log a = a^x \cdot \log a
+</mrow>
+</md>
+We will see <m>\dfrac{\dd}{\dd x} \log f(x)</m> more below in the subsection on
+<q>logarithmic differentiation</q>.
+</p>
+
+<p>To summarise the results above:</p>
+<corollary xml:id="cor_2_10">
+<statement><p>
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} a^x &amp;= \log a \cdot a^x &amp; \text{for any $a \gt 0$}
+</mrow><mrow>
+  \dfrac{\dd}{\dd x} \log_a x &amp;= \frac{1}{x \cdot \log a} &amp; \text{for any $a \gt 0, a \neq 1$}
+</mrow>
+</md>
+where <m>\log x</m> is the natural logarithm.
+</p></statement>
+</corollary>
+
+<p>Recall that we need the caveat <m>a \neq 1</m> because the logarithm base 1 is not
+well defined. This is because <m>1^x = 1</m> for any <m>x</m>. We do not need a similar
+caveat for the derivative of the exponential because we know (recall
+Example<nbsp/><xref ref="eg_log_est"/>)
+<md>
+<mrow>
+  \dfrac{\dd}{\dd x} 1^x &amp;= \dfrac{\dd}{\dd x} 1= 0 &amp;\text{while the above corollary tells us}
+</mrow><mrow>
+  &amp;= \log 1 \cdot 1^x = 0 \cdot 1 = 0.
+</mrow>
+</md>
+</p>
+</subsection>
+
+<subsection>
+<title>Logarithmic Differentiation</title>
+
+<p>We want to go back to some previous slightly messy examples
+(Examples<nbsp/><xref ref="eg_DIFFsimpleToolsA"/>  and<nbsp/><xref ref="eg_DIFFsimpleToolsNB"/>) and now show you how they can be done more easily.
+</p>
+
+<example xml:id="eg_2_10_3"><title>Derivative of a triple product</title>
+<p>
+ Consider again the derivative of the product of 3 functions:
+<md>
+<mrow>
+P(x) &amp;= F(x) \cdot G(x) \cdot H(x)
+</mrow>
+</md>
+Start by taking the logarithm of both sides:
+<md>
+<mrow>
+ \log P(x) &amp;= \log \left( F(x) \cdot G(x) \cdot H(x)  \right)
+</mrow><mrow>
+  &amp;= \log F(x) + \log G(x) + \log H(x)
+</mrow>
+<intertext>Notice that the product of functions on the right-hand side has
+become a sum of functions. Differentiating sums is much easier than
+differentiating products. So when we differentiate we have</intertext><mrow>
+\dfrac{\dd}{\dd x}\log P(x)  &amp;= \dfrac{\dd}{\dd x}\log F(x) + \dfrac{\dd}{\dd x}\log G(x) + \dfrac{\dd}{\dd x}\log H(x)
+</mrow>
+<intertext>A quick application of the chain rule shows that <m>\dfrac{\dd}{\dd x}\log
+f(x) = f'(x) / f(x)</m>:</intertext><mrow>
+\frac{P'(x)}{P(x)} &amp;= \frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}
+</mrow>
+<intertext>Multiply through by <m>P(x)=F(x)G(x)H(x)</m>:</intertext><mrow>
+P'(x) &amp;=
+\left(\frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}\right)\cdot
+F(x)G(x)H(x)
+</mrow><mrow>
+  &amp;= F'(x)G(x)H(x) + F(x)G'(x)H(x) + F(x)G(x)H'(x)
+</mrow>
+</md>
+which is what found in Example<nbsp/><xref ref="eg_DIFFsimpleToolsA"/> by repeated
+application of the product rule. The above generalises quite easily to more
+than 3 functions.
+</p></example>
+
+<p>This same trick of <q>take a logarithm and then differentiate</q> <mdash/> or
+logarithmic differentiation <mdash/> will work any time you have a product (or
+ratio) of functions.</p>
+
+<example xml:id="eg_2_10_4"><title>Derivative of a messy product</title>
+<p>
+Lets use logarithmic differentiation on the function from
+Example<nbsp/><xref ref="eg_DIFFsimpleToolsNB"/>:
+<md>
+<mrow>
+f(x) &amp;=\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+</mrow>
+</md>
+Beware however, that we may only take the logarithm of positive numbers, and this <m>f(x)</m> is often negative.
+For example, if <m> 1 \lt x \lt 2 </m>, the factor <m>(1-x^2)</m> in the definition of <m>f(x)</m> is negative while all of the other factors are positive, so that <m>f(x)\lt 0 </m>.
+None<ndash/>the<ndash/>less, we can use logarithmic differentiation to find <m>f'(x)</m>,  by exploiting the observation that <m>\dfrac{\dd}{\dd x}\log|f(x)|=\frac{f'(x)}{f(x)}</m>.
+(To see this, use the chain rule and Example<nbsp/><xref ref ="eg_diff_log_abs_x"/>.)
+So we take the logarithm of <m>|f(x)|</m> and expand.
+<md>
+<mrow>
+\log |f(x)| &amp; = \log \frac{|\sqrt{x}-1|\,|2-x|\,|1-x^2|}{\sqrt{x}|3+2x|}
+</mrow><mrow>
+  &amp; = \log|\sqrt{x}\!-\!1| + \log|2\!-\!x| + \log|1\!-\!x^2| -
+\underbrace{\log(\sqrt{x})}_{=\frac{1}{2}\log x} - \log|3\!+\!2x|
+</mrow>
+</md>
+Now we can essentially just differentiate term-by-term:
+<md>
+<mrow>
+\dfrac{\dd}{\dd x}\log |f(x)| &amp;= \dfrac{\dd}{\dd x} \Big(
+  \log|\sqrt{x}-1| + \log|2-x| + \log|1-x^2| 
+</mrow><mrow>
+\amp\hskip2in- \frac{1}{2}\log|x| - \log|3+2x|
+ \Big)
+</mrow><mrow>
+\frac{f'(x)}{f(x)} &amp;= \frac{1/(2\sqrt{x})}{\sqrt{x}-1}
+  + \frac{-1}{2-x} + \frac{-2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+</mrow><mrow>
+f'(x) &amp;= f(x) \cdot \left( \frac{1}{2 \sqrt{x} (\sqrt{x}\!-\!1)}
+  - \frac{1}{2\!-\!x} - \frac{2x}{1\!-\!x^2} - \frac{1}{2x} - \frac{2}{3\!+\!2x}
+\right)
+</mrow><mrow>
+  &amp;= \frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+  \cdot 
+</mrow><mrow>
+\amp\hskip0.5in\left( \frac{1}{2 \sqrt{x} (\sqrt{x}-1)}
+  - \frac{1}{2-x} - \frac{2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+\right)
+</mrow>
+</md>
+just as we found previously.
+</p></example>
+</subsection>
+
+
+
+<exercises xml:id="exercises-">
+<exercise>Escrever aqui
+</exercise>
+</exercises>
+
+</section>
+<references xml:id="references-backmatter">
+    <title>Referências</title>   
+    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
+    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
+    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
+    <biblio type="raw" xml:id="biblio-04">STEWART, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
+    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
+Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
+</references>
+
+</article>
+
+</pretext>
+

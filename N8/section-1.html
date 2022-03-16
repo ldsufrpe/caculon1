@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-16T18:43:50-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>O Logaritmo Natural</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Derivada: N8</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">O Logaritmo Natural</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Back to <span class="process-math">\(\mathbf{\dfrac{\dd}{\dd x} a^x}\)</span></a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Logarithmic Differentiation</a></li>
+<li><a href="section-1.html#exercises-" data-scroll="exercises-" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">O Logaritmo Natural</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">texto 1</p></li>
+<li id="li-2"><p id="p-4">texto 2</p></li>
+<li id="li-3"><p id="p-5">texto 3</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">The chain rule opens the way to understanding derivatives of more complicated function. Not only compositions of known functions as we have seen the examples of the previous section, but also functions which are defined implicitly.</p>
+<p id="p-7">Consider the logarithm base <span class="process-math">\(e\)</span> — <span class="process-math">\(\log_e(x)\)</span> is the power that <span class="process-math">\(e\)</span> must be raised to to give <span class="process-math">\(x\text{.}\)</span>  That is, <span class="process-math">\(\log_e(x)\)</span> is defined by</p>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+e^{\log_e x} &amp;= x
+\end{align*}
+</div>
+<p class="continuation">i.e. — it is the inverse of the exponential function with base <span class="process-math">\(e\text{.}\)</span>  Since this choice of base works so cleanly and easily with respect to differentiation, this base turns out to be (arguably) the most natural choice for the base of the logarithm. And as we saw in our whirlwind review of logarithms in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>, it is easy to use logarithms of one base to compute logarithms with another base:</p>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+\log_q x &amp;= \frac{\log_e x}{\log_e q}
+\end{align*}
+</div>
+<p class="continuation">So we are (relatively) free to choose a base which is convenient for our purposes.</p>
+<p id="p-8">The logarithm with base <span class="process-math">\(e\text{,}\)</span> is called the “natural logarithm”. The “naturalness” of logarithms base <span class="process-math">\(e\)</span> is exactly that this choice of base works very nicely in calculus (and so wider mathematics) in ways that other bases do not <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> . There are several different “standard” notations for the logarithm base <span class="process-math">\(e\text{;}\)</span></p>
+<div class="displaymath process-math" id="md-3">
+\begin{gather*}
+\log_e x = \log x = \ln x.
+\end{gather*}
+</div>
+<p class="continuation">We recommend that you be able to recognise all of these.</p>
+<p id="p-9">In this text we will write the natural logarithm as “<span class="process-math">\(\log\)</span>” with no base. The reason for this choice is that base <span class="process-math">\(e\)</span> is the standard choice of base for logarithms in mathematics <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p>
+<p id="p-10">The natural logarithm inherits many properties of general logarithms <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> . So, for all <span class="process-math">\(x,y \gt 0\)</span> the following hold:</p>
+<ul class="disc">
+<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(e^{\log x}=x\text{,}\)</span></p></li>
+<li id="li-5"><p id="p-derived-li-5">for any real number <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\log \big(e^X\big)=X\text{,}\)</span></p></li>
+<li id="li-6"><p id="p-derived-li-6">for any <span class="process-math">\(a \gt 1\text{,}\)</span> <span class="process-math">\(\log_a x=\tfrac{\log x}{\log a}\)</span> and <span class="process-math">\(\log
+x=\tfrac{\log_a x}{\log_a e}\)</span></p></li>
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\log 1=0\text{,}\)</span> <span class="process-math">\(\log e=1\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \log(xy)=\log x+\log y\)</span></p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\log\big(\tfrac{x}{y}\big)=\log x-\log y\text{,}\)</span> <span class="process-math">\(\log\big(\tfrac{1}{y}\big)=-\log y\)</span></p></li>
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\displaystyle \log(x^X)=X\log x\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\lim\limits_{x\rightarrow\infty}\log x=\infty\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow0}\log x=-\infty\)</span></p></li>
+</ul>
+<p class="continuation">And finally we should remember that <span class="process-math">\(\log x\)</span> has domain (i.e. is defined for) <span class="process-math">\(x  \gt  0\)</span> and range (i.e. takes all values in) <span class="process-math">\(-\infty  \lt x  \lt \infty\text{.}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/logGraph.svg" role="img" class="contained"></div></div></div>
+<p id="p-11">To compute the derivative of <span class="process-math">\(\log x\)</span> we could attempt to start with the limit definition of the derivative</p>
+<div class="displaymath process-math" id="md-4">
+\begin{align*}
+\dfrac{\dd}{\dd x}\log x &amp;= \lim_{h \to 0} \frac{\log(x+h) - \log(x)}{h}\\
+&amp;= \lim_{h\to 0} \frac{\log( (x+h)/x )}{h}\\
+&amp;= \text{um\dots}
+\end{align*}
+</div>
+<p class="continuation">This doesn't look good. But all is not lost — we have the chain rule, and we know that the logarithm satisfies the equation:</p>
+<div class="displaymath process-math" id="md-5">
+\begin{align*}
+x &amp;= e^{\log x}
+\end{align*}
+</div>
+<p class="continuation">Since both sides of the equation are the same function, both sides of the equation have the same derivative. i.e. we are using <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p>
+<div class="displaymath process-math" id="md-6">
+\begin{gather*}
+\text{ if } f(x)=g(x) \text{ for all $x$, then } f'(x) = g'(x)
+\end{gather*}
+</div>
+<p class="continuation">So now differentiate both sides:</p>
+<div class="displaymath process-math" id="md-7">
+\begin{align*}
+\dfrac{\dd}{\dd x} x &amp;= \dfrac{\dd}{\dd x} e^{\log x}\\
+\end{align*}
+<p class="intertext">The left-hand side is easy, and the right-hand side we can process using the chain rule with <span class="process-math">\(f(u)=e^u\)</span> and <span class="process-math">\(u=\log x\text{.}\)</span></p>
+\begin{align*}
+1 &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
+&amp;= e^u \cdot
+\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{what we want to compute}\\
+\\
+\end{align*}
+<p class="intertext">Recall that <span class="process-math">\(e^u = e^{\log x} = x\text{,}\)</span> so</p>
+\begin{align*}
+1 &amp;= x \cdot
+\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{now what?}\\
+\end{align*}
+<p class="intertext">We can now just rearrange this equation to make the thing we want the subject:</p>
+\begin{align*}
+\dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+\end{align*}
+</div>
+<p id="p-13">Thus we have proved:</p>
+<article class="theorem theorem-like" id="thm_diff_log"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h3>
+<div class="displaymath process-math" id="md-8">
+\begin{align*}
+\dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+\end{align*}
+</div>
+<p class="continuation">where <span class="process-math">\(\log x\)</span> is the logarithm base <span class="process-math">\(e\text{.}\)</span></p></article><article class="example example-like" id="eg_2_10_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_10_1"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative of <span class="process-math">\(\log 3x\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_10_1"><article class="example example-like"><p id="p-15">Let <span class="process-math">\(f(x) = \log 3x\text{.}\)</span> Find <span class="process-math">\(f'(x)\text{.}\)</span></p>
+<p id="p-16">There are two ways to approach this — we can simplify then differentiate, or differentiate and then simplify. Neither is difficult.</p>
+<ul class="disc">
+<li id="li-12"><p id="p-derived-li-12">Simplify and then differentiate:<div class="displaymath process-math" id="md-9">
+\begin{align*}
+f(x) &amp;= \log 3x &amp; \text{log of a product}\\
+&amp;= \log 3 + \log x\\
+f'(x) &amp;= \dfrac{\dd}{\dd x} \log 3 + \dfrac{\dd}{\dd x} \log x\\
+&amp;= \frac{1}{x}.
+\end{align*}
+</div></p></li>
+<li id="li-13"><p id="p-derived-li-13">Differentiation and then simplify:<div class="displaymath process-math" id="md-10">
+\begin{align*}
+f'(x) &amp;= \dfrac{\dd}{\dd x} \log(3x) &amp; \text{chain rule}\\
+&amp;= \frac{1}{3x} \cdot 3\\
+&amp;= \frac{1}{x}
+\end{align*}
+</div></p></li>
+</ul></article></div>
+<article class="example example-like" id="eg_2_10_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_10_2"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative of <span class="process-math">\(\log cx\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_10_2"><article class="example example-like"><p id="p-17">Notice that we can extend the previous example for any positive constant — not just 3. Let <span class="process-math">\(c\gt 0\)</span> be a constant, then</p>
+<div class="displaymath process-math" id="md-11">
+\begin{align*}
+\dfrac{\dd}{\dd x} \log cx &amp;= \dfrac{\dd}{\dd x}\left(\log c + \log x \right)\\
+&amp;= \frac{1}{x}
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="eg_diff_log_abs_x"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_diff_log_abs_x"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative of <span class="process-math">\(\log|x|\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_diff_log_abs_x"><article class="example example-like"><p id="p-18">We can push this further still. Let <span class="process-math">\(g(x) = \log | x |\text{,}\)</span> then <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p>
+<ul id="p-19" class="disc">
+<li id="li-14"><p id="p-derived-li-14">If <span class="process-math">\(x \gt 0\text{,}\)</span> <span class="process-math">\(|x|= x\)</span> and so<div class="displaymath process-math" id="md-12">
+\begin{align*}
+g'(x) &amp;= \dfrac{\dd}{\dd x} \log x = \frac{1}{x}
+\end{align*}
+</div></p></li>
+<li id="li-15"><p id="p-derived-li-15">If <span class="process-math">\(x\lt 0\)</span> then <span class="process-math">\(|x|= -x\text{.}\)</span> If <span class="process-math">\(|h|\)</span> is strictly smaller than <span class="process-math">\(|x|\text{,}\)</span> then we also have  that <span class="process-math">\(x+h\lt 0\)</span> and <span class="process-math">\(|x+h|=-(x+h)=|x|-h\text{.}\)</span> Write <span class="process-math">\(X=|x|\)</span> and <span class="process-math">\(H=-h\text{.}\)</span> Then, by the definition of the derivative,<div class="displaymath process-math" id="md-13">
+\begin{align*}
+g'(x) &amp;= \lim_{h\rightarrow 0} \frac{\log|x+h|-\log|x|}{h}
+= \lim_{h\rightarrow 0} \frac{\log(|x|-h)-\log|x|}{h} \\
+&amp;= \lim_{H\rightarrow 0} \frac{\log(X+H)-\log X}{-H}
+= -\lim_{H\rightarrow 0} \frac{\log(X+H)-\log X}{H} \\
+&amp;=-\dfrac{\dd}{\dd x}\log X =-\frac{1}{X} = -\frac{1}{|x|} \\
+&amp;=\frac{1}{x}
+\end{align*}
+</div></p></li>
+<li id="li-16"><p id="p-derived-li-16">Since <span class="process-math">\(\log 0\)</span> is undefined, <span class="process-math">\(g'(0)\)</span> does not exist.</p></li>
+</ul>
+<p class="continuation">Putting this together gives:</p>
+<div class="displaymath process-math" id="md-14">
+\begin{align*}
+\dfrac{\dd}{\dd x} \log | x | &amp;= \frac{1}{x}
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="eg_diff_power"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_diff_power"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative of <span class="process-math">\(x^a\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_diff_power"><article class="example example-like"><p id="p-20">Just after Corollary <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor_DIFFxtoa" missing or not unique]</code>, we said that we would, in the future, find the derivative of <span class="process-math">\(x^a\)</span> for all real numbers. The future is here. Let <span class="process-math">\(x\gt 0\)</span> and <span class="process-math">\(a\)</span> be any real number. Exponentiating both sides of <span class="process-math">\(\log\big(x^a\big)=a\log x\)</span> gives us <span class="process-math">\(x^a=e^{a\log x}\)</span> and then</p>
+<div class="displaymath process-math" id="md-15">
+\begin{align*}
+\dfrac{\dd}{\dd x} x^a &amp;= \dfrac{\dd}{\dd x} e^{a\log x}
+= e^{a\log x} \dfrac{\dd}{\dd x}(a\log x) &amp;\text{by the chain rule} \\
+&amp;=\frac{a}{x} e^{a\log x}
+=\frac{a}{x} x^a \\
+&amp;=a x^{a-1}
+\end{align*}
+</div>
+<p class="continuation">as expected.</p></article></div>
+<p id="p-21">We can extend Theorem <a href="" class="xref" data-knowl="./knowl/thm_diff_log.html" title="Teorema 1.1">Teorema 1.1</a> to compute the derivative of logarithms of other bases in a straightforward way. Since for any positive <span class="process-math">\(a
+\neq 1\text{:}\)</span></p>
+<div class="displaymath process-math" id="md-16">
+\begin{align*}
+\log_a x &amp;= \frac{\log x}{\log a} = \frac{1}{\log a} \cdot \log x &amp;
+\text{since $a$ is a constant}\\
+\dfrac{\dd}{\dd x} \log_a x &amp;= \frac{1}{\log a} \cdot \frac{1}{x}
+\end{align*}
+</div></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Back to <span class="process-math">\(\mathbf{\dfrac{\dd}{\dd x} a^x}\)</span></span>
+</h3>
+<p id="p-22">We can also now finally get around to computing the derivative of <span class="process-math">\(a^x\)</span> (which we started to do back in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>).</p>
+<div class="displaymath process-math" id="md-17">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{exponentiate both sides base $e$}\\
+f(x) &amp;= e^{x \log a} &amp; \text{chain rule}\\
+f'(x) &amp;= e^{x \log a} \cdot \log a\\
+&amp;= a^x \cdot \log a
+\end{align*}
+</div>
+<p class="continuation">Notice that we could have also done the following:</p>
+<div class="displaymath process-math" id="md-18">
+\begin{align*}
+f(x) &amp;= a^x &amp; \text{take log of both sides}\\
+\log f(x) &amp;= x \log a &amp; \text{differentiate both sides}\\
+\dfrac{\dd}{\dd x} \left( \log f(x) \right) &amp;=
+\log a\\
+\end{align*}
+<p class="intertext">We then process the left-hand side using the chain rule</p>
+\begin{align*}
+f'(x) \cdot \frac{1}{f(x)} &amp;= \log a\\
+f'(x) &amp;= f(x) \cdot \log a = a^x \cdot \log a
+\end{align*}
+</div>
+<p class="continuation">We will see <span class="process-math">\(\dfrac{\dd}{\dd x} \log f(x)\)</span> more below in the subsection on “logarithmic differentiation”.</p>
+<p id="p-23">To summarise the results above:</p>
+<article class="corollary theorem-like" id="cor_2_10"><h4 class="heading">
+<span class="type">Corolário</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h4>
+<div class="displaymath process-math" id="md-19">
+\begin{align*}
+\dfrac{\dd}{\dd x} a^x &amp;= \log a \cdot a^x &amp; \text{for any $a \gt 0$}\\
+\dfrac{\dd}{\dd x} \log_a x &amp;= \frac{1}{x \cdot \log a} &amp; \text{for any $a \gt 0, a \neq 1$}
+\end{align*}
+</div>
+<p class="continuation">where <span class="process-math">\(\log x\)</span> is the natural logarithm.</p></article><p id="p-25">Recall that we need the caveat <span class="process-math">\(a \neq 1\)</span> because the logarithm base 1 is not well defined. This is because <span class="process-math">\(1^x = 1\)</span> for any <span class="process-math">\(x\text{.}\)</span> We do not need a similar caveat for the derivative of the exponential because we know (recall Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_log_est" missing or not unique]</code>)</p>
+<div class="displaymath process-math" id="md-20">
+\begin{align*}
+\dfrac{\dd}{\dd x} 1^x &amp;= \dfrac{\dd}{\dd x} 1= 0 &amp;\text{while the above corollary tells us}\\
+&amp;= \log 1 \cdot 1^x = 0 \cdot 1 = 0.
+\end{align*}
+</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Logarithmic Differentiation</span>
+</h3>
+<p id="p-26">We want to go back to some previous slightly messy examples (Examples <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_DIFFsimpleToolsA" missing or not unique]</code>  and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_DIFFsimpleToolsNB" missing or not unique]</code>) and now show you how they can be done more easily.</p>
+<article class="example example-like" id="eg_2_10_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_10_3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of a triple product.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_10_3"><article class="example example-like"><p id="p-27">Consider again the derivative of the product of 3 functions:</p>
+<div class="displaymath process-math" id="md-21">
+\begin{align*}
+P(x) &amp;= F(x) \cdot G(x) \cdot H(x)
+\end{align*}
+</div>
+<p class="continuation">Start by taking the logarithm of both sides:</p>
+<div class="displaymath process-math" id="md-22">
+\begin{align*}
+\log P(x) &amp;= \log \left( F(x) \cdot G(x) \cdot H(x)  \right)\\
+&amp;= \log F(x) + \log G(x) + \log H(x)\\
+\end{align*}
+<p class="intertext">Notice that the product of functions on the right-hand side has become a sum of functions. Differentiating sums is much easier than differentiating products. So when we differentiate we have</p>
+\begin{align*}
+\dfrac{\dd}{\dd x}\log P(x)  &amp;= \dfrac{\dd}{\dd x}\log F(x) + \dfrac{\dd}{\dd x}\log G(x) + \dfrac{\dd}{\dd x}\log H(x)\\
+\end{align*}
+<p class="intertext">A quick application of the chain rule shows that <span class="process-math">\(\dfrac{\dd}{\dd x}\log
+f(x) = f'(x) / f(x)\text{:}\)</span></p>
+\begin{align*}
+\frac{P'(x)}{P(x)} &amp;= \frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}\\
+\end{align*}
+<p class="intertext">Multiply through by <span class="process-math">\(P(x)=F(x)G(x)H(x)\text{:}\)</span></p>
+\begin{align*}
+P'(x) &amp;=
+\left(\frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}\right)\cdot
+F(x)G(x)H(x)\\
+&amp;= F'(x)G(x)H(x) + F(x)G'(x)H(x) + F(x)G(x)H'(x)
+\end{align*}
+</div>
+<p class="continuation">which is what found in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_DIFFsimpleToolsA" missing or not unique]</code> by repeated application of the product rule. The above generalises quite easily to more than 3 functions.</p></article></div>
+<p id="p-28">This same trick of “take a logarithm and then differentiate” — or logarithmic differentiation — will work any time you have a product (or ratio) of functions.</p>
+<article class="example example-like" id="eg_2_10_4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_10_4"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of a messy product.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_10_4"><article class="example example-like"><p id="p-29">Lets use logarithmic differentiation on the function from Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_DIFFsimpleToolsNB" missing or not unique]</code>:</p>
+<div class="displaymath process-math" id="md-23">
+\begin{align*}
+f(x) &amp;=\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+\end{align*}
+</div>
+<p class="continuation">Beware however, that we may only take the logarithm of positive numbers, and this <span class="process-math">\(f(x)\)</span> is often negative. For example, if <span class="process-math">\(1 \lt x \lt 2 \text{,}\)</span> the factor <span class="process-math">\((1-x^2)\)</span> in the definition of <span class="process-math">\(f(x)\)</span> is negative while all of the other factors are positive, so that <span class="process-math">\(f(x)\lt 0 \text{.}\)</span> None–the–less, we can use logarithmic differentiation to find <span class="process-math">\(f'(x)\text{,}\)</span>  by exploiting the observation that <span class="process-math">\(\dfrac{\dd}{\dd x}\log|f(x)|=\frac{f'(x)}{f(x)}\text{.}\)</span> (To see this, use the chain rule and Example <a href="" class="xref" data-knowl="./knowl/eg_diff_log_abs_x.html" title="Exemplo 1.4: The derivative of \log|x|">Exemplo 1.4</a>.) So we take the logarithm of <span class="process-math">\(|f(x)|\)</span> and expand.</p>
+<div class="displaymath process-math" id="md-24">
+\begin{align*}
+\log |f(x)| &amp; = \log \frac{|\sqrt{x}-1|\,|2-x|\,|1-x^2|}{\sqrt{x}|3+2x|}\\
+&amp; = \log|\sqrt{x}\!-\!1| + \log|2\!-\!x| + \log|1\!-\!x^2| -
+\underbrace{\log(\sqrt{x})}_{=\frac{1}{2}\log x} - \log|3\!+\!2x|
+\end{align*}
+</div>
+<p class="continuation">Now we can essentially just differentiate term-by-term:</p>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+\dfrac{\dd}{\dd x}\log |f(x)| &amp;= \dfrac{\dd}{\dd x} \Big(
+\log|\sqrt{x}-1| + \log|2-x| + \log|1-x^2| \\
+\amp\hskip2in- \frac{1}{2}\log|x| - \log|3+2x|
+\Big)\\
+\frac{f'(x)}{f(x)} &amp;= \frac{1/(2\sqrt{x})}{\sqrt{x}-1}
++ \frac{-1}{2-x} + \frac{-2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}\\
+f'(x) &amp;= f(x) \cdot \left( \frac{1}{2 \sqrt{x} (\sqrt{x}\!-\!1)}
+- \frac{1}{2\!-\!x} - \frac{2x}{1\!-\!x^2} - \frac{1}{2x} - \frac{2}{3\!+\!2x}
+\right)\\
+&amp;= \frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+\cdot \\
+\amp\hskip0.5in\left( \frac{1}{2 \sqrt{x} (\sqrt{x}-1)}
+- \frac{1}{2-x} - \frac{2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+\right)
+\end{align*}
+</div>
+<p class="continuation">just as we found previously.</p></article></div></section><section class="exercises" id="exercises-"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">The interested reader should head to Wikipedia and look up the natural logarithm.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">In other disciplines other bases are natural; in computer science, since numbers are stored in binary it makes sense to use the binary logarithm — i.e. base 2. While in some sciences and finance, it makes sense to use the decimal logarithm — i.e. base 10.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Again take a quick look at the whirlwind review of logarithms in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Notice that just because the derivatives are the same, doesn't mean the original functions are the same. Both <span class="process-math">\(f(x)=x^2\)</span> and <span class="process-math">\(g(x)=x^2+3\)</span> have derivative <span class="process-math">\(f'(x)=g'(x)=2x\text{,}\)</span> but <span class="process-math">\(f(x)
+\neq g(x)\text{.}\)</span>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">It's probably a good moment to go back and look at Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_diff_abs" missing or not unique]</code>.</div></div>
+</div></main>
+</div>
+</body>
+</html>

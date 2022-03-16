@@ -1069,7 +1069,8 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
 
 </section>
 <references xml:id="references-backmatter">
-    <title>Referências</title>   
+    <title>Referências</title>  
+    <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-1 Differential Calculus. </title> 2021.</biblio> 
     <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
     <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
     <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
