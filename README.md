@@ -16,4 +16,4 @@
 
 ## Terefas
  - [WeBWorK](http://191.252.191.150/webwork2/CALCULO-N1-LF/)
-    - Login e senha: CPF
+    - Login e senha: CPF e CPF
