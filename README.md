@@ -1,8 +1,8 @@
-# Cálculo NI - LF3 - 2021.2
+## Cálculo NI - LF3 - 2021.2
 
 **Prof. Leon Silva**
 
-## Limite e Derivada
+### Limite e Derivada
 - [N1 - O Limite de uma Função](https://ldsufrpe.github.io/calculon1/N1). 
 - [N2 - Propriedades dos Limites](https://ldsufrpe.github.io/calculon1/N2). 
 - [N3 - Funções Contínuas](https://ldsufrpe.github.io/calculon1/N3).(atual)
