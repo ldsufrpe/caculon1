@@ -428,6 +428,9 @@ como esperado.
 </example>
 
 
+
+
+
 <p>Podemos estender o Teorema<nbsp/><xref ref="thm_diff_log"/> para calcular a derivada de logaritmos de 
 outras bases de maneira direta. Uma vez que para qualquer positivo <m>a \neq 1</m>:
 <md>
@@ -442,7 +445,35 @@ outras bases de maneira direta. Uma vez que para qualquer positivo <m>a \neq 1</
 </introduction>
 
 
+ <exercise>
+    <statement>
+        <p>
+            Determine a derivada de <m>y=\ln{70x}</m>. 
+        </p>
+    </statement>
 
+    <answer>
+        <p>
+            <m>\frac{1}{x}</m>
+        </p>
+    </answer>
+</exercise>
+
+
+
+ <exercise>
+    <statement>
+        <p>
+            Determine a derivada de <m>y=\ln{3x+1}</m>. 
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\frac{3}{3 \, x + 1}</m>
+        </p>
+    </answer>
+</exercise> 
 
 <subsection><title>A derivada de <m>\mathbf{\dfrac{\dd}{\dd x}\left[a^x\right]}</m>.</title>
 
@@ -484,9 +515,9 @@ Nós veremos <m>\dfrac{\dd}{\dd x}\left[\ln f(x)\right]</m> mais adiante.
 <statement><p>
 <md>
 <mrow>
-  \dfrac{\dd}{\dd x} a^x\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}
+  \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}
 </mrow><mrow>
-  \dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
+  \dfrac{\dd}{\dd x} [\ln_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
 </mrow>
 </md>
 onde <m>\ln x</m> é o logaritmo natural.
@@ -504,14 +535,61 @@ onde <m>\ln x</m> é o logaritmo natural.
 </mrow>
 </md>
 </p>
+
+<exercise>
+    <statement>
+        <p>
+            Determine <m>y'</m> sabendo que <m>y=\ln{(x^3+1)}</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\frac{3x^2}{x^3+1}</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Derive <m>f(x)=10^x</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>10^{x} \log\left(10\right)</m>
+        </p>
+    </answer>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>
+            Derive <m>f(x)=\log_{10}(2+\sin{x})</m>.
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\frac{\cos{x}}{(2+\sin{x})\ln{10}}</m>
+        </p>
+    </answer>
+</exercise>
+
 </subsection>
+
+
+
+
 
 <subsection>
 <title>Derivação Logarítmica</title>
 
 
 
-<example xml:id="eg_2_10_3"><title>Derivada de um produto triplo</title>
+<example xml:id="ex-5"><title>Derivada de um produto triplo</title>
 <statement>
   <p>
    Seja 
@@ -558,6 +636,22 @@ F(x)G(x)H(x)
 
 <p>Esse mesmo truque de <q>pegar um logaritmo e depois derivar</q> <mdash/> ou derivação logarítmica <mdash/> funcionará sempre que você tiver um produto (ou
 quociente) de funções.</p>
+
+
+<exercise>
+    <statement>
+        <p>
+            Use a fórmula do <xref ref="ex-5"/> para encontrar a derivada de <m>2^x(x^2+1)\ln{x}</m>
+        </p>
+    </statement>
+
+    <answer>
+        <p>
+            <m>\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x \log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}</m>
+        </p>
+    </answer>
+</exercise>
+
 
 <!-- <example xml:id="eg_2_10_4"><title>Derivative of a messy product</title>
 <p>
