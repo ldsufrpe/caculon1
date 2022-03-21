@@ -847,7 +847,7 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
             A reta <m>y=L</m> é chamada de assintota horizontal ao gráfico da função <m>y=f(x)</m> se 
 
             <md>
-                <mrow>\lim\limits_{x\to +\infty}f(x)=L \amp \quad \text{ou} \quad \lim\limits_{x\to \infty}f(x)=L </mrow>.
+                <mrow>\lim\limits_{x\to +\infty}f(x)=L \amp \quad \text{ou} \quad \lim\limits_{x\to -\infty}f(x)=L </mrow>.
             </md>
         </p>
     </statement>

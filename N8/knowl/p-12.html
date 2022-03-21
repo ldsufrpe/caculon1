@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-16T18:43:50-03:00       *-->
+<!--*       on 2022-03-21T16:40:27-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,33 +15,20 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Parágrafo</span></h3>
-<div class="displaymath process-math">
-\begin{gather*}
-\text{ if } f(x)=g(x) \text{ for all $x$, then } f'(x) = g'(x)
-\end{gather*}
-</div>
-<p class="continuation">So now differentiate both sides:</p>
+<p>To compute the derivative of <span class="process-math">\(\ln x\)</span> we could attempt to start with the limit definition of the derivative</p>
 <div class="displaymath process-math">
 \begin{align*}
-\dfrac{\dd}{\dd x} x &amp;= \dfrac{\dd}{\dd x} e^{\log x}\\
-\end{align*}
-<p class="intertext">The left-hand side is easy, and the right-hand side we can process using the chain rule with <span class="process-math">\(f(u)=e^u\)</span> and <span class="process-math">\(u=\log x\text{.}\)</span></p>
-\begin{align*}
-1 &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
-&amp;= e^u \cdot
-\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{what we want to compute}\\
-\\
-\end{align*}
-<p class="intertext">Recall that <span class="process-math">\(e^u = e^{\log x} = x\text{,}\)</span> so</p>
-\begin{align*}
-1 &amp;= x \cdot
-\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{now what?}\\
-\end{align*}
-<p class="intertext">We can now just rearrange this equation to make the thing we want the subject:</p>
-\begin{align*}
-\dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+\dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}\\
+\amp= \lim_{h\to 0} \frac{\ln( (x+h)/x )}{h}
 \end{align*}
 </div>
+<p class="continuation">Isso não parece complicado. Mas  temos a regra da cadeia, e sabemos que o logaritmo satisfaz a equação:</p>
+<div class="displaymath process-math">
+\begin{align*}
+x\amp= e^{\ln x}
+\end{align*}
+</div>
+<p class="continuation">Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada. ou seja, estamos usando <a href="" class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Nota de rodapé 1.2"><sup> 2 </sup></a></p>
 <span class="incontext"><a href="section-1.html#p-12" class="internal">em contexto</a></span>
 </body>
 </html>

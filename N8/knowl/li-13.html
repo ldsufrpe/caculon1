@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-16T18:43:50-03:00       *-->
+<!--*       on 2022-03-21T16:40:27-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,11 +16,14 @@
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="period">.</span>
-</h4>Differentiation and then simplify:<div class="displaymath process-math">
+</h4>Se <span class="process-math">\(x\lt 0\)</span> então <span class="process-math">\(|x|= -x\text{.}\)</span> Se <span class="process-math">\(|h|\)</span> é estritamente menor do que <span class="process-math">\(|x|\text{,}\)</span> então também temos que <span class="process-math">\(x+h\lt 0\)</span> e <span class="process-math">\(|x+h|=-(x+h)=|x|-h\text{.}\)</span> Escreva <span class="process-math">\(X=|x|\)</span> e <span class="process-math">\(H=-h\text{.}\)</span> Então, pela definição da derivada,<div class="displaymath process-math">
 \begin{align*}
-f'(x) &amp;= \dfrac{\dd}{\dd x} \log(3x) &amp; \text{chain rule}\\
-&amp;= \frac{1}{3x} \cdot 3\\
-&amp;= \frac{1}{x}
+g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
+= \lim_{h\rightarrow 0} \frac{\ln(|x|-h)-\ln|x|}{h} \\
+\amp= \lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{-H}
+= -\lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{H} \\
+\amp=-\dfrac{\dd}{\dd x}\ln X =-\frac{1}{X} = -\frac{1}{|x|} \\
+\amp=\frac{1}{x}
 \end{align*}
 </div></article><span class="incontext"><a href="section-1.html#li-13" class="internal">em contexto</a></span>
 </body>

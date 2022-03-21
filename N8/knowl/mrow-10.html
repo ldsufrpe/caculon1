@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-16T18:43:50-03:00       *-->
+<!--*       on 2022-03-21T16:40:27-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,23 +16,23 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\dfrac{\dd}{\dd x} x &amp;= \dfrac{\dd}{\dd x} e^{\log x}\\
+\dfrac{\dd}{\dd x} x\amp= \dfrac{\dd}{\dd x} e^{\ln x}\\
 \end{align*}
-<p class="intertext">The left-hand side is easy, and the right-hand side we can process using the chain rule with <span class="process-math">\(f(u)=e^u\)</span> and <span class="process-math">\(u=\log x\text{.}\)</span></p>
+<p class="intertext">O lado esquerdo é fácil e o lado direito podemos usar a regra da cadeia com <span class="process-math">\(f(u)=e^u\)</span> e <span class="process-math">\(u=\ln x\text{.}\)</span></p>
 \begin{align*}
-1 &amp;= \diff{f}{u} \cdot \diff{u}{x}\\
-&amp;= e^u \cdot
-\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{what we want to compute}\\
+1\amp= \dfrac{\dd f}{\dd u} \cdot \dfrac{\dd u}{\dd x}\\
+\amp= e^u \cdot
+\underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que queremos calcular}\\
 \\
 \end{align*}
-<p class="intertext">Recall that <span class="process-math">\(e^u = e^{\log x} = x\text{,}\)</span> so</p>
+<p class="intertext">Lembre-se que <span class="process-math">\(e^u = e^{\ln x} = x\text{,}\)</span> então</p>
 \begin{align*}
-1 &amp;= x \cdot
-\underbrace{\dfrac{\dd}{\dd x} \log x }_\text{now what?}\\
+1\amp= x \cdot
+\underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que agora?}\\
 \end{align*}
-<p class="intertext">We can now just rearrange this equation to make the thing we want the subject:</p>
+<p class="intertext">Agora podemos apenas reorganizar esta equação para obter:</p>
 \begin{align*}
-\dfrac{\dd}{\dd x} \log x &amp;= \frac{1}{x}
+\dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
 \end{align*}
 </div>
 <span class="incontext"><a href="section-1.html#md-7" class="internal">em contexto</a></span>
