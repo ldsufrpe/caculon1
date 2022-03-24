@@ -676,7 +676,7 @@ Sejam <m>a,c,H </m> constantes e <m>f,g,h</m> funções definidas em um interval
 	\begin{cases}
 	 +\infty \amp H \gt 0 \\
 	-\infty \amp H \lt 0\\
-	\text{undetermined} \amp H=0
+	\text{indeterminado} \amp H=0
 	\end{cases}
 	</m>
 </li>
@@ -686,7 +686,7 @@ Sejam <m>a,c,H </m> constantes e <m>f,g,h</m> funções definidas em um interval
 	\begin{cases}
 	+\infty \amp H \gt 0 \\
 	-\infty \amp H \lt 0\\
-	\text{undetermined} \amp H=0
+	\text{indeterminado} \amp H=0
 	\end{cases}</m>
 </li>
 <li> <m>\displaystyle \lim_{x \to a} \frac{h(x)}{f(x)} = 0</m> </li>
