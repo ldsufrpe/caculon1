@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-21T18:27:37-03:00       *-->
+<!--*       on 2022-03-25T12:30:37-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -178,7 +178,7 @@ x=\tfrac{\ln_a x}{\ln_a e}\)</span></p></li>
 <li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\lim\limits_{x\rightarrow\infty}\ln x=\infty\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow0}\ln x=-\infty\)</span></p></li>
 </ul></article> E, finalmente, devemos lembrar que <span class="process-math">\(\ln x\)</span> tem domínio (ou seja, é definido para) <span class="process-math">\(x \gt 0\)</span> e intervalo (ou seja, recebe todos os valores) <span class="process-math">\(-\infty \lt x \lt \infty\text{.}\)</span> +</p>
 <figure class="figure figure-like" id="fig-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-1.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-12">To compute the derivative of <span class="process-math">\(\ln x\)</span> we could attempt to start with the limit definition of the derivative</p>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-12">Para calcular a derivada de <span class="process-math">\(\ln x\)</span> podemos tentar começar com a definição da derivada como limite:</p>
 <div class="displaymath process-math" id="md-4">
 \begin{align*}
 \dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}\\
@@ -370,7 +370,7 @@ f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
 <div class="displaymath process-math" id="md-19">
 \begin{align*}
 \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}\\
-\dfrac{\dd}{\dd x} [\ln_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
+\dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
 \end{align*}
 </div>
 <p class="continuation">onde <span class="process-math">\(\ln x\)</span> é o logaritmo natural.</p></article><p id="p-33">Lembre-se de que precisamos da ressalva <span class="process-math">\(a \neq 1\)</span> porque a base 1 do logaritmo não está bem definida. Isso ocorre porque <span class="process-math">\(1^x = 1\)</span> para qualquer <span class="process-math">\(x\text{.}\)</span> Não precisamos de uma advertência semelhante para a derivada da exponencial porque sabemos</p>
@@ -390,13 +390,13 @@ f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-4"><article class="exercise exercise-like"><p id="p-36">Derive <span class="process-math">\(f(x)=10^x\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-37"><span class="process-math">\(10^{x} \log\left(10\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-37"><span class="process-math">\(10^{x} \ln\left(10\right)\)</span></p></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-5"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-5"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-5"><article class="exercise exercise-like"><p id="p-38">Derive <span class="process-math">\(f(x)=\log_{10}(2+\sin{x})\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-39"><span class="process-math">\(\frac{\cos{x}}{(2+\sin{x})\ln{10}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-39"><span class="process-math">\(\dfrac{\cos{x}}{(2+\sin{x})\ln{10}}\)</span></p></div></div>
 </div></article></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Derivação Logarítmica</span>
 </h3>

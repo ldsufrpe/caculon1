@@ -228,8 +228,7 @@ E, finalmente, devemos lembrar que <m>\ln x</m> tem domínio (ou seja, é defini
   </image>
 </figure>
 
-<p>To compute the derivative of <m>\ln x</m> we could attempt to start with the limit
-definition of the derivative
+<p>Para calcular a derivada de <m>\ln x</m> podemos tentar começar com a definição da derivada como limite:
 <md>
 <mrow>
   \dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}
@@ -517,7 +516,7 @@ Nós veremos <m>\dfrac{\dd}{\dd x}\left[\ln f(x)\right]</m> mais adiante.
 <mrow>
   \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}
 </mrow><mrow>
-  \dfrac{\dd}{\dd x} [\ln_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
+  \dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
 </mrow>
 </md>
 onde <m>\ln x</m> é o logaritmo natural.
@@ -559,7 +558,7 @@ onde <m>\ln x</m> é o logaritmo natural.
 
     <answer>
         <p>
-            <m>10^{x} \log\left(10\right)</m>
+            <m>10^{x} \ln\left(10\right)</m>
         </p>
     </answer>
 </exercise>
@@ -573,7 +572,7 @@ onde <m>\ln x</m> é o logaritmo natural.
 
     <answer>
         <p>
-            <m>\frac{\cos{x}}{(2+\sin{x})\ln{10}}</m>
+            <m>\dfrac{\cos{x}}{(2+\sin{x})\ln{10}}</m>
         </p>
     </answer>
 </exercise>
