@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-25T18:42:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<ul class="disc">
+<li><p>Como foi o caso nos exemplos acima, podemos reescrever a equação do astroide próximo a <span class="process-math">\((x_0,y_0)\)</span> na forma <span class="process-math">\(y=f(x)\text{,}\)</span> com um explícito <span class="process-math">\(f(x)\text{,}\)</span> resolvendo a equação <span class="process-math">\(x^{\frac{2}{3}}+y^{\frac{2}{3}}=1\)</span> . Mas, novamente, é computacionalmente mais simples e, portanto, menos vulnerável a erros mecânicos, usar a derivação implícita. Então é isso que vamos fazer.</p></li>
+<li><p>Primeiro, já que <span class="process-math">\((x_0,y_0)\)</span> encontra-se na curva, satisfaz<div class="displaymath process-math">
+\begin{gather*}
+x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1.
+\end{gather*}
+</div></p></li>
+<li><p>Agora, sem fingir que <span class="process-math">\(y=f(x)\text{,}\)</span> desta vez — apenas certifique-se de lembrar quando derivamos que <span class="process-math">\(y\)</span> muda com <span class="process-math">\(x\text{.}\)</span><div class="displaymath process-math">
+\begin{align*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}} \amp=1\\
+\end{align*}
+<p class="intertext">Comece com a curva e, em seguida, derive</p>
+\begin{align*}
+\frac{2}{3}x^{-\frac{1}{3}} + \frac{2}{3} y^{-\frac{1}{3}} y' \amp=0
+\end{align*}
+</div></p></li>
+<li><p>Observe a derivada de <span class="process-math">\(x^{\frac{2}{3}}\text{,}\)</span> a saber <span class="process-math">\(\frac{2}{3}x^{-\frac{1}{3}}\text{,}\)</span> e a derivada de <span class="process-math">\(y^{\frac{2}{3}}\text{,}\)</span> a saber  <span class="process-math">\(\frac{2}{3} y^{-\frac{1}{3}}y'\text{,}\)</span> são definidos apenas quando <span class="process-math">\(x\ne 0\)</span> e <span class="process-math">\(y\ne 0\text{.}\)</span> Estamos interessados no caso em que <span class="process-math">\(x=x_0\)</span> e <span class="process-math">\(y=y_0\text{.}\)</span> Então é melhor supormos que <span class="process-math">\(x_0\ne 0\)</span> e <span class="process-math">\(y_0\ne 0\text{.}\)</span> Provavelmente algo estranho acontece quando <span class="process-math">\(x_0=0\)</span> ou <span class="process-math">\(y_0=0\text{.}\)</span> Voltaremos a isso em breve.</p></li>
+<li><p>Para continuar, definimos <span class="process-math">\(x=x_0, y=y_0\)</span> na equação acima e resolvemos para <span class="process-math">\(y'\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+\frac{2}{3}x_0^{-\frac{1}{3}}
++\frac{2}{3} y_0^{-\frac{1}{3}} y'(x)=0
+\implies y'(x_0)= -\left( \frac{y_0}{x_0} \right)^{\frac{1}{3}}
+\end{equation*}
+</div>Esta é a inclinação da reta tangente e sua equação é<div class="displaymath process-math">
+\begin{equation*}
+y=y_0+f'(x_0)(x-x_0) = y_0
+-\left(\frac{y_0}{x_0}\right)^{\frac{1}{3}}(x-x_0)
+\end{equation*}
+</div></p></li>
+</ul>
+<p>Agora vamos pensar um pouco sobre qual é a inclinação da linha tangente de <span class="process-math">\(-\root{3}\of {\frac{y_0}{x_0}}\)</span> nos fala sobre o astroide.</p>
+<ul class="disc">
+<li><p>Em primeiro lugar, como observação preliminar, observe que, uma vez que <span class="process-math">\(x_0^{\frac{2}{3}}\ge0\)</span> e <span class="process-math">\(y_0^{\frac{2}{3}}\ge0\)</span> a equação <span class="process-math">\(x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1\)</span> da astróide força <span class="process-math">\(0\le x_0^{\frac{2}{3}},y_0^{\frac{2}{3}} \le 1\)</span> e portanto <span class="process-math">\(-1\le x_0,y_0\le 1\text{.}\)</span></p></li>
+<li><p>Para todo <span class="process-math">\(x_0,y_0 \gt 0\)</span> a inclinaçãoé  <span class="process-math">\(-\root{3}\of {\frac{y_0}{x_0}}
+\lt 0\text{.}\)</span> Portanto, em todos os pontos do asteróide que estão no primeiro quadrante, a reta tangente tem inclinação negativa, ou seja, está “inclinando-se para trás”.</p></li>
+<li><p>Como <span class="process-math">\(x_0\)</span> tende a zero, <span class="process-math">\(y_0\)</span> tende a <span class="process-math">\(\pm 1\)</span> e a inclinação da reta tangente tende a infinito. Portanto, nos pontos do astroide próximos a <span class="process-math">\((0,\pm 1)\text{,}\)</span> a reta tangente é quase vertical.</p></li>
+<li><p>Como <span class="process-math">\(y_0\)</span> tende a zero, <span class="process-math">\(x_0\)</span> tende a <span class="process-math">\(\pm 1\)</span> e a inclinação da linha tangente tende a zero. Portanto, em pontos do astroide próximos a <span class="process-math">\((\pm
+1,0)\text{,}\)</span> a reta tangente é quase horizontal.</p></li>
+</ul>
+<p class="continuation">Aqui está uma figura que ilustra tudo isso.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="images/astroid.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="images/astroidB.svg" role="img" class="contained"></div>
+</div></div>
+<p>Com certeza, como especulamos anteriormente, algo estranho acontece com o astroide quando <span class="process-math">\(x_0\)</span> ou <span class="process-math">\(y_0\)</span> é zero. O astroide é têm “bicos” e não tem uma tangente ali.</p>
+</div></body>
+</html>

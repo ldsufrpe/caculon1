@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-25T18:42:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<ul class="disc">
+<li><p>Como foi o caso nos exemplos acima, podemos reescrever a equação do astroide próximo a <span class="process-math">\((x_0,y_0)\)</span> na forma <span class="process-math">\(y=f(x)\text{,}\)</span> com um explícito <span class="process-math">\(f(x)\text{,}\)</span> resolvendo a equação <span class="process-math">\(x^{\frac{2}{3}}+y^{\frac{2}{3}}=1\)</span> . Mas, novamente, é computacionalmente mais simples e, portanto, menos vulnerável a erros mecânicos, usar a derivação implícita. Então é isso que vamos fazer.</p></li>
+<li><p>Primeiro, já que <span class="process-math">\((x_0,y_0)\)</span> encontra-se na curva, satisfaz<div class="displaymath process-math">
+\begin{gather*}
+x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1.
+\end{gather*}
+</div></p></li>
+<li><p>Agora, sem fingir que <span class="process-math">\(y=f(x)\text{,}\)</span> desta vez — apenas certifique-se de lembrar quando derivamos que <span class="process-math">\(y\)</span> muda com <span class="process-math">\(x\text{.}\)</span><div class="displaymath process-math">
+\begin{align*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}} \amp=1\\
+\end{align*}
+<p class="intertext">Comece com a curva e, em seguida, derive</p>
+\begin{align*}
+\frac{2}{3}x^{-\frac{1}{3}} + \frac{2}{3} y^{-\frac{1}{3}} y' \amp=0
+\end{align*}
+</div></p></li>
+<li><p>Observe a derivada de <span class="process-math">\(x^{\frac{2}{3}}\text{,}\)</span> a saber <span class="process-math">\(\frac{2}{3}x^{-\frac{1}{3}}\text{,}\)</span> e a derivada de <span class="process-math">\(y^{\frac{2}{3}}\text{,}\)</span> a saber  <span class="process-math">\(\frac{2}{3} y^{-\frac{1}{3}}y'\text{,}\)</span> são definidos apenas quando <span class="process-math">\(x\ne 0\)</span> e <span class="process-math">\(y\ne 0\text{.}\)</span> Estamos interessados no caso em que <span class="process-math">\(x=x_0\)</span> e <span class="process-math">\(y=y_0\text{.}\)</span> Então é melhor supormos que <span class="process-math">\(x_0\ne 0\)</span> e <span class="process-math">\(y_0\ne 0\text{.}\)</span> Provavelmente algo estranho acontece quando <span class="process-math">\(x_0=0\)</span> ou <span class="process-math">\(y_0=0\text{.}\)</span> Voltaremos a isso em breve.</p></li>
+<li><p>Para continuar, definimos <span class="process-math">\(x=x_0, y=y_0\)</span> na equação acima e resolvemos para <span class="process-math">\(y'\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+\frac{2}{3}x_0^{-\frac{1}{3}}
++\frac{2}{3} y_0^{-\frac{1}{3}} y'(x)=0
+\implies y'(x_0)= -\left( \frac{y_0}{x_0} \right)^{\frac{1}{3}}
+\end{equation*}
+</div>Esta é a inclinação da reta tangente e sua equação é<div class="displaymath process-math">
+\begin{equation*}
+y=y_0+f'(x_0)(x-x_0) = y_0
+-\left(\frac{y_0}{x_0}\right)^{\frac{1}{3}}(x-x_0)
+\end{equation*}
+</div></p></li>
+</ul>
+<span class="incontext"><a href="section-1.html#p-26" class="internal">em contexto</a></span>
+</body>
+</html>

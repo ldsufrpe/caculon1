@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-25T18:42:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Derivação implícita</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Derivada: N9</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Derivação implícita</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Derivação Implicita</a></li>
+<li><a href="section-1.html#exercises-implicita" data-scroll="exercises-implicita" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Derivação implícita</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">implicita</p></li>
+<li id="li-2"><p id="p-4">implicita 2</p></li>
+<li id="li-3"><p id="p-5">Implicite</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Texto</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Derivação Implicita</span>
+</h3>
+<p id="p-7">Diferenciação implícita é uma maneira simples usada para calcular derivadas de funções ou</p>
+<ul class="disc">
+<li id="li-4"><p id="p-derived-li-4">quando não se conhece uma fórmula explícita para a função, mas conhece uma equação que a função obedece ou</p></li>
+<li id="li-5"><p id="p-derived-li-5">mesmo quando temos uma fórmula explícita, mas complicada, para a função, e a mesma obedece a uma equação simples.</p></li>
+</ul>
+<p class="continuation">Para realizar essa tarefa primeiro derivamos de ambos os lados da equação e então isolamos a derivada desejada. Na verdade, já fizemos isso, sem usar o nome “diferenciação implícita”, quando encontramos a derivada de <span class="process-math">\(\log x\)</span> anteriormente. No ocasião, sabíamos que a função <span class="process-math">\(f(x)=\log x\)</span> satisfaz a equação <span class="process-math">\(e^{f(x)}=x\)</span> para todo <span class="process-math">\(x\text{.}\)</span> Ou seja, as funções <span class="process-math">\(e^{f(x)}\)</span> e <span class="process-math">\(x\)</span> são de fato a mesma função e, portanto, têm a mesma derivada. Então obtemos</p>
+<div class="displaymath process-math" id="md-1">
+\begin{gather*}
+\dfrac{\dd }{\dd x}\left[e^{f(x)}\right] = \dfrac{\dd }{\dd x}[x] = 1
+\end{gather*}
+</div>
+<p class="continuation">Em seguida, usamos a regra da cadeia para obter <span class="process-math">\(\dfrac{\dd }{\dd
+x}\left[e^{f(x)}\right]=e^{f(x)}f'(x)\text{,}\)</span> que nos disse que <span class="process-math">\(f'(x)\)</span> obedece à equação</p>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+e^{f(x)}f'(x) \amp=1 \amp \text{e agora podemos obter $f'(x)$}\\
+f'(x) \amp= e^{-f(x)} = e^{-\log x} = \frac{1}{x}.
+\end{align*}
+</div>
+<p id="p-8">A maneira típica de se acostumar com a diferenciação implícita é praticar com problemas envolvendo retas tangentes às curvas. Então, a seguir estão alguns exemplos de encontrar as equações de retas tangentes a curvas.</p>
+<article class="example example-like" id="ex-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrando uma reta tangente usando diferenciação implícita.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-1"><article class="example example-like"><p id="p-9">Encontre a equação da reta tangente a <span class="process-math">\(y=y^3+xy+x^3\)</span> em <span class="process-math">\(x=1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-10">Este é um exemplo usual, mas um pouco complicado pelo fato de a curva ser dada por uma equação cúbica — o que significa que não podemos resolver diretamente para <span class="process-math">\(y\)</span> em termos de <span class="process-math">\(x\)</span> ou vice-versa. Então, realmente precisamos da derivação implícita.</p>
+<ul class="disc">
+<li id="li-6"><p id="p-derived-li-6">Primeiro observe que quando <span class="process-math">\(x=1\)</span> a equação, <span class="process-math">\(y=y^3+xy+x^3\text{,}\)</span> da curva simplifica para <span class="process-math">\(y=y^3+y+1\)</span> ou <span class="process-math">\(y^3=-1\text{,}\)</span> que podemos resolver <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> : <span class="process-math">\(y=-1\text{.}\)</span> Portanto, sabemos que a curva passa por <span class="process-math">\((1,-1)\)</span> quando <span class="process-math">\(x=1\text{.}\)</span></p></li>
+<li id="li-7"><p id="p-derived-li-7">Agora, para encontrar a inclinação da reta tangente em <span class="process-math">\((1,-1)\text{,}\)</span> finja que nossa curva é <span class="process-math">\(y=f(x)\)</span> para que <span class="process-math">\(f(x)\)</span> obedece<div class="displaymath process-math" id="md-3">
+\begin{align*}
+f(x) \amp= f(x)^3 + x f(x) + x^3
+\end{align*}
+</div>para todos os <span class="process-math">\(x\text{.}\)</span> Derivando ambos os lados fornece<div class="displaymath process-math" id="md-4">
+\begin{gather*}
+f'(x)=3f(x)^2f'(x)+f(x)+xf'(x)+3x^2
+\end{gather*}
+</div></p></li>
+<li id="li-8"><p id="p-derived-li-8">Neste ponto podemos isolar para <span class="process-math">\(f'(x)\)</span> e escrevê-lo em termos de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(x\text{,}\)</span> mas como só queremos respostas quando <span class="process-math">\(x=1\text{,}\)</span> vamos substituir <span class="process-math">\(x=1\)</span> e <span class="process-math">\(f(1)=-1\)</span> (já que a curva passa por <span class="process-math">\((1,-1)\)</span>).</p></li>
+<li id="li-9"><p id="p-derived-li-9">Substituindo <span class="process-math">\(x=1,\ f(1)=-1\)</span> nos dá<div class="displaymath process-math" id="md-5">
+\begin{align*}
+f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ and so } f'(1)=-\frac{2}{3}
+\end{align*}
+</div></p></li>
+<li id="li-10"><p id="p-derived-li-10">A equação da reta tangente é<div class="displaymath process-math" id="md-6">
+\begin{gather*}
+y=y_0+f'(x_0)(x-x_0)=-1-\frac{2}{3}(x-1)
+=-\frac{2}{3}x-\frac{1}{3}
+\end{gather*}
+</div></p></li>
+</ul>
+<p class="continuation">Podemos reescrever a equação da reta tangente como <span class="process-math">\(2x+3y=-1\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-11">No<a href="" class="xref" data-knowl="./knowl/ex-1.html" title="Exemplo 1.1: Encontrando uma reta tangente usando diferenciação implícita">Exemplo 1.1</a>, substituímos <span class="process-math">\(y\)</span> por <span class="process-math">\(f(x)\)</span> no meio do cálculo. Na verdade, não temos que fazer isso. Quando estamos escrevendo nossa solução, podemos lembrar que <span class="process-math">\(y\)</span> é uma função de <span class="process-math">\(x\text{.}\)</span> Então podemos começar com</p>
+<div class="displaymath process-math" id="md-7">
+\begin{align*}
+y \amp=y^3+xy+x^3 \amp\\
+\end{align*}
+<p class="intertext">e derivar lembrando que <span class="process-math">\(y\equiv
+y(x)\)</span></p>
+\begin{align*}
+y^{\prime} \amp= 3 y^2 y' + xy' + y + 3x^2\\
+\end{align*}
+<p class="intertext">E agora substitua <span class="process-math">\(x=1, y=-1\)</span> para obter</p>
+\begin{align*}
+y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{and so}\\
+y'(1) \amp= -\frac{2}{3}
+\end{align*}
+</div>
+<p id="p-12"><p id="p-13">A próxima é ao mesmo tempo um pouco mais fácil (porque é quadrática) e um pouco mais difícil (porque nos pedem a tangente em um ponto genérico da curva, não em um específico).</p></p>
+<article class="example example-like" id="ex-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Outra reta tangente por derivação implicita.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-2"><article class="example example-like"><p id="p-14">Seja <span class="process-math">\((x_0,y_0)\)</span> um ponto da elípse <span class="process-math">\(3x^2+5y^2=7\text{.}\)</span></p>
+<article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-15">Encontre a equação da reta tangente para <span class="process-math">\(x_0=1\)</span> e <span class="process-math">\(y_0\)</span> positivo.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><ul id="p-16" class="disc">
+<li id="li-11"><p id="p-derived-li-11">Quando <span class="process-math">\(x=1\)</span> a equação dada satisfaz<div class="displaymath process-math" id="md-8">
+\begin{align*}
+3 + 5y^2 \amp= 7\\
+5y^2 \amp= 4\\
+y \amp= \pm \frac{2}{\sqrt{5}}.
+\end{align*}
+</div>Estamos interessados apenas  <span class="process-math">\(y\)</span> no positivo, assim nosso ponto da curva é <span class="process-math">\((1,2/\sqrt{5})\text{.}\)</span></p></li>
+<li id="li-12"><p id="p-derived-li-12">Agora usamos a derivação implícita para encontrar <span class="process-math">\(\dfrac{\dd y}{\dd x}\)</span> neste ponto. Primeiro simulamos que resolvemos a curva explicitamente, para algum intervalo de <span class="process-math">\(x\text{,}\)</span> com <span class="process-math">\(y=f(x)\text{.}\)</span> A equação fica<div class="displaymath process-math" id="md-9">
+\begin{align*}
+3x^2 + 5f(x)^2 \amp= 7 \amp \ct{Derivando ambos os lados}\\
+6x + 10 f(x) f'(x) \amp= 0\\
+f'(x) \amp= - \frac{3x}{5f(x)}
+\end{align*}
+</div></p></li>
+<li id="li-13"><p id="p-derived-li-13">Quando <span class="process-math">\(x=1, y= 2/\sqrt{5}\)</span> isso se torna<div class="displaymath process-math" id="md-10">
+\begin{align*}
+f'(1) \amp= - \frac{3}{5 \cdot 2/\sqrt{5}} = - \frac{3}{2\sqrt{5}}
+\end{align*}
+</div>Então a reta tangente passa por <span class="process-math">\((1,2/\sqrt{5})\)</span> e tem inclinação <span class="process-math">\(-
+\frac{3}{2\sqrt{5}}\text{.}\)</span> Portanto, a reta tangente tem equação<div class="displaymath process-math" id="md-11">
+\begin{align*}
+y \amp=y_0+f'(x_0)(x-x_0)\\
+\amp= \frac{2}{\sqrt{5}} - \frac{3}{2\sqrt{5}} (x-1)\\
+\amp= \frac{7 - 3x}{2\sqrt{5}}
+\end{align*}
+</div>ou equvalentemente<div class="displaymath process-math">
+\begin{equation*}
+3x + 2\sqrt{5} y= 7
+\end{equation*}
+</div></p></li>
+</ul></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-17">Em seguida, encontre uma equação para a reta tangente à elipse em um ponto genárico <span class="process-math">\((x_0,y_0)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-18">Vamos repetir o processor do item anterior, mas com um ponto genárico <span class="process-math">\((x_0,y_0)\text{:}\)</span></p>
+<ul class="disc">
+<li id="li-14">
+<p id="p-19">Um bom primeiro passo aqui é esboçar a curva. Uma vez que esta é uma elipse, é bastante simples.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:57.8947368421053%;"><img src="images/ellipse.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:36.8421052631579%;"><img src="images/ellipseB.svg" role="img" class="contained"></div>
+</div></div>
+</li>
+<li id="li-15"><p id="p-derived-li-15">Observe que existem dois pontos na elipse — os pontos extremos direito e esquerdo <span class="process-math">\((x_0,y_0)=\pm\big(\sqrt{\frac{7}{3}},0\big)\)</span> — em que a reta tangente é vertical. Nesses dois casos, a reta tangente é apenas <span class="process-math">\(x=x_0\text{.}\)</span></p></li>
+<li id="li-16">
+<p id="p-20">Já que isso é quadrático para <span class="process-math">\(y\text{,}\)</span> poderíamos resolvê-lo explicitamente para obter</p>
+<div class="displaymath process-math" id="md-12">
+\begin{align*}
+y \amp= \pm \sqrt{\frac{7-3x^2}{5}}
+\end{align*}
+</div>
+<p class="continuation">e escolha o ramo positivo ou negativo conforme apropriado. Então poderíamos diferenciar para encontrar a inclinação e juntar as coisas para obter a reta tangente.</p>
+<p id="p-21">Mas mesmo neste caso relativamente fácil, é computacionalmente mais limpo e, portanto, menos vulnerável a erros mecânicos, usar a derivação implícita. Então é isso que vamos fazer.</p>
+</li>
+<li id="li-17"><p id="p-derived-li-17">Agora podemos novamente “fingir” que resolvemos a equação da elipse para <span class="process-math">\(y=f(x)\)</span> perto de <span class="process-math">\((x_0,y_0)\text{,}\)</span> mas não vamos fazer isso. Em vez disso (como fizemos em<a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.2: Outra reta tangente por derivação implicita">Exemplo 1.2</a>) apenas lembre-se que quando diferenciamos <span class="process-math">\(y\)</span> é realmente uma função de <span class="process-math">\(x\text{.}\)</span> Então a partir de<div class="displaymath process-math" id="md-13">
+\begin{align*}
+3x^2 + 5y^2 \amp=7 \amp \ct{Derivando em ambos os lados}\\
+6x + 5\cdot 2y \cdot y' \amp= 0
+\end{align*}
+</div>Podemos então resolver isso para <span class="process-math">\(y'\text{:}\)</span><div class="displaymath process-math" id="md-14">
+\begin{align*}
+y' \amp= -\frac{3x}{5y}
+\end{align*}
+</div>onde <span class="process-math">\(y'\)</span> e <span class="process-math">\(y\)</span> são ambas funções de <span class="process-math">\(x\text{.}\)</span></p></li>
+<li id="li-18"><p id="p-derived-li-18">Portanto, no ponto <span class="process-math">\((x_0,y_0)\)</span> temos<div class="displaymath process-math" id="md-15">
+\begin{align*}
+\left. y' \right|_{(x_0,y_0)} \amp= -\frac{3x_0}{5y_0}
+\end{align*}
+</div>Esta é a inclinação da linha tangente em <span class="process-math">\((x_0,y_0)\)</span> e então sua equação é<div class="displaymath process-math" id="md-16">
+\begin{align*}
+y \amp=y_0+y' \cdot (x-x_0)\\
+\amp= y_0 -\frac{3x_0}{5y_0}(x-x_0)\\
+\end{align*}
+<p class="intertext">Podemos simplificar isso multiplicando por <span class="process-math">\(5y_0\)</span> para obter</p>
+\begin{align*}
+5y_0 y \amp= 5y_0^2-3x_0x +3x_0^2\\
+\end{align*}
+<p class="intertext">Podemos simplificar um pouco mais movendo todos os termos que contêm <span class="process-math">\(x\)</span> ou <span class="process-math">\(y\)</span> para o lado esquerdo e todo o resto para o direito:</p>
+\begin{align*}
+3x_0x+5y_0y \amp=3x_0^2+5y_0^2\\
+\end{align*}
+<p class="intertext">Mas há mais uma coisa que podemos fazer, nossa equação original é <span class="process-math">\(3x^2+5y^2=7\)</span> para todos os pontos da curva, então sabemos que <span class="process-math">\(3x_0^2
++5a_0^2=7\text{.}\)</span> Isso simplifica o lado direito.</p>
+\begin{align*}
+3x_0x+5y_0y \amp=7
+\end{align*}
+</div></p></li>
+<li id="li-19"><p id="p-derived-li-19">Ao derivar esta fórmula para a reta tangente em <span class="process-math">\((x_0,y_0)\)</span> nós assumimos que <span class="process-math">\(y_0\ne 0\text{.}\)</span> Mas, na verdade, a resposta final também funciona quando <span class="process-math">\(y_0=0\)</span> (que significa <span class="process-math">\(x_0=\pm\sqrt{\frac{7}{3} }\)</span>), para que a reta tangente seja <span class="process-math">\(x=x_0\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Também podemos verificar que nossa resposta para <span class="process-math">\((x_0,y_0)\)</span> se reduz à nossa resposta para <span class="process-math">\(x_0=1\text{.}\)</span></p>
+<ul class="disc">
+<li id="li-20"><p id="p-derived-li-20">Quando <span class="process-math">\(x_0=1\)</span> encontramos <span class="process-math">\(y_0=2/\sqrt{5}\text{.}\)</span></p></li>
+<li id="li-21"><p id="p-derived-li-21">Conectando isso em nossa resposta acima dá<div class="displaymath process-math" id="md-17">
+\begin{align*}
+3x_0x+5y_0y \amp=7 \amp\ct{Substituindo em $(x_0,y_0)=(1,2/\sqrt{5})$}:\\
+3 x + 5 \frac{2}{\sqrt{5}} y \amp= 7 \amp \ct{Simplificando}\\
+3x + 2\sqrt{5} y \amp=7
+\end{align*}
+</div>como solicitado.</p></li>
+</ul>
+</div></div>
+</div></article></article></div>
+<article class="example example-like" id="ex-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mais um exemplo.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-3"><article class="example example-like"><p id="p-22">Em quais pontos a curva <span class="process-math">\(x^2-xy+y^2=3\)</span> cruza o eixo <span class="process-math">\(x\)</span> ? As retas tangentes à curva nesses pontos são paralelas?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-23">Primeiro vamos encontrar os pontos pontos em que a curva cruza o eixo <span class="process-math">\(x\)</span> e então precisamos examinar as retas tangentes.</p>
+<ul class="disc">
+<li id="li-22"><p id="p-derived-li-22">Encontrar onde a curva cruza o eixo <span class="process-math">\(x\)</span> é simples. Isso acontece quando <span class="process-math">\(y=0\text{.}\)</span> Isso significa que <span class="process-math">\(x\)</span> satisfaz<div class="displaymath process-math" id="md-18">
+\begin{align*}
+x^2-x\cdot 0+0^2\amp=3 \amp \text{ so $x = \pm\sqrt{3}$}.
+\end{align*}
+</div>Então a curva cruza o eixo <span class="process-math">\(x\)</span> – em dois pontos <span class="process-math">\(\big(\pm\sqrt{3}\,,\,0\big)\text{.}\)</span></p></li>
+<li id="li-23"><p id="p-derived-li-23">Agora precisamos encontrar as retas tangentes nesses pontos. Mas na verdade não precisamos das linhas, apenas de suas inclinações. Novamente podemos fingir que perto de um desses pontos a curva é <span class="process-math">\(y=f(x)\text{.}\)</span> Aplicando <span class="process-math">\(\dfrac{\dd }{\dd x}\)</span> a ambos os lados de <span class="process-math">\(x^2-xf(x)+f(x)^2=3\)</span> produz<div class="displaymath process-math" id="md-19">
+\begin{align*}
+2x-f(x)-xf'(x)+2f(x)f'(x)\amp=0
+\end{align*}
+</div>etc etc.</p></li>
+<li id="li-24"><p id="p-derived-li-24">Mas vamos parar de “fingir”. Apenas certifique-se de lembrar que <span class="process-math">\(y\)</span> é uma função de <span class="process-math">\(x\)</span> quando derivamos:<div class="displaymath process-math" id="md-20">
+\begin{align*}
+x^2-xy+y^2 \amp= 3 \amp \ct{comece com a curva e derive}\\
+2x - xy' -y + 2yy' \amp=0 \amp
+\end{align*}
+</div>Agora substitua no primeiro ponto, <span class="process-math">\(x=+\sqrt{3}, y=0\text{:}\)</span><div class="displaymath process-math" id="md-21">
+\begin{align*}
+2\sqrt{3} - \sqrt{3}y' + 0 \amp=0\\
+y' \amp= 2
+\end{align*}
+</div>E agora faça o segundo ponto <span class="process-math">\(x=-\sqrt{3}, y=0\text{:}\)</span><div class="displaymath process-math" id="md-22">
+\begin{align*}
+-2\sqrt{3} + \sqrt{3}y' + 0 \amp=0\\
+y' \amp= 2
+\end{align*}
+</div>Assim, a inclinação é a mesma em <span class="process-math">\(x=\sqrt{3}\)</span> e <span class="process-math">\(x=-\sqrt{3}\)</span> e as retas tangentes são paralelas.</p></li>
+</ul>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/implicit_eg1.svg" role="img" class="contained"></div></div></div>
+</div></div>
+</div></article></div>
+<p id="p-24">Mais um exmplo sobre curvas.</p>
+<article class="example example-like" id="eg_DIFFimpldiffB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_DIFFimpldiffB"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">A curva astróide.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_DIFFimpldiffB"><article class="example example-like"><p id="p-25">Seja <span class="process-math">\((x_0,y_0)\)</span> ser um ponto na astroide</p>
+<div class="displaymath process-math" id="md-23">
+\begin{gather*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}}=1.
+\end{gather*}
+</div>
+<p class="continuation">Encontre uma equação para a reta tangente ao astróide em <span class="process-math">\((x_0,y_0)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<ul id="p-26" class="disc">
+<li id="li-25"><p id="p-derived-li-25">Como foi o caso nos exemplos acima, podemos reescrever a equação do astroide próximo a <span class="process-math">\((x_0,y_0)\)</span> na forma <span class="process-math">\(y=f(x)\text{,}\)</span> com um explícito <span class="process-math">\(f(x)\text{,}\)</span> resolvendo a equação <span class="process-math">\(x^{\frac{2}{3}}+y^{\frac{2}{3}}=1\)</span> . Mas, novamente, é computacionalmente mais simples e, portanto, menos vulnerável a erros mecânicos, usar a derivação implícita. Então é isso que vamos fazer.</p></li>
+<li id="li-26"><p id="p-derived-li-26">Primeiro, já que <span class="process-math">\((x_0,y_0)\)</span> encontra-se na curva, satisfaz<div class="displaymath process-math" id="md-24">
+\begin{gather*}
+x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1.
+\end{gather*}
+</div></p></li>
+<li id="li-27"><p id="p-derived-li-27">Agora, sem fingir que <span class="process-math">\(y=f(x)\text{,}\)</span> desta vez — apenas certifique-se de lembrar quando derivamos que <span class="process-math">\(y\)</span> muda com <span class="process-math">\(x\text{.}\)</span><div class="displaymath process-math" id="md-25">
+\begin{align*}
+x^{\frac{2}{3}}+y^{\frac{2}{3}} \amp=1\\
+\end{align*}
+<p class="intertext">Comece com a curva e, em seguida, derive</p>
+\begin{align*}
+\frac{2}{3}x^{-\frac{1}{3}} + \frac{2}{3} y^{-\frac{1}{3}} y' \amp=0
+\end{align*}
+</div></p></li>
+<li id="li-28"><p id="p-derived-li-28">Observe a derivada de <span class="process-math">\(x^{\frac{2}{3}}\text{,}\)</span> a saber <span class="process-math">\(\frac{2}{3}x^{-\frac{1}{3}}\text{,}\)</span> e a derivada de <span class="process-math">\(y^{\frac{2}{3}}\text{,}\)</span> a saber  <span class="process-math">\(\frac{2}{3} y^{-\frac{1}{3}}y'\text{,}\)</span> são definidos apenas quando <span class="process-math">\(x\ne 0\)</span> e <span class="process-math">\(y\ne 0\text{.}\)</span> Estamos interessados no caso em que <span class="process-math">\(x=x_0\)</span> e <span class="process-math">\(y=y_0\text{.}\)</span> Então é melhor supormos que <span class="process-math">\(x_0\ne 0\)</span> e <span class="process-math">\(y_0\ne 0\text{.}\)</span> Provavelmente algo estranho acontece quando <span class="process-math">\(x_0=0\)</span> ou <span class="process-math">\(y_0=0\text{.}\)</span> Voltaremos a isso em breve.</p></li>
+<li id="li-29"><p id="p-derived-li-29">Para continuar, definimos <span class="process-math">\(x=x_0, y=y_0\)</span> na equação acima e resolvemos para <span class="process-math">\(y'\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+\frac{2}{3}x_0^{-\frac{1}{3}}
++\frac{2}{3} y_0^{-\frac{1}{3}} y'(x)=0
+\implies y'(x_0)= -\left( \frac{y_0}{x_0} \right)^{\frac{1}{3}}
+\end{equation*}
+</div>Esta é a inclinação da reta tangente e sua equação é<div class="displaymath process-math">
+\begin{equation*}
+y=y_0+f'(x_0)(x-x_0) = y_0
+-\left(\frac{y_0}{x_0}\right)^{\frac{1}{3}}(x-x_0)
+\end{equation*}
+</div></p></li>
+</ul>
+<p id="p-27">Agora vamos pensar um pouco sobre qual é a inclinação da linha tangente de <span class="process-math">\(-\root{3}\of {\frac{y_0}{x_0}}\)</span> nos fala sobre o astroide.</p>
+<ul class="disc">
+<li id="li-30"><p id="p-derived-li-30">Em primeiro lugar, como observação preliminar, observe que, uma vez que <span class="process-math">\(x_0^{\frac{2}{3}}\ge0\)</span> e <span class="process-math">\(y_0^{\frac{2}{3}}\ge0\)</span> a equação <span class="process-math">\(x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1\)</span> da astróide força <span class="process-math">\(0\le x_0^{\frac{2}{3}},y_0^{\frac{2}{3}} \le 1\)</span> e portanto <span class="process-math">\(-1\le x_0,y_0\le 1\text{.}\)</span></p></li>
+<li id="li-31"><p id="p-derived-li-31">Para todo <span class="process-math">\(x_0,y_0 \gt 0\)</span> a inclinaçãoé  <span class="process-math">\(-\root{3}\of {\frac{y_0}{x_0}}
+\lt 0\text{.}\)</span> Portanto, em todos os pontos do asteróide que estão no primeiro quadrante, a reta tangente tem inclinação negativa, ou seja, está “inclinando-se para trás”.</p></li>
+<li id="li-32"><p id="p-derived-li-32">Como <span class="process-math">\(x_0\)</span> tende a zero, <span class="process-math">\(y_0\)</span> tende a <span class="process-math">\(\pm 1\)</span> e a inclinação da reta tangente tende a infinito. Portanto, nos pontos do astroide próximos a <span class="process-math">\((0,\pm 1)\text{,}\)</span> a reta tangente é quase vertical.</p></li>
+<li id="li-33"><p id="p-derived-li-33">Como <span class="process-math">\(y_0\)</span> tende a zero, <span class="process-math">\(x_0\)</span> tende a <span class="process-math">\(\pm 1\)</span> e a inclinação da linha tangente tende a zero. Portanto, em pontos do astroide próximos a <span class="process-math">\((\pm
+1,0)\text{,}\)</span> a reta tangente é quase horizontal.</p></li>
+</ul>
+<p class="continuation">Aqui está uma figura que ilustra tudo isso.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="images/astroid.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="images/astroidB.svg" role="img" class="contained"></div>
+</div></div>
+<p id="p-28">Com certeza, como especulamos anteriormente, algo estranho acontece com o astroide quando <span class="process-math">\(x_0\)</span> ou <span class="process-math">\(y_0\)</span> é zero. O astroide é têm “bicos” e não tem uma tangente ali.</p>
+</div></div>
+</div></article></div></section><section class="exercises" id="exercises-implicita"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.2</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Esse tipo de sorte raramente acontece no “mundo real”. Mas isso acontece com muita frequência em livros didáticos, conjuntos de problemas e testes.</div></div>
+</div></main>
+</div>
+</body>
+</html>

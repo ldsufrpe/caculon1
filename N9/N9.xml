@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- To process this file do                                                                      -->
+<!--                                                                                              -->
+<!-- (1) LaTeX/PDF:                                                                               -->
+<!--     xsltproc -o minimal.tex mathbook/xsl/pretext-latex.xsl calc-integral.xml                       -->
+<!--     pdflatex minimal.tex                                                                     -->
+<!--     xelatex minimal.tex                                                                      -->
+<!--                                                                                              -->
+<!-- (2) HTML:                                                                                    -->
+<!--     xsltproc mathbook/xsl/pretext-html.xsl calc-integral.xml                                       -->
+<!--     <browser>  minimal.html                                                                  -->
+<!--                                                                                              -->
+<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-smc.xsl minimal.xml           -->
+<!--     <CoCalc> minimal.sagews                                                                  -->
+<!--                                                                                              -->
+<!-- (4) Sage doctesting                                                                          -->
+<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
+<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
+<!--     <read further instructions in> minimal.py                                                -->
+
+<!--suppress GrazieInspection -->
+<pretext xml:lang="pt-BR">
+
+    <docinfo>
+        <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png"/>
+
+
+        <macros>
+            \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+            \newcommand{ctm}[1]{\color{gray}{#1}}
+
+            \newcommand{\doubler}[1]{2#1}
+            \newcommand{\dd}{\mathrm{d}}
+            \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+            \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+            \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+            \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+            \DeclareMathOperator{\arcsec}{arc \,sec}
+            \DeclareMathOperator{\sin}{sen}
+            \DeclareMathOperator{\arcsin}{arc \,sen}
+            \DeclareMathOperator{\arccos}{arc \,cos}
+            \DeclareMathOperator{\csc}{cossec}
+            \DeclareMathOperator{\tan}{tg}
+            \DeclareMathOperator{\arctan}{arc\,tg}
+            \DeclareMathOperator{\cot}{cotg}
+        </macros>
+
+        <latex-image-preamble>
+            \usepackage{tikz}
+            <!--  \usepackage{pgfplots}               % loads tikz package-->
+            \usepackage{smartdiagram} % for a circular diagram
+            \pgfplotsset{axis x line = middle,
+            axis y line = middle}
+            \usetikzlibrary{backgrounds}
+            \usetikzlibrary{arrows,matrix}
+            \usetikzlibrary{positioning} % for Dave R's worksheet
+            \usepackage{circuitikz} % for Virgil P's worksheet
+
+        </latex-image-preamble>
+    </docinfo>
+
+    <article xml:id="calc-limite-derivada">
+        <title>Derivada: N9</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Leon Silva</personname>
+                    <department>Departamento de Matemática</department>
+                    <institution>Universidade Federal Rural de Pernambuco</institution>
+                </author>
+
+
+                <date>
+                    <today/>
+                </date>
+            </titlepage>
+
+            <abstract>
+                <p>Aqui faremos um resumo das atividades da semana 10.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+            <p>Aqui uma introdução será necessária</p>
+        </introduction>
+        <section>
+            <title>Derivação implícita</title>
+
+
+            <objectives>
+                <title>Estrutura</title>
+
+                <ol>
+                    <li>
+                        <p>
+                            implicita
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            implicita 2
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Implicite
+                        </p>
+                    </li>
+
+                </ol>
+
+            </objectives>
+
+            <introduction>
+                <p>
+                    Texto
+                </p>
+            </introduction>
+
+            <subsection>
+                <title>Derivação Implicita</title>
+
+                <p>Diferenciação implícita é uma maneira simples usada para
+                    calcular derivadas de funções ou
+                    <ul>
+                        <li>quando não se conhece uma fórmula explícita para a função, mas
+                            conhece uma equação que a função obedece ou
+                        </li>
+                        <li>mesmo quando temos uma fórmula explícita, mas complicada, para a
+                            função, e a mesma obedece a uma equação simples.
+                        </li>
+                    </ul>
+                    Para realizar essa tarefa primeiro derivamos de ambos os lados da equação e
+                    então isolamos a derivada desejada. Na verdade, já fizemos isso, sem usar o nome <q>diferenciação
+                        implícita</q>, quando encontramos a derivada de <m>\log x</m> anteriormente. No ocasião,
+                    sabíamos
+                    que a função
+                    <m>f(x)=\log x</m>
+                    satisfaz a equação <m>e^{f(x)}=x</m> para todo <m>x</m>. Ou seja, as funções <m>e^{f(x)}</m> e
+                    <m>x</m>
+                    são de fato a mesma função e, portanto, têm a mesma derivada. Então obtemos
+                    <md>
+                        <mrow>
+                            \dfrac{\dd }{\dd x}\left[e^{f(x)}\right] = \dfrac{\dd }{\dd x}[x] = 1
+                        </mrow>
+                    </md>
+                    Em seguida, usamos a regra da cadeia para obter <m>\dfrac{\dd }{\dd
+                        x}\left[e^{f(x)}\right]=e^{f(x)}f'(x)</m>,
+                    que nos disse que <m>f'(x)</m> obedece à equação
+                    <md>
+                        <mrow>
+                            e^{f(x)}f'(x) \amp=1 \amp \text{e agora podemos obter $f'(x)$}
+                        </mrow>
+                        <mrow>
+                            f'(x) \amp= e^{-f(x)} = e^{-\log x} = \frac{1}{x}.
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>A maneira típica de se acostumar com a diferenciação implícita é praticar com problemas envolvendo
+                    retas tangentes às curvas. Então, a seguir estão alguns exemplos de encontrar as equações de retas
+                    tangentes
+                    a curvas.
+                </p>
+
+                <example xml:id="ex-1">
+                    <title>Encontrando uma reta tangente usando diferenciação implícita</title>
+                    <statement>
+                        <p>
+                            Encontre a equação da reta tangente a <m>y=y^3+xy+x^3</m> em <m>x=1</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>Este é um exemplo usual, mas um pouco complicado pelo fato de a curva ser dada por
+                            uma equação cúbica
+                            <mdash/>
+                            o que significa que não podemos resolver diretamente para <m>y</m> em
+                            termos de <m>x</m> ou vice-versa. Então, realmente precisamos da derivação implícita.
+                            <ul>
+                                <li>Primeiro observe que quando <m>x=1</m> a equação, <m>y=y^3+xy+x^3</m>, da curva
+                                    simplifica para <m>y=y^3+y+1</m> ou <m>y^3=-1</m>, que podemos resolver
+                                    <fn>
+                                        Esse tipo de sorte raramente acontece no <q>mundo real</q>. Mas isso acontece
+                                        com muita frequência em livros didáticos, conjuntos de problemas e testes.
+                                    </fn>
+                                    : <m>y=-1</m>.
+                                    Portanto, sabemos que a curva passa por <m>(1,-1)</m> quando <m>x=1</m>.
+                                </li>
+                                <li>Agora, para encontrar a inclinação da reta tangente em <m>(1,-1)</m>, finja que
+                                    nossa curva é <m>y=f(x)</m> para que <m>f(x)</m> obedece
+                                    <md>
+                                        <mrow>
+                                            f(x) \amp= f(x)^3 + x f(x) + x^3
+                                        </mrow>
+                                    </md>
+                                    para todos os <m>x</m>. Derivando ambos os lados fornece
+                                    <md>
+                                        <mrow>
+                                            f'(x)=3f(x)^2f'(x)+f(x)+xf'(x)+3x^2
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>Neste ponto podemos isolar para <m>f'(x)</m> e escrevê-lo em termos de
+                                    <m>f(x)</m>
+                                    e <m>x</m>, mas como só queremos respostas quando <m>x=1</m>, vamos substituir
+                                    <m>x=1</m>
+                                    e <m>f(1)=-1</m> (já que a curva passa por <m>(1,-1)</m>).
+                                </li>
+                                <li>Substituindo <m>x=1,\ f(1)=-1</m> nos dá
+                                    <md>
+                                        <mrow>
+                                            f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ and so } f'(1)=-\frac{2}{3}
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>A equação da reta tangente é
+                                    <md>
+                                        <mrow>
+                                            y=y_0+f'(x_0)(x-x_0)=-1-\frac{2}{3}(x-1)
+                                            =-\frac{2}{3}x-\frac{1}{3}
+                                        </mrow>
+                                    </md>
+                                </li>
+                            </ul>
+                            Podemos reescrever a equação da reta tangente como <m>2x+3y=-1</m>.
+                        </p>
+                    </solution>
+                </example>
+
+                <p>No<xref ref="ex-1"/>, substituímos <m>y</m> por <m>f(x)</m> no meio do cálculo. Na verdade, não temos
+                    que fazer isso. Quando estamos escrevendo nossa solução, podemos lembrar que <m>y</m> é uma função
+                    de <m>x</m>. Então podemos começar com
+                    <md>
+                        <mrow>
+                            y \amp=y^3+xy+x^3 \amp
+                        </mrow>
+                        <intertext>e derivar lembrando que
+                            <m>y\equiv
+                                y(x)
+                            </m>
+                        </intertext>
+                        <mrow>
+                            y^{\prime} \amp= 3 y^2 y' + xy' + y + 3x^2
+                        </mrow>
+                        <intertext>E agora substitua <m>x=1, y=-1</m> para obter
+                        </intertext>
+                        <mrow>
+                            y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{and so}
+                        </mrow>
+                        <mrow>
+                            y'(1) \amp= -\frac{2}{3}
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>
+                    <p>A próxima é ao mesmo tempo um pouco mais fácil (porque é quadrática) e um pouco mais difícil
+                        (porque nos pedem a tangente em um ponto genérico da curva, não em um específico).
+                    </p>
+                </p>
+
+                <example xml:id="ex-2">
+                    <title>Outra reta tangente por derivação implicita</title>
+
+                    <p>
+                        Seja <m>(x_0,y_0)</m> um ponto da elípse <m>3x^2+5y^2=7</m>.
+                    </p>
+
+
+                    <task>
+                        <statement>
+                            <p>
+                                Encontre a equação da reta tangente para <m>x_0=1</m> e <m>y_0</m> positivo.
+
+                            </p>
+
+                        </statement>
+
+                        <solution>
+                            <p>
+                                <ul>
+                                    <li>Quando <m>x=1</m> a equação dada satisfaz
+                                        <md>
+                                            <mrow>
+                                                3 + 5y^2 \amp= 7
+                                            </mrow>
+                                            <mrow>
+                                                5y^2 \amp= 4
+                                            </mrow>
+                                            <mrow>
+                                                y \amp= \pm \frac{2}{\sqrt{5}}.
+                                            </mrow>
+                                        </md>
+                                        Estamos interessados apenas  <m>y</m> no positivo, assim nosso ponto da curva é
+                                        <m>(1,2/\sqrt{5})</m>.
+                                    </li>
+                                    <li>Agora usamos a derivação implícita para encontrar <m>\dfrac{\dd y}{\dd x}</m> neste
+                                        ponto. Primeiro simulamos que resolvemos a curva explicitamente, para algum
+                                        intervalo
+                                        de <m>x</m>, com <m>y=f(x)</m>. A equação fica
+                                        <md>
+                                            <mrow>
+                                                3x^2 + 5f(x)^2 \amp= 7 \amp \ct{Derivando ambos os lados}
+                                            </mrow>
+                                            <mrow>
+                                                6x + 10 f(x) f'(x) \amp= 0
+                                            </mrow>
+                                            <mrow>
+                                                f'(x) \amp= - \frac{3x}{5f(x)}
+                                            </mrow>
+                                        </md>
+                                    </li>
+                                    <li>Quando <m>x=1, y= 2/\sqrt{5}</m> isso se torna
+                                        <md>
+                                            <mrow>
+                                                f'(1) \amp= - \frac{3}{5 \cdot 2/\sqrt{5}} = - \frac{3}{2\sqrt{5}}
+                                            </mrow>
+                                        </md>
+                                        Então a reta tangente passa por <m>(1,2/\sqrt{5})</m> e tem inclinação <m>-
+                                            \frac{3}{2\sqrt{5}}</m>. Portanto, a reta tangente tem equação
+                                        <md>
+                                            <mrow>
+                                                y \amp=y_0+f'(x_0)(x-x_0)
+                                            </mrow>
+                                            <mrow>
+                                                \amp= \frac{2}{\sqrt{5}} - \frac{3}{2\sqrt{5}} (x-1)
+                                            </mrow>
+                                            <mrow>
+                                                \amp= \frac{7 - 3x}{2\sqrt{5}}
+                                            </mrow>
+
+                                        </md>
+                                        ou equvalentemente
+
+                                        <me>
+                                            3x + 2\sqrt{5} y= 7
+                                        </me>
+                                    </li>
+                                </ul>
+                            </p>
+
+                        </solution>
+
+                    </task>
+
+
+                    <task>
+                        <statement>
+                            <p>
+                                Em seguida, encontre uma equação para a reta tangente à elipse em um ponto genárico
+                                <m>(x_0,y_0)</m>.
+                            </p>
+                        </statement>
+                        <solution>
+                            <p>Vamos repetir o processor do item anterior, mas com um ponto genárico
+                                <m>(x_0,y_0)</m>:
+                                <ul>
+                                    <li>
+                                        <p>Um bom primeiro passo aqui é esboçar a curva. Uma vez que esta é uma elipse,
+                                            é bastante simples.
+                                        </p>
+                                        <sidebyside widths="55% 35%">
+                                            <image source="images/ellipse"/>
+                                            <image source="images/ellipseB"/>
+                                        </sidebyside>
+                                    </li>
+                                    <li>Observe que existem dois pontos na elipse
+                                        <mdash/>
+                                        os pontos extremos direito e esquerdo
+                                        <m>(x_0,y_0)=\pm\big(\sqrt{\frac{7}{3}},0\big)</m>
+                                        <mdash/>
+                                        em que a reta tangente é vertical. Nesses dois casos, a reta tangente é
+                                        apenas <m>x=x_0</m>.
+                                    </li>
+                                    <li>
+                                        <p>Já que isso é quadrático para <m>y</m>, poderíamos resolvê-lo explicitamente
+                                            para obter
+                                            <md>
+                                                <mrow>
+                                                    y \amp= \pm \sqrt{\frac{7-3x^2}{5}}
+                                                </mrow>
+                                            </md>
+                                            e escolha o ramo positivo ou negativo conforme apropriado. Então poderíamos
+                                            diferenciar para encontrar a inclinação e juntar as coisas para obter a reta
+                                            tangente.
+                                        </p>
+
+                                        <p>Mas mesmo neste caso relativamente fácil, é computacionalmente mais limpo e,
+                                            portanto, menos vulnerável a erros mecânicos, usar a derivação
+                                            implícita. Então é isso que vamos fazer.
+                                        </p>
+                                    </li>
+                                    <li>Agora podemos novamente <q>fingir</q> que resolvemos a equação da elipse para <m>
+                                        y=f(x)
+                                    </m> perto de <m>(x_0,y_0)</m>, mas não vamos fazer isso. Em vez disso (como fizemos
+                                        em<xref ref="ex-2"/>) apenas lembre-se que quando diferenciamos <m>y</m> é
+                                        realmente uma função de <m>x</m>. Então a partir de
+                                        <md>
+                                            <mrow>
+                                                3x^2 + 5y^2 \amp=7 \amp \ct{Derivando em ambos os lados}
+                                            </mrow>
+                                            <mrow>
+                                                6x + 5\cdot 2y \cdot y' \amp= 0
+                                            </mrow>
+                                        </md>
+                                        Podemos então resolver isso para <m>y'</m>:
+                                        <md>
+                                            <mrow>
+                                                y' \amp= -\frac{3x}{5y}
+                                            </mrow>
+                                        </md>
+                                        onde <m>y'</m> e <m>y</m> são ambas funções de <m>x</m>.
+                                    </li>
+                                    <li>Portanto, no ponto <m>(x_0,y_0)</m> temos
+                                        <md>
+                                            <mrow>
+                                                \left. y' \right|_{(x_0,y_0)} \amp= -\frac{3x_0}{5y_0}
+                                            </mrow>
+                                        </md>
+                                        Esta é a inclinação da linha tangente em <m>(x_0,y_0)</m> e então sua equação é
+                                        <md>
+                                            <mrow>
+                                                y \amp=y_0+y' \cdot (x-x_0)
+                                            </mrow>
+                                            <mrow>
+                                                \amp= y_0 -\frac{3x_0}{5y_0}(x-x_0)
+                                            </mrow>
+                                            <intertext>Podemos simplificar isso multiplicando por <m>5y_0</m> para obter
+                                            </intertext>
+                                            <mrow>
+                                                5y_0 y \amp= 5y_0^2-3x_0x +3x_0^2
+                                            </mrow>
+                                            <intertext>Podemos simplificar um pouco mais movendo todos os termos que
+                                                contêm
+                                                <m>x</m>
+                                                ou <m>y</m> para o lado esquerdo e todo o resto para o direito:
+                                            </intertext>
+                                            <mrow>
+                                                3x_0x+5y_0y \amp=3x_0^2+5y_0^2
+                                            </mrow>
+                                            <intertext>Mas há mais uma coisa que podemos fazer, nossa equação original é <m>
+                                                3x^2+5y^2=7
+                                            </m> para todos os pontos da curva, então sabemos que <m>3x_0^2
+                                                +5a_0^2=7</m>. Isso simplifica o lado direito.
+                                            </intertext>
+                                            <mrow>
+                                                3x_0x+5y_0y \amp=7
+                                            </mrow>
+                                        </md>
+                                    </li>
+                                    <li>Ao derivar esta fórmula para a reta tangente em <m>(x_0,y_0)</m> nós assumimos
+                                        que
+                                        <m>y_0\ne 0</m>. Mas, na verdade, a resposta final também funciona quando <m>
+                                            y_0=0
+                                        </m> (que significa
+                                        <m>x_0=\pm\sqrt{\frac{7}{3} }</m>), para que a reta tangente seja <m>x=x_0</m>.
+                                    </li>
+                                </ul>
+                                Também podemos verificar que nossa resposta para <m>(x_0,y_0)</m> se reduz à nossa
+                                resposta para
+                                <m>x_0=1</m>.
+                                <ul>
+                                    <li>Quando <m>x_0=1</m> encontramos <m>y_0=2/\sqrt{5}</m>.
+                                    </li>
+                                    <li>Conectando isso em nossa resposta acima dá
+                                        <md>
+                                            <mrow>
+                                                3x_0x+5y_0y \amp=7 \amp\ct{Substituindo em $(x_0,y_0)=(1,2/\sqrt{5})$}:
+                                            </mrow>
+                                            <mrow>
+                                                3 x + 5 \frac{2}{\sqrt{5}} y \amp= 7 \amp \ct{Simplificando}
+                                            </mrow>
+                                            <mrow>
+                                                3x + 2\sqrt{5} y \amp=7
+                                            </mrow>
+                                        </md>
+                                        como solicitado.
+                                    </li>
+                                </ul>
+                            </p>
+
+                        </solution>
+                    </task>
+
+                </example>
+
+                <example xml:id="ex-3">
+                    <title>Mais um exemplo</title>
+                    <statement>
+                        <p>
+                            Em quais pontos a curva <m>x^2-xy+y^2=3</m> cruza o eixo
+                            <m>x</m>
+                            ? As retas tangentes à curva nesses pontos são paralelas?
+                        </p>
+
+                    </statement>
+
+                    <solution>
+                        <p>Primeiro vamos encontrar os pontos pontos em que a curva cruza o eixo <m>x</m> e então
+                            precisamos examinar as retas tangentes.
+                            <ul>
+                                <li>Encontrar onde a curva cruza o eixo <m>x</m> é simples. Isso acontece quando <m>
+                                    y=0</m>.
+                                    Isso significa que <m>x</m> satisfaz
+                                    <md>
+                                        <mrow>
+                                            x^2-x\cdot 0+0^2\amp=3 \amp \text{ so $x = \pm\sqrt{3}$}.
+                                        </mrow>
+                                    </md>
+                                    Então a curva cruza o eixo
+                                    <m>x</m>
+                                    <ndash/>
+                                    em dois pontos <m>\big(\pm\sqrt{3}\,,\,0\big)</m>.
+                                </li>
+                                <li>Agora precisamos encontrar as retas tangentes nesses pontos. Mas na verdade não
+                                    precisamos das linhas, apenas de suas inclinações. Novamente podemos fingir que
+                                    perto de um desses pontos a curva é <m>y=f(x)</m>. Aplicando <m>\dfrac{\dd }{\dd x}
+                                    </m> a ambos os lados de
+                                    <m>x^2-xf(x)+f(x)^2=3</m>
+                                    produz
+                                    <md>
+                                        <mrow>
+                                            2x-f(x)-xf'(x)+2f(x)f'(x)\amp=0
+                                        </mrow>
+                                    </md>
+                                    etc etc.
+                                </li>
+                                <li>Mas vamos parar de <q>fingir</q>. Apenas certifique-se de lembrar que <m>y</m> é uma
+                                    função de <m>x</m> quando derivamos:
+                                    <md>
+                                        <mrow>
+                                            x^2-xy+y^2 \amp= 3 \amp \ct{comece com a curva e derive}
+                                        </mrow>
+                                        <mrow>
+                                            2x - xy' -y + 2yy' \amp=0 \amp
+                                        </mrow>
+                                    </md>
+                                    Agora substitua no primeiro ponto, <m>x=+\sqrt{3}, y=0</m>:
+                                    <md>
+                                        <mrow>
+                                            2\sqrt{3} - \sqrt{3}y' + 0 \amp=0
+                                        </mrow>
+                                        <mrow>
+                                            y' \amp= 2
+                                        </mrow>
+                                    </md>
+                                    E agora faça o segundo ponto <m>x=-\sqrt{3}, y=0</m>:
+                                    <md>
+                                        <mrow>
+                                            -2\sqrt{3} + \sqrt{3}y' + 0 \amp=0
+                                        </mrow>
+                                        <mrow>
+                                            y' \amp= 2
+                                        </mrow>
+                                    </md>
+                                    Assim, a inclinação é a mesma em <m>x=\sqrt{3}</m> e <m>x=-\sqrt{3}</m> e as retas
+                                    tangentes são paralelas.
+                                </li>
+                            </ul>
+                        </p>
+                        <sidebyside width="50%">
+                            <image source="images/implicit_eg1"/>
+                        </sidebyside>
+                    </solution>
+                </example>
+
+
+                <p>Mais um exmplo sobre curvas.</p>
+
+                <example xml:id="eg_DIFFimpldiffB">
+                    <title>A curva astróide</title>
+
+                    <statement>
+                        <p>
+                            Seja <m>(x_0,y_0)</m> ser um ponto na astroide
+
+                            <md>
+                                <mrow>
+                                    x^{\frac{2}{3}}+y^{\frac{2}{3}}=1.
+                                </mrow>
+                            </md>
+                            Encontre uma equação para a reta tangente ao astróide em <m>(x_0,y_0)</m>.
+                        </p>
+
+                    </statement>
+                    <solution>
+
+                        <p>
+                            <ul>
+                                <li>Como foi o caso nos exemplos acima, podemos reescrever a equação do astroide próximo
+                                    a <m>(x_0,y_0)</m> na forma <m>y=f(x)</m>, com um explícito <m>f(x)</m>, resolvendo
+                                    a equação
+                                    <m>x^{\frac{2}{3}}+y^{\frac{2}{3}}=1
+                                    </m>
+                                    . Mas, novamente, é computacionalmente mais simples e, portanto, menos vulnerável a
+                                    erros
+                                    mecânicos, usar a derivação implícita. Então é isso que vamos fazer.
+                                </li>
+                                <li>Primeiro, já que <m>(x_0,y_0)</m> encontra-se na curva, satisfaz
+                                    <md>
+                                        <mrow>
+                                            x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1.
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>Agora, sem fingir que <m>y=f(x)</m>, desta vez
+                                    <mdash/>
+                                    apenas certifique-se de lembrar quando derivamos que <m>y</m> muda com <m>x</m>.
+                                    <md>
+                                        <mrow>
+                                            x^{\frac{2}{3}}+y^{\frac{2}{3}} \amp=1
+                                        </mrow>
+                                        <intertext>Comece com a curva e, em seguida, derive</intertext>
+                                        <mrow>
+                                            \frac{2}{3}x^{-\frac{1}{3}} + \frac{2}{3} y^{-\frac{1}{3}} y' \amp=0
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>Observe a derivada de <m>x^{\frac{2}{3}}</m>, a saber
+                                    <m>\frac{2}{3}x^{-\frac{1}{3}}</m>, e a derivada de
+                                    <m>y^{\frac{2}{3}}</m>, a saber  <m>\frac{2}{3} y^{-\frac{1}{3}}y'</m>,
+                                    são definidos apenas quando <m>x\ne 0</m> e <m>y\ne 0</m>. Estamos interessados no
+                                    caso
+                                    em que
+                                    <m>x=x_0</m>
+                                    e <m>y=y_0</m>. Então é melhor supormos que <m>x_0\ne 0</m> e <m>y_0\ne 0</m>.
+                                    Provavelmente algo estranho acontece quando <m>x_0=0</m> ou <m>y_0=0</m>. Voltaremos
+                                    a
+                                    isso em breve.
+                                </li>
+                                <li>Para continuar, definimos <m>x=x_0, y=y_0</m> na equação acima e resolvemos para <m>
+                                    y'</m>:
+                                    <me>
+                                        \frac{2}{3}x_0^{-\frac{1}{3}}
+                                        +\frac{2}{3} y_0^{-\frac{1}{3}} y'(x)=0
+                                        \implies y'(x_0)= -\left( \frac{y_0}{x_0} \right)^{\frac{1}{3}}
+                                    </me>
+                                    Esta é a inclinação da reta tangente e sua equação é
+                                    <me>
+                                        y=y_0+f'(x_0)(x-x_0) = y_0
+                                        -\left(\frac{y_0}{x_0}\right)^{\frac{1}{3}}(x-x_0)
+                                    </me>
+                                </li>
+                            </ul>
+                        </p>
+
+                        <p>Agora vamos pensar um pouco sobre qual é a inclinação da linha tangente de
+                            <m>-\root{3}\of {\frac{y_0}{x_0}}</m>
+                            nos fala sobre o astroide.
+                            <ul>
+                                <li>Em primeiro lugar, como observação preliminar, observe que, uma vez que
+                                    <m>x_0^{\frac{2}{3}}\ge0</m>
+                                    e <m>y_0^{\frac{2}{3}}\ge0</m> a equação
+                                    <m>x_0^{\frac{2}{3}}+y_0^{\frac{2}{3}}=1</m>
+                                    da astróide força
+                                    <m>0\le x_0^{\frac{2}{3}},y_0^{\frac{2}{3}} \le 1</m>
+                                    e portanto <m>-1\le x_0,y_0\le 1</m>.
+                                </li>
+                                <li>Para todo <m>x_0,y_0 \gt 0</m> a inclinaçãoé  <m>-\root{3}\of {\frac{y_0}{x_0}}
+                                    \lt 0</m>. Portanto, em todos os pontos do asteróide que estão no primeiro
+                                    quadrante, a reta tangente tem inclinação negativa, ou seja, está <q>inclinando-se
+                                        para trás</q>.
+                                </li>
+                                <li>Como <m>x_0</m> tende a zero, <m>y_0</m> tende a <m>\pm 1</m> e a inclinação da
+                                    reta tangente tende a infinito. Portanto, nos pontos do astroide próximos a <m>
+                                        (0,\pm 1)</m>, a reta tangente é quase vertical.
+                                </li>
+                                <li>Como <m>y_0</m> tende a zero, <m>x_0</m> tende a <m>\pm 1</m> e a inclinação da
+                                    linha tangente tende a zero. Portanto, em pontos do astroide próximos a <m>(\pm
+                                        1,0)</m>, a reta tangente é quase horizontal.
+                                </li>
+                            </ul>
+                            Aqui está uma figura que ilustra tudo isso.
+                        </p>
+
+                        <sidebyside widths="45% 45%">
+                            <image source="images/astroid"/>
+                            <image source="images/astroidB"/>
+                        </sidebyside>
+
+                        <p>Com certeza, como especulamos anteriormente, algo estranho acontece com o astroide quando <m>
+                            x_0
+                        </m> ou <m>y_0</m> é zero. O astroide é têm <q>bicos</q> e não tem uma tangente ali.
+                        </p>
+                    </solution>
+                </example>
+
+            </subsection>
+
+
+            <exercises xml:id="exercises-implicita">
+                <exercise>Escrever aqui
+                </exercise>
+            </exercises>
+
+        </section>
+        <references xml:id="references-backmatter">
+            <title>Referências</title>
+            <biblio type="raw" xml:id="biblio-01">LARSON, Ron.
+                <title>Cálculo Aplicado. Cursos Rápido.</title>
+                <journal>Cengage Learning</journal>, 2011.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen.
+                <title>Cálculo.</title>
+                <journal>Bookman</journal>, 2007.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al.
+                <title>Cálculo de uma variável.</title>
+                <journal>LTC</journal>, 2004.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-04">STEWART, James.
+                <title>Cálculo, Volume I.</title>
+                <journal>Cengage Learning</journal>, 2013.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo.
+                <title>Elementos de
+                    Computação
+                    Matemática com SageMath.
+                </title>
+                <journal>SBM</journal>, 2019.
+            </biblio>
+        </references>
+
+    </article>
+
+</pretext>
+

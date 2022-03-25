@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-25T18:42:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h5 class="heading">
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.2.b.1</span><span class="period">.</span>
+</h5>
+<p>Vamos repetir o processor do item anterior, mas com um ponto genárico <span class="process-math">\((x_0,y_0)\text{:}\)</span></p>
+<ul class="disc">
+<li>
+<p>Um bom primeiro passo aqui é esboçar a curva. Uma vez que esta é uma elipse, é bastante simples.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:57.8947368421053%;"><img src="images/ellipse.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:36.8421052631579%;"><img src="images/ellipseB.svg" role="img" class="contained"></div>
+</div></div>
+</li>
+<li><p>Observe que existem dois pontos na elipse — os pontos extremos direito e esquerdo <span class="process-math">\((x_0,y_0)=\pm\big(\sqrt{\frac{7}{3}},0\big)\)</span> — em que a reta tangente é vertical. Nesses dois casos, a reta tangente é apenas <span class="process-math">\(x=x_0\text{.}\)</span></p></li>
+<li>
+<p>Já que isso é quadrático para <span class="process-math">\(y\text{,}\)</span> poderíamos resolvê-lo explicitamente para obter</p>
+<div class="displaymath process-math">
+\begin{align*}
+y \amp= \pm \sqrt{\frac{7-3x^2}{5}}
+\end{align*}
+</div>
+<p class="continuation">e escolha o ramo positivo ou negativo conforme apropriado. Então poderíamos diferenciar para encontrar a inclinação e juntar as coisas para obter a reta tangente.</p>
+<p>Mas mesmo neste caso relativamente fácil, é computacionalmente mais limpo e, portanto, menos vulnerável a erros mecânicos, usar a derivação implícita. Então é isso que vamos fazer.</p>
+</li>
+<li><p>Agora podemos novamente “fingir” que resolvemos a equação da elipse para <span class="process-math">\(y=f(x)\)</span> perto de <span class="process-math">\((x_0,y_0)\text{,}\)</span> mas não vamos fazer isso. Em vez disso (como fizemos em<a href="" class="xref" data-knowl="./knowl/ex-2.html" title="Exemplo 1.2: Outra reta tangente por derivação implicita">Exemplo 1.2</a>) apenas lembre-se que quando diferenciamos <span class="process-math">\(y\)</span> é realmente uma função de <span class="process-math">\(x\text{.}\)</span> Então a partir de<div class="displaymath process-math">
+\begin{align*}
+3x^2 + 5y^2 \amp=7 \amp \ct{Derivando em ambos os lados}\\
+6x + 5\cdot 2y \cdot y' \amp= 0
+\end{align*}
+</div>Podemos então resolver isso para <span class="process-math">\(y'\text{:}\)</span><div class="displaymath process-math">
+\begin{align*}
+y' \amp= -\frac{3x}{5y}
+\end{align*}
+</div>onde <span class="process-math">\(y'\)</span> e <span class="process-math">\(y\)</span> são ambas funções de <span class="process-math">\(x\text{.}\)</span></p></li>
+<li><p>Portanto, no ponto <span class="process-math">\((x_0,y_0)\)</span> temos<div class="displaymath process-math">
+\begin{align*}
+\left. y' \right|_{(x_0,y_0)} \amp= -\frac{3x_0}{5y_0}
+\end{align*}
+</div>Esta é a inclinação da linha tangente em <span class="process-math">\((x_0,y_0)\)</span> e então sua equação é<div class="displaymath process-math">
+\begin{align*}
+y \amp=y_0+y' \cdot (x-x_0)\\
+\amp= y_0 -\frac{3x_0}{5y_0}(x-x_0)\\
+\end{align*}
+<p class="intertext">Podemos simplificar isso multiplicando por <span class="process-math">\(5y_0\)</span> para obter</p>
+\begin{align*}
+5y_0 y \amp= 5y_0^2-3x_0x +3x_0^2\\
+\end{align*}
+<p class="intertext">Podemos simplificar um pouco mais movendo todos os termos que contêm <span class="process-math">\(x\)</span> ou <span class="process-math">\(y\)</span> para o lado esquerdo e todo o resto para o direito:</p>
+\begin{align*}
+3x_0x+5y_0y \amp=3x_0^2+5y_0^2\\
+\end{align*}
+<p class="intertext">Mas há mais uma coisa que podemos fazer, nossa equação original é <span class="process-math">\(3x^2+5y^2=7\)</span> para todos os pontos da curva, então sabemos que <span class="process-math">\(3x_0^2
++5a_0^2=7\text{.}\)</span> Isso simplifica o lado direito.</p>
+\begin{align*}
+3x_0x+5y_0y \amp=7
+\end{align*}
+</div></p></li>
+<li><p>Ao derivar esta fórmula para a reta tangente em <span class="process-math">\((x_0,y_0)\)</span> nós assumimos que <span class="process-math">\(y_0\ne 0\text{.}\)</span> Mas, na verdade, a resposta final também funciona quando <span class="process-math">\(y_0=0\)</span> (que significa <span class="process-math">\(x_0=\pm\sqrt{\frac{7}{3} }\)</span>), para que a reta tangente seja <span class="process-math">\(x=x_0\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Também podemos verificar que nossa resposta para <span class="process-math">\((x_0,y_0)\)</span> se reduz à nossa resposta para <span class="process-math">\(x_0=1\text{.}\)</span></p>
+<ul class="disc">
+<li><p>Quando <span class="process-math">\(x_0=1\)</span> encontramos <span class="process-math">\(y_0=2/\sqrt{5}\text{.}\)</span></p></li>
+<li><p>Conectando isso em nossa resposta acima dá<div class="displaymath process-math">
+\begin{align*}
+3x_0x+5y_0y \amp=7 \amp\ct{Substituindo em $(x_0,y_0)=(1,2/\sqrt{5})$}:\\
+3 x + 5 \frac{2}{\sqrt{5}} y \amp= 7 \amp \ct{Simplificando}\\
+3x + 2\sqrt{5} y \amp=7
+\end{align*}
+</div>como solicitado.</p></li>
+</ul>
+</div>
+<span class="incontext"><a href="section-1.html#solution-3" class="internal">em contexto</a></span>
+</body>
+</html>
