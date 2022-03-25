@@ -204,12 +204,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             termos de <m>x</m> ou vice-versa. Então, realmente precisamos da derivação implícita.
                             <ul>
                                 <li>Primeiro observe que quando <m>x=1</m> a equação, <m>y=y^3+xy+x^3</m>, da curva
-                                    simplifica para <m>y=y^3+y+1</m> ou <m>y^3=-1</m>, que podemos resolver
-                                    <fn>
-                                        Esse tipo de sorte raramente acontece no <q>mundo real</q>. Mas isso acontece
-                                        com muita frequência em livros didáticos, conjuntos de problemas e testes.
-                                    </fn>
-                                    : <m>y=-1</m>.
+                                    simplifica para <m>y=y^3+y+1</m> ou <m>y^3=-1</m>, que podemos resolver: <m>y=-1</m>.
                                     Portanto, sabemos que a curva passa por <m>(1,-1)</m> quando <m>x=1</m>.
                                 </li>
                                 <li>Agora, para encontrar a inclinação da reta tangente em <m>(1,-1)</m>, finja que
@@ -713,7 +708,101 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             </subsection>
 
+            <subsection xml:id="sub-videos-1">
+                <title>
+                    Sugestão de vídeos
+                </title>
+                <ul>
 
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/wYu6rvBqa54" visual="youtu.be/wYu6rvBqa54">Um exemplo
+                                conceitual.
+                            </url>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/xzFO0SD6XJQ" visual="youtu.be/xzFO0SD6XJQ">Obtendo  <m>
+                                \dfrac{\dd y}{\dd x}
+                            </m> sabendo que <m>(xy)^2=x+y-1</m>.
+                            </url>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/3qcaLLRC768" visual="youtu.be/3qcaLLRC768"> Derivando implicitamente
+                                a equação <m>x^2+ (y-x)^3=28</m>.
+                            </url>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/ketEn6vDx8U" visual="https://youtu.be/ketEn6vDx8U"> A derivação implicita versos derivação explicita
+                            </url>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/QU0QOWbrS7M" visual="youtu.be/ketEn6vDx8U"> Obtendo  <m>
+                                \dfrac{\dd y}{\dd x}
+                            </m> sabendo que <m>y=\cos{(5x-3y)}</m>.
+                            </url>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/Qpm0PEQ_niU" visual="youtu.be/Qpm0PEQ_niU"> Obtendo  <m>
+                                \dfrac{\dd y}{\dd x}
+                            </m> sabendo que <m>y=(x^2+y^2)^3 = 5x^2y^2</m>.
+                            </url>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/7eJfg-nzK1c" visual="youtu.be/7eJfg-nzK1c"> Se <m>e^{xy^2}=x-y</m>
+                            calcule <m>\dfrac{\dd y}{\dd x}</m>.
+                            </url>
+                        </p>
+                    </li>
+
+                </ul>
+            </subsection>
+        <!--TODO Add subseção:Derivada das funções inversas-->
+        <!--TODO Add subseção:Derivada das funções inversas trigonométricas-->
+
+             <subsection xml:id="sub-videos-2">
+                <title>
+                    Sugestão de vídeos
+                </title>
+
+                 <ul>
+                     <li>
+                         <p>
+                             <url href="https://youtu.be/0sIGdngkJdI" visual="youtu.be/0sIGdngkJdI"> Calculando a derivada de <m>y=\arcsin{x}</m> </url>
+                         </p>
+
+                     </li>
+
+                     <li>
+                         <p>
+                             <url href="https://youtu.be/gFpov8BbCkY" visual="https://youtu.be/gFpov8BbCkY"> Calculando a derivada de <m>y=\arccos{x}</m> </url>
+                         </p>
+
+                     </li>
+                     <li>
+                         <p>
+                             <url href="https://youtu.be/4ZkBEy5nOXQ" visual="youtu.be/4ZkBEy5nOXQ"> Calculando a derivada de <m>y=\arctan{x}</m> </url>
+                         </p>
+
+                     </li>
+
+                 </ul>
+             </subsection>
             <exercises xml:id="exercises-implicita">
                 <exercise>Escrever aqui
                 </exercise>
