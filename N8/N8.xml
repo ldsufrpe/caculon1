@@ -41,45 +41,43 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/pretext-sage-doctest.xsl minimal.xml  -->
 <!--     <read further instructions in> minimal.py                                                -->
 
-<pretext  xml:lang="pt-BR">
+<pretext xml:lang="pt-BR">
 
     <docinfo>
-    <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png" />
+        <brandlogo url="http://www.dm.ufrpe.br" source="images/logo/projeto_logo_dm_2020_7.png"/>
 
 
-
-       
         <macros>
-        \newcommand{ct}[1]{\color{gray}{\text{#1}}}
-        \newcommand{ctm}[1]{\color{gray}{#1}}
+            \newcommand{ct}[1]{\color{gray}{\text{#1}}}
+            \newcommand{ctm}[1]{\color{gray}{#1}}
 
-        \newcommand{\doubler}[1]{2#1}
-        \newcommand{\dd}{\mathrm{d}}
-        \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
-        \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
-        \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
-        \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
-        \DeclareMathOperator{\arcsec}{arc \,sec}
-        \DeclareMathOperator{\sin}{sen}
-        \DeclareMathOperator{\arcsin}{arc \,sen}
-        \DeclareMathOperator{\arccos}{arc \,cos}
-        \DeclareMathOperator{\csc}{cossec}
-        \DeclareMathOperator{\tan}{tg}
-        \DeclareMathOperator{\arctan}{arc\,tg}
-        \DeclareMathOperator{\cot}{cotg}
+            \newcommand{\doubler}[1]{2#1}
+            \newcommand{\dd}{\mathrm{d}}
+            \newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+            \newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+            \newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+            \newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+            \DeclareMathOperator{\arcsec}{arc \,sec}
+            \DeclareMathOperator{\sin}{sen}
+            \DeclareMathOperator{\arcsin}{arc \,sen}
+            \DeclareMathOperator{\arccos}{arc \,cos}
+            \DeclareMathOperator{\csc}{cossec}
+            \DeclareMathOperator{\tan}{tg}
+            \DeclareMathOperator{\arctan}{arc\,tg}
+            \DeclareMathOperator{\cot}{cotg}
         </macros>
-       
+
         <latex-image-preamble>
-        \usepackage{tikz}
-      <!--  \usepackage{pgfplots}               % loads tikz package-->
-        \usepackage{smartdiagram}           % for a circular diagram
-        \pgfplotsset{axis x line = middle,
-                     axis y line = middle}
-        \usetikzlibrary{backgrounds}
-        \usetikzlibrary{arrows,matrix}
-        \usetikzlibrary{positioning}        % for Dave R's worksheet
-        \usepackage{circuitikz}             % for Virgil P's worksheet
-        
+            \usepackage{tikz}
+            <!--  \usepackage{pgfplots}               % loads tikz package-->
+            \usepackage{smartdiagram} % for a circular diagram
+            \pgfplotsset{axis x line = middle,
+            axis y line = middle}
+            \usetikzlibrary{backgrounds}
+            \usetikzlibrary{arrows,matrix}
+            \usetikzlibrary{positioning} % for Dave R's worksheet
+            \usepackage{circuitikz} % for Virgil P's worksheet
+
         </latex-image-preamble>
     </docinfo>
 
@@ -91,12 +89,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <titlepage>
                 <author>
                     <personname>Leon Silva</personname>
-                    <department>Departamento de Matemática</department>                    
+                    <department>Departamento de Matemática</department>
                     <institution>Universidade Federal Rural de Pernambuco</institution>
                 </author>
 
-               
-                <date><today /></date>
+
+                <date>
+                    <today/>
+                </date>
             </titlepage>
 
             <abstract>
@@ -106,738 +106,865 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </frontmatter>
 
         <introduction>
-            <p>Aqui uma introdução será necessária </p>
+            <p>Aqui uma introdução será necessária</p>
         </introduction>
-    <section>
-    <title>Derivada da função logaritmo </title>
-    
-         
-        <objectives>
-            <title>Estrutura</title>
-           
-            <ol>
-                <li>
+        <section>
+            <title>Derivada da função logaritmo</title>
+
+
+            <objectives>
+                <title>Estrutura</title>
+
+                <ol>
+                    <li>
+                        <p>
+                            Determinar a derivada de uma função logarítmica.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Determinar a derivada de uma função exponencial.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Aplicar a derivação logarítmica.
+                        </p>
+                    </li>
+
+                </ol>
+
+            </objectives>
+
+            <introduction>
+                <p>
+                    A Regra da Cadeia é uma das ferramentas importantes da Derivação. Além de permitir obter derivadas
+                    de funções complicadas,
+                    formadas por composição de duas funções mais simples, também será
+                    para vamos usá-las para compreender derivadas definidas implicitamente.
+                </p>
+
+                <p>Considere que a base logarítmica <m>e</m>
+                    <mdash/>
+                    <m>\ln_e(x)</m> é a potência que <m>e</m> deve ser elevada para fornecer <m>x</m>.
+                    Ou seja, <m>\ln_e(x)</m> é definido por
+                    <md>
+                        <mrow>
+                            e^{\ln_e x}\amp= x
+                        </mrow>
+                    </md>
+                    ou seja,
+                    <mdash/>
+                    é a inversa da função exponencial com base <m>e</m>. Dado que esta escolha da base funciona tão
+                    clara e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural do
+                    logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:
+                    <md>
+                        <mrow>
+                            \ln_q x\amp= \frac{\ln_e x}{\ln_e q}
+                        </mrow>
+                    </md>
+                    Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para os nossos
+                    propósitos.
+                </p>
+
+                <p>O logaritmo com base <m>e</m>, é chamado de <term>logaritmo natural</term>. A <q>naturalidade</q> da
+                    base logarítmica
+                    <m>e</m>
+                    é exatamente que essa escolha funciona muito bem em cálculo (e em matemática mais ampla) de
+                    maneiras que outras bases não <fn>O leitor interessado deve ir à Wikipédia e procurar o logaritmo natural.</fn> .
+                    Existem várias notações diferentes para a base logarítmica
+                    <m>e</m>;
+                    <md>
+                        <mrow>
+                            \log_e x = \ln x = \ln x.
+                        </mrow>
+                    </md>
+                    É desejável que o leitor consiga reconhecer todas.
+                </p>
+
+                <p>Neste texto vamos escrever o logaritmo natural como
+                    <q>
+                        <m>\ln</m>
+                    </q>
+                    sem base.
+                    A razão para esta escolha é que a base <m>e</m> é a escolha padrão de base para
+                    logaritmos em matemática.
+
+                </p>
+
+                <p>O logaritmo natural herda muitas propriedades de
+                    logaritmos. Então, para todo <m>x,y \gt 0</m> vale o seguinte:
+                </p>
+                <assemblage xml:id="assemblage-log-prop">
+                    <title>Propriedades do Logaritmo</title>
                     <p>
-                        Determinar a derivada de uma função logarítmica.
+
+                        <ul>
+                            <li><m>e^{\ln x}=x</m>,
+                            </li>
+                            <li>for any real number <m>X</m>, <m>\ln \big(e^X\big)=X</m>,
+                            </li>
+                            <li>for any <m>a \gt 1</m>, <m>\ln_a x=\tfrac{\ln x}{\ln a}</m> and
+                                <m>\ln
+                                    x=\tfrac{\ln_a x}{\ln_a e}
+                                </m>
+                            </li>
+                            <li><m>\ln 1=0</m>,
+                                <m>\ln e=1</m>
+                            </li>
+                            <li>
+                                <m>\ln(xy)=\ln x+\ln y</m>
+                            </li>
+                            <li><m>\ln\big(\tfrac{x}{y}\big)=\ln x-\ln y</m>,
+                                <m>\ln\big(\tfrac{1}{y}\big)=-\ln y</m>
+                            </li>
+                            <li>
+                                <m>\ln(x^X)=X\ln x</m>
+                            </li>
+                            <li><m>\lim\limits_{x\rightarrow\infty}\ln x=\infty</m>,
+                                <m>\lim\limits_{x\rightarrow0}\ln x=-\infty</m>
+                            </li>
+                        </ul>
                     </p>
-                </li>
-                <li>
+                </assemblage>
+
+                <p>
+                    E, finalmente, devemos lembrar que <m>\ln x</m> tem domínio (ou seja, é definido para) <m>x \gt 0
+                </m> e intervalo
+                    (ou seja, recebe todos os valores) <m>-\infty \lt x \lt \infty</m>.
+                    +
+                </p>
+
+                <figure xml:id="fig-1">
+                    <caption></caption>
+                    <image xml:id="image-sage-1" width="50%">
+                        <description></description>
+
+                        <sageplot>
+                            p = plot(ln(x), 0,5, thickness=1.5, ymin=-1.5, axes_labels=['$x$','$y$'],
+                            ticks=[[1],[1,-1]], figsize=[4,3])
+                            p+= text(r'$y=\ln$', (3, 1/2), fontsize=12)
+                            p
+                        </sageplot>
+
+                    </image>
+                </figure>
+
+                <p>Para calcular a derivada de <m>\ln x</m> podemos tentar começar com a definição da derivada como
+                    limite:
+                    <md>
+                        <mrow>
+                            \dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}
+                        </mrow>
+                        <mrow>
+                            \amp= \lim_{h\to 0} \frac{\ln( (x+h)/x )}{h}
+                        </mrow>
+                    </md>
+                    Isso não parece complicado. Mas temos a regra da cadeia, e sabemos que o logaritmo satisfaz a
+                    equação:
+                    <md>
+                        <mrow>
+                            x\amp= e^{\ln x}
+                        </mrow>
+                    </md>
+                    Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada.
+                    Isto é, estamos usando
+                    <fn>Observe que só por as derivadas serem as mesmas, não significa que as funções originais são as
+                        mesmas.
+                        Ambas <m>f(x)=x^2</m> e <m>g(x)=x^2+3</m> tem a derivada <m>f'(x)=g'(x)=2x</m>, mas <m>f(x)
+                            \neq g(x)</m>.
+                    </fn>
+                </p>
+
+                <p>
+                    <md>
+                        <mrow>
+                            \text{se } f(x)=g(x) \text{ para todo $x$, então } f'(x) = g'(x)
+                        </mrow>
+                    </md>
+                    Então agora derive os dois lados:
+                    <md>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} x\amp= \dfrac{\dd}{\dd x} e^{\ln x}
+                        </mrow>
+                        <intertext>O lado esquerdo é fácil e o lado direito podemos usar a regra da cadeia com
+                            <m>f(u)=e^u</m>
+                            e <m>u=\ln x</m>.
+                        </intertext>
+                        <mrow>
+                            1\amp= \dfrac{\dd f}{\dd u} \cdot \dfrac{\dd u}{\dd x}
+                        </mrow>
+                        <mrow>
+                            \amp= e^u \cdot
+                            \underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que queremos calcular}
+                        </mrow>
+                        <mrow>
+                        </mrow>
+                        <intertext>Lembre-se que <m>e^u = e^{\ln x} = x</m>, então
+                        </intertext>
+                        <mrow>
+                            1\amp= x \cdot
+                            \underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que agora?}
+                        </mrow>
+                        <intertext>Agora podemos apenas reorganizar esta equação para obter:</intertext>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>Assim provamos:</p>
+                <theorem xml:id="thm_diff_log">
+                    <statement>
+                        <p>
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
+                                </mrow>
+                            </md>
+                            no qual <m>\ln x</m> é o logaritmo na base <m>e</m>.
+                        </p>
+                    </statement>
+                </theorem>
+
+                <example xml:id="ex-1">
+                    <title>A derivada de
+                        <m>\ln 3x</m>
+                    </title>
+
+                    <statement>
+                        <p>
+                            Se <m>f(x) = \ln 3x</m>. Determine <m>f'(x)</m>.
+                        </p>
+                    </statement>
+
+
+                    <solution>
+
+
+                        <p>Existem duas maneiras de abordar isso
+                            <mdash/>
+                            podemos simplificar e depois derivar, ou derivar e
+                            depois simplificar. Vamos iniciar com o primeiro modo:
+
+                            <md>
+                                <mrow>
+                                    f(x)\amp= \ln 3x\amp \ct{Log de um produto}
+                                </mrow>
+                                <mrow>
+                                    \amp= \ln 3 + \ln x
+                                </mrow>
+                                <mrow>
+                                    f'(x)\amp= \dfrac{\dd}{\dd x} \ln 3 + \dfrac{\dd}{\dd x} \ln x
+                                </mrow>
+                                <mrow>
+                                    \amp= \frac{1}{x}.
+                                </mrow>
+                            </md>
+
+                            Agora primeiro derivamos e só depois simplificamos
+
+                            <md>
+                                <mrow>
+                                    f'(x)\amp= \dfrac{\dd}{\dd x} \ln(3x)\amp \ct{Regra da Cadeia}
+                                </mrow>
+                                <mrow>
+                                    \amp= \frac{1}{3x} \cdot 3
+                                </mrow>
+                                <mrow>
+                                    \amp= \frac{1}{x}
+                                </mrow>
+                            </md>
+
+                        </p>
+                    </solution>
+                </example>
+                <p>Observe que podemos estender o
+                    <xref ref="ex-1"/>
+                    para qualquer constante positiva, não apenas 3.
+                </p>
+                <example xml:id="ex-2">
+                    <title>A derivada de
+                        <m>\ln cx</m>
+                    </title>
+
+                    <statement>
+                        <p>
+                            Encontre a derivada de <m>\ln{cx}</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+
+                            Seja <m>c\gt 0</m> uma constante, então
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \ln cx\amp= \dfrac{\dd}{\dd x}\left(\ln c + \ln x \right)
+                                </mrow>
+                                <mrow>
+                                    \amp= \frac{1}{x}
+                                </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </example>
+
+                <example xml:id="ex-3">
+                    <title>A derivada de
+                        <m>\ln|x|</m>
+                    </title>
+                    <statement>
+                        <p>
+                            Determine a derivada de <m>\ln|x|</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <ul>
+                                <li>Se <m>x \gt 0</m>, <m>|x|= x</m> então
+                                    <md>
+                                        <mrow>
+                                            g'(x)\amp= \dfrac{\dd}{\dd x}\left[ \ln x\right] = \frac{1}{x}
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>Se <m>x\lt 0</m> então <m>|x|= -x</m>. Se <m>|h|</m> é estritamente menor do que <m>
+                                    |x|</m>,
+                                    então também temos que <m>x+h\lt 0</m> e <m>|x+h|=-(x+h)=|x|-h</m>. Escreva <m>
+                                        X=|x|
+                                    </m> e <m>H=-h</m>.
+                                    Então, pela definição da derivada,
+                                    <md>
+                                        <mrow>
+                                            g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
+                                            = \lim_{h\rightarrow 0} \frac{\ln(|x|-h)-\ln|x|}{h}
+                                        </mrow>
+                                        <mrow>
+                                            \amp= \lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{-H}
+                                            = -\lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{H}
+                                        </mrow>
+                                        <mrow>
+                                            \amp=-\dfrac{\dd}{\dd x}\ln X =-\frac{1}{X} = -\frac{1}{|x|}
+                                        </mrow>
+                                        <mrow>
+                                            \amp=\frac{1}{x}
+                                        </mrow>
+                                    </md>
+                                </li>
+                                <li>Já que <m>\ln 0</m> não está definida, <m>g'(0)</m> não existe.
+                                </li>
+                            </ul>
+                            Juntando isso dá:
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \ln | x |\amp= \frac{1}{x}
+                                </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </example>
+
+                <example xml:id="ex-4">
+                    <title>A derivada de
+                        <m>x^a</m>
+                    </title>
+
+                    <statement>
+                        <p>
+                            Encontre <m>\dfrac{\dd }{\dd x}\left[x^a\right]</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Seja <m>x\gt 0</m> e <m>a</m> qualquer número real. Exponenciar ambos os lados de
+                            <m>\ln\big(x^a\big)=a\ln x</m>
+                            nos dá <m>x^a=e^{a\ln x}</m> e então
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} x^a\amp= \dfrac{\dd}{\dd x} e^{a\ln x}
+                                    = e^{a\ln x} \dfrac{\dd}{\dd x}(a\ln x)\amp\ct{Regra da Cadeia}
+                                </mrow>
+                                <mrow>
+                                    \amp=\frac{a}{x} e^{a\ln x}
+                                    =\frac{a}{x} x^a
+                                </mrow>
+                                <mrow>
+                                    \amp=a x^{a-1}
+                                </mrow>
+                            </md>
+                            como esperado.
+                        </p>
+                    </solution>
+                </example>
+
+
+                <p>Podemos estender o Teorema
+                    <nbsp/>
+                    <xref ref="thm_diff_log"/>
+                    para calcular a derivada de logaritmos de
+                    outras bases de maneira direta. Visto que para qualquer positivo <m>a \neq 1</m>:
+                    <md>
+                        <mrow>
+                            \ln_a x\amp= \frac{\ln x}{\ln a} = \frac{1}{\ln a} \cdot \ln x\amp
+                            \ct{já que $a$ é uma constante}
+                        </mrow>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
+                        </mrow>
+                    </md>
+                </p>
+            </introduction>
+
+
+            <exercise>
+                <statement>
                     <p>
-                       Determinar a derivada de uma função exponencial.
+                        Determine a derivada de <m>y=\ln{70x}</m>.
                     </p>
-                </li>
-                <li>
+                </statement>
+
+                <answer>
                     <p>
-                       Aplicar a derivação logarítmica.
+                        <m>\frac{1}{x}</m>
                     </p>
-                </li>
-
-            </ol>
-            
-        </objectives>
-
-<introduction>
-<p>
-A Regra da Cadeia é uma das ferramentas importantes da Derivação. Além de permitir obter derivadas de funções complicadas,
-  formadas por composição de duas funções mais simples, também será 
-para vamos usá-las para compreender derivadas definidas implicitamente.
-</p>
-
-<p>Considere que a base logarítmica <m>e</m> <mdash/> <m>\ln_e(x)</m> é a potência que <m>e</m> deve ser elevada para fornecer <m>x</m>.
- Ou seja, <m>\ln_e(x)</m> é definido por
-<md>
-<mrow>
-  e^{\ln_e x}\amp= x
-</mrow>
-</md>
-ou seja, <mdash/> é a inversa da função exponencial com base <m>e</m>. Uma vez que esta escolha de base funciona tão clara 
-e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural para a base do logaritmo. 
-É fácil usar logaritmos de uma base para calcular logaritmos com outra base:
-<md>
-<mrow>
-  \ln_q x\amp= \frac{\ln_e x}{\ln_e q}
-</mrow>
-</md>
-Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para nossos propósitos.
-</p>
-
-<p>O logaritmo com base <m>e</m>, é chamado de <term> logaritmo natural</term>. A <q>naturalidade</q> da base logarítmica
- <m>e</m> é exatamente que essa escolha de base funciona muito bem em cálculo (e em matemática mais ampla) de maneiras que outros
-as bases não <fn>O leitor interessado deve ir à Wikipédia e procurar o logaritmo natural.</fn> . Existem várias notações  diferentes para a base logarítmica
-<m>e</m>;
-<md>
-<mrow>
-  \log_e x = \ln x = \ln x.
-</mrow>
-</md>
-É desejável que você seja capaz de reconhecer todas.
-</p>
-
-<p>Neste texto vamos escrever o logaritmo natural como <q><m>\ln</m></q> sem base.
-A razão para esta escolha é que a base <m>e</m> é a escolha padrão de base para
-logaritmos em matemática.
-
-</p>
-
-<p>O logaritmo natural herda muitas propriedades de
-logaritmos. Então, para todo <m>x,y \gt 0</m> vale o seguinte:
-</p>
-<assemblage xml:id="assemblage-log-prop">
-  <title>Propriedades do Logaritmo</title>
-  <p>
-    
-<ul>
-<li> <m>e^{\ln x}=x</m>,
-</li>
-<li> for any real number <m>X</m>, <m>\ln \big(e^X\big)=X</m>,
-</li>
-<li> for any <m>a \gt 1</m>, <m>\ln_a x=\tfrac{\ln x}{\ln a}</m> and <m>\ln
-x=\tfrac{\ln_a x}{\ln_a e}</m>
-</li>
-<li> <m>\ln 1=0</m>, <m>\ln e=1</m>
-</li>
-<li> <m>\ln(xy)=\ln x+\ln y</m>
-</li>
-<li> <m>\ln\big(\tfrac{x}{y}\big)=\ln x-\ln y</m>,
-      <m>\ln\big(\tfrac{1}{y}\big)=-\ln y</m>
-</li>
-<li> <m>\ln(x^X)=X\ln x</m>
-</li>
-<li> <m>\lim\limits_{x\rightarrow\infty}\ln x=\infty</m>,
-           <m>\lim\limits_{x\rightarrow0}\ln x=-\infty</m>
-</li>
-</ul>
-  </p>
-</assemblage>
-
-<p>
-E, finalmente, devemos lembrar que <m>\ln x</m> tem domínio (ou seja, é definido para) <m>x \gt 0</m> e intervalo
-(ou seja, recebe todos os valores) <m>-\infty \lt x \lt \infty</m>.
-+
-</p>
-
-<figure xml:id="fig-1">
-  <caption></caption>
-  <image xml:id="image-sage-1" width="50%">
-    <description></description>
-    
-  <sageplot>
-    p = plot(ln(x), 0,5, thickness=1.5, ymin=-1.5, axes_labels=['$x$','$y$'], ticks=[[1],[1,-1]], figsize=[4,3]) 
-    p+= text(r'$y=\ln$', (3, 1/2), fontsize=12)
-    p
-  </sageplot>
-
-  </image>
-</figure>
-
-<p>Para calcular a derivada de <m>\ln x</m> podemos tentar começar com a definição da derivada como limite:
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}
-</mrow><mrow>
- \amp= \lim_{h\to 0} \frac{\ln( (x+h)/x )}{h}
-</mrow>
-</md>
-Isso não parece complicado. Mas  temos a regra da cadeia, e sabemos que o logaritmo satisfaz a equação:
-<md>
-<mrow>
-  x\amp= e^{\ln x}
-</mrow>
-</md>
-Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada. Isto é, estamos usando
-<fn>Observe que só porque as derivadas são as mesmas, não significa que as funções originais são as mesmas.
-Ambas <m>f(x)=x^2</m> e <m>g(x)=x^2+3</m> tem a derivada <m>f'(x)=g'(x)=2x</m>, mas <m>f(x)
-\neq g(x)</m>. </fn>
-</p>
-
-<p><md>
-<mrow>
-  \text{se } f(x)=g(x) \text{ para todo $x$, então } f'(x) = g'(x)
-</mrow>
-</md>
-Então agora derive os dois lados:
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} x\amp= \dfrac{\dd}{\dd x} e^{\ln x}
-</mrow>
-<intertext>O lado esquerdo é fácil e o lado direito podemos usar a regra da cadeia com 
-<m>f(u)=e^u</m> e <m>u=\ln x</m>. </intertext><mrow>
-  1\amp= \dfrac{\dd f}{\dd u} \cdot \dfrac{\dd u}{\dd x}
-</mrow><mrow>
- \amp= e^u \cdot
-\underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que queremos calcular}
-</mrow><mrow>
- </mrow>
-<intertext>Lembre-se que <m>e^u = e^{\ln x} = x</m>, então </intertext><mrow>
- 1\amp= x \cdot
-\underbrace{\dfrac{\dd}{\dd x} \ln x }_\text{o que agora?}
-</mrow>
-<intertext>Agora podemos apenas reorganizar esta equação para obter:</intertext><mrow>
- \dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
-</mrow>
-</md>
-</p>
-
-<p>Assim provamos:</p>
-<theorem xml:id="thm_diff_log">
-<statement><p>
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
-</mrow>
-</md>
-no qual <m>\ln x</m> é o logaritmo na base <m>e</m>.
-</p></statement>
-</theorem>
-
-<example xml:id="ex-1"><title>A derivada de <m>\ln 3x</m></title>
-
-<statement>
-  <p>
-    Se <m>f(x) = \ln 3x</m>. Determine <m>f'(x)</m>.
-  </p>
-</statement>
-
-
-<solution>
-
-
-
-<p>Existem duas maneiras de abordar isso <mdash/> podemos simplificar e depois derivar, ou derivar e
- depois simplificar. Vamos iniciar com o primeiro modo:
-
-<md>
-<mrow>
-  f(x)\amp= \ln 3x\amp \ct{Log de um produto}
-</mrow><mrow>
- \amp= \ln 3 + \ln x
-</mrow><mrow>
-  f'(x)\amp= \dfrac{\dd}{\dd x} \ln 3 + \dfrac{\dd}{\dd x} \ln x
-</mrow><mrow>
- \amp= \frac{1}{x}.
-</mrow>
-</md>
-
-Agora primeiro derivamos e só depois simplificamos
-
-  <md>
-<mrow>
-  f'(x)\amp= \dfrac{\dd}{\dd x} \ln(3x)\amp \ct{Regra da Cadeia}
-</mrow><mrow>
- \amp= \frac{1}{3x} \cdot 3
-</mrow><mrow>
- \amp= \frac{1}{x}
-</mrow>
-</md>
-
-</p>
-</solution>
-</example>
-<p>Observe que podemos estender o <xref ref="ex-1"/> para qualquer constante positiva, não apenas 3. </p>
-<example xml:id="ex-2"><title>A derivada de <m>\ln cx</m></title>
-
-<statement>
-  <p>
-    Encontre a derivada de <m>\ln{cx}</m>.
-  </p>
-</statement>
-<solution>
-<p>
-
- Seja <m>c\gt 0</m> uma constante, então
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} \ln cx\amp= \dfrac{\dd}{\dd x}\left(\ln c + \ln x \right)
-</mrow><mrow>
- \amp= \frac{1}{x}
-</mrow>
-</md>
-</p>
-</solution>
-</example>
-
-<example xml:id="ex-3"><title>A derivada de <m>\ln|x|</m></title>
-<statement>
- <p>
-Determine a derivada de <m>\ln|x|</m>.
-</p>
-</statement>
-<solution>
-<p>
-<ul>
-<li> Se <m>x \gt 0</m>, <m>|x|= x</m> então
-<md>
-<mrow>
-  g'(x)\amp= \dfrac{\dd}{\dd x}\left[ \ln x\right] = \frac{1}{x}
-</mrow>
-</md>
-</li>
-<li> Se <m>x\lt 0</m> então <m>|x|= -x</m>. Se <m>|h|</m> é estritamente menor do que <m>|x|</m>, 
-então também temos que <m>x+h\lt 0</m> e <m>|x+h|=-(x+h)=|x|-h</m>. Escreva <m>X=|x|</m> e <m>H=-h</m>. 
-Então, pela definição da derivada,
-<md><mrow>
-  g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
-        = \lim_{h\rightarrow 0} \frac{\ln(|x|-h)-\ln|x|}{h} 
-</mrow><mrow>
-       \amp= \lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{-H}
-        = -\lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{H} 
-</mrow><mrow>
-       \amp=-\dfrac{\dd}{\dd x}\ln X =-\frac{1}{X} = -\frac{1}{|x|} 
-</mrow><mrow>
-       \amp=\frac{1}{x}
-</mrow>
-</md>
-</li>
-<li> Já que <m>\ln 0</m> não está definida, <m>g'(0)</m> não existe.
-</li>
-</ul>
-Juntando isso dá:
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} \ln | x |\amp= \frac{1}{x}
-</mrow>
-</md>
-</p>
-</solution>
-</example>
-
-<example xml:id="ex-4"><title>A derivada de <m>x^a</m></title>
-
-<statement>
-  <p>
-    Encontre <m>\dfrac{\dd }{\dd x}\left[x^a\right]</m>. 
-  </p>
-</statement>
-<solution>
-<p>
-Seja <m>x\gt 0</m> e <m>a</m> qualquer número real. Exponenciar ambos os lados de <m>\ln\big(x^a\big)=a\ln x</m> 
-nos dá <m>x^a=e^{a\ln x}</m> e então
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} x^a\amp= \dfrac{\dd}{\dd x} e^{a\ln x}
-                  = e^{a\ln x} \dfrac{\dd}{\dd x}(a\ln x)\amp\ct{Regra da Cadeia} 
-</mrow><mrow>
-               \amp=\frac{a}{x} e^{a\ln x}
-                  =\frac{a}{x} x^a 
-</mrow><mrow>
-               \amp=a x^{a-1}
-</mrow>
-</md>
-como esperado.
-</p>
-</solution>
-</example>
-
-
-
-
-
-<p>Podemos estender o Teorema<nbsp/><xref ref="thm_diff_log"/> para calcular a derivada de logaritmos de 
-outras bases de maneira direta. Uma vez que para qualquer positivo <m>a \neq 1</m>:
-<md>
-<mrow>
-  \ln_a x\amp= \frac{\ln x}{\ln a} = \frac{1}{\ln a} \cdot \ln x\amp
-\ct{já que  $a$ é uma constante}
-</mrow><mrow>
-  \dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
-</mrow>
-</md>
-</p>
-</introduction>
-
-
- <exercise>
-    <statement>
-        <p>
-            Determine a derivada de <m>y=\ln{70x}</m>. 
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>\frac{1}{x}</m>
-        </p>
-    </answer>
-</exercise>
-
-
-
- <exercise>
-    <statement>
-        <p>
-            Determine a derivada de <m>y=\ln{3x+1}</m>. 
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>\frac{3}{3 \, x + 1}</m>
-        </p>
-    </answer>
-</exercise> 
-
-<subsection><title>A derivada de <m>\mathbf{\dfrac{\dd}{\dd x}\left[a^x\right]}</m>.</title>
-
-<p>Agora podemos determinar a derivada de <m>a^x</m>.
-<md>
-<mrow>
-  f(x)\amp= a^x\amp \ct{Tomando o log de ambos os lados}
-</mrow><mrow>
-  \ln f(x)\amp= x \ln a\amp \ct{Exponenciar na base $e$ de ambos os lados}
-</mrow><mrow>
-  f(x)\amp= e^{x \ln a}\qquad \qquad\qquad \qquad \ct{Regra da Cadeia}
-</mrow><mrow>
-  f'(x)\amp= e^{x \ln{a}} \cdot \ln{a}
-</mrow><mrow>
- \amp= a^x \cdot \ln{a}
-</mrow>
-</md>
-Observe que também poderíamos ter feito o seguinte:
-<md>
-<mrow>
-  f(x)\amp= a^x\amp \ct{Tomando o log de ambos os lados}
-</mrow><mrow>
-  \ln f(x)\amp= x \ln a\amp \ct{derivando ambos os lados}
-</mrow><mrow>
-  \dfrac{\dd}{\dd x} \left( \ln f(x) \right)\amp=
-\ln a
-</mrow>
-<intertext>Em seguida, processamos o lado esquerdo usando a Regra da Cadeia</intertext><mrow>
-  f'(x) \cdot \frac{1}{f(x)}\amp= \ln a
-</mrow><mrow>
-  f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
-</mrow>
-</md>
-Nós veremos <m>\dfrac{\dd}{\dd x}\left[\ln f(x)\right]</m> mais adiante.
-</p>
-
-<p>Para resumir os resultados obtidos acima:</p>
-<corollary xml:id="cor_2_10">
-<statement><p>
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}
-</mrow><mrow>
-  \dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
-</mrow>
-</md>
-onde <m>\ln x</m> é o logaritmo natural.
-</p></statement>
-</corollary>
-
-<p>Lembre-se de que precisamos da ressalva <m>a \neq 1</m> porque a base 1 do logaritmo não está bem definida.
- Isso ocorre porque <m>1^x = 1</m> para qualquer <m>x</m>. Não precisamos de uma advertência semelhante para a derivada da exponencial porque sabemos 
-
-<md>
-<mrow>
-  \dfrac{\dd}{\dd x} 1^x\amp= \dfrac{\dd}{\dd x} 1= 0\amp\ct{Enquanto o}\, <xref ref="cor_2_10"/> \,\ct{acima nos diz}
-</mrow><mrow>
- \amp= \ln 1 \cdot 1^x = 0 \cdot 1 = 0.
-</mrow>
-</md>
-</p>
-
-<exercise>
-    <statement>
-        <p>
-            Determine <m>y'</m> sabendo que <m>y=\ln{(x^3+1)}</m>.
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>\frac{3x^2}{x^3+1}</m>
-        </p>
-    </answer>
-</exercise>
-
-<exercise>
-    <statement>
-        <p>
-            Derive <m>f(x)=10^x</m>.
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>10^{x} \ln\left(10\right)</m>
-        </p>
-    </answer>
-</exercise>
-
-<exercise>
-    <statement>
-        <p>
-            Derive <m>f(x)=\log_{10}(2+\sin{x})</m>.
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>\dfrac{\cos{x}}{(2+\sin{x})\ln{10}}</m>
-        </p>
-    </answer>
-</exercise>
-
-</subsection>
-
-
-
-
-
-<subsection>
-<title>Derivação Logarítmica</title>
-
-
-
-<example xml:id="ex-5"><title>Derivada de um produto triplo</title>
-<statement>
-  <p>
-   Seja 
-<md>
-<mrow>
-P(x)\amp= F(x) \cdot G(x) \cdot H(x)
-</mrow>
-</md>
-Encontre uma fórmula para derivada de <m>P(x)</m>.
-  </p>
-</statement>
-
-
-<solution>
-
-<p>
- 
-Comece tomando o logaritmo de ambos os lados:<md>
-<mrow>
- \ln P(x)\amp= \ln \left( F(x) \cdot G(x) \cdot H(x)  \right)
-</mrow><mrow>
- \amp= \ln F(x) + \ln G(x) + \ln H(x)
-</mrow>
-<intertext>Observe que o produto de funções do lado direito se tornou uma soma de funções.
- Diferenciar somas é muito mais fácil do que derivar produtos. Então quando derivamos
-  temos</intertext><mrow>
-\dfrac{\dd}{\dd x}\ln P(x) \amp= \dfrac{\dd}{\dd x}\ln F(x) + \dfrac{\dd}{\dd x}\ln G(x) + \dfrac{\dd}{\dd x}\ln H(x)
-</mrow>
-<intertext>Uma aplicação rápida da Regra da Cadeia mostra que <m>\dfrac{\dd}{\dd x}\ln
-f(x) = f'(x) / f(x)</m>:</intertext><mrow>
-\frac{P'(x)}{P(x)}\amp= \frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}
-</mrow>
-<intertext>Multiplique por <m>P(x)=F(x)G(x)H(x)</m>:</intertext><mrow>
-P'(x)\amp=
-\left(\frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}\right)\cdot
-F(x)G(x)H(x)
-</mrow><mrow>
- \amp= F'(x)G(x)H(x) + F(x)G'(x)H(x) + F(x)G(x)H'(x)
-</mrow>
-</md>
-</p>
-</solution>
-</example>
-
-<p>Esse mesmo truque de <q>pegar um logaritmo e depois derivar</q> <mdash/> ou derivação logarítmica <mdash/> funcionará sempre que você tiver um produto (ou
-quociente) de funções.</p>
-
-
-<exercise>
-    <statement>
-        <p>
-            Use a fórmula do <xref ref="ex-5"/> para encontrar a derivada de <m>2^x(x^2+1)\ln{x}</m>
-        </p>
-    </statement>
-
-    <answer>
-        <p>
-            <m>\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x \log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}</m>
-        </p>
-    </answer>
-</exercise>
-
-
-<!-- <example xml:id="eg_2_10_4"><title>Derivative of a messy product</title>
-<p>
-Lets use logarithmic differentiation on the function from
-Example<nbsp/><xref ref="eg_DIFFsimpleToolsNB"/>:
-<md>
-<mrow>
-f(x)\amp=\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
-</mrow>
-</md>
-Beware however, that we may only take the logarithm of positive numbers, and this <m>f(x)</m> is often negative.
-For example, if <m> 1 \lt x \lt 2 </m>, the factor <m>(1-x^2)</m> in the definition of <m>f(x)</m> is negative while all of the other factors are positive, so that <m>f(x)\lt 0 </m>.
-None<ndash/>the<ndash/>less, we can use logarithmic differentiation to find <m>f'(x)</m>,  by exploiting the observation that <m>\dfrac{\dd}{\dd x}\ln|f(x)|=\frac{f'(x)}{f(x)}</m>.
-(To see this, use the chain rule and Example<nbsp/><xref ref ="eg_diff_log_abs_x"/>.)
-So we take the logarithm of <m>|f(x)|</m> and expand.
-<md>
-<mrow>
-\ln |f(x)|\amp = \ln \frac{|\sqrt{x}-1|\,|2-x|\,|1-x^2|}{\sqrt{x}|3+2x|}
-</mrow><mrow>
- \amp = \ln|\sqrt{x}\!-\!1| + \ln|2\!-\!x| + \ln|1\!-\!x^2| -
-\underbrace{\ln(\sqrt{x})}_{=\frac{1}{2}\ln x} - \ln|3\!+\!2x|
-</mrow>
-</md>
-Now we can essentially just differentiate term-by-term:
-<md>
-<mrow>
-\dfrac{\dd}{\dd x}\ln |f(x)|\amp= \dfrac{\dd}{\dd x} \Big(
-  \ln|\sqrt{x}-1| + \ln|2-x| + \ln|1-x^2| 
-</mrow><mrow>
-\amp\hskip2in- \frac{1}{2}\ln|x| - \ln|3+2x|
- \Big)
-</mrow><mrow>
-\frac{f'(x)}{f(x)}\amp= \frac{1/(2\sqrt{x})}{\sqrt{x}-1}
-  + \frac{-1}{2-x} + \frac{-2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
-</mrow><mrow>
-f'(x)\amp= f(x) \cdot \left( \frac{1}{2 \sqrt{x} (\sqrt{x}\!-\!1)}
-  - \frac{1}{2\!-\!x} - \frac{2x}{1\!-\!x^2} - \frac{1}{2x} - \frac{2}{3\!+\!2x}
-\right)
-</mrow><mrow>
- \amp= \frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
-  \cdot 
-</mrow><mrow>
-\amp\hskip0.5in\left( \frac{1}{2 \sqrt{x} (\sqrt{x}-1)}
-  - \frac{1}{2-x} - \frac{2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
-\right)
-</mrow>
-</md>
-just as we found previously.
-</p></example> -->
-</subsection>
-
-
-
-<subsection xml:id="sugestao-video-1">
-    <title>Sugestão de vídeos</title>
-  
-<ul>
-    <li>
-        <p>
-           
-          <url href="https://youtu.be/QMXEbwAZ6aE"  visual="youtu.be/QMXEbwAZ6aE"> Derivada do <m>y=\sin{(\ln{x^2})}</m> .</url>
-        </p>
-    </li>
-
-        <li>
-        <p>
-           
-          <url href="https://youtu.be/YzU7zKUEH_Y"  visual="https://youtu.be/YzU7zKUEH_Y"> Derivadas disfarçadas.</url>
-
-        </p>
-    </li>
-
-        <li>
-        <p>
-           
-          <url href="https://youtu.be/65N8lfcs7HY"  visual="youtu.be/65N8lfcs7HY"> Derivada de <m>y=x^x</m> .</url>
-          
-        </p>
-    </li>
-
-            <li>
-        <p>
-           
-          <url href="https://youtu.be/0VT4pt6aJBM"  visual="youtu.be/0VT4pt6aJBM"> Derivada de <m>y=(\ln{x})^x</m> .</url>
-          
-        </p>
-    </li>
-     
-</ul>    
-
-   
-</subsection>
-
-<exercises xml:id="exercises-log">
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem1.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem2.pg" />
-</exercise>
-
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem3.pg" />
-</exercise>
-
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem4.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem5.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem6.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem7.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem8.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem9.pg" />
-</exercise>
-
-
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem10.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem11.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem12.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem13.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem14.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem15.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem16.pg" />
-</exercise>
-
-<exercise>
-<webwork source="/pretext-derivada-log/problem17.pg" />
-</exercise>
-<exercise>
-<webwork source="/pretext-derivada-log/problem18.pg" />
-</exercise>
-
-
-</exercises>
-
-</section>
-<references xml:id="references-backmatter">
-    <title>Referências</title>   
-    <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido. </title> <journal>Cengage Learning</journal>, 2011.</biblio>
-    <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title> <journal>Bookman</journal>, 2007.</biblio>
-    <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title> <journal>LTC</journal>, 2004.</biblio>
-    <biblio type="raw" xml:id="biblio-04">STEWART, James. <title>Cálculo, Volume I.</title> <journal>Cengage Learning</journal>, 2013.</biblio>
-    <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de Computação
-Matemática com SageMath. </title> <journal>SBM</journal>, 2019.</biblio>
-</references>
-
-</article>
+                </answer>
+            </exercise>
+
+
+            <exercise>
+                <statement>
+                    <p>
+                        Determine a derivada de <m>y=\ln{3x+1}</m>.
+                    </p>
+                </statement>
+
+                <answer>
+                    <p>
+                        <m>\frac{3}{3 \, x + 1}</m>
+                    </p>
+                </answer>
+            </exercise>
+
+            <subsection>
+                <title>A derivada de <m>\mathbf{\dfrac{\dd}{\dd x}\left[a^x\right]}</m>.
+                </title>
+
+                <p>Agora podemos determinar a derivada de <m>a^x</m>.
+                    <md>
+                        <mrow>
+                            f(x)\amp= a^x\amp \ct{Tomando o $\log$ em ambos os lados}
+                        </mrow>
+                        <mrow>
+                            \ln f(x)\amp= x \ln a\amp \ct{Exponenciar na base $e$ em ambos os lados}
+                        </mrow>
+                        <mrow>
+                            f(x)\amp= e^{x \ln a}\qquad \qquad\qquad \qquad \ct{Regra da Cadeia}
+                        </mrow>
+                        <mrow>
+                            f'(x)\amp= e^{x \ln{a}} \cdot \ln{a}
+                        </mrow>
+                        <mrow>
+                            \amp= a^x \cdot \ln{a}
+                        </mrow>
+                    </md>
+                    Observe que também poderíamos ter feito o seguinte:
+                    <md>
+                        <mrow>
+                            f(x)\amp= a^x\amp \ct{Tomando o $\log$ de ambos os lados}
+                        </mrow>
+                        <mrow>
+                            \ln f(x)\amp= x \ln a\amp \ct{derivando ambos os lados}
+                        </mrow>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} \left( \ln f(x) \right)\amp=
+                            \ln a
+                        </mrow>
+                        <intertext>Em seguida, processamos o lado esquerdo usando a Regra da Cadeia</intertext>
+                        <mrow>
+                            f'(x) \cdot \frac{1}{f(x)}\amp= \ln a
+                        </mrow>
+                        <mrow>
+                            f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
+                        </mrow>
+                    </md>
+                    Nós veremos <m>\dfrac{\dd}{\dd x}\left[\ln f(x)\right]</m> mais adiante.
+                </p>
+
+                <p>Para resumir os resultados obtidos acima:</p>
+                <corollary xml:id="cor_2_10">
+                    <statement>
+                        <p>
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}
+                                </mrow>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer
+                                    $a \gt 0, a \neq 1$}
+                                </mrow>
+                            </md>
+                            onde <m>\ln x</m> é o logaritmo natural.
+                        </p>
+                    </statement>
+                </corollary>
+
+                <p>Lembre-se de que precisamos da ressalva <m>a \neq 1</m> porque a base 1 do logaritmo não está bem
+                    definida.
+                    Isso ocorre porque <m>1^x = 1</m> para qualquer <m>x</m>. Não precisamos de uma advertência
+                    semelhante para a derivada da exponencial porque sabemos
+
+                    <md>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} 1^x\amp= \dfrac{\dd}{\dd x} 1= 0\amp\ct{Enquanto o}\,
+                            <xref ref="cor_2_10"/>
+                            \,\ct{acima nos diz}
+                        </mrow>
+                        <mrow>
+                            \amp= \ln 1 \cdot 1^x = 0 \cdot 1 = 0.
+                        </mrow>
+                    </md>
+                </p>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            Determine <m>y'</m> sabendo que <m>y=\ln{(x^3+1)}</m>.
+                        </p>
+                    </statement>
+
+                    <answer>
+                        <p>
+                            <m>\frac{3x^2}{x^3+1}</m>
+                        </p>
+                    </answer>
+                </exercise>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            Derive <m>f(x)=10^x</m>.
+                        </p>
+                    </statement>
+
+                    <answer>
+                        <p>
+                            <m>10^{x} \ln\left(10\right)</m>
+                        </p>
+                    </answer>
+                </exercise>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            Derive <m>f(x)=\log_{10}(2+\sin{x})</m>.
+                        </p>
+                    </statement>
+
+                    <answer>
+                        <p>
+                            <m>\dfrac{\cos{x}}{(2+\sin{x})\ln{10}}</m>
+                        </p>
+                    </answer>
+                </exercise>
+
+            </subsection>
+
+
+            <subsection>
+                <title>Derivação Logarítmica</title>
+
+
+                <example xml:id="ex-5">
+                    <title>Derivada de um produto triplo</title>
+                    <statement>
+                        <p>
+                            Seja
+                            <md>
+                                <mrow>
+                                    P(x)\amp= F(x) \cdot G(x) \cdot H(x)
+                                </mrow>
+                            </md>
+                            Encontre uma fórmula para derivada de <m>P(x)</m>.
+                        </p>
+                    </statement>
+
+
+                    <solution>
+
+                        <p>
+
+                            Comece tomando o logaritmo de ambos os lados:
+                            <md>
+                                <mrow>
+                                    \ln P(x)\amp= \ln \left( F(x) \cdot G(x) \cdot H(x) \right)
+                                </mrow>
+                                <mrow>
+                                    \amp= \ln F(x) + \ln G(x) + \ln H(x)
+                                </mrow>
+                                <intertext>Observe que o produto de funções do lado direito tornou-se uma soma de
+                                    funções.
+                                    Diferenciar somas é muito mais fácil do que derivar produtos. Então quando derivamos
+                                    temos
+                                </intertext>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x}\ln P(x) \amp= \dfrac{\dd}{\dd x}\ln F(x) + \dfrac{\dd}{\dd x}\ln
+                                    G(x) + \dfrac{\dd}{\dd x}\ln H(x)
+                                </mrow>
+                                <intertext>Uma aplicação rápida da Regra da Cadeia mostra que <m>\dfrac{\dd}{\dd x}\ln
+                                    f(x) = f'(x) / f(x)</m>:
+                                </intertext>
+                                <mrow>
+                                    \frac{P'(x)}{P(x)}\amp= \frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}
+                                </mrow>
+                                <intertext>Multiplique por <m>P(x)=F(x)G(x)H(x)</m>:
+                                </intertext>
+                                <mrow>
+                                    P'(x)\amp=
+                                    \left(\frac{F'(x)}{F(x)}+\frac{G'(x)}{G(x)}+\frac{H'(x)}{H(x)}\right)\cdot
+                                    F(x)G(x)H(x)
+                                </mrow>
+                                <mrow>
+                                    \amp= F'(x)G(x)H(x) + F(x)G'(x)H(x) + F(x)G(x)H'(x)
+                                </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </example>
+
+                <p>Esse mesmo truque de <q>pegar um logaritmo e depois derivar</q>
+                    <mdash/>
+                    ou derivação logarítmica
+                    <mdash/>
+                    funcionará sempre que tivermos um produto (ou
+                    quociente) de funções.
+                </p>
+
+
+                <exercise>
+                    <statement>
+                        <p>
+                            Use a fórmula do
+                            <xref ref="ex-5"/>
+                            para encontrar a derivada de
+                            <m>2^x(x^2+1)\ln{x}</m>
+                        </p>
+                    </statement>
+
+                    <answer>
+                        <p>
+                            <m>\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x
+                                \log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}
+                            </m>
+                        </p>
+                    </answer>
+                </exercise>
+
+
+                <!-- <example xml:id="eg_2_10_4"><title>Derivative of a messy product</title>
+                <p>
+                Lets use logarithmic differentiation on the function from
+                Example<nbsp/><xref ref="eg_DIFFsimpleToolsNB"/>:
+                <md>
+                <mrow>
+                f(x)\amp=\frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+                </mrow>
+                </md>
+                Beware however, that we may only take the logarithm of positive numbers, and this <m>f(x)</m> is often negative.
+                For example, if <m> 1 \lt x \lt 2 </m>, the factor <m>(1-x^2)</m> in the definition of <m>f(x)</m> is negative while all of the other factors are positive, so that <m>f(x)\lt 0 </m>.
+                None<ndash/>the<ndash/>less, we can use logarithmic differentiation to find <m>f'(x)</m>,  by exploiting the observation that <m>\dfrac{\dd}{\dd x}\ln|f(x)|=\frac{f'(x)}{f(x)}</m>.
+                (To see this, use the chain rule and Example<nbsp/><xref ref ="eg_diff_log_abs_x"/>.)
+                So we take the logarithm of <m>|f(x)|</m> and expand.
+                <md>
+                <mrow>
+                \ln |f(x)|\amp = \ln \frac{|\sqrt{x}-1|\,|2-x|\,|1-x^2|}{\sqrt{x}|3+2x|}
+                </mrow><mrow>
+                 \amp = \ln|\sqrt{x}\!-\!1| + \ln|2\!-\!x| + \ln|1\!-\!x^2| -
+                \underbrace{\ln(\sqrt{x})}_{=\frac{1}{2}\ln x} - \ln|3\!+\!2x|
+                </mrow>
+                </md>
+                Now we can essentially just differentiate term-by-term:
+                <md>
+                <mrow>
+                \dfrac{\dd}{\dd x}\ln |f(x)|\amp= \dfrac{\dd}{\dd x} \Big(
+                  \ln|\sqrt{x}-1| + \ln|2-x| + \ln|1-x^2|
+                </mrow><mrow>
+                \amp\hskip2in- \frac{1}{2}\ln|x| - \ln|3+2x|
+                 \Big)
+                </mrow><mrow>
+                \frac{f'(x)}{f(x)}\amp= \frac{1/(2\sqrt{x})}{\sqrt{x}-1}
+                  + \frac{-1}{2-x} + \frac{-2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+                </mrow><mrow>
+                f'(x)\amp= f(x) \cdot \left( \frac{1}{2 \sqrt{x} (\sqrt{x}\!-\!1)}
+                  - \frac{1}{2\!-\!x} - \frac{2x}{1\!-\!x^2} - \frac{1}{2x} - \frac{2}{3\!+\!2x}
+                \right)
+                </mrow><mrow>
+                 \amp= \frac{(\sqrt{x}-1)(2-x)(1-x^2)}{\sqrt{x}(3+2x)}
+                  \cdot
+                </mrow><mrow>
+                \amp\hskip0.5in\left( \frac{1}{2 \sqrt{x} (\sqrt{x}-1)}
+                  - \frac{1}{2-x} - \frac{2x}{1-x^2} - \frac{1}{2x} - \frac{2}{3+2x}
+                \right)
+                </mrow>
+                </md>
+                just as we found previously.
+                </p></example> -->
+            </subsection>
+
+
+            <subsection xml:id="sugestao-video-1">
+                <title>Sugestão de vídeos</title>
+
+                <ul>
+                    <li>
+                        <p>
+
+                            <url href="https://youtu.be/QMXEbwAZ6aE" visual="youtu.be/QMXEbwAZ6aE">Derivada do <m>
+                                y=\sin{(\ln{x^2})}
+                            </m> .
+                            </url>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+
+                            <url href="https://youtu.be/YzU7zKUEH_Y" visual="https://youtu.be/YzU7zKUEH_Y">Derivadas
+                                disfarçadas.
+                            </url>
+
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+
+                            <url href="https://youtu.be/65N8lfcs7HY" visual="youtu.be/65N8lfcs7HY">Derivada de <m>
+                                y=x^x
+                            </m> .
+                            </url>
+
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+
+                            <url href="https://youtu.be/0VT4pt6aJBM" visual="youtu.be/0VT4pt6aJBM">Derivada de <m>
+                                y=(\ln{x})^x
+                            </m> .
+                            </url>
+
+                        </p>
+                    </li>
+
+                </ul>
+
+
+            </subsection>
+
+            <exercises xml:id="exercises-log">
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem1.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem2.pg"/>
+                </exercise>
+
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem3.pg"/>
+                </exercise>
+
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem4.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem5.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem6.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem7.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem8.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem9.pg"/>
+                </exercise>
+
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem10.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem11.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem12.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem13.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem14.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem15.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem16.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem17.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="/pretext-derivada-log/problem18.pg"/>
+                </exercise>
+
+
+            </exercises>
+
+        </section>
+        <references xml:id="references-backmatter">
+            <title>Referências</title>
+            <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido.</title>
+                <journal>Cengage Learning</journal>, 2011.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-02">ANTON, Howard; BIVENS, Irl; DAVIS, Stephen. <title>Cálculo.</title>
+                <journal>Bookman</journal>, 2007.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-03">HUGHES, Hallet et al. <title>Cálculo de uma variável.</title>
+                <journal>LTC</journal>, 2004.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-04">STEWART, James. <title>Cálculo, Volume I.</title>
+                <journal>Cengage Learning</journal>, 2013.
+            </biblio>
+            <biblio type="raw" xml:id="biblio-05">SILVA, Leon; SANTOS, Marcelo; Machado, Ricardo. <title>Elementos de
+                Computação
+                Matemática com SageMath.
+            </title>
+                <journal>SBM</journal>, 2019.
+            </biblio>
+        </references>
+
+    </article>
 
 </pretext>
 
