@@ -181,7 +181,7 @@ logaritmos em matemática.
 
 <p>O logaritmo natural herda muitas propriedades de
 logaritmos. Então, para todo <m>x,y \gt 0</m> vale o seguinte:
-
+</p>
 <assemblage xml:id="assemblage-log-prop">
   <title>Propriedades do Logaritmo</title>
   <p>
@@ -209,6 +209,8 @@ x=\tfrac{\ln_a x}{\ln_a e}</m>
 </ul>
   </p>
 </assemblage>
+
+<p>
 E, finalmente, devemos lembrar que <m>\ln x</m> tem domínio (ou seja, é definido para) <m>x \gt 0</m> e intervalo
 (ou seja, recebe todos os valores) <m>-\infty \lt x \lt \infty</m>.
 +
