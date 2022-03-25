@@ -244,7 +244,7 @@ Isso não parece complicado. Mas  temos a regra da cadeia, e sabemos que o logar
   x\amp= e^{\ln x}
 </mrow>
 </md>
-Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada. ou seja, estamos usando
+Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada. Isto é, estamos usando
 <fn>Observe que só porque as derivadas são as mesmas, não significa que as funções originais são as mesmas.
 Ambas <m>f(x)=x^2</m> e <m>g(x)=x^2+3</m> tem a derivada <m>f'(x)=g'(x)=2x</m>, mas <m>f(x)
 \neq g(x)</m>. </fn>
