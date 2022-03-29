@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-29T18:36:02-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Seja <span class="process-math">\(y=f(x)=\sin(x)\text{.}\)</span> Gostaríamos de encontrar a função inversa que recebe <span class="process-math">\(y\)</span> e nos retorna um único <span class="process-math">\(x\)</span> de modo que <span class="process-math">\(\sin(x)=y\text{.}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/sinInv.svg" role="img" class="contained"></div></div></div>
+<ul class="disc">
+<li><p>Para cada número real <span class="process-math">\(Y\text{,}\)</span> o número de valores <span class="process-math">\(x\)</span> que obedecem a <span class="process-math">\(\sin(x)=Y\)</span> é exatamente o número de vezes que a reta horizontal <span class="process-math">\(y=Y\)</span> intercepta o gráfico de <span class="process-math">\(\sin(x)\text{.}\)</span></p></li>
+<li><p>Quando <span class="process-math">\(-1\le Y\le 1\text{,}\)</span> a linha horizontal cruza o gráfico infinitas vezes. Isso é ilustrado na figura acima pela reta <span class="process-math">\(y=0,3\text{.}\)</span></p></li>
+<li><p>Por outro lado, quando <span class="process-math">\(Y \lt -1\)</span> ou <span class="process-math">\(Y \gt 1\text{,}\)</span> a reta <span class="process-math">\(y=Y\)</span> nunca cruza o gráfico de <span class="process-math">\(\sin(x)\text{.}\)</span> Isso é ilustrado na figura acima pela reta <span class="process-math">\(y=-1.2\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Este é exatamente o teste da linha horizontal e mostra que a função seno não é injetora.</p>
+<p>Agora considere a função</p>
+<div class="displaymath process-math">
+\begin{align*}
+y \amp= \sin(x) \amp \text{com domínio } -\frac{\pi}{2} \leq x \leq
+\frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Esta função tem a mesma fórmula, mas o domínio foi restringido para que, como mostraremos agora, o teste da reta horizontal seja satisfeito.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/sinInvB.svg" role="img" class="contained"></div></div></div>
+<p>Como vimos acima quando <span class="process-math">\(|Y| \gt 1\)</span> não <span class="process-math">\(x\)</span> obedece a <span class="process-math">\(\sin(x)=Y\)</span> e, para cada <span class="process-math">\(-1\le Y\le 1\)</span> , a reta <span class="process-math">\(y=Y\)</span> (ilustrada na figura acima com <span class="process-math">\(y=0,3\)</span>) cruza a curva <span class="process-math">\(y=\sin(x)\)</span> infinitas vezes, de modo que existem infinitos <span class="process-math">\(x\)</span>'s que obedecem a <span class="process-math">\(f(x)=\sin x=Y\text{.}\)</span> No entanto, exatamente um desses cruzamentos (o ponto na figura) tem <span class="process-math">\(-\frac{\pi}{2}\le x \le\frac{\pi}{2}\text{.}\)</span></p>
+<p>Isto é, para cada <span class="process-math">\(-1\le Y \le 1\text{,}\)</span> existe exatamente um <span class="process-math">\(x\text{,}\)</span> digamos <span class="process-math">\(X\text{,}\)</span> que obedece a ambos</p>
+<div class="displaymath process-math">
+\begin{align*}
+\sin X \amp= Y \amp\text{e} \amp\amp -\frac{\pi}{2}\le X \le \frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Esse valor único, <span class="process-math">\(X\text{,}\)</span> é normalmente denotado por <span class="process-math">\(\arcsin(Y)\text{.}\)</span> Isto é,</p>
+<div class="displaymath process-math">
+\begin{align*}
+\sin( \arcsin(Y) ) \amp= Y \amp \text{e} \amp \amp -\frac{\pi}{2}\le
+\arcsin(Y)
+\le\frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Renomeando <span class="process-math">\(Y\rightarrow x\text{,}\)</span> a função inversa <span class="process-math">\(\arcsin(x)\)</span> é definida para todos os <span class="process-math">\(-1 \le x \le 1\)</span> e é determinada pela equação</p>
+<article class="fact theorem-like"><h5 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h5>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\big(\arcsin(x)\big)=x\qquad\text{and}\qquad
+-\frac{\pi}{2}\le \arcsin(x)\le\frac{\pi}{2}.
+\end{equation*}
+</div></article><p>Observe que muitos textos usarão <span class="process-math">\(\sin^{-1}(x)\)</span> para denotar arcsine, mas usaremos <span class="process-math">\(\arcsin(x)\)</span> já que entendemos ser mais claro; o leitor deve reconhecer ambos.</p>
+</div></body>
+</html>

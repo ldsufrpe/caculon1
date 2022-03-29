@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-29T18:36:02-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">A derivada de <span class="process-math">\(\arccsc x\)</span>.</span>
+</h4>
+<p>Para encontrar a derivada de <span class="process-math">\(\arccsc\)</span> podemos usar sua definição e a Regra da Cadeia.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\theta \amp= \arccsc x \amp \text{tomar cossecante de ambos os lados}\\
+\csc \theta \amp= x \amp \text{mas $\csc \theta = \frac{1}{\sin\theta}$, então inverte
+ambos os lados}\\
+\sin \theta \amp= \frac{1}{x} \amp \text{agora pegue arco-seno de ambos os lados}\\
+\theta \amp= \arcsin\left(\frac{1}{x}\right)
+\end{align*}
+</div>
+<p class="continuation">Agora basta diferenciar, cuidadosamente usando a Regra da Cadeia:</p>
+<div class="displaymath process-math">
+\begin{align*}
+\dfrac{\dd \theta}{\dd x} \amp= \dfrac{\dd}{\dd x} \arcsin\left(\frac{1}{x}\right)\\
+\amp= \frac{1}{\sqrt{1-x^{-2}}} \cdot \frac{-1}{x^2}\\
+\end{align*}
+<p class="intertext">Para simplificar ainda mais, fatoraremos <span class="process-math">\(x^{-2}\)</span> da raiz quadrada. Precisamos ter um pouco de cuidado ao fazer isso.</p>
+\begin{align*}
+\amp= \frac{1}{\sqrt{x^{-2}(x^2-1)}} \cdot \frac{-1}{x^2}\\
+\amp= \frac{1}{|x^{-1}|\cdot \sqrt{x^2-1}} \cdot \frac{-1}{x^2} \amp \text{note que
+$x^2 \cdot |x^{-1}| = |x|$.}\\
+\amp= - \frac{1}{|x|\sqrt{x^2-1}}
+\end{align*}
+</div>
+<p>Da mesma forma, podemos encontrar a derivada da função trigonométrica inversa restante. Usamos apenas sua definição, uma derivada que já conhecemos e a Regra da Cadeia.</p>
+<div class="displaymath process-math">
+\begin{gather*}
+\dfrac{\dd}{\dd x} \arcsec(x) = \dfrac{\dd}{\dd x} \arccos\Big(\frac{1}{x}\Big)
+=-\frac{1}{\sqrt{1-\frac{1}{x^2}}}\cdot\Big(-\frac{1}{x^2}\Big)
+=\frac{1}{|x|\sqrt{x^2-1}}
+\end{gather*}
+</div></article><span class="incontext"><a href="section-1.html#eg_2_12_3" class="internal">em contexto</a></span>
+</body>
+</html>

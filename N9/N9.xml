@@ -63,9 +63,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             \DeclareMathOperator{\arcsin}{arc \,sen}
             \DeclareMathOperator{\arccos}{arc \,cos}
             \DeclareMathOperator{\csc}{cossec}
+            \DeclareMathOperator{\arccsc}{arc\,cossec}
             \DeclareMathOperator{\tan}{tg}
             \DeclareMathOperator{\arctan}{arc\,tg}
             \DeclareMathOperator{\cot}{cotg}
+            \DeclareMathOperator{\arccot}{arc\,cotg}
         </macros>
 
         <latex-image-preamble>
@@ -119,17 +121,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <ol>
                     <li>
                         <p>
-                            implicita
+                            Conceito de derivação implicita.
                         </p>
                     </li>
                     <li>
                         <p>
-                            implicita 2
+                            Funções trigonométricas inversas.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Implicite
+                            Derivada das funções trigonométricas inversas.
                         </p>
                     </li>
 
@@ -139,7 +141,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <introduction>
                 <p>
-                    Texto
+                    Aqui vamos apresentar o conceito de derivação implicita e mais adiante usá-lo para calcular derivada
+                    de funções trigonométricas inversas.
                 </p>
             </introduction>
 
@@ -230,7 +233,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 <li>Substituindo <m>x=1,\ f(1)=-1</m> nos dá
                                     <md>
                                         <mrow>
-                                            f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ and so } f'(1)=-\frac{2}{3}
+                                            f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ e então } f'(1)=-\frac{2}{3}
                                         </mrow>
                                     </md>
                                 </li>
@@ -266,7 +269,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <intertext>E agora substitua <m>x=1, y=-1</m> para obter
                         </intertext>
                         <mrow>
-                            y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{and so}
+                            y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{e assim}
                         </mrow>
                         <mrow>
                             y'(1) \amp= -\frac{2}{3}
@@ -733,21 +736,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                     <li>
                         <p>
-                            <url href="https://youtu.be/3qcaLLRC768" visual="youtu.be/3qcaLLRC768"> Derivando implicitamente
+                            <url href="https://youtu.be/3qcaLLRC768" visual="youtu.be/3qcaLLRC768">Derivando
+                                implicitamente
                                 a equação <m>x^2+ (y-x)^3=28</m>.
                             </url>
                         </p>
                     </li>
                     <li>
                         <p>
-                            <url href="https://youtu.be/ketEn6vDx8U" visual="https://youtu.be/ketEn6vDx8U"> A derivação implicita versos derivação explicita
+                            <url href="https://youtu.be/ketEn6vDx8U" visual="https://youtu.be/ketEn6vDx8U">A derivação
+                                implicita versos derivação explicita
                             </url>
                         </p>
                     </li>
 
                     <li>
                         <p>
-                            <url href="https://youtu.be/QU0QOWbrS7M" visual="youtu.be/ketEn6vDx8U"> Obtendo  <m>
+                            <url href="https://youtu.be/QU0QOWbrS7M" visual="youtu.be/ketEn6vDx8U">Obtendo  <m>
                                 \dfrac{\dd y}{\dd x}
                             </m> sabendo que <m>y=\cos{(5x-3y)}</m>.
                             </url>
@@ -755,7 +760,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </li>
                     <li>
                         <p>
-                            <url href="https://youtu.be/Qpm0PEQ_niU" visual="youtu.be/Qpm0PEQ_niU"> Obtendo  <m>
+                            <url href="https://youtu.be/Qpm0PEQ_niU" visual="youtu.be/Qpm0PEQ_niU">Obtendo  <m>
                                 \dfrac{\dd y}{\dd x}
                             </m> sabendo que <m>y=(x^2+y^2)^3 = 5x^2y^2</m>.
                             </url>
@@ -764,48 +769,632 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                     <li>
                         <p>
-                            <url href="https://youtu.be/7eJfg-nzK1c" visual="youtu.be/7eJfg-nzK1c"> Se <m>e^{xy^2}=x-y</m>
-                            calcule <m>\dfrac{\dd y}{\dd x}</m>.
+                            <url href="https://youtu.be/7eJfg-nzK1c" visual="youtu.be/7eJfg-nzK1c">Se
+                                <m>e^{xy^2}=x-y</m>
+                                calcule <m>\dfrac{\dd y}{\dd x}</m>.
                             </url>
                         </p>
                     </li>
 
                 </ul>
             </subsection>
-        <!--TODO Add subseção:Derivada das funções inversas-->
-        <!--TODO Add subseção:Derivada das funções inversas trigonométricas-->
 
-             <subsection xml:id="sub-videos-2">
+
+            <subsection>
+                <title>Funções trigonométricas inversas</title>
+                <introduction>
+                    <p>Uma aplicação muito útil da diferenciação implícita é encontrar as derivadas de funções inversas.
+                        Já usamos essa abordagem para encontrar a derivada da inversa da função exponencial
+                        <mdash/>
+                        o logaritmo.
+                    </p>
+
+                    <p>Vamos agora considerar o problema de encontrar as derivadas das inversas de funções
+                        trigonométricas. Antes vamos lembrar que para uma função <m>f(x)</m> dada, sua função inversa <m>
+                            f^{-1}(x)
+                        </m> só existe, com domínio <m>D</m>,
+                        quando <m>f(x)</m> passa no <q>teste da reta horizontal</q>, que diz que para cada <m>Y</m> em <m>
+                            D
+                        </m> a reta horizontal <m>y=Y</m> intercepta o gráfico <m>y=f(x)</m> exatamente uma vez. (Ou
+                        seja, <m>f(x)</m> é uma função injetora.)
+                    </p>
+
+                    <p>Vamos começar brincando com a função seno e determinar como restringir o domínio de <m>\sin x</m> para
+                        que sua função inversa exista.
+                    </p>
+
+                    <example xml:id="eg_INVstilllesslucky">
+                        <title>A inversa da função
+                            <m>\sin x</m>
+                        </title>
+
+                        <statement>
+                            <p>Encontre a inversa da função
+                                <m>\sin{x}</m>
+                            </p>
+
+                        </statement>
+                        <solution>
+                            <p>
+                                Seja <m>y=f(x)=\sin(x)</m>. Gostaríamos de encontrar a função inversa que recebe
+                                <m>y</m>
+                                e nos retorna um único <m>x</m> de modo que <m>\sin(x)=y</m>.
+                            </p>
+
+                            <sidebyside width="75%">
+                                <image source="images/sinInv"/>
+                            </sidebyside>
+
+                            <p>
+                                <ul>
+                                    <li>Para cada número real <m>Y</m>, o número de valores <m>x</m> que obedecem a <m>
+                                        \sin(x)=Y
+                                    </m> é exatamente o número de vezes que a reta horizontal <m>y=Y</m> intercepta o
+                                        gráfico de <m>\sin(x)</m>.
+                                    </li>
+                                    <li>Quando <m>-1\le Y\le 1</m>, a linha horizontal cruza o gráfico infinitas vezes.
+                                        Isso é ilustrado na figura acima pela reta <m>y=0,3</m>.
+                                    </li>
+                                    <li>Por outro lado, quando <m>Y \lt -1</m> ou <m>Y \gt 1</m>, a reta <m>y=Y</m> nunca
+                                        cruza o gráfico de <m>\sin(x)</m>. Isso é ilustrado na figura acima pela
+                                        reta <m>y=-1.2</m>.
+                                    </li>
+                                </ul>
+                                Este é exatamente o teste da linha horizontal e mostra que a função seno não é injetora.
+                            </p>
+
+                            <p>Agora considere a função
+                                <md>
+                                    <mrow>
+                                        y \amp= \sin(x) \amp \text{com domínio } -\frac{\pi}{2} \leq x \leq
+                                        \frac{\pi}{2}
+                                    </mrow>
+                                </md>
+                                Esta função tem a mesma fórmula, mas o domínio foi restringido para que, como
+                                mostraremos agora, o teste da reta horizontal seja satisfeito.
+                            </p>
+
+                            <sidebyside width="75%">
+                                <image source="images/sinInvB"/>
+                            </sidebyside>
+
+                            <p>Como vimos acima quando <m>|Y| \gt 1</m> não <m>x</m> obedece a <m>\sin(x)=Y</m> e, para
+                                cada <m>-1\le Y\le 1</m> , a reta <m>y=Y</m> (ilustrada na figura acima com <m>
+                                    y=0,3</m>) cruza a curva <m>y=\sin(x)</m> infinitas vezes, de modo que existem
+                                infinitos <m>x</m>'s que obedecem a <m>f(x)=\sin x=Y</m>. No entanto, exatamente um
+                                desses cruzamentos (o ponto na figura) tem <m>-\frac{\pi}{2}\le x \le\frac{\pi}{2}</m>.
+                            </p>
+
+                            <p>Isto é, para cada <m>-1\le Y \le 1</m>, existe exatamente um <m>x</m>, digamos <m>X</m>,
+                                que obedece a ambos
+                                <md>
+                                    <mrow>
+                                        \sin X \amp= Y \amp\text{e} \amp\amp -\frac{\pi}{2}\le X \le \frac{\pi}{2}
+                                    </mrow>
+                                </md>
+                                Esse valor único, <m>X</m>, é normalmente denotado por <m>\arcsin(Y)</m>. Isto é,
+                                <md>
+                                    <mrow>
+                                        \sin( \arcsin(Y) ) \amp= Y \amp \text{e} \amp \amp -\frac{\pi}{2}\le
+                                        \arcsin(Y)
+                                        \le\frac{\pi}{2}
+                                    </mrow>
+                                </md>
+                                Renomeando <m>Y\rightarrow x</m>, a função inversa <m>\arcsin(x)</m> é definida para
+                                todos os <m>-1 \le x \le 1</m> e é determinada pela equação
+                            </p>
+
+                            <fact xml:id="eq_DIFFarcsin">
+                                <statement>
+                                    <p>
+                                        <me>
+                                            \sin\big(\arcsin(x)\big)=x\qquad\text{and}\qquad
+                                            -\frac{\pi}{2}\le \arcsin(x)\le\frac{\pi}{2}.
+                                        </me>
+                                    </p>
+                                </statement>
+                            </fact>
+
+                            <p>Observe que muitos textos usarão <m>\sin^{-1}(x)</m> para denotar arcsine, mas usaremos
+                                <m>\arcsin(x)</m>
+                                já que entendemos ser mais claro; o leitor deve reconhecer ambos.
+                            </p>
+                        </solution>
+                    </example>
+
+                    <example xml:id="eg_DIFFinvsin">
+                        <title>Mais sobre a inversa de
+                            <m>\sin x</m>
+                        </title>
+                        <p>
+                            Desde que
+                            <me>
+                                \sin\frac{\pi}{2}=1\qquad\sin\frac{\pi}{6}=\frac{1}{2}
+                            </me>
+                            e <m>-\frac{\pi}{2}\le \frac{\pi}{6},\frac{\pi}{2}\le \frac{\pi}{2}</m>,
+                            temos
+                            <me>
+                                \arcsin 1= \frac{\pi}{2}\qquad \arcsin \frac{1}{2}= \frac{\pi}{6}
+                            </me>
+                            Apesar de
+                            <me>
+                                \sin(2\pi)=0
+                            </me>
+                            <alert>não</alert>
+                            é verdade que <m>\arcsin 0 =2\pi</m>, e <alert>não</alert> é verdade que <m>
+                            \arcsin\big(\sin(2\pi)\big)
+                            =2\pi</m>, pois <m>2\pi</m> não está entre <m>-\frac{\pi}{2}</m> e <m>\frac{\pi}{2}</m>.
+                            Mais geralmente
+                            <md>
+                                <mrow>
+                                    \arcsin\big(\sin(x)\big) \amp=\text{ o ângulo único } \theta \text{entre }
+                                    -\frac{\pi}{2} \text{ e } \frac{\pi}{2} \text{ satisfazendo } \sin \theta =\sin x
+                                </mrow>
+                                <mrow>
+                                    \amp= x\quad\text{if and only if $-\frac{\pi}{2}\le x\le \frac{\pi}{2}$}
+                                </mrow>
+                            </md>
+                            Então, por exemplo,
+                            <m>\arcsin\big(\sin\big(\frac{11\pi}{16}\big)\big)</m>
+                            não pode ser <m>\frac{11\pi}{16}</m> pois <m>\frac{11\pi}{16}</m> é maior que <m>
+                            \frac{\pi}{2}</m>. Então, como podemos encontrar a resposta correta? Comece esboçando o
+                            gráfico de <m>\sin(x)</m>.
+                        </p>
+
+                        <sidebyside width="75%">
+                            <image source="images/sinInvEg"/>
+                        </sidebyside>
+
+                        <p>Parece que o gráfico de <m>\sin x</m> é simétrico em relação a <m>x=\frac{\pi}{2}</m>.
+                            Matemáticamente, dizemos que
+                            <q>o gráfico de <m>\sin x</m> é simétrico em relação a
+                                <m>x=\frac{\pi}{2}</m>
+                            </q>
+                            quando
+                            <q>
+                                <m>\sin(\frac{\pi}{2}-\theta)=
+                                    \sin(\frac{\pi}{2}+\theta)
+                                </m>
+                            </q>
+                            para todo <m>\theta</m>.
+                        </p>
+
+                        <p>Agora <m>\frac{11\pi}{16}=\frac{\pi}{2} +\frac{3\pi}{16}</m> então
+                            <me>
+                                \sin\Big(\frac{11\pi}{16}\Big)
+                                =\sin\Big(\frac{\pi}{2}+\frac{3\pi}{16}\Big)
+                                =\sin\Big(\frac{\pi}{2}-\frac{3\pi}{16}\Big)
+                                =\sin\Big(\frac{5\pi}{16}\Big)
+                            </me>
+                            e, visto que <m>\frac{5\pi}{16}</m> está entre <m>-\frac{\pi}{2}</m> e
+                            <m>\frac{\pi}{2}</m>,
+                            <me>
+                                \arcsin\Big(\sin\Big(\frac{11\pi}{16}\Big)\Big)
+                                =\frac{5\pi}{16}\qquad\Big(\text{e não $\frac{11\pi}{16}$}\Big).
+                            </me>
+                        </p>
+
+                    </example>
+
+                </introduction>
+
+
+            </subsection>
+
+
+            <!--TODO Add subseção:Derivada das funções inversas trigonométricas-->
+            <subsection>
+                <title>Derivadas de funções trigonométricas inversas</title>
+                <p>Agora que exploramos a função arco-seno, estamos prontos para encontrar sua derivada.
+                    Vamos fazer
+                    <md>
+                        <mrow>
+                            \arcsin(x) \amp= \theta(x),
+                        </mrow>
+                    </md>
+                    de modo que a derivada que estamos procurando é <m>\dfrac{\dd \theta}{\dd x}</m>. A equação acima é
+                    (depois
+                    de tomar seno de ambos os lados) equivalente a
+                    <md>
+                        <mrow>
+                            \sin(\theta) \amp= x
+                        </mrow>
+                    </md>
+                    Agora derive isso usando a derivação implícita (só temos que lembrar que <m>\theta</m> varia
+                    com <m>x</m> e use a Regra da Cadeia com cuidado):
+                    <md>
+                        <mrow>
+                            \cos(\theta) \cdot \dfrac{\dd \theta}{\dd x} \amp= 1
+                        </mrow>
+                        <mrow>
+                            \dfrac{\dd \theta}{\dd x} \amp= \frac{1}{\cos(\theta)} \amp \text{use $\theta = \arcsin x$}
+                        </mrow>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} \arcsin x \amp= \frac{1}{\cos(\arcsin x)}
+                        </mrow>
+                    </md>
+                    Isso não parece tão ruim, mas não é muito satisfatório porque o lado direito é expresso em termos de <m>
+                        \arcsin(x)
+                    </m> e não temos uma fórmula explícita para <m>\arcsin (x)</m>.
+                </p>
+
+                <p>No entanto, mesmo sem uma fórmula explícita para <m>\arcsin(x)</m>, é simples obter uma fórmula
+                    explícita para <m>\cos\big(\arcsin(x)\big)</m>, que é tudo o que precisamos. Basta desenhar um
+                    triângulo retângulo
+                    <ndash/>
+                    com um ângulo sendo <m>\arcsin(x)</m>. Isso é feito na figura
+                    abaixo.
+                </p>
+
+                <sidebyside width="25%">
+                    <image source="images/triangleAsin"/>
+                </sidebyside>
+
+                <p>Já que <m>\sin(\theta)=x</m> (veja<xref ref="eq_DIFFarcsin"/>),
+                    fizemos o lado oposto ao ângulo <m>\theta</m> de comprimento <m>x</m> e a hipotenusa de comprimento <m>
+                        1</m>. Depois, por Pitágoras, o lado adjacente
+                    <m>\theta</m>
+                    tem comprimento <m>\sqrt{1-x^2}</m> e então
+                    <md>
+                        <mrow>
+                            \cos\big(\arcsin(x)\big)=\cos(\theta)=\sqrt{1-x^2}
+                        </mrow>
+                    </md>
+                    que por sua vez nos dá a resposta que precisamos:
+                    <md>
+                        <mrow>
+                            \dfrac{\dd}{\dd x} \arcsin(x) =\frac{1}{\sqrt{1-x^2}}
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>As definições para <m>\arccos</m>, <m>\arctan</m> e <m>\arccot</m> são desenvolvidas da mesma forma.
+                    Aqui está o
+                    gráficos que são usados.
+                </p>
+
+                <sidebyside widths="66%">
+                    <image source="images/cosInvB"/>
+                </sidebyside>
+
+                <sidebyside widths="66%">
+                    <image source="images/tanInvB"/>
+                </sidebyside>
+
+                <sidebyside widths="66%">
+                    <image source="images/cotInvB"/>
+                </sidebyside>
+
+                <p>As definições para as duas funções trigonométricas inversas restantes também podem ser desenvolvidas
+                    da mesma maneira. Mas é um pouco mais fácil usar
+                    <md>
+                        <mrow>
+                            \csc x=\frac{1}{\sin x} \qquad
+                            \sec x=\frac{1}{\cos x}
+                        </mrow>
+                    </md>
+                </p>
+
+
+                <example xml:id="eg_2_12_1">
+                    <title>A derivada de
+                        <m>\arccos x</m>
+                    </title>
+
+                    <statement>
+                        <p>
+                            Encontre a derivada do <m>\arccos x</m>.
+                        </p>
+
+                    </statement>
+                    <p>
+                        Para encontrar a derivada de <m>\arccos</m> podemos seguir os mesmos passos:
+                        <ul>
+                            <li>Escrevemos <m>\arccos(x) =\theta(x)</m> de modo que <m>\cos\theta = x</m> e a derivada
+                                desejada é <m>\dfrac{\dd \theta}{\dd x}</m>.
+                            </li>
+                            <li>Derive implicitamente, lembrando que <m>\theta</m> é uma função de <m>x</m>:
+                                <md>
+                                    <mrow>
+                                        -\sin\theta \dfrac{\dd \theta}{\dd x} \amp= 1
+                                    </mrow>
+                                    <mrow>
+                                        \dfrac{\dd \theta}{\dd x} \amp= -\frac{1}{\sin\theta}
+                                    </mrow>
+                                    <mrow>
+                                        \dfrac{\dd}{\dd x}\arccos x \amp= -\frac{1}{\sin(\arccos x)}.
+                                    </mrow>
+                                </md>
+                            </li>
+                            <li>
+                                <p>Para simplificar esta expressão, desenhe novamente o triângulo correspondente</p>
+
+                                <sidebyside width="40%">
+                                    <image source="images/triangleAcos"/>
+                                </sidebyside>
+
+                                <p>a partir do qual vemos
+                                    <md>
+                                        <mrow>
+                                            \sin(\arccos x) = \sin\theta \amp= \sqrt{1-x^2}.
+                                        </mrow>
+                                    </md>
+                                </p>
+                            </li>
+                            <li>Assim
+                                <md>
+                                    <mrow>
+                                        \dfrac{\dd}{\dd x}\arccos x \amp= -\frac{1}{\sqrt{1-x^2}}.
+                                    </mrow>
+                                </md>
+                            </li>
+                        </ul>
+                    </p>
+                </example>
+
+                <example xml:id="eg_2_12_2">
+                    <title>A deivada de
+                        <m>\arctan x</m>
+                    </title>
+                    <p>
+                        Etapas muito semelhantes ao
+                        <xref ref="eg_2_12_1"/>
+                        fornecem a derivada de <m>\arctan x</m>:
+                        <ul>
+                            <li>Inicie com <m>\theta = \arctan x</m>, assim <m>\tan \theta = x</m>.
+                            </li>
+                            <li>Derivando implicitamente:
+                                <md>
+                                    <mrow>
+                                        \sec^2 \theta \dfrac{\dd \theta}{\dd x} \amp= 1
+                                    </mrow>
+                                    <mrow>
+                                        \dfrac{\dd \theta}{\dd x} \amp= \frac{1}{\sec^2 \theta} = \cos^2 \theta
+                                    </mrow>
+                                    <mrow>
+                                        \dfrac{\dd}{\dd x}\arctan x \amp= \cos^2(\arctan x).
+                                    </mrow>
+                                </md>
+                            </li>
+                            <li>
+                                <p>Para simplificar esta expressão, desenhamos o triângulo correspondente</p>
+
+                                <sidebyside width="30%">
+                                    <image source="images/triangleAtan"/>
+                                </sidebyside>
+
+                                <p>a partir do qual vemos
+                                    <md>
+                                        <mrow>
+                                            \cos^2(\arctan x) = \cos^2\theta = \frac{1}{1+x^2}
+                                        </mrow>
+                                    </md>
+                                </p>
+                            </li>
+                            <li>Assim
+                                <md>
+                                    <mrow>
+                                        \dfrac{\dd}{\dd x}\arctan x \amp= \frac{1}{1+x^2}.
+                                    </mrow>
+                                </md>
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Um cálculo quase idêntico fornece a derivada de <m>\arccot x</m>:
+                        <ul>
+                            <li>Comece com <m>\theta = \arccot x</m>, então <m>\cot \theta = x</m>.
+                            </li>
+                            <li>Derivando implicitamente:
+                                <md>
+                                    <mrow>
+                                        -\csc^2 \theta \dfrac{\dd \theta}{\dd x} \amp= 1
+                                    </mrow>
+                                    <mrow>
+                                        \dfrac{\dd}{\dd x}\arccot x = \dfrac{\dd \theta}{\dd x} \amp= -\frac{1}{\csc^2
+                                        \theta} = -\sin^2
+                                        \theta = -\frac{1}{1+x^2}
+                                    </mrow>
+                                </md>
+                                do triângulo
+
+                                <sidebyside width="30%">
+                                    <image source="images/triangleAcot"/>
+                                </sidebyside>
+
+                            </li>
+                        </ul>
+                    </p>
+                </example>
+
+
+                <example xml:id="eg_2_12_3">
+                    <title>A derivada de
+                        <m>\arccsc x</m>
+                    </title>
+                    <p>
+                        Para encontrar a derivada de <m>\arccsc</m> podemos usar sua definição e a Regra da Cadeia.
+                        <md>
+                            <mrow>
+                                \theta \amp= \arccsc x \amp \text{tomar cossecante de ambos os lados}
+                            </mrow>
+                            <mrow>
+                                \csc \theta \amp= x \amp \text{mas $\csc \theta = \frac{1}{\sin\theta}$, então inverte
+                                ambos os lados}
+                            </mrow>
+                            <mrow>
+                                \sin \theta \amp= \frac{1}{x} \amp \text{agora pegue arco-seno de ambos os lados}
+                            </mrow>
+                            <mrow>
+                                \theta \amp= \arcsin\left(\frac{1}{x}\right)
+                            </mrow>
+                        </md>
+                        Agora basta diferenciar, cuidadosamente usando a Regra da Cadeia:
+                        <md>
+                            <mrow>
+                                \dfrac{\dd \theta}{\dd x} \amp= \dfrac{\dd}{\dd x} \arcsin\left(\frac{1}{x}\right)
+                            </mrow>
+                            <mrow>
+                                \amp= \frac{1}{\sqrt{1-x^{-2}}} \cdot \frac{-1}{x^2}
+                            </mrow>
+                            <intertext>Para simplificar ainda mais, fatoraremos <m>x^{-2}</m> da raiz quadrada.
+                                Precisamos ter um pouco de cuidado ao fazer isso.
+                            </intertext>
+                            <mrow>
+                                \amp= \frac{1}{\sqrt{x^{-2}(x^2-1)}} \cdot \frac{-1}{x^2}
+                            </mrow>
+                            <mrow>
+                                \amp= \frac{1}{|x^{-1}|\cdot \sqrt{x^2-1}} \cdot \frac{-1}{x^2} \amp \text{note que
+                                $x^2 \cdot |x^{-1}| = |x|$.}
+                            </mrow>
+                            <mrow>
+                                \amp= - \frac{1}{|x|\sqrt{x^2-1}}
+                            </mrow>
+                        </md>
+                    </p>
+
+
+                    <p>Da mesma forma, podemos encontrar a derivada da função trigonométrica inversa restante. Usamos
+                        apenas sua definição, uma derivada que já conhecemos e a Regra da Cadeia.
+                        <md>
+                            <mrow>
+                                \dfrac{\dd}{\dd x} \arcsec(x) = \dfrac{\dd}{\dd x} \arccos\Big(\frac{1}{x}\Big)
+                                =-\frac{1}{\sqrt{1-\frac{1}{x^2}}}\cdot\Big(-\frac{1}{x^2}\Big)
+                                =\frac{1}{|x|\sqrt{x^2-1}}
+                            </mrow>
+                        </md>
+                    </p>
+                </example>
+                <p>
+                    A título de resumo, temos
+                </p>
+
+                <theorem xml:id="thm_DIFFinvtrigderiv">
+                    <statement>
+                        <p>
+                            As derivadas das funções trigonométricas inversas são
+                            <md>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \arcsin(x) \amp= \frac{1}{\sqrt{1-x^2}} \amp
+                                    \dfrac{\dd}{\dd x} \arccsc(x) \amp= -\frac{1}{|x|\sqrt{x^2-1}}
+                                </mrow>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \arccos(x) \amp= -\frac{1}{\sqrt{1-x^2}} \amp
+                                    \dfrac{\dd}{\dd x} \arcsec(x) \amp= \frac{1}{|x|\sqrt{x^2-1}}
+                                </mrow>
+                                <mrow>
+                                    \dfrac{\dd}{\dd x} \arctan(x) \amp= \frac{1}{1+x^2} \amp
+                                    \dfrac{\dd}{\dd x} \arccot(x) \amp= -\frac{1}{1+x^2}
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                </theorem>
+
+            </subsection>
+
+
+            <subsection xml:id="sub-videos-2">
                 <title>
                     Sugestão de vídeos
                 </title>
 
-                 <ul>
-                     <li>
-                         <p>
-                             <url href="https://youtu.be/0sIGdngkJdI" visual="youtu.be/0sIGdngkJdI"> Calculando a derivada de <m>y=\arcsin{x}</m> </url>
-                         </p>
+                <ul>
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/0sIGdngkJdI" visual="youtu.be/0sIGdngkJdI">Calculando a derivada
+                                de
+                                <m>y=\arcsin{x}</m>
+                            </url>
+                        </p>
 
-                     </li>
+                    </li>
 
-                     <li>
-                         <p>
-                             <url href="https://youtu.be/gFpov8BbCkY" visual="https://youtu.be/gFpov8BbCkY"> Calculando a derivada de <m>y=\arccos{x}</m> </url>
-                         </p>
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/gFpov8BbCkY" visual="https://youtu.be/gFpov8BbCkY">Calculando a
+                                derivada de
+                                <m>y=\arccos{x}</m>
+                            </url>
+                        </p>
 
-                     </li>
-                     <li>
-                         <p>
-                             <url href="https://youtu.be/4ZkBEy5nOXQ" visual="youtu.be/4ZkBEy5nOXQ"> Calculando a derivada de <m>y=\arctan{x}</m> </url>
-                         </p>
+                    </li>
+                    <li>
+                        <p>
+                            <url href="https://youtu.be/4ZkBEy5nOXQ" visual="youtu.be/4ZkBEy5nOXQ">Calculando a derivada
+                                de
+                                <m>y=\arctan{x}</m>
+                            </url>
+                        </p>
 
-                     </li>
+                    </li>
 
-                 </ul>
-             </subsection>
+                </ul>
+            </subsection>
+
+
             <exercises xml:id="exercises-implicita">
-                <exercise>Escrever aqui
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem1.pg"/>
                 </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem2.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem3.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem4.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem5.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem6.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem7.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem8.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem9.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem10.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem11.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem12.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem13.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem14.pg"/>
+                </exercise>
+
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem15.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem16.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem17.pg"/>
+                </exercise>
+                <exercise>
+                    <webwork source="pretext-derivada-implicita-inv-trig/problem18.pg"/>
+                </exercise>
+
             </exercises>
 
         </section>

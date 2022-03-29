@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-25T19:30:36-03:00       *-->
+<!--*       on 2022-03-29T18:36:01-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -67,9 +81,11 @@
 \DeclareMathOperator{\arcsin}{arc \,sen}
 \DeclareMathOperator{\arccos}{arc \,cos}
 \DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\arccsc}{arc\,cossec}
 \DeclareMathOperator{\tan}{tg}
 \DeclareMathOperator{\arctan}{arc\,tg}
 \DeclareMathOperator{\cot}{cotg}
+\DeclareMathOperator{\arccot}{arc\,cotg}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -111,6 +127,8 @@ true);
 <a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Derivação implícita</span></a><ul>
 <li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Derivação Implicita</a></li>
 <li><a href="section-1.html#sub-videos-1" data-scroll="sub-videos-1" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#subsection-3" data-scroll="subsection-3" class="internal">Funções trigonométricas inversas</a></li>
+<li><a href="section-1.html#subsection-4" data-scroll="subsection-4" class="internal">Derivadas de funções trigonométricas inversas</a></li>
 <li><a href="section-1.html#sub-videos-2" data-scroll="sub-videos-2" class="internal">Sugestão de vídeos</a></li>
 <li><a href="section-1.html#exercises-implicita" data-scroll="exercises-implicita" class="internal">Exercícios</a></li>
 </ul>
@@ -126,10 +144,10 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-1"><p id="p-3">implicita</p></li>
-<li id="li-2"><p id="p-4">implicita 2</p></li>
-<li id="li-3"><p id="p-5">Implicite</p></li>
-</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Texto</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<li id="li-1"><p id="p-3">Conceito de derivação implicita.</p></li>
+<li id="li-2"><p id="p-4">Funções trigonométricas inversas.</p></li>
+<li id="li-3"><p id="p-5">Derivada das funções trigonométricas inversas.</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-6">Aqui vamos apresentar o conceito de derivação implicita e mais adiante usá-lo para calcular derivada de funções trigonométricas inversas.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Derivação Implicita</span>
 </h3>
 <p id="p-7">Diferenciação implícita é uma maneira simples usada para calcular derivadas de funções ou</p>
@@ -172,7 +190,7 @@ f'(x)=3f(x)^2f'(x)+f(x)+xf'(x)+3x^2
 <li id="li-8"><p id="p-derived-li-8">Neste ponto podemos isolar para <span class="process-math">\(f'(x)\)</span> e escrevê-lo em termos de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(x\text{,}\)</span> mas como só queremos respostas quando <span class="process-math">\(x=1\text{,}\)</span> vamos substituir <span class="process-math">\(x=1\)</span> e <span class="process-math">\(f(1)=-1\)</span> (já que a curva passa por <span class="process-math">\((1,-1)\)</span>).</p></li>
 <li id="li-9"><p id="p-derived-li-9">Substituindo <span class="process-math">\(x=1,\ f(1)=-1\)</span> nos dá<div class="displaymath process-math" id="md-5">
 \begin{align*}
-f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ and so } f'(1)=-\frac{2}{3}
+f'(1)\amp=3f'(1)-1+f'(1)+3 \amp \text{ e então } f'(1)=-\frac{2}{3}
 \end{align*}
 </div></p></li>
 <li id="li-10"><p id="p-derived-li-10">A equação da reta tangente é<div class="displaymath process-math" id="md-6">
@@ -197,7 +215,7 @@ y^{\prime} \amp= 3 y^2 y' + xy' + y + 3x^2\\
 \end{align*}
 <p class="intertext">E agora substitua <span class="process-math">\(x=1, y=-1\)</span> para obter</p>
 \begin{align*}
-y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{and so}\\
+y'(1) \amp= 3 \cdot y'(1) + y'(1) - 1 + 3 \amp \text{e assim}\\
 y'(1) \amp= -\frac{2}{3}
 \end{align*}
 </div>
@@ -418,17 +436,743 @@ y=y_0+f'(x_0)(x-x_0) = y_0
 <li id="li-38"><p id="p-33"><a class="external" href="https://youtu.be/QU0QOWbrS7M" target="_blank">Obtendo  <span class="process-math">\(\dfrac{\dd y}{\dd x}\)</span> sabendo que <span class="process-math">\(y=\cos{(5x-3y)}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
 <li id="li-39"><p id="p-34"><a class="external" href="https://youtu.be/Qpm0PEQ_niU" target="_blank">Obtendo  <span class="process-math">\(\dfrac{\dd y}{\dd x}\)</span> sabendo que <span class="process-math">\(y=(x^2+y^2)^3 = 5x^2y^2\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
 <li id="li-40"><p id="p-35"><a class="external" href="https://youtu.be/7eJfg-nzK1c" target="_blank">Se <span class="process-math">\(e^{xy^2}=x-y\)</span> calcule <span class="process-math">\(\dfrac{\dd y}{\dd x}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p></li>
-</ul></section><section class="subsection" id="sub-videos-2"><h3 class="heading hide-type">
-<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Sugestão de vídeos</span>
+</ul></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Funções trigonométricas inversas</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-36">Uma aplicação muito útil da diferenciação implícita é encontrar as derivadas de funções inversas. Já usamos essa abordagem para encontrar a derivada da inversa da função exponencial — o logaritmo.</p>
+<p id="p-37">Vamos agora considerar o problema de encontrar as derivadas das inversas de funções trigonométricas. Antes vamos lembrar que para uma função <span class="process-math">\(f(x)\)</span> dada, sua função inversa <span class="process-math">\(f^{-1}(x)\)</span> só existe, com domínio <span class="process-math">\(D\text{,}\)</span> quando <span class="process-math">\(f(x)\)</span> passa no “teste da reta horizontal”, que diz que para cada <span class="process-math">\(Y\)</span> em <span class="process-math">\(D\)</span> a reta horizontal <span class="process-math">\(y=Y\)</span> intercepta o gráfico <span class="process-math">\(y=f(x)\)</span> exatamente uma vez. (Ou seja, <span class="process-math">\(f(x)\)</span> é uma função injetora.)</p>
+<p id="p-38">Vamos começar brincando com a função seno e determinar como restringir o domínio de <span class="process-math">\(\sin x\)</span> para que sua função inversa exista.</p>
+<article class="example example-like" id="eg_INVstilllesslucky"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_INVstilllesslucky"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A inversa da função <span class="process-math">\(\sin x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_INVstilllesslucky"><article class="example example-like"><p id="p-39">Encontre a inversa da função <span class="process-math">\(\sin{x}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-40">Seja <span class="process-math">\(y=f(x)=\sin(x)\text{.}\)</span> Gostaríamos de encontrar a função inversa que recebe <span class="process-math">\(y\)</span> e nos retorna um único <span class="process-math">\(x\)</span> de modo que <span class="process-math">\(\sin(x)=y\text{.}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/sinInv.svg" role="img" class="contained"></div></div></div>
+<ul id="p-41" class="disc">
+<li id="li-41"><p id="p-derived-li-41">Para cada número real <span class="process-math">\(Y\text{,}\)</span> o número de valores <span class="process-math">\(x\)</span> que obedecem a <span class="process-math">\(\sin(x)=Y\)</span> é exatamente o número de vezes que a reta horizontal <span class="process-math">\(y=Y\)</span> intercepta o gráfico de <span class="process-math">\(\sin(x)\text{.}\)</span></p></li>
+<li id="li-42"><p id="p-derived-li-42">Quando <span class="process-math">\(-1\le Y\le 1\text{,}\)</span> a linha horizontal cruza o gráfico infinitas vezes. Isso é ilustrado na figura acima pela reta <span class="process-math">\(y=0,3\text{.}\)</span></p></li>
+<li id="li-43"><p id="p-derived-li-43">Por outro lado, quando <span class="process-math">\(Y \lt -1\)</span> ou <span class="process-math">\(Y \gt 1\text{,}\)</span> a reta <span class="process-math">\(y=Y\)</span> nunca cruza o gráfico de <span class="process-math">\(\sin(x)\text{.}\)</span> Isso é ilustrado na figura acima pela reta <span class="process-math">\(y=-1.2\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Este é exatamente o teste da linha horizontal e mostra que a função seno não é injetora.</p>
+<p id="p-42">Agora considere a função</p>
+<div class="displaymath process-math" id="md-26">
+\begin{align*}
+y \amp= \sin(x) \amp \text{com domínio } -\frac{\pi}{2} \leq x \leq
+\frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Esta função tem a mesma fórmula, mas o domínio foi restringido para que, como mostraremos agora, o teste da reta horizontal seja satisfeito.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/sinInvB.svg" role="img" class="contained"></div></div></div>
+<p id="p-43">Como vimos acima quando <span class="process-math">\(|Y| \gt 1\)</span> não <span class="process-math">\(x\)</span> obedece a <span class="process-math">\(\sin(x)=Y\)</span> e, para cada <span class="process-math">\(-1\le Y\le 1\)</span> , a reta <span class="process-math">\(y=Y\)</span> (ilustrada na figura acima com <span class="process-math">\(y=0,3\)</span>) cruza a curva <span class="process-math">\(y=\sin(x)\)</span> infinitas vezes, de modo que existem infinitos <span class="process-math">\(x\)</span>'s que obedecem a <span class="process-math">\(f(x)=\sin x=Y\text{.}\)</span> No entanto, exatamente um desses cruzamentos (o ponto na figura) tem <span class="process-math">\(-\frac{\pi}{2}\le x \le\frac{\pi}{2}\text{.}\)</span></p>
+<p id="p-44">Isto é, para cada <span class="process-math">\(-1\le Y \le 1\text{,}\)</span> existe exatamente um <span class="process-math">\(x\text{,}\)</span> digamos <span class="process-math">\(X\text{,}\)</span> que obedece a ambos</p>
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+\sin X \amp= Y \amp\text{e} \amp\amp -\frac{\pi}{2}\le X \le \frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Esse valor único, <span class="process-math">\(X\text{,}\)</span> é normalmente denotado por <span class="process-math">\(\arcsin(Y)\text{.}\)</span> Isto é,</p>
+<div class="displaymath process-math" id="md-28">
+\begin{align*}
+\sin( \arcsin(Y) ) \amp= Y \amp \text{e} \amp \amp -\frac{\pi}{2}\le
+\arcsin(Y)
+\le\frac{\pi}{2}
+\end{align*}
+</div>
+<p class="continuation">Renomeando <span class="process-math">\(Y\rightarrow x\text{,}\)</span> a função inversa <span class="process-math">\(\arcsin(x)\)</span> é definida para todos os <span class="process-math">\(-1 \le x \le 1\)</span> e é determinada pela equação</p>
+<article class="fact theorem-like" id="eq_DIFFarcsin"><h5 class="heading">
+<span class="type">Fato</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h5>
+<div class="displaymath process-math" id="p-45">
+\begin{equation*}
+\sin\big(\arcsin(x)\big)=x\qquad\text{and}\qquad
+-\frac{\pi}{2}\le \arcsin(x)\le\frac{\pi}{2}.
+\end{equation*}
+</div></article><p id="p-46">Observe que muitos textos usarão <span class="process-math">\(\sin^{-1}(x)\)</span> para denotar arcsine, mas usaremos <span class="process-math">\(\arcsin(x)\)</span> já que entendemos ser mais claro; o leitor deve reconhecer ambos.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="eg_DIFFinvsin"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_DIFFinvsin"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Mais sobre a inversa de <span class="process-math">\(\sin x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_DIFFinvsin"><article class="example example-like"><p id="p-47">Desde que</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\frac{\pi}{2}=1\qquad\sin\frac{\pi}{6}=\frac{1}{2}
+\end{equation*}
+</div>
+<p class="continuation">e <span class="process-math">\(-\frac{\pi}{2}\le \frac{\pi}{6},\frac{\pi}{2}\le \frac{\pi}{2}\text{,}\)</span> temos</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\arcsin 1= \frac{\pi}{2}\qquad \arcsin \frac{1}{2}= \frac{\pi}{6}
+\end{equation*}
+</div>
+<p class="continuation">Apesar de</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin(2\pi)=0
+\end{equation*}
+</div>
+<p class="continuation"><em class="alert">não</em> é verdade que <span class="process-math">\(\arcsin 0 =2\pi\text{,}\)</span> e <em class="alert">não</em> é verdade que <span class="process-math">\(\arcsin\big(\sin(2\pi)\big)
+=2\pi\text{,}\)</span> pois <span class="process-math">\(2\pi\)</span> não está entre <span class="process-math">\(-\frac{\pi}{2}\)</span> e <span class="process-math">\(\frac{\pi}{2}\text{.}\)</span> Mais geralmente</p>
+<div class="displaymath process-math" id="md-29">
+\begin{align*}
+\arcsin\big(\sin(x)\big) \amp=\text{ o ângulo único } \theta \text{entre }
+-\frac{\pi}{2} \text{ e } \frac{\pi}{2} \text{ satisfazendo } \sin \theta =\sin x\\
+\amp= x\quad\text{if and only if $-\frac{\pi}{2}\le x\le \frac{\pi}{2}$}
+\end{align*}
+</div>
+<p class="continuation">Então, por exemplo, <span class="process-math">\(\arcsin\big(\sin\big(\frac{11\pi}{16}\big)\big)\)</span> não pode ser <span class="process-math">\(\frac{11\pi}{16}\)</span> pois <span class="process-math">\(\frac{11\pi}{16}\)</span> é maior que <span class="process-math">\(\frac{\pi}{2}\text{.}\)</span> Então, como podemos encontrar a resposta correta? Comece esboçando o gráfico de <span class="process-math">\(\sin(x)\text{.}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/sinInvEg.svg" role="img" class="contained"></div></div></div>
+<p id="p-48">Parece que o gráfico de <span class="process-math">\(\sin x\)</span> é simétrico em relação a <span class="process-math">\(x=\frac{\pi}{2}\text{.}\)</span> Matemáticamente, dizemos que “o gráfico de <span class="process-math">\(\sin x\)</span> é simétrico em relação a <span class="process-math">\(x=\frac{\pi}{2}\)</span>” quando “<span class="process-math">\(\sin(\frac{\pi}{2}-\theta)=
+\sin(\frac{\pi}{2}+\theta)\)</span>” para todo <span class="process-math">\(\theta\text{.}\)</span></p>
+<p id="p-49">Agora <span class="process-math">\(\frac{11\pi}{16}=\frac{\pi}{2} +\frac{3\pi}{16}\)</span> então</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\Big(\frac{11\pi}{16}\Big)
+=\sin\Big(\frac{\pi}{2}+\frac{3\pi}{16}\Big)
+=\sin\Big(\frac{\pi}{2}-\frac{3\pi}{16}\Big)
+=\sin\Big(\frac{5\pi}{16}\Big)
+\end{equation*}
+</div>
+<p class="continuation">e, visto que <span class="process-math">\(\frac{5\pi}{16}\)</span> está entre <span class="process-math">\(-\frac{\pi}{2}\)</span> e <span class="process-math">\(\frac{\pi}{2}\text{,}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\arcsin\Big(\sin\Big(\frac{11\pi}{16}\Big)\Big)
+=\frac{5\pi}{16}\qquad\Big(\text{e não $\frac{11\pi}{16}$}\Big).
+\end{equation*}
+</div></article></div></section></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Derivadas de funções trigonométricas inversas</span>
+</h3>
+<p id="p-50">Agora que exploramos a função arco-seno, estamos prontos para encontrar sua derivada. Vamos fazer</p>
+<div class="displaymath process-math" id="md-30">
+\begin{align*}
+\arcsin(x) \amp= \theta(x),
+\end{align*}
+</div>
+<p class="continuation">de modo que a derivada que estamos procurando é <span class="process-math">\(\dfrac{\dd \theta}{\dd x}\text{.}\)</span> A equação acima é (depois de tomar seno de ambos os lados) equivalente a</p>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+\sin(\theta) \amp= x
+\end{align*}
+</div>
+<p class="continuation">Agora derive isso usando a derivação implícita (só temos que lembrar que <span class="process-math">\(\theta\)</span> varia com <span class="process-math">\(x\)</span> e use a Regra da Cadeia com cuidado):</p>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+\cos(\theta) \cdot \dfrac{\dd \theta}{\dd x} \amp= 1\\
+\dfrac{\dd \theta}{\dd x} \amp= \frac{1}{\cos(\theta)} \amp \text{use $\theta = \arcsin x$}\\
+\dfrac{\dd}{\dd x} \arcsin x \amp= \frac{1}{\cos(\arcsin x)}
+\end{align*}
+</div>
+<p class="continuation">Isso não parece tão ruim, mas não é muito satisfatório porque o lado direito é expresso em termos de <span class="process-math">\(\arcsin(x)\)</span> e não temos uma fórmula explícita para <span class="process-math">\(\arcsin (x)\text{.}\)</span></p>
+<p id="p-51">No entanto, mesmo sem uma fórmula explícita para <span class="process-math">\(\arcsin(x)\text{,}\)</span> é simples obter uma fórmula explícita para <span class="process-math">\(\cos\big(\arcsin(x)\big)\text{,}\)</span> que é tudo o que precisamos. Basta desenhar um triângulo retângulo – com um ângulo sendo <span class="process-math">\(\arcsin(x)\text{.}\)</span> Isso é feito na figura abaixo.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/triangleAsin.svg" role="img" class="contained"></div></div></div>
+<p id="p-52">Já que <span class="process-math">\(\sin(\theta)=x\)</span> (veja<a href="" class="xref" data-knowl="./knowl/eq_DIFFarcsin.html" title="Fato 1.6">Fato 1.6</a>), fizemos o lado oposto ao ângulo <span class="process-math">\(\theta\)</span> de comprimento <span class="process-math">\(x\)</span> e a hipotenusa de comprimento <span class="process-math">\(1\text{.}\)</span> Depois, por Pitágoras, o lado adjacente <span class="process-math">\(\theta\)</span> tem comprimento <span class="process-math">\(\sqrt{1-x^2}\)</span> e então</p>
+<div class="displaymath process-math" id="md-33">
+\begin{gather*}
+\cos\big(\arcsin(x)\big)=\cos(\theta)=\sqrt{1-x^2}
+\end{gather*}
+</div>
+<p class="continuation">que por sua vez nos dá a resposta que precisamos:</p>
+<div class="displaymath process-math" id="md-34">
+\begin{gather*}
+\dfrac{\dd}{\dd x} \arcsin(x) =\frac{1}{\sqrt{1-x^2}}
+\end{gather*}
+</div>
+<p id="p-53">As definições para <span class="process-math">\(\arccos\text{,}\)</span> <span class="process-math">\(\arctan\)</span> e <span class="process-math">\(\arccot\)</span> são desenvolvidas da mesma forma. Aqui está o gráficos que são usados.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/cosInvB.svg" role="img" class="contained"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/tanInvB.svg" role="img" class="contained"></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/cotInvB.svg" role="img" class="contained"></div></div></div>
+<p id="p-54">As definições para as duas funções trigonométricas inversas restantes também podem ser desenvolvidas da mesma maneira. Mas é um pouco mais fácil usar</p>
+<div class="displaymath process-math" id="md-35">
+\begin{gather*}
+\csc x=\frac{1}{\sin x} \qquad
+\sec x=\frac{1}{\cos x}
+\end{gather*}
+</div>
+<article class="example example-like" id="eg_2_12_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_12_1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">A derivada de <span class="process-math">\(\arccos x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_12_1"><article class="example example-like"><p id="p-55">Encontre a derivada do <span class="process-math">\(\arccos x\text{.}\)</span></p></article></div>
+<article class="example example-like" id="eg_2_12_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_12_2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">A deivada de <span class="process-math">\(\arctan x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_12_2"><article class="example example-like"><p id="p-59">Etapas muito semelhantes ao <a href="" class="xref" data-knowl="./knowl/eg_2_12_1.html" title="Exemplo 1.8: A derivada de \arccos x">Exemplo 1.8</a> fornecem a derivada de <span class="process-math">\(\arctan x\text{:}\)</span></p>
+<ul class="disc">
+<li id="li-48"><p id="p-derived-li-48">Inicie com <span class="process-math">\(\theta = \arctan x\text{,}\)</span> assim <span class="process-math">\(\tan \theta = x\text{.}\)</span></p></li>
+<li id="li-49"><p id="p-derived-li-49">Derivando implicitamente:<div class="displaymath process-math" id="md-39">
+\begin{align*}
+\sec^2 \theta \dfrac{\dd \theta}{\dd x} \amp= 1\\
+\dfrac{\dd \theta}{\dd x} \amp= \frac{1}{\sec^2 \theta} = \cos^2 \theta\\
+\dfrac{\dd}{\dd x}\arctan x \amp= \cos^2(\arctan x).
+\end{align*}
+</div></p></li>
+<li id="li-50">
+<p id="p-60">Para simplificar esta expressão, desenhamos o triângulo correspondente</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="images/triangleAtan.svg" role="img" class="contained"></div></div></div>
+<p id="p-61">a partir do qual vemos</p>
+<div class="displaymath process-math" id="md-40">
+\begin{gather*}
+\cos^2(\arctan x) = \cos^2\theta = \frac{1}{1+x^2}
+\end{gather*}
+</div>
+</li>
+<li id="li-51"><p id="p-derived-li-51">Assim<div class="displaymath process-math" id="md-41">
+\begin{align*}
+\dfrac{\dd}{\dd x}\arctan x \amp= \frac{1}{1+x^2}.
+\end{align*}
+</div></p></li>
+</ul>
+<p id="p-62">Um cálculo quase idêntico fornece a derivada de <span class="process-math">\(\arccot x\text{:}\)</span></p>
+<ul class="disc">
+<li id="li-52"><p id="p-derived-li-52">Comece com <span class="process-math">\(\theta = \arccot x\text{,}\)</span> então <span class="process-math">\(\cot \theta = x\text{.}\)</span></p></li>
+<li id="li-53">Derivando implicitamente:<div class="displaymath process-math" id="md-42">
+\begin{align*}
+-\csc^2 \theta \dfrac{\dd \theta}{\dd x} \amp= 1\\
+\dfrac{\dd}{\dd x}\arccot x = \dfrac{\dd \theta}{\dd x} \amp= -\frac{1}{\csc^2
+\theta} = -\sin^2
+\theta = -\frac{1}{1+x^2}
+\end{align*}
+</div>do triângulo <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="images/triangleAcot.svg" role="img" class="contained"></div></div></div>
+</li>
+</ul></article></div>
+<article class="example example-like" id="eg_2_12_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_2_12_3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">A derivada de <span class="process-math">\(\arccsc x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_2_12_3"><article class="example example-like"><p id="p-63">Para encontrar a derivada de <span class="process-math">\(\arccsc\)</span> podemos usar sua definição e a Regra da Cadeia.</p>
+<div class="displaymath process-math" id="md-43">
+\begin{align*}
+\theta \amp= \arccsc x \amp \text{tomar cossecante de ambos os lados}\\
+\csc \theta \amp= x \amp \text{mas $\csc \theta = \frac{1}{\sin\theta}$, então inverte
+ambos os lados}\\
+\sin \theta \amp= \frac{1}{x} \amp \text{agora pegue arco-seno de ambos os lados}\\
+\theta \amp= \arcsin\left(\frac{1}{x}\right)
+\end{align*}
+</div>
+<p class="continuation">Agora basta diferenciar, cuidadosamente usando a Regra da Cadeia:</p>
+<div class="displaymath process-math" id="md-44">
+\begin{align*}
+\dfrac{\dd \theta}{\dd x} \amp= \dfrac{\dd}{\dd x} \arcsin\left(\frac{1}{x}\right)\\
+\amp= \frac{1}{\sqrt{1-x^{-2}}} \cdot \frac{-1}{x^2}\\
+\end{align*}
+<p class="intertext">Para simplificar ainda mais, fatoraremos <span class="process-math">\(x^{-2}\)</span> da raiz quadrada. Precisamos ter um pouco de cuidado ao fazer isso.</p>
+\begin{align*}
+\amp= \frac{1}{\sqrt{x^{-2}(x^2-1)}} \cdot \frac{-1}{x^2}\\
+\amp= \frac{1}{|x^{-1}|\cdot \sqrt{x^2-1}} \cdot \frac{-1}{x^2} \amp \text{note que
+$x^2 \cdot |x^{-1}| = |x|$.}\\
+\amp= - \frac{1}{|x|\sqrt{x^2-1}}
+\end{align*}
+</div>
+<p id="p-64">Da mesma forma, podemos encontrar a derivada da função trigonométrica inversa restante. Usamos apenas sua definição, uma derivada que já conhecemos e a Regra da Cadeia.</p>
+<div class="displaymath process-math" id="md-45">
+\begin{gather*}
+\dfrac{\dd}{\dd x} \arcsec(x) = \dfrac{\dd}{\dd x} \arccos\Big(\frac{1}{x}\Big)
+=-\frac{1}{\sqrt{1-\frac{1}{x^2}}}\cdot\Big(-\frac{1}{x^2}\Big)
+=\frac{1}{|x|\sqrt{x^2-1}}
+\end{gather*}
+</div></article></div>
+<p id="p-65">A título de resumo, temos</p>
+<article class="theorem theorem-like" id="thm_DIFFinvtrigderiv"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
+</h4>
+<p id="p-66">As derivadas das funções trigonométricas inversas são</p>
+<div class="displaymath process-math" id="md-46">
+\begin{align*}
+\dfrac{\dd}{\dd x} \arcsin(x) \amp= \frac{1}{\sqrt{1-x^2}} \amp
+\dfrac{\dd}{\dd x} \arccsc(x) \amp= -\frac{1}{|x|\sqrt{x^2-1}}\\
+\dfrac{\dd}{\dd x} \arccos(x) \amp= -\frac{1}{\sqrt{1-x^2}} \amp
+\dfrac{\dd}{\dd x} \arcsec(x) \amp= \frac{1}{|x|\sqrt{x^2-1}}\\
+\dfrac{\dd}{\dd x} \arctan(x) \amp= \frac{1}{1+x^2} \amp
+\dfrac{\dd}{\dd x} \arccot(x) \amp= -\frac{1}{1+x^2}
+\end{align*}
+</div></article></section><section class="subsection" id="sub-videos-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Sugestão de vídeos</span>
 </h3>
 <ul class="disc">
-<li id="li-41"><p id="p-36"><a class="external" href="https://youtu.be/0sIGdngkJdI" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arcsin{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
-<li id="li-42"><p id="p-37"><a class="external" href="https://youtu.be/gFpov8BbCkY" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arccos{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p></li>
-<li id="li-43"><p id="p-38"><a class="external" href="https://youtu.be/4ZkBEy5nOXQ" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arctan{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
+<li id="li-54"><p id="p-67"><a class="external" href="https://youtu.be/0sIGdngkJdI" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arcsin{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a></p></li>
+<li id="li-55"><p id="p-68"><a class="external" href="https://youtu.be/gFpov8BbCkY" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arccos{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p></li>
+<li id="li-56"><p id="p-69"><a class="external" href="https://youtu.be/4ZkBEy5nOXQ" target="_blank">Calculando a derivada de <span class="process-math">\(y=\arctan{x}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></p></li>
 </ul></section><section class="exercises" id="exercises-implicita"><h3 class="heading hide-type">
-<span class="type">Exercícios</span> <span class="codenumber">1.4</span> <span class="title">Exercícios</span>
+<span class="type">Exercícios</span> <span class="codenumber">1.6</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/wYu6rvBqa54</code></div></div>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-70">Se <span class="process-math">\(2 x^2 + 5 x + xy = 5\)</span> e <span class="process-math">\(y(5) = -14\text{,}\)</span> determine <span class="process-math">\(y'(5)\)</span> por derivação implícita.</p>
+<p id="p-71"><span class="process-math">\(y'(5) =\)</span> <span class="fillin" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-72"><span class="process-math">\(-{\textstyle\frac{11}{5}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-73">Derivamos ambos os lados da equação em relação a <span class="process-math">\(x\text{:}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dx} (2 x^2 + 5 x + xy)=\frac{d}{dx}( 5)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4 x + 5 + x \frac{dy}{dx} + y = 0
+\end{equation*}
+</div>
+<p class="continuation">Resolvemos para <span class="process-math">\(\frac{dy}{dx}\)</span> fornece</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = -4 - \frac{5}{x} - \frac{y}{x}
+\end{equation*}
+</div>
+<p class="continuation">Substituindo  <span class="process-math">\(x = 5\)</span> e <span class="process-math">\(y = -14\text{,}\)</span> temos</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = -{\textstyle\frac{11}{5}}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-74">Encontre a inclinação da reta tangente <span class="process-math">\(m\)</span> à curva <span class="process-math">\(\sqrt{9x+8y}+\sqrt{2xy} = 18\)</span> no ponto <span class="process-math">\((4, 8)\text{.}\)</span></p>
+<p id="p-75">m = <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-76"><span class="process-math">\(-{\textstyle\frac{29}{18}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-77">Derivando implicitamente em relação a <span class="process-math">\(x\)</span> produz</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{9}{2 \sqrt{9x+8y}} + \frac{8}{2 \sqrt{9x+8y}} \, \frac{dy}{dx}
++ \frac{2}{2 \sqrt{2xy}} \left(
+y + x \, \frac{dy}{dx} \right) = 0,
+\end{equation*}
+</div>
+<p class="continuation">ou  (multiplicando por  <span class="process-math">\(2 \sqrt{2xy} \sqrt{9x+8y}\)</span>)</p>
+<div class="displaymath process-math">
+\begin{equation*}
+9 \sqrt{2xy} + 8 \sqrt{2xy} \; \frac{dy}{dx} +
+2 y \sqrt{9x+8y} + 2 x \sqrt{9x+8y} \; \frac{dy}{dx} = 0,
+\end{equation*}
+</div>
+<p class="continuation">Assim</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( 8 \sqrt{2xy} + 2 x \sqrt{9x+8y} \right) \, \frac{dy}{dx}
+= - \left( 9 \sqrt{2xy} + 2 y \sqrt{9x+8y} \right),
+\end{equation*}
+</div>
+<p class="continuation">e portanto</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = - \frac
+{9 \sqrt{2xy} + 2 y \sqrt{9x+8y}}{8 \sqrt{2xy} + 2 x \sqrt{9x+8y}}.
+\end{equation*}
+</div>
+<p class="continuation">Se <span class="process-math">\(x = 4\)</span> e <span class="process-math">\(y = 8\text{,}\)</span> então <span class="process-math">\(\sqrt{9x+8y} = 10\text{,}\)</span> <span class="process-math">\(\sqrt{2xy} = 8\text{,}\)</span> e portanto a inclinação <span class="process-math">\(m\)</span> da reta tangente à curva no ponto <span class="process-math">\((4, 8)\)</span> é</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} \Bigg|_{(x, y) = (4, 8)}
+= - \frac {9 \left( 8 \right) +
+2 \left( 8 \right) \left( 10 \right)}
+{8 \left( 8 \right) +
+2 \left( 4 \right) \left( 10 \right)}
+= -{\textstyle\frac{29}{18}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-78">Seja <span class="process-math">\(y\)</span> definida implicitamente pela equação <span class="process-math">\(\ln(4 y) = 2 xy\text{.}\)</span> Use a derivação implícita para encontrar a primeira derivada de <span class="process-math">\(y\)</span> com respeito a <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-79"><span class="process-math">\(\displaystyle \frac{dy}{dx} =\)</span> <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<p id="p-80">Use a diferenciação implícita para encontrar a segunda derivada de <span class="process-math">\(y\)</span> com respeito para <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-81"><span class="process-math">\(\displaystyle \frac{d^2y}{dx^2} =\)</span> <span class="fillin" role="img" aria-label="55-character blank" style="width: 25em;"></span></p>
+<p id="p-82">Encontre o ponto na curva onde <span class="process-math">\(\displaystyle \frac{d^2y}{dx^2} = 0\text{.}\)</span></p>
+<p id="p-83"><span class="process-math">\(\displaystyle \frac{d^2y}{dx^2} = 0\)</span> no ponto <span class="process-math">\((x,y) = (\)</span> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> <span class="process-math">\()\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-84"><span class="process-math">\(\frac{2y^{2}}{1-2xy}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-85"><span class="process-math">\(\frac{4y^{3}\!\left(4xy-3\right)}{\left(2xy-1\right)^{3}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-86"><span class="process-math">\(\left(3e^{-\frac{3}{2}},\frac{1}{4}e^{\frac{3}{2}}\right)\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-87">Se <span class="process-math">\(3 x^2+ 4 x + xy = 1\)</span> e <span class="process-math">\(y(1) = -6\text{,}\)</span> encontre <span class="process-math">\(y'(1)\)</span> por derivação implicita.</p>
+<p id="p-88"><span class="process-math">\(y' (1) =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<p id="p-89">Assim, uma equação da reta tangente ao gráfico no ponto <span class="process-math">\((1, -6)\)</span> é</p>
+<p id="p-90"><span class="process-math">\(y =\)</span> <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-91"><span class="process-math">\(-4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-92"><span class="process-math">\(-4x-2\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-93">Se <span class="process-math">\(\ln(x^2 - 8 y) = x - y  - 2\)</span> e <span class="process-math">\(y( 3 ) = 1\text{,}\)</span> encontre <span class="process-math">\(y'( 3 )\)</span> por derivação implícita.</p>
+<p id="p-94"><span class="process-math">\(y'(3) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-95">Uma equação da reta tangente a a curva no ponto <span class="process-math">\((3, 1)\)</span> é</p>
+<p id="p-96"><span class="process-math">\(y =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-97"><span class="process-math">\(\frac{5}{7}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(\frac{5}{7}\!\left(x-3\right)+1\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-99">Encontre uma equação da reta tangente para a curva definida por <span class="process-math">\(x^{6} + 6 xy + y^{6} = 152\)</span> no ponto <span class="process-math">\((2, 2)\text{.}\)</span></p>
+<p id="p-100"><span class="process-math">\(y =\)</span> <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-101"><span class="process-math">\(4-x\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-102">A derivação implícita em relação a <span class="process-math">\(x\)</span> fornece</p>
+<div class="displaymath process-math">
+\begin{equation*}
+6 x ^{5} + 6 y + 6 x \, \frac{dy}{dx}
++ 6 y ^{5} \, \frac{dy}{dx} = 0.
+\end{equation*}
+</div>
+<p class="continuation">Se <span class="process-math">\(x = 2\)</span> e <span class="process-math">\(y = 2\text{,}\)</span> essa equação se torna</p>
+<div class="displaymath process-math">
+\begin{equation*}
+204  + 204 \, \frac{dy}{dx} = 0,
+\end{equation*}
+</div>
+<p class="continuation">e assim</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = \textstyle
+-\frac{204}{204}
+= -1.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a reta tangente à curva dada no ponto <span class="process-math">\((2, 2)\)</span> é definido por <span class="process-math">\(y = 2-\left(x-2\right)\text{,}\)</span> ou <span class="process-math">\(y = 4-x\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-103">Encontre a equação da reta tangente à curva</p>
+<div class="displaymath process-math">
+\begin{equation*}
+2\!\left(x^{2}+y^{2}\right)^{2} = 25\!\left(x^{2}-y^{2}\right)
+\end{equation*}
+</div>
+<p class="continuation">no ponto <span class="process-math">\((3, 1)\text{.}\)</span></p>
+<p id="p-104">Quando a equação desta reta tangente é escrito na forma <span class="process-math">\(y = mx + b\text{,}\)</span></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(b\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div></div></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-105"><span class="process-math">\(-{\textstyle\frac{9}{13}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-106"><span class="process-math">\({\textstyle\frac{40}{13}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-107">A derivação implícita dá</p>
+<div class="displaymath process-math">
+\begin{equation*}
+4(x^2 + y^2) \left( 2x + 2y \, \frac{dy}{dx} \right)
+= 25 \left( 2x - 2y \, \frac{dy}{dx} \right),
+\end{equation*}
+</div>
+<p class="continuation">ou</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y \bigl( 25 + 4 (x^2 + y^2) \bigr) \, \frac{dy}{dx}
+= x \bigl( 25 - 4 (x^2 + y^2) \bigr).
+\end{equation*}
+</div>
+<p class="continuation">Se <span class="process-math">\(x = 3\)</span> e <span class="process-math">\(y = 1\text{,}\)</span> então <span class="process-math">\(x^2  + y^2 = 10\text{,}\)</span> e a ultima equação se torna</p>
+<div class="displaymath process-math">
+\begin{equation*}
+65 \, \frac{dy}{dx} = -45,
+\end{equation*}
+</div>
+<p class="continuation">e assim</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = \textstyle 
+- \frac{45}{65} = -{\textstyle\frac{9}{13}}.
+\end{equation*}
+</div>
+<p class="continuation">Portanto, a reta tangente à curva dada no ponto <span class="process-math">\((3, 1)\)</span> é definida por <span class="process-math">\(y = 1-\frac{9}{13}\!\left(x-3\right)\text{,}\)</span> ou <span class="process-math">\(y = -\frac{9}{13}x+\frac{40}{13}\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-108">Seja <span class="process-math">\(7 \sin x  + 3 \cos y = 2\text{.}\)</span></p>
+<p id="p-109"><span class="process-math">\(\dfrac{dy}{dx} =\)</span> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<p id="p-110"><span class="process-math">\(\dfrac{d^2y}{dx^2} =\)</span> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-111"><span class="process-math">\(\frac{7\cos\!\left(x\right)}{3\sin\!\left(y\right)}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-112"><span class="process-math">\(-\frac{7\!\left(\sin\!\left(x\right)\sin\!\left(y\right)+2.33333\cos^{2}\!\left(x\right)\cot\!\left(y\right)\right)}{3\sin^{2}\!\left(y\right)}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<div class="displaymath process-math" id="p-113">
+\begin{equation*}
+\begin{array}{rcl}
+\dfrac{d}{dx}[7 \sin x  + 3 \cos y] \amp =\amp  \dfrac{d}{dx}[2]\\
+\amp \amp \\
+7 \cos x - 3 \sin y \dfrac{dy}{dx} \amp =\amp  0 \\
+\amp \amp \\
+\dfrac{dy}{dx} \amp =\amp  \dfrac{7 \cos x}{3 \sin y}
+\end{array}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-114">
+\begin{equation*}
+\begin{array}{rcl}
+\dfrac{d^2y}{dx^2} \amp =\amp  
+\dfrac{d}{dx}\left[  \dfrac{7 \cos x}{3 \sin y} \right] \\
+\amp \amp \\
+\amp =\amp  \dfrac{  3 \sin y(-7 \sin x) - (7 \cos x)(3 \cos y \cdot y')}
+{9 \sin^2 y} \\
+\amp \amp \\
+\amp =\amp  \dfrac{-21( \sin x \sin y + \cos x \cos y \cdot y')}
+{9 \sin^2 y} \\
+\amp =\amp  \dfrac{-7( \sin x \sin y + \cos x \cos y \cdot y')}
+{3 \sin^2 y} \\
+\end{array}
+\end{equation*}
+</div>
+<p id="p-115">Para a resposta final, substitua <span class="process-math">\(y' = \dfrac{7 \cos x}{3 \sin y}\text{.}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\frac{d^2y}{dx^2} \amp =\amp  \dfrac{-7\left( \sin x \sin y +
+\cos x \cos y \cdot \dfrac{7 \cos x}{3 \sin y}\right)}
+{3 \sin^2 y}\\
+\amp \amp \\
+\amp =\amp  \dfrac{-7\left( \sin x \sin y + 
+\frac{7}{3} \cos^2 x \cot y\right)}
+{3 \sin^2 y}\\
+\end{array}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-116">Seja <span class="process-math">\(y = y(x)\)</span> implicitamente definida por <span class="process-math">\(x = 9 x y + 9 \ln(y)\text{.}\)</span> Encontre</p>
+<p id="p-117"><span class="process-math">\(\displaystyle \frac{dy}{dx}\)</span> = <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-118"><span class="process-math">\(\frac{y\!\left(1-9y\right)}{9xy+9}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-119">Se <span class="process-math">\(x = +9\ln(y)\)</span></p>
+<p id="p-120">derivando em relação a <span class="process-math">\(x\)</span> temos:</p>
+<p id="p-121"><span class="process-math">\(1 =  + 9 x\frac{dy}{dx}+\frac{9}{y}\frac{dy}{dx}\)</span></p>
+<p id="p-122"><span class="process-math">\(\left(9 x + \frac{9}{y}\right)\frac{dy}{dx} = 9 y -1\)</span></p>
+<p id="p-123"><span class="process-math">\(\left(\frac{9 xy + 9}{y}\right)\frac{dy}{dx} = 9 y -1\)</span></p>
+<p id="p-124"><span class="process-math">\(\displaystyle \frac{dy}{dx} = \frac{y(9 y -1)}{9 xy + 9}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-125">Para equação dada a seguir, encontre <span class="process-math">\(\dfrac{dy}{dx}\text{.}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+2 x^3 y^2 - 3 x^2 y = 6.
+\end{equation*}
+</div>
+<p id="p-126"><span class="process-math">\(\dfrac{dy}{dx} =\)</span> <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-127"><span class="process-math">\(\frac{6xy-6x^{2}y^{2}}{4x^{3}y-3x^{2}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-128">Derivando em relação a <span class="process-math">\(x\)</span> obtemos</p>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = 6 x^2 y^2 + 4 x^3 y\frac{dy}{dx}
+-6 xy-3 x^2\frac{dy}{dx},
+\end{equation*}
+</div>
+<p class="continuation">ou</p>
+<div class="displaymath process-math">
+\begin{equation*}
+6 xy - 6 x^2y^2= \left(4 x^3 y
+- 3 x^2\right)\frac{dy}{dx}
+.
+\end{equation*}
+</div>
+<p class="continuation">Portanto,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dx}{dy} = \frac{6 x y -
+6 x^2 y^2}{4 x^3y-3 x^2}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-129">Encontre  <span class="process-math">\(\displaystyle \frac{dy}{dx}\)</span> por derivação implícita, sabendo que <span class="process-math">\(4x^{5}+7x^{2}y-2xy^{5} = -6\text{.}\)</span></p>
+<p id="p-130"><span class="process-math">\(\displaystyle \frac{dy}{dx} =\)</span> <span class="fillin" role="img" aria-label="45-character blank" style="width: 20.4545454545455em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-131"><span class="process-math">\(-\frac{20x^{4}+14xy-2y^{5}}{7x^{2}-10xy^{4}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-132">derivando implicitamente em relação a  <span class="process-math">\(x\)</span> fornece</p>
+<div class="displaymath process-math">
+\begin{equation*}
+20 x^{4} + 14 x^{} y + 7 x^{2} \, \frac{dy}{dx}
+- 2 y^{5} - 10 x y^{4} \, \frac{dy}{dx} = 0,
+\end{equation*}
+</div>
+<p class="continuation">ou</p>
+<div class="displaymath process-math">
+\begin{equation*}
+(7x^{2}-10xy^{4}) \, \frac{dy}{dx} = -(20x^{4}+14xy-2y^{5}).
+\end{equation*}
+</div>
+<p class="continuation">Logo,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = -\frac{20x^{4}+14xy-2y^{5}}{7x^{2}-10xy^{4}}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-133">Encontre <span class="process-math">\(dy/dx\)</span> em termos de <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> se <span class="process-math">\(\arctan(x^{3} y) = x y^{3}\text{.}\)</span></p>
+<p id="p-134"><span class="process-math">\(\displaystyle{dy\over dx} =\)</span> <span class="fillin" role="img" aria-label="65-character blank" style="width: 29.5454545454545em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-135"><span class="process-math">\(\frac{3x^{3-1}y-y^{3}-x^{2\cdot 3}y^{3+2}}{3xy^{3-1}+3x^{2\cdot 3+1}y^{3+1}-x^{3}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-136">Derivamos implicitamente ambos os lados da equação em relação para <span class="process-math">\(x\text{.}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{(1 + x^{6} y^2)} (3 x^{2} y + x^{3} \frac{dy}{dx}) =
+y^{3} + 3 x y^{2} \frac{dy}{dx},
+\end{equation*}
+</div>
+<p class="continuation">então, simplificando o denominador,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+3 x^{2} y + x^{3} \frac{dy}{dx} = 
+(1 + x^{6} y^2) (y^{3} + 3 x y^{2} \frac{dy}{dx}).
+\end{equation*}
+</div>
+<p class="continuation">Assim</p>
+<div class="displaymath process-math">
+\begin{equation*}
+( x^{3} - (3 x y^{2}) (1 + x^{6} y^2) ) \frac{dy}{dx} = 
+y^{3} (1 + x^{6} y^2) - 3 x^{2} y,
+\end{equation*}
+</div>
+<p class="continuation">e finalmente</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx} = 
+\frac{y^{3} (1 + x^{6} y^2) - 3 x^{2} y}{x^{3} - (3 x y^{2}) (1 + x^{6} y^2)}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-137">Encontre as derivadas das funções dadas:</p>
+<p id="p-138">1. <span class="process-math">\(\dfrac{d}{dx}\left[ x\arcsin (x) \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-139">2. <span class="process-math">\(\dfrac{d}{dx}\left[ \cot (x) \arccos (x) \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-140"><span class="process-math">\(x\frac{1}{\sqrt{1-x^{2}}}+\sin^{-1}\!\left(x\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-141"><span class="process-math">\(\cot\!\left(x\right)\frac{-1}{\sqrt{1-x^{2}}}+\left(-\left(\csc^{2}\!\left(x\right)\right)\right)\cos^{-1}\!\left(x\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<p id="p-142">Use a Regra do Produto com as regras para funções trigonométricas inversas.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dx}\left[ x\arcsin (x) \right] = x \cdot \frac{1}{\sqrt{1 - x^2}} + (1)\arcsin (x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-143">
+\begin{equation*}
+\dfrac{d}{dx}\left[\cot (x) \arccos (x)\right] = \cot (x) \cdot \frac{-1}{\sqrt{1 - x^2}}  - \csc^2 (x) \arccos (x)
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-144">Encontre as derivadas das funções dadas:</p>
+<p id="p-145"><span class="process-math">\(\dfrac{d}{dx}\left[ \sin^{-1}(\sqrt[3]{x}) \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-146"><span class="process-math">\(\frac{\frac{1}{\sqrt{1-\left(x^{0.333333}\right)^{2}}}\cdot 1}{3x^{0.666667}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<p id="p-147">Use a Regra do Produto com as regras para funções trigonométricas inversas.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dx}\left[ \sin^{-1}(\sqrt[3]{x}) \right] = \frac{1}{\sqrt{1 - (\sqrt[3]{x})^2}} \cdot \frac{1}{3 x^{2/3}}}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-148">Encontre a equação da reta tangente ao gráfico de <span class="process-math">\(f\)</span> no valor <span class="process-math">\(x\)</span> indicado.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y = 9 \sin^{-1} 5 x, \quad x = 0
+\end{equation*}
+</div>
+<p id="p-149">Reta tangente: <span class="process-math">\(y=\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-150"><span class="process-math">\(45x\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<p id="p-151">Encontre a derivada:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dx}\left[ 9 \sin^{-1} 5 x \right] = \frac{45}{\sqrt{1-25*x^2}},
+\end{equation*}
+</div>
+<p class="continuation">e insira <span class="process-math">\(x = 0\)</span> para obter <span class="process-math">\(m = 45\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<p id="p-152">Calcule as derivadas das funções dadas.</p>
+<p id="p-153">1) <span class="process-math">\(\dfrac{d}{dt}\left[ 10 \sin^{-1} 5 t \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-154">2) <span class="process-math">\(\dfrac{d}{dx}\left[ 8 \cos^{-1} 5 x \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-155">3) <span class="process-math">\(\dfrac{d}{du}\left[ 6 \sec^{-1} 4 u \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-156">4) <span class="process-math">\(\dfrac{d}{dz}\left[ 10 \tan^{-1} 3 z \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-157">5) <span class="process-math">\(\dfrac{d}{dy}\left[ 9 \csc^{-1} 4 y \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-158">6) <span class="process-math">\(\dfrac{d}{dq}\left[ 11 \cot^{-1} 5 q \right] =\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-159"><span class="process-math">\(\frac{50}{\sqrt{1-\left(5t\right)^{2}}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-160"><span class="process-math">\(\frac{-40}{\sqrt{1-\left(5x\right)^{2}}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-161"><span class="process-math">\(\frac{6}{\left|u\right|\sqrt{\left(4u\right)^{2}-1}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><p id="p-162"><span class="process-math">\(\frac{30}{1+\left(3z\right)^{2}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-163"><span class="process-math">\(\frac{-9}{\left|y\right|\sqrt{\left(4y\right)^{2}-1}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-164"><span class="process-math">\(\frac{-55}{1+\left(5q\right)^{2}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">
+<p id="p-165">Use a Regra da Cadeia com as regras para funções trigonométricas inversas.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d}{dt}\left[ 10 \sin^{-1} 5 t \right] = 10 \cdot \frac{1}
+{\sqrt{1 - (5 t)^2}} \cdot 5 =
+\frac{50}{\sqrt{1 - 25 t^2}}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-166">
+\begin{equation*}
+\dfrac{d}{dx}\left[ 8 \cos^{-1} 5 x \right] = 8 \cdot -\frac{1}
+{\sqrt{1 - (5 x)^2}} \cdot 5 = -
+\frac{40}{\sqrt{1 - 25 x^2}}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-167">
+\begin{equation*}
+\dfrac{d}{du}\left[ 6 \sec^{-1} 4 u \right] = 6 \cdot \frac{1}
+{|4 u|\sqrt{(4 u)^2 - 1}} \cdot 4 = 
+\frac{6}{|u|\sqrt{16 u^2 - 1}}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-168">
+\begin{equation*}
+\dfrac{d}{dz}\left[ 10 \tan^{-1} 3 z \right] = 10 \cdot \frac{1}
+{1 + (3 z)^2} \cdot 3 = 
+\frac{30}{1 + 9 z^2}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-169">
+\begin{equation*}
+\dfrac{d}{dy}\left[ 9 \csc^{-1} 4 y \right] = 9 \cdot -\frac{1}
+{|4 y|\sqrt{(4 y)^2 - 1}} \cdot 4 = 
+-\frac{9}{|y|\sqrt{16 y^2 - 1}}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="p-170">
+\begin{equation*}
+\dfrac{d}{dq}\left[ 10 \tan^{-1} 3 z \right] = 11 \cdot -\frac{1}
+{1 + (5 q)^2} \cdot 5 = 
+-\frac{55}{1 + 25 q^2}.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<p id="p-171">Se <span class="process-math">\(f(x) = 8\tan^{-1}\!\left(3\sin\!\left(4x\right)\right)\text{,}\)</span> encontre <span class="process-math">\(f'( x )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-173"><span class="process-math">\(8\frac{1}{1+\left(3\sin\!\left(4x\right)\right)^{2}}\cdot 3\cdot 4\cos\!\left(4x\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="displaymath process-math" id="p-174">
+\begin{equation*}
+\begin{array}{rcl} f'(x) \amp =\amp  \displaystyle\frac{8}{1+ (3 \sin(4 x))^2} \frac{d}{dx} (3 \sin(4 x))
+\\ \amp =\amp  \displaystyle\frac{8}{1+ 9 \sin^2(4 x)} (3\cdot 4  \cos (4 x))
+\\ \amp =\amp  \displaystyle \frac{96 \cos (4 x)}{1+ 9 \sin^2(4 x)} 
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<p id="p-175">Se <span class="process-math">\(f(x) = \left(\sin^{-1}\!\left(8x+7\right)\right)^{3}\text{,}\)</span> então</p>
+<p id="p-176"><span class="process-math">\(f'( x ) =\)</span> <span class="fillin" role="img" aria-label="50-character blank" style="width: 22.7272727272727em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-177"><span class="process-math">\(\frac{8\cdot 3\!\left(\sin^{-1}\!\left(8x+7\right)\right)^{3-1}}{\sqrt{1-\left(8x+7\right)^{2}}}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><div class="displaymath process-math" id="p-178">
+\begin{equation*}
+\begin{array}{rcl} f'(x) \amp =\amp  \displaystyle 3 \left(\sin^{-1}\!\left(8x+7\right)\right)^{2} \frac{d}{dx} \left( \sin^{-1}(8 x + 7) \right)
+\\ \amp  =\amp  \displaystyle 3 \left(\sin^{-1}\!\left(8x+7\right)\right)^{2} \frac{1}{\sqrt{1-(8 x + 7)^2}} \frac{d}{dx} (8 x + 7) 
+\\ \amp  =\amp  \displaystyle 24  \frac{\left(\sin^{-1}\!\left(8x+7\right)\right)^{2}}{\sqrt{1-(8 x + 7)^2}}  
+\end{array}
+\end{equation*}
+</div></div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/wYu6rvBqa54</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/xzFO0SD6XJQ</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/3qcaLLRC768</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">https://youtu.be/ketEn6vDx8U</code></div></div>
