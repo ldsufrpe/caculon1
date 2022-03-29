@@ -14,6 +14,6 @@
 - [N9 -  Derivação Implícita](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 
-## Terefas
+## Tarefas
  - [WeBWorK](http://191.252.191.150/webwork2/CALCULO-N1-LF/)
     - Login e senha: CPF 
