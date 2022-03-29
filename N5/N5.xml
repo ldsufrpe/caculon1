@@ -121,7 +121,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <li>
                     <p>
-                        Encontrar retas tangentes a um gráfico em um ponto especificado.
+                        Encontrar retas tangentes a um gráfico num ponto especificado.
                     </p>
                 </li>
 
@@ -143,17 +143,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <subsection xml:id="subsec-afim">
-    <title>Equações de uma  reta</title>
+    <title>Equações de uma reta</title>
  <definition xml:id="def-afim">
         <statement>
             <p>
-                Dados os números reais <m>m\neq 0</m> e <m>b</m> a função  definida por <m>f(x)=mx+b</m>  é dita função afim. 
+                Dados os números reais <m>m\neq 0</m> e <m>b</m> a função definida por <m>f(x)=mx+b</m>  é dita função afim.
             </p>
         </statement>
     </definition>
 
    <p>
-       O  gráfico nde uma função afim é uma reta cuja a inclinação  é <m>m</m>  e cuja intersecção  com o eixo 
+       O gráfico nde uma função afim é uma reta cuja inclinação é <m>m</m>  e cuja intersecção com o eixo
                 <m>y</m> é <m>(0,b)</m>. Fazendo <m>y=f(x)</m>, a função afim <m>y=mx+b</m> é também chamada de
                  <term> equação reduzida da reta</term>.
                    </p>
@@ -168,13 +168,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </me>
  </p>
 
- <remark> A inclinação <m>m</m> e a ordenada <m>b</m>, do ponto em que a reta intersecta o eixo <m>x</m>, são também
-  chamados de coeficientes angular e linear, respectivamente.
+ <remark> A inclinação <m>m</m> e a ordenada <m>b</m>, do ponto em que a reta intersecta o eixo <m>y</m>, são também
+  chamados coeficientes angular e linear, respectivamente.
  </remark>
 <assemblage xml:id="assemblage-reta">
     <title>Equação da reta</title>
     <p>
-       A equação da reta  que tem inclinação <m>m</m> e que passa pelo ponto <m>(x_1, y_1)</m>  pode ser escrita como  
+       A equação da reta que tem inclinação <m>m</m> e que passa pelo ponto <m>(x_1, y_1)</m>  pode ser escrita como
     
     <me>
         y-y_1=m(x-x_1).
@@ -327,7 +327,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
  <li>
      <p>
-        <url href="https://youtu.be/V9twnvQ9QtE"  visual="youtu.be/V9twnvQ9QtE">  Encontrando uma equação da reta que tem inclinação
+        <url href="https://youtu.be/V9twnvQ9QtE"  visual="youtu.be/V9twnvQ9QtE">  Encontrando uma equação da reta com inclinação
         de <m>-\frac{3}{4}</m> e passa pelo ponto <m>(0,8)</m>. 
          </url>
 
@@ -370,7 +370,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
           
         Então fazemos <m>Q</m>  se aproximar de <m>P</m> ao longo do gráfico de <m>f(x)</m> ao fazer <m>x</m> tender para <m>a</m> (ver <xref ref="fig2-2"/>).
         Se o quociente <xref ref="eq-1-1"/> tender para um número <m>m</m> (ou seja, se o limite existir quando <m>x</m> tender a <m>a</m>) podemos dizer que existe uma 
-        tangente tangente que passa por <m>P</m> e tem inclinação <m>m</m>.
+        tangente que passa por <m>P</m> e tem inclinação <m>m</m>.
 
 <figure xml:id="fig1-1">
     <caption></caption>
@@ -626,7 +626,7 @@ se o limite existir.
 
 Se escrevermos <m>x=a+h</m> , então <m>h=x-a</m> e <m>h</m> tende a 0 se, e somente se, <m>x</m> tende a <m>a</m>.
 Consequentemente, uma maneira equivalente de enunciar a <xref ref="def-derivada"/>, como vimos
-na definição  das retas tangentes (ver Equação <xref ref="eq1"/>), é
+na definição das retas tangentes (ver Equação <xref ref="eq1"/>), é
 
 
 <mdn>
@@ -877,7 +877,7 @@ Para <m>y=f(x)</m> temos as seguintes notações mais comuns para derivada:
     f'(x)= y'=\frac{\dd y}{\dd x}=\frac{\dd f}{\dd x}-\frac{\dd}{\dd x}f(x)= Df(x)= D_xf(x).
 </me>
 
-Além disso, para indicar o valor de uma  derivada <m> \frac{\dd y}{\dd x}</m> em <m>x=a</m> usamos a notação
+Além disso, para indicar o valor de uma derivada <m> \frac{\dd y}{\dd x}</m> em <m>x=a</m> usamos a notação
 
 <me>
     f'(a)=\frac{\dd y}{\dd x}\Bigg|_{x=a}
@@ -892,8 +892,8 @@ Além disso, para indicar o valor de uma  derivada <m> \frac{\dd y}{\dd x}</m> e
 <statement>
     <p>
         Uma função <m>f</m> é derivável em <m>x=a</m> se  <m>f'(a)</m> existir. É
-derivável em um intervalo aberto <m>(a,b)</m> se for derivável em cada valores do intervalo.
- se for diferenciável em cada número do intervalo.
+derivável num intervalo aberto <m>(a,b)</m> se for derivável em cada valor do intervalo.
+
     </p>
 </statement>
 
@@ -969,7 +969,7 @@ A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(
                 <mrow>= \amp \lim_{h\to 0}\frac{-(x+h) + x}{h} </mrow>
                 <mrow>= \amp \lim_{h\to 0}\frac{-h}{h}=-1 .</mrow>
             </md>
-     Logo, para <m>x\lt 0</m> temos <m>f'(x)=-1</m>. Por fim,  já que <m>f</m>  não é derivável em <m>x=0</m> (ver <xref ref="ex-12"/>) obtemos
+     Logo, para <m>x\lt 0</m> temos <m>f'(x)=-1</m>. Por fim, já que <m>f</m>  não é derivável em <m>x=0</m> (ver <xref ref="ex-12"/>) obtemos
             
             
             <me>
@@ -997,14 +997,14 @@ A <xref ref="def-derivavel"/> é válida também para os intervalos abertos <m>(
 </proof>
 </theorem>
 <p>
-    O <xref ref="ex-11"/> é um exemplo clássico de que a reciproca do <xref ref="th-1"/> não é verdadeira. Ou seja, nem toda função contínua é 
+    O <xref ref="ex-11"/> é um exemplo clássico de que a recíproca do <xref ref="th-1"/> não é verdadeira. Ou seja, nem toda a função contínua é
 derivável. Note que a função  <m>f(x)</m>=|x| é continua em <m>(-\infy, +\infty)</m> mas não é derivável em <m>x=0</m>. 
 </p>
  
 
 <note>
 O <xref ref="th-1"/> fornece uma maneira bastante útil para determinar quando uma função não é derivável em algum ponto, já que é necessário apenas verificar 
-se a continuidade da função naquele ponto, que em geral pode ser mais simples. 
+se a continuidade da função naquele ponto, que, em geral, pode ser mais simples.
 </note>
 
 <note>
