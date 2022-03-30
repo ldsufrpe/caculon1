@@ -1087,6 +1087,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </p>
 
                     </statement>
+                    <solution>
                     <p>
                         Para encontrar a derivada de <m>\arccos</m> podemos seguir os mesmos passos:
                         <ul>
@@ -1130,6 +1131,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             </li>
                         </ul>
                     </p>
+                </solution>
                 </example>
 
                 <example xml:id="eg_2_12_2">

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-29T18:36:02-03:00       *-->
+<!--*       on 2022-03-29T22:33:06-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,28 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Derivamos ambos os lados da equação em relação a <span class="process-math">\(x\text{:}\)</span></p>
+<p>Para encontrar a derivada de <span class="process-math">\(\arccos\)</span> podemos seguir os mesmos passos:</p>
+<ul class="disc">
+<li><p>Escrevemos <span class="process-math">\(\arccos(x) =\theta(x)\)</span> de modo que <span class="process-math">\(\cos\theta = x\)</span> e a derivada desejada é <span class="process-math">\(\dfrac{\dd \theta}{\dd x}\text{.}\)</span></p></li>
+<li><p>Derive implicitamente, lembrando que <span class="process-math">\(\theta\)</span> é uma função de <span class="process-math">\(x\text{:}\)</span><div class="displaymath process-math">
+\begin{align*}
+-\sin\theta \dfrac{\dd \theta}{\dd x} \amp= 1\\
+\dfrac{\dd \theta}{\dd x} \amp= -\frac{1}{\sin\theta}\\
+\dfrac{\dd}{\dd x}\arccos x \amp= -\frac{1}{\sin(\arccos x)}.
+\end{align*}
+</div></p></li>
+<li>
+<p>Para simplificar esta expressão, desenhe novamente o triângulo correspondente</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="images/triangleAcos.svg" role="img" class="contained"></div></div></div>
+<p>a partir do qual vemos</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\frac{d}{dx} (2 x^2 + 5 x + xy)=\frac{d}{dx}( 5)
-\end{equation*}
+\begin{align*}
+\sin(\arccos x) = \sin\theta \amp= \sqrt{1-x^2}.
+\end{align*}
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-4 x + 5 + x \frac{dy}{dx} + y = 0
-\end{equation*}
-</div>
-<p class="continuation">Resolvemos para <span class="process-math">\(\frac{dy}{dx}\)</span> fornece</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{dy}{dx} = -4 - \frac{5}{x} - \frac{y}{x}
-\end{equation*}
-</div>
-<p class="continuation">Substituindo  <span class="process-math">\(x = 5\)</span> e <span class="process-math">\(y = -14\text{,}\)</span> temos</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{dy}{dx} = -{\textstyle\frac{11}{5}}
-\end{equation*}
-</div>
+</li>
+<li><p>Assim<div class="displaymath process-math">
+\begin{align*}
+\dfrac{\dd}{\dd x}\arccos x \amp= -\frac{1}{\sqrt{1-x^2}}.
+\end{align*}
+</div></p></li>
+</ul>
 </div></body>
 </html>
