@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-25T12:36:31-03:00       *-->
+<!--*       on 2022-03-31T16:13:13-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -62,9 +62,6 @@
 <link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
 <body class="pretext-article ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
@@ -145,25 +142,25 @@ true);
 <li id="li-3"><p id="p-5">Aplicar a derivação logarítmica.</p></li>
 </ol></article><section class="introduction" id="introduction-2"><p id="p-6">A Regra da Cadeia é uma das ferramentas importantes da Derivação. Além de permitir obter derivadas de funções complicadas, formadas por composição de duas funções mais simples, também será para vamos usá-las para compreender derivadas definidas implicitamente.</p>
 <p id="p-7">Considere que a base logarítmica <span class="process-math">\(e\)</span> — <span class="process-math">\(\ln_e(x)\)</span> é a potência que <span class="process-math">\(e\)</span> deve ser elevada para fornecer <span class="process-math">\(x\text{.}\)</span> Ou seja, <span class="process-math">\(\ln_e(x)\)</span> é definido por</p>
-<div class="displaymath process-math" id="md-1">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
 e^{\ln_e x}\amp= x
 \end{align*}
 </div>
-<p class="continuation">ou seja, — é a inversa da função exponencial com base <span class="process-math">\(e\text{.}\)</span> Uma vez que esta escolha de base funciona tão clara e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural para a base do logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:</p>
-<div class="displaymath process-math" id="md-2">
+<p class="continuation">ou seja, — é a inversa da função exponencial com base <span class="process-math">\(e\text{.}\)</span> Dado que esta escolha da base funciona tão clara e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural do logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
 \ln_q x\amp= \frac{\ln_e x}{\ln_e q}
 \end{align*}
 </div>
-<p class="continuation">Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para nossos propósitos.</p>
-<p id="p-8">O logaritmo com base <span class="process-math">\(e\text{,}\)</span> é chamado de <dfn class="terminology">logaritmo natural</dfn>. A “naturalidade” da base logarítmica <span class="process-math">\(e\)</span> é exatamente que essa escolha de base funciona muito bem em cálculo (e em matemática mais ampla) de maneiras que outros as bases não <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> . Existem várias notações  diferentes para a base logarítmica <span class="process-math">\(e\text{;}\)</span></p>
-<div class="displaymath process-math" id="md-3">
+<p class="continuation">Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para os nossos propósitos.</p>
+<p id="p-8">O logaritmo com base <span class="process-math">\(e\text{,}\)</span> é chamado de <dfn class="terminology">logaritmo natural</dfn>. A “naturalidade” da base logarítmica <span class="process-math">\(e\)</span> é exatamente que essa escolha funciona muito bem em cálculo (e em matemática mais ampla) de maneiras que outras bases não <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> . Existem várias notações diferentes para a base logarítmica <span class="process-math">\(e\text{;}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{gather*}
 \log_e x = \ln x = \ln x.
 \end{gather*}
 </div>
-<p class="continuation">É desejável que você seja capaz de reconhecer todas.</p>
+<p class="continuation">É desejável que o leitor consiga reconhecer todas.</p>
 <p id="p-9">Neste texto vamos escrever o logaritmo natural como “<span class="process-math">\(\ln\)</span>” sem base. A razão para esta escolha é que a base <span class="process-math">\(e\)</span> é a escolha padrão de base para logaritmos em matemática.</p>
 <p id="p-10">O logaritmo natural herda muitas propriedades de logaritmos. Então, para todo <span class="process-math">\(x,y \gt 0\)</span> vale o seguinte:</p>
 <article class="assemblage assemblage-like" id="assemblage-log-prop"><h3 class="heading"><span class="title">Propriedades do Logaritmo.</span></h3>
@@ -180,26 +177,26 @@ x=\tfrac{\ln_a x}{\ln_a e}\)</span></p></li>
 </ul></article><p id="p-12">E, finalmente, devemos lembrar que <span class="process-math">\(\ln x\)</span> tem domínio (ou seja, é definido para) <span class="process-math">\(x \gt 0\)</span> e intervalo (ou seja, recebe todos os valores) <span class="process-math">\(-\infty \lt x \lt \infty\text{.}\)</span> +</p>
 <figure class="figure figure-like" id="fig-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-sage-1.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-13">Para calcular a derivada de <span class="process-math">\(\ln x\)</span> podemos tentar começar com a definição da derivada como limite:</p>
-<div class="displaymath process-math" id="md-4">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{align*}
 \dfrac{\dd}{\dd x}\ln x\amp= \lim_{h \to 0} \frac{\ln(x+h) - \ln(x)}{h}\\
 \amp= \lim_{h\to 0} \frac{\ln( (x+h)/x )}{h}
 \end{align*}
 </div>
-<p class="continuation">Isso não parece complicado. Mas  temos a regra da cadeia, e sabemos que o logaritmo satisfaz a equação:</p>
-<div class="displaymath process-math" id="md-5">
+<p class="continuation">Isso não parece complicado. Mas temos a regra da cadeia, e sabemos que o logaritmo satisfaz a equação:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
 \begin{align*}
 x\amp= e^{\ln x}
 \end{align*}
 </div>
 <p class="continuation">Como ambos os lados da equação são a mesma função, ambos os lados da equação têm a mesma derivada. Isto é, estamos usando <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p>
-<div class="displaymath process-math" id="md-6">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{gather*}
 \text{se } f(x)=g(x) \text{ para todo $x$, então } f'(x) = g'(x)
 \end{gather*}
 </div>
 <p class="continuation">Então agora derive os dois lados:</p>
-<div class="displaymath process-math" id="md-7">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
 \begin{align*}
 \dfrac{\dd}{\dd x} x\amp= \dfrac{\dd}{\dd x} e^{\ln x}\\
 \end{align*}
@@ -224,7 +221,7 @@ x\amp= e^{\ln x}
 <article class="theorem theorem-like" id="thm_diff_log"><h3 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h3>
-<div class="displaymath process-math" id="md-8">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
 \begin{align*}
 \dfrac{\dd}{\dd x} \ln x\amp= \frac{1}{x}
 \end{align*}
@@ -235,7 +232,7 @@ x\amp= e^{\ln x}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
 <p id="p-18">Existem duas maneiras de abordar isso — podemos simplificar e depois derivar, ou derivar e depois simplificar. Vamos iniciar com o primeiro modo:</p>
-<div class="displaymath process-math" id="md-9">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
 \begin{align*}
 f(x)\amp= \ln 3x\amp \ct{Log de um produto}\\
 \amp= \ln 3 + \ln x\\
@@ -244,7 +241,7 @@ f'(x)\amp= \dfrac{\dd}{\dd x} \ln 3 + \dfrac{\dd}{\dd x} \ln x\\
 \end{align*}
 </div>
 <p class="continuation">Agora primeiro derivamos e só depois simplificamos</p>
-<div class="displaymath process-math" id="md-10">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
 \begin{align*}
 f'(x)\amp= \dfrac{\dd}{\dd x} \ln(3x)\amp \ct{Regra da Cadeia}\\
 \amp= \frac{1}{3x} \cdot 3\\
@@ -260,7 +257,7 @@ f'(x)\amp= \dfrac{\dd}{\dd x} \ln(3x)\amp \ct{Regra da Cadeia}\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
 <p id="p-21">Seja <span class="process-math">\(c\gt 0\)</span> uma constante, então</p>
-<div class="displaymath process-math" id="md-11">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
 \begin{align*}
 \dfrac{\dd}{\dd x} \ln cx\amp= \dfrac{\dd}{\dd x}\left(\ln c + \ln x \right)\\
 \amp= \frac{1}{x}
@@ -274,25 +271,25 @@ f'(x)\amp= \dfrac{\dd}{\dd x} \ln(3x)\amp \ct{Regra da Cadeia}\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
 <ul id="p-23" class="disc">
-<li id="li-12"><p id="p-derived-li-12">Se <span class="process-math">\(x \gt 0\text{,}\)</span> <span class="process-math">\(|x|= x\)</span> então<div class="displaymath process-math" id="md-12">
+<li id="li-12"><p id="p-derived-li-12">Se <span class="process-math">\(x \gt 0\text{,}\)</span> <span class="process-math">\(|x|= x\)</span> então<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
 \begin{align*}
 g'(x)\amp= \dfrac{\dd}{\dd x}\left[ \ln x\right] = \frac{1}{x}
 \end{align*}
 </div></p></li>
-<li id="li-13"><p id="p-derived-li-13">Se <span class="process-math">\(x\lt 0\)</span> então <span class="process-math">\(|x|= -x\text{.}\)</span> Se <span class="process-math">\(|h|\)</span> é estritamente menor do que <span class="process-math">\(|x|\text{,}\)</span> então também temos que <span class="process-math">\(x+h\lt 0\)</span> e <span class="process-math">\(|x+h|=-(x+h)=|x|-h\text{.}\)</span> Escreva <span class="process-math">\(X=|x|\)</span> e <span class="process-math">\(H=-h\text{.}\)</span> Então, pela definição da derivada,<div class="displaymath process-math" id="md-13">
+<li id="li-13"><p id="p-derived-li-13">Se <span class="process-math">\(x\lt 0\)</span> então <span class="process-math">\(|x|= -x\text{.}\)</span> Se <span class="process-math">\(|h|\)</span> é estritamente menor do que <span class="process-math">\(|x|\text{,}\)</span> então também temos que <span class="process-math">\(x+h\lt 0\)</span> e <span class="process-math">\(|x+h|=-(x+h)=|x|-h\text{.}\)</span> Escreva <span class="process-math">\(X=|x|\)</span> e <span class="process-math">\(H=-h\text{.}\)</span> Então, pela definição da derivada,<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
 \begin{align*}
 g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
-= \lim_{h\rightarrow 0} \frac{\ln(|x|-h)-\ln|x|}{h} \\
+= \lim_{h\rightarrow 0} \frac{\ln(|x|-h)-\ln|x|}{h}\\
 \amp= \lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{-H}
-= -\lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{H} \\
-\amp=-\dfrac{\dd}{\dd x}\ln X =-\frac{1}{X} = -\frac{1}{|x|} \\
+= -\lim_{H\rightarrow 0} \frac{\ln(X+H)-\ln X}{H}\\
+\amp=-\dfrac{\dd}{\dd x}\ln X =-\frac{1}{X} = -\frac{1}{|x|}\\
 \amp=\frac{1}{x}
 \end{align*}
 </div></p></li>
 <li id="li-14"><p id="p-derived-li-14">Já que <span class="process-math">\(\ln 0\)</span> não está definida, <span class="process-math">\(g'(0)\)</span> não existe.</p></li>
 </ul>
 <p class="continuation">Juntando isso dá:</p>
-<div class="displaymath process-math" id="md-14">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
 \begin{align*}
 \dfrac{\dd}{\dd x} \ln | x |\amp= \frac{1}{x}
 \end{align*}
@@ -305,23 +302,23 @@ g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
 <p id="p-25">Seja <span class="process-math">\(x\gt 0\)</span> e <span class="process-math">\(a\)</span> qualquer número real. Exponenciar ambos os lados de <span class="process-math">\(\ln\big(x^a\big)=a\ln x\)</span> nos dá <span class="process-math">\(x^a=e^{a\ln x}\)</span> e então</p>
-<div class="displaymath process-math" id="md-15">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
 \begin{align*}
 \dfrac{\dd}{\dd x} x^a\amp= \dfrac{\dd}{\dd x} e^{a\ln x}
-= e^{a\ln x} \dfrac{\dd}{\dd x}(a\ln x)\amp\ct{Regra da Cadeia} \\
+= e^{a\ln x} \dfrac{\dd}{\dd x}(a\ln x)\amp\ct{Regra da Cadeia}\\
 \amp=\frac{a}{x} e^{a\ln x}
-=\frac{a}{x} x^a \\
+=\frac{a}{x} x^a\\
 \amp=a x^{a-1}
 \end{align*}
 </div>
 <p class="continuation">como esperado.</p>
 </div></div>
 </div></article></div>
-<p id="p-26">Podemos estender o Teorema <a href="" class="xref" data-knowl="./knowl/thm_diff_log.html" title="Teorema 1.2">Teorema 1.2</a> para calcular a derivada de logaritmos de outras bases de maneira direta. Uma vez que para qualquer positivo <span class="process-math">\(a \neq 1\text{:}\)</span></p>
-<div class="displaymath process-math" id="md-16">
+<p id="p-26">Podemos estender o Teorema   <a href="" class="xref" data-knowl="./knowl/thm_diff_log.html" title="Teorema 1.2">Teorema 1.2</a> para calcular a derivada de logaritmos de outras bases de maneira direta. Visto que para qualquer positivo <span class="process-math">\(a \neq 1\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_diff_log.html" id="md-16">
 \begin{align*}
 \ln_a x\amp= \frac{\ln x}{\ln a} = \frac{1}{\ln a} \cdot \ln x\amp
-\ct{já que  $a$ é uma constante}\\
+\ct{já que $a$ é uma constante}\\
 \dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
 \end{align*}
 </div></section><article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h3 class="heading">
@@ -340,19 +337,19 @@ g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
 <span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">A derivada de <span class="process-math">\(\mathbf{\dfrac{\dd}{\dd x}\left[a^x\right]}\text{.}\)</span></span>
 </h3>
 <p id="p-31">Agora podemos determinar a derivada de <span class="process-math">\(a^x\text{.}\)</span></p>
-<div class="displaymath process-math" id="md-17">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
 \begin{align*}
-f(x)\amp= a^x\amp \ct{Tomando o log de ambos os lados}\\
-\ln f(x)\amp= x \ln a\amp \ct{Exponenciar na base $e$ de ambos os lados}\\
+f(x)\amp= a^x\amp \ct{Tomando o $\log$ em ambos os lados}\\
+\ln f(x)\amp= x \ln a\amp \ct{Exponenciar na base $e$ em ambos os lados}\\
 f(x)\amp= e^{x \ln a}\qquad \qquad\qquad \qquad \ct{Regra da Cadeia}\\
 f'(x)\amp= e^{x \ln{a}} \cdot \ln{a}\\
 \amp= a^x \cdot \ln{a}
 \end{align*}
 </div>
 <p class="continuation">Observe que também poderíamos ter feito o seguinte:</p>
-<div class="displaymath process-math" id="md-18">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
 \begin{align*}
-f(x)\amp= a^x\amp \ct{Tomando o log de ambos os lados}\\
+f(x)\amp= a^x\amp \ct{Tomando o $\log$ de ambos os lados}\\
 \ln f(x)\amp= x \ln a\amp \ct{derivando ambos os lados}\\
 \dfrac{\dd}{\dd x} \left( \ln f(x) \right)\amp=
 \ln a\\
@@ -368,16 +365,19 @@ f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
 <article class="corollary theorem-like" id="cor_2_10"><h4 class="heading">
 <span class="type">Corolário</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h4>
-<div class="displaymath process-math" id="md-19">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
 \begin{align*}
 \dfrac{\dd}{\dd x} [a^x]\amp= \ln a \cdot a^x\amp \text{para qualquer $a \gt 0$}\\
-\dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer  $a \gt 0, a \neq 1$}
+\dfrac{\dd}{\dd x} [\log_a x]\amp= \frac{1}{x \cdot \ln a}\amp \text{para qualquer
+$a \gt 0, a \neq 1$}
 \end{align*}
 </div>
 <p class="continuation">onde <span class="process-math">\(\ln x\)</span> é o logaritmo natural.</p></article><p id="p-34">Lembre-se de que precisamos da ressalva <span class="process-math">\(a \neq 1\)</span> porque a base 1 do logaritmo não está bem definida. Isso ocorre porque <span class="process-math">\(1^x = 1\)</span> para qualquer <span class="process-math">\(x\text{.}\)</span> Não precisamos de uma advertência semelhante para a derivada da exponencial porque sabemos</p>
-<div class="displaymath process-math" id="md-20">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_2_10.html" id="md-20">
 \begin{align*}
-\dfrac{\dd}{\dd x} 1^x\amp= \dfrac{\dd}{\dd x} 1= 0\amp\ct{Enquanto o}\, \knowl{./knowl/cor_2_10.html}{\text{Corolário 1.9}} \,\ct{acima nos diz}\\
+\dfrac{\dd}{\dd x} 1^x\amp= \dfrac{\dd}{\dd x} 1= 0\amp\ct{Enquanto o}\,
+\knowl{./knowl/cor_2_10.html}{\text{Corolário 1.9}}
+\,\ct{acima nos diz}\\
 \amp= \ln 1 \cdot 1^x = 0 \cdot 1 = 0.
 \end{align*}
 </div>
@@ -404,7 +404,7 @@ f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
 <article class="example example-like" id="ex-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-5"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Derivada de um produto triplo.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-41">Seja</p>
-<div class="displaymath process-math" id="md-21">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
 \begin{align*}
 P(x)\amp= F(x) \cdot G(x) \cdot H(x)
 \end{align*}
@@ -413,14 +413,15 @@ P(x)\amp= F(x) \cdot G(x) \cdot H(x)
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
 <p id="p-42">Comece tomando o logaritmo de ambos os lados:</p>
-<div class="displaymath process-math" id="md-22">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
 \begin{align*}
-\ln P(x)\amp= \ln \left( F(x) \cdot G(x) \cdot H(x)  \right)\\
+\ln P(x)\amp= \ln \left( F(x) \cdot G(x) \cdot H(x) \right)\\
 \amp= \ln F(x) + \ln G(x) + \ln H(x)\\
 \end{align*}
-<p class="intertext">Observe que o produto de funções do lado direito se tornou uma soma de funções. Diferenciar somas é muito mais fácil do que derivar produtos. Então quando derivamos temos</p>
+<p class="intertext">Observe que o produto de funções do lado direito tornou-se uma soma de funções. Diferenciar somas é muito mais fácil do que derivar produtos. Então quando derivamos temos</p>
 \begin{align*}
-\dfrac{\dd}{\dd x}\ln P(x) \amp= \dfrac{\dd}{\dd x}\ln F(x) + \dfrac{\dd}{\dd x}\ln G(x) + \dfrac{\dd}{\dd x}\ln H(x)\\
+\dfrac{\dd}{\dd x}\ln P(x) \amp= \dfrac{\dd}{\dd x}\ln F(x) + \dfrac{\dd}{\dd x}\ln
+G(x) + \dfrac{\dd}{\dd x}\ln H(x)\\
 \end{align*}
 <p class="intertext">Uma aplicação rápida da Regra da Cadeia mostra que <span class="process-math">\(\dfrac{\dd}{\dd x}\ln
 f(x) = f'(x) / f(x)\text{:}\)</span></p>
@@ -437,12 +438,13 @@ F(x)G(x)H(x)\\
 </div>
 </div></div>
 </div></article></div>
-<p id="p-43">Esse mesmo truque de “pegar um logaritmo e depois derivar” — ou derivação logarítmica — funcionará sempre que você tiver um produto (ou quociente) de funções.</p>
+<p id="p-43">Esse mesmo truque de “pegar um logaritmo e depois derivar” — ou derivação logarítmica — funcionará sempre que tivermos um produto (ou quociente) de funções.</p>
 <article class="exercise exercise-like" id="exercise-6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-6"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-6"><article class="exercise exercise-like"><p id="p-44">Use a fórmula do <a href="" class="xref" data-knowl="./knowl/ex-5.html" title="Exemplo 1.13: Derivada de um produto triplo">Exemplo 1.13</a> para encontrar a derivada de <span class="process-math">\(2^x(x^2+1)\ln{x}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-45"><span class="process-math">\(\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x \log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-45"><span class="process-math">\(\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x
+\log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}\)</span></p></div></div>
 </div></article></div></section><section class="subsection" id="sugestao-video-1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Sugestão de vídeos</span>
 </h3>
@@ -476,7 +478,7 @@ F(x)G(x)H(x)\\
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-63"><span class="process-math">\(3x^{2}\ln\!\left(x\right)+x^{2}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
 <p id="p-64">Aplicando a regra do produto dá</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \begin{aligned}
 y' \amp = (x^3 \ln x)' \\
@@ -497,7 +499,7 @@ y' \amp = (x^3 \ln x)' \\
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-71"><span class="process-math">\(\frac{1}{x\ln\!\left(a\right)}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-72"><span class="process-math">\(\frac{1}{x\cdot 1.60944}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<div class="displaymath process-math" id="p-73">
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-73">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle\frac{d}{dx}\left[ \log_a x \right] \amp =\amp  \displaystyle
@@ -513,7 +515,7 @@ y' \amp = (x^3 \ln x)' \\
 \end{equation*}
 </div>
 <p id="p-74">Usando o resultado acima com <span class="process-math">\(a = 5\text{,}\)</span></p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \displaystyle\frac{d}{dx}\left[ \log_{5} x \right] 
 = \displaystyle\frac{1}{x \ln 5}.
@@ -529,7 +531,7 @@ y' \amp = (x^3 \ln x)' \\
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-79"><span class="process-math">\(\frac{1}{6x}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
 <p id="p-80">Primeiro reescreva as funções dadas usando as regras dos logaritmos.</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \begin{array}{rcl}
 f(x) \amp =\amp  \ln (6 x^5) \\ 
@@ -540,7 +542,7 @@ f'(x) \amp =\amp  \displaystyle 0 + 5 \cdot \frac{1}{x} = \frac{5}{x}.
 \end{array}
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="p-81">
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-81">
 \begin{equation*}
 \begin{array}{rcl}
 g(x) \amp =\amp  \ln (\sqrt[6] x) \\ 
@@ -561,20 +563,20 @@ g'(x) \amp =\amp  \displaystyle \frac{1}{6} \cdot \frac{1}{x} = \frac{1}{6 x}.
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-86"><span class="process-math">\(\frac{7}{x}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
 <p id="p-87">1)</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f'(x) = 7 \cdot \frac{1}{x} = \frac{7}{x}.
 \end{equation*}
 </div>
 <p class="continuation">2) Ou usando a Regra da Cadeia,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 g'(x) = \frac{1}{x^{7}} \cdot (7 x^{6})
 = \frac{7 x^{6}}{x^{7}} = \frac{7}{x},
 \end{equation*}
 </div>
 <p class="continuation">ou usando leis de logaritmos para simplificar primeiro.</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 g'(x) = \frac{d}{dx}[ \ln (x^7) ] =
 \frac{d}{dx}[ 7 \ln (x) ] =
@@ -595,19 +597,19 @@ g'(x) = \frac{d}{dx}[ \ln (x^7) ] =
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-93"><span class="process-math">\(7\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
 <p id="p-94">Note que se</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(w)=7\ln{x}
 \end{equation*}
 </div>
 <p class="continuation">então</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f'(w)=\frac{7}{x}.
 \end{equation*}
 </div>
 <p class="continuation">Assim,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \displaystyle \lim_{w\to 1}\frac{7\ln{w}}{w-1}=\lim_{w\to 1}\frac{7\ln{w}-2\ln{1}}{w-1}=f'(1)=7
 \end{equation*}
@@ -620,7 +622,7 @@ f'(w)=\frac{7}{x}.
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><p id="p-97"><span class="process-math">\(\frac{10}{\ln\!\left(10\right)x\!\left(10+\log\!\left(x\right)\right)^{2}}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
 <p id="p-98">A derivada é</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{dy}{dx}=\dfrac{\frac{1}{x\;\ln{10} }(10+\log{x})-\dfrac{1}{x\;\ln{10} }\log{x}}{(10+\log{x})^2}=\dfrac{10}{x \ln{10}\;(10+\log{x})^2}
 \end{equation*}
@@ -633,7 +635,7 @@ f'(w)=\frac{7}{x}.
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-101"><span class="process-math">\(\frac{28\cos\!\left(\ln\!\left(x\right)\right)}{x\sin^{5}\!\left(\ln\!\left(x\right)\right)}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
 <p id="p-102">A derivada vale</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \dfrac{dy}{dx}=7\frac{4\sin^{3}\!\left(\ln\!\left(x\right)\right)\frac{1}{x}\cos\!\left(\ln\!\left(x\right)\right)}{\left(\sin^{4}\!\left(\ln\!\left(x\right)\right)\right)^{2}}=\frac{28\cos\!\left(\ln\!\left(x\right)\right)}{x\sin^{5}\!\left(\ln\!\left(x\right)\right)}
 \end{equation*}
@@ -646,7 +648,7 @@ f'(w)=\frac{7}{x}.
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-105"><span class="process-math">\(\frac{-5}{x\ln\!\left(x\right)\ln\!\left(\ln\!\left(x\right)\right)}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
 <p id="p-106">A derivada vale</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{dy}{dx}=-\frac{5}{\ln\!\left(\ln\!\left(x\right)\right)}\frac{1}{\ln\!\left(x\right)}\frac{1}{x}=\frac{-5}{x\ln\!\left(x\right)\ln\!\left(\ln\!\left(x\right)\right)}
 \end{equation*}
@@ -659,18 +661,18 @@ f'(w)=\frac{7}{x}.
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-109"><span class="process-math">\(\frac{x}{2}-\frac{5}{2}+\ln\!\left(2\right)\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
 <p id="p-110">Temos o ponto <span class="process-math">\((5,\ln {2})\)</span> e encontramos a inclinação</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f'(x)=\frac{1}{x-3}
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 m=f'(5)=\frac{1}{2}
 \end{equation*}
 </div>
 <p class="continuation">e usando a forma ponto-inclinação de uma reta, obtemos</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 \end{equation*}
@@ -684,7 +686,7 @@ y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
 <p id="p-114">SOLUTION</p>
 <p id="p-115">A derivada vale</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \dfrac{dy}{dx}=-\left(4\ln^{3}\!\left(x\right)\frac{1}{x}\right)=-\frac{4\ln^{3}\!\left(x\right)}{x}
 \end{equation*}
@@ -697,7 +699,7 @@ y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-118"><span class="process-math">\(-2\tan\!\left(x\right)\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
 <p id="p-119">A derivada vale</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{dy}{dx}=\frac{2}{\cos\!\left(x\right)}\!\left(-\left(\sin\!\left(x\right)\right)\right)=-2\tan\!\left(x\right)
 \end{equation*}
@@ -715,7 +717,7 @@ y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 <p id="p-126"><span class="process-math">\(\displaystyle{dy\over dx} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><p id="p-127"><span class="process-math">\(12\cdot 6x^{6-1}+\ln\!\left(5\right)\cdot 5^{x}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="displaymath process-math" id="p-128">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-128">
 \begin{equation*}
 {dy\over dx} = 72 x^{5} + \ln(5)\cdot 5^x
 \end{equation*}
@@ -725,7 +727,7 @@ y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 <p id="p-130"><span class="process-math">\({dy\over dx} =\)</span> <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-131"><span class="process-math">\(\ln\!\left(14\right)\cdot 14^{x}\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="displaymath process-math" id="p-132">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-132">
 \begin{equation*}
 {dy\over dx} = \ln(14) 14^x
 \end{equation*}
@@ -736,7 +738,7 @@ y=\frac{x}{2}-\frac{5}{2}+\ln{2}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-135"><span class="process-math">\(-2.07944\cdot 8^{-x}\)</span></p></div></div>
 </div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">O leitor interessado deve ir à Wikipédia e procurar o logaritmo natural.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Observe que só porque as derivadas são as mesmas, não significa que as funções originais são as mesmas. Ambas <span class="process-math">\(f(x)=x^2\)</span> e <span class="process-math">\(g(x)=x^2+3\)</span> tem a derivada <span class="process-math">\(f'(x)=g'(x)=2x\text{,}\)</span> mas <span class="process-math">\(f(x)
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Observe que só por as derivadas serem as mesmas, não significa que as funções originais são as mesmas. Ambas <span class="process-math">\(f(x)=x^2\)</span> e <span class="process-math">\(g(x)=x^2+3\)</span> tem a derivada <span class="process-math">\(f'(x)=g'(x)=2x\text{,}\)</span> mas <span class="process-math">\(f(x)
 \neq g(x)\text{.}\)</span>
 </div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/QMXEbwAZ6aE</code></div></div>
