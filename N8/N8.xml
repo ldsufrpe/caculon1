@@ -944,6 +944,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </section>
         <references xml:id="references-backmatter">
             <title>Referências</title>
+            <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-1
+                Differential Calculus.
+            </title> 2021.
             <biblio type="raw" xml:id="biblio-01">LARSON, Ron. <title>Cálculo Aplicado. Cursos Rápido.</title>
                 <journal>Cengage Learning</journal>, 2011.
             </biblio>
