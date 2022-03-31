@@ -588,7 +588,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </solution>
                 </example>
 
-
+<!--TODO Adicionar Autoavaliações 1-->
                 <p>Mais um exmplo sobre curvas.</p>
 
                 <example xml:id="eg_DIFFimpldiffB">
@@ -982,7 +982,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </subsection>
 
 
-            <!--TODO Add subseção:Derivada das funções inversas trigonométricas-->
+
             <subsection>
                 <title>Derivadas de funções trigonométricas inversas</title>
                 <p>Agora que exploramos a função arco-seno, estamos prontos para encontrar sua derivada.
@@ -1268,6 +1268,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </md>
                     </p>
                 </example>
+
+                <!--TODO Adicionar Autoavaliações 2-->
                 <p>
                     A título de resumo, temos
                 </p>
@@ -1402,6 +1404,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </section>
         <references xml:id="references-backmatter">
             <title>Referências</title>
+             <biblio type="raw" xml:id="biblio-06">FELDMAN, joel; RECHNITZER, Andrew; YEAGER, Elyse <title>CLP-1
+                Differential Calculus.
+            </title> 2021.
+            </biblio>
             <biblio type="raw" xml:id="biblio-01">LARSON, Ron.
                 <title>Cálculo Aplicado. Cursos Rápido.</title>
                 <journal>Cengage Learning</journal>, 2011.
