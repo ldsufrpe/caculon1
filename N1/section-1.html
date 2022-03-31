@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-16T18:49:46-03:00       *-->
+<!--*       on 2022-03-31T15:30:01-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -68,9 +68,6 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
 <body class="pretext-article ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
@@ -161,7 +158,7 @@ true);
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
 <p id="p-8">O limite de uma função <span class="process-math">\(f(x)\)</span>  com <span class="process-math">\(x\)</span> aproximando-se de <span class="process-math">\(a\)</span> é um número <span class="process-math">\(L\)</span> com a seguinte propriedade: podemos tornar os valores de <span class="process-math">\(f(x)\)</span> arbitrariamente próxima <span class="process-math">\(L\text{,}\)</span> tomando <span class="process-math">\(x\)</span> suficientemente próximo de <span class="process-math">\(a\)</span> (tende para <span class="process-math">\(a\)</span> por ambos os lados), mas não igual a <span class="process-math">\(a\text{.}\)</span></p></article><p id="p-9">A notação para limite é</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{x \to a} f(x)=L.
 \end{equation*}
@@ -175,7 +172,7 @@ true);
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
 <p id="p-13">De acordo com a <a href="" class="xref" data-knowl="./knowl/fig1-sage.html" title="Figura 1.3">Figura 1.3</a>, os valores de função <span class="process-math">\(f(x)=x^2-3x+2\)</span> se aproxima <span class="process-math">\(2\)</span> quando <span class="process-math">\(x\)</span> se torna cada vez mais próximos de 0 pelos dois lados. Logo, podemos escrever que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1-sage.html">
 \begin{equation*}
 \lim_{x\to 0}(x^2-3x+2)=2.
 \end{equation*}
@@ -186,7 +183,7 @@ true);
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
 <p id="p-15">Observe na <a href="" class="xref" data-knowl="./knowl/fig1-sage.html" title="Figura 1.3">Figura 1.3</a> que quando <span class="process-math">\(x\)</span> se aproxima de 1, por ambos os lados, <span class="process-math">\(f(x)\)</span> fica cada vez mais próximo de 0. Assim,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1-sage.html">
 \begin{equation*}
 \lim_{x\to 1}(x^2-3x+2)=0.
 \end{equation*}
@@ -197,7 +194,7 @@ true);
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
 <p id="p-17">Mais uma vez a <a href="" class="xref" data-knowl="./knowl/fig1-sage.html" title="Figura 1.3">Figura 1.3</a>  indica que os valores de  <span class="process-math">\(f(x)\)</span> também se aproximam de 0 à medida que <span class="process-math">\(x\)</span> tende para 2. Daí, podemos escrever que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig1-sage.html">
 \begin{equation*}
 \lim_{x\to 2}(x^2-3x+2)=0.
 \end{equation*}
@@ -216,7 +213,7 @@ true);
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
 <p id="p-21">Note que o gráfico de <span class="process-math">\(f\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig2-table-plot.html" title="Figura 1.6">Figura 1.6</a>)  aponta que <span class="process-math">\(f(x)\)</span> tende a <span class="process-math">\(\frac{1}{2}\)</span> quando os valores de <span class="process-math">\(x\)</span> se aproxima de 1 por ambos os lados. A tabela à esquerda da <a href="" class="xref" data-knowl="./knowl/fig2-table-plot.html" title="Figura 1.6">Figura 1.6</a> dão os valores de <span class="process-math">\(f(x)\)</span> (com precisão de seis casas decimais) para os valores de <span class="process-math">\(x\)</span> que tendem a 1 (mas não são iguais a 1). Com base nesses valores, podemos escrever</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2-table-plot.html ./knowl/fig2-table-plot.html ./knowl/def-limite.html">
 \begin{equation*}
 \displaystyle\lim_{x\to 1}\frac{x-1}{x^2-1}=\frac{1}{2}.
 \end{equation*}
@@ -265,7 +262,7 @@ true);
 <article class="exercise exercise-like" id="exer-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exer-2"><h4 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer-2"><article class="exercise exercise-like"><p id="p-22">Seja</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) = 
 \begin{cases} 
@@ -296,7 +293,7 @@ f(x) =
 <article class="example example-like" id="ex-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-4"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Um limite especial: <span class="process-math">\(\displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1\)</span>.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-4"><article class="example example-like"><p id="p-30">Use  gráfico e uma tabela com aproximações numéricas para verificar que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1\text{.}
 \end{equation*}
@@ -377,7 +374,7 @@ f(x) =
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-5"><article class="example example-like"><p id="p-32">Determine <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sin{3x}}{3x}\text{.}\)</span></p>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
 <p id="p-33">Para utilizar o <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.12: Um limite especial:  \displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1">Exemplo 1.12</a> precisamos fazer <span class="process-math">\(t=3x\)</span> e notar que quando <span class="process-math">\(x\to 0\)</span> temos <span class="process-math">\(t\to 0\text{.}\)</span> Logo, segue do <a href="" class="xref" data-knowl="./knowl/ex-4.html" title="Exemplo 1.12: Um limite especial:  \displaystyle\lim_{x\to 0}\frac{\sin{x}}{x} =1">Exemplo 1.12</a> que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-4.html ./knowl/ex-4.html">
 \begin{equation*}
 \lim\limits_{x\to 0}\frac{\sin{3x}}{3x}=\lim\limits_{t\to 0}\frac{\sin{t}}{t}=1.
 \end{equation*}
@@ -397,19 +394,19 @@ f(x) =
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h4>
 <p id="p-38">Escrevemos</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{x\to a^{-}}f(x)=L
 \end{equation*}
 </div>
 <p class="continuation">quando é possível se aproximar arbitrariamente de <span class="process-math">\(L\)</span> à medida que <span class="process-math">\(x\)</span> tende a <span class="process-math">\(a\)</span> por valores menores que <span class="process-math">\(a\text{.}\)</span> Similarmente, escrevemos</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \lim_{x\to a^{+}}f(x)=L
 \end{equation*}
 </div>
 <p class="continuation">quando é possível se aproximar arbitrariamente de <span class="process-math">\(L\)</span> à medida que <span class="process-math">\(x\)</span> tende a <span class="process-math">\(a\)</span> por valores maiores que <span class="process-math">\(a\text{.}\)</span></p></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Lê-se.</span></h4>
-<div class="displaymath process-math" id="md-1">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
 \lim_{x\to a^{-}}f(x)=L\amp \qquad \ct{Limite de}\, \ctm{f(x)}\ct{, quando}\, \ctm{x}\, \ct{tende a}\, \ctm{a}\, \ct{pela esquerda.} \\
 \lim_{x\to a^{+}}f(x)=L \amp \qquad\ct{Limite de}\, \ctm{f(x)}\ct{, quando}\, \ctm{x}\, \ct{tende a}\,\ctm{a}\, \ct{pela direita.} 
@@ -422,7 +419,7 @@ f(x) =
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
 <p id="p-41">Nota-se no gráfico de <span class="process-math">\(f\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig5-plot.html" title="Figura 1.18">Figura 1.18</a>) que quando <span class="process-math">\(x\)</span> tende a 2 pela esquerda <span class="process-math">\(f(x)=-1\text{.}\)</span> Portanto, o limite pela esquerda é</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig5-plot.html">
 \begin{equation*}
 \lim_{x\to 2^{-}}\frac{|x-2|}{x-2}=-1.
 \end{equation*}
@@ -435,7 +432,7 @@ f(x) =
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
 <p id="p-43">Nota-se no gráfico de <span class="process-math">\(f\)</span> (ver <a href="" class="xref" data-knowl="./knowl/fig5-plot.html" title="Figura 1.18">Figura 1.18</a>) que quando <span class="process-math">\(x\)</span> tende a 2 pela direita <span class="process-math">\(f(x)=1\text{.}\)</span> Portanto, o limite pela direita é</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig5-plot.html">
 \begin{equation*}
 \lim_{x\to 2^{+}}\frac{|x-2|}{x-2}=1.
 \end{equation*}
@@ -478,7 +475,7 @@ x-1 \amp \text{se } x \ge 1
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
 <p id="p-58">Por definição, se  <span class="process-math">\(x\lt 1\text{,}\)</span> temos <span class="process-math">\(f(x)=x^2-\frac{1}{2}\text{.}\)</span> Na <a href="" class="xref" data-knowl="./knowl/fig6-plot.html" title="Figura 1.22">Figura 1.22</a> observa-se que <span class="process-math">\(f(x)\)</span> tende a <span class="process-math">\(\frac{1}{2}\)</span> quando <span class="process-math">\(x\)</span> tende a 1 pela esquerda. Portanto,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig6-plot.html">
 \begin{equation*}
 \displaystyle\lim_{x\to 1^{-}}f(x)=1
 \end{equation*}
@@ -491,7 +488,7 @@ x-1 \amp \text{se } x \ge 1
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
 <p id="p-60">Por definição, se  <span class="process-math">\(x\ge 1\text{,}\)</span> temos <span class="process-math">\(f(x)=x-1\text{.}\)</span> Na <a href="" class="xref" data-knowl="./knowl/fig6-plot.html" title="Figura 1.22">Figura 1.22</a> observa-se que <span class="process-math">\(f(x)\)</span> tende a 0 quando <span class="process-math">\(x\)</span> tende a 1 pela direita. Portanto,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig6-plot.html">
 \begin{equation*}
 \displaystyle\lim_{x\to 1^{+}}f(x)=0.
 \end{equation*}
@@ -500,7 +497,7 @@ x-1 \amp \text{se } x \ge 1
 </div></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <p id="p-61"><span class="process-math">\(\displaystyle\lim_{x\to 1}f(x)\)</span> existe?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-62">Os limites à esquerda e à direita de 1 são diferentes. Isso contraria regra de  <a href="" class="xref" data-knowl="./knowl/assemblage-existe-limite.html" title="[assemblage]: Existência de um Limite">Existência de um Limite</a>. Portanto, o limite de <span class="process-math">\(f(x)\)</span> quando <span class="process-math">\(x\)</span> tende a 1 por ambos os lados não existe.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-62">Os limites à esquerda e à direita de 1 são diferentes. Isso contraria regra de  <a href="" class="xref" data-knowl="./knowl/assemblage-existe-limite.html" title="Coleção: Existência de um Limite">Existência de um Limite</a>. Portanto, o limite de <span class="process-math">\(f(x)\)</span> quando <span class="process-math">\(x\)</span> tende a 1 por ambos os lados não existe.</p></div></div>
 </div></article></article></div>
 <article class="example example-like" id="ex-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-8"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
@@ -508,7 +505,7 @@ x-1 \amp \text{se } x \ge 1
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
 <p id="p-64">Observe que a formação de  <span class="process-math">\(f\)</span> envolve módulo. Então, podemos transformar-lá em uma função definida em duas sentenças. Para isso, note que <span class="process-math">\(5x-1\gt 0\)</span> quando <span class="process-math">\(x\gt \frac{1}{5} \text{,}\)</span> daí <span class="process-math">\(|5x-1|=5x-1\text{.}\)</span> Por outro lado,   <span class="process-math">\(5x-1\le 0\)</span> quando <span class="process-math">\(x\le \frac{1}{5}\text{,}\)</span> daí <span class="process-math">\(|5x-1|=-(5x-1)\text{.}\)</span>  Portanto, podemos escrever</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig7-plot.html ./knowl/thm-laterais.html">
 \begin{equation*}
 f(x)= 2 + |5x-1|=\begin{cases} 1 + 5x \amp \text{se } x\ge \frac{1}{5}\\ 3 - 5x\amp \text{se } x\lt \frac{1}{5} \end{cases}.
 \end{equation*}
@@ -564,14 +561,14 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
 </h4>
 <p id="p-83">Escrevemos</p>
-<div class="displaymath process-math" id="md-2">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{gather*}
 \lim_{x \to a} f(x) =  +\infty
 \end{gather*}
 </div>
 <p class="continuation">quando o valor da função <span class="process-math">\(f(x)\)</span> torna-se arbitrariamente grande e positivo à medida que tornamos <span class="process-math">\(x\)</span> suficientemente próximos de <span class="process-math">\(a\text{,}\)</span> mas não igual a <span class="process-math">\(a\text{.}\)</span></p>
 <p id="p-84">Similarmente, escrevemos</p>
-<div class="displaymath process-math" id="md-3">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{gather*}
 \lim_{x \to a} f(x) = -\infty
 \end{gather*}
@@ -584,7 +581,7 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
 <p id="p-87">Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(3\)</span> mas maior que <span class="process-math">\(3\text{,}\)</span> então o denominador <span class="process-math">\(x-3\)</span> é um número positivo pequeno. Portanto, o quociente <span class="process-math">\(\frac{2}{x-3}\)</span> é um número positivo grande. Então, intuitivamente,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig8-plot.html">
 \begin{equation*}
 \lim\limits_{x\to 3^+}\dfrac{ 2}{ x - 3}=+\infty.
 \end{equation*}
@@ -597,7 +594,7 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
 <p id="p-89">Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(3\)</span> mas menor que <span class="process-math">\(3\text{,}\)</span> então o denominador <span class="process-math">\(x-3\)</span> é um número negativo pequeno. Portanto, o quociente <span class="process-math">\(\frac{2}{x-3}\)</span> é um número negativo grande. Então, intuitivamente,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig8-plot.html">
 \begin{equation*}
 \lim\limits_{x\to 3^-}\dfrac{ 2}{ x - 3}=-\infty.
 \end{equation*}
@@ -625,7 +622,7 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
 <p id="p-97">Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(3\)</span> mas maior que <span class="process-math">\(3\text{,}\)</span> então o denominador <span class="process-math">\(x-3\)</span> é um número positivo pequeno e  <span class="process-math">\(3x\)</span> está próximo de <span class="process-math">\(9\text{.}\)</span> Portanto, o quociente <span class="process-math">\(\frac{3x}{x-3}\)</span> é um número positivo grande. Então, intuitivamente, temos que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig10-plot.html">
 \begin{equation*}
 \lim\limits_{x\to 3^+}\dfrac{ 3x}{ x - 3}=+\infty.
 \end{equation*}
@@ -638,7 +635,7 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
 <p id="p-99">Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(3\)</span> mas menor que <span class="process-math">\(3\text{,}\)</span> então o denominador <span class="process-math">\(x-3\)</span> é um número negativo pequeno e  <span class="process-math">\(3x\)</span> está próximo de <span class="process-math">\(9\text{.}\)</span> Portanto, o quociente <span class="process-math">\(\frac{3x}{x-3}\)</span> é um número negativo grande. Então, intuitivamente, temos que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig10-plot.html">
 \begin{equation*}
 \lim\limits_{x\to 3^-}\dfrac{ 3x}{ x - 3}=-\infty.
 \end{equation*}
@@ -662,7 +659,7 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Assíntotas verticais.</span>
 </h4>
 <p id="p-105">A reta <span class="process-math">\(x=a\)</span> a é chamada assíntota vertical da curva <span class="process-math">\(y=f(x)\)</span> se pelo menos uma das seguintes condições estiver satisfeita:</p>
-<div class="displaymath process-math" id="md-4">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{align*}
 \lim\limits_{x\to a}f(x)=+\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=+\infty \amp \lim\limits_{x\to a^{+}}f(x)=+\infty \\
 \lim\limits_{x\to a}f(x)=-\infty \qquad\amp \lim\limits_{x\to a^{-}}f(x)=-\infty \amp \lim\limits_{x\to a^{+}}f(x)=-\infty 
@@ -674,20 +671,20 @@ x^2 \amp \text{se } -1\le x \lt 1\\
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
 <p id="p-108">Uma vez que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=\dfrac{x^2+1}{3x-2x^2}=\dfrac{x^2+1}{x(3-2x)}
 \end{equation*}
 </div>
 <p class="continuation">existem assíntotas verticais em pontencial nas raízes do denominador <span class="process-math">\(x(3-2x)\text{.}\)</span> De fato, o denominado é zero quando <span class="process-math">\(x=0\)</span> e <span class="process-math">\(x=\frac{3}{2}\text{.}\)</span> Além disso, o limite do numerador, digamos, quando <span class="process-math">\(x\to 0^{+}\)</span> e quando <span class="process-math">\(x\to (\frac{3}{2})^{+}\)</span> é positivo.</p>
 <p id="p-109">Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(0\)</span> mas maior que <span class="process-math">\(0\text{,}\)</span> então o denominador <span class="process-math">\(x(3-2x)\)</span> é um número positivo pequeno. Portanto, o quociente <span class="process-math">\(\dfrac{x^2-2x}{3x-2x^2}\)</span> é um número positivo grande. Então, intuitivamente, temos que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-assintota-vertical.html">
 \begin{equation*}
 \lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=+\infty.
 \end{equation*}
 </div>
 <p class="continuation">Analogamente, Se <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(\frac{3}{2}\)</span> mas maior que <span class="process-math">\(\frac{3}{2}\text{,}\)</span> então o denominador <span class="process-math">\(x(3-2x)\)</span> é um número negativo pequeno. Portanto, o quociente <span class="process-math">\(\dfrac{x^2-2x}{3x-2x^2}\)</span> é um número negativo grande. Então, intuitivamente, temos que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-assintota-vertical.html">
 \begin{equation*}
 \lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=-\infty.
 \end{equation*}
@@ -712,7 +709,7 @@ f(x)=\dfrac{x^2+1}{3x-2x^2}=\dfrac{x^2+1}{x(3-2x)}
 <span class="type">Subseção</span> <span class="codenumber">1.7</span> <span class="title">Tecnologia</span>
 </h3>
 <article class="technology computation-like" id="technology-1"><h4 class="heading">
-<span class="type">[technology]</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o software SageMath.</span>
+<span class="type">Tecnologia</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span><span class="space"> </span><span class="title">Usando o software SageMath.</span>
 </h4>
 <div class="introduction" id="introduction-4"><p id="p-116">Software matemático pode ser útil para calcular  integrais complicadas. Um ótima opção é utilizar sistema de computação algébrica  <a class="external" href="https://www.sagemath.org" target="_blank">SageMath</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a>. Com uma sintaxe simples e baseada em <em class="emphasis">Python</em><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a> O <em class="emphasis">SageMath</em> (abreviaremos como <em class="emphasis">Sage</em>) é <em class="emphasis">open-source</em> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a> e tem sido bastante utilizado por professores e  estudantes de todos os níveis para conferir cálculos algébricos complicados. Uma boa referência em língua portuguesa para este software pode ser encontrado na página  <a class="external" href="https://www.sagectu.com.br" target="_blank"><code class="code-inline tex2jax_ignore">https://www.sagectu.com.br</code></a>. Detalhes sobre os comandos são resumidos em <a class="external" href="https://sagectu.com.br/sagecell.html" target="_blank"><code class="code-inline tex2jax_ignore">https://sagectu.com.br/sagecell.html</code></a>.</p></div>
 <section class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Sintaxe dos comandos.</span></h5>
@@ -738,13 +735,13 @@ limit(2*sin(t)/t, t=0)
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-123"><span class="process-math">\(\text{DNE}\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <p id="p-124">Por definição, <span class="process-math">\(e\)</span> é o número tal que</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \displaystyle\displaystyle\lim_{h \to 0} \frac{e^h-1}{h}=1.
 \end{equation*}
 </div>
 <p class="continuation">Use uma calculadora para estimar os valores dos limites (arredondados para o centésimo mais próximo):</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \displaystyle A=\displaystyle\lim_{h \to
 0} \frac{{2.7}^h-1}{h} \quad \text{and} \quad \displaystyle B=\displaystyle\lim_{h \to
@@ -764,7 +761,7 @@ limit(2*sin(t)/t, t=0)
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-133"><span class="process-math">\(e\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <p id="p-134">Se a função  <span class="process-math">\(f\)</span> definida por:</p>
-<div class="displaymath process-math" id="p-135">
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-135">
 \begin{equation*}
 f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  2\cr
 \displaystyle{4}\amp \text{if}\ x &gt; 2.\end{cases}
@@ -798,7 +795,7 @@ f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  2\cr
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-140"><span class="process-math">\(\text{DNE}\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <p id="p-141">Seja uma função <span class="process-math">\(f\)</span> definida por:</p>
-<div class="displaymath process-math" id="p-142">
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-142">
 \begin{equation*}
 f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  -1\cr
 \displaystyle{4}\amp \text{if}\ x &gt; -1.\end{cases}
@@ -893,7 +890,7 @@ f(x) = \begin{cases}\displaystyle{x+4}\amp \text{if}\ x \lt  -1\cr
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-162"><span class="process-math">\(\infty \)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
 <p id="p-163">Let</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) = \begin{cases}
 6         \amp  \text{ if } x \lt 0 \\
@@ -965,7 +962,7 @@ f(x) = \begin{cases}
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-178"><span class="process-math">\(\text{DNE}\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-19"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
 <p id="p-179">A assíntota vertical da curva</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 y=\frac{-8 x^3}{x +3}
 \end{equation*}
