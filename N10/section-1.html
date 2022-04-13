@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-12T21:58:17-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Taxas Relacionadas</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Derivadas: N10</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxas Relacionadas</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Taxa de Variação</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-taxa-variacao" data-scroll="exercises-taxa-variacao" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Taxas Relacionadas</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal"><li id="li-1"><p id="p-3">Introduzir o problema de taxas relacionadas.</p></li></ol></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Taxa de Variação</span>
+</h3>
+<p id="p-4">Introduzimos o estudo sobre a taxa de vairiação a partir do problema a seguir:</p>
+<section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Problema.</span></h4>
+<p id="p-5">Um balão esférico está sendo inflado a uma taxa de <span class="process-math">\(13cm^3/sec\text{.}\)</span> Quão rápido o raio varia quando o balão tem raio <span class="process-math">\(15cm\text{?}\)</span></p></section><p id="p-6">Há várias informações no problema:</p>
+<ul class="disc">
+<li id="li-2"><p id="p-derived-li-2">O balão é esférico.</p></li>
+<li id="li-3"><p id="p-derived-li-3">O volume está variando a uma taxa de <span class="process-math">\(13cm^3/sec\)</span> — então precisamos de variáveis para o Volume (em <span class="process-math">\(cm^3\)</span>) e tempo (em <span class="process-math">\(sec\)</span>). Escolhemos  <span class="process-math">\(V\)</span> e <span class="process-math">\(t\text{.}\)</span></p></li>
+<li id="li-4"><p id="p-derived-li-4">O problema requer a taxa na qual o raio está variando — então precisamos de uma variável para o raio e a unidade de medida. Escolhemos <span class="process-math">\(r\text{,}\)</span> medido em <span class="process-math">\(cm\)</span> — já que o volume é medido em <span class="process-math">\(cm^3\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Uma vez que o balão é uma esfera sabemos que that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{align*}
+V \amp= \frac{4}{3} \pi r^3
+\end{align*}
+</div>
+<p class="continuation">Já que ambos volume e raio variam com o tempo, ambos <span class="process-math">\(V\)</span> e <span class="process-math">\(r\)</span> são implicitamente funções que dependem do tempo; logo, poderíamos escrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-1">
+\begin{align}
+V(t) \amp= \frac{4}{3}\pi r(t)^3.\tag{1.1}
+\end{align}
+</div>
+<p class="continuation">Somos informados da taxa na qual o volume está variando e precisamos encontrar a taxa na qual o raio está mudando. Ou seja, a partir do conhecimento de <span class="process-math">\(\dfrac{\dd V}{\dd t}\text{,}\)</span> encontre a taxa relacionada <span class="process-math">\(\dfrac{\dd r}{\dd t}\text{.}\)</span></p>
+<p id="p-7">Neste caso, podemos derivar a Equação <a href="" class="xref" data-knowl="./knowl/eq-01.html" title="Equação 1.1">(1.1)</a> em relação a <span class="process-math">\(t\)</span> produzindo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-01.html" id="md-2">
+\begin{align*}
+\dfrac{\dd V}{\dd t} \amp= 4 \pi r^2 \dfrac{\dd r}{\dd t}\\
+\end{align*}
+<p class="intertext">Isso pode então ser reorganizado para dar</p>
+\begin{align*}
+\dfrac{\dd r}{\dd t} \amp= \frac{1}{4\pi r^2} \dfrac{\dd V}{\dd t}.
+\end{align*}
+</div>
+<p class="continuation">Agora nos disseram que <span class="process-math">\(\dfrac{\dd V}{\dd t} = 13\text{,}\)</span> assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-01.html" id="md-3">
+\begin{align*}
+\dfrac{\dd r}{\dd t} \amp= \frac{13}{4\pi r^2}.
+\end{align*}
+</div>
+<p class="continuation">Sabemos que o raio é <span class="process-math">\(15cm\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-01.html" id="md-4">
+\begin{align*}
+\dfrac{\dd r}{\dd t} \amp= \frac{13}{4\pi \cdot 15^2}.
+\end{align*}
+</div>
+<p id="p-8">Este é um exemplo muito típico de um problema de taxas relacionadas. Este texto é realmente apenas uma coleção de problemas, mas todos seguirão um padrão semelhante.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><h4 class="heading"><span class="title">Roteiro Taxas Relacionadas.</span></h4>
+<ul id="p-9" class="disc">
+<li id="li-5"><p id="p-derived-li-5">O enunciado do problema descreve as quantidades que devem estar relacionadas (acima timemos o volume, o raio e, implicitamente, o tempo).</p></li>
+<li id="li-6"><p id="p-derived-li-6">Normalmente, um pouco de geometria (ou alguma física ou) permitirá a relação entre essas quantidades (acima estava a fórmula que liga o volume de uma esfera ao seu raio).</p></li>
+<li id="li-7"><p id="p-derived-li-7">A diferenciação implícita permitirá vincular a taxa de variação de uma quantidade a outra.</p></li>
+</ul></article><p id="p-10">Outro exemplo de balão:</p>
+<article class="example example-like" id="eg_3_2_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_2_1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Um balão subindo.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_2_1"><article class="example example-like"><p id="p-11">Considere um balão de hélio subindo verticalmente de um ponto fixo a <span class="process-math">\(200m\)</span> de distância de um observador. O quão rápido o balão sobe?.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-12">Calcular a velocidade diretamente é difícil, mas podemos medir ângulos. Observe que quando o ângulo é de  <span class="process-math">\(\pi/4\)</span> o mesmo varia a uma taxa de <span class="process-math">\(0,05\)</span> radianos por segundo. A figura a seguir destaca as variaveis do problema: <div class="sidebyside"><div class="sbsrow" style="margin-left:17.5%;margin-right:17.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/balloon1.svg" role="img" class="contained"></div></div></div> Denotamos o ângulo por <span class="process-math">\(\theta\)</span> (em radianos), a altura do balão (em <span class="process-math">\(m\)</span>) por <span class="process-math">\(h\)</span> e o tempo (em segundos) por <span class="process-math">\(t\text{.}\)</span> Então a trigonometria nos diz</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+h \amp= 200 \cdot \tan \theta
+\end{align*}
+</div>
+<p class="continuation">A derivação nos permite relacionar as taxas de variação</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+\dfrac{\dd h}{\dd t} \amp= 200 \sec^2 \theta \cdot \dfrac{\dd \theta}{\dd t}
+\end{align*}
+</div>
+<p class="continuation">Logo, quando <span class="process-math">\(\theta =\pi/4\)</span> temos <span class="process-math">\(\dfrac{\dd \theta}{\dd t} =
+0.05\text{,}\)</span> assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+\dfrac{\dd h}{\dd t} \amp= 200 \cdot \sec^2(\pi/4) \cdot 0.05\\
+\amp= 200 \cdot 0.05 \cdot \left( \sqrt{2} \right)^2\\
+\amp= 200 \cdot \frac{5}{100} \cdot 2\\
+\amp= 20 m/s
+\end{align*}
+</div>
+<p class="continuation">Então o balão sobe a uma taxa de <span class="process-math">\(20 m/s\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-13">O problema a seguir é possíovemnte o problema clássico sobre taxas relacionadas.</p>
+<article class="example example-like" id="eg_3_2_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_2_2"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Uma escada deslizante.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_2_2"><article class="example example-like"><p id="p-14">Uma escada de <span class="process-math">\(5m\)</span> está encostada a uma parede. O piso é bastante escorregadio e a base da escada desliza para fora da parede a uma taxa de <span class="process-math">\(1m/s\text{.}\)</span> Com que velocidade o topo da escada desliza pela parede quando a base da escada está a <span class="process-math">\(3m\)</span> da parede?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-15">A figura a seguir indica as quantidades relevantes — além das variáveis e unidades de medidas. <div class="sidebyside"><div class="sbsrow" style="margin-left:22%;margin-right:22%;"><div class="sbspanel top" style="width:100%;"><img src="images/ladder1.svg" role="img" class="contained"></div></div></div> Agora defina <span class="process-math">\(x(t)\)</span> como a distância entre a base da escada e a parede, no tempo <span class="process-math">\(t\text{,}\)</span> e seja <span class="process-math">\(y(t)\)</span>  a distância entre o topo da escada e o solo no tempo <span class="process-math">\(t\text{.}\)</span> Meça o tempo em segundos, mas ambas as distâncias em metros. Podemos relacionar as quantidades usando Pitágoras:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+x^2 + y^2 \amp= 5^2
+\end{align*}
+</div>
+<p class="continuation">A derivação em relação ao tempo fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{align*}
+2x \dfrac{\dd x}{\dd t} + 2y \dfrac{\dd y}{\dd t} \amp= 0
+\end{align*}
+</div>
+<p class="continuation">Sabemos que <span class="process-math">\(\dfrac{\dd x}{\dd t} = 1\)</span> e <span class="process-math">\(x=3\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{align*}
+6 \cdot 1 + 2y \dfrac{\dd y}{\dd t} \amp= 0
+\end{align*}
+</div>
+<p class="continuation">mas precisamos determinar <span class="process-math">\(y\)</span> antes de prosseguirmos. Como <span class="process-math">\(x^2+y^2=25\)</span> e <span class="process-math">\(x=3\text{,}\)</span> então <span class="process-math">\(y^2=25-9=16\)</span> e portanto <span class="process-math">\(y=4\text{.}\)</span> Então, finalmente, juntando tudo</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+6 \cdot 1 + 8 \dfrac{\dd y}{\dd t} \amp= 0\\
+\dfrac{\dd y}{\dd t} \amp= - \frac{3}{4} m/s.
+\end{align*}
+</div>
+<p class="continuation">Assim, o topo da escada desliza em direção ao chão a uma taxa de <span class="process-math">\(\frac{3}{4} m/s\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-16">O próximo exemplo é complicado porque as taxas de variação são declaradas não apenas como “taxa de variação por unidade de tempo”, mas também como “taxa de variação percentual por unidade de tempo” q&gt;. Se uma quantidade <span class="process-math">\(f\)</span> está mudando com a taxa <span class="process-math">\(\dfrac{\dd f}{\dd t}\text{,}\)</span> então podemos dizer que</p>
+<blockquote class="blockquote" id="blockquote-1"><p id="p-17"><span class="process-math">\(f\)</span> está variando a uma taxa de  <span class="process-math">\(\displaystyle100 \cdot \frac{\tfrac{\dd f}{\dd t}}{f}\)</span> por cento.</p></blockquote>
+<p id="p-18">Assim, se, no tempo <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(f\)</span> tiver taxa de variação <span class="process-math">\(r\%\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+\begin{gather*}
+100\frac{f'(t)}{f(t)}=r
+\implies f'(t) =\frac{r}{100} f(t)
+\end{gather*}
+</div>
+<p class="continuation">de modo que se <span class="process-math">\(h\)</span> for um incremento de tempo muito pequeno</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+\begin{gather*}
+\frac{f(t+h) - f(t)}{h} \approx \frac{r}{100} f(t)
+\implies f(t+h) \approx f(t) + \frac{rh}{100} f(t)
+\end{gather*}
+</div>
+<p class="continuation">Ou seja, num intervalo de tempo muito pequeno <span class="process-math">\(h\text{,}\)</span> <span class="process-math">\(f\)</span> aumenta a fração <span class="process-math">\(\frac{rh}{100}\)</span> de seu valor no tempo <span class="process-math">\(t\text{.}\)</span></p>
+<p id="p-19">Então após as informações acima, vamos olhar para o problema.</p>
+<article class="example example-like" id="eg_percentGrowth"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_percentGrowth"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Taxa de variação percentual de <span class="process-math">\(R=PQ\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_percentGrowth"><article class="example example-like"><p id="p-20">As quantidades <span class="process-math">\(P\text{,}\)</span><span class="process-math">\(Q\)</span> e <span class="process-math">\(R\)</span> são funções do tempo e estão relacionadas pela equação <span class="process-math">\(R=PQ\text{.}\)</span> Suponha que <span class="process-math">\(P\)</span> esteja aumentando instantaneamente à taxa de <span class="process-math">\(8\%\)</span> por ano (o que significa que <span class="process-math">\(100\frac{P'}{P}=8\)</span> &gt;) e que <span class="process-math">\(Q\)</span> está diminuindo instantaneamente à taxa de <span class="process-math">\(2\%\)</span> por ano (o que significa que <span class="process-math">\(100\frac{Q'}{Q}=-2\)</span>). Determine a taxa percentual de variação para <span class="process-math">\(R\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-21">Desta vez são dadas as variáveis e a fórmula, então apenas definir a variável do tempo — aqui  <span class="process-math">\(t\)</span> denotará o tempo em anos. Já que <span class="process-math">\(R(t) = P(t)\cdot Q(t)\)</span> podemos derivar em relação a  <span class="process-math">\(t\)</span> e obter</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{align*}
+\dfrac{\dd r}{\dd t} \amp= P Q' + Q P'
+\end{align*}
+</div>
+<p class="continuation">Mas precisamos da variação percentual em <span class="process-math">\(R\text{,}\)</span> ou seja,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{align*}
+100 \frac{R'}{R} \amp= 100 \frac{PQ' +QP'}{R}\\
+\end{align*}
+<p class="intertext">mas <span class="process-math">\(R = PQ\text{,}\)</span> então reescrevemos isso como</p>
+\begin{align*}
+\amp= 100 \frac{PQ' +QP'}{PQ}\\
+\amp= 100 \frac{PQ'}{PQ} + 100 \frac{QP'}{PQ}\\
+\amp= 100 \frac{Q'}{Q} + 100 \frac{P'}{P}
+\end{align*}
+</div>
+<p class="continuation">portanto, declaramos a taxa de variação percentual instantânea em <span class="process-math">\(R\)</span> como a soma da taxa de variação percentual em <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\text{.}\)</span> Conhecemos a taxa percentual de variação de <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
+\begin{align*}
+100 \frac{R'}{R} \amp= -2 + 8 =6
+\end{align*}
+</div>
+<p class="continuation">Ou seja, a taxa de variação percentual instantânea de <span class="process-math">\(R\)</span> é de 6<span class="process-math">\(\%\)</span> por ano.</p>
+</div></div>
+</div></article></div>
+<p id="p-22">Mais um exemplo de objeto caindo.</p>
+<article class="example example-like" id="eg_fallingBall"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_fallingBall"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title">A sombra de uma bola caindo.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_fallingBall"><article class="example example-like"><p id="p-23">Uma bola é lançada de uma altura de <span class="process-math">\(49\)</span>m acima do nível do solo. A altura da bola no instante <span class="process-math">\(t\)</span> é <span class="process-math">\(h(t)=49-4,9 t^2\)</span> m. Uma luz, que também está <span class="process-math">\(49\)</span>m acima do solo, está <span class="process-math">\(10\)</span>m à esquerda da posição original da bola. À medida que a bola desce, a sombra da bola causada pela luz se move pelo chão. Quão rápido a sombra está se movendo um segundo depois que a bola é lançada?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-24">A figura a seguir ilustra as informações do problema: <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="images/falling_ball.svg" role="img" class="contained"></div></div></div> Vamos chamar de <span class="process-math">\(s(t)\)</span> a distância da sombra ao ponto no chão diretamente abaixo da bola. Por triângulos semelhantes vemos que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+\begin{gather*}
+\frac{4.9 t^2}{10}=\frac{49-4.9 t^2}{s(t)}
+\end{gather*}
+</div>
+<p class="continuation">Podemos então calcular <span class="process-math">\(s(t)\)</span> apenas multiplicando ambos os lados por <span class="process-math">\(\frac{10}{4.9
+t^2}s(t)\text{.}\)</span> Isto dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+\begin{gather*}
+s(t)=10\frac{49-4.9 t^2}{4.9 t^2}=\frac{100}{t^2}-10
+\end{gather*}
+</div>
+<p class="continuation">A diferenciação em relação a <span class="process-math">\(t\)</span> nos dará as taxas,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+\begin{gather*}
+s'(t)=-2\frac{100}{t^3}
+\end{gather*}
+</div>
+<p class="continuation">Portanto, em <span class="process-math">\(t=1\text{,}\)</span> <span class="process-math">\(s'(1)=-200\)</span>m/s. Ou seja, a sombra está se movendo para a esquerda a <span class="process-math">\(200\)</span>m/s.</p>
+</div></div>
+</div></article></div>
+<p id="p-25">Um exemplo náutico.</p>
+<article class="example example-like" id="eg_3_2_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_2_3"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A distância entre os barcos em movimento.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_2_3"><article class="example example-like"><p id="p-26">Dois barcos se encontram no oceano ao meio-dia — O barco <span class="process-math">\(A\)</span> fica a 15 km a oeste do barco <span class="process-math">\(B\text{.}\)</span> O barco <span class="process-math">\(A\)</span> está viajando para o leste a <span class="process-math">\(3km/h\)</span> e o barco <span class="process-math">\(B\)</span> está viajando para o norte a <span class="process-math">\(4km/h\text{.}\)</span> Às 15h, quão rápido muda a distância entre os barcos.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-27">A figura a seguir destaca as variáveis e quantidades envolvidas: <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/boats1.svg" role="img" class="contained"></div></div></div> Seja <span class="process-math">\(x(t)\)</span> a distância no tempo <span class="process-math">\(t\text{,}\)</span> em km, do barco <span class="process-math">\(A\)</span> até a posição original do barco <span class="process-math">\(B\)</span> (ou seja, para a posição do barco <span class="process-math">\(B\)</span> ao meio-dia). E seja <span class="process-math">\(y(t)\)</span> a distância no instante <span class="process-math">\(t\text{,}\)</span> em km, do barco <span class="process-math">\(B\)</span> de sua posição original. E seja <span class="process-math">\(z(t)\)</span> a distância entre os dois barcos no tempo <span class="process-math">\(t\text{.}\)</span> Além disso, somos informados de que <span class="process-math">\(x'=-3\)</span> e <span class="process-math">\(y'=4\)</span> — note que <span class="process-math">\(x' \lt 0\)</span> desde essa distância esteja diminuindo com o tempo, enquanto <span class="process-math">\(y' \gt 0\)</span> já que essa distância está aumentando com o tempo. Mais adiante, às <span class="process-math">\(15h\text{,}\)</span> o barco <span class="process-math">\(A\)</span> percorreu <span class="process-math">\(9 km\)</span> em direção à posição original do barco <span class="process-math">\(B\text{,}\)</span> então <span class="process-math">\(x=15-9 = 6\text{,}\)</span> enquanto o barco <span class="process-math">\(B\)</span> percorreu <span class="process-math">\(12 km\)</span> da sua posição original, então <span class="process-math">\(y=12\text{.}\)</span> As distâncias <span class="process-math">\(x,y\)</span> e <span class="process-math">\(z\)</span> formam um triângulo retângulo, e Pitágoras nos diz que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\begin{align*}
+z^2 \amp= x^2 + y^2.
+\end{align*}
+</div>
+<p class="continuation">Às 15h sabemos <span class="process-math">\(x=6,y=12\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\begin{align*}
+z^2 \amp= 36 + 144 = 180\\
+z\amp= \sqrt{180} = 6\sqrt{5}.
+\end{align*}
+</div>
+<p class="continuation">A derivação fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+\begin{align*}
+2z \dfrac{\dd z}{\dd t} \amp= 2x \dfrac{\dd x}{\dd t} + 2y \dfrac{\dd y}{\dd t}\\
+\amp= 12 \cdot (-3) + 24 \cdot(4)\\
+\amp= 60.\\
+\end{align*}
+<p class="intertext">Dividindo por <span class="process-math">\(2z = 12\sqrt{5}\)</span> dá</p>
+\begin{align*}
+\dfrac{\dd z}{\dd t} \amp= \frac{60}{12\sqrt{5}} = \frac{5}{\sqrt{5}} = \sqrt{5}
+\end{align*}
+</div>
+<p class="continuation">Portanto, a distância entre os barcos está aumentando a <span class="process-math">\(\sqrt{5} \,km/h\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-28">Mais um exemplo.</p>
+<article class="example example-like" id="eg_fuel"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_fuel"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Nível de combustível em um tanque cilíndrico.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_fuel"><article class="example example-like"><p id="p-29">Considere um tanque de combustível cilíndrico de raio <span class="process-math">\(r\)</span> e comprimento <span class="process-math">\(L\)</span> (em algumas unidades apropriadas) que está deitado de lado. Suponha que o combustível esteja sendo bombeado para o tanque a uma taxa <span class="process-math">\(q\text{.}\)</span> A que taxa o nível de combustível está subindo? <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel1.svg" role="img" class="contained"></div></div></div></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-30">Se o tanque fosse vertical tudo seria muito mais fácil. Infelizmente o tanque está de lado, então vamos ter que trabalhar um pouco mais para estabelecer a relação entre a profundidade e o volume. Observe também que não recebemos unidades para este problema — então não precisamos declarar as unidades das nossas variáveis.</p>
+<p id="p-31"><p id="p-32">A figura está uma vista final do tanque; a parte sombreada do círculo é preenchida com combustível.</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel2.svg" role="img" class="contained"></div></div></div> Vamos denotar por <span class="process-math">\(V(t)\)</span> o volume de combustível no tanque no momento <span class="process-math">\(t\)</span> e por <span class="process-math">\(h(t)\)</span> o nível de combustível no momento <span class="process-math">\(t\text{.}\)</span> Sabemos que  <span class="process-math">\(V'(t)=q\)</span>e precisamos determinar <span class="process-math">\(h'(t)\text{.}\)</span> Embora seja possível fazer isso encontrando uma fórmula relacionando <span class="process-math">\(V(t)\)</span> e <span class="process-math">\(h(t)\text{,}\)</span> acaba sendo um pouco mais fácil encontrar uma fórmula primeiro relacionando <span class="process-math">\(V\)</span> e o ângulo <span class="process-math">\(\theta\)</span> mostrado na visualização final. Podemos então traduzir isso de volta em uma fórmula em termos de <span class="process-math">\(h\)</span> usando a relação</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="mdn-2">
+\begin{align}
+h(t) \amp= r - r\cos \theta(t).\tag{1.2}
+\end{align}
+</div>
+<p class="continuation">Uma vez que conhecemos <span class="process-math">\(\theta'(t)\text{,}\)</span> podemos obter facilmente <span class="process-math">\(h'(t)\)</span> derivando a Equação <a href="" class="xref" data-knowl="./knowl/eq-2.html" title="Equação 1.2">(1.2)</a>. Para facilitar, nos calculos a seguir vamos descartar o “<span class="process-math">\((t)\)</span>” nas variáveis <span class="process-math">\(V\)</span>m&gt;,<span class="process-math">\(h\)</span> e <span class="process-math">\(\theta\text{.}\)</span> O leitor nunca deve esquecer que essas três quantidades são realmente funções do tempo, enquanto <span class="process-math">\(r\)</span> e <span class="process-math">\(L\)</span> são constantes que não dependem do tempo. <p id="p-33">O volume de combustível é <span class="process-math">\(L\)</span> vezes a área da seção transversal–preenchida pelo combustível. Ou seja,</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:0.5%;margin-right:0.5%;">
+<div class="sbspanel middle" style="width:25.2525252525253%;"><p id="p-34"></p></div>
+<div class="sbspanel middle" style="width:5.05050505050505%;"><p id="p-35"><span class="process-math">\(V =\)</span></p></div>
+<div class="sbspanel middle" style="width:20.2020202020202%;"><p id="p-36"><span class="process-math">\(L \times\)</span> Área de</p></div>
+<div class="sbspanel middle" style="width:20.2020202020202%;"><img src="images/fuel3.svg" role="img" class="contained"></div>
+<div class="sbspanel middle" style="width:25.2525252525253%;"><p id="p-37"></p></div>
+</div></div> <p id="p-38">Embora não tenhamos uma fórmula fixa para a área de uma corda de um círculo como esta, é fácil expressar a área da corda em termos de duas áreas que podemos calcular.</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
+<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-39"></p></div>
+<div class="sbspanel middle" style="width:5.006257822277847%;"><p id="p-40"><span class="process-math">\(V\)</span></p></div>
+<div class="sbspanel middle" style="width:22.0275344180225%;"><p id="p-41"><span class="process-math">\(= L\times\text{Área de}\)</span></p></div>
+<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel3.svg" role="img" class="contained"></div>
+<div class="sbspanel middle" style="width:18.0225281602002%;"><p id="p-42"></p></div>
+<div class="sbspanel middle" style="width:20.0250312891114%;"><p id="p-43"></p></div>
+<div class="sbspanel middle" style="width:0%;"><p id="p-44"></p></div>
+<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-45"></p></div>
+</div></div><div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
+<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-46"></p></div>
+<div class="sbspanel middle" style="width:5.006257822277847%;"><p id="p-47"></p></div>
+<div class="sbspanel middle" style="width:22.0275344180225%;"><p id="p-48"><span class="process-math">\(= L\times\bigg[ \text{Área de}\)</span></p></div>
+<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel4.svg" role="img" class="contained"></div>
+<div class="sbspanel middle" style="width:18.0225281602002%;"><p id="p-49">- Área de</p></div>
+<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel5.svg" role="img" class="contained"></div>
+<div class="sbspanel middle" style="width:0%;"><p id="p-50"><span class="process-math">\(\bigg]\)</span></p></div>
+<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-51"></p></div>
+</div></div> <p id="p-52">O pedaço de "bolo"</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel4.svg" role="img" class="contained"></div></div></div> <p id="p-53">é a fração <span class="process-math">\(\tfrac{2\theta}{2\pi}\)</span> do círculo completo, então sua área é <span class="process-math">\(\tfrac{2\theta}{2\pi}\pi r^2=\theta r^2\text{.}\)</span></p> <p id="p-54">O triângulo</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel5.svg" role="img" class="contained"></div></div></div> <p id="p-55">tem altura <span class="process-math">\(r\cos\theta\)</span> e base <span class="process-math">\(2r\sin\theta\)</span> e, portanto, tem área <span class="process-math">\(\frac{1}{2}(r\cos \theta)(2r\sin\theta)=r^2\sin\theta\cos\theta =
+\frac{r^2}{2} \sin(2\theta)\text{,}\)</span> onde usamos uma fórmula de ângulo duplo.</p> Subscrever essas duas áreas na expressão acima para <span class="process-math">\(V\)</span> produz</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-23">
+\begin{align*}
+V \amp = L\times\left[\theta r^2- \frac{r^2}{2}\sin2\theta\right]
+= \frac{Lr^2}{2} \big[2\theta-\sin2\theta \big]
+\end{align*}
+</div>
+<p class="continuation">Agora podemos derivar para encontrar a taxa de variação. Lembrando que <span class="process-math">\(V=V(t)\)</span> e <span class="process-math">\(\theta=\theta(t)\text{,}\)</span> enquanto <span class="process-math">\(r\)</span> e <span class="process-math">\(L\)</span> são constantes,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-24">
+\begin{align*}
+V'
+\amp=\frac{Lr^2}{2} \left[ 2\theta' - 2\cos2\theta \cdot \theta' \right]\\
+\amp= Lr^2 \cdot \theta' \cdot \left[1 - \cos2\theta \right]
+\end{align*}
+</div>
+<p class="continuation">Resolver isso para <span class="process-math">\(\theta'\)</span> e usar <span class="process-math">\(V'=q\)</span> dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-25">
+\begin{align*}
+\theta' \amp= \frac{q}{Lr^2 (1-\cos2\theta)}
+\end{align*}
+</div>
+<p class="continuation">Essa é a taxa na qual <span class="process-math">\(\theta\)</span> está variando, mas precisamos da taxa na qual <span class="process-math">\(h\)</span> está variando. Recebemos isso da</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-26">
+\begin{align*}
+h \amp= r - r\cos \theta \amp \text{derivando isso temos}\\
+h' \amp= r\sin\theta \cdot \theta'
+\end{align*}
+</div>
+<p class="continuation">Substituindo nossa expressão por <span class="process-math">\(\theta'\)</span> na expressão por <span class="process-math">\(h'\)</span> fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-27">
+\begin{align*}
+h' \amp= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)}
+\end{align*}
+</div>
+<p class="continuation">Podemos simplificar um pouco mais</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html" id="md-28">
+\begin{align*}
+h'
+\amp= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)} \amp \text{substitua
+$\cos2\theta =
+1-2\sin^2\theta$}\\
+\amp= r\sin\theta \cdot \frac{q}{Lr^2 \cdot 2\sin^2\theta} \amp \text{agora cancele os
+$r$'s
+e um $\sin\theta$}\\
+\amp= \frac{q}{2Lr\sin\theta}
+\end{align*}
+</div>
+<p class="continuation"><p id="p-56">Mas podemos simplificar isso ainda mais — em vez de escrever essa taxa em termos de <span class="process-math">\(\theta\)</span> é mais natural escrevê-lo em termos de <span class="process-math">\(h\)</span> (já que o problema inicial é expresso em termos de <span class="process-math">\(h\)</span>). Do triângulo</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel6.svg" role="img" class="contained"></div></div></div> <p id="p-57">e Pitágoras temos</p><div class="displaymath process-math" data-contains-math-knowls="" id="md-29">
+\begin{gather*}
+\sin\theta =\frac{\sqrt{r^2-(r-h)^2}}{r}=\frac{\sqrt{2rh-h^2}}{r}
+\end{gather*}
+</div><p class="continuation">e portanto</p><div class="displaymath process-math" data-contains-math-knowls="" id="md-30">
+\begin{gather*}
+h' = \frac{q}{2L\sqrt{2rh-h^2}}.
+\end{gather*}
+</div> Como verificação, observe que <span class="process-math">\(h'\)</span> fica indefinido quando <span class="process-math">\(h \lt 0\)</span> e também quando <span class="process-math">\(h
+\gt 2r\text{,}\)</span> pois o argumento da raiz quadrada no denominador é negativa. Ambos fazem sentido — o nível de combustível no tanque deve obedecer a <span class="process-math">\(0\le h\le 2r\text{.}\)</span> &gt;</p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Sugestão de Vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-8"><p id="p-58"><a class="external" href="https://youtu.be/GeaD5ccCOpM" target="_blank">Introdução a taxas relacionadas.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p></li>
+<li id="li-9"><p id="p-59"><a class="external" href="https://youtu.be/fMrNf13uG0g" target="_blank">Carros se aproximando.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
+<li id="li-10"><p id="p-60"><a class="external" href="https://youtu.be/eS9Db8VLGRE" target="_blank">Escada caindo.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
+<li id="li-11"><p id="p-61"><a class="external" href="https://youtu.be/rCOV8bJIaHU" target="_blank">Água despejada em um cone.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
+<li id="li-12"><p id="p-62"><a class="external" href="https://youtu.be/bX41G0Uc2es" target="_blank">Sombras.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-13"><p id="p-63"><a class="external" href="https://youtu.be/ddEa6Oe58Z0" target="_blank">Sombras.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
+</ul></section><section class="exercises" id="exercises-taxa-variacao"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.3</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-64">Se o raio de uma esfera está aumentando a uma taxa constante de 1 <span class="process-math">\(\rm{cm}/\rm{sec}\text{,}\)</span> então o volume está aumentando a uma taxa de <span class="fillin" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span> <span class="process-math">\(\rm{cm}^3/\rm{sec}\)</span> quando o raio é 4 <span class="process-math">\(\rm{cm}\text{.}\)</span></p>
+<p id="p-65">Dica:  <span class="process-math">\(\displaystyle\frac{dV}{dt} = \frac{dV}{dr} \cdot \frac{dr}{dt}\text{,}\)</span> e o volume de uma esfera é <span class="process-math">\(V = \frac{4}{3} \pi r^3\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-66"><span class="process-math">\(201.061929829747\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-67">Uma bola de neve esférica está derretendo de tal forma que seu diâmetro está diminuindo a uma taxa de 0.2 cm/min. A que taxa o volume da bola de neve está diminuindo quando o diâmetro é 10 cm. (Observe que a resposta é um número positivo)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-69"><span class="process-math">\(0.2\cdot 1.33333\pi \cdot 0.5\cdot 3\!\left(\frac{10}{2}\right)^{2}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-70">Uma luz de rua está no topo de um poste 20 pés. Uma garota 4 pés de altura caminha ao longo de uma trajetória reta afastando-se do poste com uma velocidade de 3 pés por segundo.</p>
+<p id="p-71">A que taxa a ponta de sua sombra está se afastando da luz (ou seja, longe do <em class="alert">topo</em> do poste) quando a garota está 30 pés longe do poste?</p>
+<p id="p-72">Resposta: <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<p id="p-73">Quão rápido sua sombra está se alongando?</p>
+<p id="p-74">Resposta: <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-75"><span class="process-math">\(\frac{\left(30+7.5\right)\!\left(3+0.75\right)}{42.5}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-76"><span class="process-math">\(\frac{3}{\frac{20}{4}-1}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-77">Um balão esférico é inflado de modo que seu volume aumenta na taxa de 2.9 pés por minuto. Com que rapidez o diâmetro do balão está aumentando quando o diâmetro é 1.6 pés?</p>
+<p id="p-78">O diâmetro aumenta em <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> pés por minuto.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-79"><span class="process-math">\(0.721171\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-80">Ao meio-dia, o navio A está a 30 milhas náuticas a oeste do navio B. O navio A está navegando para oeste a 19 nós e o navio B está navegando para o norte a 24 nós. Quão rápido (em nós) está mudando a distância entre os navios em 6 PM (a pós o meio-dia)?</p>
+<p id="p-81">A distância está mudando em <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span> nós.</p>
+<p id="p-82">(Nota: 1 nó é uma velocidade de 1 milha náutica por hora.)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-83"><span class="process-math">\(30.4056\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-84">Um tanque de água cônico com vértice para baixo tem um raio de 10 pés no topo e tem 27 pés de altura.</p>
+<p id="p-85">Se a água flui para o tanque a uma taxa de 10 pés por minuto, quão rápido a profundidade da água está aumentando quando a água está a 15 pés de profundidade?</p>
+<p id="p-86">A profundidade da água aumenta em <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span> pés por minuto.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-87"><span class="process-math">\(0.103132\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-88">Uma corda, presa a um peso, sobe por uma roldana no teto e desce até um trabalhador. O trabalhador segura a corda na mesma altura do ponto de conexão entre a corda e o peso. A distância do ponto de conexão ao teto é de 40 ft. Suponha que o trabalhador esteja diretamente próximo ao peso (ou seja, um comprimento total de corda de 80 ft) e comece a se afastar a uma taxa constante de 4 pés por segundo. Quão rápido o peso está subindo quando o trabalhador andou:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">10 pés?  Resposta</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">30 pés? Resposta</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></td>
+</tr>
+</table></div></div></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-89"><span class="process-math">\(0.970143\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-90"><span class="process-math">\(2.4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-91">O trabalhador, o peso e a polia formam um triângulo retângulo com altura 40, comprimento da base <span class="process-math">\(x\)</span> e hipotenusa <span class="process-math">\(z\text{.}\)</span> A velocidade com que o peso sobe é a mesma que a velocidade com que a corda está sendo puxada. Isso significa que a taxa que estamos procurando é <span class="process-math">\(\dfrac{dz}{dt}\text{.}\)</span></p>
+<p id="p-92">Pelo Teorema de Pitágoras</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x^2 + 40^2 = z^2
+\end{equation*}
+</div>
+<p class="continuation">Tome derivadas em relação a <span class="process-math">\(t\)</span> de ambos os lados da equação.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2x\dfrac{dx}{dt} = 2z\dfrac{dz}{dt}.
+\end{equation*}
+</div>
+<p id="p-93">Em seguida, faça <span class="process-math">\(\dfrac{dx}{dt} = 4\)</span> e resolva para a taxa desconhecida.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfrac{dz}{dt} = \dfrac{4 x}{z}.
+\end{equation*}
+</div>
+<p id="p-94">Quando <span class="process-math">\(x = 10\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+10^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{1700}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Rightarrow \dfrac{dz}{dt} = \dfrac{40}{\sqrt{1700}}
+\approx 0.970142500145332.
+\end{equation*}
+</div>
+<p id="p-95">Quando <span class="process-math">\(x = 30\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+30^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{2500}.
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Rightarrow \dfrac{dz}{dt} = \dfrac{120}{\sqrt{2500}}
+\approx 2.4.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-96">Uma loja de varejo estima que as vendas semanais <span class="process-math">\(s\)</span> e os custos semanais de publicidade <span class="process-math">\(x\)</span> (ambos em dólares) estão relacionados por</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+s = 70000 - 350000 e^{-0.0003 x}.
+\end{equation*}
+</div>
+<p class="continuation">Os custos de publicidade semanais atuais são de 2.000 dólares e esses custos estão aumentando a uma taxa de 300 dólares por semana. Encontre a taxa atual de variação das vendas.</p>
+<p id="p-97">Taxa de variação das vendas = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(17287.5665369618\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-99">Suponha <span class="process-math">\(xy = 4\)</span> e <span class="process-math">\(\displaystyle{ \frac { dy }{ dt } = 4}\text{.}\)</span> Encontre <span class="process-math">\(\displaystyle{\frac { dx }{ dt } }\)</span> quando  <span class="process-math">\(x = 2\text{.}\)</span></p>
+<p id="p-100"><span class="process-math">\(\displaystyle{\frac { dx }{ dt } }\)</span> = <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-101"><span class="process-math">\(-4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-102">Derivando por ambos os lados da equaç~ao <span class="process-math">\(x y = 4\)</span> em relação a  <span class="process-math">\(t\)</span> obtemos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{dx}{dt}y + x \frac{dy}{dt} = 0
+\end{equation*}
+</div>
+<p class="continuation">ou</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{dx}{dt} = - \frac{x}{y} \frac{dy}{dt}
+\end{equation*}
+</div>
+<p class="continuation">Temos <span class="process-math">\(y = \displaystyle \frac{4 }{x}\text{,}\)</span> então <span class="process-math">\(y = 2\)</span>  quando <span class="process-math">\(x = 2\)</span> . Substituindo <span class="process-math">\(y = 2, \; x= 2\)</span> e <span class="process-math">\(\displaystyle \frac{dy}{dt} = 4\)</span> na expressão para <span class="process-math">\(\displaystyle \frac{dx}{dt}\text{,}\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{dx}{dt} = - \frac{2}{2} \cdot (4)  = -4
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-103">Seja <span class="process-math">\(A\)</span>  ser a área de um círculo com raio <span class="process-math">\(r\text{.}\)</span> Se <span class="process-math">\(\frac { dr }{ dt } = 2\text{,}\)</span> encontre <span class="process-math">\(\frac { dA }{ dt }\)</span> quando <span class="process-math">\(r = 4\text{.}\)</span></p>
+<p id="p-104">Resposta: <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-105"><span class="process-math">\(50.2654824574367\)</span></p></div></div>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/GeaD5ccCOpM</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/fMrNf13uG0g</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/eS9Db8VLGRE</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/rCOV8bJIaHU</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/bX41G0Uc2es</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/ddEa6Oe58Z0</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

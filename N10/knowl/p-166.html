@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-12T14:51:18-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p><em class="alert">Solution</em> Since the rectangle must sit inside the triangle, its dimensions are bounded and we will end up using Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>.</p>
+<ul class="disc">
+<li>
+<p>Carefully draw a picture:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<div class="sbspanel top" style="width:41.025641025641%;"><img src="images/inscribedB.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:56.4102564102564%;"><img src="images/inscribed.svg" role="img" class="contained"></div>
+</div></div>
+<p>We have drawn (on the left) the triangle in the <span class="process-math">\(xy\)</span>-plane with its base on the <span class="process-math">\(x\)</span>-axis. The base has been drawn running from <span class="process-math">\((-a/2,0)\)</span> to <span class="process-math">\((a/2,0)\)</span> so its centre lies at the origin. A little Pythagoras (or a little trigonometry) tells us that the height of the triangle is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sqrt{a^2-(a/2)^2} \amp= \frac{\sqrt{3}}{2}\cdot a = a\cdot \sin\frac{\pi}{3}
+\end{align*}
+</div>
+<p class="continuation">Thus the vertex at the top of the triangle lies at <span class="process-math">\(\left(0,\frac{\sqrt{3}}{2}\cdot a\right)\text{.}\)</span></p>
+</li>
+<li><p>If we construct a rectangle that does not touch the sides of the triangle, then we can increase the dimensions of the rectangle until it touches the triangle and so make its area larger. Thus we can assume that the two top corners of the rectangle touch the triangle as drawn in the right-hand figure above.</p></li>
+<li><p>Now let the rectangle be <span class="process-math">\(2x\)</span> wide and <span class="process-math">\(y\)</span> high. And let <span class="process-math">\(A\)</span> denote its area. Clearly<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A \amp= 2xy.
+\end{align*}
+</div>where <span class="process-math">\(0 \leq x \leq a/2\)</span> and <span class="process-math">\(0\leq y\leq \frac{\sqrt{3}}{2}a\text{.}\)</span></p></li>
+<li><p>Our construction means that the top-right corner of the rectangle will have coordinates <span class="process-math">\((x,y)\)</span> and lie on the line joining the top vertex of the triangle at <span class="process-math">\((0,\sqrt{3}a/2)\)</span> to the bottom-right vertex at <span class="process-math">\((a/2,0)\text{.}\)</span> In order to write the area as a function of <span class="process-math">\(x\)</span> alone, we need the equation for this line since it will tell us how to write <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span> The line has slope<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\text{slope} \amp= \frac{\sqrt{3}a/2 - 0}{0-a/2} = -\sqrt{3}.
+\end{align*}
+</div>and passes through the point <span class="process-math">\((0,\sqrt{3}a/2)\text{,}\)</span> so any point <span class="process-math">\((x,y)\)</span> on that line satisfies:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+y \amp= -\sqrt{3}x + \frac{\sqrt{3}}{2}a.
+\end{align*}
+</div></p></li>
+<li><p>We can now write the area as a function of <span class="process-math">\(x\)</span> alone<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A(x) \amp= 2x \left( -\sqrt{3}x + \frac{\sqrt{3}}{2}a \right)\\
+\amp= \sqrt{3} x(a-2x).
+\end{align*}
+</div>with <span class="process-math">\(0\leq x \leq a/2\text{.}\)</span></p></li>
+<li><p>The ends of the domain give:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A(0) \amp= 0 \amp A(a/2) \amp= 0.
+\end{align*}
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A'(x) \amp= \sqrt{3} \left( x \cdot (-2) + 1 \cdot (a-2x) \right) = \sqrt{3}
+(a-4x).
+\end{align*}
+</div>Since this is a polynomial there are no singular points, but there is a critical point at <span class="process-math">\(x=a/4\text{.}\)</span> There<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A(a/4) \amp= \sqrt{3} \cdot \frac{a}{4} \cdot (a - a/2) = \sqrt{3} \cdot
+\frac{a^2}{8}.\\
+y \amp= -\sqrt{3}\cdot (a/4) + \frac{\sqrt{3}}{2} a = \sqrt{3}\cdot \frac{a}{4}.
+\end{align*}
+</div></p></li>
+<li>
+<p>Checking the question again, we see that we are asked for the dimensions rather than the area, so the answer is <span class="process-math">\(2x \times y\text{:}\)</span></p>
+<blockquote class="blockquote"><p>The largest such rectangle has dimensions <span class="process-math">\(\frac{a}{2} \times \frac{\sqrt{3}
+a}{4}\text{.}\)</span></p></blockquote>
+</li>
+</ul>
+<span class="incontext"><a href="section-2.html#p-166" class="internal">em contexto</a></span>
+</body>
+</html>

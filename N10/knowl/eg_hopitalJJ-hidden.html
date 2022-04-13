@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-12T14:51:19-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>In this example we'll evaluate <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
+x^n e^{-x}\text{,}\)</span> for all natural numbers <span class="process-math">\(n\text{.}\)</span> We'll start with <span class="process-math">\(n=1\)</span> and <span class="process-math">\(n=2\)</span> and then, using what we have learned from those cases, move on to general <span class="process-math">\(n\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{1}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}e^{-x}
+=0
+\end{align*}
+</div>
+<p class="continuation">Applying l'Hôpital twice,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x^2}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x^2}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{2x}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{2}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow 2}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}2e^{-x}\\
+\amp=0
+\end{align*}
+</div>
+<p class="continuation">Indeed, for any natural number <span class="process-math">\(n\text{,}\)</span> applying l'Hôpital <span class="process-math">\(n\)</span> times gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x^n}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\hskip-5pt\underbrace{\frac{x^n}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{nx^{n-1}}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{n(n-1)x^{n-2}}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp=\cdots
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{n!}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow n!}
+{\mathrm{den}\rightarrow+\infty}}
+=0
+\end{align*}
+</div></article></body>
+</html>

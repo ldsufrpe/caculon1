@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-12T14:51:18-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p><em class="alert">Solution</em> While this is another distance problem, the possible values of <span class="process-math">\(x,y\)</span> are bounded, so we need Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> rather than Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>.</p>
+<ul class="disc">
+<li>
+<p>We start by drawing a picture:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/ellipseMaxMin.svg" role="img" class="contained"></div></div></div>
+</li>
+<li><p>Let <span class="process-math">\(\ell\)</span> be the distance from the point <span class="process-math">\((x,y)\)</span> on the ellipse to the point <span class="process-math">\((1,0)\text{.}\)</span> As was the case above, we will maximise the squared-distance.<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\ell^2 \amp= (x-1)^2 + y^2.
+\end{align*}
+</div></p></li>
+<li>
+<p>Since <span class="process-math">\((x,y)\)</span> lie on the ellipse we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\frac{x^2}{4}+y^2=1
+\end{gather*}
+</div>
+<p class="continuation">Note that this also shows that <span class="process-math">\(-2 \leq x \leq 2\)</span> and <span class="process-math">\(-1 \leq y \leq 1\text{.}\)</span></p>
+<p>Isolating <span class="process-math">\(y^2\)</span> and substituting this into our expression for <span class="process-math">\(\ell^2\)</span> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\ell^2 \amp= (x-1)^2 + \underbrace{1-x^2/4}_{=y^2}.
+\end{align*}
+</div>
+</li>
+<li><p>Now we can apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. The endpoints of the domain give<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html">
+\begin{align*}
+\ell^2(-2) \amp= (-2-1)^2 + 1 - (-2)^2/4 = 3^2+1-1 = 9\\
+\ell^2(2) \amp= (2-1)^2 + 1 - 2^2/4 = 1+1-1 = 1
+\end{align*}
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html">
+\begin{align*}
+\dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-1) - x/2 = \frac{3x}{2} - 2
+\end{align*}
+</div>Thus there are no singular points, but there is a critical point at <span class="process-math">\(x = 4/3\text{.}\)</span> The corresponding squared-distance is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html">
+\begin{align*}
+\ell^2(4/3) \amp= \left( \frac{4}{3}-1\right)^2 +1 - \frac{(4/3)^2}{4}\\
+\amp= (1/3)^2 + 1 - (4/9) = 6/9 = 2/3.
+\end{align*}
+</div></p></li>
+<li>
+<p>To summarise (and giving distances and coordinates of points):</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((x,y)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\ell\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((-2,0)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(\frac{4}{3}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\big(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\big)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\sqrt{\frac{2}{3}}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\((2,0)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+</table></div></div></div>
+<p>The point of maximum distance is <span class="process-math">\((-2,0)\text{,}\)</span> and the point of minimum distance is <span class="process-math">\(\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)\text{.}\)</span></p>
+</li>
+</ul>
+<span class="incontext"><a href="section-2.html#p-159" class="internal">em contexto</a></span>
+</body>
+</html>
