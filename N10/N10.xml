@@ -111,8 +111,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
         <xi:include href="./taxa-variacao.xml" />
-<!--        <xi:include href="./otimizacao.xml" />-->
-<!--        <xi:include href="./hopital.xml"/>-->
+        <xi:include href="./otimizacao.xml" />
+        <xi:include href="./hopital.xml"/>
 
 
 

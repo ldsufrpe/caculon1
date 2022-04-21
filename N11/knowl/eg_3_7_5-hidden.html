@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}
+\end{gather*}
+</div>
+<p class="continuation">Nenhum dos termos é uma fração, mas podemos escrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sqrt{x^2+4x}-\sqrt{x^2-3x}
+\amp= x\sqrt{1+4/x}-x\sqrt{1-3/x} \amp \text{assumindo } x \gt 0\\
+\amp= x \left( \sqrt{1+4/x}-\sqrt{1-3/x} \right)\\
+\amp= \frac{\sqrt{1+4/x}-\sqrt{1-3/x}}{1/x}
+\end{align*}
+</div>
+<p class="continuation">que agora é uma forma <span class="process-math">\(\frac00\)</span>  com <span class="process-math">\(f(x)=\sqrt{1+4/x}-\sqrt{1-3/x}\)</span> e <span class="process-math">\(g(x)=1/x\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x) \amp= \frac{-4/x^2}{2\sqrt{1+4/x}} - \frac{3/x^2}{2\sqrt{1-3/x}} \amp
+g'(x) \amp= - \frac{1}{x^2}
+\end{align*}
+</div>
+<p class="continuation">Portanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\frac{f'(x)}{g'(x)} \amp= \frac{4}{2\sqrt{1+4/x}} + \frac{3}{\sqrt{1-3/x}}
+\end{align*}
+</div>
+<p class="continuation">E assim no limite como <span class="process-math">\(x\to \infty\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to \infty} \frac{f'(x)}{g'(x)} \amp= \frac{4}{2}+\frac{3}{2} =
+\frac{7}{2}
+\end{align*}
+</div>
+<p class="continuation">e assim o nosso limite original também é <span class="process-math">\(7/2\text{.}\)</span></p>
+<p>Por comparação, se multiplicarmos pelo conjugado temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}
+\amp= \left( \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}\right)
+\cdot \frac{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}\\
+\amp= \frac{ x^2+4x - (x^2-3x)}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}\\
+\amp= \frac{ 7x}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}\\
+\amp= \frac{7}{\sqrt{1+4/x}+\sqrt{1-3/x}} \qquad \text{assuming } x \gt 0
+\end{align*}
+</div>
+<p class="continuation">Agora, tomar o limite como <span class="process-math">\(x\to\infty\)</span> fornece <span class="process-math">\(7/2\)</span> conforme necessário. Só porque conhecemos a regra de L'Hôpital, não significa que devemos usá-la em todos os lugares em que ela possa ser aplicada.</p></article></body>
+</html>

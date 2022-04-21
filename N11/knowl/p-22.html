@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Note que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x\to 0} \sin(x^2) \amp= \sin 0 = 0\\
+\lim_{x\to 0}(1-\cos x) \amp= 1-\cos 0 = 0
+\end{align*}
+</div>
+<p class="continuation">e, portanto, temos uma forma indeterminada <span class="process-math">\(\frac00\text{.}\)</span> Seja <span class="process-math">\(f(x) = \sin(x^2)\)</span> e <span class="process-math">\(g(x)=1-\cos x\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+f'(x) \amp= 2x\cos(x^2) \amp f'(0)\amp=0\\
+g'(x) \amp= \sin x \amp g'(0) \amp=0
+\end{align*}
+</div>
+<p class="continuation">Então, se tentarmos aplicar a regra de L'Hôpital ingenuamente, obteremos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x} \amp= \frac{f'(0)}{g'(0)} = \frac{0}{0}.
+\end{align*}
+</div>
+<p class="continuation">que é outra forma <span class="process-math">\(\frac00\)</span> indeterminada. De acordo com a parte 2 da<a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Coleção: Regra de L'Hôpital">Regra de L'Hôpital</a>) podemos fazer</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x\to 0} \frac{f(x)}{g(x)} \amp= \lim_{x\to 0} \frac{f'(x)}{g'(x)}
+\end{align*}
+</div>
+<p class="continuation">desde que este segundo limite exista. No nosso caso, isso exige que calculemos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{gather*}
+\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+\end{gather*}
+</div>
+<p class="continuation">o que podemos fazer usando a regra de L'Hôpital novamente. Agora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \amp=2\\
+\ell(x) \amp= \sin(x) \amp \ell'(x) \amp= \cos(x) \amp \ell'(0) \amp= 1
+\end{align*}
+</div>
+<p class="continuation">Pela regra de L'Hôpital</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)} \amp= \frac{h'(0)}{\ell'(0)} = 2
+\end{align*}
+</div>
+<p class="continuation">Assim, o nosso limite original é</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
+\amp=\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+= 2.
+\end{align*}
+</div>
+<p class="continuation">Podemos resumir sucintamente as duas aplicações da regra de L'Hôpital neste exemplo por</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html">
+\begin{align*}
+\lim_{x\to 0}\underbrace{\frac{\sin(x^2)}{1-\cos x}}_{
+{\mathrm{num}\to 0}\,,
+{\mathrm{den}\to 0}}
+\amp=\lim_{x\to 0}\underbrace{\frac{2x\cos(x^2)}{\sin x}}_{
+{\mathrm{num}\to 0}\, ,
+{\mathrm{den}\to 0}}
+=\lim_{x\to 0}\underbrace{\frac{2\cos(x^2)-4x^2\sin(x^2)}{\cos x}}_{
+{\mathrm{num}\to 2}\,,
+{\mathrm{den}\to 1}}
+=2
+\end{align*}
+</div>
+<p class="continuation">Aqui “num” e “den” são usados como abreviações de “numerador” e “denominador” respectivamente.</p>
+<span class="incontext"><a href="section-1.html#p-22" class="internal">em contexto</a></span>
+</body>
+</html>

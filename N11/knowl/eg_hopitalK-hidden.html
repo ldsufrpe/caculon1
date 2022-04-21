@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)
+\end{gather*}
+</div>
+<p class="continuation">Como o limite de <span class="process-math">\(\sec x\)</span> e <span class="process-math">\(\tan x\)</span> é <span class="process-math">\(+\infty\)</span> como <span class="process-math">\(x \to
+\frac{\pi}{2}^-\text{,}\)</span> esta é uma forma indeterminada <span class="process-math">\(\infty-\infty\text{.}\)</span> No entanto, podemos reescrever isso como</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sec x - \tan x \amp= \frac{1}{\cos x} - \frac{\sin x}{\cos x} = \frac{1-\sin x}{\cos x}
+\end{align*}
+</div>
+<p class="continuation">que é então uma forma indeterminada <span class="process-math">\(\frac00\)</span> . Isso então dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\rightarrow \frac{\pi}{2}^-}\Big(
+\underbrace{\sec x}_{\rightarrow +\infty}
+- \underbrace{\tan x}_{\rightarrow+\infty}\Big)
+\amp =\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{1-\sin x}
+{\cos x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+=\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{-\cos x}
+{-\sin x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow -1}}
+=0
+\end{align*}
+</div></article></body>
+</html>

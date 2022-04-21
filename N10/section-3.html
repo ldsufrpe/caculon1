@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-12T14:51:16-03:00       *-->
+<!--*       on 2022-04-21T13:21:24-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="pt-BR">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>OtimizaçãoL'Hôpital's Rule and Indeterminate Forms</title>
+<title>L'Hôpital's Rule</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -105,9 +119,10 @@ true);
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
 <li class="link">
-<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxa de Variação</span></a><ul>
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxas Relacionadas</span></a><ul>
 <li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Taxa de Variação</a></li>
-<li><a href="section-1.html#exercises-" data-scroll="exercises-" class="internal">Exercícios</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-taxa-variacao" data-scroll="exercises-taxa-variacao" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link">
@@ -119,8 +134,8 @@ true);
 </ul>
 </li>
 <li class="link active">
-<a href="section-3.html" data-scroll="section-3" class="internal"><span class="codenumber">3</span> <span class="title">OtimizaçãoL'Hôpital's Rule and Indeterminate Forms</span></a><ul>
-<li><a href="section-3.html#subsection-5" data-scroll="subsection-5" class="internal">L'Hôpital's Rule and Indeterminate Forms</a></li>
+<a href="section-3.html" data-scroll="section-3" class="internal"><span class="codenumber">3</span> <span class="title">L'Hôpital's Rule</span></a><ul>
+<li><a href="section-3.html#subsection-6" data-scroll="subsection-6" class="internal">L'Hôpital's Rule and Indeterminate Forms</a></li>
 <li><a href="section-3.html#ssec_3_7_1" data-scroll="ssec_3_7_1" class="internal">Standard Examples</a></li>
 <li><a href="section-3.html#ssec_3_7_2" data-scroll="ssec_3_7_2" class="internal">Variations</a></li>
 <li><a href="section-3.html#exercises-hopital" data-scroll="exercises-hopital" class="internal">Exercícios</a></li>
@@ -131,20 +146,20 @@ true);
 </div></div>
 <main class="main"><div id="content" class="pretext-content">
 <section class="section" id="section-3"><h2 class="heading hide-type">
-<span class="type">Seção</span> <span class="codenumber">3</span> <span class="title">OtimizaçãoL'Hôpital's Rule and Indeterminate Forms</span>
+<span class="type">Seção</span> <span class="codenumber">3</span> <span class="title">L'Hôpital's Rule</span>
 </h2>
 <article class="objectives goal-like" id="objectives-3"><h3 class="heading">
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-179"><p id="p-190">texto 1</p></li>
-<li id="li-180"><p id="p-191">texto 2</p></li>
-<li id="li-181"><p id="p-192">texto 3</p></li>
-</ol></article><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<li id="li-146"><p id="p-233">texto 1</p></li>
+<li id="li-147"><p id="p-234">texto 2</p></li>
+<li id="li-148"><p id="p-235">texto 3</p></li>
+</ol></article><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">3.1</span> <span class="title">L'Hôpital's Rule and Indeterminate Forms</span>
 </h3>
-<section class="introduction" id="introduction-4"><p id="p-193">Let us return to limits  and see how we can use derivatives to simplify certain families of limits called indeterminate forms. We know, from Theorem  <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_arith_lim" missing or not unique]</code> on the arithmetic of limits, that if</p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-126">
+<section class="introduction" id="introduction-3"><p id="p-236">Let us return to limits  and see how we can use derivatives to simplify certain families of limits called indeterminate forms. We know, from Theorem  <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_arith_lim" missing or not unique]</code> on the arithmetic of limits, that if</p>
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-124">
 \begin{align*}
 \lim_{x\rightarrow a}f(x) \amp= F \amp
 \lim_{x\rightarrow a}g(x) \amp= G\\
@@ -155,20 +170,20 @@ true);
 \end{align*}
 </div>
 <p class="continuation">The requirement that <span class="process-math">\(G\ne 0\)</span> is critical — we explored this in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_lim_rat" missing or not unique]</code>. Please reread that example.</p>
-<p id="p-194">Of course <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 1 </sup></a> it is not surprising that if <span class="process-math">\(F\ne 0\)</span> and <span class="process-math">\(G= 0\text{,}\)</span> then</p>
-<div class="displaymath process-math" data-contains-math-knowls="  " id="md-127">
+<p id="p-237">Of course <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 1 </sup></a> it is not surprising that if <span class="process-math">\(F\ne 0\)</span> and <span class="process-math">\(G= 0\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="  " id="md-125">
 \begin{align*}
 \lim_{x\to a}\frac{f(x)}{g(x)} \amp= DNE
 \end{align*}
 </div>
 <p class="continuation">and if <span class="process-math">\(F=0\)</span> but <span class="process-math">\(G\neq 0\)</span> then</p>
-<div class="displaymath process-math" data-contains-math-knowls="  " id="md-128">
+<div class="displaymath process-math" data-contains-math-knowls="  " id="md-126">
 \begin{align*}
 \lim_{x\to a}\frac{f(x)}{g(x)} \amp= 0
 \end{align*}
 </div>
 <p class="continuation">However when both <span class="process-math">\(F,G=0\)</span> then, as we saw in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_lim_rat" missing or not unique]</code>, almost anything can happen</p>
-<div class="displaymath process-math" data-contains-math-knowls="  " id="md-129">
+<div class="displaymath process-math" data-contains-math-knowls="  " id="md-127">
 \begin{align*}
 f(x)\amp=x \amp g(x)\amp=x^2 \amp \lim_{x\to0} \frac{x}{x^2}
 \amp= \lim_{x\to0} \frac{1}{x} = DNE\\
@@ -181,63 +196,63 @@ f(x)\amp=7x^2 \amp g(x)\amp=3x^2 \amp \lim_{x\to0} \frac{7x^2}{3x^2}
 \end{align*}
 </div>
 <p class="continuation">Indeed after exploring Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_zero_cancel_limit" missing or not unique]</code> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_easy_0on0_limit" missing or not unique]</code> we gave ourselves the rule of thumb that if we found <span class="process-math">\(0/0\text{,}\)</span> then there must be something that cancels.</p>
-<p id="p-195">Because the limit that results from these <span class="process-math">\(0/0\)</span> situations is not immediately obvious, but also leads to some interesting mathematics, we should give it a name.</p>
+<p id="p-238">Because the limit that results from these <span class="process-math">\(0/0\)</span> situations is not immediately obvious, but also leads to some interesting mathematics, we should give it a name.</p>
 <article class="definition definition-like" id="def_3_7_1"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">First indeterminate forms.</span>
 </h4>
-<p id="p-196">Let <span class="process-math">\(a \in \mathbb{R}\)</span> and let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be functions. If</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-130">
+<p id="p-239">Let <span class="process-math">\(a \in \mathbb{R}\)</span> and let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be functions. If</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-128">
 \begin{align*}
 \lim_{x\to a} f(x) \amp= 0 \amp \text{and } \amp\amp
 \lim_{x\to a} g(x) \amp= 0
 \end{align*}
 </div>
 <p class="continuation">then the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-131">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-129">
 \begin{gather*}
 \lim_{x\to a} \dfrac{f(x)}{g(x)}
 \end{gather*}
 </div>
-<p class="continuation">is called a <span class="process-math">\(\frac{0}{0}\)</span> indeterminate form.</p></article><p id="p-197">There are quite a number of mathematical tools for evaluating such indeterminate forms — Taylor series for example. A simpler method, which works in quite a few cases, is L'Hôpital's rule <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 2 </sup></a> .</p>
+<p class="continuation">is called a <span class="process-math">\(\frac{0}{0}\)</span> indeterminate form.</p></article><p id="p-240">There are quite a number of mathematical tools for evaluating such indeterminate forms — Taylor series for example. A simpler method, which works in quite a few cases, is L'Hôpital's rule <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 2 </sup></a> .</p>
 <article class="theorem theorem-like" id="thm_APPlhopital"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span><span class="space"> </span><span class="title">L'Hôpital's Rule.</span>
 </h4>
-<p id="p-198">Let <span class="process-math">\(a\in\mathbb{R}\)</span> and assume that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-132">
+<p id="p-241">Let <span class="process-math">\(a\in\mathbb{R}\)</span> and assume that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-130">
 \begin{align*}
 \lim_{x\to a}f(x) \amp= \lim_{x\to a} g(x) = 0
 \end{align*}
 </div>
 <p class="continuation">Then</p>
 <ol class="lower-alpha">
-<li id="li-182"><p id="p-derived-li-182">if <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\)</span> exist and <span class="process-math">\(g'(a)\ne 0\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-133">
+<li id="li-149"><p id="p-derived-li-149">if <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\)</span> exist and <span class="process-math">\(g'(a)\ne 0\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-131">
 \begin{align*}
 \lim_{x\to a} \frac{f(x)}{g(x)} \amp=\frac{f'(a)}{g'(a)},
 \end{align*}
 </div></p></li>
-<li id="li-183"><p id="p-derived-li-183">while, if <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> exist, with <span class="process-math">\(g'(x)\)</span> nonzero, on an open interval that contains <span class="process-math">\(a\text{,}\)</span>  except possibly at <span class="process-math">\(a\)</span> itself, and if the limit<div class="displaymath process-math" data-contains-math-knowls="" id="md-134">
+<li id="li-150"><p id="p-derived-li-150">while, if <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> exist, with <span class="process-math">\(g'(x)\)</span> nonzero, on an open interval that contains <span class="process-math">\(a\text{,}\)</span>  except possibly at <span class="process-math">\(a\)</span> itself, and if the limit<div class="displaymath process-math" data-contains-math-knowls="" id="md-132">
 \begin{gather*}
 \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \text{ exists or is $+\infty$ or is $-\infty$}
 \end{gather*}
-</div>then<div class="displaymath process-math" data-contains-math-knowls="" id="md-135">
+</div>then<div class="displaymath process-math" data-contains-math-knowls="" id="md-133">
 \begin{gather*}
 \lim_{x\to a} \frac{f(x)}{g(x)}
 =\lim_{x \to a} \frac{f'(x)}{g'(x)}
 \end{gather*}
 </div></p></li>
-</ol></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-199">We only give the proof for part (a). The proof of part (b) is not very difficult, but uses the Generalised Mean–Value Theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>), which is optional and most readers have not seen it.</p>
-<ul id="p-200" class="disc">
-<li id="li-184"><p id="p-derived-li-184">First note that we must have <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> To see this note that since derivative <span class="process-math">\(f'(a)\)</span> exists, we know that the limit<div class="displaymath process-math" data-contains-math-knowls="" id="md-136">
+</ol></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Demonstração<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-242">We only give the proof for part (a). The proof of part (b) is not very difficult, but uses the Generalised Mean–Value Theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>), which is optional and most readers have not seen it.</p>
+<ul id="p-243" class="disc">
+<li id="li-151"><p id="p-derived-li-151">First note that we must have <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> To see this note that since derivative <span class="process-math">\(f'(a)\)</span> exists, we know that the limit<div class="displaymath process-math" data-contains-math-knowls="" id="md-134">
 \begin{align*}
 \lim_{x\to a} \frac{f(x)-f(a)}{x-a} \amp \text{ exists}
 \end{align*}
-</div>Since we know that the denominator goes to zero, we must also have that the numerator goes to zero (otherwise the limit would be undefined). Hence we must have<div class="displaymath process-math" data-contains-math-knowls="" id="md-137">
+</div>Since we know that the denominator goes to zero, we must also have that the numerator goes to zero (otherwise the limit would be undefined). Hence we must have<div class="displaymath process-math" data-contains-math-knowls="" id="md-135">
 \begin{align*}
 \lim_{x\to a} (f(x)-f(a)) \amp=
 \left( \lim_{x\to a} f(x) \right) - f(a) = 0
 \end{align*}
 </div>We are told that <span class="process-math">\(\displaystyle \lim_{x\to a} f(x) =0\)</span> so we must have <span class="process-math">\(f(a)=0\text{.}\)</span> Similarly we know that <span class="process-math">\(g(a)=0\text{.}\)</span></p></li>
-<li id="li-185"><p id="p-derived-li-185">Now consider the indeterminate form<div class="displaymath process-math" data-contains-math-knowls="" id="md-138">
+<li id="li-152"><p id="p-derived-li-152">Now consider the indeterminate form<div class="displaymath process-math" data-contains-math-knowls="" id="md-136">
 \begin{align*}
 \lim_{x\to a} \frac{f(x)}{g(x)}
 \amp= \lim_{x\to a} \frac{f(x) - 0 }{g(x) - 0 }
@@ -255,34 +270,34 @@ f(x)\amp=7x^2 \amp g(x)\amp=3x^2 \amp \lim_{x\to0} \frac{7x^2}{3x^2}
 </ul></article></div></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.1.1</span> <span class="title">Optional — Proof of Part (b) of l'Hôpital's Rule</span>
 </h4>
-<p id="p-201">To prove part (b) we must work around the possibility that <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\)</span> do not exist or that <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> are not continuous at <span class="process-math">\(x=a\text{.}\)</span> To do this, we make use of the  Generalised Mean-Value Theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>) that was used to prove Equation <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eq_taylorErrorN" missing or not unique]</code>. We recommend you review the GMVT before proceeding.</p>
-<p id="p-202">For simplicity we consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-139">
+<p id="p-244">To prove part (b) we must work around the possibility that <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\)</span> do not exist or that <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> are not continuous at <span class="process-math">\(x=a\text{.}\)</span> To do this, we make use of the  Generalised Mean-Value Theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>) that was used to prove Equation <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eq_taylorErrorN" missing or not unique]</code>. We recommend you review the GMVT before proceeding.</p>
+<p id="p-245">For simplicity we consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-137">
 \begin{gather*}
 \lim_{x\to a^+} \frac{f(x)}{g(x)}
 \end{gather*}
 </div>
 <p class="continuation">By assumption, we know that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-140">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-138">
 \begin{gather*}
 \lim_{x\to a^+} f(x) = \lim_{x\to a^+} g(x) = 0
 \end{gather*}
 </div>
 <p class="continuation">For simplicity, we also assume that <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> This allows us to write</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-141">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-139">
 \begin{align*}
 \frac{f(x)}{g(x)} \amp= \frac{f(x)-f(a)}{g(x)-g(a)}
 \end{align*}
 </div>
 <p class="continuation">which is the right form for an application of the GMVT.</p>
-<p id="p-203">By assumption <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> exist, with <span class="process-math">\(g'(x)\)</span> nonzero, in some open interval around <span class="process-math">\(a\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. So we know that they exist, with <span class="process-math">\(g'(x)\ne 0\text{,}\)</span> in some interval <span class="process-math">\((a,b]\)</span> with <span class="process-math">\(b \gt a\text{.}\)</span>  Then the GMVT (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>) tells us that for <span class="process-math">\(x\in (a,b]\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-142">
+<p id="p-246">By assumption <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(g'(x)\)</span> exist, with <span class="process-math">\(g'(x)\)</span> nonzero, in some open interval around <span class="process-math">\(a\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. So we know that they exist, with <span class="process-math">\(g'(x)\ne 0\text{,}\)</span> in some interval <span class="process-math">\((a,b]\)</span> with <span class="process-math">\(b \gt a\text{.}\)</span>  Then the GMVT (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>) tells us that for <span class="process-math">\(x\in (a,b]\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-140">
 \begin{align*}
 \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} \amp= \frac{f'(c)}{g'(c)}
 \end{align*}
 </div>
 <p class="continuation">where <span class="process-math">\(c \in (a,x)\text{.}\)</span> As we take the limit as <span class="process-math">\(x\to a\text{,}\)</span> we also have that <span class="process-math">\(c\to a\text{,}\)</span> and so</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-143">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-141">
 \begin{align*}
 \lim_{x\to a^+}\frac{f(x)}{g(x)}
 \amp= \lim_{x\to a^+} \frac{f'(c)}{g'(c)}
@@ -292,23 +307,23 @@ f(x)\amp=7x^2 \amp g(x)\amp=3x^2 \amp \lim_{x\to0} \frac{7x^2}{3x^2}
 <p class="continuation">as required.</p></section></section><section class="subsection" id="ssec_3_7_1"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">3.2</span> <span class="title">Standard Examples</span>
 </h3>
-<p id="p-204">Here are some simple examples using L'Hôpital's rule.</p>
+<p id="p-247">Here are some simple examples using L'Hôpital's rule.</p>
 <article class="example example-like" id="eg_hopitalA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalA"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Find <span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin x}{x}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalA"><article class="example example-like"><p id="p-205">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-144">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalA"><article class="example example-like"><p id="p-248">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-142">
 \begin{gather*}
 \lim_{x\to 0} \frac{\sin x}{x}
 \end{gather*}
 </div>
 <ul class="disc">
-<li id="li-186"><p id="p-derived-li-186">Notice that<div class="displaymath process-math" data-contains-math-knowls="" id="md-145">
+<li id="li-153"><p id="p-derived-li-153">Notice that<div class="displaymath process-math" data-contains-math-knowls="" id="md-143">
 \begin{align*}
 \lim_{x\to 0} \sin x \amp= 0\\
 \lim_{x\to 0} x \amp= 0
 \end{align*}
 </div>so this is a <span class="process-math">\(\frac00\)</span> indeterminate form, and suggests we try l'Hôpital's rule.</p></li>
-<li id="li-187"><p id="p-derived-li-187">To apply the rule we must first check the limits of the derivatives.<div class="displaymath process-math" data-contains-math-knowls="" id="md-146">
+<li id="li-154"><p id="p-derived-li-154">To apply the rule we must first check the limits of the derivatives.<div class="displaymath process-math" data-contains-math-knowls="" id="md-144">
 \begin{align*}
 f(x)\amp= \sin x \amp f'(x) \amp =\cos x \amp \text{and} \amp\amp
 f'(0)=1\\
@@ -316,7 +331,7 @@ g(x) \amp= x \amp g'(x) \amp = 1 \amp \text{and} \amp\amp
 g'(0)=1
 \end{align*}
 </div></p></li>
-<li id="li-188"><p id="p-derived-li-188">So by l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-147">
+<li id="li-155"><p id="p-derived-li-155">So by l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-145">
 \begin{align*}
 \lim_{x\to 0} \frac{\sin x}{x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{1} = 1.
 \end{align*}
@@ -324,26 +339,26 @@ g'(0)=1
 </ul></article></div>
 <article class="example example-like" id="eg_hopitalB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalB"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Compute <span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalB"><article class="example example-like"><p id="p-206">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-148">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalB"><article class="example example-like"><p id="p-249">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-146">
 \begin{gather*}
 \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}
 \end{gather*}
 </div>
 <ul class="disc">
-<li id="li-189"><p id="p-derived-li-189">First check<div class="displaymath process-math" data-contains-math-knowls="" id="md-149">
+<li id="li-156"><p id="p-derived-li-156">First check<div class="displaymath process-math" data-contains-math-knowls="" id="md-147">
 \begin{align*}
 \lim_{x\to 0} \sin 2x \amp= 0\\
 \lim_{x\to 0} \sin x \amp= 0
 \end{align*}
 </div>so we again have a <span class="process-math">\(\frac00\)</span> indeterminate form.</p></li>
-<li id="li-190"><p id="p-derived-li-190">Set <span class="process-math">\(f(x)=\sin x\)</span> and <span class="process-math">\(g(x)=\sin 2x\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-150">
+<li id="li-157"><p id="p-derived-li-157">Set <span class="process-math">\(f(x)=\sin x\)</span> and <span class="process-math">\(g(x)=\sin 2x\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-148">
 \begin{align*}
 f'(x) \amp= \cos x \amp f'(0)= 1\\
 g'(x) \amp= 2\cos 2x \amp g'(0)= 2
 \end{align*}
 </div></p></li>
-<li id="li-191"><p id="p-derived-li-191">And by l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-151">
+<li id="li-158"><p id="p-derived-li-158">And by l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-149">
 \begin{align*}
 \lim_{x\to 0} \frac{\sin x}{\sin 2x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{2}.
 \end{align*}
@@ -351,86 +366,86 @@ g'(x) \amp= 2\cos 2x \amp g'(0)= 2
 </ul></article></div>
 <article class="example example-like" id="eg_3_7_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_1"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x \to0} \frac{q^x - 1}{x}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_1"><article class="example example-like"><p id="p-207">Let <span class="process-math">\(q \gt 1\)</span> and compute the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-152">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_1"><article class="example example-like"><p id="p-250">Let <span class="process-math">\(q \gt 1\)</span> and compute the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-150">
 \begin{gather*}
 \lim_{x \to0} \frac{q^x - 1}{x}
 \end{gather*}
 </div>
 <p class="continuation">This limit arose in our discussion of exponential functions in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>.</p>
-<ul id="p-208" class="disc">
-<li id="li-192"><p id="p-derived-li-192">First check<div class="displaymath process-math" data-contains-math-knowls="" id="md-153">
+<ul id="p-251" class="disc">
+<li id="li-159"><p id="p-derived-li-159">First check<div class="displaymath process-math" data-contains-math-knowls="" id="md-151">
 \begin{align*}
 \lim_{x \to 0} (q^x-1) \amp = 1-1 = 0\\
 \lim_{x \to 0} x \amp = 0
 \end{align*}
 </div>so we have a <span class="process-math">\(\frac00\)</span> indeterminate form.</p></li>
-<li id="li-193"><p id="p-derived-li-193">Set <span class="process-math">\(f(x)= q^x-1\)</span> and <span class="process-math">\(g(x)=x\text{,}\)</span> then (maybe after a quick review of Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>)<div class="displaymath process-math" data-contains-math-knowls="" id="md-154">
+<li id="li-160"><p id="p-derived-li-160">Set <span class="process-math">\(f(x)= q^x-1\)</span> and <span class="process-math">\(g(x)=x\text{,}\)</span> then (maybe after a quick review of Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>)<div class="displaymath process-math" data-contains-math-knowls="" id="md-152">
 \begin{align*}
 f'(x) \amp= \dfrac{\dd}{\dd x}\left(q^x-1\right) = q^x \cdot \log q
 \amp f'(0) \amp= \log q\\
 g'(x) \amp= 1 \amp g'(0) \amp= 1
 \end{align*}
 </div></p></li>
-<li id="li-194"><p id="p-derived-li-194">And by l'Hôpital's rule <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 3 </sup></a><div class="displaymath process-math" data-contains-math-knowls="" id="md-155">
+<li id="li-161"><p id="p-derived-li-161">And by l'Hôpital's rule <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 3 </sup></a><div class="displaymath process-math" data-contains-math-knowls="" id="md-153">
 \begin{align*}
 \lim_{h \to0} \frac{q^h - 1}{h} \amp= \log q.
 \end{align*}
 </div></p></li>
 </ul></article></div>
-<p id="p-209">In this example, we shall apply L'Hôpital's rule twice before getting the answer.</p>
+<p id="p-252">In this example, we shall apply L'Hôpital's rule twice before getting the answer.</p>
 <article class="example example-like" id="eg_hopitalC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalC"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Double L'Hôpital.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalC"><article class="example example-like"><p id="p-210">Compute the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-156">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalC"><article class="example example-like"><p id="p-253">Compute the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-154">
 \begin{gather*}
 \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
 \end{gather*}
 </div>
 <ul class="disc">
-<li id="li-195"><p id="p-derived-li-195">Again we should check<div class="displaymath process-math" data-contains-math-knowls="" id="md-157">
+<li id="li-162"><p id="p-derived-li-162">Again we should check<div class="displaymath process-math" data-contains-math-knowls="" id="md-155">
 \begin{align*}
 \lim_{x\to 0} \sin(x^2) \amp= \sin 0 = 0\\
 \lim_{x\to 0}(1-\cos x) \amp= 1-\cos 0 = 0
 \end{align*}
 </div>and we have a <span class="process-math">\(\frac00\)</span> indeterminate form.</p></li>
-<li id="li-196"><p id="p-derived-li-196">Let <span class="process-math">\(f(x) = \sin(x^2)\)</span> and <span class="process-math">\(g(x)=1-\cos x\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-158">
+<li id="li-163"><p id="p-derived-li-163">Let <span class="process-math">\(f(x) = \sin(x^2)\)</span> and <span class="process-math">\(g(x)=1-\cos x\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-156">
 \begin{align*}
 f'(x) \amp= 2x\cos(x^2) \amp f'(0)\amp=0\\
 g'(x) \amp= \sin x \amp g'(0) \amp=0
 \end{align*}
-</div>So if we try to apply l'Hôpital's rule naively we will get<div class="displaymath process-math" data-contains-math-knowls="" id="md-159">
+</div>So if we try to apply l'Hôpital's rule naively we will get<div class="displaymath process-math" data-contains-math-knowls="" id="md-157">
 \begin{align*}
 \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x} \amp= \frac{f'(0)}{g'(0)} = \frac{0}{0}.
 \end{align*}
 </div>which is another <span class="process-math">\(\frac00\)</span> indeterminate form.</p></li>
-<li id="li-197"><p id="p-derived-li-197">It appears that we are stuck until we remember that l'Hôpital's rule (as stated in Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Teorema 3.2: L'Hôpital's Rule">Teorema 3.2</a>) has a part (b) — now is a good time to reread it.</p></li>
-<li id="li-198"><p id="p-derived-li-198">It says that<div class="displaymath process-math" data-contains-math-knowls="" id="md-160">
+<li id="li-164"><p id="p-derived-li-164">It appears that we are stuck until we remember that l'Hôpital's rule (as stated in Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Teorema 3.2: L'Hôpital's Rule">Teorema 3.2</a>) has a part (b) — now is a good time to reread it.</p></li>
+<li id="li-165"><p id="p-derived-li-165">It says that<div class="displaymath process-math" data-contains-math-knowls="" id="md-158">
 \begin{align*}
 \lim_{x\to 0} \frac{f(x)}{g(x)} \amp= \lim_{x\to 0} \frac{f'(x)}{g'(x)}
 \end{align*}
-</div>provided this second limit exists. In our case this requires us to compute<div class="displaymath process-math" data-contains-math-knowls="" id="md-161">
+</div>provided this second limit exists. In our case this requires us to compute<div class="displaymath process-math" data-contains-math-knowls="" id="md-159">
 \begin{gather*}
 \lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
 \end{gather*}
-</div>which we can do using l'Hôpital's rule again. Now<div class="displaymath process-math" data-contains-math-knowls="" id="md-162">
+</div>which we can do using l'Hôpital's rule again. Now<div class="displaymath process-math" data-contains-math-knowls="" id="md-160">
 \begin{align*}
 h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \amp=2\\
 \ell(x) \amp= \sin(x) \amp \ell'(x) \amp= \cos(x) \amp \ell'(0) \amp= 1
 \end{align*}
-</div>By l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-163">
+</div>By l'Hôpital's rule<div class="displaymath process-math" data-contains-math-knowls="" id="md-161">
 \begin{align*}
 \lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)} \amp= \frac{h'(0)}{\ell'(0)} = 2
 \end{align*}
 </div></p></li>
-<li id="li-199"><p id="p-derived-li-199">Thus our original limit is<div class="displaymath process-math" data-contains-math-knowls="" id="md-164">
+<li id="li-166"><p id="p-derived-li-166">Thus our original limit is<div class="displaymath process-math" data-contains-math-knowls="" id="md-162">
 \begin{align*}
 \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
 \amp=\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
 = 2.
 \end{align*}
 </div></p></li>
-<li id="li-200"><p id="p-derived-li-200">We can succinctly summarise the two applications of L'Hôpital's rule in this example by<div class="displaymath process-math" data-contains-math-knowls="" id="md-165">
+<li id="li-167"><p id="p-derived-li-167">We can succinctly summarise the two applications of L'Hôpital's rule in this example by<div class="displaymath process-math" data-contains-math-knowls="" id="md-163">
 \begin{align*}
 \lim_{x\to 0}\underbrace{\frac{\sin(x^2)}{1-\cos x}}_{\atp
 {\mathrm{num}\to 0}
@@ -445,19 +460,19 @@ h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \a
 \end{align*}
 </div>Here “num” and “den” are used as abbreviations of “numerator” and “denominator” respectively."</p></li>
 </ul></article></div>
-<p id="p-211">One must be careful to ensure that the hypotheses of l'Hôpital's rule are satisfied before applying it. The following “warnings” show the sorts of things that can go wrong.</p>
+<p id="p-254">One must be careful to ensure that the hypotheses of l'Hôpital's rule are satisfied before applying it. The following “warnings” show the sorts of things that can go wrong.</p>
 <article class="warning remark-like" id="warning_lhopital1"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Denominator limit nonzero.</span>
 </h4>
-<p id="p-212">If</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-166">
+<p id="p-255">If</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-164">
 \begin{align*}
 \lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{but}\amp\amp
 \lim\limits_{x\rightarrow a}g(x)\amp\ne 0
 \end{align*}
 </div>
 <p class="continuation">then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-167">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-165">
 \begin{align*}
 \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
 \amp\amp \text{need not be the same as} \amp\amp
@@ -466,14 +481,14 @@ h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \a
 \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
 \end{align*}
 </div>
-<p id="p-213">Here is an example. Take</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-168">
+<p id="p-256">Here is an example. Take</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-166">
 \begin{gather*}
 a=0\qquad  f(x)=3x \qquad g(x)=4+5x
 \end{gather*}
 </div>
 <p class="continuation">Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-169">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-167">
 \begin{align*}
 \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
 \amp=\lim_{x\rightarrow 0}\frac{3x}{4+5x} \amp
@@ -486,8 +501,8 @@ a=0\qquad  f(x)=3x \qquad g(x)=4+5x
 </div></article><article class="warning remark-like" id="warning_lhopital2"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Numerator limit nonzero.</span>
 </h4>
-<p id="p-214">If</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-170">
+<p id="p-257">If</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-168">
 \begin{align*}
 \lim\limits_{x\rightarrow a}g(x)\amp=0
 \amp\text{but}\amp\amp
@@ -495,21 +510,21 @@ a=0\qquad  f(x)=3x \qquad g(x)=4+5x
 \end{align*}
 </div>
 <p class="continuation">then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-171">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-169">
 \begin{align*}
 \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
 \amp\amp  \text{need not be the same as} \amp\amp
 \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
 \end{align*}
 </div>
-<p id="p-215">Here is an example. Take</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-172">
+<p id="p-258">Here is an example. Take</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-170">
 \begin{gather*}
 a=0\qquad   \qquad f(x)=4+5x \qquad g(x)=3x
 \end{gather*}
 </div>
 <p class="continuation">Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-173">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-171">
 \begin{align*}
 \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
 \amp=\lim_{x\rightarrow 0}\frac{4+5x}{3x} \amp
@@ -518,44 +533,44 @@ a=0\qquad   \qquad f(x)=4+5x \qquad g(x)=3x
 \amp=\lim_{x\rightarrow 0}\frac{5}{3}
 =\frac{5}{3}
 \end{align*}
-</div></article><p id="p-216">This next one is more subtle; the limits of the original numerator and denominator functions both go to zero, but the limit of the ratio their derivatives does not exist.</p>
+</div></article><p id="p-259">This next one is more subtle; the limits of the original numerator and denominator functions both go to zero, but the limit of the ratio their derivatives does not exist.</p>
 <article class="warning remark-like" id="warning_lhopital3"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Limit of ratio of derivatives DNE.</span>
 </h4>
-<p id="p-217">If</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-174">
+<p id="p-260">If</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-172">
 \begin{align*}
 \lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{and}\amp\amp
 \lim\limits_{x\rightarrow a}g(x) \amp= 0
 \end{align*}
 </div>
 <p class="continuation">but</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-175">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-173">
 \begin{align*}
 \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \amp \text{ does not exist}
 \end{align*}
 </div>
 <p class="continuation">then it is still possible that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-176">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-174">
 \begin{align*}
 \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp \text{ exists.}
 \end{align*}
 </div>
-<p id="p-218">Here is an example. Take</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-177">
+<p id="p-261">Here is an example. Take</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-175">
 \begin{gather*}
 a=0\qquad   \qquad f(x)=x^2\sin\frac{1}{x} \qquad g(x)= x
 \end{gather*}
 </div>
 <p class="continuation">Then (with an application of the squeeze theorem)</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-178">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-176">
 \begin{align*}
 \lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
 \lim_{x\to 0} g(x) \amp= 0.
 \end{align*}
 </div>
 <p class="continuation">If we attempt to apply l'Hôptial's rule then we have <span class="process-math">\(g'(x)=1\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-179">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-177">
 \begin{align*}
 f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
 \end{align*}
@@ -567,9 +582,9 @@ f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
 </div>
 <p class="continuation">However, this limit does not exist. The first term converges to 0 (by the squeeze theorem), but the second term <span class="process-math">\(\cos(1/x)\)</span> just oscillates wildly between <span class="process-math">\(\pm
 1\text{.}\)</span> All we can conclude from this is</p>
-<blockquote class="blockquote" id="blockquote-10"><p id="p-219">Since the limit of the ratio of derivatives does not exist, we cannot apply l'Hôpital's rule.</p></blockquote>
-<p id="p-220">Instead we should go back to the original limit and apply the squeeze theorem:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-180">
+<blockquote class="blockquote" id="blockquote-10"><p id="p-262">Since the limit of the ratio of derivatives does not exist, we cannot apply l'Hôpital's rule.</p></blockquote>
+<p id="p-263">Instead we should go back to the original limit and apply the squeeze theorem:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-178">
 \begin{align*}
 \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
 \amp=\lim_{x\rightarrow 0}\frac{x^2\sin\frac{1}{x} }{x}
@@ -577,8 +592,8 @@ f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
 = 0,
 \end{align*}
 </div>
-<p class="continuation">since <span class="process-math">\(|x\sin(1/x)| \lt |x|\)</span> and <span class="process-math">\(|x| \to 0\)</span> as <span class="process-math">\(x\to 0\text{.}\)</span></p></article><p id="p-221">It is also easy to construct an example in which the limits of numerator and denominator are both zero, but the limit of the ratio and the limit of the ratio of the derivatives do not exist. A slight change of the previous example shows that it is possible that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-181">
+<p class="continuation">since <span class="process-math">\(|x\sin(1/x)| \lt |x|\)</span> and <span class="process-math">\(|x| \to 0\)</span> as <span class="process-math">\(x\to 0\text{.}\)</span></p></article><p id="p-264">It is also easy to construct an example in which the limits of numerator and denominator are both zero, but the limit of the ratio and the limit of the ratio of the derivatives do not exist. A slight change of the previous example shows that it is possible that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-179">
 \begin{align*}
 \lim\limits_{x\rightarrow a}f(x) \amp=0
 \amp \text{and}\amp\amp
@@ -586,27 +601,27 @@ f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
 \end{align*}
 </div>
 <p class="continuation">but neither of the limits</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-182">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-180">
 \begin{align*}
 \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp\amp \text{or}\amp\amp
 \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}
 \end{align*}
 </div>
 <p class="continuation">exist. Take</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-183">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-181">
 \begin{gather*}
 a=0\qquad   \qquad f(x)=x\sin\frac{1}{x} \qquad g(x)= x
 \end{gather*}
 </div>
 <p class="continuation">Then (with a quick application of the squeeze theorem)</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-184">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-182">
 \begin{align*}
 \lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
 \lim_{x\to 0} g(x) \amp= 0.
 \end{align*}
 </div>
 <p class="continuation">However,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-185">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-183">
 \begin{align*}
 \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
 \amp=\lim_{x\rightarrow 0}\frac{x\sin\frac{1}{x} }{x}
@@ -614,7 +629,7 @@ a=0\qquad   \qquad f(x)=x\sin\frac{1}{x} \qquad g(x)= x
 \end{align*}
 </div>
 <p class="continuation">does not exist. And similarly</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-186">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-184">
 \begin{align*}
 \lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
 \amp= \lim_{x\to 0} \frac{\sin\frac{1}{x} - \frac{1}{x}\cos\frac{1}{x} }{x^2}
@@ -623,13 +638,13 @@ a=0\qquad   \qquad f(x)=x\sin\frac{1}{x} \qquad g(x)= x
 <p class="continuation">does not exist.</p></section><section class="subsection" id="ssec_3_7_2"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">3.3</span> <span class="title">Variations</span>
 </h3>
-<section class="introduction" id="introduction-5"><p id="p-222">Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Teorema 3.2: L'Hôpital's Rule">Teorema 3.2</a> is the basic form of L'Hôpital's rule, but there are also many variations. Here are a bunch of them.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<section class="introduction" id="introduction-4"><p id="p-265">Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Teorema 3.2: L'Hôpital's Rule">Teorema 3.2</a> is the basic form of L'Hôpital's rule, but there are also many variations. Here are a bunch of them.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.1</span> <span class="title">Limits at <span class="process-math">\(\pm \infty\)</span></span>
 </h4>
-<p id="p-223">L'Hôpital's rule also applies when the limit of <span class="process-math">\(x \to
+<p id="p-266">L'Hôpital's rule also applies when the limit of <span class="process-math">\(x \to
 a\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow a+}\)</span> or by <span class="process-math">\(\lim\limits_{x\rightarrow a-}\)</span> or by <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}\)</span> or by <span class="process-math">\(\lim\limits_{x\rightarrow -\infty}\text{.}\)</span></p>
-<p id="p-224">We can justify adapting the rule to the limits to <span class="process-math">\(\pm \infty\)</span> via the following reasoning</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-187">
+<p id="p-267">We can justify adapting the rule to the limits to <span class="process-math">\(\pm \infty\)</span> via the following reasoning</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-185">
 \begin{align*}
 \lim_{x\to \infty} \frac{f(x)}{g(x)}
 \amp= \lim_{y \to 0^+} \frac{ f(1/y) }{ g(1/y) } \amp \text{substitute } x=1/y\\
@@ -637,7 +652,7 @@ a\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow
 \end{align*}
 </div>
 <p class="continuation">where we have used l'Hôpital's rule (assuming this limit exists) and the fact that <span class="process-math">\(\dfrac{\dd}{\dd y} f(1/y) = -\frac{1}{y^2} f'(1/y)\)</span> (and similarly for <span class="process-math">\(g\)</span>). Cleaning this up and substituting <span class="process-math">\(y=1/x\)</span> gives the required result:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-188">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-186">
 \begin{align*}
 \lim_{x\to \infty} \frac{f(x)}{g(x)} \amp =\lim_{y \to 0^+} \frac{f'(1/y)} {g'(1/y)}
 =\lim_{x\to\infty} \frac{f'(x)}{g'(x)}.
@@ -645,14 +660,14 @@ a\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow
 </div>
 <article class="example example-like" id="eg_hopitalH"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalH"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">L'Hôpital at infinity.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalH"><article class="example example-like"><p id="p-225">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-189">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalH"><article class="example example-like"><p id="p-268">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-187">
 \begin{gather*}
 \lim_{x\to\infty} \frac{\arctan x - \frac{\pi}{2}}{ \frac{1}{x} }
 \end{gather*}
 </div>
 <p class="continuation">Both numerator and denominator go to <span class="process-math">\(0\)</span> as <span class="process-math">\(x \to\infty\text{,}\)</span> so this is an <span class="process-math">\(\frac00\)</span> indeterminate form. We find</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-190">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-188">
 \begin{gather*}
 \lim_{x\rightarrow+\infty}\underbrace{\frac{\arctan x-\frac{\pi}{2}}
 {\frac{1}{x}}}_{\atp
@@ -666,7 +681,7 @@ a\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow
 \end{gather*}
 </div>
 <p class="continuation">We have applied L'Hôpital's rule with</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-191">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-189">
 \begin{align*}
 f(x) \amp= \arctan x -\frac{\pi}{2}\qquad\amp
 g(x) \amp=\frac{1}{x}\\
@@ -676,17 +691,17 @@ g'(x)\amp=-\frac{1}{x^2}
 </div></article></div></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.2</span> <span class="title"><span class="process-math">\(\frac{\infty}{\infty}\)</span> indeterminate form</span>
 </h4>
-<p id="p-226">L'Hôpital's rule also applies when <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=0\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=\pm\infty\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=\pm\infty\text{.}\)</span></p>
+<p id="p-269">L'Hôpital's rule also applies when <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=0\)</span> is replaced by <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=\pm\infty\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=\pm\infty\text{.}\)</span></p>
 <article class="example example-like" id="eg_3_7_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_2"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Compute <span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{\log x}{x}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_2"><article class="example example-like"><p id="p-227">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-192">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_2"><article class="example example-like"><p id="p-270">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-190">
 \begin{gather*}
 \lim_{x \to \infty} \frac{\log x}{x}
 \end{gather*}
 </div>
-<p id="p-228">The numerator and denominator both blow up towards infinity so this is an <span class="process-math">\(\frac\infty\infty\)</span> indeterminate form. An application of l'Hôpital's rule gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-193">
+<p id="p-271">The numerator and denominator both blow up towards infinity so this is an <span class="process-math">\(\frac\infty\infty\)</span> indeterminate form. An application of l'Hôpital's rule gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-191">
 \begin{align*}
 \lim_{x \to \infty}
 \underbrace{\frac{\log x}{x}}_{\atp
@@ -697,14 +712,14 @@ g'(x)\amp=-\frac{1}{x^2}
 </div></article></div>
 <article class="example example-like" id="eg_3_7_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_3"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Find <span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_3"><article class="example example-like"><p id="p-229">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-194">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_3"><article class="example example-like"><p id="p-272">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-192">
 \begin{gather*}
 \lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}
 \end{gather*}
 </div>
 <p class="continuation">Then by two applications of l'Hôpital's rule we get</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-195">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-193">
 \begin{align*}
 \lim_{x \to \infty}
 \underbrace{\frac{5x^2+3x-3}{x^2+1}}_{\atp
@@ -718,14 +733,14 @@ g'(x)\amp=-\frac{1}{x^2}
 </div></article></div>
 <article class="example example-like" id="eg_hopitalI"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalI"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span><span class="space"> </span><span class="title">A messier double l'Hôpital.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalI"><article class="example example-like"><p id="p-230">Compute the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-196">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalI"><article class="example example-like"><p id="p-273">Compute the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-194">
 \begin{gather*}
 \lim_{x\rightarrow 0+} \frac{\log x}{\tan\big(\frac{\pi}{2}-x\big)}
 \end{gather*}
 </div>
-<p id="p-231">We can compute this using l'Hôpital's rule twice:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-197">
+<p id="p-274">We can compute this using l'Hôpital's rule twice:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-195">
 \begin{align*}
 \lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
 {\tan\big(\frac{\pi}{2}-x\big)}}_{\atp
@@ -743,8 +758,8 @@ g'(x)\amp=-\frac{1}{x^2}
 =0
 \end{align*}
 </div>
-<p id="p-232">The first application of L'Hôpital's was with</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-198">
+<p id="p-275">The first application of L'Hôpital's was with</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-196">
 \begin{align*}
 f(x) \amp= \log x \amp
 g(x) \amp=\tan\Big(\frac{\pi}{2}-x\Big)\\
@@ -753,7 +768,7 @@ g'(x)\amp=-\sec^2\Big(\frac{\pi}{2}-x\Big)
 \end{align*}
 </div>
 <p class="continuation">and the second time with</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-199">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-197">
 \begin{align*}
 f(x) \amp= \cos^2\Big(\frac{\pi}{2}-x\Big) \amp
 g(x) \amp=x\\
@@ -762,40 +777,40 @@ f'(x)\amp=2\cos\Big(\frac{\pi}{2}-x\Big)
 g'(x)\amp=1
 \end{align*}
 </div></article></div>
-<p id="p-233">Sometimes things don't quite work out as we would like and l'Hôpital's rule can get stuck in a loop. Remember to think about the problem before you apply any rule.</p>
+<p id="p-276">Sometimes things don't quite work out as we would like and l'Hôpital's rule can get stuck in a loop. Remember to think about the problem before you apply any rule.</p>
 <article class="example example-like" id="eg_3_7_4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_4"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Stuck in a loop.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_4"><article class="example example-like"><p id="p-234">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-200">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_4"><article class="example example-like"><p id="p-277">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-198">
 \begin{gather*}
 \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
 \end{gather*}
 </div>
 <p class="continuation">Clearly both numerator and denominator go to <span class="process-math">\(\infty\text{,}\)</span> so we have a <span class="process-math">\(\frac\infty\infty\)</span> indeterminate form. Naively applying l'Hôpital's rule gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-201">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-199">
 \begin{align*}
 \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
 \amp= \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
 \end{align*}
 </div>
 <p class="continuation">which is again a <span class="process-math">\(\frac\infty\infty\)</span> indeterminate form. So apply l'Hôpital's rule again:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-202">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-200">
 \begin{align*}
 \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
 \amp= \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
 \end{align*}
 </div>
 <p class="continuation">which is right back where we started!</p>
-<p id="p-235">The correct approach to such a limit is to apply the methods we learned in Chapter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "chap_limits" missing or not unique]</code> and rewrite</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-203">
+<p id="p-278">The correct approach to such a limit is to apply the methods we learned in Chapter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "chap_limits" missing or not unique]</code> and rewrite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-201">
 \begin{align*}
 \frac{e^x+e^{-x}}{e^x-e^{-x}} \amp= \frac{e^x(1+e^{-2x})}{e^x(1-e^{-2x})}
 = \frac{1+e^{-2x}}{1-e^{-2x}}
 \end{align*}
 </div>
 <p class="continuation">and then take the limit.</p>
-<p id="p-236">A similar sort of l'Hôpital-rule-loop will occur if you naively apply l'Hôpital's rule to the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-204">
+<p id="p-279">A similar sort of l'Hôpital-rule-loop will occur if you naively apply l'Hôpital's rule to the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-202">
 \begin{gather*}
 \lim_{x\to\infty} \frac{\sqrt{4x^2+1}}{5x-1}
 \end{gather*}
@@ -803,8 +818,8 @@ g'(x)\amp=1
 <p class="continuation">which appeared in Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_lim_tricky" missing or not unique]</code>.</p></article></div></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.3</span> <span class="title">Optional — Proof of l'Hôpital's Rule for <span class="process-math">\(\frac\infty\infty\)</span></span>
 </h4>
-<p id="p-237">We can justify this generalisation of l'Hôpital's rule with some careful manipulations. Since the derivatives <span class="process-math">\(f',g'\)</span> exist in some interval around <span class="process-math">\(a\text{,}\)</span> we know that <span class="process-math">\(f,g\)</span> are continuous in some interval around <span class="process-math">\(a\text{;}\)</span> let <span class="process-math">\(x,t\)</span> be points inside that interval. Now rewrite <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 4 </sup></a></p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-205">
+<p id="p-280">We can justify this generalisation of l'Hôpital's rule with some careful manipulations. Since the derivatives <span class="process-math">\(f',g'\)</span> exist in some interval around <span class="process-math">\(a\text{,}\)</span> we know that <span class="process-math">\(f,g\)</span> are continuous in some interval around <span class="process-math">\(a\text{;}\)</span> let <span class="process-math">\(x,t\)</span> be points inside that interval. Now rewrite <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 4 </sup></a></p>
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-203">
 \begin{align*}
 \frac{f(x)}{g(x)}
 \amp= \frac{f(x)}{g(x)}
@@ -837,13 +852,13 @@ g'(x)\amp=1
 \end{align*}
 </div>
 <p class="continuation">Oof! Now the generalised mean-value theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>) tells us there is a <span class="process-math">\(c\)</span> between <span class="process-math">\(x\)</span> and <span class="process-math">\(t\)</span> so that</p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-206">
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-204">
 \begin{align*}
 \frac{f(x)-f(t)}{g(x)-g(t)} \amp= \frac{f'(c)}{g'(c)}
 \end{align*}
 </div>
 <p class="continuation">Now substitute this into the large expression we derived above:</p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-207">
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-205">
 \begin{align*}
 \frac{f(x)}{g(x)}
 \amp= \frac{f'(c)}{g'(c)} + \frac{1}{g(x)}\left(f(t) - \frac{f'(c)}{g'(c)}\cdot g(t)
@@ -851,7 +866,7 @@ g'(x)\amp=1
 \end{align*}
 </div>
 <p class="continuation">At first glance this does not appear so useful, however if we fix <span class="process-math">\(t\)</span> and take the limit as <span class="process-math">\(x \rightarrow a\text{,}\)</span> then it becomes</p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-208">
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-206">
 \begin{align*}
 \lim_{x\to a}\frac{f(x)}{g(x)}
 \amp= \lim_{x\to a} \frac{f'(c)}{g'(c)}
@@ -864,7 +879,7 @@ g'(x)\amp=1
 \end{align*}
 </div>
 <p class="continuation">Now take the limit as <span class="process-math">\(t\to a\text{.}\)</span> The left-hand side is unchanged since it is independent of <span class="process-math">\(t\text{.}\)</span> The right-hand side, however, does change; the number <span class="process-math">\(c\)</span> is trapped between <span class="process-math">\(x\)</span> and <span class="process-math">\(t\text{.}\)</span> Since we have already taken the limit <span class="process-math">\(x\to a\text{,}\)</span> so when we take the limit <span class="process-math">\(t \to a\text{,}\)</span> we are effectively taking the limit <span class="process-math">\(c \to a\text{.}\)</span> Hence</p>
-<div class="displaymath process-math" data-contains-math-knowls=" " id="md-209">
+<div class="displaymath process-math" data-contains-math-knowls=" " id="md-207">
 \begin{align*}
 \lim_{x\to a}\frac{f(x)}{g(x)}
 \amp= \lim_{c\to a} \frac{f'(c)}{g'(c)}
@@ -873,8 +888,8 @@ g'(x)\amp=1
 <p class="continuation">which is the desired result.</p></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.4</span> <span class="title"><span class="process-math">\(0\cdot\infty\)</span> indeterminate form</span>
 </h4>
-<p id="p-238">When <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) = 0\)</span> and  <span class="process-math">\(\displaystyle \lim_{x\to a} g(x) = \infty\text{.}\)</span> We can use a little algebra to manipulate this into either a <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\)</span> form:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-210">
+<p id="p-281">When <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) = 0\)</span> and  <span class="process-math">\(\displaystyle \lim_{x\to a} g(x) = \infty\text{.}\)</span> We can use a little algebra to manipulate this into either a <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\)</span> form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-208">
 \begin{align*}
 \lim_{x \to a} \frac{f(x)}{1/g(x)} \amp\amp
 \lim_{x \to a} \frac{g(x)}{1/f(x)}
@@ -882,21 +897,21 @@ g'(x)\amp=1
 </div>
 <article class="example example-like" id="eg_hopitalJ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalJ"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.15</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x\to 0^+} x \cdot \log x\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJ"><article class="example example-like"><p id="p-239">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-211">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJ"><article class="example example-like"><p id="p-282">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-209">
 \begin{gather*}
 \lim_{x\to 0^+} x \cdot \log x
 \end{gather*}
 </div>
 <p class="continuation">Here the function <span class="process-math">\(f(x)=x\)</span> goes to zero, while <span class="process-math">\(g(x)=\log x\)</span> goes to <span class="process-math">\(-\infty\text{.}\)</span> If we rewrite this as the fraction</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-212">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-210">
 \begin{align*}
 x \cdot \log x \amp= \frac{\log x}{1/x}
 \end{align*}
 </div>
 <p class="continuation">then the <span class="process-math">\(0 \cdot \infty\)</span> form has become an <span class="process-math">\(\frac\infty\infty\)</span> form.</p>
-<p id="p-240">The result is then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-213">
+<p id="p-283">The result is then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-211">
 \begin{align*}
 \lim_{x\rightarrow 0+}\underbrace{x}_{\rightarrow 0}
 \underbrace{\log x}_{\rightarrow-\infty}
@@ -912,9 +927,9 @@ x \cdot \log x \amp= \frac{\log x}{1/x}
 <article class="example example-like" id="eg_hopitalJJ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalJJ"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Computing <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
 x^n e^{-x}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJJ"><article class="example example-like"><p id="p-241">In this example we'll evaluate <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJJ"><article class="example example-like"><p id="p-284">In this example we'll evaluate <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
 x^n e^{-x}\text{,}\)</span> for all natural numbers <span class="process-math">\(n\text{.}\)</span> We'll start with <span class="process-math">\(n=1\)</span> and <span class="process-math">\(n=2\)</span> and then, using what we have learned from those cases, move on to general <span class="process-math">\(n\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-214">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-212">
 \begin{align*}
 \lim_{x\rightarrow +\infty}\underbrace{x}_{\rightarrow \infty}
 \underbrace{e^{-x}}_{\rightarrow 0}
@@ -931,7 +946,7 @@ x^n e^{-x}\text{,}\)</span> for all natural numbers <span class="process-math">\
 \end{align*}
 </div>
 <p class="continuation">Applying l'Hôpital twice,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-215">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-213">
 \begin{align*}
 \lim_{x\rightarrow +\infty}\underbrace{x^2}_{\rightarrow \infty}
 \underbrace{e^{-x}}_{\rightarrow 0}
@@ -952,7 +967,7 @@ x^n e^{-x}\text{,}\)</span> for all natural numbers <span class="process-math">\
 \end{align*}
 </div>
 <p class="continuation">Indeed, for any natural number <span class="process-math">\(n\text{,}\)</span> applying l'Hôpital <span class="process-math">\(n\)</span> times gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-216">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-214">
 \begin{align*}
 \lim_{x\rightarrow +\infty}\underbrace{x^n}_{\rightarrow \infty}
 \underbrace{e^{-x}}_{\rightarrow 0}
@@ -978,9 +993,9 @@ x^n e^{-x}\text{,}\)</span> for all natural numbers <span class="process-math">\
 </div></article></div></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.5</span> <span class="title"><span class="process-math">\(\infty-\infty\)</span> indeterminate form</span>
 </h4>
-<p id="p-242">When <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) =
+<p id="p-285">When <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) =
 \infty\)</span> and <span class="process-math">\(\displaystyle \lim_{x\to a} g(x) = \infty\text{.}\)</span> We rewrite the difference as a fraction using a common denominator</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-217">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-215">
 \begin{align*}
 f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 \end{align*}
@@ -988,21 +1003,21 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 <p class="continuation">which is then a <span class="process-math">\(\frac{0}{0}\)</span> or <span class="process-math">\(\frac{\infty}{\infty}\)</span> form.</p>
 <article class="example example-like" id="eg_hopitalK"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalK"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Compute <span class="process-math">\(\displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalK"><article class="example example-like"><p id="p-243">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-218">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalK"><article class="example example-like"><p id="p-286">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-216">
 \begin{gather*}
 \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)
 \end{gather*}
 </div>
 <p class="continuation">Since the limit of both <span class="process-math">\(\sec x\)</span> and <span class="process-math">\(\tan x\)</span> is <span class="process-math">\(+\infty\)</span> as <span class="process-math">\(x \to
 \frac{\pi}{2}^-\text{,}\)</span> this is an <span class="process-math">\(\infty-\infty\)</span> indeterminate form. However we can rewrite this as</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-219">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-217">
 \begin{align*}
 \sec x - \tan x \amp= \frac{1}{\cos x} - \frac{\sin x}{\cos x} = \frac{1-\sin x}{\cos x}
 \end{align*}
 </div>
 <p class="continuation">which is then a <span class="process-math">\(\frac00\)</span> indeterminate form. This then gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-220">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-218">
 \begin{align*}
 \lim_{x\rightarrow \frac{\pi}{2}^-}\Big(
 \underbrace{\sec x}_{\rightarrow +\infty}
@@ -1018,12 +1033,12 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 =0
 \end{align*}
 </div></article></div>
-<p id="p-244">In the last example, Example <a href="" class="xref" data-knowl="./knowl/eg_hopitalK.html" title="Exemplo 3.17: Compute \displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)">Exemplo 3.17</a>, we converted an <span class="process-math">\(\infty-\infty\)</span> indeterminate form into a <span class="process-math">\(\frac{0}{0}\)</span> indeterminate form by exploiting the fact that the two terms, <span class="process-math">\(\sec x\)</span> and <span class="process-math">\(\tan x\text{,}\)</span> in the <span class="process-math">\(\infty-\infty\)</span> indeterminate form shared a common denominator, namely <span class="process-math">\(\cos x\text{.}\)</span> In the “real world” that will, of course, almost never happen. However as the next couple of examples show, you can often massage these expressions into suitable forms.</p>
-<p id="p-245">Here is another, much more complicated, example, where it doesn't happen.</p>
+<p id="p-287">In the last example, Example <a href="" class="xref" data-knowl="./knowl/eg_hopitalK.html" title="Exemplo 3.17: Compute \displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)">Exemplo 3.17</a>, we converted an <span class="process-math">\(\infty-\infty\)</span> indeterminate form into a <span class="process-math">\(\frac{0}{0}\)</span> indeterminate form by exploiting the fact that the two terms, <span class="process-math">\(\sec x\)</span> and <span class="process-math">\(\tan x\text{,}\)</span> in the <span class="process-math">\(\infty-\infty\)</span> indeterminate form shared a common denominator, namely <span class="process-math">\(\cos x\text{.}\)</span> In the “real world” that will, of course, almost never happen. However as the next couple of examples show, you can often massage these expressions into suitable forms.</p>
+<p id="p-288">Here is another, much more complicated, example, where it doesn't happen.</p>
 <article class="example example-like" id="eg_hopitalKK"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalKK"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span><span class="space"> </span><span class="title">A complicated <span class="process-math">\(\infty-\infty\)</span> example.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalKK"><article class="example example-like"><p id="p-246">In this example, we evaluate the <span class="process-math">\(\infty-\infty\)</span> indeterminate form</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-221">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalKK"><article class="example example-like"><p id="p-289">In this example, we evaluate the <span class="process-math">\(\infty-\infty\)</span> indeterminate form</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-219">
 \begin{gather*}
 \lim_{x\rightarrow 0}\Big(
 \underbrace{\frac{1}{x}}_{\rightarrow \pm\infty}
@@ -1043,7 +1058,7 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 \end{equation*}
 </div>
 <p class="continuation">Now we apply L'Hôpital's rule, and simplify</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-222">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-220">
 \begin{align*}
 \lim_{x\rightarrow 0}\underbrace{\frac{\log(1+x)-x}{x\log(1+x)}}_{\atp
 {\mathrm{num}\rightarrow 0}
@@ -1057,7 +1072,7 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 \end{align*}
 </div>
 <p class="continuation">Then we apply  L'Hôpital's rule a second time</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-223">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-221">
 \begin{align*}
 -\lim_{x\rightarrow 0}\underbrace{\frac{x} {(1+x)\log(1+x)+x}}_{\atp
 {\mathrm{num}\rightarrow 0}
@@ -1070,23 +1085,23 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 \end{align*}
 </div>
 <p class="continuation">Combining (E1), (E2) and (E3) gives our final answer</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-224">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-222">
 \begin{gather*}
 \lim_{x\rightarrow 0}\Big(\frac{1}{x} - \frac{1}{\log(1+x)}\Big)
 =-\frac{1}{2}
 \end{gather*}
 </div></article></div>
-<p id="p-247">The following example can be done by l'Hôpital's rule, but it is actually far simpler to multiply by the conjugate and take the limit using the tools of Chapter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "chap_limits" missing or not unique]</code>.</p>
+<p id="p-290">The following example can be done by l'Hôpital's rule, but it is actually far simpler to multiply by the conjugate and take the limit using the tools of Chapter <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "chap_limits" missing or not unique]</code>.</p>
 <article class="example example-like" id="eg_3_7_5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_5"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span><span class="space"> </span><span class="title">Compute <span class="process-math">\(\displaystyle \lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_5"><article class="example example-like"><p id="p-248">Consider the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-225">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_5"><article class="example example-like"><p id="p-291">Consider the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-223">
 \begin{gather*}
 \lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}
 \end{gather*}
 </div>
 <p class="continuation">Neither term is a fraction, but we can write</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-226">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-224">
 \begin{align*}
 \sqrt{x^2+4x}-\sqrt{x^2-3x}
 \amp= x\sqrt{1+4/x}-x\sqrt{1-3/x}  \amp \text{assuming } x \gt 0\\
@@ -1095,28 +1110,28 @@ f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
 \end{align*}
 </div>
 <p class="continuation">which is now a <span class="process-math">\(\frac00\)</span> form with <span class="process-math">\(f(x)=\sqrt{1+4/x}-\sqrt{1-3/x}\)</span> and <span class="process-math">\(g(x)=1/x\text{.}\)</span> Then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-227">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-225">
 \begin{align*}
 f'(x) \amp= \frac{-4/x^2}{2\sqrt{1+4/x}} - \frac{3/x^2}{2\sqrt{1-3/x}} \amp
 g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">Hence</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-228">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-226">
 \begin{align*}
 \frac{f'(x)}{g'(x)} \amp= \frac{4}{2\sqrt{1+4/x}} + \frac{3}{\sqrt{1-3/x}}
 \end{align*}
 </div>
 <p class="continuation">And so in the limit as <span class="process-math">\(x\to \infty\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-229">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-227">
 \begin{align*}
 \lim_{x\to \infty} \frac{f'(x)}{g'(x)} \amp= \frac{4}{2}+\frac{3}{2} =
 \frac{7}{2}
 \end{align*}
 </div>
 <p class="continuation">and so our original limit is also <span class="process-math">\(7/2\text{.}\)</span></p>
-<p id="p-249">By comparison, if we multiply by the conjugate we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-230">
+<p id="p-292">By comparison, if we multiply by the conjugate we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-228">
 \begin{align*}
 \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}
 \amp= \left( \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}\right)
@@ -1129,15 +1144,15 @@ g'(x) \amp= - \frac{1}{x^2}
 <p class="continuation">Now taking the limit as <span class="process-math">\(x\to\infty\)</span> gives <span class="process-math">\(7/2\)</span> as required. Just because we know l'Hôpital's rule, it does not mean we should use it everywhere it might be applied.</p></article></div></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.6</span> <span class="title"><span class="process-math">\(1^\infty\)</span> indeterminate form</span>
 </h4>
-<p id="p-250">We can use l'Hôpital's rule on limits of the form</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-231">
+<p id="p-293">We can use l'Hôpital's rule on limits of the form</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-229">
 \begin{align*}
 \lim_{x\to a} f(x)^{g(x)} \amp \text{ with }\\
 \lim_{x\to a} f(x) \amp= 1 \amp \text{ and } \amp\amp \lim_{x \to a} g(x) \amp= \infty
 \end{align*}
 </div>
-<p class="continuation">by considering the logarithm of the limit <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 5 </sup></a> :</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-232">
+<p class="continuation">by considering the logarithm of the limit <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 5 </sup></a> :</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-230">
 \begin{align*}
 \log\left( \lim_{x\to a} f(x)^{g(x)} \right)
 \amp= \lim_{x\to a} \log\left( f(x)^{g(x)} \right)
@@ -1145,7 +1160,7 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">which is now an <span class="process-math">\(0 \cdot \infty\)</span> form. This can be further transformed into a <span class="process-math">\(\frac00\)</span> or <span class="process-math">\(\frac\infty\infty\)</span> form:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-233">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-231">
 \begin{align*}
 \log\left( \lim_{x\to a} f(x)^{g(x)} \right)
 \amp=\lim_{x\to a} \log\left( f(x) \right) \cdot g(x)\\
@@ -1154,16 +1169,16 @@ g'(x) \amp= - \frac{1}{x^2}
 </div>
 <article class="example example-like" id="eg_hopitalL"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalL"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Find <span class="process-math">\(\displaystyle \lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalL"><article class="example example-like"><p id="p-251">The following limit appears quite naturally when considering systems which display exponential growth or decay.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-234">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalL"><article class="example example-like"><p id="p-294">The following limit appears quite naturally when considering systems which display exponential growth or decay.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-232">
 \begin{gather*}
 \lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}
 \qquad\text{with the constant } a\ne 0
 \end{gather*}
 </div>
 <p class="continuation">Since <span class="process-math">\((1+x) \to 1\)</span> and <span class="process-math">\(a/x \to \infty\)</span> this is an <span class="process-math">\(1^\infty\)</span> indeterminate form.</p>
-<p id="p-252">By considering its logarithm we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-235">
+<p id="p-295">By considering its logarithm we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-233">
 \begin{align*}
 \log\left( \lim_{x\to 0}(1+x)^{\frac{a}{x}}\right)
 \amp= \lim_{x\to 0}\log\left(  (1+x)^{\frac{a}{x}}\right)\\
@@ -1172,7 +1187,7 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">which is now a <span class="process-math">\(\frac00\)</span> form. Applying l'Hôpital's rule gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-236">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-234">
 \begin{gather*}
 \lim_{x\rightarrow 0}\underbrace{\frac{a\log(1+x)}{x}}_{\atp
 {\mathrm{num}\rightarrow 0}
@@ -1184,24 +1199,24 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{gather*}
 </div>
 <p class="continuation">Since <span class="process-math">\((1 + x)^{a/x} = \exp\left[\log\Big((1 + x)^{a/x}\Big)\right]\)</span> and the exponential function is continuous, our original limit is <span class="process-math">\(e^a\text{.}\)</span></p></article></div>
-<p id="p-253">Here is a more complicated example of a  <span class="process-math">\(1^\infty\)</span> indeterminate form.</p>
+<p id="p-296">Here is a more complicated example of a  <span class="process-math">\(1^\infty\)</span> indeterminate form.</p>
 <article class="example example-like" id="eg_hopitalLL"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalLL"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.21</span><span class="period">.</span><span class="space"> </span><span class="title">A more complicated example.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalLL"><article class="example example-like"><p id="p-254">In the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalA.html" id="md-237">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalLL"><article class="example example-like"><p id="p-297">In the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalA.html" id="md-235">
 \begin{gather*}
 \lim_{x\rightarrow 0}\Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
 \end{gather*}
 </div>
 <p class="continuation">the base, <span class="process-math">\(\frac{\sin x}{x}\text{,}\)</span> converges to <span class="process-math">\(1\)</span> (see Example <a href="" class="xref" data-knowl="./knowl/eg_hopitalA.html" title="Exemplo 3.3: Find \displaystyle \lim_{x\to 0} \frac{\sin x}{x}">Exemplo 3.3</a>) and the exponent, <span class="process-math">\(\frac{1}{x^2}\text{,}\)</span> goes to <span class="process-math">\(\infty\text{.}\)</span> But if we take logarithms then</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-238">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-236">
 \begin{gather*}
 \log \Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
 = \frac{\log\frac{\sin x}{x}}{x^2}
 \end{gather*}
 </div>
 <p class="continuation">then, in the limit <span class="process-math">\(x\rightarrow 0\text{,}\)</span> we have a <span class="process-math">\(\frac{0}{0}\)</span> indeterminate form. One application of l'Hôpital's rule gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-239">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-237">
 \begin{align*}
 \lim_{x\rightarrow 0}\underbrace{\frac{\log\frac{\sin x}{x}}{x^2}}_{\atp
 {\mathrm{num}\rightarrow 0}
@@ -1214,7 +1229,7 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">which is another <span class="process-math">\(\frac00\)</span> form. Applying l'Hôpital's rule again gives:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-240">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-238">
 \begin{align*}
 \lim_{x\rightarrow 0}\underbrace{
 \frac{x\cos x -\sin x}{2x^2\sin x} }_{\atp
@@ -1229,7 +1244,7 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">which is yet another <span class="process-math">\(\frac00\)</span> form. Once more with l'Hôpital's rule:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-241">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-239">
 \begin{align*}
 -\lim_{x\rightarrow 0}\underbrace{
 \frac{\sin x}{4\sin x+2x\cos x} }_{\atp
@@ -1243,32 +1258,32 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{align*}
 </div>
 <p class="continuation">Oof! We have just shown that the logarithm of our original limit is <span class="process-math">\(-\frac{1}{6}\text{.}\)</span> Hence the original limit itself is <span class="process-math">\(e^{-1/6}\text{.}\)</span></p>
-<p id="p-256">This was quite a complicated example. However it does illustrate the importance of cleaning up your algebraic expressions. This will both reduce the amount of work you have to do and will also reduce the number of errors you make.</p></article></div></section><section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type">
+<p id="p-299">This was quite a complicated example. However it does illustrate the importance of cleaning up your algebraic expressions. This will both reduce the amount of work you have to do and will also reduce the number of errors you make.</p></article></div></section><section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.7</span> <span class="title"><span class="process-math">\(0^0\)</span>indeterminate form</span>
 </h4>
-<p id="p-257">Like the <span class="process-math">\(1^\infty\)</span> form, this can be treated by considering its logarithm.</p>
+<p id="p-300">Like the <span class="process-math">\(1^\infty\)</span> form, this can be treated by considering its logarithm.</p>
 <article class="example example-like" id="eg_hopitalM"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalM"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Compute <span class="process-math">\(\displaystyle \lim_{x\rightarrow 0+}x^x\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalM"><article class="example example-like"><p id="p-258">For example, in the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-242">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalM"><article class="example example-like"><p id="p-301">For example, in the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-240">
 \begin{gather*}
 \lim_{x\rightarrow 0+}x^x
 \end{gather*}
 </div>
 <p class="continuation">both the base, <span class="process-math">\(x\text{,}\)</span> and the exponent, also <span class="process-math">\(x\text{,}\)</span> go to zero. But if we consider the logarithm then we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-243">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-241">
 \begin{gather*}
 \log x^x = x\log x
 \end{gather*}
 </div>
 <p class="continuation">which is a <span class="process-math">\(0\cdot\infty\)</span> indeterminate form, which we already know how to treat. In fact, we already found, in Example <a href="" class="xref" data-knowl="./knowl/eg_hopitalJ.html" title="Exemplo 3.15: \displaystyle \lim_{x\to 0^+} x \cdot \log x">Exemplo 3.15</a>, that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-244">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-242">
 \begin{gather*}
 \lim_{x\rightarrow 0+} x\log x=0
 \end{gather*}
 </div>
 <p class="continuation">Since the exponential is a continuous function</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-245">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-243">
 \begin{gather*}
 \lim_{x\rightarrow 0+}x^x
 =\lim_{x\rightarrow 0+}\exp\big(x\log x\big)
@@ -1279,23 +1294,23 @@ g'(x) \amp= - \frac{1}{x^2}
 </div></article></div></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type">
 <span class="type">Subsubseção</span> <span class="codenumber">3.3.8</span> <span class="title"><span class="process-math">\(\infty^0\)</span> indeterminate form</span>
 </h4>
-<p id="p-259">Again, we can treat this form by considering its logarithm.</p>
+<p id="p-302">Again, we can treat this form by considering its logarithm.</p>
 <article class="example example-like" id="eg_hopitalN"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalN"><h5 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">3.23</span><span class="period">.</span><span class="space"> </span><span class="title">Find <span class="process-math">\(\displaystyle \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalN"><article class="example example-like"><p id="p-260">For example, in the limit</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-246">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalN"><article class="example example-like"><p id="p-303">For example, in the limit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-244">
 \begin{gather*}
 \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
 \end{gather*}
 </div>
 <p class="continuation">the base, <span class="process-math">\(x\text{,}\)</span> goes to infinity and the exponent, <span class="process-math">\(\frac{1}{x}\text{,}\)</span> goes to zero. But if we take logarithms</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-247">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-245">
 \begin{gather*}
 \log x^{\frac{1}{x}} =\frac{\log x}{x}
 \end{gather*}
 </div>
 <p class="continuation">which is an <span class="process-math">\(\frac\infty\infty\)</span> form, which we know how to treat.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-248">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-246">
 \begin{gather*}
 \lim_{x\rightarrow +\infty}\underbrace{\frac{\log x}{x}}_{\atp
 {\mathrm{num}\rightarrow \infty}
@@ -1307,7 +1322,7 @@ g'(x) \amp= - \frac{1}{x^2}
 \end{gather*}
 </div>
 <p class="continuation">Since the exponential is a continuous function</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-249">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-247">
 \begin{gather*}
 \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
 =\lim_{x\rightarrow +\infty}\exp\Big(\frac{\log x}{x}\Big)
@@ -1318,13 +1333,13 @@ g'(x) \amp= - \frac{1}{x^2}
 </div></article></div></section></section><section class="exercises" id="exercises-hopital"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">3.4</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">Now it is not so surprising, but perhaps back when we started limits, this was not so obvious.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">Named for the 17th century mathematician, Guillaume de l'Hôpital, who published the first textbook on differential calculus. The eponymous rule appears in that text, but is believed to have been developed by Johann Bernoulli. The book was the source of some controversy since it contained many results by Bernoulli, which l'Hôpital acknowledged in the preface, but Bernoulli felt that l'Hôpital got undue credit.<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">Now it is not so surprising, but perhaps back when we started limits, this was not so obvious.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">Named for the 17th century mathematician, Guillaume de l'Hôpital, who published the first textbook on differential calculus. The eponymous rule appears in that text, but is believed to have been developed by Johann Bernoulli. The book was the source of some controversy since it contained many results by Bernoulli, which l'Hôpital acknowledged in the preface, but Bernoulli felt that l'Hôpital got undue credit.<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \mbox{ }
 \end{equation*}
 </div> Note that around that time l'Hôpital's name was commonly spelled l'Hospital, but the spelling of silent s in French was changed subsequently; many texts spell his name l'Hospital. If you find yourself in Paris, you can hunt along Boulevard de l'Hôpital for older street signs carved into the sides of buildings which spell it “l'Hospital” — though arguably there are better things to do there.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">While it might not be immediately obvious, this example relies on circular reasoning. In order to apply l'Hôpital's rule, we need to compute the derivative of <span class="process-math">\(q^x\text{.}\)</span> However in order to compute that limit (see Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>) we needed to evaluate this limit.<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">While it might not be immediately obvious, this example relies on circular reasoning. In order to apply l'Hôpital's rule, we need to compute the derivative of <span class="process-math">\(q^x\text{.}\)</span> However in order to compute that limit (see Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_exp_func" missing or not unique]</code>) we needed to evaluate this limit.<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \mbox{ }
 \end{equation*}
@@ -1333,8 +1348,8 @@ g'(x) \amp= - \frac{1}{x^2}
 f'(a) = \lim_{x \to a} \frac{x^n -a^n}{x-a} = \lim_{x \to a} \frac{n x^{n-1}-0}{1-0} = n a^{n-1}.
 \end{equation*}
 </div>We have used the result <span class="process-math">\(\dfrac{\dd}{\dd x} x^n = nx^{n-1}\)</span> to prove itself!</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">This is quite a clever argument, but it is not immediately obvious why one rewrites things this way. After the fact it becomes clear that it is done to massage the expression into the form where we can apply the generalised mean-value theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>).</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">We are using the fact that the logarithm is a continuous function and Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_comp_cont" missing or not unique]</code>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">This is quite a clever argument, but it is not immediately obvious why one rewrites things this way. After the fact it becomes clear that it is done to massage the expression into the form where we can apply the generalised mean-value theorem (Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>).</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">We are using the fact that the logarithm is a continuous function and Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_comp_cont" missing or not unique]</code>.</div></div>
 </div></main>
 </div>
 </body>

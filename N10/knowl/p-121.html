@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-12T14:51:17-03:00       *-->
+<!--*       on 2022-04-21T13:21:24-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,88 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p><em class="alert">Solution</em> We will apply the method in Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. It is perhaps easiest to find the values at the endpoints of the intervals and then move on to the values at any critical or singular points.</p>
-<ul class="disc">
-<li><p>Before we get into things, notice that we can rewrite the function by factoring it:<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(x) \amp= 2x^{5/3}+3x^{2/3} = x^{2/3} \cdot \left(2x + 3\right)
-\end{align*}
-</div></p></li>
-<li><p>Let's compute the function at the endpoints of the interval:<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(1) \amp= 2 +3 = 5\\
-f(-1) \amp= 2 \cdot(-1)^{5/3} + 3\cdot (-1)^{2/3} =-2 + 3 = 1
-\end{align*}
-</div></p></li>
-<li><p>To compute the function at the critical and singular points we first need to find the derivative:<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f'(x) \amp= 2 \cdot \frac{5}{3} x^{2/3} + 3 \cdot \frac{2}{3} x^{-1/3}\\
-\amp= \frac{10}{3} x^{2/3} + 2 x^{-1/3}\\
-\amp= \frac{10 x + 6}{3 x^{1/3}}
-\end{align*}
-</div></p></li>
-<li><p>Notice that the numerator and denominator are defined for all <span class="process-math">\(x\text{.}\)</span> The only place the derivative is undefined is when the denominator is zero. Hence the only singular point is at <span class="process-math">\(x=0\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(0) \amp= 0
-\end{align*}
-</div></p></li>
-<li><p>To find the critical points we need to solve <span class="process-math">\(f'(x) = 0\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-0 \amp= \frac{10 x + 6}{3 x^{1/3}}
-\end{align*}
-</div>Hence we must have <span class="process-math">\(10x=-6\)</span> or <span class="process-math">\(x=-3/5\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(x) \amp= x^{2/3} \cdot \left(2x + 3\right) \amp \text{recall this from above, then}\\
-f(-3/5) \amp= (-3/5)^{2/3} \cdot\left(2 \cdot \frac{-3}{5} + 3 \right)\\
-\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{-6 + 15}{5}\\
-\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}  \approx 1.28
-\end{align*}
-</div>Note that if we do not want to approximate the root (if, for example, we do not have a calculator handy), then we can also write<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-f(-3/5) \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
-\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{25} \cdot 5\\
-\amp= 5 \cdot \left( \frac{9}{25} \right)^{4/3}
-\end{align*}
-</div>Since <span class="process-math">\(0 \lt 9/25 \lt 1\text{,}\)</span> we know that <span class="process-math">\(0  \lt  \left( \frac{9}{25} \right)^{4/3}  \lt  1\text{,}\)</span> and hence<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-0  \lt  f(-3/5) = 5 \cdot \left( \frac{9}{25} \right)^{4/3}  \lt  5.
-\end{gather*}
-</div></p></li>
-<li>
-<p>We summarise our work in this table</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
-<tr>
-<td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(c\)</span></td>
-<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-\frac{3}{5}\)</span></td>
-<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(0\)</span></td>
-<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(1\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">type</td>
-<td class="c m b1 r1 l0 t0 lines">critical point</td>
-<td class="c m b1 r1 l0 t0 lines">singular point</td>
-<td class="c m b1 r1 l0 t0 lines">endpoint</td>
-<td class="c m b1 r1 l0 t0 lines">endpoint</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(f(c)\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{9}{5}\root{3}\of{\frac{9}{25}}\approx 1.28\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-</tr>
-</table></div></div></div>
-</li>
-<li><p>The largest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(5\)</span> and the smallest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(0\text{.}\)</span></p></li>
-<li><p>Thus on the interval <span class="process-math">\(-1\leq x \leq 1\)</span> the global maximum of <span class="process-math">\(f\)</span> is <span class="process-math">\(5\text{,}\)</span> and is taken at <span class="process-math">\(x=1\text{,}\)</span> while the global minimum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(0\text{,}\)</span> and is taken at <span class="process-math">\(x=0\text{.}\)</span></p></li>
-<li>
-<p>For completeness we also sketch the graph of this function on the same interval.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/globalMaxMinA.svg" role="img" class="contained"></div></div></div>
-<p>Later (in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_curve_sketch" missing or not unique]</code>) we will see how to construct such a sketch without using a calculator or computer.</p>
-</li>
-</ul>
+<h4 class="heading"><span class="type">Parágrafo</span></h4>
+<p>If the maximum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p>
 <span class="incontext"><a href="section-2.html#p-121" class="internal">em contexto</a></span>
 </body>
 </html>

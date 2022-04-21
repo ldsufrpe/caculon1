@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-12T14:51:16-03:00       *-->
+<!--*       on 2022-04-21T13:21:24-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -26,6 +26,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -36,7 +49,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -105,9 +119,10 @@ true);
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
 <li class="link">
-<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxa de Variação</span></a><ul>
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxas Relacionadas</span></a><ul>
 <li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Taxa de Variação</a></li>
-<li><a href="section-1.html#exercises-" data-scroll="exercises-" class="internal">Exercícios</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-taxa-variacao" data-scroll="exercises-taxa-variacao" class="internal">Exercícios</a></li>
 </ul>
 </li>
 <li class="link active">
@@ -119,8 +134,8 @@ true);
 </ul>
 </li>
 <li class="link">
-<a href="section-3.html" data-scroll="section-3" class="internal"><span class="codenumber">3</span> <span class="title">OtimizaçãoL'Hôpital's Rule and Indeterminate Forms</span></a><ul>
-<li><a href="section-3.html#subsection-5" data-scroll="subsection-5" class="internal">L'Hôpital's Rule and Indeterminate Forms</a></li>
+<a href="section-3.html" data-scroll="section-3" class="internal"><span class="codenumber">3</span> <span class="title">L'Hôpital's Rule</span></a><ul>
+<li><a href="section-3.html#subsection-6" data-scroll="subsection-6" class="internal">L'Hôpital's Rule and Indeterminate Forms</a></li>
 <li><a href="section-3.html#ssec_3_7_1" data-scroll="ssec_3_7_1" class="internal">Standard Examples</a></li>
 <li><a href="section-3.html#ssec_3_7_2" data-scroll="ssec_3_7_2" class="internal">Variations</a></li>
 <li><a href="section-3.html#exercises-hopital" data-scroll="exercises-hopital" class="internal">Exercícios</a></li>
@@ -137,22 +152,22 @@ true);
 <span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
 </h3>
 <ol class="decimal">
-<li id="li-47"><p id="p-63">texto 1</p></li>
-<li id="li-48"><p id="p-64">texto 2</p></li>
-<li id="li-49"><p id="p-65">texto 3</p></li>
-</ol></article><section class="introduction" id="introduction-3"><p id="p-66">One important application of differential calculus is to find the maximum (or minimum) value of a function. This often finds real world applications in problems such as the following.</p>
+<li id="li-14"><p id="p-106">texto 1</p></li>
+<li id="li-15"><p id="p-107">texto 2</p></li>
+<li id="li-16"><p id="p-108">texto 3</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-109">One important application of differential calculus is to find the maximum (or minimum) value of a function. This often finds real world applications in problems such as the following.</p>
 <article class="example example-like" id="eg_3_5_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_5_1"><h3 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Enclosing a paddock.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_5_1"><article class="example example-like"><p id="p-67">A farmer has 400m of fencing materials. What is the largest rectangular paddock that can be enclosed?</p>
-<p id="p-68"><em class="alert">Solution</em> We will describe a general approach to these sorts of problems in Sections <a href="section-2.html#ssec_find_maxmin" class="internal" title="Subseção 2.2: Finding Global Maxima and Minima">Subseção 2.2</a> and <a href="section-2.html#sec_opt_eg" class="internal" title="Subseção 2.3: Max/Min Examples">Subseção 2.3</a> below, but here we can take a stab at starting the problem.</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_5_1"><article class="example example-like"><p id="p-110">A farmer has 400m of fencing materials. What is the largest rectangular paddock that can be enclosed?</p>
+<p id="p-111"><em class="alert">Solution</em> We will describe a general approach to these sorts of problems in Sections <a href="section-2.html#ssec_find_maxmin" class="internal" title="Subseção 2.2: Finding Global Maxima and Minima">Subseção 2.2</a> and <a href="section-2.html#sec_opt_eg" class="internal" title="Subseção 2.3: Max/Min Examples">Subseção 2.3</a> below, but here we can take a stab at starting the problem.</p>
 <ul class="disc">
-<li id="li-50"><p id="p-derived-li-50">Begin by defining variables and their units (more generally we might draw a picture too); let the dimensions of the paddock be <span class="process-math">\(x\)</span> by <span class="process-math">\(y\)</span> metres.</p></li>
-<li id="li-51"><p id="p-derived-li-51">The area enclosed is then <span class="process-math">\(A m^2\)</span> where<div class="displaymath process-math" data-contains-math-knowls="" id="md-33">
+<li id="li-17"><p id="p-derived-li-17">Begin by defining variables and their units (more generally we might draw a picture too); let the dimensions of the paddock be <span class="process-math">\(x\)</span> by <span class="process-math">\(y\)</span> metres.</p></li>
+<li id="li-18"><p id="p-derived-li-18">The area enclosed is then <span class="process-math">\(A m^2\)</span> where<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
 \begin{align*}
 A \amp= x \cdot y
 \end{align*}
 </div>At this stage we cannot apply the calculus we have developed since the area is a function of two variables and we only know how to work with functions of a single variable. We need to eliminate one variable.</p></li>
-<li id="li-52"><p id="p-derived-li-52">We know that the perimeter of the rectangle (and hence the dimensions <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span>) are constrained by the amount of fencing materials the farmer has to hand:<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
+<li id="li-19"><p id="p-derived-li-19">We know that the perimeter of the rectangle (and hence the dimensions <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span>) are constrained by the amount of fencing materials the farmer has to hand:<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
 \begin{align*}
 2x+2y \amp\leq 400\\
 \end{align*}
@@ -160,196 +175,196 @@ A \amp= x \cdot y
 \begin{align*}
 y \amp\leq 200-x
 \end{align*}
-</div>Clearly the area of the paddock is maximised when we use all the fencing possible, so<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
+</div>Clearly the area of the paddock is maximised when we use all the fencing possible, so<div class="displaymath process-math" data-contains-math-knowls="" id="md-33">
 \begin{gather*}
 y = 200-x
 \end{gather*}
 </div></p></li>
-<li id="li-53"><p id="p-derived-li-53">Now substitute this back into our expression for the area<div class="displaymath process-math" data-contains-math-knowls="" id="md-36">
+<li id="li-20"><p id="p-derived-li-20">Now substitute this back into our expression for the area<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
 \begin{align*}
 A \amp= x \cdot (200-x)
 \end{align*}
-</div>Since the area cannot be negative (and our lengths <span class="process-math">\(x,y\)</span> cannot be negative either), we must also have<div class="displaymath process-math" data-contains-math-knowls="" id="md-37">
+</div>Since the area cannot be negative (and our lengths <span class="process-math">\(x,y\)</span> cannot be negative either), we must also have<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
 \begin{gather*}
 0 \leq x \leq 200
 \end{gather*}
 </div></p></li>
-<li id="li-54"><p id="p-derived-li-54">Thus the question of the largest paddock enclosed becomes the problem of finding the maximum value of<div class="displaymath process-math" data-contains-math-knowls="" id="md-38">
+<li id="li-21"><p id="p-derived-li-21">Thus the question of the largest paddock enclosed becomes the problem of finding the maximum value of<div class="displaymath process-math" data-contains-math-knowls="" id="md-36">
 \begin{align*}
 A \amp= x \cdot (200-x) \amp\text{ subject to the constraint $0 \leq x \leq 200$.}
 \end{align*}
 </div></p></li>
 </ul></article></div>
-<p id="p-69">The above example is sufficiently simple that we can likely determine the answer by several different methods. In general, we will need more systematic methods for solving problems of the form</p>
-<blockquote class="blockquote" id="blockquote-2"><p id="p-70">Find the maximum value of <span class="process-math">\(y = f(x)\)</span> subject to <span class="process-math">\(a \leq x \leq b\)</span></p></blockquote>
-<p id="p-71">To do this we need to examine what a function looks like near its maximum and minimum values.</p></section><section class="subsection" id="ssec_maxmin"><h3 class="heading hide-type">
+<p id="p-112">The above example is sufficiently simple that we can likely determine the answer by several different methods. In general, we will need more systematic methods for solving problems of the form</p>
+<blockquote class="blockquote" id="blockquote-2"><p id="p-113">Find the maximum value of <span class="process-math">\(y = f(x)\)</span> subject to <span class="process-math">\(a \leq x \leq b\)</span></p></blockquote>
+<p id="p-114">To do this we need to examine what a function looks like near its maximum and minimum values.</p></section><section class="subsection" id="ssec_maxmin"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.1</span> <span class="title">Local and Global Maxima and Minima</span>
 </h3>
-<p id="p-72">We start by asking:</p>
-<blockquote class="blockquote" id="blockquote-3"><p id="p-73">Suppose that the maximum (or minimum) value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> then what does that tell us about <span class="process-math">\(c\text{?}\)</span></p></blockquote>
-<p id="p-74">Notice that we have not yet made the ideas of maximum and minimum very precise. For the moment think of maximum as “the biggest value” and minimum as “the smallest value”.</p>
+<p id="p-115">We start by asking:</p>
+<blockquote class="blockquote" id="blockquote-3"><p id="p-116">Suppose that the maximum (or minimum) value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> then what does that tell us about <span class="process-math">\(c\text{?}\)</span></p></blockquote>
+<p id="p-117">Notice that we have not yet made the ideas of maximum and minimum very precise. For the moment think of maximum as “the biggest value” and minimum as “the smallest value”.</p>
 <article class="warning remark-like" id="warning-1"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h4>
-<p id="p-75">It is important to distinguish between “the smallest value” and “the smallest magnitude”. For example, because</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
+<p id="p-118">It is important to distinguish between “the smallest value” and “the smallest magnitude”. For example, because</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-37">
 \begin{gather*}
 -5  \lt  -1
 \end{gather*}
 </div>
-<p class="continuation">the number <span class="process-math">\(-5\)</span> is smaller than <span class="process-math">\(-1\text{.}\)</span> But the magnitude of <span class="process-math">\(-1\text{,}\)</span> which is <span class="process-math">\(|-1|=1\text{,}\)</span> is smaller than the magnitude of <span class="process-math">\(-5\text{,}\)</span> which is <span class="process-math">\(|-5|=5\text{.}\)</span> Thus the smallest number in the set <span class="process-math">\(\{-1, -5\}\)</span> is <span class="process-math">\(-5\text{,}\)</span> while the number in the set <span class="process-math">\(\{-1,-5\}\)</span> that has the smallest magnitude is <span class="process-math">\(-1\text{.}\)</span></p></article><p id="p-76">Now back to thinking about what happens around a maximum. Suppose that the maximum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\text{,}\)</span> then for all “nearby” points, the function should be smaller.</p>
+<p class="continuation">the number <span class="process-math">\(-5\)</span> is smaller than <span class="process-math">\(-1\text{.}\)</span> But the magnitude of <span class="process-math">\(-1\text{,}\)</span> which is <span class="process-math">\(|-1|=1\text{,}\)</span> is smaller than the magnitude of <span class="process-math">\(-5\text{,}\)</span> which is <span class="process-math">\(|-5|=5\text{.}\)</span> Thus the smallest number in the set <span class="process-math">\(\{-1, -5\}\)</span> is <span class="process-math">\(-5\text{,}\)</span> while the number in the set <span class="process-math">\(\{-1,-5\}\)</span> that has the smallest magnitude is <span class="process-math">\(-1\text{.}\)</span></p></article><p id="p-119">Now back to thinking about what happens around a maximum. Suppose that the maximum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\text{,}\)</span> then for all “nearby” points, the function should be smaller.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/loc_max.svg" role="img" class="contained"></div></div></div>
-<p id="p-77">Consider the derivative of <span class="process-math">\(f'(c)\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
+<p id="p-120">Consider the derivative of <span class="process-math">\(f'(c)\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-38">
 \begin{align*}
 f'(c) \amp= \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}.
 \end{align*}
 </div>
 <p class="continuation">Split the above limit into the left and right limits:</p>
 <ul class="disc">
-<li id="li-55"><p id="p-derived-li-55">Consider points to the right of <span class="process-math">\(x=c\text{,}\)</span> For all <span class="process-math">\(h \gt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-41">
+<li id="li-22"><p id="p-derived-li-22">Consider points to the right of <span class="process-math">\(x=c\text{,}\)</span> For all <span class="process-math">\(h \gt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
 \begin{align*}
 f(c+h) \amp \le f(c)  \amp \text{which implies that}\\
 f(c+h)-f(c) \amp\le 0 \amp \text{which also implies}\\
 \frac{f(c+h)-f(c)}{h} \amp \le 0 \amp \text{since }
 \frac{\text{negative}}{\text{positive}} = \text{negative}.
 \end{align*}
-</div>But now if we squeeze <span class="process-math">\(h \to 0\)</span> we get<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
+</div>But now if we squeeze <span class="process-math">\(h \to 0\)</span> we get<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
 \begin{align*}
 \lim_{h \to 0^+} \frac{f(c+h)-f(c)}{h} \amp\leq 0
 \end{align*}
 </div>(provided the limit exists).</p></li>
-<li id="li-56"><p id="p-derived-li-56">Consider points to the left of <span class="process-math">\(x=c\text{.}\)</span> For all <span class="process-math">\(h \lt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
+<li id="li-23"><p id="p-derived-li-23">Consider points to the left of <span class="process-math">\(x=c\text{.}\)</span> For all <span class="process-math">\(h \lt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-41">
 \begin{align*}
 f(c+h) \amp \le f(c)  \amp \text{which implies that}\\
 f(c+h)-f(c) \amp\le 0 \amp \text{which also implies}\\
 \frac{f(c+h)-f(c)}{h} \amp \ge 0 \amp \text{since }
 \frac{\text{negative}}{\text{negative}} = \text{positive}.
 \end{align*}
-</div>But now if we squeeze <span class="process-math">\(h \to 0\)</span> we get<div class="displaymath process-math" data-contains-math-knowls="" id="md-44">
+</div>But now if we squeeze <span class="process-math">\(h \to 0\)</span> we get<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
 \begin{align*}
 \lim_{h \to 0^-} \frac{f(c+h)-f(c)}{h} \amp\geq 0
 \end{align*}
 </div>(provided the limit exists).</p></li>
-<li id="li-57"><p id="p-derived-li-57">So if the derivative <span class="process-math">\(f'(c)\)</span> exists, then the above right- and left-hand limits must agree, which forces <span class="process-math">\(f'(c) = 0\text{.}\)</span></p></li>
+<li id="li-24"><p id="p-derived-li-24">So if the derivative <span class="process-math">\(f'(c)\)</span> exists, then the above right- and left-hand limits must agree, which forces <span class="process-math">\(f'(c) = 0\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">Thus we can conclude that</p>
-<blockquote class="blockquote" id="blockquote-4"><p id="p-78">If the maximum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></blockquote>
-<p id="p-79">Using similar reasoning one can also see that</p>
-<blockquote class="blockquote" id="blockquote-5"><p id="p-80">If the minimum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></blockquote>
-<p id="p-81">Notice two things about the above reasoning:</p>
+<blockquote class="blockquote" id="blockquote-4"><p id="p-121">If the maximum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></blockquote>
+<p id="p-122">Using similar reasoning one can also see that</p>
+<blockquote class="blockquote" id="blockquote-5"><p id="p-123">If the minimum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></blockquote>
+<p id="p-124">Notice two things about the above reasoning:</p>
 <ul class="disc">
-<li id="li-58"><p id="p-derived-li-58">Firstly, in order for the argument to work we only need that <span class="process-math">\(f(x) \lt f(c)\)</span> for <span class="process-math">\(x\)</span> close to <span class="process-math">\(c\)</span> — it does not matter what happens for <span class="process-math">\(x\)</span> values far from <span class="process-math">\(c\text{.}\)</span></p></li>
-<li id="li-59"><p id="p-derived-li-59">Secondly, in the above argument we needed to consider <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(x\)</span> both to the left of and to the right of <span class="process-math">\(c\text{.}\)</span> If the function <span class="process-math">\(f(x)\)</span> is defined on a closed interval <span class="process-math">\([a,b]\text{,}\)</span> then the above argument only applies when <span class="process-math">\(a \lt c \lt b\)</span> — not when <span class="process-math">\(c\)</span> is either of the endpoints <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></li>
+<li id="li-25"><p id="p-derived-li-25">Firstly, in order for the argument to work we only need that <span class="process-math">\(f(x) \lt f(c)\)</span> for <span class="process-math">\(x\)</span> close to <span class="process-math">\(c\)</span> — it does not matter what happens for <span class="process-math">\(x\)</span> values far from <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-26"><p id="p-derived-li-26">Secondly, in the above argument we needed to consider <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(x\)</span> both to the left of and to the right of <span class="process-math">\(c\text{.}\)</span> If the function <span class="process-math">\(f(x)\)</span> is defined on a closed interval <span class="process-math">\([a,b]\text{,}\)</span> then the above argument only applies when <span class="process-math">\(a \lt c \lt b\)</span> — not when <span class="process-math">\(c\)</span> is either of the endpoints <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">Consider the function below</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/maxmin.svg" role="img" class="contained"></div></div></div>
-<p id="p-82">This function has only 1 maximum value (the middle green point in the graph) and 1 minimum value (the rightmost blue point), however it has 4 points at which the derivative is zero. In the small intervals around those points where the derivative is zero, we can see that function is <em class="emphasis">locally</em> a maximum or minimum, even if it is not the <em class="emphasis">global</em> maximum or minimum. We clearly need to be more careful distinguishing between these cases.</p>
+<p id="p-125">This function has only 1 maximum value (the middle green point in the graph) and 1 minimum value (the rightmost blue point), however it has 4 points at which the derivative is zero. In the small intervals around those points where the derivative is zero, we can see that function is <em class="emphasis">locally</em> a maximum or minimum, even if it is not the <em class="emphasis">global</em> maximum or minimum. We clearly need to be more careful distinguishing between these cases.</p>
 <article class="definition definition-like" id="def_APPlocalMaxMin"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
 </h4>
-<p id="p-83">Let <span class="process-math">\(a\le b\)</span> and let the function <span class="process-math">\(f(x)\)</span> be defined for all <span class="process-math">\(x \in [a,b]\text{.}\)</span> Now let <span class="process-math">\(a \leq c \leq b\text{,}\)</span> then</p>
+<p id="p-126">Let <span class="process-math">\(a\le b\)</span> and let the function <span class="process-math">\(f(x)\)</span> be defined for all <span class="process-math">\(x \in [a,b]\text{.}\)</span> Now let <span class="process-math">\(a \leq c \leq b\text{,}\)</span> then</p>
 <ul class="disc">
-<li id="li-60"><p id="p-derived-li-60">We say that <span class="process-math">\(f(x)\)</span> has a global (or absolute) minimum at <span class="process-math">\(x=c\)</span> if <span class="process-math">\(f(x)\ge f(c)\)</span> for all <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
-<li id="li-61"><p id="p-derived-li-61">Similarly, we say that <span class="process-math">\(f(x)\)</span> has a global (or absolute) maximum at <span class="process-math">\(x=c\)</span> if <span class="process-math">\(f(x)\le f(c)\)</span> for all <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+<li id="li-27"><p id="p-derived-li-27">We say that <span class="process-math">\(f(x)\)</span> has a global (or absolute) minimum at <span class="process-math">\(x=c\)</span> if <span class="process-math">\(f(x)\ge f(c)\)</span> for all <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+<li id="li-28"><p id="p-derived-li-28">Similarly, we say that <span class="process-math">\(f(x)\)</span> has a global (or absolute) maximum at <span class="process-math">\(x=c\)</span> if <span class="process-math">\(f(x)\le f(c)\)</span> for all <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">Now let <span class="process-math">\(a  \lt  c  \lt b\)</span> (note the strict inequalities), then</p>
 <ul class="disc">
-<li id="li-62"><p id="p-derived-li-62">We say that <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c\)</span> if there are <span class="process-math">\(a'\)</span> and <span class="process-math">\(b'\)</span> obeying <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> such that <span class="process-math">\(f(x)\ge f(c)\)</span> for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span>  Note the <em class="emphasis">strict</em> inequalities in <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
-<li id="li-63"><p id="p-derived-li-63">Similarly, we say that <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c\)</span> if there are <span class="process-math">\(a'\)</span> and <span class="process-math">\(b'\)</span> obeying <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> such that <span class="process-math">\(f(x)\le f(c)\)</span> for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span>  Note the <em class="emphasis">strict</em> inequalities in <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
+<li id="li-29"><p id="p-derived-li-29">We say that <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c\)</span> if there are <span class="process-math">\(a'\)</span> and <span class="process-math">\(b'\)</span> obeying <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> such that <span class="process-math">\(f(x)\ge f(c)\)</span> for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span>  Note the <em class="emphasis">strict</em> inequalities in <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
+<li id="li-30"><p id="p-derived-li-30">Similarly, we say that <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c\)</span> if there are <span class="process-math">\(a'\)</span> and <span class="process-math">\(b'\)</span> obeying <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> such that <span class="process-math">\(f(x)\le f(c)\)</span> for all <span class="process-math">\(x\)</span> obeying <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span>  Note the <em class="emphasis">strict</em> inequalities in <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">The global maxima and minima of a function are called the global extrema of the function, while the local maxima and minima are called the local extrema.</p></article><p id="p-84">Consider again the function we showed in the figure above</p>
+<p class="continuation">The global maxima and minima of a function are called the global extrema of the function, while the local maxima and minima are called the local extrema.</p></article><p id="p-127">Consider again the function we showed in the figure above</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/maxmin2.svg" role="img" class="contained"></div></div></div>
-<p id="p-85">It has 2 local maxima and 2 local minima. The global maximum occurs at the middle green point (which is also a local maximum), while the global minimum occurs at the rightmost blue point (which is not a local minimum).</p>
-<p id="p-86">Using the above definition we can summarise what we have learned above as the following theorem <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a>:</p>
+<p id="p-128">It has 2 local maxima and 2 local minima. The global maximum occurs at the middle green point (which is also a local maximum), while the global minimum occurs at the rightmost blue point (which is not a local minimum).</p>
+<p id="p-129">Using the above definition we can summarise what we have learned above as the following theorem <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 1 </sup></a>:</p>
 <article class="theorem theorem-like" id="thm_APPlocalMaxMin"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
 </h4>
-<p id="p-87">If a function <span class="process-math">\(f(x)\)</span> has a local maximum or local minimum at <span class="process-math">\(x=c\)</span> and if <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></article><ul id="p-88" class="disc">
-<li id="li-64"><p id="p-derived-li-64">It is often (but not always) the case that, when <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c\text{,}\)</span> the function <span class="process-math">\(f(x)\)</span> increases strictly as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(c\)</span> from the left and decreases strictly as <span class="process-math">\(x\)</span> leaves <span class="process-math">\(c\)</span> to the right. That is, <span class="process-math">\(f'(x) \gt 0\)</span> for <span class="process-math">\(x\)</span> just to the left of <span class="process-math">\(c\)</span> and <span class="process-math">\(f'(x) \lt 0\)</span> for <span class="process-math">\(x\)</span> just to the right of <span class="process-math">\(c\text{.}\)</span> Then, it is often the case, because <span class="process-math">\(f'(x)\)</span> is decreasing as <span class="process-math">\(x\)</span> increases through <span class="process-math">\(c\text{,}\)</span> that <span class="process-math">\(f''(c) \lt 0\text{.}\)</span></p></li>
-<li id="li-65"><p id="p-derived-li-65">Conversely, if <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c) \lt 0\text{,}\)</span> then, just to the right of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be negative, so that <span class="process-math">\(f(x)\)</span> is decreasing, and  just to the left of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be positive, so that <span class="process-math">\(f(x)\)</span> is increasing. So <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(c\text{.}\)</span></p></li>
-<li id="li-66"><p id="p-derived-li-66">Similarly, it is often the case that, when <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c\text{,}\)</span> <span class="process-math">\(f'(x) \lt 0\)</span> for <span class="process-math">\(x\)</span> just to the left of <span class="process-math">\(c\)</span> and <span class="process-math">\(f'(x) \gt 0\)</span> for <span class="process-math">\(x\)</span> just to the right of <span class="process-math">\(c\)</span> and <span class="process-math">\(f''(x) \gt 0\text{.}\)</span></p></li>
-<li id="li-67"><p id="p-derived-li-67">Conversely, if <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c) \gt 0\text{,}\)</span> then, just to the right of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be positive, so that <span class="process-math">\(f(x)\)</span> is increasing, and, just to the left of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be negative, so that <span class="process-math">\(f(x)\)</span> is decreasing. So <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(c\text{.}\)</span></p></li>
+<p id="p-130">If a function <span class="process-math">\(f(x)\)</span> has a local maximum or local minimum at <span class="process-math">\(x=c\)</span> and if <span class="process-math">\(f'(c)\)</span> exists, then <span class="process-math">\(f'(c)=0\text{.}\)</span></p></article><ul id="p-131" class="disc">
+<li id="li-31"><p id="p-derived-li-31">It is often (but not always) the case that, when <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c\text{,}\)</span> the function <span class="process-math">\(f(x)\)</span> increases strictly as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(c\)</span> from the left and decreases strictly as <span class="process-math">\(x\)</span> leaves <span class="process-math">\(c\)</span> to the right. That is, <span class="process-math">\(f'(x) \gt 0\)</span> for <span class="process-math">\(x\)</span> just to the left of <span class="process-math">\(c\)</span> and <span class="process-math">\(f'(x) \lt 0\)</span> for <span class="process-math">\(x\)</span> just to the right of <span class="process-math">\(c\text{.}\)</span> Then, it is often the case, because <span class="process-math">\(f'(x)\)</span> is decreasing as <span class="process-math">\(x\)</span> increases through <span class="process-math">\(c\text{,}\)</span> that <span class="process-math">\(f''(c) \lt 0\text{.}\)</span></p></li>
+<li id="li-32"><p id="p-derived-li-32">Conversely, if <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c) \lt 0\text{,}\)</span> then, just to the right of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be negative, so that <span class="process-math">\(f(x)\)</span> is decreasing, and  just to the left of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be positive, so that <span class="process-math">\(f(x)\)</span> is increasing. So <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-33"><p id="p-derived-li-33">Similarly, it is often the case that, when <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c\text{,}\)</span> <span class="process-math">\(f'(x) \lt 0\)</span> for <span class="process-math">\(x\)</span> just to the left of <span class="process-math">\(c\)</span> and <span class="process-math">\(f'(x) \gt 0\)</span> for <span class="process-math">\(x\)</span> just to the right of <span class="process-math">\(c\)</span> and <span class="process-math">\(f''(x) \gt 0\text{.}\)</span></p></li>
+<li id="li-34"><p id="p-derived-li-34">Conversely, if <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c) \gt 0\text{,}\)</span> then, just to the right of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be positive, so that <span class="process-math">\(f(x)\)</span> is increasing, and, just to the left of <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> must be negative, so that <span class="process-math">\(f(x)\)</span> is decreasing. So <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(c\text{.}\)</span></p></li>
 </ul>
 <article class="theorem theorem-like" id="thm_APPsecondDerivTest"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
 </h4>
-<p id="p-89">If <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c)  \lt 0\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(c\text{.}\)</span></p>
-<p id="p-90">If <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c)  \gt 0\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(c\text{.}\)</span></p>
-<p id="p-91"><em class="emphasis">Note the strict inequalities</em>.</p></article><p id="p-92">Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> says that, when <span class="process-math">\(f(x)\)</span> has a local maximum or minimum at <span class="process-math">\(x=c\text{,}\)</span> there are two possibilities.</p>
+<p id="p-132">If <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c)  \lt 0\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(c\text{.}\)</span></p>
+<p id="p-133">If <span class="process-math">\(f'(c)=0\)</span> and <span class="process-math">\(f''(c)  \gt 0\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(c\text{.}\)</span></p>
+<p id="p-134"><em class="emphasis">Note the strict inequalities</em>.</p></article><p id="p-135">Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> says that, when <span class="process-math">\(f(x)\)</span> has a local maximum or minimum at <span class="process-math">\(x=c\text{,}\)</span> there are two possibilities.</p>
 <ul class="disc">
-<li id="li-68">
-<p id="p-93">The derivative <span class="process-math">\(f'(c)=0\text{.}\)</span> This case is illustrated in the following figure.</p>
+<li id="li-35">
+<p id="p-136">The derivative <span class="process-math">\(f'(c)=0\text{.}\)</span> This case is illustrated in the following figure.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinDE.svg" role="img" class="contained"></div></div></div>
-<p id="p-94">Observe that, in this example, <span class="process-math">\(f'(x)\)</span> changes continuously from negative to positive at the local minimum, taking the value zero at the local minimum (the red dot).</p>
+<p id="p-137">Observe that, in this example, <span class="process-math">\(f'(x)\)</span> changes continuously from negative to positive at the local minimum, taking the value zero at the local minimum (the red dot).</p>
 </li>
-<li id="li-69">
-<p id="p-95">The derivative <span class="process-math">\(f'(c)\)</span> does not exist. This case is illustrated in the following figure.</p>
+<li id="li-36">
+<p id="p-138">The derivative <span class="process-math">\(f'(c)\)</span> does not exist. This case is illustrated in the following figure.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinFG.svg" role="img" class="contained"></div></div></div>
-<p id="p-96">Observe that, in this example, <span class="process-math">\(f'(x)\)</span> changes discontinuously from negative to positive at the local minimum (<span class="process-math">\(x=0\)</span>) and <span class="process-math">\(f'(0)\)</span> does not exist.</p>
+<p id="p-139">Observe that, in this example, <span class="process-math">\(f'(x)\)</span> changes discontinuously from negative to positive at the local minimum (<span class="process-math">\(x=0\)</span>) and <span class="process-math">\(f'(0)\)</span> does not exist.</p>
 </li>
 </ul>
 <p class="continuation">This theorem demonstrates that the points at which the derivative is zero or does not exist are very important. It simplifies the discussion that follows if we give these points names.</p>
 <article class="definition definition-like" id="def_APPcriticalPoint"><h4 class="heading">
 <span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
 </h4>
-<p id="p-97">Let <span class="process-math">\(f(x)\)</span> be a function  that is defined on the interval <span class="process-math">\(a\lt x\lt b\)</span> and let <span class="process-math">\(a \lt c\lt b\text{.}\)</span> Then</p>
+<p id="p-140">Let <span class="process-math">\(f(x)\)</span> be a function  that is defined on the interval <span class="process-math">\(a\lt x\lt b\)</span> and let <span class="process-math">\(a \lt c\lt b\text{.}\)</span> Then</p>
 <ul class="disc">
-<li id="li-70"><p id="p-derived-li-70">if <span class="process-math">\(f'(c)\)</span> exists and is zero we call <span class="process-math">\(x=c\)</span> a critical point of the function, and</p></li>
-<li id="li-71"><p id="p-derived-li-71">if <span class="process-math">\(f'(c)\)</span> does not exist then we call <span class="process-math">\(x=c\)</span> a singular point<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 2 </sup></a> of the function.</p></li>
+<li id="li-37"><p id="p-derived-li-37">if <span class="process-math">\(f'(c)\)</span> exists and is zero we call <span class="process-math">\(x=c\)</span> a critical point of the function, and</p></li>
+<li id="li-38"><p id="p-derived-li-38">if <span class="process-math">\(f'(c)\)</span> does not exist then we call <span class="process-math">\(x=c\)</span> a singular point<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 2 </sup></a> of the function.</p></li>
 </ul></article><article class="warning remark-like" id="warning-2"><h4 class="heading">
 <span class="type">Atenção</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
 </h4>
-<p id="p-98">Note that some people (and texts) will combine both of these cases and call <span class="process-math">\(x=c\)</span> a critical point when either the derivative is zero or does not exist. The reader should be aware of the lack of convention on this point <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 3 </sup></a> and should be careful to understand whether the more inclusive definition of critical point is being used, or if the text is using the more precise definition that distinguishes critical and singular points.</p></article><p id="p-99">We'll now look at a few simple examples involving local maxima and minima, critical points and singular points. Then we will move on to global maxima and minima.</p>
+<p id="p-141">Note that some people (and texts) will combine both of these cases and call <span class="process-math">\(x=c\)</span> a critical point when either the derivative is zero or does not exist. The reader should be aware of the lack of convention on this point <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 3 </sup></a> and should be careful to understand whether the more inclusive definition of critical point is being used, or if the text is using the more precise definition that distinguishes critical and singular points.</p></article><p id="p-142">We'll now look at a few simple examples involving local maxima and minima, critical points and singular points. Then we will move on to global maxima and minima.</p>
 <article class="example example-like" id="eg_localMinMaxA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxA"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Local max and min of <span class="process-math">\(x^3-6x\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxA"><article class="example example-like"><p id="p-100">In this example, we'll look for local maxima and minima of the function <span class="process-math">\(f(x) = x^3-6x\)</span> on the interval <span class="process-math">\(-2\le x\le 3\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxA"><article class="example example-like"><p id="p-143">In this example, we'll look for local maxima and minima of the function <span class="process-math">\(f(x) = x^3-6x\)</span> on the interval <span class="process-math">\(-2\le x\le 3\text{.}\)</span></p>
 <ul class="disc">
-<li id="li-72"><p id="p-derived-li-72">First compute the derivative<div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
+<li id="li-39"><p id="p-derived-li-39">First compute the derivative<div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
 \begin{align*}
 f'(x) \amp= 3x^2-6.
 \end{align*}
 </div>Since this is a polynomial it is defined everywhere on the domain and so there will not be any singular points. So we now look for critical points.</p></li>
-<li id="li-73">
-<p id="p-101">To do so we look for zeroes of the derivative</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
+<li id="li-40">
+<p id="p-144">To do so we look for zeroes of the derivative</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-44">
 \begin{align*}
 f'(x) \amp= 3x^2-6 = 3(x^2-2) = 3(x-\sqrt{2})(x+\sqrt{2}).
 \end{align*}
 </div>
 <p class="continuation">This derivative takes the value <span class="process-math">\(0\)</span> at two different values of <span class="process-math">\(x\text{.}\)</span> Namely <span class="process-math">\(x=c_-=-\sqrt{2}\)</span> and <span class="process-math">\(x=c_+=\sqrt{2}\text{.}\)</span> Here is a sketch of the graph of <span class="process-math">\(f(x)\text{.}\)</span></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinA.svg" role="img" class="contained"></div></div></div>
-<p id="p-102">From the figure we see that</p>
+<p id="p-145">From the figure we see that</p>
 <ul class="circle">
-<li id="li-74"><p id="p-derived-li-74"><span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c_+\)</span> (i.e. we have <span class="process-math">\(f(x)\ge f(c_+)\)</span> whenever <span class="process-math">\(x\)</span> is close to <span class="process-math">\(c_+\)</span>) and</p></li>
-<li id="li-75"><p id="p-derived-li-75"><span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c_-\)</span> (i.e. we have <span class="process-math">\(f(x)\le f(c_-)\)</span> whenever <span class="process-math">\(x\)</span> is close to <span class="process-math">\(c_-\)</span>) and</p></li>
-<li id="li-76"><p id="p-derived-li-76">the global minimum of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\(-2\le x\le 3\text{,}\)</span> is at <span class="process-math">\(x=c_+\)</span> (i.e. we have <span class="process-math">\(f(x)\ge f(c_+)\)</span> whenever <span class="process-math">\(-2\le x\le 3\)</span>) and</p></li>
-<li id="li-77"><p id="p-derived-li-77">the global maximum of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\(-2\le x\le 3\text{,}\)</span> is at <span class="process-math">\(x=3\)</span> (i.e. we have <span class="process-math">\(f(x)\le f(3)\)</span> whenever <span class="process-math">\(-2\le x\le 3\)</span>).</p></li>
+<li id="li-41"><p id="p-derived-li-41"><span class="process-math">\(f(x)\)</span> has a local minimum at <span class="process-math">\(x=c_+\)</span> (i.e. we have <span class="process-math">\(f(x)\ge f(c_+)\)</span> whenever <span class="process-math">\(x\)</span> is close to <span class="process-math">\(c_+\)</span>) and</p></li>
+<li id="li-42"><p id="p-derived-li-42"><span class="process-math">\(f(x)\)</span> has a local maximum at <span class="process-math">\(x=c_-\)</span> (i.e. we have <span class="process-math">\(f(x)\le f(c_-)\)</span> whenever <span class="process-math">\(x\)</span> is close to <span class="process-math">\(c_-\)</span>) and</p></li>
+<li id="li-43"><p id="p-derived-li-43">the global minimum of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\(-2\le x\le 3\text{,}\)</span> is at <span class="process-math">\(x=c_+\)</span> (i.e. we have <span class="process-math">\(f(x)\ge f(c_+)\)</span> whenever <span class="process-math">\(-2\le x\le 3\)</span>) and</p></li>
+<li id="li-44"><p id="p-derived-li-44">the global maximum of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\(-2\le x\le 3\text{,}\)</span> is at <span class="process-math">\(x=3\)</span> (i.e. we have <span class="process-math">\(f(x)\le f(3)\)</span> whenever <span class="process-math">\(-2\le x\le 3\)</span>).</p></li>
 </ul>
 </li>
-<li id="li-78"><p id="p-derived-li-78">Note that we have carefully constructed this example to illustrate that the global maximum (or minimum) of a function on an interval may or may not also be a local maximum (or minimum) of the function.</p></li>
+<li id="li-45"><p id="p-derived-li-45">Note that we have carefully constructed this example to illustrate that the global maximum (or minimum) of a function on an interval may or may not also be a local maximum (or minimum) of the function.</p></li>
 </ul></article></div>
 <article class="example example-like" id="eg_localMinMaxB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxB"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Local max and min of <span class="process-math">\(x^3\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxB"><article class="example example-like"><p id="p-103">In this example, we'll look for local maxima and minima of the function <span class="process-math">\(f(x) = x^3\)</span> on the interval <span class="process-math">\(-1\le x\le 1\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxB"><article class="example example-like"><p id="p-146">In this example, we'll look for local maxima and minima of the function <span class="process-math">\(f(x) = x^3\)</span> on the interval <span class="process-math">\(-1\le x\le 1\text{.}\)</span></p>
 <ul class="disc">
-<li id="li-79"><p id="p-derived-li-79">First compute the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
+<li id="li-46"><p id="p-derived-li-46">First compute the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
 \begin{align*}
 f'(x) \amp= 3x^2.
 \end{align*}
 </div>Again, this is a polynomial and so defined on all of the domain. The function will not have singular points, but may have critical points.</p></li>
-<li id="li-80"><p id="p-derived-li-80">The derivative is zero only when <span class="process-math">\(x=0\text{,}\)</span> so <span class="process-math">\(x=c=0\)</span> is the only critical point of the function.</p></li>
-<li id="li-81">
-<p id="p-104">The graph of <span class="process-math">\(f(x)\)</span> is sketched below. From that sketch we see that <span class="process-math">\(f(x)\)</span> has <em class="emphasis">neither</em> a local maximum <em class="emphasis">nor</em> a local minimum at <span class="process-math">\(x=c\)</span> despite the fact that <span class="process-math">\(f'(c)=0\)</span> — we have <span class="process-math">\(f(x) \lt f(c)=0\)</span> for all <span class="process-math">\(x \lt c=0\)</span> and <span class="process-math">\(f(x) \gt f(c)=0\)</span> for all <span class="process-math">\(x \gt c=0\text{.}\)</span></p>
+<li id="li-47"><p id="p-derived-li-47">The derivative is zero only when <span class="process-math">\(x=0\text{,}\)</span> so <span class="process-math">\(x=c=0\)</span> is the only critical point of the function.</p></li>
+<li id="li-48">
+<p id="p-147">The graph of <span class="process-math">\(f(x)\)</span> is sketched below. From that sketch we see that <span class="process-math">\(f(x)\)</span> has <em class="emphasis">neither</em> a local maximum <em class="emphasis">nor</em> a local minimum at <span class="process-math">\(x=c\)</span> despite the fact that <span class="process-math">\(f'(c)=0\)</span> — we have <span class="process-math">\(f(x) \lt f(c)=0\)</span> for all <span class="process-math">\(x \lt c=0\)</span> and <span class="process-math">\(f(x) \gt f(c)=0\)</span> for all <span class="process-math">\(x \gt c=0\text{.}\)</span></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinB.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-82"><p id="p-derived-li-82">Note that this example has been constructed to illustrate that a critical point (or singular point) of a function <em class="emphasis">need not be a local maximum or minimum</em> for the function.</p></li>
-<li id="li-83"><p id="p-derived-li-83">Reread Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a>. It says <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 4 </sup></a> that, “if <span class="process-math">\(f(x)\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span> and if <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=c\text{,}\)</span> then <span class="process-math">\(f'(c)=0\)</span>”. It <em class="alert">does not say</em> that “if <span class="process-math">\(f'(c)=0\)</span> then <span class="process-math">\(f\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span>”.</p></li>
+<li id="li-49"><p id="p-derived-li-49">Note that this example has been constructed to illustrate that a critical point (or singular point) of a function <em class="emphasis">need not be a local maximum or minimum</em> for the function.</p></li>
+<li id="li-50"><p id="p-derived-li-50">Reread Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a>. It says <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 4 </sup></a> that, “if <span class="process-math">\(f(x)\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span> and if <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=c\text{,}\)</span> then <span class="process-math">\(f'(c)=0\)</span>”. It <em class="alert">does not say</em> that “if <span class="process-math">\(f'(c)=0\)</span> then <span class="process-math">\(f\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span>”.</p></li>
 </ul></article></div>
 <article class="example example-like" id="eg_localMinMaxC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxC"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Local max and min of <span class="process-math">\(|x|\)</span> and <span class="process-math">\(x^{2/3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxC"><article class="example example-like"><p id="p-105">In this example, we'll look for local maxima and minima of the function</p>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_APPlocalMaxMin.html" id="md-48">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxC"><article class="example example-like"><p id="p-148">In this example, we'll look for local maxima and minima of the function</p>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_APPlocalMaxMin.html" id="md-46">
 \begin{align*}
 f(x) = |x| = \begin{cases}
 x  \amp \text{if }x \ge 0\\
@@ -365,7 +380,7 @@ g(x) = x^{2/3}
 </div>
 <p class="continuation">on the interval <span class="process-math">\(-1\le x\le 1\text{.}\)</span></p>
 <ul class="disc">
-<li id="li-84"><p id="p-derived-li-84">Again, start by computing the derivatives (reread Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_diff_abs" missing or not unique]</code>):<div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
+<li id="li-51"><p id="p-derived-li-51">Again, start by computing the derivatives (reread Example <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "eg_diff_abs" missing or not unique]</code>):<div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
 \begin{align*}
 f'(x) \amp= \begin{cases}
 1  \amp \text{if }x  \gt  0\\
@@ -378,111 +393,111 @@ g'(x) \amp= \begin{cases}
 \end{cases}
 \end{align*}
 </div></p></li>
-<li id="li-85"><p id="p-derived-li-85">These derivatives <em class="emphasis">never</em> take the value <span class="process-math">\(0\text{,}\)</span> so the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> do not have any critical points. However both derivatives do not exist at the point <span class="process-math">\(x=0\text{,}\)</span> so that point is a singular point for both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{.}\)</span></p></li>
-<li id="li-86">
-<p id="p-106">Here is a sketch of the graph of <span class="process-math">\(f(x)\)</span></p>
+<li id="li-52"><p id="p-derived-li-52">These derivatives <em class="emphasis">never</em> take the value <span class="process-math">\(0\text{,}\)</span> so the functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> do not have any critical points. However both derivatives do not exist at the point <span class="process-math">\(x=0\text{,}\)</span> so that point is a singular point for both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{.}\)</span></p></li>
+<li id="li-53">
+<p id="p-149">Here is a sketch of the graph of <span class="process-math">\(f(x)\)</span></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinC.svg" role="img" class="contained"></div></div></div>
-<p id="p-107">and a sketch of the graph of <span class="process-math">\(g(x)\text{.}\)</span></p>
+<p id="p-150">and a sketch of the graph of <span class="process-math">\(g(x)\text{.}\)</span></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:21.5%;margin-right:21.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinCC.svg" role="img" class="contained"></div></div></div>
-<p id="p-108">From the figures we see that both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> have a local (and in fact global) minimum at <span class="process-math">\(x=0\)</span> despite the fact that <span class="process-math">\(x=0\)</span> is not a critical point.</p>
+<p id="p-151">From the figures we see that both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> have a local (and in fact global) minimum at <span class="process-math">\(x=0\)</span> despite the fact that <span class="process-math">\(x=0\)</span> is not a critical point.</p>
 </li>
-<li id="li-87"><p id="p-derived-li-87">Reread Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> yet again. It says that, “if <span class="process-math">\(f(x)\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span> <em class="emphasis">and if <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=c\)</span></em>, then <span class="process-math">\(f'(c)=0\)</span>”. It says nothing about what happens at points where the derivative does not exist. Indeed that is why we have to consider both critical points and singular points when we look for maxima and minima.</p></li>
+<li id="li-54"><p id="p-derived-li-54">Reread Theorem <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> yet again. It says that, “if <span class="process-math">\(f(x)\)</span> has a local maximum/minimum at <span class="process-math">\(x=c\)</span> <em class="emphasis">and if <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=c\)</span></em>, then <span class="process-math">\(f'(c)=0\)</span>”. It says nothing about what happens at points where the derivative does not exist. Indeed that is why we have to consider both critical points and singular points when we look for maxima and minima.</p></li>
 </ul></article></div></section><section class="subsection" id="ssec_find_maxmin"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.2</span> <span class="title">Finding Global Maxima and Minima</span>
 </h3>
-<p id="p-109">We now have a technique for finding local maxima and minima — just look for values of <span class="process-math">\(x\)</span> for which either <span class="process-math">\(f'(x)=0\)</span> or <span class="process-math">\(f'(x)\)</span> does not exist. What about finding global maxima and minima? We'll start by stating explicitly that, under appropriate hypotheses, global maxima and minima are guaranteed to exist.</p>
+<p id="p-152">We now have a technique for finding local maxima and minima — just look for values of <span class="process-math">\(x\)</span> for which either <span class="process-math">\(f'(x)=0\)</span> or <span class="process-math">\(f'(x)\)</span> does not exist. What about finding global maxima and minima? We'll start by stating explicitly that, under appropriate hypotheses, global maxima and minima are guaranteed to exist.</p>
 <article class="theorem theorem-like" id="thm_APPglobalMaxMinExist"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
 </h4>
-<p id="p-110">Let the function <span class="process-math">\(f(x)\)</span> be defined and continuous on the closed, finite interval <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 5 </sup></a></p>
-<p id="p-111"><span class="process-math">\(-\infty \lt a\le x\le b \lt \infty\text{.}\)</span> Then <span class="process-math">\(f(x)\)</span> attains a maximum and a minimum at least once. That is, there exist numbers <span class="process-math">\(a\le x_m, x_M\le b\)</span> such that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-50">
+<p id="p-153">Let the function <span class="process-math">\(f(x)\)</span> be defined and continuous on the closed, finite interval <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 5 </sup></a></p>
+<p id="p-154"><span class="process-math">\(-\infty \lt a\le x\le b \lt \infty\text{.}\)</span> Then <span class="process-math">\(f(x)\)</span> attains a maximum and a minimum at least once. That is, there exist numbers <span class="process-math">\(a\le x_m, x_M\le b\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
 \begin{gather*}
 f(x_m)\le f(x)\le f(x_M)
 \qquad\text{for all }a\le x\le b
 \end{gather*}
-</div></article><p id="p-112">So let's again consider the question</p>
-<blockquote class="blockquote" id="blockquote-6"><p id="p-113">Suppose that the maximum (or minimum) value of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(a\le x\le b\text{,}\)</span> is <span class="process-math">\(f(c)\text{.}\)</span> What does that tell us about <span class="process-math">\(c\text{?}\)</span></p></blockquote>
-<p id="p-114">If <span class="process-math">\(c\)</span> obeys <span class="process-math">\(a \lt c \lt b\)</span> (note the strict inequalities), then <span class="process-math">\(f\)</span> has a local maximum (or minimum) at <span class="process-math">\(x=c\)</span> and Theorem  <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> tells us that either <span class="process-math">\(f'(c)=0\)</span> or <span class="process-math">\(f'(c)\)</span> does not exist. The only other place that a maximum or minimum can occur are at the ends of the interval. We can summarise this as:</p>
+</div></article><p id="p-155">So let's again consider the question</p>
+<blockquote class="blockquote" id="blockquote-6"><p id="p-156">Suppose that the maximum (or minimum) value of <span class="process-math">\(f(x)\text{,}\)</span> for <span class="process-math">\(a\le x\le b\text{,}\)</span> is <span class="process-math">\(f(c)\text{.}\)</span> What does that tell us about <span class="process-math">\(c\text{?}\)</span></p></blockquote>
+<p id="p-157">If <span class="process-math">\(c\)</span> obeys <span class="process-math">\(a \lt c \lt b\)</span> (note the strict inequalities), then <span class="process-math">\(f\)</span> has a local maximum (or minimum) at <span class="process-math">\(x=c\)</span> and Theorem  <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.4">Teorema 2.4</a> tells us that either <span class="process-math">\(f'(c)=0\)</span> or <span class="process-math">\(f'(c)\)</span> does not exist. The only other place that a maximum or minimum can occur are at the ends of the interval. We can summarise this as:</p>
 <article class="theorem theorem-like" id="thm_APPglobalMaxMin"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
 </h4>
-<p id="p-115">If <span class="process-math">\(f(x)\)</span> has a global maximum or global minimum, for <span class="process-math">\(a\le x\le b\text{,}\)</span> at <span class="process-math">\(x=c\)</span> then there are 3 possibilities. Either</p>
+<p id="p-158">If <span class="process-math">\(f(x)\)</span> has a global maximum or global minimum, for <span class="process-math">\(a\le x\le b\text{,}\)</span> at <span class="process-math">\(x=c\)</span> then there are 3 possibilities. Either</p>
 <ul class="disc">
-<li id="li-88"><p id="p-derived-li-88"><span class="process-math">\(f'(c)=0\text{,}\)</span> or</p></li>
-<li id="li-89"><p id="p-derived-li-89"><span class="process-math">\(f'(c)\)</span> does not exist, or</p></li>
-<li id="li-90"><p id="p-derived-li-90"><span class="process-math">\(c=a\)</span> or <span class="process-math">\(c=b\text{.}\)</span></p></li>
+<li id="li-55"><p id="p-derived-li-55"><span class="process-math">\(f'(c)=0\text{,}\)</span> or</p></li>
+<li id="li-56"><p id="p-derived-li-56"><span class="process-math">\(f'(c)\)</span> does not exist, or</p></li>
+<li id="li-57"><p id="p-derived-li-57"><span class="process-math">\(c=a\)</span> or <span class="process-math">\(c=b\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">That is, a global maximum or minimum must occur either at a critical point, a singular point or at the endpoints of the interval.</p></article><p id="p-116">This theorem provides the basis for a method to find the maximum and minimum values of <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(a\le x\le b\text{:}\)</span></p>
+<p class="continuation">That is, a global maximum or minimum must occur either at a critical point, a singular point or at the endpoints of the interval.</p></article><p id="p-159">This theorem provides the basis for a method to find the maximum and minimum values of <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(a\le x\le b\text{:}\)</span></p>
 <article class="corollary theorem-like" id="cor_find_maxmin"><h4 class="heading">
 <span class="type">Corolário</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
 </h4>
-<p id="p-117">Let <span class="process-math">\(f(x)\)</span> be a function on the interval <span class="process-math">\(a \leq x \leq b\text{.}\)</span> Then to find the global maximum and minimum of the function:</p>
+<p id="p-160">Let <span class="process-math">\(f(x)\)</span> be a function on the interval <span class="process-math">\(a \leq x \leq b\text{.}\)</span> Then to find the global maximum and minimum of the function:</p>
 <ul class="disc">
-<li id="li-91">
-<p id="p-118">Make a list of all values of <span class="process-math">\(c\text{,}\)</span> with <span class="process-math">\(a\le c\le b\text{,}\)</span> for which</p>
+<li id="li-58">
+<p id="p-161">Make a list of all values of <span class="process-math">\(c\text{,}\)</span> with <span class="process-math">\(a\le c\le b\text{,}\)</span> for which</p>
 <ul class="circle">
-<li id="li-92"><p id="p-derived-li-92"><span class="process-math">\(f'(c)=0\text{,}\)</span> or</p></li>
-<li id="li-93"><p id="p-derived-li-93"><span class="process-math">\(f'(c)\)</span> does not exist, or</p></li>
-<li id="li-94"><p id="p-derived-li-94"><span class="process-math">\(c=a\)</span> or <span class="process-math">\(c=b\text{.}\)</span></p></li>
+<li id="li-59"><p id="p-derived-li-59"><span class="process-math">\(f'(c)=0\text{,}\)</span> or</p></li>
+<li id="li-60"><p id="p-derived-li-60"><span class="process-math">\(f'(c)\)</span> does not exist, or</p></li>
+<li id="li-61"><p id="p-derived-li-61"><span class="process-math">\(c=a\)</span> or <span class="process-math">\(c=b\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">That is — compute the function at all the critical points, singular points, and endpoints.</p>
 </li>
-<li id="li-95"><p id="p-derived-li-95">Evaluate <span class="process-math">\(f(c)\)</span> for each <span class="process-math">\(c\)</span> in that list. The largest (or smallest) of those values is the largest (or smallest) value of <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
-</ul></article><p id="p-119">Let's now demonstrate how to use this strategy. The function in  this first example is not too simple — but it is a good example of a function that contains both a singular point and a critical point.</p>
+<li id="li-62"><p id="p-derived-li-62">Evaluate <span class="process-math">\(f(c)\)</span> for each <span class="process-math">\(c\)</span> in that list. The largest (or smallest) of those values is the largest (or smallest) value of <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+</ul></article><p id="p-162">Let's now demonstrate how to use this strategy. The function in  this first example is not too simple — but it is a good example of a function that contains both a singular point and a critical point.</p>
 <article class="example example-like" id="APPglobalMaxMinA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinA"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Find max and min of <span class="process-math">\(2x^{5/3}+3x^{2/3}\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinA"><article class="example example-like"><p id="p-120">Find the largest and smallest values of the function <span class="process-math">\(f(x)=2x^{5/3}+3x^{2/3}\)</span> for <span class="process-math">\(-1\le
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinA"><article class="example example-like"><p id="p-163">Find the largest and smallest values of the function <span class="process-math">\(f(x)=2x^{5/3}+3x^{2/3}\)</span> for <span class="process-math">\(-1\le
 x\le 1\text{.}\)</span></p>
-<p id="p-121"><em class="alert">Solution</em> We will apply the method in Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. It is perhaps easiest to find the values at the endpoints of the intervals and then move on to the values at any critical or singular points.</p>
+<p id="p-164"><em class="alert">Solution</em> We will apply the method in Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. It is perhaps easiest to find the values at the endpoints of the intervals and then move on to the values at any critical or singular points.</p>
 <ul class="disc">
-<li id="li-96"><p id="p-derived-li-96">Before we get into things, notice that we can rewrite the function by factoring it:<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
+<li id="li-63"><p id="p-derived-li-63">Before we get into things, notice that we can rewrite the function by factoring it:<div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
 \begin{align*}
 f(x) \amp= 2x^{5/3}+3x^{2/3} = x^{2/3} \cdot \left(2x + 3\right)
 \end{align*}
 </div></p></li>
-<li id="li-97"><p id="p-derived-li-97">Let's compute the function at the endpoints of the interval:<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
+<li id="li-64"><p id="p-derived-li-64">Let's compute the function at the endpoints of the interval:<div class="displaymath process-math" data-contains-math-knowls="" id="md-50">
 \begin{align*}
 f(1) \amp= 2 +3 = 5\\
 f(-1) \amp= 2 \cdot(-1)^{5/3} + 3\cdot (-1)^{2/3} =-2 + 3 = 1
 \end{align*}
 </div></p></li>
-<li id="li-98"><p id="p-derived-li-98">To compute the function at the critical and singular points we first need to find the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
+<li id="li-65"><p id="p-derived-li-65">To compute the function at the critical and singular points we first need to find the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
 \begin{align*}
 f'(x) \amp= 2 \cdot \frac{5}{3} x^{2/3} + 3 \cdot \frac{2}{3} x^{-1/3}\\
 \amp= \frac{10}{3} x^{2/3} + 2 x^{-1/3}\\
 \amp= \frac{10 x + 6}{3 x^{1/3}}
 \end{align*}
 </div></p></li>
-<li id="li-99"><p id="p-derived-li-99">Notice that the numerator and denominator are defined for all <span class="process-math">\(x\text{.}\)</span> The only place the derivative is undefined is when the denominator is zero. Hence the only singular point is at <span class="process-math">\(x=0\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
+<li id="li-66"><p id="p-derived-li-66">Notice that the numerator and denominator are defined for all <span class="process-math">\(x\text{.}\)</span> The only place the derivative is undefined is when the denominator is zero. Hence the only singular point is at <span class="process-math">\(x=0\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
 \begin{align*}
 f(0) \amp= 0
 \end{align*}
 </div></p></li>
-<li id="li-100"><p id="p-derived-li-100">To find the critical points we need to solve <span class="process-math">\(f'(x) = 0\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
+<li id="li-67"><p id="p-derived-li-67">To find the critical points we need to solve <span class="process-math">\(f'(x) = 0\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
 \begin{align*}
 0 \amp= \frac{10 x + 6}{3 x^{1/3}}
 \end{align*}
-</div>Hence we must have <span class="process-math">\(10x=-6\)</span> or <span class="process-math">\(x=-3/5\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+</div>Hence we must have <span class="process-math">\(10x=-6\)</span> or <span class="process-math">\(x=-3/5\text{.}\)</span> The corresponding function value is<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
 \begin{align*}
 f(x) \amp= x^{2/3} \cdot \left(2x + 3\right) \amp \text{recall this from above, then}\\
 f(-3/5) \amp= (-3/5)^{2/3} \cdot\left(2 \cdot \frac{-3}{5} + 3 \right)\\
 \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{-6 + 15}{5}\\
 \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}  \approx 1.28
 \end{align*}
-</div>Note that if we do not want to approximate the root (if, for example, we do not have a calculator handy), then we can also write<div class="displaymath process-math" data-contains-math-knowls="" id="md-57">
+</div>Note that if we do not want to approximate the root (if, for example, we do not have a calculator handy), then we can also write<div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
 \begin{align*}
 f(-3/5) \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
 \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{25} \cdot 5\\
 \amp= 5 \cdot \left( \frac{9}{25} \right)^{4/3}
 \end{align*}
-</div>Since <span class="process-math">\(0 \lt 9/25 \lt 1\text{,}\)</span> we know that <span class="process-math">\(0  \lt  \left( \frac{9}{25} \right)^{4/3}  \lt  1\text{,}\)</span> and hence<div class="displaymath process-math" data-contains-math-knowls="" id="md-58">
+</div>Since <span class="process-math">\(0 \lt 9/25 \lt 1\text{,}\)</span> we know that <span class="process-math">\(0  \lt  \left( \frac{9}{25} \right)^{4/3}  \lt  1\text{,}\)</span> and hence<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
 \begin{gather*}
 0  \lt  f(-3/5) = 5 \cdot \left( \frac{9}{25} \right)^{4/3}  \lt  5.
 \end{gather*}
 </div></p></li>
-<li id="li-101">
-<p id="p-122">We summarise our work in this table</p>
+<li id="li-68">
+<p id="p-165">We summarise our work in this table</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(c\)</span></td>
@@ -507,41 +522,41 @@ f(-3/5) \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
 </tr>
 </table></div></div></div>
 </li>
-<li id="li-102"><p id="p-derived-li-102">The largest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(5\)</span> and the smallest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(0\text{.}\)</span></p></li>
-<li id="li-103"><p id="p-derived-li-103">Thus on the interval <span class="process-math">\(-1\leq x \leq 1\)</span> the global maximum of <span class="process-math">\(f\)</span> is <span class="process-math">\(5\text{,}\)</span> and is taken at <span class="process-math">\(x=1\text{,}\)</span> while the global minimum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(0\text{,}\)</span> and is taken at <span class="process-math">\(x=0\text{.}\)</span></p></li>
-<li id="li-104">
-<p id="p-123">For completeness we also sketch the graph of this function on the same interval.</p>
+<li id="li-69"><p id="p-derived-li-69">The largest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(5\)</span> and the smallest value of <span class="process-math">\(f\)</span> in the table is <span class="process-math">\(0\text{.}\)</span></p></li>
+<li id="li-70"><p id="p-derived-li-70">Thus on the interval <span class="process-math">\(-1\leq x \leq 1\)</span> the global maximum of <span class="process-math">\(f\)</span> is <span class="process-math">\(5\text{,}\)</span> and is taken at <span class="process-math">\(x=1\text{,}\)</span> while the global minimum value of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(0\text{,}\)</span> and is taken at <span class="process-math">\(x=0\text{.}\)</span></p></li>
+<li id="li-71">
+<p id="p-166">For completeness we also sketch the graph of this function on the same interval.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/globalMaxMinA.svg" role="img" class="contained"></div></div></div>
-<p id="p-124">Later (in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_curve_sketch" missing or not unique]</code>) we will see how to construct such a sketch without using a calculator or computer.</p>
+<p id="p-167">Later (in Section <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec_curve_sketch" missing or not unique]</code>) we will see how to construct such a sketch without using a calculator or computer.</p>
 </li>
 </ul></article></div></section><section class="subsection" id="sec_opt_eg"><h3 class="heading hide-type">
 <span class="type">Subseção</span> <span class="codenumber">2.3</span> <span class="title">Max/Min Examples</span>
 </h3>
-<p id="p-125">As noted at the beginning of this section, the problem of finding maxima and minima is a very important application of differential calculus in the real world. We now turn to a number of examples of this process. But to guide the reader we will describe a general procedure to follow for these problems.</p>
-<ol id="p-126" class="decimal">
-<li id="li-105"><p id="p-derived-li-105">Read — read the problem carefully. Work out what information is given in the statement of the problem and what we are being asked to compute.</p></li>
-<li id="li-106"><p id="p-derived-li-106">Diagram — draw a diagram. This will typically help you to identify what you know about the problem and what quantities you need to work out.</p></li>
-<li id="li-107"><p id="p-derived-li-107">Variables — assign variables to the quantities in the problem along with their units. It is typically a good idea to make sensible choices of variable names: <span class="process-math">\(A\)</span> for area, <span class="process-math">\(h\)</span> for height, <span class="process-math">\(t\)</span> for time etc.</p></li>
-<li id="li-108"><p id="p-derived-li-108">Relations — find relations between the variables. By now you should know the quantity we are interested in (the one we want to maximise or minimise) and we need to establish a relation between it and the other variables.</p></li>
-<li id="li-109"><p id="p-derived-li-109">Reduce — the relation down to a function of one variable. In order to apply the calculus we know, we must have a function of a single variable. To do this we need to use all the information we have to eliminate variables. We should also work out the domain of the resulting function.</p></li>
-<li id="li-110"><p id="p-derived-li-110">Maximise or minimise — we can now apply the methods of Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> to find the maximum or minimum of the quantity we need (as the problem dictates).</p></li>
-<li id="li-111"><p id="p-derived-li-111">Be careful — make sure your answer makes sense. Make sure quantities are physical. For example, lengths and areas cannot be negative.</p></li>
-<li id="li-112"><p id="p-derived-li-112">Answer the question — be sure your answer really answers the question asked in the problem.</p></li>
+<p id="p-168">As noted at the beginning of this section, the problem of finding maxima and minima is a very important application of differential calculus in the real world. We now turn to a number of examples of this process. But to guide the reader we will describe a general procedure to follow for these problems.</p>
+<ol id="p-169" class="decimal">
+<li id="li-72"><p id="p-derived-li-72">Read — read the problem carefully. Work out what information is given in the statement of the problem and what we are being asked to compute.</p></li>
+<li id="li-73"><p id="p-derived-li-73">Diagram — draw a diagram. This will typically help you to identify what you know about the problem and what quantities you need to work out.</p></li>
+<li id="li-74"><p id="p-derived-li-74">Variables — assign variables to the quantities in the problem along with their units. It is typically a good idea to make sensible choices of variable names: <span class="process-math">\(A\)</span> for area, <span class="process-math">\(h\)</span> for height, <span class="process-math">\(t\)</span> for time etc.</p></li>
+<li id="li-75"><p id="p-derived-li-75">Relations — find relations between the variables. By now you should know the quantity we are interested in (the one we want to maximise or minimise) and we need to establish a relation between it and the other variables.</p></li>
+<li id="li-76"><p id="p-derived-li-76">Reduce — the relation down to a function of one variable. In order to apply the calculus we know, we must have a function of a single variable. To do this we need to use all the information we have to eliminate variables. We should also work out the domain of the resulting function.</p></li>
+<li id="li-77"><p id="p-derived-li-77">Maximise or minimise — we can now apply the methods of Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> to find the maximum or minimum of the quantity we need (as the problem dictates).</p></li>
+<li id="li-78"><p id="p-derived-li-78">Be careful — make sure your answer makes sense. Make sure quantities are physical. For example, lengths and areas cannot be negative.</p></li>
+<li id="li-79"><p id="p-derived-li-79">Answer the question — be sure your answer really answers the question asked in the problem.</p></li>
 </ol>
-<p id="p-127">Let us start with a relatively simple problem:</p>
+<p id="p-170">Let us start with a relatively simple problem:</p>
 <article class="example example-like" id="APPglobalMaxMinB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinB"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing a container of maximal volume.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinB"><article class="example example-like"><p id="p-128">A closed rectangular container with a square base is to be made from two different materials. The material for the base costs $5 per square meter, while the material for the other five sides costs $1 per square meter. Find the dimensions of the container which has the largest possible volume if the total cost of materials is $72.</p>
-<p id="p-129"><em class="alert">Solution</em> We can follow the steps we outlined above to find the solution.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinB"><article class="example example-like"><p id="p-171">A closed rectangular container with a square base is to be made from two different materials. The material for the base costs $5 per square meter, while the material for the other five sides costs $1 per square meter. Find the dimensions of the container which has the largest possible volume if the total cost of materials is $72.</p>
+<p id="p-172"><em class="alert">Solution</em> We can follow the steps we outlined above to find the solution.</p>
 <ul class="disc">
-<li id="li-113"><p id="p-derived-li-113">We need to determine the area of the two types of materials used and the corresponding total cost.</p></li>
-<li id="li-114">
-<p id="p-130">Draw a picture of the box.</p>
+<li id="li-80"><p id="p-derived-li-80">We need to determine the area of the two types of materials used and the corresponding total cost.</p></li>
+<li id="li-81">
+<p id="p-173">Draw a picture of the box.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/container.svg" role="img" class="contained"></div></div></div>
-<p id="p-131">The more useful picture is the unfolded box on the right.</p>
+<p id="p-174">The more useful picture is the unfolded box on the right.</p>
 </li>
-<li id="li-115"><p id="p-derived-li-115">In the picture we have already introduced two variables. The square base has side-length <span class="process-math">\(b\)</span> metres and it has height <span class="process-math">\(h\)</span> metres. Let the area of the base be <span class="process-math">\(A_b\)</span> and the area of the other fives sides be <span class="process-math">\(A_s\)</span> (both in <span class="process-math">\(m^2\)</span>), and the total cost be <span class="process-math">\(C\)</span> (in dollars). Finally let the volume enclosed be <span class="process-math">\(V m^3\text{.}\)</span></p></li>
-<li id="li-116"><p id="p-derived-li-116">Some simple geometry tells us that<div class="displaymath process-math" data-contains-math-knowls="" id="md-59">
+<li id="li-82"><p id="p-derived-li-82">In the picture we have already introduced two variables. The square base has side-length <span class="process-math">\(b\)</span> metres and it has height <span class="process-math">\(h\)</span> metres. Let the area of the base be <span class="process-math">\(A_b\)</span> and the area of the other fives sides be <span class="process-math">\(A_s\)</span> (both in <span class="process-math">\(m^2\)</span>), and the total cost be <span class="process-math">\(C\)</span> (in dollars). Finally let the volume enclosed be <span class="process-math">\(V m^3\text{.}\)</span></p></li>
+<li id="li-83"><p id="p-derived-li-83">Some simple geometry tells us that<div class="displaymath process-math" data-contains-math-knowls="" id="md-57">
 \begin{align*}
 A_b \amp= b^2\\
 A_s \amp= 4 bh + b^2\\
@@ -549,152 +564,152 @@ V \amp= b^2h\\
 C \amp= 5 \cdot A_b + 1\cdot A_s = 5b^2+4bh+b^2 = 6b^2+4bh.
 \end{align*}
 </div></p></li>
-<li id="li-117"><p id="p-derived-li-117">To eliminate one of the variables we use the fact that the total cost is $72.<div class="displaymath process-math" data-contains-math-knowls="" id="md-60">
+<li id="li-84"><p id="p-derived-li-84">To eliminate one of the variables we use the fact that the total cost is $72.<div class="displaymath process-math" data-contains-math-knowls="" id="md-58">
 \begin{align*}
 C \amp= 6b^2+4bh = 72 \amp \text{rearrange}\\
 4bh \amp= 72-6b^2  \amp \text{isolate } h\\
 h \amp= \frac{72-6b^2}{4b} = \frac{3}{2} \cdot \frac{12-b^2}{b}
 \end{align*}
-</div>Substituting this into the volume gives<div class="displaymath process-math" data-contains-math-knowls="" id="md-61">
+</div>Substituting this into the volume gives<div class="displaymath process-math" data-contains-math-knowls="" id="md-59">
 \begin{align*}
 V\amp= b^2 h = \frac{3b}{2} (12-b^2) = 18b - \frac{3}{2} b^3
 \end{align*}
-</div>Now note that since <span class="process-math">\(b\)</span> is a length it cannot be negative, so <span class="process-math">\(b \geq 0\text{.}\)</span> Further since volume cannot be negative, we must also have<div class="displaymath process-math" data-contains-math-knowls="" id="md-62">
+</div>Now note that since <span class="process-math">\(b\)</span> is a length it cannot be negative, so <span class="process-math">\(b \geq 0\text{.}\)</span> Further since volume cannot be negative, we must also have<div class="displaymath process-math" data-contains-math-knowls="" id="md-60">
 \begin{gather*}
 12-b^2 \geq 0
 \end{gather*}
 </div>and so <span class="process-math">\(b \leq \sqrt{12}\text{.}\)</span></p></li>
-<li id="li-118"><p id="p-derived-li-118">Now we can apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> on the above expression for the volume with <span class="process-math">\(0 \leq b \leq \sqrt{12}\text{.}\)</span> The endpoints give:<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-63">
+<li id="li-85"><p id="p-derived-li-85">Now we can apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> on the above expression for the volume with <span class="process-math">\(0 \leq b \leq \sqrt{12}\text{.}\)</span> The endpoints give:<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-61">
 \begin{align*}
 V(0) \amp= 0\\
 V(\sqrt{12}) \amp= 0
 \end{align*}
-</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-64">
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-62">
 \begin{align*}
 V'(b) \amp= 18 - \frac{9b^2}{2}
 \end{align*}
-</div>Since this is a polynomial there are no singular points. However we can solve <span class="process-math">\(V'(b) = 0\)</span> to find critical points:<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-65">
+</div>Since this is a polynomial there are no singular points. However we can solve <span class="process-math">\(V'(b) = 0\)</span> to find critical points:<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-63">
 \begin{align*}
 18 - \frac{9b^2}{2} \amp= 0  \amp \text{divide by 9 and multiply by 2}\\
 4 - b^2 \amp= 0
 \end{align*}
-</div>Hence <span class="process-math">\(b = \pm 2\text{.}\)</span> Thus the only critical point in the domain is <span class="process-math">\(b=2\text{.}\)</span> The corresponding volume is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-66">
+</div>Hence <span class="process-math">\(b = \pm 2\text{.}\)</span> Thus the only critical point in the domain is <span class="process-math">\(b=2\text{.}\)</span> The corresponding volume is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-64">
 \begin{align*}
 V(2) \amp= 18\times2 - \frac{3}{2} \times 2^3\\
 \amp= 36 - 12 = 24.
 \end{align*}
-</div>So by Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>, the maximum volume is when 24 when <span class="process-math">\(b=2\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-67">
+</div>So by Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>, the maximum volume is when 24 when <span class="process-math">\(b=2\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html ./knowl/cor_find_maxmin.html" id="md-65">
 \begin{align*}
 h \amp= \frac{3}{2} \cdot \frac{12-b^2}{b} = \frac{3}{2} \frac{12-4}{2} = 6.
 \end{align*}
 </div></p></li>
-<li id="li-119"><p id="p-derived-li-119">All our quantities make sense; lengths, areas and volumes are all non-negative.</p></li>
-<li id="li-120">
-<p id="p-132">Checking the question again, we see that we are asked for the dimensions of the container (rather than its volume) so we can answer with</p>
-<blockquote class="blockquote" id="blockquote-7"><p id="p-133">The container with dimensions <span class="process-math">\(2 \times 2 \times 6m\)</span> will be the largest possible.</p></blockquote>
+<li id="li-86"><p id="p-derived-li-86">All our quantities make sense; lengths, areas and volumes are all non-negative.</p></li>
+<li id="li-87">
+<p id="p-175">Checking the question again, we see that we are asked for the dimensions of the container (rather than its volume) so we can answer with</p>
+<blockquote class="blockquote" id="blockquote-7"><p id="p-176">The container with dimensions <span class="process-math">\(2 \times 2 \times 6m\)</span> will be the largest possible.</p></blockquote>
 </li>
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinC"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing another box.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinC"><article class="example example-like"><p id="p-134">A rectangular sheet of cardboard is 6 inches by 9 inches. Four identical squares are cut from the corners of the cardboard, as shown in the figure below, and the remaining piece is folded into an open rectangular box. What should the size of the cut out squares be in order to maximize the volume of the box?</p>
-<p id="p-135"><em class="alert">Solution</em> This one is quite similar to the previous one, so we perhaps don't need to go into so much detail.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinC"><article class="example example-like"><p id="p-177">A rectangular sheet of cardboard is 6 inches by 9 inches. Four identical squares are cut from the corners of the cardboard, as shown in the figure below, and the remaining piece is folded into an open rectangular box. What should the size of the cut out squares be in order to maximize the volume of the box?</p>
+<p id="p-178"><em class="alert">Solution</em> This one is quite similar to the previous one, so we perhaps don't need to go into so much detail.</p>
 <ul class="disc">
-<li id="li-121">
-<p id="p-136">After reading carefully we produce the following picture:</p>
+<li id="li-88">
+<p id="p-179">After reading carefully we produce the following picture:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/box_vol.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-122"><p id="p-derived-li-122">Let the height of the box be <span class="process-math">\(x\)</span> inches, and the base be <span class="process-math">\(\ell \times w\)</span> inches. The volume of the box is then <span class="process-math">\(V\)</span> cubic inches.</p></li>
-<li id="li-123"><p id="p-derived-li-123">Some simple geometry tells us that <span class="process-math">\(\ell = 9-2x, w=6-2x\)</span> and so<div class="displaymath process-math" data-contains-math-knowls="" id="md-68">
+<li id="li-89"><p id="p-derived-li-89">Let the height of the box be <span class="process-math">\(x\)</span> inches, and the base be <span class="process-math">\(\ell \times w\)</span> inches. The volume of the box is then <span class="process-math">\(V\)</span> cubic inches.</p></li>
+<li id="li-90"><p id="p-derived-li-90">Some simple geometry tells us that <span class="process-math">\(\ell = 9-2x, w=6-2x\)</span> and so<div class="displaymath process-math" data-contains-math-knowls="" id="md-66">
 \begin{align*}
 V \amp= x(9-2x)(6-2x) \text{cubic inches}\\
 \amp= 54x-30x^2+4x^3.
 \end{align*}
-</div>Notice that since all lengths must be non-negative, we must have<div class="displaymath process-math" data-contains-math-knowls="" id="md-69">
+</div>Notice that since all lengths must be non-negative, we must have<div class="displaymath process-math" data-contains-math-knowls="" id="md-67">
 \begin{gather*}
 x,\ell,w \geq 0
 \end{gather*}
 </div>and so <span class="process-math">\(0 \leq x \leq 3\)</span> (if <span class="process-math">\(x \gt 3\)</span> then <span class="process-math">\(w \lt 0\)</span>).</p></li>
-<li id="li-124">
-<p id="p-137">We can now apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. First the endpoints of the interval give</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-70">
+<li id="li-91">
+<p id="p-180">We can now apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. First the endpoints of the interval give</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-68">
 \begin{align*}
 V(0) \amp= 0 \amp V(3) \amp= 0
 \end{align*}
 </div>
 <p class="continuation">The derivative is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-71">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-69">
 \begin{align*}
 V'(x) \amp= 54 - 60x +12x^2\\
 \amp= 6(9-10x+2x^2)
 \end{align*}
 </div>
 <p class="continuation">Since this is a polynomial there are no singular points. To find critical points we solve <span class="process-math">\(V'(x) = 0\)</span> to get</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-72">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-70">
 \begin{align*}
 x_\pm \amp= \frac{10 \pm \sqrt{100 - 4\times2\times9}}{4}\\
 \amp= \frac{10 \pm \sqrt{28}}{4} = \frac{10 \pm 2\sqrt{7}}{4} = \frac{5 \pm \sqrt{7}}{2}
 \end{align*}
 </div>
 <p class="continuation">We can then use a calculator to approximate</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-73">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-71">
 \begin{align*}
 x_+ \amp\approx 3.82 \amp x_- \amp\approx 1.18.
 \end{align*}
 </div>
 <p class="continuation">So <span class="process-math">\(x_-\)</span> is inside the domain, while <span class="process-math">\(x_+\)</span> lies outside.</p>
-<p id="p-138">Alternatively <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 6 </sup></a> , we can bound <span class="process-math">\(x_\pm\)</span> by first noting that <span class="process-math">\(2 \leq \sqrt{7} \leq 3\text{.}\)</span> From this we know that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-74">
+<p id="p-181">Alternatively <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 6 </sup></a> , we can bound <span class="process-math">\(x_\pm\)</span> by first noting that <span class="process-math">\(2 \leq \sqrt{7} \leq 3\text{.}\)</span> From this we know that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-72">
 \begin{align*}
 1=\frac{5-3}{2} \amp \leq x_- = \frac{5 - \sqrt{7}}{2} \leq \frac{5-2}{2} = 1.5\\
 3.5=\frac{5+2}{2} \amp \leq x_+ = \frac{5 + \sqrt{7}}{2} \leq \frac{5+3}{2} = 4
 \end{align*}
 </div>
 </li>
-<li id="li-125"><p id="p-derived-li-125">Since the volume is zero when <span class="process-math">\(x=0,3\text{,}\)</span> it must be the case that the volume is maximised when <span class="process-math">\(x = x_- = \frac{5 - \sqrt{7}}{2}\text{.}\)</span></p></li>
-<li id="li-126"><p id="p-derived-li-126">Notice that since <span class="process-math">\(0  \lt  x_-  \lt 3\)</span> we know that the other lengths are positive, so our answer makes sense. Further, the question only asks for the length <span class="process-math">\(x\)</span> and not the resulting volume so we have answered the question.</p></li>
+<li id="li-92"><p id="p-derived-li-92">Since the volume is zero when <span class="process-math">\(x=0,3\text{,}\)</span> it must be the case that the volume is maximised when <span class="process-math">\(x = x_- = \frac{5 - \sqrt{7}}{2}\text{.}\)</span></p></li>
+<li id="li-93"><p id="p-derived-li-93">Notice that since <span class="process-math">\(0  \lt  x_-  \lt 3\)</span> we know that the other lengths are positive, so our answer makes sense. Further, the question only asks for the length <span class="process-math">\(x\)</span> and not the resulting volume so we have answered the question.</p></li>
 </ul></article></div>
-<p id="p-139">There is a new wrinkle in the next two examples. Each involves finding the minimum value of a function <span class="process-math">\(f(x)\)</span> with <span class="process-math">\(x\)</span> running over all real numbers, rather than just over a finite interval as in Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. Both in Example <a href="" class="xref" data-knowl="./knowl/APPglobalMaxMinD.html" title="Exemplo 2.18: How far from a point to a line">Exemplo 2.18</a> and in Example <a href="" class="xref" data-knowl="./knowl/APPglobalMaxMinDist.html" title="Exemplo 2.19: How far from a point to a curve">Exemplo 2.19</a> the function <span class="process-math">\(f(x)\)</span> tends to <span class="process-math">\(+\infty\)</span> as <span class="process-math">\(x\)</span> tends to either <span class="process-math">\(+\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span> So the minimum value of <span class="process-math">\(f(x)\)</span> will be achieved for some finite value of <span class="process-math">\(x\text{,}\)</span> which will be a local minimum as well as a global minimum.</p>
+<p id="p-182">There is a new wrinkle in the next two examples. Each involves finding the minimum value of a function <span class="process-math">\(f(x)\)</span> with <span class="process-math">\(x\)</span> running over all real numbers, rather than just over a finite interval as in Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. Both in Example <a href="" class="xref" data-knowl="./knowl/APPglobalMaxMinD.html" title="Exemplo 2.18: How far from a point to a line">Exemplo 2.18</a> and in Example <a href="" class="xref" data-knowl="./knowl/APPglobalMaxMinDist.html" title="Exemplo 2.19: How far from a point to a curve">Exemplo 2.19</a> the function <span class="process-math">\(f(x)\)</span> tends to <span class="process-math">\(+\infty\)</span> as <span class="process-math">\(x\)</span> tends to either <span class="process-math">\(+\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span> So the minimum value of <span class="process-math">\(f(x)\)</span> will be achieved for some finite value of <span class="process-math">\(x\text{,}\)</span> which will be a local minimum as well as a global minimum.</p>
 <article class="theorem theorem-like" id="thm_maxMinOnR"><h4 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
 </h4>
-<p id="p-140">Let <span class="process-math">\(f(x)\)</span> be defined and continuous for all <span class="process-math">\(-\infty \lt x \lt \infty\text{.}\)</span> Let <span class="process-math">\(c\)</span> be a finite real number.</p>
-<ol id="p-141" class="lower-alpha">
-<li id="li-127">
-<p id="p-142">If <span class="process-math">\(\displaystyle \lim_{x\rightarrow+\infty} f(x)=+\infty\)</span> and <span class="process-math">\(\displaystyle \lim_{x\rightarrow-\infty} f(x)=+\infty\)</span> and if <span class="process-math">\(f(x)\)</span> has a global minimum at <span class="process-math">\(x = c\text{,}\)</span> then there are 2 possibilities. Either</p>
+<p id="p-183">Let <span class="process-math">\(f(x)\)</span> be defined and continuous for all <span class="process-math">\(-\infty \lt x \lt \infty\text{.}\)</span> Let <span class="process-math">\(c\)</span> be a finite real number.</p>
+<ol id="p-184" class="lower-alpha">
+<li id="li-94">
+<p id="p-185">If <span class="process-math">\(\displaystyle \lim_{x\rightarrow+\infty} f(x)=+\infty\)</span> and <span class="process-math">\(\displaystyle \lim_{x\rightarrow-\infty} f(x)=+\infty\)</span> and if <span class="process-math">\(f(x)\)</span> has a global minimum at <span class="process-math">\(x = c\text{,}\)</span> then there are 2 possibilities. Either</p>
 <ul class="disc">
-<li id="li-128"><p id="p-derived-li-128"><span class="process-math">\(f'(c) = 0\text{,}\)</span> or</p></li>
-<li id="li-129"><p id="p-derived-li-129"><span class="process-math">\(f'(c)\)</span> does not exist</p></li>
+<li id="li-95"><p id="p-derived-li-95"><span class="process-math">\(f'(c) = 0\text{,}\)</span> or</p></li>
+<li id="li-96"><p id="p-derived-li-96"><span class="process-math">\(f'(c)\)</span> does not exist</p></li>
 </ul>
 <p class="continuation">That is, a global minimum must occur either at a critical point or at a singular point.</p>
 </li>
-<li id="li-130">
-<p id="p-143">If <span class="process-math">\(\displaystyle \lim_{x\rightarrow+\infty} f(x)=-\infty\)</span> and <span class="process-math">\(\displaystyle \lim_{x\rightarrow-\infty} f(x)=-\infty\)</span> and if <span class="process-math">\(f(x)\)</span> has a global maximum at <span class="process-math">\(x = c\text{,}\)</span> then there are 2 possibilities. Either</p>
+<li id="li-97">
+<p id="p-186">If <span class="process-math">\(\displaystyle \lim_{x\rightarrow+\infty} f(x)=-\infty\)</span> and <span class="process-math">\(\displaystyle \lim_{x\rightarrow-\infty} f(x)=-\infty\)</span> and if <span class="process-math">\(f(x)\)</span> has a global maximum at <span class="process-math">\(x = c\text{,}\)</span> then there are 2 possibilities. Either</p>
 <ul class="disc">
-<li id="li-131"><p id="p-derived-li-131"><span class="process-math">\(f'(c) = 0\text{,}\)</span> or</p></li>
-<li id="li-132"><p id="p-derived-li-132"><span class="process-math">\(f'(c)\)</span> does not exist</p></li>
+<li id="li-98"><p id="p-derived-li-98"><span class="process-math">\(f'(c) = 0\text{,}\)</span> or</p></li>
+<li id="li-99"><p id="p-derived-li-99"><span class="process-math">\(f'(c)\)</span> does not exist</p></li>
 </ul>
 <p class="continuation">That is, a global maximum must occur either at a critical point or at a singular point.</p>
 </li>
 </ol></article><article class="example example-like" id="APPglobalMaxMinD"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinD"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">How far from a point to a line.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinD"><article class="example example-like"><p id="p-144">Find the point on the line <span class="process-math">\(y=6-3x\)</span> that is closest to the point <span class="process-math">\((7,5)\text{.}\)</span></p>
-<p id="p-145"><em class="alert">Solution</em> In this problem</p>
-<ul id="p-146" class="disc">
-<li id="li-133">
-<p id="p-147">A simple picture</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinD"><article class="example example-like"><p id="p-187">Find the point on the line <span class="process-math">\(y=6-3x\)</span> that is closest to the point <span class="process-math">\((7,5)\text{.}\)</span></p>
+<p id="p-188"><em class="alert">Solution</em> In this problem</p>
+<ul id="p-189" class="disc">
+<li id="li-100">
+<p id="p-190">A simple picture</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/line_dist.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-134"><p id="p-derived-li-134">Some notation is already given to us. Let a point on the line have coordinates <span class="process-math">\((x,y)\text{,}\)</span> and we do not need units. And let <span class="process-math">\(\ell\)</span> be the distance from the point <span class="process-math">\((x,y)\)</span> to the point <span class="process-math">\((7,5)\text{.}\)</span></p></li>
-<li id="li-135"><p id="p-derived-li-135">Since the points are on the line the coordinates <span class="process-math">\((x,y)\)</span> must obey<div class="displaymath process-math" data-contains-math-knowls="" id="md-75">
+<li id="li-101"><p id="p-derived-li-101">Some notation is already given to us. Let a point on the line have coordinates <span class="process-math">\((x,y)\text{,}\)</span> and we do not need units. And let <span class="process-math">\(\ell\)</span> be the distance from the point <span class="process-math">\((x,y)\)</span> to the point <span class="process-math">\((7,5)\text{.}\)</span></p></li>
+<li id="li-102"><p id="p-derived-li-102">Since the points are on the line the coordinates <span class="process-math">\((x,y)\)</span> must obey<div class="displaymath process-math" data-contains-math-knowls="" id="md-73">
 \begin{gather*}
 y=6-3x
 \end{gather*}
-</div>Notice that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> have no further constraints. The distance <span class="process-math">\(\ell\)</span> is given by<div class="displaymath process-math" data-contains-math-knowls="" id="md-76">
+</div>Notice that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> have no further constraints. The distance <span class="process-math">\(\ell\)</span> is given by<div class="displaymath process-math" data-contains-math-knowls="" id="md-74">
 \begin{align*}
 \ell^2 \amp= (x-7)^2 + (y-5)^2
 \end{align*}
 </div></p></li>
-<li id="li-136"><p id="p-derived-li-136">We can now eliminate the variable <span class="process-math">\(y\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-77">
+<li id="li-103"><p id="p-derived-li-103">We can now eliminate the variable <span class="process-math">\(y\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-75">
 \begin{align*}
 \ell^2 \amp= (x-7)^2 + (y-5)^2\\
 \amp= (x-7)^2 + (6-3x-5)^2 = (x-7)^2 + (1-3x)^2\\
@@ -703,34 +718,34 @@ y=6-3x
 \ell \amp= \sqrt{10} \cdot \sqrt{x^2-2x+5}
 \end{align*}
 </div>Notice that as <span class="process-math">\(x \to \pm \infty\)</span> the distance <span class="process-math">\(\ell \to +\infty\text{.}\)</span></p></li>
-<li id="li-137">
-<p id="p-148">We can now apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a></p>
+<li id="li-104">
+<p id="p-191">We can now apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a></p>
 <ul class="circle">
-<li id="li-138"><p id="p-derived-li-138">Since the distance is defined for all real <span class="process-math">\(x\text{,}\)</span> we do not have to check the endpoints of the domain — there are none.</p></li>
-<li id="li-139"><p id="p-derived-li-139">Form the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
+<li id="li-105"><p id="p-derived-li-105">Since the distance is defined for all real <span class="process-math">\(x\text{,}\)</span> we do not have to check the endpoints of the domain — there are none.</p></li>
+<li id="li-106"><p id="p-derived-li-106">Form the derivative:<div class="displaymath process-math" data-contains-math-knowls="" id="md-76">
 \begin{align*}
 \dfrac{\dd \ell}{\dd x} \amp= \sqrt{10} \frac{2x-2}{2\sqrt{x^2-2x+5}}
 \end{align*}
-</div>It is zero when <span class="process-math">\(x=1\text{,}\)</span> and undefined if <span class="process-math">\(x^2-2x+5 \lt 0\text{.}\)</span> However, since<div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
+</div>It is zero when <span class="process-math">\(x=1\text{,}\)</span> and undefined if <span class="process-math">\(x^2-2x+5 \lt 0\text{.}\)</span> However, since<div class="displaymath process-math" data-contains-math-knowls="" id="md-77">
 \begin{align*}
 x^2-2x+5 \amp= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4
 \end{align*}
-</div>we know that <span class="process-math">\(x^2-2x+5 \geq 4\text{.}\)</span> Thus the function has no singular points and the only critical point occurs at <span class="process-math">\(x=1\text{.}\)</span> The corresponding function value is then<div class="displaymath process-math" data-contains-math-knowls="" id="md-80">
+</div>we know that <span class="process-math">\(x^2-2x+5 \geq 4\text{.}\)</span> Thus the function has no singular points and the only critical point occurs at <span class="process-math">\(x=1\text{.}\)</span> The corresponding function value is then<div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
 \begin{align*}
 \ell(1) \amp=\sqrt{10} \sqrt{1-2+5} = 2 \sqrt{10}.
 \end{align*}
 </div></p></li>
-<li id="li-140"><p id="p-derived-li-140">Thus the minimum value of the distance is <span class="process-math">\(\ell=2\sqrt{10}\)</span> and occurs at <span class="process-math">\(x=1\text{.}\)</span></p></li>
+<li id="li-107"><p id="p-derived-li-107">Thus the minimum value of the distance is <span class="process-math">\(\ell=2\sqrt{10}\)</span> and occurs at <span class="process-math">\(x=1\text{.}\)</span></p></li>
 </ul>
 </li>
-<li id="li-141"><p id="p-derived-li-141">This answer makes sense — the distance is not negative.</p></li>
-<li id="li-142">
-<p id="p-149">The question asks for the point that minimises the distance, not that minimum distance. Hence the answer is <span class="process-math">\(x=1, y=6-3 = 3\text{.}\)</span> I.e.</p>
-<blockquote class="blockquote" id="blockquote-8"><p id="p-150">The point that minimises the distance is <span class="process-math">\((1,3)\text{.}\)</span></p></blockquote>
+<li id="li-108"><p id="p-derived-li-108">This answer makes sense — the distance is not negative.</p></li>
+<li id="li-109">
+<p id="p-192">The question asks for the point that minimises the distance, not that minimum distance. Hence the answer is <span class="process-math">\(x=1, y=6-3 = 3\text{.}\)</span> I.e.</p>
+<blockquote class="blockquote" id="blockquote-8"><p id="p-193">The point that minimises the distance is <span class="process-math">\((1,3)\text{.}\)</span></p></blockquote>
 </li>
 </ul>
-<p id="p-151">Notice that we can make the analysis easier by observing that the point that minimises the distance also minimises the squared-distance. So that instead of minimising the function <span class="process-math">\(\ell\text{,}\)</span> we can just minimise <span class="process-math">\(\ell^2\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-81">
+<p id="p-194">Notice that we can make the analysis easier by observing that the point that minimises the distance also minimises the squared-distance. So that instead of minimising the function <span class="process-math">\(\ell\text{,}\)</span> we can just minimise <span class="process-math">\(\ell^2\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
 \begin{align*}
 \ell^2 \amp= 10(x^2-2x+5)
 \end{align*}
@@ -738,29 +753,29 @@ x^2-2x+5 \amp= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4
 <p class="continuation">The resulting algebra is a bit easier and we don't have to hunt for singular points.</p></article></div>
 <article class="example example-like" id="APPglobalMaxMinDist"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinDist"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">How far from a point to a curve.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinDist"><article class="example example-like"><p id="p-152">Find the minimum distance from <span class="process-math">\((2,0)\)</span> to the curve <span class="process-math">\(y^2=x^2+1\text{.}\)</span></p>
-<p id="p-153"><em class="alert">Solution</em> This is very much like the previous question.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinDist"><article class="example example-like"><p id="p-195">Find the minimum distance from <span class="process-math">\((2,0)\)</span> to the curve <span class="process-math">\(y^2=x^2+1\text{.}\)</span></p>
+<p id="p-196"><em class="alert">Solution</em> This is very much like the previous question.</p>
 <ul class="disc">
-<li id="li-143">
-<p id="p-154">After reading the problem carefully we can draw a picture</p>
+<li id="li-110">
+<p id="p-197">After reading the problem carefully we can draw a picture</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="images/hyperbolaMaxMin.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-144"><p id="p-derived-li-144">In this problem we do not need units and the variables <span class="process-math">\(x,y\)</span> are supplied. We define the distance to be <span class="process-math">\(\ell\)</span> and it is given by<div class="displaymath process-math" data-contains-math-knowls="" id="md-82">
+<li id="li-111"><p id="p-derived-li-111">In this problem we do not need units and the variables <span class="process-math">\(x,y\)</span> are supplied. We define the distance to be <span class="process-math">\(\ell\)</span> and it is given by<div class="displaymath process-math" data-contains-math-knowls="" id="md-80">
 \begin{align*}
 \ell^2 \amp= (x-2)^2+y^2.
 \end{align*}
 </div>As noted in the previous problem, we will minimise the squared-distance since that also minimises the distance.</p></li>
-<li id="li-145"><p id="p-derived-li-145">Since <span class="process-math">\(x,y\)</span> satisfy <span class="process-math">\(y^2=x^2+1\text{,}\)</span> we can write the distance as a function of <span class="process-math">\(x\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-83">
+<li id="li-112"><p id="p-derived-li-112">Since <span class="process-math">\(x,y\)</span> satisfy <span class="process-math">\(y^2=x^2+1\text{,}\)</span> we can write the distance as a function of <span class="process-math">\(x\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-81">
 \begin{align*}
 \ell^2 \amp= (x-2)^2 + y^2 = (x-2)^2 + (x^2+1)
 \end{align*}
 </div>Notice that as <span class="process-math">\(x \to \pm \infty\)</span> the squared-distance <span class="process-math">\(\ell^2 \to +\infty\text{.}\)</span></p></li>
-<li id="li-146"><p id="p-derived-li-146">Since the squared-distance is a polynomial it will not have any singular points, only critical points. The derivative is<div class="displaymath process-math" data-contains-math-knowls="" id="md-84">
+<li id="li-113"><p id="p-derived-li-113">Since the squared-distance is a polynomial it will not have any singular points, only critical points. The derivative is<div class="displaymath process-math" data-contains-math-knowls="" id="md-82">
 \begin{align*}
 \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-2) + 2x = 4x-4
 \end{align*}
 </div>so the only critical point occurs at <span class="process-math">\(x=1\text{.}\)</span></p></li>
-<li id="li-147"><p id="p-derived-li-147">When <span class="process-math">\(x=1, y=\pm \sqrt{2}\)</span> and the distance is<div class="displaymath process-math" data-contains-math-knowls="" id="md-85">
+<li id="li-114"><p id="p-derived-li-114">When <span class="process-math">\(x=1, y=\pm \sqrt{2}\)</span> and the distance is<div class="displaymath process-math" data-contains-math-knowls="" id="md-83">
 \begin{align*}
 \ell^2 \amp= (1-2)^2 + (1+1) = 3 \amp \ell=\sqrt{3}
 \end{align*}
@@ -768,47 +783,47 @@ x^2-2x+5 \amp= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinrain"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinrain"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing a trough.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinrain"><article class="example example-like"><p id="p-155">A water trough is to be constructed from a metal sheet of width <span class="process-math">\(45\)</span> cm by bending up one third of the sheet on each side through an angle <span class="process-math">\(\theta\text{.}\)</span>  Which <span class="process-math">\(\theta\)</span> will allow the trough to carry the maximum amount of water?</p>
-<p id="p-156"><em class="alert">Solution</em> Clearly <span class="process-math">\(0 \leq \theta \leq \pi\text{,}\)</span> so we are back in the domain <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 7 </sup></a> of Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinrain"><article class="example example-like"><p id="p-198">A water trough is to be constructed from a metal sheet of width <span class="process-math">\(45\)</span> cm by bending up one third of the sheet on each side through an angle <span class="process-math">\(\theta\text{.}\)</span>  Which <span class="process-math">\(\theta\)</span> will allow the trough to carry the maximum amount of water?</p>
+<p id="p-199"><em class="alert">Solution</em> Clearly <span class="process-math">\(0 \leq \theta \leq \pi\text{,}\)</span> so we are back in the domain <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 7 </sup></a> of Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>.</p>
 <ul class="disc">
-<li id="li-148">
-<p id="p-157">After reading the problem carefully we should realise that it is really asking us to maximise the cross-sectional area. A figure really helps.</p>
+<li id="li-115">
+<p id="p-200">After reading the problem carefully we should realise that it is really asking us to maximise the cross-sectional area. A figure really helps.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/gutter.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-149"><p id="p-derived-li-149">From this we are led to define the height <span class="process-math">\(h\)</span> <span class="process-math">\(cm\)</span> and cross-sectional area <span class="process-math">\(A\)</span> <span class="process-math">\(cm^2\text{.}\)</span> Both are functions of <span class="process-math">\(\theta\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-86">
+<li id="li-116"><p id="p-derived-li-116">From this we are led to define the height <span class="process-math">\(h\)</span> <span class="process-math">\(cm\)</span> and cross-sectional area <span class="process-math">\(A\)</span> <span class="process-math">\(cm^2\text{.}\)</span> Both are functions of <span class="process-math">\(\theta\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-84">
 \begin{align*}
 h \amp= 15 \sin \theta
 \end{align*}
-</div>while the area can be computed as the sum of the central <span class="process-math">\(15 \times h\)</span> rectangle, plus two triangles. Each triangle has height <span class="process-math">\(h\)</span> and base <span class="process-math">\(15 \cos \theta\text{.}\)</span> Hence<div class="displaymath process-math" data-contains-math-knowls="" id="md-87">
+</div>while the area can be computed as the sum of the central <span class="process-math">\(15 \times h\)</span> rectangle, plus two triangles. Each triangle has height <span class="process-math">\(h\)</span> and base <span class="process-math">\(15 \cos \theta\text{.}\)</span> Hence<div class="displaymath process-math" data-contains-math-knowls="" id="md-85">
 \begin{align*}
 A \amp= 15h + 2 \cdot \frac{1}{2} \cdot h \cdot 15 \cos \theta\\
 \amp= 15h \left(1 + \cos \theta \right)
 \end{align*}
 </div></p></li>
-<li id="li-150"><p id="p-derived-li-150">Since <span class="process-math">\(h = 15\sin \theta\)</span> we can rewrite the area as a function of just <span class="process-math">\(\theta\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-88">
+<li id="li-117"><p id="p-derived-li-117">Since <span class="process-math">\(h = 15\sin \theta\)</span> we can rewrite the area as a function of just <span class="process-math">\(\theta\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-86">
 \begin{align*}
 A(\theta) \amp= 225 \sin\theta \left(1 + \cos \theta \right)
 \end{align*}
 </div>where <span class="process-math">\(0 \leq \theta \leq \pi\text{.}\)</span></p></li>
-<li id="li-151"><p id="p-derived-li-151">Now we use Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. The ends of the interval give<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-89">
+<li id="li-118"><p id="p-derived-li-118">Now we use Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. The ends of the interval give<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-87">
 \begin{align*}
 A(0) \amp= 225 \sin 0 (1 + \cos 0) = 0\\
 A(\pi) \amp= 225 \sin \pi ( 1+ \cos \pi) = 0
 \end{align*}
-</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-90">
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-88">
 \begin{align*}
 A'(\theta) \amp= 225 \cos\theta \cdot (1+\cos\theta) + 225 \sin\theta \cdot(-\sin\theta)\\
 \amp= 225 \left[ \cos \theta + \cos^2\theta - \sin^2\theta \right]
 \qquad\text {recall }\sin^2\theta = 1 - \cos^2\theta\\
 \amp= 225 \left[ \cos\theta +2\cos^2\theta -1 \right]
 \end{align*}
-</div>This is a continuous function, so there are no singular points. However we can still hunt for critical points by solving <span class="process-math">\(A'(\theta) = 0\text{.}\)</span> That is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-91">
+</div>This is a continuous function, so there are no singular points. However we can still hunt for critical points by solving <span class="process-math">\(A'(\theta) = 0\text{.}\)</span> That is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-89">
 \begin{align*}
 2\cos^2\theta + \cos \theta -1 \amp= 0 \amp \text{factor carefully}\\
 (2\cos\theta -1)(\cos \theta+1) \amp= 0
 \end{align*}
 </div>Hence we must have <span class="process-math">\(\cos \theta =-1\)</span> or <span class="process-math">\(\cos\theta = \half\text{.}\)</span> On the domain <span class="process-math">\(0\leq \theta
-\leq \pi\text{,}\)</span> this means <span class="process-math">\(\theta = \pi/3\)</span> or <span class="process-math">\(\theta = \pi\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-92">
+\leq \pi\text{,}\)</span> this means <span class="process-math">\(\theta = \pi/3\)</span> or <span class="process-math">\(\theta = \pi\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-90">
 \begin{align*}
 A(\pi) \amp= 0\\
 A(\pi/3) \amp= 225 \sin(\pi/3) (1 + \cos(\pi/3))\\
@@ -816,54 +831,54 @@ A(\pi/3) \amp= 225 \sin(\pi/3) (1 + \cos(\pi/3))\\
 \amp= 225 \cdot \frac{3\sqrt{3}}{4} \approx 292.28
 \end{align*}
 </div></p></li>
-<li id="li-152"><p id="p-derived-li-152">Thus the cross-sectional area is maximised when <span class="process-math">\(\theta = \dfrac{\pi}{3}\text{.}\)</span></p></li>
+<li id="li-119"><p id="p-derived-li-119">Thus the cross-sectional area is maximised when <span class="process-math">\(\theta = \dfrac{\pi}{3}\text{.}\)</span></p></li>
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinDD"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinDD"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Closest and farthest points on a curve to a given point.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinDD"><article class="example example-like"><p id="p-158">Find the points on the ellipse <span class="process-math">\(\frac{x^2}{4}+y^2=1\)</span> that are nearest to and farthest from the point <span class="process-math">\((1,0)\text{.}\)</span></p>
-<p id="p-159"><em class="alert">Solution</em> While this is another distance problem, the possible values of <span class="process-math">\(x,y\)</span> are bounded, so we need Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> rather than Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinDD"><article class="example example-like"><p id="p-201">Find the points on the ellipse <span class="process-math">\(\frac{x^2}{4}+y^2=1\)</span> that are nearest to and farthest from the point <span class="process-math">\((1,0)\text{.}\)</span></p>
+<p id="p-202"><em class="alert">Solution</em> While this is another distance problem, the possible values of <span class="process-math">\(x,y\)</span> are bounded, so we need Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a> rather than Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>.</p>
 <ul class="disc">
-<li id="li-153">
-<p id="p-160">We start by drawing a picture:</p>
+<li id="li-120">
+<p id="p-203">We start by drawing a picture:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/ellipseMaxMin.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-154"><p id="p-derived-li-154">Let <span class="process-math">\(\ell\)</span> be the distance from the point <span class="process-math">\((x,y)\)</span> on the ellipse to the point <span class="process-math">\((1,0)\text{.}\)</span> As was the case above, we will maximise the squared-distance.<div class="displaymath process-math" data-contains-math-knowls="" id="md-93">
+<li id="li-121"><p id="p-derived-li-121">Let <span class="process-math">\(\ell\)</span> be the distance from the point <span class="process-math">\((x,y)\)</span> on the ellipse to the point <span class="process-math">\((1,0)\text{.}\)</span> As was the case above, we will maximise the squared-distance.<div class="displaymath process-math" data-contains-math-knowls="" id="md-91">
 \begin{align*}
 \ell^2 \amp= (x-1)^2 + y^2.
 \end{align*}
 </div></p></li>
-<li id="li-155">
-<p id="p-161">Since <span class="process-math">\((x,y)\)</span> lie on the ellipse we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-94">
+<li id="li-122">
+<p id="p-204">Since <span class="process-math">\((x,y)\)</span> lie on the ellipse we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-92">
 \begin{gather*}
 \frac{x^2}{4}+y^2=1
 \end{gather*}
 </div>
 <p class="continuation">Note that this also shows that <span class="process-math">\(-2 \leq x \leq 2\)</span> and <span class="process-math">\(-1 \leq y \leq 1\text{.}\)</span></p>
-<p id="p-162">Isolating <span class="process-math">\(y^2\)</span> and substituting this into our expression for <span class="process-math">\(\ell^2\)</span> gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-95">
+<p id="p-205">Isolating <span class="process-math">\(y^2\)</span> and substituting this into our expression for <span class="process-math">\(\ell^2\)</span> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-93">
 \begin{align*}
 \ell^2 \amp= (x-1)^2 + \underbrace{1-x^2/4}_{=y^2}.
 \end{align*}
 </div>
 </li>
-<li id="li-156"><p id="p-derived-li-156">Now we can apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. The endpoints of the domain give<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-96">
+<li id="li-123"><p id="p-derived-li-123">Now we can apply Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>. The endpoints of the domain give<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-94">
 \begin{align*}
 \ell^2(-2) \amp= (-2-1)^2 + 1 - (-2)^2/4 = 3^2+1-1 = 9\\
 \ell^2(2) \amp= (2-1)^2 + 1 - 2^2/4 = 1+1-1 = 1
 \end{align*}
-</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-97">
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-95">
 \begin{align*}
 \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-1) - x/2 = \frac{3x}{2} - 2
 \end{align*}
-</div>Thus there are no singular points, but there is a critical point at <span class="process-math">\(x = 4/3\text{.}\)</span> The corresponding squared-distance is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-98">
+</div>Thus there are no singular points, but there is a critical point at <span class="process-math">\(x = 4/3\text{.}\)</span> The corresponding squared-distance is<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_find_maxmin.html" id="md-96">
 \begin{align*}
 \ell^2(4/3) \amp= \left( \frac{4}{3}-1\right)^2 +1 - \frac{(4/3)^2}{4}\\
 \amp= (1/3)^2 + 1 - (4/9) = 6/9 = 2/3.
 \end{align*}
 </div></p></li>
-<li id="li-157">
-<p id="p-163">To summarise (and giving distances and coordinates of points):</p>
+<li id="li-124">
+<p id="p-206">To summarise (and giving distances and coordinates of points):</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(x\)</span></td>
@@ -886,91 +901,91 @@ A(\pi/3) \amp= 225 \sin(\pi/3) (1 + \cos(\pi/3))\\
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 </tr>
 </table></div></div></div>
-<p id="p-164">The point of maximum distance is <span class="process-math">\((-2,0)\text{,}\)</span> and the point of minimum distance is <span class="process-math">\(\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)\text{.}\)</span></p>
+<p id="p-207">The point of maximum distance is <span class="process-math">\((-2,0)\text{,}\)</span> and the point of minimum distance is <span class="process-math">\(\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)\text{.}\)</span></p>
 </li>
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinE"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinE"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span><span class="space"> </span><span class="title">Largest rectangle inside a triangle.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinE"><article class="example example-like"><p id="p-165">Find the dimensions of the rectangle of largest area that can be inscribed in an equilateral triangle of side <span class="process-math">\(a\)</span> if one side of the rectangle lies on the base of the triangle.</p>
-<p id="p-166"><em class="alert">Solution</em> Since the rectangle must sit inside the triangle, its dimensions are bounded and we will end up using Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinE"><article class="example example-like"><p id="p-208">Find the dimensions of the rectangle of largest area that can be inscribed in an equilateral triangle of side <span class="process-math">\(a\)</span> if one side of the rectangle lies on the base of the triangle.</p>
+<p id="p-209"><em class="alert">Solution</em> Since the rectangle must sit inside the triangle, its dimensions are bounded and we will end up using Corollary <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.13">Corolário 2.13</a>.</p>
 <ul class="disc">
-<li id="li-158">
-<p id="p-167">Carefully draw a picture:</p>
+<li id="li-125">
+<p id="p-210">Carefully draw a picture:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
 <div class="sbspanel top" style="width:41.025641025641%;"><img src="images/inscribedB.svg" role="img" class="contained"></div>
 <div class="sbspanel top" style="width:56.4102564102564%;"><img src="images/inscribed.svg" role="img" class="contained"></div>
 </div></div>
-<p id="p-168">We have drawn (on the left) the triangle in the <span class="process-math">\(xy\)</span>-plane with its base on the <span class="process-math">\(x\)</span>-axis. The base has been drawn running from <span class="process-math">\((-a/2,0)\)</span> to <span class="process-math">\((a/2,0)\)</span> so its centre lies at the origin. A little Pythagoras (or a little trigonometry) tells us that the height of the triangle is</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-99">
+<p id="p-211">We have drawn (on the left) the triangle in the <span class="process-math">\(xy\)</span>-plane with its base on the <span class="process-math">\(x\)</span>-axis. The base has been drawn running from <span class="process-math">\((-a/2,0)\)</span> to <span class="process-math">\((a/2,0)\)</span> so its centre lies at the origin. A little Pythagoras (or a little trigonometry) tells us that the height of the triangle is</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-97">
 \begin{align*}
 \sqrt{a^2-(a/2)^2} \amp= \frac{\sqrt{3}}{2}\cdot a = a\cdot \sin\frac{\pi}{3}
 \end{align*}
 </div>
 <p class="continuation">Thus the vertex at the top of the triangle lies at <span class="process-math">\(\left(0,\frac{\sqrt{3}}{2}\cdot a\right)\text{.}\)</span></p>
 </li>
-<li id="li-159"><p id="p-derived-li-159">If we construct a rectangle that does not touch the sides of the triangle, then we can increase the dimensions of the rectangle until it touches the triangle and so make its area larger. Thus we can assume that the two top corners of the rectangle touch the triangle as drawn in the right-hand figure above.</p></li>
-<li id="li-160"><p id="p-derived-li-160">Now let the rectangle be <span class="process-math">\(2x\)</span> wide and <span class="process-math">\(y\)</span> high. And let <span class="process-math">\(A\)</span> denote its area. Clearly<div class="displaymath process-math" data-contains-math-knowls="" id="md-100">
+<li id="li-126"><p id="p-derived-li-126">If we construct a rectangle that does not touch the sides of the triangle, then we can increase the dimensions of the rectangle until it touches the triangle and so make its area larger. Thus we can assume that the two top corners of the rectangle touch the triangle as drawn in the right-hand figure above.</p></li>
+<li id="li-127"><p id="p-derived-li-127">Now let the rectangle be <span class="process-math">\(2x\)</span> wide and <span class="process-math">\(y\)</span> high. And let <span class="process-math">\(A\)</span> denote its area. Clearly<div class="displaymath process-math" data-contains-math-knowls="" id="md-98">
 \begin{align*}
 A \amp= 2xy.
 \end{align*}
 </div>where <span class="process-math">\(0 \leq x \leq a/2\)</span> and <span class="process-math">\(0\leq y\leq \frac{\sqrt{3}}{2}a\text{.}\)</span></p></li>
-<li id="li-161"><p id="p-derived-li-161">Our construction means that the top-right corner of the rectangle will have coordinates <span class="process-math">\((x,y)\)</span> and lie on the line joining the top vertex of the triangle at <span class="process-math">\((0,\sqrt{3}a/2)\)</span> to the bottom-right vertex at <span class="process-math">\((a/2,0)\text{.}\)</span> In order to write the area as a function of <span class="process-math">\(x\)</span> alone, we need the equation for this line since it will tell us how to write <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span> The line has slope<div class="displaymath process-math" data-contains-math-knowls="" id="md-101">
+<li id="li-128"><p id="p-derived-li-128">Our construction means that the top-right corner of the rectangle will have coordinates <span class="process-math">\((x,y)\)</span> and lie on the line joining the top vertex of the triangle at <span class="process-math">\((0,\sqrt{3}a/2)\)</span> to the bottom-right vertex at <span class="process-math">\((a/2,0)\text{.}\)</span> In order to write the area as a function of <span class="process-math">\(x\)</span> alone, we need the equation for this line since it will tell us how to write <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\text{.}\)</span> The line has slope<div class="displaymath process-math" data-contains-math-knowls="" id="md-99">
 \begin{align*}
 \text{slope} \amp= \frac{\sqrt{3}a/2 - 0}{0-a/2} = -\sqrt{3}.
 \end{align*}
-</div>and passes through the point <span class="process-math">\((0,\sqrt{3}a/2)\text{,}\)</span> so any point <span class="process-math">\((x,y)\)</span> on that line satisfies:<div class="displaymath process-math" data-contains-math-knowls="" id="md-102">
+</div>and passes through the point <span class="process-math">\((0,\sqrt{3}a/2)\text{,}\)</span> so any point <span class="process-math">\((x,y)\)</span> on that line satisfies:<div class="displaymath process-math" data-contains-math-knowls="" id="md-100">
 \begin{align*}
 y \amp= -\sqrt{3}x + \frac{\sqrt{3}}{2}a.
 \end{align*}
 </div></p></li>
-<li id="li-162"><p id="p-derived-li-162">We can now write the area as a function of <span class="process-math">\(x\)</span> alone<div class="displaymath process-math" data-contains-math-knowls="" id="md-103">
+<li id="li-129"><p id="p-derived-li-129">We can now write the area as a function of <span class="process-math">\(x\)</span> alone<div class="displaymath process-math" data-contains-math-knowls="" id="md-101">
 \begin{align*}
 A(x) \amp= 2x \left( -\sqrt{3}x + \frac{\sqrt{3}}{2}a \right)\\
 \amp= \sqrt{3} x(a-2x).
 \end{align*}
 </div>with <span class="process-math">\(0\leq x \leq a/2\text{.}\)</span></p></li>
-<li id="li-163"><p id="p-derived-li-163">The ends of the domain give:<div class="displaymath process-math" data-contains-math-knowls="" id="md-104">
+<li id="li-130"><p id="p-derived-li-130">The ends of the domain give:<div class="displaymath process-math" data-contains-math-knowls="" id="md-102">
 \begin{align*}
 A(0) \amp= 0 \amp A(a/2) \amp= 0.
 \end{align*}
-</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="" id="md-105">
+</div>The derivative is<div class="displaymath process-math" data-contains-math-knowls="" id="md-103">
 \begin{align*}
 A'(x) \amp= \sqrt{3} \left( x \cdot (-2) + 1 \cdot (a-2x) \right) = \sqrt{3}
 (a-4x).
 \end{align*}
-</div>Since this is a polynomial there are no singular points, but there is a critical point at <span class="process-math">\(x=a/4\text{.}\)</span> There<div class="displaymath process-math" data-contains-math-knowls="" id="md-106">
+</div>Since this is a polynomial there are no singular points, but there is a critical point at <span class="process-math">\(x=a/4\text{.}\)</span> There<div class="displaymath process-math" data-contains-math-knowls="" id="md-104">
 \begin{align*}
 A(a/4) \amp= \sqrt{3} \cdot \frac{a}{4} \cdot (a - a/2) = \sqrt{3} \cdot
 \frac{a^2}{8}.\\
 y \amp= -\sqrt{3}\cdot (a/4) + \frac{\sqrt{3}}{2} a = \sqrt{3}\cdot \frac{a}{4}.
 \end{align*}
 </div></p></li>
-<li id="li-164">
-<p id="p-169">Checking the question again, we see that we are asked for the dimensions rather than the area, so the answer is <span class="process-math">\(2x \times y\text{:}\)</span></p>
-<blockquote class="blockquote" id="blockquote-9"><p id="p-170">The largest such rectangle has dimensions <span class="process-math">\(\frac{a}{2} \times \frac{\sqrt{3}
+<li id="li-131">
+<p id="p-212">Checking the question again, we see that we are asked for the dimensions rather than the area, so the answer is <span class="process-math">\(2x \times y\text{:}\)</span></p>
+<blockquote class="blockquote" id="blockquote-9"><p id="p-213">The largest such rectangle has dimensions <span class="process-math">\(\frac{a}{2} \times \frac{\sqrt{3}
 a}{4}\text{.}\)</span></p></blockquote>
 </li>
 </ul></article></div>
-<p id="p-171">This next one is a good physics example. In it we will derive Snell's Law <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 8 </sup></a> from Fermat's principle <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 9 </sup></a> .</p>
+<p id="p-214">This next one is a good physics example. In it we will derive Snell's Law <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 8 </sup></a> from Fermat's principle <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 9 </sup></a> .</p>
 <article class="example example-like" id="APPglobalMaxMinF"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinF"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span><span class="space"> </span><span class="title">Snell's law.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinF"><article class="example example-like"><p id="p-172">Consider the figure below which shows the trajectory of a ray of light as it passes through two different mediums (say air and water).</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinF"><article class="example example-like"><p id="p-215">Consider the figure below which shows the trajectory of a ray of light as it passes through two different mediums (say air and water).</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/snell.svg" role="img" class="contained"></div></div></div>
-<p id="p-173">Let <span class="process-math">\(c_a\)</span> be the speed of light in air and <span class="process-math">\(c_w\)</span> be the speed of light in water. Fermat's principle states that a ray of light will always travel along a path that minimises the time taken. So if a ray of light travels from <span class="process-math">\(P\)</span> (in air) to <span class="process-math">\(Q\)</span> (in water) then it will “choose” the point <span class="process-math">\(O\)</span> (on the interface) so as to minimise the total time taken. Use this idea to show Snell's law,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-107">
+<p id="p-216">Let <span class="process-math">\(c_a\)</span> be the speed of light in air and <span class="process-math">\(c_w\)</span> be the speed of light in water. Fermat's principle states that a ray of light will always travel along a path that minimises the time taken. So if a ray of light travels from <span class="process-math">\(P\)</span> (in air) to <span class="process-math">\(Q\)</span> (in water) then it will “choose” the point <span class="process-math">\(O\)</span> (on the interface) so as to minimise the total time taken. Use this idea to show Snell's law,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-105">
 \begin{align*}
 \frac{\sin\theta_i}{\sin\theta_r}\amp=\frac{c_a}{c_w}
 \end{align*}
 </div>
 <p class="continuation">where <span class="process-math">\(\theta_i\)</span> is the angle of incidence and <span class="process-math">\(\theta_r\)</span> is the angle of refraction (as illustrated in the figure above).</p>
-<p id="p-174"><em class="alert">Solution</em> This problem is a little more abstract than the others we have examined, but we can still apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>.</p>
+<p id="p-217"><em class="alert">Solution</em> This problem is a little more abstract than the others we have examined, but we can still apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>.</p>
 <ul class="disc">
-<li id="li-165">
-<p id="p-175">We are given a figure in the statement of the problem and it contains all the relevant points and angles. However it will simplify things if we decide on a coordinate system. Let's assume that the point <span class="process-math">\(O\)</span> lies on the <span class="process-math">\(x\)</span>-axis, at coordinates <span class="process-math">\((x,0)\text{.}\)</span> The point <span class="process-math">\(P\)</span> then lies above the axis at <span class="process-math">\((X_P,+Y_P)\text{,}\)</span> while <span class="process-math">\(Q\)</span> lies below the axis at <span class="process-math">\((X_Q,-Y_Q)\text{.}\)</span> This is drawn below.</p>
+<li id="li-132">
+<p id="p-218">We are given a figure in the statement of the problem and it contains all the relevant points and angles. However it will simplify things if we decide on a coordinate system. Let's assume that the point <span class="process-math">\(O\)</span> lies on the <span class="process-math">\(x\)</span>-axis, at coordinates <span class="process-math">\((x,0)\text{.}\)</span> The point <span class="process-math">\(P\)</span> then lies above the axis at <span class="process-math">\((X_P,+Y_P)\text{,}\)</span> while <span class="process-math">\(Q\)</span> lies below the axis at <span class="process-math">\((X_Q,-Y_Q)\text{.}\)</span> This is drawn below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/snellB.svg" role="img" class="contained"></div></div></div>
 </li>
-<li id="li-166"><p id="p-derived-li-166">The statement of Snell's law contains terms <span class="process-math">\(\sin \theta_i\)</span> and <span class="process-math">\(\sin
-\theta_r\text{,}\)</span> so it is a good idea for us to see how to express these in terms of the coordinates we have just introduced:<div class="displaymath process-math" data-contains-math-knowls="" id="md-108">
+<li id="li-133"><p id="p-derived-li-133">The statement of Snell's law contains terms <span class="process-math">\(\sin \theta_i\)</span> and <span class="process-math">\(\sin
+\theta_r\text{,}\)</span> so it is a good idea for us to see how to express these in terms of the coordinates we have just introduced:<div class="displaymath process-math" data-contains-math-knowls="" id="md-106">
 \begin{align*}
 \sin \theta_i \amp=  \frac{\text{opposite}}{\text{hypotenuse}}
 = \frac{(x-X_P)}{\sqrt{(X_P-x)^2 + Y_P^2}}\\
@@ -978,31 +993,31 @@ a}{4}\text{.}\)</span></p></blockquote>
 = \frac{(X_Q-x)}{\sqrt{(X_Q-x)^2 + Y_Q^2}}
 \end{align*}
 </div></p></li>
-<li id="li-167"><p id="p-derived-li-167">Let <span class="process-math">\(\ell_P\)</span> denote the distance <span class="process-math">\(PO\text{,}\)</span> and <span class="process-math">\(\ell_Q\)</span> denote the distance <span class="process-math">\(OQ\text{.}\)</span> Then we have<div class="displaymath process-math" data-contains-math-knowls="" id="md-109">
+<li id="li-134"><p id="p-derived-li-134">Let <span class="process-math">\(\ell_P\)</span> denote the distance <span class="process-math">\(PO\text{,}\)</span> and <span class="process-math">\(\ell_Q\)</span> denote the distance <span class="process-math">\(OQ\text{.}\)</span> Then we have<div class="displaymath process-math" data-contains-math-knowls="" id="md-107">
 \begin{align*}
 \ell_P \amp= \sqrt{(X_P-x)^2+Y_P^2}\\
 \ell_Q \amp= \sqrt{(X_Q-x)^2+Y_Q^2}
 \end{align*}
-</div>If we then denote the total time taken by <span class="process-math">\(T\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-110">
+</div>If we then denote the total time taken by <span class="process-math">\(T\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="" id="md-108">
 \begin{align*}
 T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}
 = \frac{1}{c_a}\sqrt{(X_P-x)^2+Y_P^2} + \frac{1}{c_w}\sqrt{(X_Q-x)^2+Y_Q^2}
 \end{align*}
 </div>which is written as a function of <span class="process-math">\(x\)</span> since all the other terms are constants.</p></li>
-<li id="li-168"><p id="p-derived-li-168">Notice that as <span class="process-math">\(x \to +\infty\)</span> or <span class="process-math">\(x\to-\infty\)</span> the total time <span class="process-math">\(T \to
-\infty\)</span> and so we can apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>. The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-111">
+<li id="li-135"><p id="p-derived-li-135">Notice that as <span class="process-math">\(x \to +\infty\)</span> or <span class="process-math">\(x\to-\infty\)</span> the total time <span class="process-math">\(T \to
+\infty\)</span> and so we can apply Theorem <a href="" class="xref" data-knowl="./knowl/thm_maxMinOnR.html" title="Teorema 2.17">Teorema 2.17</a>. The derivative is<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-109">
 \begin{align*}
 \dfrac{\dd T}{\dd x} \amp=
 \frac{1}{c_a} \frac{-2(X_P-x)}{2\sqrt{(X_P-x)^2+Y_P^2}} +
 \frac{1}{c_w} \frac{-2(X_Q-x)}{2\sqrt{(X_Q-x)^2+Y_Q^2}}
 \end{align*}
-</div>Notice that the terms inside the square-roots cannot be zero or negative since they are both sums of squares and <span class="process-math">\(Y_P,Y_Q  \gt  0\text{.}\)</span> So there are no singular points, but there is a critical point when <span class="process-math">\(T'(x) = 0\text{,}\)</span> namely when<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-112">
+</div>Notice that the terms inside the square-roots cannot be zero or negative since they are both sums of squares and <span class="process-math">\(Y_P,Y_Q  \gt  0\text{.}\)</span> So there are no singular points, but there is a critical point when <span class="process-math">\(T'(x) = 0\text{,}\)</span> namely when<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-110">
 \begin{align*}
 0 \amp= \frac{1}{c_a} \frac{X_P-x}{\sqrt{(X_P-x)^2+Y_P^2}} +
 \frac{1}{c_w} \frac{X_Q-x}{\sqrt{(X_Q-x)^2+Y_Q^2}}\\
 \amp= \frac{-\sin\theta_i}{c_a} + \frac{\sin\theta_r}{c_w}
 \end{align*}
-</div>Rearrange this to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-113">
+</div>Rearrange this to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_maxMinOnR.html" id="md-111">
 \begin{align*}
 \frac{\sin\theta_i}{c_a} \amp= \frac{\sin\theta_r}{c_w}\\
 \end{align*}
@@ -1014,32 +1029,32 @@ T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinG"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinG"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Finding the best viewing angle.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinG"><article class="example example-like"><p id="p-176">The Statue of Liberty has height <span class="process-math">\(46\)</span>m and stands on a <span class="process-math">\(47\)</span>m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer's eye, which is <span class="process-math">\(1.5\)</span>m above the base of the pedestal?</p>
-<p id="p-177"><em class="alert">Solution</em> Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinG"><article class="example example-like"><p id="p-219">The Statue of Liberty has height <span class="process-math">\(46\)</span>m and stands on a <span class="process-math">\(47\)</span>m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer's eye, which is <span class="process-math">\(1.5\)</span>m above the base of the pedestal?</p>
+<p id="p-220"><em class="alert">Solution</em> Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.</p>
 <ul class="disc">
-<li id="li-169">
-<p id="p-178">Draw a careful picture <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 10 </sup></a></p>
+<li id="li-136">
+<p id="p-221">Draw a careful picture <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 10 </sup></a></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/liberty.svg" role="img" class="contained"></div></div></div>
-<p id="p-179">and we can put in the relevant lengths and angles.</p>
+<p id="p-222">and we can put in the relevant lengths and angles.</p>
 </li>
-<li id="li-170"><p id="p-derived-li-170">The height of the statue is <span class="process-math">\(h = 46\)</span>m, and the height of the pedestal (above the eye) is <span class="process-math">\(p = 47-1.5 = 45.5\)</span>m. The horizontal distance from the statue to the eye is <span class="process-math">\(x\text{.}\)</span> There are two relevant angles. First <span class="process-math">\(\theta\)</span> is the angle subtended by the statue, while <span class="process-math">\(\varphi\)</span> is the angle subtended by the portion of the pedestal above the eye.</p></li>
-<li id="li-171"><p id="p-derived-li-171">Some trigonometry gives us<div class="displaymath process-math" data-contains-math-knowls="" id="md-114">
+<li id="li-137"><p id="p-derived-li-137">The height of the statue is <span class="process-math">\(h = 46\)</span>m, and the height of the pedestal (above the eye) is <span class="process-math">\(p = 47-1.5 = 45.5\)</span>m. The horizontal distance from the statue to the eye is <span class="process-math">\(x\text{.}\)</span> There are two relevant angles. First <span class="process-math">\(\theta\)</span> is the angle subtended by the statue, while <span class="process-math">\(\varphi\)</span> is the angle subtended by the portion of the pedestal above the eye.</p></li>
+<li id="li-138"><p id="p-derived-li-138">Some trigonometry gives us<div class="displaymath process-math" data-contains-math-knowls="" id="md-112">
 \begin{align*}
 \tan \varphi \amp= \frac{p}{x}\\
 \tan (\varphi+\theta) \amp= \frac{p+h}{x}
 \end{align*}
-</div>Thus<div class="displaymath process-math" data-contains-math-knowls="" id="md-115">
+</div>Thus<div class="displaymath process-math" data-contains-math-knowls="" id="md-113">
 \begin{align*}
 \varphi \amp= \arctan \frac{p}{x}\\
 \varphi+\theta \amp= \arctan \frac{p+h}{x}
 \end{align*}
-</div>and so<div class="displaymath process-math" data-contains-math-knowls="" id="md-116">
+</div>and so<div class="displaymath process-math" data-contains-math-knowls="" id="md-114">
 \begin{align*}
 \theta \amp= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.
 \end{align*}
 </div></p></li>
-<li id="li-172">
-<p id="p-180">If we allow the viewer to stand at any point in front of the statue, then <span class="process-math">\(0\le x
+<li id="li-139">
+<p id="p-223">If we allow the viewer to stand at any point in front of the statue, then <span class="process-math">\(0\le x
 \lt \infty\text{.}\)</span> Further observe that as <span class="process-math">\(x \rightarrow \infty\)</span> or <span class="process-math">\(x \rightarrow 0\)</span> the angle <span class="process-math">\(\theta \rightarrow 0\text{,}\)</span>  since</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -1055,8 +1070,8 @@ T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}
 \end{equation*}
 </div>
 <p class="continuation">Clearly the largest value of <span class="process-math">\(\theta\)</span> will be strictly positive and so has to be taken for some <span class="process-math">\(0 \lt x \lt \infty\text{.}\)</span> (Note the strict inequalities.) This <span class="process-math">\(x\)</span> will be a local maximum as well as a global maximum. As <span class="process-math">\(\theta\)</span> is not singular at any <span class="process-math">\(0 \lt x \lt \infty\text{,}\)</span> we need only search for critical points.</p>
-<p id="p-181">A careful application of the chain rule shows that the derivative is</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-117">
+<p id="p-224">A careful application of the chain rule shows that the derivative is</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-115">
 \begin{align*}
 \dfrac{\dd \theta}{\dd x}
 \amp=
@@ -1066,7 +1081,7 @@ T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}
 \end{align*}
 </div>
 <p class="continuation">So a critical point occurs when</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-118">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-116">
 \begin{align*}
 \frac{(p+h)}{x^2+(p+h)^2} \amp= \frac{p}{x^2+p^2} \amp \text{cross multiply}\\
 (p+h)(x^2+p^2) \amp= p(x^2+(p+h)^2) \amp \text{collect $x$ terms}\\
@@ -1078,35 +1093,35 @@ x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m
 \end{align*}
 </div>
 </li>
-<li id="li-173"><p id="p-derived-li-173">Thus the best place to stand approximately <span class="process-math">\(64.9\)</span>m in front or behind the statue. At that point <span class="process-math">\(\theta \approx 0.348\)</span> radians or <span class="process-math">\(19.9^\circ\text{.}\)</span></p></li>
+<li id="li-140"><p id="p-derived-li-140">Thus the best place to stand approximately <span class="process-math">\(64.9\)</span>m in front or behind the statue. At that point <span class="process-math">\(\theta \approx 0.348\)</span> radians or <span class="process-math">\(19.9^\circ\text{.}\)</span></p></li>
 </ul></article></div>
 <article class="example example-like" id="APPglobalMaxMinJ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinJ"><h4 class="heading">
 <span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Moving objects around corners.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinJ"><article class="example example-like"><p id="p-182">Find the length of the longest rod that can be carried horizontally (no tilting allowed) from a corridor <span class="process-math">\(3\)</span>m wide into a corridor <span class="process-math">\(2\)</span>m wide. The two corridors are perpendicular to each other.</p>
-<p id="p-183"><em class="alert">Solution</em></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinJ"><article class="example example-like"><p id="p-225">Find the length of the longest rod that can be carried horizontally (no tilting allowed) from a corridor <span class="process-math">\(3\)</span>m wide into a corridor <span class="process-math">\(2\)</span>m wide. The two corridors are perpendicular to each other.</p>
+<p id="p-226"><em class="alert">Solution</em></p>
 <ul class="disc">
-<li id="li-174">
-<p id="p-184">Suppose that we are carrying the rod around the corner, then if the rod is as long as possible it must touch the corner and the outside walls of both corridors. A picture of this is show below.</p>
+<li id="li-141">
+<p id="p-227">Suppose that we are carrying the rod around the corner, then if the rod is as long as possible it must touch the corner and the outside walls of both corridors. A picture of this is show below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="images/corridor.svg" role="img" class="contained"></div></div></div>
-<p id="p-185">You can see that this gives rise to two similar triangles, one inside each corridor. Also the maximum length of the rod changes with the angle it makes with the walls of the corridor.</p>
+<p id="p-228">You can see that this gives rise to two similar triangles, one inside each corridor. Also the maximum length of the rod changes with the angle it makes with the walls of the corridor.</p>
 </li>
-<li id="li-175"><p id="p-derived-li-175">Suppose that the angle between the rod and the inner wall of the <span class="process-math">\(3\)</span>m corridor is <span class="process-math">\(\theta\text{,}\)</span> as illustrated in the figure above. At the same time it will make an angle of <span class="process-math">\(\frac{\pi}{2}-\theta\)</span> with the outer wall of the 2m corridor. Denote by <span class="process-math">\(\ell_1(\theta)\)</span> the length of the part of the rod forming the hypotenuse of the upper triangle in the figure above. Similarly, denote by <span class="process-math">\(\ell_2(\theta)\)</span> the length of the part of the rod forming the hypotenuse of the lower triangle in the figure above.  Then<div class="displaymath process-math" data-contains-math-knowls="" id="md-119">
+<li id="li-142"><p id="p-derived-li-142">Suppose that the angle between the rod and the inner wall of the <span class="process-math">\(3\)</span>m corridor is <span class="process-math">\(\theta\text{,}\)</span> as illustrated in the figure above. At the same time it will make an angle of <span class="process-math">\(\frac{\pi}{2}-\theta\)</span> with the outer wall of the 2m corridor. Denote by <span class="process-math">\(\ell_1(\theta)\)</span> the length of the part of the rod forming the hypotenuse of the upper triangle in the figure above. Similarly, denote by <span class="process-math">\(\ell_2(\theta)\)</span> the length of the part of the rod forming the hypotenuse of the lower triangle in the figure above.  Then<div class="displaymath process-math" data-contains-math-knowls="" id="md-117">
 \begin{gather*}
 \ell_1(\theta) = \frac{3}{\sin\theta}\qquad
 \ell_2(\theta) = \frac{2}{\cos\theta}
 \end{gather*}
-</div>and the total length is<div class="displaymath process-math" data-contains-math-knowls="" id="md-120">
+</div>and the total length is<div class="displaymath process-math" data-contains-math-knowls="" id="md-118">
 \begin{gather*}
 \ell(\theta) = \ell_1(\theta) +\ell_2(\theta)
 = \frac{3}{\sin\theta}+\frac{2}{\cos\theta}
 \end{gather*}
 </div>where <span class="process-math">\(0 \leq \theta \leq \frac{\pi}{2}\text{.}\)</span></p></li>
-<li id="li-176">
-<p id="p-186">The length of the longest rod we can move through the corridor in this way is the minimum of <span class="process-math">\(\ell(\theta)\text{.}\)</span> Notice that <span class="process-math">\(\ell(\theta)\)</span> is not defined at <span class="process-math">\(\theta = 0,
+<li id="li-143">
+<p id="p-229">The length of the longest rod we can move through the corridor in this way is the minimum of <span class="process-math">\(\ell(\theta)\text{.}\)</span> Notice that <span class="process-math">\(\ell(\theta)\)</span> is not defined at <span class="process-math">\(\theta = 0,
 \frac{\pi}{2}\text{.}\)</span> Indeed we find that as <span class="process-math">\(\theta \rightarrow 0^+\)</span> or <span class="process-math">\(\theta\rightarrow
 \frac{\pi}{2}^-\text{,}\)</span> the length <span class="process-math">\(\ell\rightarrow +\infty\text{.}\)</span> (You should be able to picture what happens to our rod in those two limits). Clearly the minimum allowed <span class="process-math">\(\ell(\theta)\)</span> is going to be finite and will be achieved for some <span class="process-math">\(0 \lt \theta \lt \frac{\pi}{2}\)</span> (note the strict inequalities) and so will be a local minimum as well as a global minimum. So we only need to find zeroes of <span class="process-math">\(\ell'(\theta)\text{.}\)</span></p>
-<p id="p-187">Differentiating <span class="process-math">\(\ell\)</span> gives</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-121">
+<p id="p-230">Differentiating <span class="process-math">\(\ell\)</span> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-119">
 \begin{align*}
 \dfrac{\dd \ell}{\dd \theta} \amp= -\frac{3 \cos\theta}{\sin^2\theta} +
 \frac{2\sin\theta}{\cos^2\theta}
@@ -1115,7 +1130,7 @@ x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m
 \end{align*}
 </div>
 <p class="continuation">This does not exist at <span class="process-math">\(\theta = 0, \frac{\pi}{2}\)</span> (which we have already analysed) but does exist at every <span class="process-math">\(0  \lt \theta \lt  \frac{\pi}{2}\)</span> and is equal to zero when the numerator is zero. Namely when</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-122">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-120">
 \begin{align*}
 2\sin^3\theta \amp= 3 \cos^3 \theta \amp \text{divide by $\cos^3 \theta$}\\
 2 \tan^3\theta \amp= 3\\
@@ -1123,25 +1138,25 @@ x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m
 \end{align*}
 </div>
 </li>
-<li id="li-177">
-<p id="p-188">From this we can recover <span class="process-math">\(sin\theta\)</span> and  <span class="process-math">\(cos\theta\text{,}\)</span> without having to compute <span class="process-math">\(\theta\)</span> itself. We can, for example, construct a right-angle triangle with adjacent length <span class="process-math">\(\sqrt[3]{2}\)</span> and opposite length <span class="process-math">\(\sqrt[3]{3}\)</span> (so that <span class="process-math">\(\tan\theta=\sqrt[3]{3/2}\)</span>):</p>
+<li id="li-144">
+<p id="p-231">From this we can recover <span class="process-math">\(sin\theta\)</span> and  <span class="process-math">\(cos\theta\text{,}\)</span> without having to compute <span class="process-math">\(\theta\)</span> itself. We can, for example, construct a right-angle triangle with adjacent length <span class="process-math">\(\sqrt[3]{2}\)</span> and opposite length <span class="process-math">\(\sqrt[3]{3}\)</span> (so that <span class="process-math">\(\tan\theta=\sqrt[3]{3/2}\)</span>):</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/triangleCor.svg" role="img" class="contained"></div></div></div>
-<p id="p-189">It has hypotenuse <span class="process-math">\(\sqrt{ 3^{2/3} + 2^{2/3}}\text{,}\)</span> and so</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-123">
+<p id="p-232">It has hypotenuse <span class="process-math">\(\sqrt{ 3^{2/3} + 2^{2/3}}\text{,}\)</span> and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-121">
 \begin{align*}
 \sin \theta \amp= \frac{3^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}\\
 \cos \theta \amp= \frac{2^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}
 \end{align*}
 </div>
 <p class="continuation">Alternatively could use the identities:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-124">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-122">
 \begin{align*}
 1 + \tan^2\theta \amp= \sec^2\theta \amp 1+\cot^2\theta \amp= \csc^2\theta
 \end{align*}
 </div>
 <p class="continuation">to obtain expressions for <span class="process-math">\(1/\cos\theta\)</span> and <span class="process-math">\(1/\sin\theta\text{.}\)</span></p>
 </li>
-<li id="li-178"><p id="p-derived-li-178">Using the above expressions for <span class="process-math">\(\sin\theta, \cos\theta\)</span> we find the minimum of <span class="process-math">\(\ell\)</span> (which is the longest rod that we can move):<div class="displaymath process-math" data-contains-math-knowls="" id="md-125">
+<li id="li-145"><p id="p-derived-li-145">Using the above expressions for <span class="process-math">\(\sin\theta, \cos\theta\)</span> we find the minimum of <span class="process-math">\(\ell\)</span> (which is the longest rod that we can move):<div class="displaymath process-math" data-contains-math-knowls="" id="md-123">
 \begin{align*}
 \ell \amp= \frac{3}{\sin\theta} + \frac{2}{\cos\theta}
 =\frac{3}{ \frac{\root 3\of 3}
@@ -1156,17 +1171,17 @@ x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m
 </ul></article></div></section><section class="exercises" id="exercises-max-min"><h3 class="heading hide-type">
 <span class="type">Exercícios</span> <span class="codenumber">2.4</span> <span class="title">Exercícios</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">This is one of several important mathematical contributions made by Pierre de Fermat, a French government lawyer and amateur mathematician, who lived in the first half of the seventeenth century.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">For <span class="process-math">\(c\)</span> to be a local maximum or minimum of <span class="process-math">\(f\text{,}\)</span> the function <span class="process-math">\(f\)</span> must obviously be defined at <span class="process-math">\(c\text{.}\)</span> So here we are considering only points <span class="process-math">\(c\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> We will later, in §<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ssec_sketch_FD" missing or not unique]</code>, extend the definition of singular points of <span class="process-math">\(f\)</span> to points that are not in the domain of <span class="process-math">\(f\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">This is one of several important mathematical contributions made by Pierre de Fermat, a French government lawyer and amateur mathematician, who lived in the first half of the seventeenth century.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">For <span class="process-math">\(c\)</span> to be a local maximum or minimum of <span class="process-math">\(f\text{,}\)</span> the function <span class="process-math">\(f\)</span> must obviously be defined at <span class="process-math">\(c\text{.}\)</span> So here we are considering only points <span class="process-math">\(c\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> We will later, in §<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "ssec_sketch_FD" missing or not unique]</code>, extend the definition of singular points of <span class="process-math">\(f\)</span> to points that are not in the domain of <span class="process-math">\(f\text{.}\)</span>
 </div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">No pun intended.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">A very common error of logic that people make is “Affirming the consequent”. “If P then Q” is true, then observe Q and conclude P — this is false. “If he is Shakespeare then he is dead” “That man is dead” “He must be Shakespeare”. Or you may have also seen someone use this reasoning: “If a person is a genius before their time then they are misunderstood.” “I am misunderstood” “So I must be a genius before my time”.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">The hypotheses that <span class="process-math">\(f(x)\)</span> be continuous and that the interval be finite and closed are all essential. We suggest that you find three functions <span class="process-math">\(f_1(x)\text{,}\)</span> <span class="process-math">\(f_2(x)\)</span> and <span class="process-math">\(f_3(x)\)</span> with <span class="process-math">\(f_1\)</span> defined but not continuous on <span class="process-math">\(0\le x\le 1\text{,}\)</span> <span class="process-math">\(f_2\)</span> defined and continuous on <span class="process-math">\(-\infty \lt x \lt \infty\text{,}\)</span> and <span class="process-math">\(f_3\)</span> defined and continuous on <span class="process-math">\(0 \lt x \lt 1\text{,}\)</span> and with none of <span class="process-math">\(f_1\text{,}\)</span> <span class="process-math">\(f_2\)</span> and <span class="process-math">\(f_3\)</span> attaining either a global maximum or a global minimum.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">Say if we do not have a calculator to hand, or your instructor insists that the problem be done without one.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">Again, no pun intended.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">Snell's law is named after the Dutch astronomer Willebrord Snellius who derived it in around 1621, though it was first stated accurately in 984 by Ibn Sahl.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">Named after Pierre de Fermat who described it in a letter in 1662. The beginnings of the idea, however, go back as far as Hero of Alexandria in around 60CE. Hero is credited with many inventions including the first vending machine, and a precursor of the steam engine called an aeolipile.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">And make some healthy use of public domain clip art.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">No pun intended.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">A very common error of logic that people make is “Affirming the consequent”. “If P then Q” is true, then observe Q and conclude P — this is false. “If he is Shakespeare then he is dead” “That man is dead” “He must be Shakespeare”. Or you may have also seen someone use this reasoning: “If a person is a genius before their time then they are misunderstood.” “I am misunderstood” “So I must be a genius before my time”.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">The hypotheses that <span class="process-math">\(f(x)\)</span> be continuous and that the interval be finite and closed are all essential. We suggest that you find three functions <span class="process-math">\(f_1(x)\text{,}\)</span> <span class="process-math">\(f_2(x)\)</span> and <span class="process-math">\(f_3(x)\)</span> with <span class="process-math">\(f_1\)</span> defined but not continuous on <span class="process-math">\(0\le x\le 1\text{,}\)</span> <span class="process-math">\(f_2\)</span> defined and continuous on <span class="process-math">\(-\infty \lt x \lt \infty\text{,}\)</span> and <span class="process-math">\(f_3\)</span> defined and continuous on <span class="process-math">\(0 \lt x \lt 1\text{,}\)</span> and with none of <span class="process-math">\(f_1\text{,}\)</span> <span class="process-math">\(f_2\)</span> and <span class="process-math">\(f_3\)</span> attaining either a global maximum or a global minimum.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">Say if we do not have a calculator to hand, or your instructor insists that the problem be done without one.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">Again, no pun intended.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Snell's law is named after the Dutch astronomer Willebrord Snellius who derived it in around 1621, though it was first stated accurately in 984 by Ibn Sahl.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">Named after Pierre de Fermat who described it in a letter in 1662. The beginnings of the idea, however, go back as far as Hero of Alexandria in around 60CE. Hero is credited with many inventions including the first vending machine, and a precursor of the steam engine called an aeolipile.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">And make some healthy use of public domain clip art.</div></div>
 </div></main>
 </div>
 </body>

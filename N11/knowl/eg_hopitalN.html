@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrar <span class="process-math">\(\displaystyle \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}\)</span>.</span>
+</h5>
+<p>Por exemplo, no limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+\end{gather*}
+</div>
+<p class="continuation">a base, <span class="process-math">\(x\text{,}\)</span> vai até o infinito e o expoente, <span class="process-math">\(\frac{1}{x}\text{,}\)</span> vai para zero. Mas se tomarmos logaritmos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\log x^{\frac{1}{x}} =\frac{\log x}{x}
+\end{gather*}
+</div>
+<p class="continuation">que é uma forma <span class="process-math">\(\frac\infty\infty\text{,}\)</span> que sabemos como tratar.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}\underbrace{\frac{\log x}{x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow \infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{\frac{1}{x}}{1}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1}}
+=0
+\end{gather*}
+</div>
+<p class="continuation">Como a exponencial é uma função contínua</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+=\lim_{x\rightarrow +\infty}\exp\Big(\frac{\log x}{x}\Big)
+=\exp\Big(\lim_{x\rightarrow \infty}\frac{\log x}{x}\Big)
+=e^0
+=1
+\end{gather*}
+</div></article><span class="incontext"><a href="section-1.html#eg_hopitalN" class="internal">em contexto</a></span>
+</body>
+</html>

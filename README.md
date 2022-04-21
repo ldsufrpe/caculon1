@@ -12,7 +12,8 @@
 - [N7 - A Regra da Cadeia](https://ldsufrpe.github.io/calculon1/SS1).  (*Em construção*) 
 - [N8 - O logaritmo Natural](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
 - [N9 -  Derivação Implícita](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*) 
-- [N10 - Aplicações da Derivação](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [N10 - Taxas Relacionadas](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
+- [N11 - Regra de L'Hôpital](https://ldsufrpe.github.io/calculo/SS1). (*Em construção*)
 
 ## Tarefas
  - [WeBWorK](http://191.252.191.150/webwork2/CALCULO-N1-LF/)

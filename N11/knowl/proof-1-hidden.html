@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T14:14:43-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><p>We only give the proof for part (a). The proof of part (b) is not very difficult, but uses the Generalised Mean–Value Theorem (Theorem<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_GMVT" missing or not unique]</code>), which is optional and most readers have not seen it.</p>
+<ul class="disc">
+<li><p>First note that we must have <span class="process-math">\(f(a)=g(a)=0\text{.}\)</span> To see this note that since derivative <span class="process-math">\(f'(a)\)</span> exists, we know that the limit<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to a} \frac{f(x)-f(a)}{x-a} \amp \text{ exists}
+\end{align*}
+</div>Since we know that the denominator goes to zero, we must also have that the numerator goes to zero (otherwise the limit would be undefined). Hence we must have<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to a} (f(x)-f(a)) \amp=
+\left( \lim_{x\to a} f(x) \right) - f(a) = 0
+\end{align*}
+</div>We are told that <span class="process-math">\(\displaystyle \lim_{x\to a} f(x) =0\)</span> so we must have <span class="process-math">\(f(a)=0\text{.}\)</span> Similarly we know that <span class="process-math">\(g(a)=0\text{.}\)</span></p></li>
+<li><p>Now consider the indeterminate form<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to a} \frac{f(x)}{g(x)}
+\amp= \lim_{x\to a} \frac{f(x) - 0 }{g(x) - 0 }
+\amp \text{use }0=f(a)=g(a)\\
+\amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a) }
+\amp \text{multiply by } 1=\frac{(x-a)^{-1}}{(x-a)^{-1}}\\
+\amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a)
+}\cdot\frac{(x-a)^{-1}}{(x-a)^{-1}} \amp
+\text{rearrange}\\
+\amp= \lim_{x\to a} \left[ \frac{ \dfrac{f(x) - f(a)}{x-a} }{ \dfrac{g(x) -
+g(a)}{x-a}}
+\right] \amp \text{use arithmetic of limits}\\
+\amp= \dfrac{\displaystyle \lim_{x\to a} \frac{f(x) - f(a)}{x-a} }
+{\displaystyle \lim_{x\to a} \frac{g(x) - g(a)}{x-a}} = \dfrac{f'(a)}{g'(a)}
+\end{align*}
+</div>We can justify this step and apply Theorem   <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_arith_lim" missing or not unique]</code>, since the limits in the numerator and denominator exist, because they are just <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\text{.}\)</span></p></li>
+</ul></article></body>
+</html>

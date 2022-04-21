@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="warning remark-like"><h4 class="heading">
+<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Limite de razão das derivadas não existe.</span>
+</h4>
+<p>Se</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{and}\amp\amp
+\lim\limits_{x\rightarrow a}g(x) \amp= 0
+\end{align*}
+</div>
+<p class="continuation">mas</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \amp \text{ não existe}
+\end{align*}
+</div>
+<p class="continuation">então ainda é possível</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp \text{ exista.}
+\end{align*}
+</div>
+<p>Aqui um exemplo. Faça</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+a=0\qquad \qquad f(x)=x^2\sin\frac{1}{x} \qquad g(x)= x
+\end{gather*}
+</div>
+<p class="continuation">Então (com uma aplicação do teorema do confronto)</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
+\lim_{x\to 0} g(x) \amp= 0.
+\end{align*}
+</div>
+<p class="continuation">Se tentarmos aplicar a regra de L'Hôptial, teremos <span class="process-math">\(g'(x)=1\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
+\end{align*}
+<p class="intertext">e então tentamos calcular o limite</p>
+\begin{align*}
+\lim_{x\to 0} \frac{f'(x)}{g'(x)}
+\amp= \lim_{x\to 0} \left( 2x\sin\frac{1}{x} -\cos\frac{1}{x}\right)
+\end{align*}
+</div>
+<p class="continuation">No entanto, esse limite não existe. O primeiro termo converge para 0 (pelo teorema do confronto), mas o segundo termo <span class="process-math">\(\cos(1/x)\)</span> apenas oscila muito entre <span class="process-math">\(\pm 1\text{.}\)</span> Tudo o que podemos concluir disso é</p>
+<blockquote class="blockquote"><p>Como o limite da razão das derivadas não existe, não podemos aplicar a regra de L'Hôpital.</p></blockquote>
+<p>Em vez disso, devemos voltar ao limite original e aplicar o teorema do confronto:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+\amp=\lim_{x\rightarrow 0}\frac{x^2\sin\frac{1}{x} }{x}
+=\lim_{x\rightarrow 0} x\sin\frac{1}{x}
+= 0,
+\end{align*}
+</div>
+<p class="continuation">ja que  <span class="process-math">\(|x\sin(1/x)| \lt |x|\)</span> and <span class="process-math">\(|x| \to 0\)</span> com <span class="process-math">\(x\to 0\text{.}\)</span></p></article><span class="incontext"><a href="section-1.html#warning_lhopital3" class="internal">em contexto</a></span>
+</body>
+</html>

@@ -1,0 +1,1935 @@
+<section>
+    <title>Regra de L'Hôpital</title>
+
+
+    <objectives>
+        <title>Estrutura</title>
+
+        <ol>
+            <li>
+                <p>
+                    Usar Regra de L'Hôpital para calcular limites
+                </p>
+            </li>
+            <li>
+                <p>
+                    Reconhecer formas indeterminadas
+                </p>
+            </li>
+
+
+        </ol>
+
+    </objectives>
+    <subsection>
+        <title>Uma introdução à Regra do L'Hôpital (vídeo)</title>
+
+        <video xml:id="intro-regra-hopital" youtube="wn8IEH9UQlM"/>
+    </subsection>
+
+    <subsection>
+        <title>Regra de L'Hôpital e Formas Indeterminadas</title>
+        <introduction>
+            <p>Voltemos aos limites e vejamos como podemos usar derivadas para simplificar os limites chamados
+                de formas indeterminadas. Sabemos, das propriedades aritmétricas de limites, que se
+                <md>
+                    <mrow>
+                        \lim_{x\rightarrow a}f(x) \amp= F \amp
+                        \lim_{x\rightarrow a}g(x) \amp= G
+                    </mrow>
+                    <intertext>e <m>G\ne 0</m>, então
+                    </intertext>
+                    <mrow>
+                        \lim_{x\rightarrow a}\frac{f(x)}{g(x)} \amp= \frac{F}{G}
+                    </mrow>
+                </md>
+                A exigência de que <m>G\ne 0</m>  é necessária.
+
+            </p>
+
+            <p>Claro que não é surpreendente que se <m>F\ne 0</m> e <m>G= 0</m>, então
+                <md>
+                    <mrow>
+                        \lim_{x\to a}\frac{f(x)}{g(x)} \amp= \text{ não existe }
+                    </mrow>
+                </md>
+                e se <m>F=0</m> mas <m>G\neq 0</m> então
+                <md>
+                    <mrow>
+                        \lim_{x\to a}\frac{f(x)}{g(x)} \amp= 0
+                    </mrow>
+                </md>
+                No entanto, quando ambos <m>F,G=0</m> então, como vimos nos exemplos anteriores,
+                há muitas possibilidades:
+                <md>
+                    <mrow>
+                        f(x)\amp=x \amp g(x)\amp=x^2 \amp \lim_{x\to0} \frac{x}{x^2}
+                        \amp= \lim_{x\to0} \frac{1}{x} = \text{ não existe }
+                    </mrow>
+                    <mrow>
+                        f(x)\amp=x^2 \amp g(x)\amp=x \amp \lim_{x\to0} \frac{x^2}{x}
+                        \amp= \lim_{x\to0} x = 0
+                    </mrow>
+                    <mrow>
+                        f(x)\amp=x \amp g(x)\amp=x \amp \lim_{x\to0} \frac{x}{x}
+                        \amp= \lim_{x\to0} 1 = 1
+                    </mrow>
+                    <mrow>
+                        f(x)\amp=7x^2 \amp g(x)\amp=3x^2 \amp \lim_{x\to0} \frac{7x^2}{3x^2}
+                        \amp= \lim_{x\to0} \frac{7}{3} = \frac{7}{3}
+                    </mrow>
+                </md>
+                Exploramos alguns exemplos em que ao encontrar <m>0/0</m> buscariamos algo que seja cancelado
+                para <q>retirar</q> o zero do denominador.
+
+            </p>
+
+            <p>Como o limite resultante dessas situações <m>0/0</m> não é imediatamente óbvio, mas também leva a uma
+                matemática interessante, devemos dar um nome a ele.
+            </p>
+
+            <definition xml:id="def_3_7_1">
+                <title>Primeiras formas indeterminadas</title>
+                <statement>
+                    <p>
+                        Seja <m>a \in \mathbb{R}</m> e seja <m>f(x)</m> e <m>g(x)</m>  funções. Se
+                        <md>
+                            <mrow>
+                                \lim_{x\to a} f(x) \amp= 0 \amp \text{and } \amp\amp
+                                \lim_{x\to a} g(x) \amp= 0
+                            </mrow>
+                        </md>
+                        então o limite
+                        <md>
+                            <mrow>
+                                \lim_{x\to a} \dfrac{f(x)}{g(x)}
+                            </mrow>
+                        </md>
+                        é chamado forma indeterminada <m>\frac{0}{0}</m>.
+                    </p>
+                </statement>
+            </definition>
+
+            <p>Há um grande número de ferramentas matemáticas para avaliar tais formas indeterminadas
+                <mdash/>
+                <url href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor"
+                     visual="pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor">séries de Taylor</url>, por exemplo.
+                Um método mais simples, que funciona em alguns casos, é a regra de L'Hôpital.
+                <aside>
+                    <title>História</title>
+
+                    <p>
+                        Nomeado para o matemático do século 17, Guillaume de l'Hôpital, que publicou o primeiro livro
+                        sobre
+                        cálculo diferencial. A regra homônima aparece nesse texto, mas acredita-se que tenha sido
+                        desenvolvida por Johann Bernoulli. O livro foi fonte de alguma controvérsia, pois continha
+                        muitos
+                        resultados de Bernoulli, que l'Hôpital reconheceu no prefácio, mas Bernoulli sentiu que
+                        l'Hôpital
+                        recebeu crédito indevido.
+                    </p>
+                </aside>
+
+            </p>
+
+            <assemblage xml:id="thm_APPlhopital">
+                <title>Regra de L'Hôpital</title>
+                <!--                <statement>-->
+                <p>
+                    Seja <m>a\in\mathbb{R}</m> e assuma que
+                    <md>
+                        <mrow>
+                            \lim_{x\to a}f(x) \amp= \lim_{x\to a} g(x) = 0
+                        </mrow>
+                    </md>
+                    Então
+                    <ol label="1">
+                        <li>se <m>f'(a)</m> e <m>g'(a)</m> exista e <m>g'(a)\ne 0</m>, então
+                            <md>
+                                <mrow>
+                                    \lim_{x\to a} \frac{f(x)}{g(x)} \amp=\frac{f'(a)}{g'(a)},
+                                </mrow>
+                            </md>
+                        </li>
+                        <li>enquanto, se <m>f'(x)</m> e <m>g'(x)</m> existem, com <m>g'(x)</m> não nulo, em um
+                            intervalo aberto contendo  <m>a</m>, exceto possívelmente em <m>a</m>, e se o limite
+                            <md>
+                                <mrow>
+                                    \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \text{ existe ou é $+\infty$ ou
+                                    é $-\infty$}
+                                </mrow>
+                            </md>
+                            então
+                            <md>
+                                <mrow>
+                                    \lim_{x\to a} \frac{f(x)}{g(x)}
+                                    =\lim_{x \to a} \frac{f'(x)}{g'(x)}
+                                </mrow>
+                            </md>
+                        </li>
+                    </ol>
+                </p>
+                <!--                </statement>-->
+            </assemblage>
+
+            <!--            <proof>-->
+            <!--                <p>-->
+            <!--                    We only give the proof for part (a). The proof of part (b) is not very difficult,-->
+            <!--                    but uses the Generalised Mean<ndash/>Value Theorem (Theorem<xref ref="thm_GMVT"/>), which is-->
+            <!--                    optional and most readers have not seen it.-->
+            <!--                </p>-->
+
+            <!--                <p>-->
+            <!--                    <ul>-->
+            <!--                        <li>First note that we must have <m>f(a)=g(a)=0</m>. To see this note that since derivative-->
+            <!--                            <m>f'(a)</m>-->
+            <!--                            exists, we know that the limit-->
+            <!--                            <md>-->
+            <!--                                <mrow>-->
+            <!--                                    \lim_{x\to a} \frac{f(x)-f(a)}{x-a} \amp \text{ exists}-->
+            <!--                                </mrow>-->
+            <!--                            </md>-->
+            <!--                            Since we know that the denominator goes to zero, we must also have that the numerator-->
+            <!--                            goes to zero (otherwise the limit would be undefined). Hence we must have-->
+            <!--                            <md>-->
+            <!--                                <mrow>-->
+            <!--                                    \lim_{x\to a} (f(x)-f(a)) \amp=-->
+            <!--                                    \left( \lim_{x\to a} f(x) \right) - f(a) = 0-->
+            <!--                                </mrow>-->
+            <!--                            </md>-->
+            <!--                            We are told that <m>\displaystyle \lim_{x\to a} f(x) =0</m> so we must have <m>f(a)=0</m>.-->
+            <!--                            Similarly we know-->
+            <!--                            that <m>g(a)=0</m>.-->
+            <!--                        </li>-->
+            <!--                        <li>Now consider the indeterminate form-->
+            <!--                            <md>-->
+            <!--                                <mrow>-->
+            <!--                                    \lim_{x\to a} \frac{f(x)}{g(x)}-->
+            <!--                                    \amp= \lim_{x\to a} \frac{f(x) - 0 }{g(x) - 0 }-->
+            <!--                                    \amp \text{use }0=f(a)=g(a)-->
+            <!--                                </mrow>-->
+            <!--                                <mrow>-->
+            <!--                                    \amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a) }-->
+            <!--                                    \amp \text{multiply by } 1=\frac{(x-a)^{-1}}{(x-a)^{-1}}-->
+            <!--                                </mrow>-->
+            <!--                                <mrow>-->
+            <!--                                    \amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a)-->
+            <!--                                    }\cdot\frac{(x-a)^{-1}}{(x-a)^{-1}} \amp-->
+            <!--                                    \text{rearrange}-->
+            <!--                                </mrow>-->
+            <!--                                <mrow>-->
+            <!--                                    \amp= \lim_{x\to a} \left[ \frac{ \dfrac{f(x) - f(a)}{x-a} }{ \dfrac{g(x) - -->
+            <!--                                    g(a)}{x-a}}-->
+            <!--                                    \right] \amp \text{use arithmetic of limits}-->
+            <!--                                </mrow>-->
+            <!--                                <mrow>-->
+            <!--                                    \amp= \dfrac{\displaystyle \lim_{x\to a} \frac{f(x) - f(a)}{x-a} }-->
+            <!--                                    {\displaystyle \lim_{x\to a} \frac{g(x) - g(a)}{x-a}} = \dfrac{f'(a)}{g'(a)}-->
+            <!--                                </mrow>-->
+            <!--                            </md>-->
+            <!--                            We can justify this step and apply Theorem-->
+            <!--                            <nbsp/>-->
+            <!--                            <xref ref="thm_arith_lim"/>, since the-->
+            <!--                            limits in the numerator and denominator exist, because they are just <m>f'(a)</m> and <m>-->
+            <!--                                g'(a)</m>.-->
+            <!--                        </li>-->
+            <!--                    </ul>-->
+            <!--                </p>-->
+            <!--            </proof>-->
+
+        </introduction>
+        <!--        <subsubsection>-->
+        <!--            <title>Optional-->
+        <!--                <mdash/>-->
+        <!--                Proof of Part (b) of l'Hôpital's Rule-->
+        <!--            </title>-->
+        <!--            <p>-->
+        <!--                To prove part (b) we must work around the possibility that <m>f'(a)</m> and <m>g'(a)</m> do not-->
+        <!--                exist or that <m>f'(x)</m> and <m>g'(x)</m> are not continuous at <m>x=a</m>. To do this, we make use of-->
+        <!--                the Generalised Mean-Value Theorem (Theorem-->
+        <!--                <nbsp/>-->
+        <!--                <xref ref="thm_GMVT"/>) that was used to prove-->
+        <!--                Equation-->
+        <!--                <nbsp/>-->
+        <!--                <xref ref="eq_taylorErrorN"/>. We recommend you review the GMVT before proceeding.-->
+        <!--            </p>-->
+
+        <!--            <p>For simplicity we consider the limit-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \lim_{x\to a^+} \frac{f(x)}{g(x)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                By assumption, we know that-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \lim_{x\to a^+} f(x) = \lim_{x\to a^+} g(x) = 0-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                For simplicity, we also assume that <m>f(a)=g(a)=0</m>. This-->
+        <!--                allows us to write-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{f(x)}{g(x)} \amp= \frac{f(x)-f(a)}{g(x)-g(a)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                which is the right form for an application of the GMVT.-->
+        <!--            </p>-->
+
+        <!--            <p>By assumption <m>f'(x)</m> and <m>g'(x)</m> exist, with <m>g'(x)</m> nonzero, in some open interval-->
+        <!--                around-->
+        <!--                <m>a</m>, except possibly at <m>a</m> itself. So we know that they exist, with <m>g'(x)\ne 0</m>, in-->
+        <!--                some-->
+        <!--                interval <m>(a,b]</m> with <m>b \gt a</m>. Then the GMVT-->
+        <!--                (Theorem-->
+        <!--                <nbsp/>-->
+        <!--                <xref ref="thm_GMVT"/>) tells us that for-->
+        <!--                <m>x\in (a,b]</m>-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} \amp= \frac{f'(c)}{g'(c)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                where <m>c \in (a,x)</m>. As we take the limit as <m>x\to a</m>, we also have that <m>c\to a</m>, and so-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \lim_{x\to a^+}\frac{f(x)}{g(x)}-->
+        <!--                        \amp= \lim_{x\to a^+} \frac{f'(c)}{g'(c)}-->
+        <!--                        = \lim_{c \to a^+} \frac{f'(c)}{g'(c)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                as required.-->
+        <!--            </p>-->
+        <!--        </subsubsection>-->
+
+    </subsection>
+
+    <subsection xml:id="ssec_3_7_1">
+        <title>Alguns Exemplos Comuns</title>
+
+        <p>Aqui estão alguns exemplos simples usando a regra de L'Hôpital.</p>
+
+        <example xml:id="eg_hopitalA">
+            <title>
+                <m>\displaystyle \lim_{x\to 0} \frac{\sin x}{x}</m>
+            </title>
+
+            <statemant>
+                <p>
+                    Determine  <m>\displaystyle \lim_{x\to 0} \frac{\sin x}{x}</m>.
+                </p>
+            </statemant>
+            <solution>
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \frac{\sin x}{x}
+                        </mrow>
+                    </md>
+
+                    Note que
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \sin x \amp= 0
+                        </mrow>
+                        <mrow>
+                            \lim_{x\to 0} x \amp= 0
+                        </mrow>
+                    </md>
+                    então esta é uma forma <m>\frac00</m> indeterminada, e sugere que tentemos a <xref
+                        ref="thm_APPlhopital" text="title"></xref>.
+
+                    Para aplicar a regra devemos primeiro verificar os limites das derivadas.
+                    <md>
+                        <mrow>
+                            f(x)\amp= \sin x \amp f'(x) \amp =\cos x \amp \text{and} \amp\amp
+                            f'(0)=1
+                        </mrow>
+                        <mrow>
+                            g(x) \amp= x \amp g'(x) \amp = 1 \amp \text{and} \amp\amp
+                            g'(0)=1
+                        </mrow>
+                    </md>
+
+                    Então, pela regra de l'Hôpital
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \frac{\sin x}{x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{1} = 1.
+                        </mrow>
+                    </md>
+
+
+                </p>
+            </solution>
+        </example>
+
+
+        <example xml:id="eg_hopitalB">
+            <title>
+                <m>\displaystyle \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}</m>
+            </title>
+            <statemant>
+                <p>
+                    Determine
+                    <m>\displaystyle \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}</m>.
+                </p>
+            </statemant>
+            <solution>
+
+
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}
+                        </mrow>
+                    </md>
+
+                    Já que
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \sin 2x \amp= 0
+                        </mrow>
+                        <mrow>
+                            \lim_{x\to 0} \sin x \amp= 0
+                        </mrow>
+                    </md>
+                    então temos novamente uma forma indeterminada <m>\frac00</m>.
+
+                    Fazendo <m>f(x)=\sin x</m> e <m>g(x)=\sin 2x</m>, temos
+                    <md>
+                        <mrow>
+                            f'(x) \amp= \cos x \amp f'(0)= 1
+                        </mrow>
+                        <mrow>
+                            g'(x) \amp= 2\cos 2x \amp g'(0)= 2
+                        </mrow>
+                    </md>
+
+                    E pela regra de L'Hôpital
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \frac{\sin x}{\sin 2x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{2}.
+                        </mrow>
+                    </md>
+
+                </p>
+            </solution>
+        </example>
+
+
+        <example xml:id="eg_3_7_1">
+            <title>
+                <m>\displaystyle \lim_{x \to 0} \frac{q^x - 1}{x}</m>
+            </title>
+            <statemant>
+                <p>
+                    Encontre <m>\displaystyle \lim_{x \to 0} \frac{q^x - 1}{x}</m>.
+                </p>
+            </statemant>
+
+            <solution>
+
+                <p>
+                    Seja  <m>q \gt 1</m> e calcule o limite
+                    <md>
+                        <mrow>
+                            \lim_{x \to0} \frac{q^x - 1}{x}
+                        </mrow>
+                    </md>
+
+                </p>
+
+                <p>
+                    Uma vez que
+                    <md>
+                        <mrow>
+                            \lim_{x \to 0} (q^x-1) \amp = 1-1 = 0
+                        </mrow>
+                        <mrow>
+                            \lim_{x \to 0} x \amp = 0
+                        </mrow>
+                    </md>
+                    temos uma forma indeterminada <m>\frac00</m>.
+
+
+                    Fazendo <m>f(x)= q^x-1</m> e <m>g(x)=x</m>, então
+
+                    <md>
+                        <mrow>
+                            f'(x) \amp= \dfrac{\dd}{\dd x}\left(q^x-1\right) = q^x \cdot \log q
+                            \amp f'(0) \amp= \log q
+                        </mrow>
+                        <mrow>
+                            g'(x) \amp= 1 \amp g'(0) \amp= 1
+                        </mrow>
+                    </md>
+
+                    E pela regra de L'Hôpital
+
+                    <md>
+                        <mrow>
+                            \lim_{h \to0} \frac{q^h - 1}{h} \amp= \log q.
+                        </mrow>
+                    </md>
+
+                </p>
+            </solution>
+        </example>
+
+
+        <p>Neste exemplo, aplicaremos a regra de L'Hôpital duas vezes antes de obter a resposta.</p>
+
+        <example xml:id="eg_hopitalC">
+            <title>Duplo L'Hôpital</title>
+            <statemant>
+                <p>
+                    Determine o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
+                        </mrow>
+                    </md>
+                </p>
+
+            </statemant>
+            <p>
+
+
+                Note que
+                <md>
+                    <mrow>
+                        \lim_{x\to 0} \sin(x^2) \amp= \sin 0 = 0
+                    </mrow>
+                    <mrow>
+                        \lim_{x\to 0}(1-\cos x) \amp= 1-\cos 0 = 0
+                    </mrow>
+                </md>
+                e, portanto, temos uma forma indeterminada <m>\frac00</m>.
+                Seja <m>f(x) = \sin(x^2)</m> e <m>g(x)=1-\cos x</m> então
+                <md>
+                    <mrow>
+                        f'(x) \amp= 2x\cos(x^2) \amp f'(0)\amp=0
+                    </mrow>
+                    <mrow>
+                        g'(x) \amp= \sin x \amp g'(0) \amp=0
+                    </mrow>
+                </md>
+                Então, se tentarmos aplicar a regra de L'Hôpital ingenuamente, obteremos
+                <md>
+                    <mrow>
+                        \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x} \amp= \frac{f'(0)}{g'(0)} = \frac{0}{0}.
+                    </mrow>
+                </md>
+                que é outra forma <m>\frac00</m> indeterminada.
+
+                De acordo com a parte 2 da<xref ref="thm_APPlhopital" text="title"/>) podemos fazer
+
+
+                <md>
+                    <mrow>
+                        \lim_{x\to 0} \frac{f(x)}{g(x)} \amp= \lim_{x\to 0} \frac{f'(x)}{g'(x)}
+                    </mrow>
+                </md>
+                desde que este segundo limite exista. No nosso caso, isso exige que calculemos
+                <md>
+                    <mrow>
+                        \lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+                    </mrow>
+                </md>
+                o que podemos fazer usando a regra de L'Hôpital novamente. Agora
+                <md>
+                    <mrow>
+                        h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \amp=2
+                    </mrow>
+                    <mrow>
+                        \ell(x) \amp= \sin(x) \amp \ell'(x) \amp= \cos(x) \amp \ell'(0) \amp= 1
+                    </mrow>
+                </md>
+                Pela regra de L'Hôpital
+                <md>
+                    <mrow>
+                        \lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)} \amp= \frac{h'(0)}{\ell'(0)} = 2
+                    </mrow>
+                </md>
+
+                Assim, o nosso limite original é
+                <md>
+                    <mrow>
+                        \lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
+                        \amp=\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+                        = 2.
+                    </mrow>
+                </md>
+
+                Podemos resumir sucintamente as duas aplicações da regra de L'Hôpital neste exemplo por
+                <md>
+                    <mrow>
+                        \lim_{x\to 0}\underbrace{\frac{\sin(x^2)}{1-\cos x}}_{
+                        {\mathrm{num}\to 0}\,,
+                        {\mathrm{den}\to 0}}
+                        \amp=\lim_{x\to 0}\underbrace{\frac{2x\cos(x^2)}{\sin x}}_{
+                        {\mathrm{num}\to 0}\, ,
+                        {\mathrm{den}\to 0}}
+                        =\lim_{x\to 0}\underbrace{\frac{2\cos(x^2)-4x^2\sin(x^2)}{\cos x}}_{
+                        {\mathrm{num}\to 2}\,,
+                        {\mathrm{den}\to 1}}
+                        =2
+                    </mrow>
+                </md>
+                Aqui <q>num</q> e <q>den</q> são usados como abreviações de <q>numerador</q> e
+                <q>denominador</q>
+                respectivamente.
+
+            </p>
+        </example>
+
+
+        <p>Deve-se ter o cuidado de garantir que as hipóteses da regra de l'Hôpital sejam satisfeitas antes de
+            aplicá-la. Os seguintes <q>avisos</q> mostram o pode dar errado.
+        </p>
+
+        <warning xml:id="warning_lhopital1">
+            <title>Limite do denominador diferente de zero</title>
+            <statement>
+                <p>
+                    Se
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{but}\amp\amp
+                            \lim\limits_{x\rightarrow a}g(x)\amp\ne 0
+                        </mrow>
+                    </md>
+                    então
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
+                            \amp\amp \text{não precisa ser igual} \amp\amp
+                            \frac{f'(a)}{g'(a)}
+                            \text{ ou }
+                            \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>Aqui está um exemplo. Faça
+                    <md>
+                        <mrow>
+                            a=0\qquad f(x)=3x \qquad g(x)=4+5x
+                        </mrow>
+                    </md>
+                    Então
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+                            \amp=\lim_{x\rightarrow 0}\frac{3x}{4+5x} \amp
+                            \amp=\frac{3\times 0}{4+5\times 0}
+                            =0
+                        </mrow>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+                            \amp= \frac{f'(0)}{g'(0)}
+                            =\frac{3}{5}
+                        </mrow>
+                    </md>
+                </p>
+            </statement>
+        </warning>
+
+
+        <warning xml:id="warning_lhopital2">
+            <title>Limite do numerador diferente de zero</title>
+            <statement>
+                <p>
+                    Se
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}g(x)\amp=0
+                            \amp\text{but}\amp\amp
+                            \lim\limits_{x\rightarrow a}f(x)\amp\ne 0
+                        </mrow>
+                    </md>
+                    então
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
+                            \amp\amp \text{need not be the same as} \amp\amp
+                            \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>Aqui está um exemplo. Faça
+                    <md>
+                        <mrow>
+                            a=0\qquad \qquad f(x)=4+5x \qquad g(x)=3x
+                        </mrow>
+                    </md>
+                    Então
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+                            \amp=\lim_{x\rightarrow 0}\frac{4+5x}{3x} \amp
+                            \amp=\text{ não existe }
+                        </mrow>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+                            \amp=\lim_{x\rightarrow 0}\frac{5}{3}
+                            =\frac{5}{3}
+                        </mrow>
+                    </md>
+                </p>
+            </statement>
+        </warning>
+
+
+        <p>Este próximo é mais sutil; os limites das funções originais de numerador e denominador vão para zero, mas o
+            limite da razão das suas derivadas não existe<nbsp/>.
+        </p>
+
+        <warning xml:id="warning_lhopital3">
+            <title>Limite de razão das derivadas não existe</title>
+            <statement>
+                <p>
+                    Se
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{and}\amp\amp
+                            \lim\limits_{x\rightarrow a}g(x) \amp= 0
+                        </mrow>
+                    </md>
+                    mas
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \amp \text{ não existe}
+                        </mrow>
+                    </md>
+                    então ainda é possível
+                    <md>
+                        <mrow>
+                            \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp \text{ exista.}
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>Aqui um exemplo. Faça
+                    <md>
+                        <mrow>
+                            a=0\qquad \qquad f(x)=x^2\sin\frac{1}{x} \qquad g(x)= x
+                        </mrow>
+                    </md>
+                    Então (com uma aplicação do teorema do confronto)
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
+                            \lim_{x\to 0} g(x) \amp= 0.
+                        </mrow>
+                    </md>
+                    Se tentarmos aplicar a regra de L'Hôptial, teremos <m>g'(x)=1</m> e
+                    <md>
+                        <mrow>
+                            f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}
+                        </mrow>
+                        <intertext>e então tentamos calcular o limite</intertext>
+                        <mrow>
+                            \lim_{x\to 0} \frac{f'(x)}{g'(x)}
+                            \amp= \lim_{x\to 0} \left( 2x\sin\frac{1}{x} -\cos\frac{1}{x}\right)
+                        </mrow>
+                    </md>
+                    No entanto, esse limite não existe. O primeiro termo converge para 0 (pelo teorema do confronto),
+                    mas o segundo termo <m>\cos(1/x)</m> apenas oscila muito entre <m>\pm 1</m>. Tudo o que podemos
+                    concluir disso é
+                </p>
+
+                <blockquote>
+                    <p>
+                        Como o limite da razão das derivadas não existe, não podemos aplicar a regra de L'Hôpital.
+                    </p>
+                </blockquote>
+
+
+                <p>Em vez disso, devemos voltar ao limite original e aplicar o teorema do confronto:
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+                            \amp=\lim_{x\rightarrow 0}\frac{x^2\sin\frac{1}{x} }{x}
+                            =\lim_{x\rightarrow 0} x\sin\frac{1}{x}
+                            = 0,
+                        </mrow>
+                    </md>
+                    ja que  <m>|x\sin(1/x)| \lt |x|</m> and <m>|x| \to 0</m> com <m>x\to 0</m>.
+                </p>
+            </statement>
+        </warning>
+
+
+        <p>Também é fácil construir um exemplo em que os limites do numerador e do denominador são ambos zero, mas o
+            limite da razão e o limite da razão das derivadas não existem. Uma pequena alteração do exemplo anterior
+            mostra que é possível que
+            <md>
+                <mrow>
+                    \lim\limits_{x\rightarrow a}f(x) \amp=0
+                    \amp \text{and}\amp\amp
+                    \lim\limits_{x\rightarrow a}g(x) \amp= 0
+                </mrow>
+            </md>
+            mas nenhum dos limites
+            <md>
+                <mrow>
+                    \lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp\amp \text{or}\amp\amp
+                    \lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}
+                </mrow>
+            </md>
+            existe. Tomando
+            <md>
+                <mrow>
+                    a=0\qquad \qquad f(x)=x\sin\frac{1}{x} \qquad g(x)= x
+                </mrow>
+            </md>
+            Então (com uma rápida aplicação do teorema do confronto)
+            <md>
+                <mrow>
+                    \lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
+                    \lim_{x\to 0} g(x) \amp= 0.
+                </mrow>
+            </md>
+            Além disso,
+            <md>
+                <mrow>
+                    \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+                    \amp=\lim_{x\rightarrow 0}\frac{x\sin\frac{1}{x} }{x}
+                    =\lim_{x\rightarrow 0} \sin\frac{1}{x}
+                </mrow>
+            </md>
+            não existe. E de maneira similar
+            <md>
+                <mrow>
+                    \lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+                    \amp= \lim_{x\to 0} \frac{\sin\frac{1}{x} - \frac{1}{x}\cos\frac{1}{x} }{x^2}
+                </mrow>
+            </md>
+            não existe.
+        </p>
+    </subsection>
+
+    <subsection xml:id="ssec_3_7_2">
+        <title>Variações</title>
+        <introduction>
+            <p>A
+                <xref ref="thm_APPlhopital" text="title"/>
+                é a forma básica da regra de L'Hôpital, mas também há muitas variações. Aqui estão um monte deles.
+            </p>
+        </introduction>
+        <subsubsection>
+            <title>Limites no infinito
+            </title>
+            <p>A regra de L'Hôpital também se aplica quando o limite de
+                <m>x \to a</m>
+                é substituida por <m>\lim\limits_{x\to a+}</m> ou por
+                <m>\lim\limits_{x\to a-}</m>
+                ou por
+                <m>\lim\limits_{x\to +\infty}</m>
+                ou por <m>\lim\limits_{x\to -\infty}</m>.
+            </p>
+
+            <p>We can justify adapting the rule to the limits to <m>\pm \infty</m> via the following reasoning
+                Podemos justificar a adaptação da regra com <m>\pm \infty</m> através do seguinte raciocínio
+                <md>
+                    <mrow>
+                        \lim_{x\to \infty} \frac{f(x)}{g(x)}
+                        \amp= \lim_{y \to 0^+} \frac{ f(1/y) }{ g(1/y) } \amp \text{substitua } x=1/y
+                    </mrow>
+                    <mrow>
+                        \amp= \lim_{y \to 0^+} \frac{ -\frac{1}{y^2} f'(1/y) } { -\frac{1}{y^2}g'(1/y)},
+                    </mrow>
+                </md>
+                onde usamos a regra de l'Hôpital (assumindo que esse limite existe) e o fato de que
+                <m>\dfrac{\dd}{\dd y} f(1/y) = -\frac{1}{y^2} f'(1/y)</m>
+                (e similarmente para <m>g</m>).
+                Simplificar isso e substituir <m>y=1/x</m> fornece o resultado necessário:
+                <md>
+                    <mrow>
+                        \lim_{x\to \infty} \frac{f(x)}{g(x)} \amp =\lim_{y \to 0^+} \frac{f'(1/y)} {g'(1/y)}
+                        =\lim_{x\to\infty} \frac{f'(x)}{g'(x)}.
+                    </mrow>
+                </md>
+            </p>
+
+            <example xml:id="eg_hopitalH">
+                <title>L'Hôpital no infinito</title>
+
+                <statemant>
+                    <p>
+                        <md>
+                            <mrow>
+                                \lim_{x\to\infty} \frac{\arctan x - \frac{\pi}{2}}{ \frac{1}{x} }
+                            </mrow>
+                        </md>
+                    </p>
+                </statemant>
+                <solution>
+                    <p>
+                        Ambos, denominador e numerador vão para zero <m>0</m> quando  <m>x \to\infty</m>, então isso é
+                        uma
+                        indeterminação da forma
+                        <m>\frac00</m>
+                        Encontramos
+                        <md>
+                            <mrow>
+                                \lim_{x\rightarrow+\infty}\underbrace{\frac{\arctan x-\frac{\pi}{2}}
+                                {\frac{1}{x}}}_{\atp
+                                {\mathrm{num}\rightarrow 0}
+                                {\mathrm{den}\rightarrow 0}}
+                                =\lim_{x\rightarrow +\infty}\frac{\frac{1}{1+x^2}} {-\frac{1}{x^2}}
+                                =-\lim_{x\rightarrow +\infty}\underbrace{\frac{1}{1+\frac{1}{x^2}}}_{\atp
+                                {\mathrm{num}\rightarrow 1}
+                                {\mathrm{den}\rightarrow 1}}
+                                =-1
+                            </mrow>
+                        </md>
+                        Aplicamos a regra de L'Hôpital com
+                        <md>
+                            <mrow>
+                                f(x) \amp= \arctan x -\frac{\pi}{2}\qquad\amp
+                                g(x) \amp=\frac{1}{x}
+                            </mrow>
+                            <mrow>
+                                f'(x)\amp=\frac{1}{1+x^2}\amp
+                                g'(x)\amp=-\frac{1}{x^2}
+                            </mrow>
+                        </md>
+                    </p>
+                </solution>
+            </example>
+
+        </subsubsection>
+        <subsubsection>
+            <title>
+                Forma indeterminada
+                <m>\frac{\infty}{\infty}</m>
+
+            </title>
+            <p>
+                A regra de L'Hôpital também se aplica quando
+                <m>\lim\limits_{x\rightarrow a}f(x)=0</m>,
+                <m>\lim\limits_{x\rightarrow a}g(x)=0</m>
+                é substituida por <m>\lim\limits_{x\rightarrow a}f(x)=\pm\infty</m>,
+                <m>\lim\limits_{x\rightarrow a}g(x)=\pm\infty</m>.
+            </p>
+
+            <example xml:id="eg_3_7_2">
+                <title>Determine
+                    <m>\displaystyle \lim_{x \to \infty} \frac{\log x}{x}</m>
+                </title>
+                <p>
+                    Considere
+                    <md>
+                        <mrow>
+                            \lim_{x \to \infty} \frac{\log x}{x}
+                        </mrow>
+                    </md>
+                </p>
+
+                <p>O numerador e o denominador crescem em direção ao infinito, portanto, esta é uma forma <m>
+                    \frac\infty\infty
+                </m> indeterminada. Uma aplicação da regra de l'Hôpital dá
+                    <md>
+                        <mrow>
+                            \lim_{x \to \infty}
+                            \underbrace{\frac{\log x}{x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+                            \amp= \lim_{x \to \infty} \frac{1/x}{1}
+                        </mrow>
+                        <mrow>
+                            \amp= \lim_{x \to \infty} \frac{1}{x} = 0
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+
+            <example xml:id="eg_3_7_3">
+                <title>Encontre
+                    <m>\displaystyle \lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}</m>
+                </title>
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}
+                        </mrow>
+                    </md>
+                    Então, por duas aplicações da regra de L'Hôpital, obtemos
+                    <md>
+                        <mrow>
+                            \lim_{x \to \infty}
+                            \underbrace{\frac{5x^2+3x-3}{x^2+1}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+                            \amp= \lim_{x \to \infty}
+                            \underbrace{\frac{10x+3}{2x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+                            = \lim_{x \to \infty} \frac{10}{2}
+                            = 5.
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+
+            <example xml:id="eg_hopitalI">
+                <title>Um duplo l'Hôpital mais complicado</title>
+                <statemant>
+                    <p>
+                        Calcule o limite
+                        <md>
+                            <mrow>
+                                \lim_{x\rightarrow 0+} \frac{\log x}{\tan\big(\frac{\pi}{2}-x\big)}.
+                            </mrow>
+                        </md>
+                    </p>
+                </statemant>
+
+                <solution>
+                    <p>Podemos calcular isso usando a regra de L'Hôpital duas vezes:
+                        <md>
+                            <mrow>
+                                \lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+                                {\tan\big(\frac{\pi}{2}-x\big)}}_{\atp
+                                {\mathrm{num}\rightarrow -\infty}
+                                {\mathrm{den}\rightarrow +\infty}}
+                                \amp =\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}
+                                {-\sec^2(\frac{\pi}{2}-x)}
+                                =-\lim_{x\rightarrow 0+}\underbrace{\frac{\cos^2(\frac{\pi}{2}-x)}{x}}_{\atp
+                                {\mathrm{num}\rightarrow 0}
+                                {\mathrm{den}\rightarrow 0}}
+                            </mrow>
+                            <mrow>
+                                \amp=-\lim_{x\rightarrow 0+}\underbrace{\frac
+                                {2\cos(\frac{\pi}{2}-x)\sin(\frac{\pi}{2}-x)}{1}}_{\atp
+                                {\mathrm{num}\rightarrow 0}
+                                {\mathrm{den}\rightarrow 1}}
+                                =0
+                            </mrow>
+                        </md>
+                    </p>
+
+                    <p>A primeira aplicação do L'Hôpital foi com
+                        <md>
+                            <mrow>
+                                f(x) \amp= \log x \amp
+                                g(x) \amp=\tan\Big(\frac{\pi}{2}-x\Big)
+                            </mrow>
+                            <mrow>
+                                f'(x)\amp=\frac{1}{x}\qquad\amp
+                                g'(x)\amp=-\sec^2\Big(\frac{\pi}{2}-x\Big)
+                            </mrow>
+                        </md>
+                        e a segunda vez com
+                        <md>
+                            <mrow>
+                                f(x) \amp= \cos^2\Big(\frac{\pi}{2}-x\Big) \amp
+                                g(x) \amp=x
+                            </mrow>
+                            <mrow>
+                                f'(x)\amp=2\cos\Big(\frac{\pi}{2}-x\Big)
+                                \Big[-\sin\Big(\frac{\pi}{2}-x\Big)\Big](-1)\qquad\amp
+                                g'(x)\amp=1
+                            </mrow>
+                        </md>
+                    </p>
+                </solution>
+            </example>
+
+
+            <p>Às vezes as coisas não funcionam como gostaríamos e a regra de l'Hôpital pode ficar presa em um loop.
+                Lembre-se de pensar no problema antes de aplicar qualquer regra.
+            </p>
+
+            <example xml:id="eg_3_7_4">
+                <title>Preso em um loop</title>
+
+                <statemant>
+                    <p>
+                        Determine
+                        <md>
+                            <mrow>
+                                \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+                            </mrow>
+                        </md>
+                    </p>
+
+                </statemant>
+                <solution>
+
+                    <p>
+                        Claramente, tanto o numerador quanto o denominador vão para <m>\infty</m>, então temos uma forma
+                        indeterminada <m>\frac\infty\infty</m>. Aplicando ingenuamente a regra de L'Hôpital dá
+                        <md>
+                            <mrow>
+                                \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+                                \amp= \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+                            </mrow>
+                        </md>
+                        que é novamente uma forma <m>\frac\infty\infty</m> indeterminada. Então aplicando a regra de
+                        L'Hôpital novamente:
+                        <md>
+                            <mrow>
+                                \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+                                \amp= \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+                            </mrow>
+                        </md>
+                        que está de volta onde começamos!
+                    </p>
+
+                    <p>A abordagem correta para tal limite é aplicar os métodos que aprendemos anteriormente
+                        e reescrever
+                        <md>
+                            <mrow>
+                                \frac{e^x+e^{-x}}{e^x-e^{-x}} \amp= \frac{e^x(1+e^{-2x})}{e^x(1-e^{-2x})}
+                                = \frac{1+e^{-2x}}{1-e^{-2x}}
+                            </mrow>
+                        </md>
+                        e, em seguida, tomar o limite.
+                    </p>
+
+                    <p>Um tipo semelhante do loop na regra de L'Hôpital ocorrerá se você ingenuamente aplicar a regra de
+                        L'Hôpital ao limite
+                        <md>
+                            <mrow>
+                                \lim_{x\to\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+                            </mrow>
+                        </md>
+
+                    </p>
+                </solution>
+            </example>
+
+        </subsubsection>
+        <!--        <subsubsection>-->
+        <!--            <title>Optional-->
+        <!--                <mdash/>-->
+        <!--                Proof of l'Hôpital's Rule for-->
+        <!--                <m>\frac\infty\infty</m>-->
+        <!--            </title>-->
+        <!--            <p>-->
+        <!--                We can justify this generalisation of l'Hôpital's rule with some careful manipulations.-->
+        <!--                Since the derivatives <m>f',g'</m> exist in some interval around <m>a</m>, we know that <m>f,g</m> are-->
+        <!--                continuous in some interval around <m>a</m>; let <m>x,t</m> be points inside that interval. Now-->
+        <!--                rewrite-->
+        <!--                <fn>This is quite a clever argument, but it is not immediately obvious why-->
+        <!--                    one rewrites things this way. After the fact it becomes clear that it is done to-->
+        <!--                    massage the expression into the form where we can apply the generalised mean-value theorem-->
+        <!--                    (Theorem-->
+        <!--                    <nbsp/>-->
+        <!--                    <xref ref="thm_GMVT"/>).-->
+        <!--                </fn>-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{f(x)}{g(x)}-->
+        <!--                        \amp= \frac{f(x)}{g(x)}-->
+        <!--                        +\underbrace{\left( \frac{f(t)}{g(x)} - \frac{f(t)}{g(x)}\right)}_{=0}-->
+        <!--                        + \underbrace{\left(\frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        - \frac{f(x)-f(t)}{g(x)-g(t)}\right)}_{=0}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}-->
+        <!--                        + \frac{f(t)}{g(x)}-->
+        <!--                        + \underbrace{\left(-->
+        <!--                        \frac{f(x)}{g(x)} - \frac{f(t)}{g(x)} - \frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        \right)}_\text{we can clean it up}-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        + \frac{f(t)}{g(x)}-->
+        <!--                        + \left(-->
+        <!--                        \frac{f(x)-f(t)}{g(x)} - \frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        \right)-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        + \frac{f(t)}{g(x)}-->
+        <!--                        + \left(-->
+        <!--                        \frac{1}{g(x)} - \frac{1}{g(x)-g(t)}-->
+        <!--                        \right)\cdot (f(x)-f(t))-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \frac{f(x)-f(t)}{g(x)-g(t)}-->
+        <!--                        + \frac{f(t)}{g(x)}-->
+        <!--                        + \left(-->
+        <!--                        \frac{g(x)-g(t) - g(x)}{g(x)(g(x)-g(t))}-->
+        <!--                        \right)\cdot (f(x)-f(t))-->
+        <!--                    </mrow>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}-->
+        <!--                        + \frac{f(t)}{g(x)}-->
+        <!--                        - \frac{g(t)}{g(x)}\cdot \underbrace{\frac{f(x)-f(t)}{g(x)-g(t)}}_\text{ready for GMVT}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Oof! Now the generalised mean-value theorem (Theorem-->
+        <!--                <nbsp/>-->
+        <!--                <xref ref="thm_GMVT"/>) tells us there is a-->
+        <!--                <m>c</m>-->
+        <!--                between <m>x</m> and <m>t</m> so that-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{f(x)-f(t)}{g(x)-g(t)} \amp= \frac{f'(c)}{g'(c)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Now substitute this into the large expression we derived above:-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \frac{f(x)}{g(x)}-->
+        <!--                        \amp= \frac{f'(c)}{g'(c)} + \frac{1}{g(x)}\left(f(t) - \frac{f'(c)}{g'(c)}\cdot g(t)-->
+        <!--                        \right)-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                At first glance this does not appear so useful, however if we fix <m>t</m> and take-->
+        <!--                the limit as <m>x \rightarrow a</m>, then it becomes-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \lim_{x\to a}\frac{f(x)}{g(x)}-->
+        <!--                        \amp= \lim_{x\to a} \frac{f'(c)}{g'(c)}-->
+        <!--                        + \lim_{x\to a} \frac{1}{g(x)}\left(f(t) - \frac{f'(c)}{g'(c)}\cdot g(t) \right)-->
+        <!--                    </mrow>-->
+        <!--                    <intertext>Since <m>g(x) \to \infty</m> as <m>x \to a</m>, this last term goes to zero-->
+        <!--                    </intertext>-->
+        <!--                    <mrow>-->
+        <!--                        \amp= \lim_{x\to a} \frac{f'(c)}{g'(c)}-->
+        <!--                        + 0-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                Now take the limit as <m>t\to a</m>. The left-hand side is unchanged since it is independent-->
+        <!--                of <m>t</m>. The right-hand side, however, does change; the number <m>c</m> is trapped-->
+        <!--                between <m>x</m> and <m>t</m>. Since we have already taken the limit <m>x\to a</m>, so when we take the-->
+        <!--                limit <m>t \to a</m>, we are effectively taking the limit <m>c \to a</m>. Hence-->
+        <!--                <md>-->
+        <!--                    <mrow>-->
+        <!--                        \lim_{x\to a}\frac{f(x)}{g(x)}-->
+        <!--                        \amp= \lim_{c\to a} \frac{f'(c)}{g'(c)}-->
+        <!--                    </mrow>-->
+        <!--                </md>-->
+        <!--                which is the desired result.-->
+        <!--            </p>-->
+        <!--        </subsubsection>-->
+        <subsubsection>
+            <title>
+                Forma indeterminada
+                <m>0\cdot\infty</m>
+
+            </title>
+            <p>
+                Quando <m>\displaystyle \lim_{x\to a}f(x) = 0</m> e <m>\displaystyle \lim_{x\to a} g(x) = \infty</m>.
+                Podemos usar um pouco de álgebra para manipular isso em um formato <m>\frac{0}{0}</m> ou <m>
+                \frac{\infty}{\infty}</m>:
+                <md>
+                    <mrow>
+                        \lim_{x \to a} \frac{f(x)}{1/g(x)} \amp\amp
+                        \lim_{x \to a} \frac{g(x)}{1/f(x)}
+                    </mrow>
+                </md>
+            </p>
+
+            <example xml:id="eg_hopitalJ">
+                <title>
+                    <m>\displaystyle \lim_{x\to 0^+} x \cdot \log x</m>
+                </title>
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to 0^+} x \cdot \log x
+                        </mrow>
+                    </md>
+                    Aqui a função <m>f(x)=x</m> vai para zero, enquanto <m>g(x)=\log x</m> vai para <m>-\infty</m>. Se
+                    reescrevermos isso como a fração
+                    <md>
+                        <mrow>
+                            x \cdot \log x \amp= \frac{\log x}{1/x}
+                        </mrow>
+                    </md>
+                    então a forma <m>0 \cdot \infty</m> tornou-se <m>\frac\infty\infty</m>.
+                </p>
+
+                <p>O resultado é
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0+}\underbrace{x}_{\rightarrow 0}
+                            \underbrace{\log x}_{\rightarrow-\infty}
+                            \amp =\lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+                            {\frac{1}{x}}}_{\atp
+                            {\mathrm{num}\rightarrow-\infty}
+                            {\mathrm{den}\rightarrow\infty}}
+                            =\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}{-\frac{1}{x^2}}
+                            =-\lim_{x\rightarrow 0+}x
+                            =0
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+
+            <example xml:id="eg_hopitalJJ">
+                <title>Determine
+                    <m>\lim\limits_{x\rightarrow +\infty}
+                        x^n e^{-x}
+                    </m>
+                </title>
+                <p>
+                    Neste exemplo vamos avaliar <m>\lim\limits_{x\rightarrow +\infty}
+                    x^n e^{-x}</m>, para todos os números naturais <m>n</m>. Começaremos com <m>n=1</m> e <m>n=2</m> e,
+                    usando o que aprendemos nesses casos, passaremos para o <m>n</m> geral .
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}\underbrace{x}_{\rightarrow \infty}
+                            \underbrace{e^{-x}}_{\rightarrow 0}
+                            \amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow+\infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =\lim_{x\rightarrow +\infty}\underbrace{\frac{1}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow 1}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =\lim_{x\rightarrow +\infty}e^{-x}
+                            =0
+                        </mrow>
+                    </md>
+                    Aplicando l'Hôpital duas vezes,
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}\underbrace{x^2}_{\rightarrow \infty}
+                            \underbrace{e^{-x}}_{\rightarrow 0}
+                            \amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x^2}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow+\infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =\lim_{x\rightarrow +\infty}\underbrace{\frac{2x}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =\lim_{x\rightarrow +\infty}\underbrace{\frac{2}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow 2}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =\lim_{x\rightarrow +\infty}2e^{-x}
+                        </mrow>
+                        <mrow>
+                            \amp=0
+                        </mrow>
+                    </md>
+                    De fato, para qualquer número natural <m>n</m>, aplicando L'Hôpital <m>n</m> vezes fornece
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}\underbrace{x^n}_{\rightarrow \infty}
+                            \underbrace{e^{-x}}_{\rightarrow 0}
+                            \amp =\lim_{x\rightarrow +\infty}\hskip-5pt\underbrace{\frac{x^n}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow+\infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                        </mrow>
+                        <mrow>
+                            \amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{nx^{n-1}}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                        </mrow>
+                        <mrow>
+                            \amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{n(n-1)x^{n-2}}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}
+                            {\mathrm{den}\rightarrow+\infty}}
+                        </mrow>
+                        <mrow>
+                            \amp=\cdots
+                            =\lim_{x\rightarrow +\infty}\underbrace{\frac{n!}
+                            {e^x}}_{\atp
+                            {\mathrm{num}\rightarrow n!}
+                            {\mathrm{den}\rightarrow+\infty}}
+                            =0
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+
+        </subsubsection>
+        <subsubsection>
+            <title>
+                Forma indeterminada
+                <m>\infty-\infty</m>
+
+            </title>
+            <p>
+                Quando <m>\displaystyle \lim_{x\to a}f(x) =
+                \infty
+            </m> e <m>\displaystyle \lim_{x\to a} g(x) = \infty</m>. Reescrevemos a diferença como uma fração usando um
+                denominador comum
+                <md>
+                    <mrow>
+                        f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
+                    </mrow>
+                </md>
+                que é então uma forma <m>\frac{0}{0}</m> ou <m>\frac{\infty}{\infty}</m> .
+            </p>
+
+            <example xml:id="eg_hopitalK">
+                <title>Determine
+                    <m>\displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)</m>
+                </title>
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)
+                        </mrow>
+                    </md>
+                    Como o limite de <m>\sec x</m> e <m>\tan x</m> é <m>+\infty</m> como <m>x \to
+                    \frac{\pi}{2}^-</m>, esta é uma forma indeterminada <m>\infty-\infty</m>. No entanto, podemos
+                    reescrever isso como
+                    <md>
+                        <mrow>
+                            \sec x - \tan x \amp= \frac{1}{\cos x} - \frac{\sin x}{\cos x} = \frac{1-\sin x}{\cos x}
+                        </mrow>
+                    </md>
+                    que é então uma forma indeterminada <m>\frac00</m> . Isso então dá
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow \frac{\pi}{2}^-}\Big(
+                            \underbrace{\sec x}_{\rightarrow +\infty}
+                            - \underbrace{\tan x}_{\rightarrow+\infty}\Big)
+                            \amp =\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{1-\sin x}
+                            {\cos x}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            =\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{-\cos x}
+                            {-\sin x}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow -1}}
+                            =0
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+            <p>No<xref ref="eg_hopitalK"/>, convertemos uma forma indeterminada
+                <m>\infty-\infty</m>
+                na forma  <m>\frac{0}{0}</m> explorando o fato de que os dois termos, <m>\sec x</m> e <m>\tan x</m>,
+                na indeterminate form <m>\infty-\infty</m>  compartilham um denominador comum,
+                isto é, <m>\cos x</m>.
+                No <q>mundo real</q> isso, é claro, raramente acontecerá. No entanto, como mostram os próximos
+                exemplos, muitas vezes pode-se transformar essas expressões em formas adequadas.
+            </p>
+
+            <p>Aqui está outro exemplo, muito mais complicado, onde isso não acontece.</p>
+
+            <example xml:id="eg_hopitalKK">
+                <title>Um exemplo mais complicado com a forma
+                    <m>\infty-\infty</m>
+                </title>
+                <p>
+                    Neste exemplo, avaliamos a forma indeterminada
+                    <m>\infty-\infty</m>
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\Big(
+                            \underbrace{\frac{1}{x}}_{\rightarrow \pm\infty}
+                            - \underbrace{\frac{1}{\log(1+x)}}_{\rightarrow\pm\infty}\Big)
+                        </mrow>
+                    </md>
+                    Nós a convertemos em uma forma indeterminada <m>\frac{0}{0}</m> simplesmente colocando as duas
+                    frações, <m>\frac{1}{x}</m> e <m>\frac {1}{\log(1+x)}</m> sobre um denominador comum.
+
+                    <me>
+                        \lim_{x\rightarrow 0}\Big(
+                        \underbrace{\frac{1}{x}}_{\rightarrow \pm\infty}
+                        - \underbrace{\frac{1}{\log(1+x)}}_{\rightarrow\pm\infty}\Big)
+                        =\lim_{x\rightarrow 0}\underbrace{\frac{\log(1+x)-x}{x\log(1+x)}}_{\atp
+                        {\mathrm{num}\rightarrow 0}
+                        {\mathrm{den}\rightarrow 0}}
+                        \tag{E1}
+                    </me>
+                    Agora aplicamos a regra de L'Hôpital e simplificamos
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\underbrace{\frac{\log(1+x)-x}{x\log(1+x)}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            \amp=\lim_{x\rightarrow 0}\frac{\frac{1}{1+x}-1} {\log(1+x)+\frac{x}{1+x}}
+                        </mrow>
+                        <mrow>
+                            \amp=\lim_{x\rightarrow 0}\frac{1-(1+x)} {(1+x)\log(1+x)+x}
+                        </mrow>
+                        <mrow>
+                            \amp=-\lim_{x\rightarrow 0}\underbrace{\frac{x} {(1+x)\log(1+x)+x}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 1\times 0+0=0}}
+                            \tag{E2}
+                        </mrow>
+                    </md>
+                    Então aplicamos a regra de L'Hôpital uma segunda vez
+                    <md>
+                        <mrow>
+                            -\lim_{x\rightarrow 0}\underbrace{\frac{x} {(1+x)\log(1+x)+x}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 1\times 0+0=0}}
+                            \amp=-\lim_{x\rightarrow 0}\underbrace{\frac{1} {\log(1+x)+\frac{1+x}{1+x}+1}}_{\atp
+                            {\mathrm{num}\rightarrow 1}
+                            {\mathrm{den}\rightarrow 0+1+1=2}}
+                        </mrow>
+                        <mrow>
+                            \amp=-\frac{1}{2}
+                            \tag{E3}
+                        </mrow>
+                    </md>
+                    Combinando (E1), (E2) e (E3) dá a nossa resposta final
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\Big(\frac{1}{x} - \frac{1}{\log(1+x)}\Big)
+                            =-\frac{1}{2}
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+
+            <p>O exemplo a seguir pode ser feito pela regra de L'Hôpital, mas, na verdade, é muito mais simples
+                multiplicar pelo conjugado e obter o limite usando as ferramentas da parte de limites.
+
+            </p>
+
+            <example xml:id="eg_3_7_5">
+                <title>Determine
+                    <m>\displaystyle \lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}</m>
+                </title>
+                <p>
+                    Considere o limite
+                    <md>
+                        <mrow>
+                            \lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}
+                        </mrow>
+                    </md>
+                    Nenhum dos termos é uma fração, mas podemos escrever
+                    <md>
+                        <mrow>
+                            \sqrt{x^2+4x}-\sqrt{x^2-3x}
+                            \amp= x\sqrt{1+4/x}-x\sqrt{1-3/x} \amp \text{assumindo } x \gt 0
+                        </mrow>
+                        <mrow>
+                            \amp= x \left( \sqrt{1+4/x}-\sqrt{1-3/x} \right)
+                        </mrow>
+                        <mrow>
+                            \amp= \frac{\sqrt{1+4/x}-\sqrt{1-3/x}}{1/x}
+                        </mrow>
+                    </md>
+                    que agora é uma forma <m>\frac00</m>  com <m>f(x)=\sqrt{1+4/x}-\sqrt{1-3/x}</m> e <m>g(x)=1/x</m>.
+                    Então
+                    <md>
+                        <mrow>
+                            f'(x) \amp= \frac{-4/x^2}{2\sqrt{1+4/x}} - \frac{3/x^2}{2\sqrt{1-3/x}} \amp
+                            g'(x) \amp= - \frac{1}{x^2}
+                        </mrow>
+                    </md>
+                    Portanto
+                    <md>
+                        <mrow>
+                            \frac{f'(x)}{g'(x)} \amp= \frac{4}{2\sqrt{1+4/x}} + \frac{3}{\sqrt{1-3/x}}
+                        </mrow>
+                    </md>
+                    E assim no limite como
+                    <m>x\to \infty</m>
+                    <md>
+                        <mrow>
+                            \lim_{x\to \infty} \frac{f'(x)}{g'(x)} \amp= \frac{4}{2}+\frac{3}{2} =
+                            \frac{7}{2}
+                        </mrow>
+                    </md>
+                    e assim o nosso limite original também é <m>7/2</m>.
+                </p>
+
+                <p>Por comparação, se multiplicarmos pelo conjugado temos
+                    <md>
+                        <mrow>
+                            \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}
+                            \amp= \left( \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}\right)
+                            \cdot \frac{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}
+                        </mrow>
+                        <mrow>
+                            \amp= \frac{ x^2+4x - (x^2-3x)}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}
+                        </mrow>
+                        <mrow>
+                            \amp= \frac{ 7x}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}
+                        </mrow>
+                        <mrow>
+                            \amp= \frac{7}{\sqrt{1+4/x}+\sqrt{1-3/x}} \qquad \text{assuming } x \gt 0
+                        </mrow>
+                    </md>
+                    Agora, tomar o limite como <m>x\to\infty</m> fornece <m>7/2</m> conforme necessário. Só porque
+                    conhecemos a regra de L'Hôpital, não significa que devemos usá-la em todos os lugares em que ela
+                    possa ser aplicada.
+                </p>
+            </example>
+
+        </subsubsection>
+        <subsubsection>
+            <title>
+                Forma indeterminada
+                <m>1^\infty</m>
+
+            </title>
+            <p>
+                Podemos usar a regra de L'Hôpital nos limites da forma
+                <md>
+                    <mrow>
+                        \lim_{x\to a} f(x)^{g(x)} \amp \text{ com }
+                    </mrow>
+                    <mrow>
+                        \lim_{x\to a} f(x) \amp= 1 \amp \text{ e } \amp\amp \lim_{x \to a} g(x) \amp= \infty
+                    </mrow>
+                </md>
+                considerando o logaritmo do limite:
+
+
+                <md>
+                    <mrow>
+                        \log\left( \lim_{x\to a} f(x)^{g(x)} \right)
+                        \amp= \lim_{x\to a} \log\left( f(x)^{g(x)} \right)
+                        = \lim_{x\to a} \log\left( f(x) \right) \cdot g(x)
+                    </mrow>
+                </md>
+                que agora é uma forma <m>0 \cdot \infty</m> . Isso pode ser ainda transformado em uma forma
+                <m>\frac00</m>
+                ou <m>\frac\infty\infty</m>:
+                <md>
+                    <mrow>
+                        \log\left( \lim_{x\to a} f(x)^{g(x)} \right)
+                        \amp=\lim_{x\to a} \log\left( f(x) \right) \cdot g(x)
+                    </mrow>
+                    <mrow>
+                        \amp= \lim_{x\to a} \frac{\log\left( f(x) \right)}{1/g(x)}.
+                    </mrow>
+                </md>
+            </p>
+
+
+            <example xml:id="eg_hopitalL">
+                <title>Encontre
+                    <m>\displaystyle \lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}</m>
+                </title>
+                <p>
+                    O seguinte limite aparece naturalmente ao considerar sistemas que exibem crescimento ou decaimento
+                    exponencial.
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}
+                            \qquad\text{with the constant } a\ne 0
+                        </mrow>
+                    </md>
+                    Já que  <m>(1+x) \to 1</m> e <m>a/x \to \infty</m> isto é uma forma indeterminada <m>1^\infty</m> .
+                </p>
+
+                <p>Considerando seu logaritmo temos
+                    <md>
+                        <mrow>
+                            \log\left( \lim_{x\to 0}(1+x)^{\frac{a}{x}}\right)
+                            \amp= \lim_{x\to 0}\log\left( (1+x)^{\frac{a}{x}}\right)
+                        </mrow>
+                        <mrow>
+                            \amp= \lim_{x\to 0} \frac{a}{x} \log(1+x)
+                        </mrow>
+                        <mrow>
+                            \amp= \lim_{x\to 0} \frac{a\log (1+x)}{x}
+                        </mrow>
+                    </md>
+                    que agora é um formulário <m>\frac00</m>. Aplicando a regra de L'Hôpital dá
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\underbrace{\frac{a\log(1+x)}{x}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            =\lim_{x\rightarrow 0}\underbrace{\frac{\frac{a}{1+x}}{1}}_{\atp
+                            {\mathrm{num}\rightarrow a}
+                            {\mathrm{den}\rightarrow 1}}
+                            =a
+                        </mrow>
+                    </md>
+                    Já que  <m>(1 + x)^{a/x} = \exp\left[\log\Big((1 + x)^{a/x}\Big)\right]</m> e a função exponencial é
+                    contínua, o nosso limite original é <m>e^a</m>.
+                </p>
+
+            </example>
+
+            <p>Aqui está um exemplo mais complicado de uma forma indeterminada <m>1^\infty</m>.
+            </p>
+
+            <example xml:id="eg_hopitalLL">
+                <title>Um exemplo mais complicado</title>
+                <p>
+                    No limite
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+                        </mrow>
+                    </md>
+                    a base, <m>\frac{\sin x}{x}</m>, vai para
+                    <m>1</m>
+                    e o expoente, <m>\frac{1}{x^2}</m>, vai para <m>\infty</m>. Mas se tomarmos logaritmos temos
+                </p>
+
+                <p>
+                    <md>
+                        <mrow>
+                            \log \Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+                            = \frac{\log\frac{\sin x}{x}}{x^2}
+                        </mrow>
+                    </md>
+                    então, no limite <m>x\rightarrow 0</m>, temos uma forma indeterminada <m>\frac{0}{0}</m> . Uma
+                    aplicação da regra de L'Hôpital fornece
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\underbrace{\frac{\log\frac{\sin x}{x}}{x^2}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            \amp =\lim_{x\rightarrow 0}
+                            \frac {\frac{x}{\sin x}\frac{x\cos x -\sin x}{x^2} }{2x}
+                            =\lim_{x\rightarrow 0}
+                            \frac{ \frac{x\cos x -\sin x}{x\sin x} }{2x}
+                            =\lim_{x\rightarrow 0} \frac{x\cos x -\sin x}{2x^2\sin x}
+                        </mrow>
+                    </md>
+                    que é outra forma <m>\frac00</m>. Aplicando a regra de L'Hôpital novamente dá:
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0}\underbrace{
+                            \frac{x\cos x -\sin x}{2x^2\sin x} }_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            \amp=\lim_{x\rightarrow 0}
+                            \frac{\cos x -x\sin x-\cos x}{4x\sin x+2x^2\cos x}
+                        </mrow>
+                        <mrow>
+                            \amp=-\lim_{x\rightarrow 0}
+                            \frac{x\sin x}{4x\sin x+2x^2\cos x}
+                            =-\lim_{x\rightarrow 0}
+                            \frac{\sin x}{4\sin x+2x\cos x}
+                        </mrow>
+                    </md>
+                    que é mais uma forma  <m>\frac00</m>. Mais uma vez com a regra de L'Hôpital:
+                    <md>
+                        <mrow>
+                            -\lim_{x\rightarrow 0}\underbrace{
+                            \frac{\sin x}{4\sin x+2x\cos x} }_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 0}}
+                            \amp=-\lim_{x\rightarrow 0}\underbrace{
+                            \frac{\cos x}{4\cos x+2\cos x-2x\sin x} }_{\atp
+                            {\mathrm{num}\rightarrow 1}
+                            {\mathrm{den}\rightarrow 6}}
+                        </mrow>
+                        <mrow>
+                            \amp=-\frac{1}{6}
+                        </mrow>
+                    </md>
+                    Acabamos de mostrar que o logaritmo do nosso limite original é <m>-\frac{1}{6}</m>. Portanto, o
+                    limite original é <m>e^{-1/6}</m>.
+                </p>
+
+                <p>Este foi um exemplo bastante complicado. No entanto, ilustra a importância de limpar as suas
+                    expressões
+                    algébricas. Isso reduzirá a quantidade de trabalho que necassário e também reduzirá o número
+                    de erros cometidos.
+                </p>
+
+            </example>
+
+        </subsubsection>
+        <subsubsection>
+            <title>Forma indeterminada
+                <m>0^0</m>
+            </title>
+            <p>Como a forma  <m>1^\infty</m>, isso pode ser tratado considerando o seu logaritmo.
+            </p>
+
+            <example xml:id="eg_hopitalM">
+                <title>Determine
+                    <m>\displaystyle \lim_{x\rightarrow 0+}x^x</m>
+                </title>
+                <p>
+                    Por exemplo, no limite
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0+}x^x
+                        </mrow>
+                    </md>
+                    ambos, a base <m>x</m>, e o expoente, também <m>x</m>, vai para zero. Mas se considerarmos o
+                    logaritmo, temos
+                    <md>
+                        <mrow>
+                            \log x^x = x\log x
+                        </mrow>
+                    </md>
+                    que é uma forma indeterminada <m>0\cdot\infty</m>, que já sabemos tratar.
+                    Na verdade, já encontramos,<xref ref="eg_hopitalJ"/>, que
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0+} x\log x=0
+                        </mrow>
+                    </md>
+                    Como a exponencial é uma função contínua
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow 0+}x^x
+                            =\lim_{x\rightarrow 0+}\exp\big(x\log x\big)
+                            =\exp\Big(\lim_{x\rightarrow 0+}x\log x\Big)
+                            =e^0
+                            =1
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+        </subsubsection>
+        <subsubsection>
+            <title>
+                Forma indeterminada
+                <m>\infty^0</m>
+
+            </title>
+            <p>Novamente, podemos tratar esta forma considerando o seu logaritmo.</p>
+
+            <example xml:id="eg_hopitalN">
+                <title>Encontrar
+                    <m>\displaystyle \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}</m>
+                </title>
+                <p>
+                    Por exemplo, no limite
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+                        </mrow>
+                    </md>
+                    a base, <m>x</m>, vai até o infinito e o expoente, <m>\frac{1}{x}</m>, vai
+                    para zero. Mas se tomarmos logaritmos
+                    <md>
+                        <mrow>
+                            \log x^{\frac{1}{x}} =\frac{\log x}{x}
+                        </mrow>
+                    </md>
+                    que é uma forma <m>\frac\infty\infty</m>, que sabemos como tratar.
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}\underbrace{\frac{\log x}{x}}_{\atp
+                            {\mathrm{num}\rightarrow \infty}
+                            {\mathrm{den}\rightarrow \infty}}
+                            =\lim_{x\rightarrow +\infty}\underbrace{\frac{\frac{1}{x}}{1}}_{\atp
+                            {\mathrm{num}\rightarrow 0}
+                            {\mathrm{den}\rightarrow 1}}
+                            =0
+                        </mrow>
+                    </md>
+                    Como a exponencial é uma função contínua
+                    <md>
+                        <mrow>
+                            \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+                            =\lim_{x\rightarrow +\infty}\exp\Big(\frac{\log x}{x}\Big)
+                            =\exp\Big(\lim_{x\rightarrow \infty}\frac{\log x}{x}\Big)
+                            =e^0
+                            =1
+                        </mrow>
+                    </md>
+                </p>
+            </example>
+
+        </subsubsection>
+    </subsection>
+    <subsection>
+        <title>
+            Sugestão de vídeos
+        </title>
+
+        <ul>
+            <li>
+                <p>
+                    <url href="https://youtu.be/L_qsHW4W4Tw" visual="youtu.be/L_qsHW4W4Tw"><m>\lim\limits_{x\to
+                        0}\dfrac{2\sin{x}-\sin{2x}}{x-\sin{x}}</m>.
+                    </url>
+                </p>
+
+            </li>
+            <li>
+                <p>
+                    <url href="https://youtu.be/ZzIb9ikEedw" visual="youtu.be/ZzIb9ikEedw"><m>\lim\limits_{x\to
+                        \infty}\dfrac{4x^2-5x}{1-3x^2}</m>.
+                    </url>
+                </p>
+
+            </li>
+            <li>
+                <p>
+                    <url href="https://youtu.be/KGuaF7SEyq8" visual="youtu.be/KGuaF7SEyq8"><m>\lim\limits_{x\to
+                        1}\dfrac{x}{x-1}-\dfrac{1}{\ln{x}}</m>.
+                    </url>
+                </p>
+
+            </li>
+            <li>
+                <p>
+                    <url href="https://youtu.be/2ElwQNDa5ag" visual="youtu.be/2ElwQNDa5ag">Encontrar o valor de <m>a</m> tal
+                        que  <m>\lim\limits_{x\to 0}\dfrac{\sqrt{4+x}-\sqrt{4-ax}}{x}=\dfrac{3}{4}</m>.
+                    </url>
+                </p>
+
+            </li>
+            <li>
+                <p>
+                    <url href="https://youtu.be/g1lfUbvScas" visual="youtu.be/g1lfUbvScas"> Demonstração da parte 1 da Regra de L'Hôpital.
+                    </url>
+                </p>
+
+            </li>
+        </ul>
+    </subsection>
+
+    <exercises xml:id="exercises-hopital">
+        <exercisegroup>
+                <introduction>
+                <p>
+                    Nos exercícios a seguir tente calcular os limites usando a Regra de L'Hôpital.
+                </p>
+                </introduction>
+        <exercise>
+            <webwork source="pretext-hopital-forma-indeterminada/problem1.pg"/>
+        </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem2.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem3.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem4.pg"/>
+            </exercise>
+            <exercise>
+            <webwork source="pretext-hopital-forma-indeterminada/problem5.pg"/>
+        </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem6.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem7.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem8.pg"/>
+            </exercise>
+            <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem9.pg"/>
+            </exercise> <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem10.pg"/>
+            </exercise> <exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem11.pg"/>
+            </exercise><exercise>
+                <webwork source="pretext-hopital-forma-indeterminada/problem12.pg"/>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>
