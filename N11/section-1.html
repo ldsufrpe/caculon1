@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T20:50:31-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Regra de L'Hôpital</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Derivadas: N11</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="calc-limite-derivada.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link active">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Regra de L'Hôpital</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Uma introdução à Regra do L'Hôpital (vídeo)</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Regra de L'Hôpital e Formas Indeterminadas</a></li>
+<li><a href="section-1.html#ssec_3_7_1" data-scroll="ssec_3_7_1" class="internal">Alguns Exemplos Comuns</a></li>
+<li><a href="section-1.html#ssec_3_7_2" data-scroll="ssec_3_7_2" class="internal">Variações</a></li>
+<li><a href="section-1.html#subsection-5" data-scroll="subsection-5" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-1.html#exercises-hopital" data-scroll="exercises-hopital" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">2</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">1</span> <span class="title">Regra de L'Hôpital</span>
+</h2>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal">
+<li id="li-1"><p id="p-3">Usar Regra de L'Hôpital para calcular limites</p></li>
+<li id="li-2"><p id="p-4">Reconhecer formas indeterminadas</p></li>
+</ol></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.1</span> <span class="title">Uma introdução à Regra do L'Hôpital (vídeo)</span>
+</h3>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="intro-regra-hopital" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/wn8IEH9UQlM?&amp;modestbranding=1&amp;rel=0"></iframe></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.2</span> <span class="title">Regra de L'Hôpital e Formas Indeterminadas</span>
+</h3>
+<section class="introduction" id="introduction-2"><p id="p-5">Voltemos aos limites e vejamos como podemos usar derivadas para simplificar os limites chamados de formas indeterminadas. Sabemos, das propriedades aritmétricas de limites, que se</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{align*}
+\lim_{x\rightarrow a}f(x) \amp= F \amp
+\lim_{x\rightarrow a}g(x) \amp= G\\
+\end{align*}
+<p class="intertext">e <span class="process-math">\(G\ne 0\text{,}\)</span> então</p>
+\begin{align*}
+\lim_{x\rightarrow a}\frac{f(x)}{g(x)} \amp= \frac{F}{G}
+\end{align*}
+</div>
+<p class="continuation">A exigência de que <span class="process-math">\(G\ne 0\)</span>  é necessária.</p>
+<p id="p-6">Claro que não é surpreendente que se <span class="process-math">\(F\ne 0\)</span> e <span class="process-math">\(G= 0\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+\lim_{x\to a}\frac{f(x)}{g(x)} \amp= \text{ não existe }
+\end{align*}
+</div>
+<p class="continuation">e se <span class="process-math">\(F=0\)</span> mas <span class="process-math">\(G\neq 0\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+\lim_{x\to a}\frac{f(x)}{g(x)} \amp= 0
+\end{align*}
+</div>
+<p class="continuation">No entanto, quando ambos <span class="process-math">\(F,G=0\)</span> então, como vimos nos exemplos anteriores, há muitas possibilidades:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+f(x)\amp=x \amp g(x)\amp=x^2 \amp \lim_{x\to0} \frac{x}{x^2}
+\amp= \lim_{x\to0} \frac{1}{x} = \text{ não existe }\\
+f(x)\amp=x^2 \amp g(x)\amp=x \amp \lim_{x\to0} \frac{x^2}{x}
+\amp= \lim_{x\to0} x = 0\\
+f(x)\amp=x \amp g(x)\amp=x \amp \lim_{x\to0} \frac{x}{x}
+\amp= \lim_{x\to0} 1 = 1\\
+f(x)\amp=7x^2 \amp g(x)\amp=3x^2 \amp \lim_{x\to0} \frac{7x^2}{3x^2}
+\amp= \lim_{x\to0} \frac{7}{3} = \frac{7}{3}
+\end{align*}
+</div>
+<p class="continuation">Exploramos alguns exemplos em que ao encontrar <span class="process-math">\(0/0\)</span> buscariamos algo que seja cancelado para “retirar” o zero do denominador.</p>
+<p id="p-7">Como o limite resultante dessas situações <span class="process-math">\(0/0\)</span> não é imediatamente óbvio, mas também leva a uma matemática interessante, devemos dar um nome a ele.</p>
+<article class="definition definition-like" id="def_3_7_1"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Primeiras formas indeterminadas.</span>
+</h4>
+<p id="p-8">Seja <span class="process-math">\(a \in \mathbb{R}\)</span> e seja <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span>  funções. Se</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+\lim_{x\to a} f(x) \amp= 0 \amp \text{and } \amp\amp
+\lim_{x\to a} g(x) \amp= 0
+\end{align*}
+</div>
+<p class="continuation">então o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{gather*}
+\lim_{x\to a} \dfrac{f(x)}{g(x)}
+\end{gather*}
+</div>
+<p class="continuation">é chamado forma indeterminada <span class="process-math">\(\frac{0}{0}\text{.}\)</span></p></article><p id="p-9">Há um grande número de ferramentas matemáticas para avaliar tais formas indeterminadas — <a class="external" href="https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor" target="_blank">séries de Taylor</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>, por exemplo. Um método mais simples, que funciona em alguns casos, é a regra de L'Hôpital. <aside class="aside aside-like" id="aside-1"><h4 class="heading"><span class="title">História.</span></h4>
+<p id="p-10">Nomeado para o matemático do século 17, Guillaume de l'Hôpital, que publicou o primeiro livro sobre cálculo diferencial. A regra homônima aparece nesse texto, mas acredita-se que tenha sido desenvolvida por Johann Bernoulli. O livro foi fonte de alguma controvérsia, pois continha muitos resultados de Bernoulli, que l'Hôpital reconheceu no prefácio, mas Bernoulli sentiu que l'Hôpital recebeu crédito indevido.</p></aside></p>
+<article class="assemblage assemblage-like" id="thm_APPlhopital"><h4 class="heading"><span class="title">Regra de L'Hôpital.</span></h4>
+<p id="p-11">Seja <span class="process-math">\(a\in\mathbb{R}\)</span> e assuma que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+\lim_{x\to a}f(x) \amp= \lim_{x\to a} g(x) = 0
+\end{align*}
+</div>
+<p class="continuation">Então</p>
+<ol class="decimal">
+<li id="li-3"><p id="p-derived-li-3">se <span class="process-math">\(f'(a)\)</span> e <span class="process-math">\(g'(a)\)</span> exista e <span class="process-math">\(g'(a)\ne 0\text{,}\)</span> então<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+\lim_{x\to a} \frac{f(x)}{g(x)} \amp=\frac{f'(a)}{g'(a)},
+\end{align*}
+</div></p></li>
+<li id="li-4"><p id="p-derived-li-4">enquanto, se <span class="process-math">\(f'(x)\)</span> e <span class="process-math">\(g'(x)\)</span> existem, com <span class="process-math">\(g'(x)\)</span> não nulo, em um intervalo aberto contendo  <span class="process-math">\(a\text{,}\)</span> exceto possívelmente em <span class="process-math">\(a\text{,}\)</span> e se o limite<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{gather*}
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \text{ existe ou é $+\infty$ ou
+é $-\infty$}
+\end{gather*}
+</div>então<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{gather*}
+\lim_{x\to a} \frac{f(x)}{g(x)}
+=\lim_{x \to a} \frac{f'(x)}{g'(x)}
+\end{gather*}
+</div></p></li>
+</ol></article></section></section><section class="subsection" id="ssec_3_7_1"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.3</span> <span class="title">Alguns Exemplos Comuns</span>
+</h3>
+<p id="p-12">Aqui estão alguns exemplos simples usando a regra de L'Hôpital.</p>
+<article class="example example-like" id="eg_hopitalA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalA"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin x}{x}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalA"><article class="example example-like"><p id="p-13">Determine  <span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin x}{x}\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-14">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-11">
+\begin{gather*}
+\lim_{x\to 0} \frac{\sin x}{x}
+\end{gather*}
+</div>
+<p class="continuation">Note que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-12">
+\begin{align*}
+\lim_{x\to 0} \sin x \amp= 0\\
+\lim_{x\to 0} x \amp= 0
+\end{align*}
+</div>
+<p class="continuation">então esta é uma forma <span class="process-math">\(\frac00\)</span> indeterminada, e sugere que tentemos a <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Coleção: Regra de L'Hôpital">Regra de L'Hôpital</a>. Para aplicar a regra devemos primeiro verificar os limites das derivadas.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-13">
+\begin{align*}
+f(x)\amp= \sin x \amp f'(x) \amp =\cos x \amp \text{and} \amp\amp
+f'(0)=1\\
+g(x) \amp= x \amp g'(x) \amp = 1 \amp \text{and} \amp\amp
+g'(0)=1
+\end{align*}
+</div>
+<p class="continuation">Então, pela regra de l'Hôpital</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-14">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin x}{x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{1} = 1.
+\end{align*}
+</div>
+</div></div></article></div>
+<article class="example example-like" id="eg_hopitalB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalB"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalB"><article class="example example-like"><p id="p-15">Determine <span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-16">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{gather*}
+\lim_{x\to 0} \frac{\sin(x)}{\sin(2x)}
+\end{gather*}
+</div>
+<p class="continuation">Já que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-16">
+\begin{align*}
+\lim_{x\to 0} \sin 2x \amp= 0\\
+\lim_{x\to 0} \sin x \amp= 0
+\end{align*}
+</div>
+<p class="continuation">então temos novamente uma forma indeterminada <span class="process-math">\(\frac00\text{.}\)</span> Fazendo <span class="process-math">\(f(x)=\sin x\)</span> e <span class="process-math">\(g(x)=\sin 2x\text{,}\)</span> temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+\begin{align*}
+f'(x) \amp= \cos x \amp f'(0)= 1\\
+g'(x) \amp= 2\cos 2x \amp g'(0)= 2
+\end{align*}
+</div>
+<p class="continuation">E pela regra de L'Hôpital</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin x}{\sin 2x} \amp= \frac{f'(0)}{g'(0)} = \frac{1}{2}.
+\end{align*}
+</div>
+</div></div></article></div>
+<article class="example example-like" id="eg_3_7_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_1"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{q^x - 1}{x}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_1"><article class="example example-like"><p id="p-17">Encontre <span class="process-math">\(\displaystyle \lim_{x \to 0} \frac{q^x - 1}{x}\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-18">Seja  <span class="process-math">\(q \gt 1\)</span> e calcule o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+\begin{gather*}
+\lim_{x \to0} \frac{q^x - 1}{x}
+\end{gather*}
+</div>
+<p id="p-19">Uma vez que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\begin{align*}
+\lim_{x \to 0} (q^x-1) \amp = 1-1 = 0\\
+\lim_{x \to 0} x \amp = 0
+\end{align*}
+</div>
+<p class="continuation">temos uma forma indeterminada <span class="process-math">\(\frac00\text{.}\)</span> Fazendo <span class="process-math">\(f(x)= q^x-1\)</span> e <span class="process-math">\(g(x)=x\text{,}\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\begin{align*}
+f'(x) \amp= \dfrac{\dd}{\dd x}\left(q^x-1\right) = q^x \cdot \log q
+\amp f'(0) \amp= \log q\\
+g'(x) \amp= 1 \amp g'(0) \amp= 1
+\end{align*}
+</div>
+<p class="continuation">E pela regra de L'Hôpital</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+\begin{align*}
+\lim_{h \to0} \frac{q^h - 1}{h} \amp= \log q.
+\end{align*}
+</div>
+</div></div></article></div>
+<p id="p-20">Neste exemplo, aplicaremos a regra de L'Hôpital duas vezes antes de obter a resposta.</p>
+<article class="example example-like" id="eg_hopitalC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalC"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Duplo L'Hôpital.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalC"><article class="example example-like"><p id="p-21">Determine o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
+\begin{gather*}
+\lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
+\end{gather*}
+</div>
+<p id="p-22">Note que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-24">
+\begin{align*}
+\lim_{x\to 0} \sin(x^2) \amp= \sin 0 = 0\\
+\lim_{x\to 0}(1-\cos x) \amp= 1-\cos 0 = 0
+\end{align*}
+</div>
+<p class="continuation">e, portanto, temos uma forma indeterminada <span class="process-math">\(\frac00\text{.}\)</span> Seja <span class="process-math">\(f(x) = \sin(x^2)\)</span> e <span class="process-math">\(g(x)=1-\cos x\)</span> então</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-25">
+\begin{align*}
+f'(x) \amp= 2x\cos(x^2) \amp f'(0)\amp=0\\
+g'(x) \amp= \sin x \amp g'(0) \amp=0
+\end{align*}
+</div>
+<p class="continuation">Então, se tentarmos aplicar a regra de L'Hôpital ingenuamente, obteremos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-26">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x} \amp= \frac{f'(0)}{g'(0)} = \frac{0}{0}.
+\end{align*}
+</div>
+<p class="continuation">que é outra forma <span class="process-math">\(\frac00\)</span> indeterminada. De acordo com a parte 2 da<a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Coleção: Regra de L'Hôpital">Regra de L'Hôpital</a>) podemos fazer</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-27">
+\begin{align*}
+\lim_{x\to 0} \frac{f(x)}{g(x)} \amp= \lim_{x\to 0} \frac{f'(x)}{g'(x)}
+\end{align*}
+</div>
+<p class="continuation">desde que este segundo limite exista. No nosso caso, isso exige que calculemos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-28">
+\begin{gather*}
+\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+\end{gather*}
+</div>
+<p class="continuation">o que podemos fazer usando a regra de L'Hôpital novamente. Agora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-29">
+\begin{align*}
+h(x) \amp= 2x\cos(x^2) \amp h'(x) \amp= 2\cos(x^2) - 4x^2\sin(x^2) \amp h'(0) \amp=2\\
+\ell(x) \amp= \sin(x) \amp \ell'(x) \amp= \cos(x) \amp \ell'(0) \amp= 1
+\end{align*}
+</div>
+<p class="continuation">Pela regra de L'Hôpital</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-30">
+\begin{align*}
+\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)} \amp= \frac{h'(0)}{\ell'(0)} = 2
+\end{align*}
+</div>
+<p class="continuation">Assim, o nosso limite original é</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-31">
+\begin{align*}
+\lim_{x\to 0} \frac{\sin(x^2)}{1-\cos x}
+\amp=\lim_{x \to 0} \frac{2x \cos(x^2)}{\sin(x)}
+= 2.
+\end{align*}
+</div>
+<p class="continuation">Podemos resumir sucintamente as duas aplicações da regra de L'Hôpital neste exemplo por</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_APPlhopital.html" id="md-32">
+\begin{align*}
+\lim_{x\to 0}\underbrace{\frac{\sin(x^2)}{1-\cos x}}_{
+{\mathrm{num}\to 0}\,,
+{\mathrm{den}\to 0}}
+\amp=\lim_{x\to 0}\underbrace{\frac{2x\cos(x^2)}{\sin x}}_{
+{\mathrm{num}\to 0}\, ,
+{\mathrm{den}\to 0}}
+=\lim_{x\to 0}\underbrace{\frac{2\cos(x^2)-4x^2\sin(x^2)}{\cos x}}_{
+{\mathrm{num}\to 2}\,,
+{\mathrm{den}\to 1}}
+=2
+\end{align*}
+</div>
+<p class="continuation">Aqui “num” e “den” são usados como abreviações de “numerador” e “denominador” respectivamente.</p></article></div>
+<p id="p-23">Deve-se ter o cuidado de garantir que as hipóteses da regra de l'Hôpital sejam satisfeitas antes de aplicá-la. Os seguintes “avisos” mostram o pode dar errado.</p>
+<article class="warning remark-like" id="warning_lhopital1"><h4 class="heading">
+<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Limite do denominador diferente de zero.</span>
+</h4>
+<p id="p-24">Se</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-33">
+\begin{align*}
+\lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{but}\amp\amp
+\lim\limits_{x\rightarrow a}g(x)\amp\ne 0
+\end{align*}
+</div>
+<p class="continuation">então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
+\amp\amp \text{não precisa ser igual} \amp\amp
+\frac{f'(a)}{g'(a)}
+\text{ ou }
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
+\end{align*}
+</div>
+<p id="p-25">Aqui está um exemplo. Faça</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
+\begin{gather*}
+a=0\qquad f(x)=3x \qquad g(x)=4+5x
+\end{gather*}
+</div>
+<p class="continuation">Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-36">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+\amp=\lim_{x\rightarrow 0}\frac{3x}{4+5x} \amp
+\amp=\frac{3\times 0}{4+5\times 0}
+=0\\
+\lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+\amp= \frac{f'(0)}{g'(0)}
+=\frac{3}{5}
+\end{align*}
+</div></article><article class="warning remark-like" id="warning_lhopital2"><h4 class="heading">
+<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Limite do numerador diferente de zero.</span>
+</h4>
+<p id="p-26">Se</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-37">
+\begin{align*}
+\lim\limits_{x\rightarrow a}g(x)\amp=0
+\amp\text{but}\amp\amp
+\lim\limits_{x\rightarrow a}f(x)\amp\ne 0
+\end{align*}
+</div>
+<p class="continuation">então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-38">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}
+\amp\amp \text{need not be the same as} \amp\amp
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}.
+\end{align*}
+</div>
+<p id="p-27">Aqui está um exemplo. Faça</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
+\begin{gather*}
+a=0\qquad \qquad f(x)=4+5x \qquad g(x)=3x
+\end{gather*}
+</div>
+<p class="continuation">Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+\amp=\lim_{x\rightarrow 0}\frac{4+5x}{3x} \amp
+\amp=\text{ não existe }\\
+\lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+\amp=\lim_{x\rightarrow 0}\frac{5}{3}
+=\frac{5}{3}
+\end{align*}
+</div></article><p id="p-28">Este próximo é mais sutil; os limites das funções originais de numerador e denominador vão para zero, mas o limite da razão das suas derivadas não existe .</p>
+<article class="warning remark-like" id="warning_lhopital3"><h4 class="heading">
+<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Limite de razão das derivadas não existe.</span>
+</h4>
+<p id="p-29">Se</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-41">
+\begin{align*}
+\lim\limits_{x\rightarrow a}f(x)\amp=0 \amp \text{and}\amp\amp
+\lim\limits_{x\rightarrow a}g(x) \amp= 0
+\end{align*}
+</div>
+<p class="continuation">mas</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)} \amp \text{ não existe}
+\end{align*}
+</div>
+<p class="continuation">então ainda é possível</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp \text{ exista.}
+\end{align*}
+</div>
+<p id="p-30">Aqui um exemplo. Faça</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-44">
+\begin{gather*}
+a=0\qquad \qquad f(x)=x^2\sin\frac{1}{x} \qquad g(x)= x
+\end{gather*}
+</div>
+<p class="continuation">Então (com uma aplicação do teorema do confronto)</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
+\begin{align*}
+\lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
+\lim_{x\to 0} g(x) \amp= 0.
+\end{align*}
+</div>
+<p class="continuation">Se tentarmos aplicar a regra de L'Hôptial, teremos <span class="process-math">\(g'(x)=1\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
+\begin{align*}
+f'(x)\amp=2x\sin\frac{1}{x} -\cos\frac{1}{x}\\
+\end{align*}
+<p class="intertext">e então tentamos calcular o limite</p>
+\begin{align*}
+\lim_{x\to 0} \frac{f'(x)}{g'(x)}
+\amp= \lim_{x\to 0} \left( 2x\sin\frac{1}{x} -\cos\frac{1}{x}\right)
+\end{align*}
+</div>
+<p class="continuation">No entanto, esse limite não existe. O primeiro termo converge para 0 (pelo teorema do confronto), mas o segundo termo <span class="process-math">\(\cos(1/x)\)</span> apenas oscila muito entre <span class="process-math">\(\pm 1\text{.}\)</span> Tudo o que podemos concluir disso é</p>
+<blockquote class="blockquote" id="blockquote-1"><p id="p-31">Como o limite da razão das derivadas não existe, não podemos aplicar a regra de L'Hôpital.</p></blockquote>
+<p id="p-32">Em vez disso, devemos voltar ao limite original e aplicar o teorema do confronto:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+\amp=\lim_{x\rightarrow 0}\frac{x^2\sin\frac{1}{x} }{x}
+=\lim_{x\rightarrow 0} x\sin\frac{1}{x}
+= 0,
+\end{align*}
+</div>
+<p class="continuation">ja que  <span class="process-math">\(|x\sin(1/x)| \lt |x|\)</span> and <span class="process-math">\(|x| \to 0\)</span> com <span class="process-math">\(x\to 0\text{.}\)</span></p></article><p id="p-33">Também é fácil construir um exemplo em que os limites do numerador e do denominador são ambos zero, mas o limite da razão e o limite da razão das derivadas não existem. Uma pequena alteração do exemplo anterior mostra que é possível que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
+\begin{align*}
+\lim\limits_{x\rightarrow a}f(x) \amp=0
+\amp \text{and}\amp\amp
+\lim\limits_{x\rightarrow a}g(x) \amp= 0
+\end{align*}
+</div>
+<p class="continuation">mas nenhum dos limites</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
+\begin{align*}
+\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)} \amp\amp \text{or}\amp\amp
+\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}
+\end{align*}
+</div>
+<p class="continuation">existe. Tomando</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-50">
+\begin{gather*}
+a=0\qquad \qquad f(x)=x\sin\frac{1}{x} \qquad g(x)= x
+\end{gather*}
+</div>
+<p class="continuation">Então (com uma rápida aplicação do teorema do confronto)</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
+\begin{align*}
+\lim_{x\to 0} f(x) \amp= 0 \amp \text{and}\amp\amp
+\lim_{x\to 0} g(x) \amp= 0.
+\end{align*}
+</div>
+<p class="continuation">Além disso,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}
+\amp=\lim_{x\rightarrow 0}\frac{x\sin\frac{1}{x} }{x}
+=\lim_{x\rightarrow 0} \sin\frac{1}{x}
+\end{align*}
+</div>
+<p class="continuation">não existe. E de maneira similar</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{f'(x)}{g'(x)}
+\amp= \lim_{x\to 0} \frac{\sin\frac{1}{x} - \frac{1}{x}\cos\frac{1}{x} }{x^2}
+\end{align*}
+</div>
+<p class="continuation">não existe.</p></section><section class="subsection" id="ssec_3_7_2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.4</span> <span class="title">Variações</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-34">A <a href="" class="xref" data-knowl="./knowl/thm_APPlhopital.html" title="Coleção: Regra de L'Hôpital">Regra de L'Hôpital</a> é a forma básica da regra de L'Hôpital, mas também há muitas variações. Aqui estão um monte deles.</p></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.1</span> <span class="title">Limites no infinito</span>
+</h4>
+<p id="p-35">A regra de L'Hôpital também se aplica quando o limite de <span class="process-math">\(x \to a\)</span> é substituida por <span class="process-math">\(\lim\limits_{x\to a+}\)</span> ou por <span class="process-math">\(\lim\limits_{x\to a-}\)</span> ou por <span class="process-math">\(\lim\limits_{x\to +\infty}\)</span> ou por <span class="process-math">\(\lim\limits_{x\to -\infty}\text{.}\)</span></p>
+<p id="p-36">We can justify adapting the rule to the limits to <span class="process-math">\(\pm \infty\)</span> via the following reasoning Podemos justificar a adaptação da regra com <span class="process-math">\(\pm \infty\)</span> através do seguinte raciocínio</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
+\begin{align*}
+\lim_{x\to \infty} \frac{f(x)}{g(x)}
+\amp= \lim_{y \to 0^+} \frac{ f(1/y) }{ g(1/y) } \amp \text{substitua } x=1/y\\
+\amp= \lim_{y \to 0^+} \frac{ -\frac{1}{y^2} f'(1/y) } { -\frac{1}{y^2}g'(1/y)},
+\end{align*}
+</div>
+<p class="continuation">onde usamos a regra de l'Hôpital (assumindo que esse limite existe) e o fato de que <span class="process-math">\(\dfrac{\dd}{\dd y} f(1/y) = -\frac{1}{y^2} f'(1/y)\)</span> (e similarmente para <span class="process-math">\(g\)</span>). Simplificar isso e substituir <span class="process-math">\(y=1/x\)</span> fornece o resultado necessário:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
+\begin{align*}
+\lim_{x\to \infty} \frac{f(x)}{g(x)} \amp =\lim_{y \to 0^+} \frac{f'(1/y)} {g'(1/y)}
+=\lim_{x\to\infty} \frac{f'(x)}{g'(x)}.
+\end{align*}
+</div>
+<article class="example example-like" id="eg_hopitalH"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalH"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">L'Hôpital no infinito.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalH"><article class="example example-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+\begin{gather*}
+\lim_{x\to\infty} \frac{\arctan x - \frac{\pi}{2}}{ \frac{1}{x} }
+\end{gather*}
+</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-38">Ambos, denominador e numerador vão para zero <span class="process-math">\(0\)</span> quando  <span class="process-math">\(x \to\infty\text{,}\)</span> então isso é uma indeterminação da forma <span class="process-math">\(\frac00\)</span> Encontramos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-57">
+\begin{gather*}
+\lim_{x\rightarrow+\infty}\underbrace{\frac{\arctan x-\frac{\pi}{2}}
+{\frac{1}{x}}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+=\lim_{x\rightarrow +\infty}\frac{\frac{1}{1+x^2}} {-\frac{1}{x^2}}
+=-\lim_{x\rightarrow +\infty}\underbrace{\frac{1}{1+\frac{1}{x^2}}}_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow 1}}
+=-1
+\end{gather*}
+</div>
+<p class="continuation">Aplicamos a regra de L'Hôpital com</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-58">
+\begin{align*}
+f(x) \amp= \arctan x -\frac{\pi}{2}\qquad\amp
+g(x) \amp=\frac{1}{x}\\
+f'(x)\amp=\frac{1}{1+x^2}\amp
+g'(x)\amp=-\frac{1}{x^2}
+\end{align*}
+</div>
+</div></div></article></div></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.2</span> <span class="title">Forma indeterminada <span class="process-math">\(\frac{\infty}{\infty}\)</span></span>
+</h4>
+<p id="p-39">A regra de L'Hôpital também se aplica quando <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=0\)</span> é substituida por <span class="process-math">\(\lim\limits_{x\rightarrow a}f(x)=\pm\infty\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\rightarrow a}g(x)=\pm\infty\text{.}\)</span></p>
+<article class="example example-like" id="eg_3_7_2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_2"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Determine <span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{\log x}{x}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_2"><article class="example example-like"><p id="p-40">Considere</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-59">
+\begin{gather*}
+\lim_{x \to \infty} \frac{\log x}{x}
+\end{gather*}
+</div>
+<p id="p-41">O numerador e o denominador crescem em direção ao infinito, portanto, esta é uma forma <span class="process-math">\(\frac\infty\infty\)</span> indeterminada. Uma aplicação da regra de l'Hôpital dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-60">
+\begin{align*}
+\lim_{x \to \infty}
+\underbrace{\frac{\log x}{x}}_{\atp
+{\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+\amp= \lim_{x \to \infty} \frac{1/x}{1}\\
+\amp= \lim_{x \to \infty} \frac{1}{x} = 0
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="eg_3_7_3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_3"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Encontre <span class="process-math">\(\displaystyle \lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_3"><article class="example example-like"><p id="p-42">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-61">
+\begin{gather*}
+\lim_{x \to \infty} \frac{5x^2+3x-3}{x^2+1}
+\end{gather*}
+</div>
+<p class="continuation">Então, por duas aplicações da regra de L'Hôpital, obtemos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-62">
+\begin{align*}
+\lim_{x \to \infty}
+\underbrace{\frac{5x^2+3x-3}{x^2+1}}_{\atp
+{\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+\amp= \lim_{x \to \infty}
+\underbrace{\frac{10x+3}{2x}}_{\atp
+{\mathrm{num}\rightarrow \infty}{\mathrm{den}\rightarrow \infty}}
+= \lim_{x \to \infty} \frac{10}{2}
+= 5.
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="eg_hopitalI"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalI"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Um duplo l'Hôpital mais complicado.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalI"><article class="example example-like"><p id="p-43">Calcule o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-63">
+\begin{gather*}
+\lim_{x\rightarrow 0+} \frac{\log x}{\tan\big(\frac{\pi}{2}-x\big)}.
+\end{gather*}
+</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-44">Podemos calcular isso usando a regra de L'Hôpital duas vezes:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-64">
+\begin{align*}
+\lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+{\tan\big(\frac{\pi}{2}-x\big)}}_{\atp
+{\mathrm{num}\rightarrow -\infty}
+{\mathrm{den}\rightarrow +\infty}}
+\amp =\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}
+{-\sec^2(\frac{\pi}{2}-x)}
+=-\lim_{x\rightarrow 0+}\underbrace{\frac{\cos^2(\frac{\pi}{2}-x)}{x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}\\
+\amp=-\lim_{x\rightarrow 0+}\underbrace{\frac
+{2\cos(\frac{\pi}{2}-x)\sin(\frac{\pi}{2}-x)}{1}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1}}
+=0
+\end{align*}
+</div>
+<p id="p-45">A primeira aplicação do L'Hôpital foi com</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-65">
+\begin{align*}
+f(x) \amp= \log x \amp
+g(x) \amp=\tan\Big(\frac{\pi}{2}-x\Big)\\
+f'(x)\amp=\frac{1}{x}\qquad\amp
+g'(x)\amp=-\sec^2\Big(\frac{\pi}{2}-x\Big)
+\end{align*}
+</div>
+<p class="continuation">e a segunda vez com</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-66">
+\begin{align*}
+f(x) \amp= \cos^2\Big(\frac{\pi}{2}-x\Big) \amp
+g(x) \amp=x\\
+f'(x)\amp=2\cos\Big(\frac{\pi}{2}-x\Big)
+\Big[-\sin\Big(\frac{\pi}{2}-x\Big)\Big](-1)\qquad\amp
+g'(x)\amp=1
+\end{align*}
+</div>
+</div></div></article></div>
+<p id="p-46">Às vezes as coisas não funcionam como gostaríamos e a regra de l'Hôpital pode ficar presa em um loop. Lembre-se de pensar no problema antes de aplicar qualquer regra.</p>
+<article class="example example-like" id="eg_3_7_4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_4"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Preso em um loop.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_4"><article class="example example-like"><p id="p-47">Determine</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-67">
+\begin{gather*}
+\lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+\end{gather*}
+</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-48">Claramente, tanto o numerador quanto o denominador vão para <span class="process-math">\(\infty\text{,}\)</span> então temos uma forma indeterminada <span class="process-math">\(\frac\infty\infty\text{.}\)</span> Aplicando ingenuamente a regra de L'Hôpital dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-68">
+\begin{align*}
+\lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+\amp= \lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+\end{align*}
+</div>
+<p class="continuation">que é novamente uma forma <span class="process-math">\(\frac\infty\infty\)</span> indeterminada. Então aplicando a regra de L'Hôpital novamente:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-69">
+\begin{align*}
+\lim_{x\to\infty} \frac{ e^x - e^{-x} }{e^x + e^{-x}}
+\amp= \lim_{x\to\infty} \frac{ e^x + e^{-x} }{e^x - e^{-x}}
+\end{align*}
+</div>
+<p class="continuation">que está de volta onde começamos!</p>
+<p id="p-49">A abordagem correta para tal limite é aplicar os métodos que aprendemos anteriormente e reescrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-70">
+\begin{align*}
+\frac{e^x+e^{-x}}{e^x-e^{-x}} \amp= \frac{e^x(1+e^{-2x})}{e^x(1-e^{-2x})}
+= \frac{1+e^{-2x}}{1-e^{-2x}}
+\end{align*}
+</div>
+<p class="continuation">e, em seguida, tomar o limite.</p>
+<p id="p-50">Um tipo semelhante do loop na regra de L'Hôpital ocorrerá se você ingenuamente aplicar a regra de L'Hôpital ao limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-71">
+\begin{gather*}
+\lim_{x\to\infty} \frac{\sqrt{4x^2+1}}{5x-1}
+\end{gather*}
+</div>
+</div></div></article></div></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.3</span> <span class="title">Forma indeterminada <span class="process-math">\(0\cdot\infty\)</span></span>
+</h4>
+<p id="p-51">Quando <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) = 0\)</span> e <span class="process-math">\(\displaystyle \lim_{x\to a} g(x) = \infty\text{.}\)</span> Podemos usar um pouco de álgebra para manipular isso em um formato <span class="process-math">\(\frac{0}{0}\)</span> ou <span class="process-math">\(\frac{\infty}{\infty}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-72">
+\begin{align*}
+\lim_{x \to a} \frac{f(x)}{1/g(x)} \amp\amp
+\lim_{x \to a} \frac{g(x)}{1/f(x)}
+\end{align*}
+</div>
+<article class="example example-like" id="eg_hopitalJ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalJ"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\displaystyle \lim_{x\to 0^+} x \cdot \log x\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJ"><article class="example example-like"><p id="p-52">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-73">
+\begin{gather*}
+\lim_{x\to 0^+} x \cdot \log x
+\end{gather*}
+</div>
+<p class="continuation">Aqui a função <span class="process-math">\(f(x)=x\)</span> vai para zero, enquanto <span class="process-math">\(g(x)=\log x\)</span> vai para <span class="process-math">\(-\infty\text{.}\)</span> Se reescrevermos isso como a fração</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-74">
+\begin{align*}
+x \cdot \log x \amp= \frac{\log x}{1/x}
+\end{align*}
+</div>
+<p class="continuation">então a forma <span class="process-math">\(0 \cdot \infty\)</span> tornou-se <span class="process-math">\(\frac\infty\infty\text{.}\)</span></p>
+<p id="p-53">O resultado é</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-75">
+\begin{align*}
+\lim_{x\rightarrow 0+}\underbrace{x}_{\rightarrow 0}
+\underbrace{\log x}_{\rightarrow-\infty}
+\amp =\lim_{x\rightarrow 0+}\underbrace{\frac{\log x}
+{\frac{1}{x}}}_{\atp
+{\mathrm{num}\rightarrow-\infty}
+{\mathrm{den}\rightarrow\infty}}
+=\lim_{x\rightarrow 0+}\frac{\frac{1}{x}}{-\frac{1}{x^2}}
+=-\lim_{x\rightarrow 0+}x
+=0
+\end{align*}
+</div></article></div>
+<article class="example example-like" id="eg_hopitalJJ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalJJ"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Determine <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
+x^n e^{-x}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalJJ"><article class="example example-like"><p id="p-54">Neste exemplo vamos avaliar <span class="process-math">\(\lim\limits_{x\rightarrow +\infty}
+x^n e^{-x}\text{,}\)</span> para todos os números naturais <span class="process-math">\(n\text{.}\)</span> Começaremos com <span class="process-math">\(n=1\)</span> e <span class="process-math">\(n=2\)</span> e, usando o que aprendemos nesses casos, passaremos para o <span class="process-math">\(n\)</span> geral .</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-76">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{1}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}e^{-x}
+=0
+\end{align*}
+</div>
+<p class="continuation">Aplicando l'Hôpital duas vezes,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-77">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x^2}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{x^2}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{2x}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{2}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow 2}
+{\mathrm{den}\rightarrow+\infty}}
+=\lim_{x\rightarrow +\infty}2e^{-x}\\
+\amp=0
+\end{align*}
+</div>
+<p class="continuation">De fato, para qualquer número natural <span class="process-math">\(n\text{,}\)</span> aplicando L'Hôpital <span class="process-math">\(n\)</span> vezes fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
+\begin{align*}
+\lim_{x\rightarrow +\infty}\underbrace{x^n}_{\rightarrow \infty}
+\underbrace{e^{-x}}_{\rightarrow 0}
+\amp =\lim_{x\rightarrow +\infty}\hskip-5pt\underbrace{\frac{x^n}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow+\infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{nx^{n-1}}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp =\lim_{x\rightarrow +\infty}\underbrace{\frac{n(n-1)x^{n-2}}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow+\infty}}\\
+\amp=\cdots
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{n!}
+{e^x}}_{\atp
+{\mathrm{num}\rightarrow n!}
+{\mathrm{den}\rightarrow+\infty}}
+=0
+\end{align*}
+</div></article></div></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.4</span> <span class="title">Forma indeterminada <span class="process-math">\(\infty-\infty\)</span></span>
+</h4>
+<p id="p-55">Quando <span class="process-math">\(\displaystyle \lim_{x\to a}f(x) =
+\infty\)</span> e <span class="process-math">\(\displaystyle \lim_{x\to a} g(x) = \infty\text{.}\)</span> Reescrevemos a diferença como uma fração usando um denominador comum</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
+\begin{align*}
+f(x) - g(x) \amp= \frac{h(x)}{\ell(x)}
+\end{align*}
+</div>
+<p class="continuation">que é então uma forma <span class="process-math">\(\frac{0}{0}\)</span> ou <span class="process-math">\(\frac{\infty}{\infty}\)</span> .</p>
+<article class="example example-like" id="eg_hopitalK"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalK"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Determine <span class="process-math">\(\displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalK"><article class="example example-like"><p id="p-56">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-80">
+\begin{gather*}
+\lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)
+\end{gather*}
+</div>
+<p class="continuation">Como o limite de <span class="process-math">\(\sec x\)</span> e <span class="process-math">\(\tan x\)</span> é <span class="process-math">\(+\infty\)</span> como <span class="process-math">\(x \to
+\frac{\pi}{2}^-\text{,}\)</span> esta é uma forma indeterminada <span class="process-math">\(\infty-\infty\text{.}\)</span> No entanto, podemos reescrever isso como</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-81">
+\begin{align*}
+\sec x - \tan x \amp= \frac{1}{\cos x} - \frac{\sin x}{\cos x} = \frac{1-\sin x}{\cos x}
+\end{align*}
+</div>
+<p class="continuation">que é então uma forma indeterminada <span class="process-math">\(\frac00\)</span> . Isso então dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-82">
+\begin{align*}
+\lim_{x\rightarrow \frac{\pi}{2}^-}\Big(
+\underbrace{\sec x}_{\rightarrow +\infty}
+- \underbrace{\tan x}_{\rightarrow+\infty}\Big)
+\amp =\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{1-\sin x}
+{\cos x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+=\lim_{x\rightarrow \frac{\pi}{2}^-}\underbrace{\frac{-\cos x}
+{-\sin x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow -1}}
+=0
+\end{align*}
+</div></article></div>
+<p id="p-57">No<a href="" class="xref" data-knowl="./knowl/eg_hopitalK.html" title="Exemplo 1.16: Determine \displaystyle \lim_{x\to \frac{\pi}{2}^-} \left( \sec x - \tan x\right)">Exemplo 1.16</a>, convertemos uma forma indeterminada <span class="process-math">\(\infty-\infty\)</span> na forma  <span class="process-math">\(\frac{0}{0}\)</span> explorando o fato de que os dois termos, <span class="process-math">\(\sec x\)</span> e <span class="process-math">\(\tan x\text{,}\)</span> na indeterminate form <span class="process-math">\(\infty-\infty\)</span>  compartilham um denominador comum, isto é, <span class="process-math">\(\cos x\text{.}\)</span> No “mundo real” isso, é claro, raramente acontecerá. No entanto, como mostram os próximos exemplos, muitas vezes pode-se transformar essas expressões em formas adequadas.</p>
+<p id="p-58">Aqui está outro exemplo, muito mais complicado, onde isso não acontece.</p>
+<article class="example example-like" id="eg_hopitalKK"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalKK"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Um exemplo mais complicado com a forma <span class="process-math">\(\infty-\infty\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalKK"><article class="example example-like"><p id="p-59">Neste exemplo, avaliamos a forma indeterminada <span class="process-math">\(\infty-\infty\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-83">
+\begin{gather*}
+\lim_{x\rightarrow 0}\Big(
+\underbrace{\frac{1}{x}}_{\rightarrow \pm\infty}
+- \underbrace{\frac{1}{\log(1+x)}}_{\rightarrow\pm\infty}\Big)
+\end{gather*}
+</div>
+<p class="continuation">Nós a convertemos em uma forma indeterminada <span class="process-math">\(\frac{0}{0}\)</span> simplesmente colocando as duas frações, <span class="process-math">\(\frac{1}{x}\)</span> e <span class="process-math">\(\frac {1}{\log(1+x)}\)</span> sobre um denominador comum.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 0}\Big(
+\underbrace{\frac{1}{x}}_{\rightarrow \pm\infty}
+- \underbrace{\frac{1}{\log(1+x)}}_{\rightarrow\pm\infty}\Big)
+=\lim_{x\rightarrow 0}\underbrace{\frac{\log(1+x)-x}{x\log(1+x)}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+\tag{E1}
+\end{equation*}
+</div>
+<p class="continuation">Agora aplicamos a regra de L'Hôpital e simplificamos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-84">
+\begin{align*}
+\lim_{x\rightarrow 0}\underbrace{\frac{\log(1+x)-x}{x\log(1+x)}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+\amp=\lim_{x\rightarrow 0}\frac{\frac{1}{1+x}-1} {\log(1+x)+\frac{x}{1+x}}\\
+\amp=\lim_{x\rightarrow 0}\frac{1-(1+x)} {(1+x)\log(1+x)+x}\\
+\amp=-\lim_{x\rightarrow 0}\underbrace{\frac{x} {(1+x)\log(1+x)+x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1\times 0+0=0}}
+\tag{E2}
+\end{align*}
+</div>
+<p class="continuation">Então aplicamos a regra de L'Hôpital uma segunda vez</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-85">
+\begin{align*}
+-\lim_{x\rightarrow 0}\underbrace{\frac{x} {(1+x)\log(1+x)+x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1\times 0+0=0}}
+\amp=-\lim_{x\rightarrow 0}\underbrace{\frac{1} {\log(1+x)+\frac{1+x}{1+x}+1}}_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow 0+1+1=2}}\\
+\amp=-\frac{1}{2}
+\tag{E3}
+\end{align*}
+</div>
+<p class="continuation">Combinando (E1), (E2) e (E3) dá a nossa resposta final</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-86">
+\begin{gather*}
+\lim_{x\rightarrow 0}\Big(\frac{1}{x} - \frac{1}{\log(1+x)}\Big)
+=-\frac{1}{2}
+\end{gather*}
+</div></article></div>
+<p id="p-60">O exemplo a seguir pode ser feito pela regra de L'Hôpital, mas, na verdade, é muito mais simples multiplicar pelo conjugado e obter o limite usando as ferramentas da parte de limites.</p>
+<article class="example example-like" id="eg_3_7_5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_7_5"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Determine <span class="process-math">\(\displaystyle \lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_7_5"><article class="example example-like"><p id="p-61">Considere o limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-87">
+\begin{gather*}
+\lim_{x\to \infty} \sqrt{x^2+4x}-\sqrt{x^2-3x}
+\end{gather*}
+</div>
+<p class="continuation">Nenhum dos termos é uma fração, mas podemos escrever</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-88">
+\begin{align*}
+\sqrt{x^2+4x}-\sqrt{x^2-3x}
+\amp= x\sqrt{1+4/x}-x\sqrt{1-3/x} \amp \text{assumindo } x \gt 0\\
+\amp= x \left( \sqrt{1+4/x}-\sqrt{1-3/x} \right)\\
+\amp= \frac{\sqrt{1+4/x}-\sqrt{1-3/x}}{1/x}
+\end{align*}
+</div>
+<p class="continuation">que agora é uma forma <span class="process-math">\(\frac00\)</span>  com <span class="process-math">\(f(x)=\sqrt{1+4/x}-\sqrt{1-3/x}\)</span> e <span class="process-math">\(g(x)=1/x\text{.}\)</span> Então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-89">
+\begin{align*}
+f'(x) \amp= \frac{-4/x^2}{2\sqrt{1+4/x}} - \frac{3/x^2}{2\sqrt{1-3/x}} \amp
+g'(x) \amp= - \frac{1}{x^2}
+\end{align*}
+</div>
+<p class="continuation">Portanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-90">
+\begin{align*}
+\frac{f'(x)}{g'(x)} \amp= \frac{4}{2\sqrt{1+4/x}} + \frac{3}{\sqrt{1-3/x}}
+\end{align*}
+</div>
+<p class="continuation">E assim no limite como <span class="process-math">\(x\to \infty\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-91">
+\begin{align*}
+\lim_{x\to \infty} \frac{f'(x)}{g'(x)} \amp= \frac{4}{2}+\frac{3}{2} =
+\frac{7}{2}
+\end{align*}
+</div>
+<p class="continuation">e assim o nosso limite original também é <span class="process-math">\(7/2\text{.}\)</span></p>
+<p id="p-62">Por comparação, se multiplicarmos pelo conjugado temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-92">
+\begin{align*}
+\sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}
+\amp= \left( \sqrt{x^2\!+\!4x}-\sqrt{x^2\!-\!3x}\right)
+\cdot \frac{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}{\sqrt{x^2\!+\!4x}+\sqrt{x^2\!-\!3x}}\\
+\amp= \frac{ x^2+4x - (x^2-3x)}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}\\
+\amp= \frac{ 7x}{\sqrt{x^2+4x}+\sqrt{x^2-3x}}\\
+\amp= \frac{7}{\sqrt{1+4/x}+\sqrt{1-3/x}} \qquad \text{assuming } x \gt 0
+\end{align*}
+</div>
+<p class="continuation">Agora, tomar o limite como <span class="process-math">\(x\to\infty\)</span> fornece <span class="process-math">\(7/2\)</span> conforme necessário. Só porque conhecemos a regra de L'Hôpital, não significa que devemos usá-la em todos os lugares em que ela possa ser aplicada.</p></article></div></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.5</span> <span class="title">Forma indeterminada <span class="process-math">\(1^\infty\)</span></span>
+</h4>
+<p id="p-63">Podemos usar a regra de L'Hôpital nos limites da forma</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-93">
+\begin{align*}
+\lim_{x\to a} f(x)^{g(x)} \amp \text{ com }\\
+\lim_{x\to a} f(x) \amp= 1 \amp \text{ e } \amp\amp \lim_{x \to a} g(x) \amp= \infty
+\end{align*}
+</div>
+<p class="continuation">considerando o logaritmo do limite:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-94">
+\begin{align*}
+\log\left( \lim_{x\to a} f(x)^{g(x)} \right)
+\amp= \lim_{x\to a} \log\left( f(x)^{g(x)} \right)
+= \lim_{x\to a} \log\left( f(x) \right) \cdot g(x)
+\end{align*}
+</div>
+<p class="continuation">que agora é uma forma <span class="process-math">\(0 \cdot \infty\)</span> . Isso pode ser ainda transformado em uma forma <span class="process-math">\(\frac00\)</span> ou <span class="process-math">\(\frac\infty\infty\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-95">
+\begin{align*}
+\log\left( \lim_{x\to a} f(x)^{g(x)} \right)
+\amp=\lim_{x\to a} \log\left( f(x) \right) \cdot g(x)\\
+\amp= \lim_{x\to a} \frac{\log\left( f(x) \right)}{1/g(x)}.
+\end{align*}
+</div>
+<article class="example example-like" id="eg_hopitalL"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalL"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Encontre <span class="process-math">\(\displaystyle \lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalL"><article class="example example-like"><p id="p-64">O seguinte limite aparece naturalmente ao considerar sistemas que exibem crescimento ou decaimento exponencial.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-96">
+\begin{gather*}
+\lim_{x\rightarrow 0}(1+x)^{\frac{a}{x}}
+\qquad\text{with the constant } a\ne 0
+\end{gather*}
+</div>
+<p class="continuation">Já que  <span class="process-math">\((1+x) \to 1\)</span> e <span class="process-math">\(a/x \to \infty\)</span> isto é uma forma indeterminada <span class="process-math">\(1^\infty\)</span> .</p>
+<p id="p-65">Considerando seu logaritmo temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-97">
+\begin{align*}
+\log\left( \lim_{x\to 0}(1+x)^{\frac{a}{x}}\right)
+\amp= \lim_{x\to 0}\log\left( (1+x)^{\frac{a}{x}}\right)\\
+\amp= \lim_{x\to 0} \frac{a}{x} \log(1+x)\\
+\amp= \lim_{x\to 0} \frac{a\log (1+x)}{x}
+\end{align*}
+</div>
+<p class="continuation">que agora é um formulário <span class="process-math">\(\frac00\text{.}\)</span> Aplicando a regra de L'Hôpital dá</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-98">
+\begin{gather*}
+\lim_{x\rightarrow 0}\underbrace{\frac{a\log(1+x)}{x}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+=\lim_{x\rightarrow 0}\underbrace{\frac{\frac{a}{1+x}}{1}}_{\atp
+{\mathrm{num}\rightarrow a}
+{\mathrm{den}\rightarrow 1}}
+=a
+\end{gather*}
+</div>
+<p class="continuation">Já que  <span class="process-math">\((1 + x)^{a/x} = \exp\left[\log\Big((1 + x)^{a/x}\Big)\right]\)</span> e a função exponencial é contínua, o nosso limite original é <span class="process-math">\(e^a\text{.}\)</span></p></article></div>
+<p id="p-66">Aqui está um exemplo mais complicado de uma forma indeterminada <span class="process-math">\(1^\infty\text{.}\)</span></p>
+<article class="example example-like" id="eg_hopitalLL"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalLL"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Um exemplo mais complicado.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalLL"><article class="example example-like"><p id="p-67">No limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-99">
+\begin{gather*}
+\lim_{x\rightarrow 0}\Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+\end{gather*}
+</div>
+<p class="continuation">a base, <span class="process-math">\(\frac{\sin x}{x}\text{,}\)</span> vai para <span class="process-math">\(1\)</span> e o expoente, <span class="process-math">\(\frac{1}{x^2}\text{,}\)</span> vai para <span class="process-math">\(\infty\text{.}\)</span> Mas se tomarmos logaritmos temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-100">
+\begin{gather*}
+\log \Big(\frac{\sin x}{x}\Big)^{\frac{1}{x^2}}
+= \frac{\log\frac{\sin x}{x}}{x^2}
+\end{gather*}
+</div>
+<p class="continuation">então, no limite <span class="process-math">\(x\rightarrow 0\text{,}\)</span> temos uma forma indeterminada <span class="process-math">\(\frac{0}{0}\)</span> . Uma aplicação da regra de L'Hôpital fornece</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-101">
+\begin{align*}
+\lim_{x\rightarrow 0}\underbrace{\frac{\log\frac{\sin x}{x}}{x^2}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+\amp =\lim_{x\rightarrow 0}
+\frac {\frac{x}{\sin x}\frac{x\cos x -\sin x}{x^2} }{2x}
+=\lim_{x\rightarrow 0}
+\frac{ \frac{x\cos x -\sin x}{x\sin x} }{2x}
+=\lim_{x\rightarrow 0} \frac{x\cos x -\sin x}{2x^2\sin x}
+\end{align*}
+</div>
+<p class="continuation">que é outra forma <span class="process-math">\(\frac00\text{.}\)</span> Aplicando a regra de L'Hôpital novamente dá:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-102">
+\begin{align*}
+\lim_{x\rightarrow 0}\underbrace{
+\frac{x\cos x -\sin x}{2x^2\sin x} }_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+\amp=\lim_{x\rightarrow 0}
+\frac{\cos x -x\sin x-\cos x}{4x\sin x+2x^2\cos x}\\
+\amp=-\lim_{x\rightarrow 0}
+\frac{x\sin x}{4x\sin x+2x^2\cos x}
+=-\lim_{x\rightarrow 0}
+\frac{\sin x}{4\sin x+2x\cos x}
+\end{align*}
+</div>
+<p class="continuation">que é mais uma forma  <span class="process-math">\(\frac00\text{.}\)</span> Mais uma vez com a regra de L'Hôpital:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-103">
+\begin{align*}
+-\lim_{x\rightarrow 0}\underbrace{
+\frac{\sin x}{4\sin x+2x\cos x} }_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 0}}
+\amp=-\lim_{x\rightarrow 0}\underbrace{
+\frac{\cos x}{4\cos x+2\cos x-2x\sin x} }_{\atp
+{\mathrm{num}\rightarrow 1}
+{\mathrm{den}\rightarrow 6}}\\
+\amp=-\frac{1}{6}
+\end{align*}
+</div>
+<p class="continuation">Acabamos de mostrar que o logaritmo do nosso limite original é <span class="process-math">\(-\frac{1}{6}\text{.}\)</span> Portanto, o limite original é <span class="process-math">\(e^{-1/6}\text{.}\)</span></p>
+<p id="p-69">Este foi um exemplo bastante complicado. No entanto, ilustra a importância de limpar as suas expressões algébricas. Isso reduzirá a quantidade de trabalho que necassário e também reduzirá o número de erros cometidos.</p></article></div></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.6</span> <span class="title">Forma indeterminada <span class="process-math">\(0^0\)</span></span>
+</h4>
+<p id="p-70">Como a forma  <span class="process-math">\(1^\infty\text{,}\)</span> isso pode ser tratado considerando o seu logaritmo.</p>
+<article class="example example-like" id="eg_hopitalM"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalM"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Determine <span class="process-math">\(\displaystyle \lim_{x\rightarrow 0+}x^x\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalM"><article class="example example-like"><p id="p-71">Por exemplo, no limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-104">
+\begin{gather*}
+\lim_{x\rightarrow 0+}x^x
+\end{gather*}
+</div>
+<p class="continuation">ambos, a base <span class="process-math">\(x\text{,}\)</span> e o expoente, também <span class="process-math">\(x\text{,}\)</span> vai para zero. Mas se considerarmos o logaritmo, temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-105">
+\begin{gather*}
+\log x^x = x\log x
+\end{gather*}
+</div>
+<p class="continuation">que é uma forma indeterminada <span class="process-math">\(0\cdot\infty\text{,}\)</span> que já sabemos tratar. Na verdade, já encontramos,<a href="" class="xref" data-knowl="./knowl/eg_hopitalJ.html" title="Exemplo 1.14: \displaystyle \lim_{x\to 0^+} x \cdot \log x">Exemplo 1.14</a>, que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-106">
+\begin{gather*}
+\lim_{x\rightarrow 0+} x\log x=0
+\end{gather*}
+</div>
+<p class="continuation">Como a exponencial é uma função contínua</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_hopitalJ.html" id="md-107">
+\begin{gather*}
+\lim_{x\rightarrow 0+}x^x
+=\lim_{x\rightarrow 0+}\exp\big(x\log x\big)
+=\exp\Big(\lim_{x\rightarrow 0+}x\log x\Big)
+=e^0
+=1
+\end{gather*}
+</div></article></div></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type">
+<span class="type">Subsubseção</span> <span class="codenumber">1.4.7</span> <span class="title">Forma indeterminada <span class="process-math">\(\infty^0\)</span></span>
+</h4>
+<p id="p-72">Novamente, podemos tratar esta forma considerando o seu logaritmo.</p>
+<article class="example example-like" id="eg_hopitalN"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_hopitalN"><h5 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrar <span class="process-math">\(\displaystyle \lim_{x\rightarrow +\infty}x^{\frac{1}{x}}\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_hopitalN"><article class="example example-like"><p id="p-73">Por exemplo, no limite</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-108">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+\end{gather*}
+</div>
+<p class="continuation">a base, <span class="process-math">\(x\text{,}\)</span> vai até o infinito e o expoente, <span class="process-math">\(\frac{1}{x}\text{,}\)</span> vai para zero. Mas se tomarmos logaritmos</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-109">
+\begin{gather*}
+\log x^{\frac{1}{x}} =\frac{\log x}{x}
+\end{gather*}
+</div>
+<p class="continuation">que é uma forma <span class="process-math">\(\frac\infty\infty\text{,}\)</span> que sabemos como tratar.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-110">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}\underbrace{\frac{\log x}{x}}_{\atp
+{\mathrm{num}\rightarrow \infty}
+{\mathrm{den}\rightarrow \infty}}
+=\lim_{x\rightarrow +\infty}\underbrace{\frac{\frac{1}{x}}{1}}_{\atp
+{\mathrm{num}\rightarrow 0}
+{\mathrm{den}\rightarrow 1}}
+=0
+\end{gather*}
+</div>
+<p class="continuation">Como a exponencial é uma função contínua</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-111">
+\begin{gather*}
+\lim_{x\rightarrow +\infty}x^{\frac{1}{x}}
+=\lim_{x\rightarrow +\infty}\exp\Big(\frac{\log x}{x}\Big)
+=\exp\Big(\lim_{x\rightarrow \infty}\frac{\log x}{x}\Big)
+=e^0
+=1
+\end{gather*}
+</div></article></div></section></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">1.5</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-5"><p id="p-74"><a class="external" href="https://youtu.be/L_qsHW4W4Tw" target="_blank"><span class="process-math">\(\lim\limits_{x\to
+0}\dfrac{2\sin{x}-\sin{2x}}{x-\sin{x}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
+<li id="li-6"><p id="p-75"><a class="external" href="https://youtu.be/ZzIb9ikEedw" target="_blank"><span class="process-math">\(\lim\limits_{x\to
+\infty}\dfrac{4x^2-5x}{1-3x^2}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a></p></li>
+<li id="li-7"><p id="p-76"><a class="external" href="https://youtu.be/KGuaF7SEyq8" target="_blank"><span class="process-math">\(\lim\limits_{x\to
+1}\dfrac{x}{x-1}-\dfrac{1}{\ln{x}}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
+<li id="li-8"><p id="p-77"><a class="external" href="https://youtu.be/2ElwQNDa5ag" target="_blank">Encontrar o valor de <span class="process-math">\(a\)</span> tal que  <span class="process-math">\(\lim\limits_{x\to 0}\dfrac{\sqrt{4+x}-\sqrt{4-ax}}{x}=\dfrac{3}{4}\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-9"><p id="p-78"><a class="external" href="https://youtu.be/g1lfUbvScas" target="_blank">Demonstração da parte 1 da Regra de L'Hôpital.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
+</ul></section><section class="exercises" id="exercises-hopital"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">1.6</span> <span class="title">Exercícios</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<h4 class="heading"><span class="title">Grupo de exercícios.</span></h4>
+<div class="introduction" id="introduction-4"><p id="p-79">Nos exercícios a seguir tente calcular os limites usando a Regra de L'Hôpital.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-80">Calcule os limites:</p>
+<p id="p-81">1. <span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{1-\cos\!\left(2x\right)}{1-\cos\!\left(8x\right)}\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<p id="p-82">2. <span class="process-math">\(\displaystyle \lim_{x\to 1} \frac{9^{x}-8^{x}-1}{x^{2}-1}\)</span> =  <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-83"><span class="process-math">\(\left(\frac{2}{8}\right)^{2}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-84"><span class="process-math">\(\frac{9\log\!\left(9\right)-8\log\!\left(8\right)}{2}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-85">Determine o limite:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-86">
+\begin{equation*}
+\lim_{x\to 0} \frac{e^x + x - 1}{6 x}
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-88"><span class="process-math">\(0.333333333333333\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-89">A função</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sqrt{ x^2 + 5x + 3}  - x
+\end{equation*}
+</div>
+<p class="continuation">tem uma assíntota horizontal em <span class="process-math">\(y=\)</span> <span class="fillin" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-90"><span class="process-math">\(2.5\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-91">Encontre o limite lateral</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{y\to -8^+}\frac{\sqrt{64 - y^2}}{y  + 8}.
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-93"><span class="process-math">\(\text{INF}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-94">Determine <span class="process-math">\(\displaystyle \lim_{x\to 1} {x-1 \over 1-e^{x-1}} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-95"><span class="process-math">\(-1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-96"><span class="process-math">\(\displaystyle \lim_{x\to 1} {x-1 \over 1-e^{x-1}}
+= \lim_{x\to 1} {1 \over -e^{x-1}} = -1\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-97">Determine <span class="process-math">\(\lim\limits_{x\to \infty}(\dfrac{10 x^3+2 x^2}{5 x^3-8})=\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-98"><span class="process-math">\(2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-99">As funções no numerador e denominador são diferenciáveis, e limite é uma forma indeterminada de tipo <span class="process-math">\(\frac{\infty}{\infty}\text{,}\)</span> então aplicamos a regra de  L'Hôpital:</p>
+<p id="p-100"><span class="process-math">\(\lim\limits_{x \to \infty}(\frac{10 x^3+2 x^2}{5 x^3-8})= \lim\limits_{x \to \infty} \frac{30 x^2 + 4 x}{15 x^2}\)</span></p>
+<p id="p-101">Aplicando L'Hôpital novamente fornece:</p>
+<p id="p-102"><span class="process-math">\(\lim\limits_{x \to \infty} \frac{30 x^2 + 4 x}{15 x^2} = \lim\limits_{x \to \infty} \frac{60 x + 4}{30 x}\)</span></p>
+<p id="p-103">Aplicando  L'Hôpital novamente produz:</p>
+<p id="p-104"><span class="process-math">\(\lim\limits_{x \to \infty} \frac{60 x + 4}{30 x}\)</span> <span class="process-math">\(= \lim\limits_{x \to \infty} \frac{60}{30}= 2\)</span></p>
+<p id="p-105">Observação:</p>
+<p id="p-106">Podemos chegar à mesma solução tomando os coeficientes das maiores potências no numerador e denominador, obtendo: <span class="process-math">\(\frac{10}{5}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-107">Determine o limite</p>
+<p id="p-108"><span class="process-math">\(\displaystyle \lim_{x\to0} {\cos\!\left(x-\frac{\pi }{2}\right) \over \sin\!\left(x+\pi \right)} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-109"><span class="process-math">\(-1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><p id="p-110"><span class="process-math">\(\displaystyle \lim_{x\to0} {\cos\!\left(x-\frac{\pi }{2}\right) \over \sin\!\left(x+\pi \right)} =
+\lim_{x\to0} {-\left(\sin\!\left(x-\frac{\pi }{2}\right)\right) \over \cos\!\left(x+\pi \right)} = -1\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-111">Encontre</p>
+<p id="p-112"><span class="process-math">\(\displaystyle \lim_{x\to0} (\sec x)^{\csc x} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-113"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-114">Usaremos a identidade <span class="process-math">\((\sec x)^{\csc x}=e^{\ln\left((\sec x)^{\csc x}\right)}\text{,}\)</span> e, portanto, deve calcular</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\eqalign{
+\lim_{x\to0} \ln\left((\sec x)^{\csc x}\right)
+\amp =\lim_{x\to0} \csc x\left(\ln(\sec x)\right)
+=\lim_{x\to0} {\ln(\sec x) \over \sin x}\cr
+\amp =\lim_{x\to0} {\left(1\over\sec x\right)(\sec x\tan x) \over \cos x}
+=\lim_{x\to0} {\tan x\over \cos x}
+=0.\cr
+}
+\end{equation*}
+</div>
+<p id="p-115">Portanto, <span class="process-math">\(\displaystyle \lim_{x\to0} (\sec x)^{\csc x}
+= \lim_{x\to0+} e^{\ln\left((\sec x)^{\csc x}\right)} = e^0 = 1\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p id="p-116">Encontre</p>
+<p id="p-117"><span class="process-math">\(\displaystyle\lim_{x \longrightarrow 0} (\cos{x})^{1/x^2}=\)</span>   <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-118"><span class="process-math">\(0.606530659712633\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-119">O limite é da forma <span class="process-math">\(1^\infty\text{.}\)</span>  Seja</p>
+<p id="p-120"><span class="process-math">\(y= (\cos{x})^{1/x^2}\)</span> e portanto <span class="process-math">\(\ln y = \displaystyle\frac{1}{x^2}\ln(\cos{x})\text{.}\)</span></p>
+<p id="p-121">Obtemos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-122">
+\begin{equation*}
+\lim_{x \longrightarrow 0 } \frac{1}{x^2}\ln{(\cos{x})} =\lim_{x
+\longrightarrow 0 } \frac{\ln{(\cos{x})}}{x^2}
+\end{equation*}
+</div>
+<p id="p-123">Este limite é da forma <span class="process-math">\(\frac{0}{0}\)</span> , então aplicamos a Regra de L'Hopital duas vezes:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-124">
+\begin{equation*}
+\lim_{x \longrightarrow 0 } \frac{\ln{(\cos{x})}}{x^2} = \lim_{x \longrightarrow 0 } \frac{\frac{1}{\cos{x}}(-\sin{x})}{x^2} = \lim_{x \longrightarrow 0 } \frac{-\tan{x}}{2x} =
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-125">
+\begin{equation*}
+= \lim_{x \longrightarrow 0 } \frac{-\sec^2{x}}{2} = \frac{-1}{2}
+\end{equation*}
+</div>
+<p id="p-126">Então <span class="process-math">\(\ln y = -1/2\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-127">
+\begin{equation*}
+y= \lim_{x \longrightarrow 0} (\cos{x})^{1/x^2} =  e^{-1/2} = \frac{1}{\sqrt{e}}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p id="p-128">Encontre</p>
+<p id="p-129"><span class="process-math">\(\displaystyle \lim_{x\to 0} \frac{\sin(3 x)}{x} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-130"><span class="process-math">\(3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="p-131">
+\begin{equation*}
+\lim_{x \to 0} \frac{\sin(3 x)}{x}
+= \lim_{x \to 0} \frac{3 \cos(3 x)}{1}
+= 3(1) = 3
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-132">Encontre</p>
+<p id="p-133"><span class="process-math">\(\displaystyle 
+\lim_{x\to 0^{+}} (5 x)^{x} =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-134"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-135">Primeiro use a propriedade <span class="process-math">\(f(x) = e^{\ln f(x)}\)</span> e e reagra dos logaritmos para reescrever a função.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(5 x)^{x} = e^{\ln (5 x)^{x}} = e^{ x \ln(5 x)},
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x \ln (5 x) = \dfrac{\ln (5 x)}{x^{-1}}.
+\end{equation*}
+</div>
+<p class="continuation">Encontre o limite desta parte (usando a regra de L'Hôpital).</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x \to 0^{+}} \frac{\ln (5 x)}{x^{-1}}
+= \lim_{x \to 0^{+}} \frac{x^{-1}}{-x^{-2}}
+= \lim_{x \to 0^{+}} -x = 0.
+\end{equation*}
+</div>
+<p class="continuation">Em seguida, conecte esse resultado de volta para encontrar o limite original.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+= \lim_{x \to 0^{+}} (5 x)^{x}
+= e^{\lim_{x \to 0^{+}} \ln (5 x)^{x}}
+= e^0 = 1.
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-12"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-136">Encontre o limite <span class="process-math">\(\displaystyle 
+\lim_{x \rightarrow 0}
+\left(\frac{3}{x}-\frac{3}{\sin(x)}\right) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-137"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<p id="p-138">Para obter esse limite em uma forma à qual a regra de l'Hopital se aplica, combinamos frações. Então nós temos</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x \rightarrow 0}\frac{3 \sin(x) - 3 x}{x\sin(x)} =
+\lim_{x\to 0}\frac{3 \cos(x) - 3}{\sin(x)+x\cos(x)} = \lim_{x\to 0}\frac{-3 \sin(x)}{2\cos(x)-x\sin(x)} =  0.
+\end{equation*}
+</div>
+</div></div>
+</div></article>
+</div>
+</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">pt.wikipedia.org/wiki/S%C3%A9rie_de_Taylor</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/L_qsHW4W4Tw</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/ZzIb9ikEedw</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/KGuaF7SEyq8</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/2ElwQNDa5ag</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/g1lfUbvScas</code></div></div>
+</div></main>
+</div>
+</body>
+</html>
