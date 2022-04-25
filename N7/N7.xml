@@ -776,15 +776,15 @@ então <xref ref="th-regra-cadeia-3" text="title"/> fornece:
           
 
             <md>
-                <mrow>g'(x)=\dfrac{\dd }{\dd x}\left[\frac{3x-1}{x^2+3} \right] \amp = \dfrac{(x^2+3)3 - (3x-1)2x}{(x^2+3)^3} </mrow>
+                <mrow>g'(x)=\dfrac{\dd }{\dd x}\left[\frac{3x-1}{x^2+3} \right] \amp = \dfrac{(x^2+3)3 - (3x-1)2x}{(x^2+3)^2} </mrow>
             </md>
             
             Juntando o que já temos e aplicando a <xref ref="assemblage-cadeia-potencia" text="title"/>: 
 
             <md>
-                <mrow>F'(x) \amp = \ob{\left[2\left(\dfrac{3x-1}{x^2+3}\right)\right]}{ng(x)^{n-1}}\cdot\ob{\left[  \dfrac{(x^2+3)3 - (3x-1)2x}{(x^2+3)^3}\right ]}{g'(x)} </mrow>
-                <mrow> \amp = \frac{2(3x-1)(3x^2+9-6x^2+2x)}{(x^2+3)^3} </mrow>
-                <mrow> \amp = \frac{(6x-6)(-3x^2+2x+9)}{(x^2+3)^3} </mrow>
+                <mrow>F'(x) \amp = \ob{\left[2\left(\dfrac{3x-1}{x^2+3}\right)\right]}{ng(x)^{n-1}}\cdot\ob{\left[  \dfrac{(x^2+3)3 - (3x-1)2x}{(x^2+3)^2}\right ]}{g'(x)} </mrow>
+                <mrow> \amp = \frac{2(3x-1)(3x^2+9-6x^2+2x)}{(x^2+3)^2} </mrow>
+                <mrow> \amp = \frac{(6x-2)(-3x^2+2x+9)}{(x^2+3)^2} </mrow>
             </md>
         </p>
     </solution>
