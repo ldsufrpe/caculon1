@@ -752,7 +752,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                     <answer>
                         <p>
-                            <m>\left(x^{2} + 1\right)} 2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x
+                            <m>\left(x^{2} + 1\right)2^{x} \log\left(2\right) \log\left(x\right) + 2 \cdot 2^{x} x
                                 \log\left(x\right) + \frac{{\left(x^{2} + 1\right)} 2^{x}}{x}
                             </m>
                         </p>
