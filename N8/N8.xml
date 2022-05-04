@@ -539,7 +539,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <answer>
                     <p>
-                        <m>\frac{3}{3 \, x + 1}</m>
+                        <m>\frac{3}{3x + 1}</m>
                     </p>
                 </answer>
             </exercise>
