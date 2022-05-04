@@ -545,7 +545,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </exercise>
 
             <subsection>
-                <title>A derivada de <m>\mathbf{\dfrac{\dd}{\dd x}\left[a^x\right]}</m>.
+                <title>A derivada <m>\frac{\dd}{\dd x}\left[a^x\right]</m>.
                 </title>
 
                 <p>Agora podemos determinar a derivada de <m>a^x</m>.
