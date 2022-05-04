@@ -146,21 +146,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <p>Considere que a base logarítmica <m>e</m>
                     <mdash/>
-                    <m>\ln_e(x)</m> é a potência que <m>e</m> deve ser elevada para fornecer <m>x</m>.
-                    Ou seja, <m>\ln_e(x)</m> é definido por
+                    <m>\log_e(x)</m> é a potência que <m>e</m> deve ser elevada para fornecer <m>x</m>.
+                    Ou seja, <m>\log_e(x)</m> é definido por
                     <md>
                         <mrow>
-                            e^{\ln_e x}\amp= x
+                            e^{\log_e x}\amp= x
                         </mrow>
                     </md>
                     ou seja,
                     <mdash/>
                     é a inversa da função exponencial com base <m>e</m>. Dado que esta escolha da base funciona tão
-                    clara e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural do
+                    clara e facilmente em relação à derivação, esta base acaba por ser a escolha mais natural do
                     logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:
                     <md>
                         <mrow>
-                            \ln_q x\amp= \frac{\ln_e x}{\ln_e q}
+                            \log_q x\amp= \frac{\log_e x}{\log_e q}
                         </mrow>
                     </md>
                     Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para os nossos
@@ -202,9 +202,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <ul>
                             <li><m>e^{\ln x}=x</m>,
                             </li>
-                            <li>for any real number <m>X</m>, <m>\ln \big(e^X\big)=X</m>,
+                            <li>para quelquer número <m>x</m>, <m>\ln \big(e^x\big)=x</m>,
                             </li>
-                            <li>for any <m>a \gt 1</m>, <m>\ln_a x=\tfrac{\ln x}{\ln a}</m> and
+                            <li>Para qualquer  <m>a \gt 1</m>, <m>\ln_a x=\tfrac{\ln x}{\ln a}</m> e
                                 <m>\ln
                                     x=\tfrac{\ln_a x}{\ln_a e}
                                 </m>
@@ -498,18 +498,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </example>
 
 
-                <p>Podemos estender o Teorema
-                    <nbsp/>
+                <p>Podemos estender o  <nbsp/>
                     <xref ref="thm_diff_log"/>
                     para calcular a derivada de logaritmos de
                     outras bases de maneira direta. Visto que para qualquer positivo <m>a \neq 1</m>:
                     <md>
                         <mrow>
-                            \ln_a x\amp= \frac{\ln x}{\ln a} = \frac{1}{\ln a} \cdot \ln x\amp
+                            \log_a x\amp= \frac{\log_e x}{\log_e a} = \frac{1}{\ln a} \cdot \ln x\amp
                             \ct{já que $a$ é uma constante}
                         </mrow>
                         <mrow>
-                            \dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
+                            \dfrac{\dd}{\dd x} \log_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
                         </mrow>
                     </md>
                 </p>
@@ -534,7 +533,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Determine a derivada de <m>y=\ln{3x+1}</m>.
+                        Determine a derivada de <m>y=\ln{(3x+1)}</m>.
                     </p>
                 </statement>
 
@@ -603,7 +602,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                     $a \gt 0, a \neq 1$}
                                 </mrow>
                             </md>
-                            onde <m>\ln x</m> é o logaritmo natural.
+                            onde <m>\ln x</m> é o logaritmo natural de <m>x</m>.
                         </p>
                     </statement>
                 </corollary>

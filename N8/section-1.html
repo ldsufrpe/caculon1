@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-02T16:08:57-03:00       *-->
+<!--*       on 2022-05-04T14:19:48-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -141,16 +141,16 @@ true);
 <li id="li-2"><p id="p-4">Determinar a derivada de uma função exponencial.</p></li>
 <li id="li-3"><p id="p-5">Aplicar a derivação logarítmica.</p></li>
 </ol></article><section class="introduction" id="introduction-2"><p id="p-6">A Regra da Cadeia é uma das ferramentas importantes da Derivação. Além de permitir obter derivadas de funções complicadas, formadas por composição de duas funções mais simples, também será para vamos usá-las para compreender derivadas definidas implicitamente.</p>
-<p id="p-7">Considere que a base logarítmica <span class="process-math">\(e\)</span> — <span class="process-math">\(\ln_e(x)\)</span> é a potência que <span class="process-math">\(e\)</span> deve ser elevada para fornecer <span class="process-math">\(x\text{.}\)</span> Ou seja, <span class="process-math">\(\ln_e(x)\)</span> é definido por</p>
+<p id="p-7">Considere que a base logarítmica <span class="process-math">\(e\)</span> — <span class="process-math">\(\log_e(x)\)</span> é a potência que <span class="process-math">\(e\)</span> deve ser elevada para fornecer <span class="process-math">\(x\text{.}\)</span> Ou seja, <span class="process-math">\(\log_e(x)\)</span> é definido por</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
-e^{\ln_e x}\amp= x
+e^{\log_e x}\amp= x
 \end{align*}
 </div>
-<p class="continuation">ou seja, — é a inversa da função exponencial com base <span class="process-math">\(e\text{.}\)</span> Dado que esta escolha da base funciona tão clara e facilmente em relação à diferenciação, esta base acaba por ser a escolha mais natural do logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:</p>
+<p class="continuation">ou seja, — é a inversa da função exponencial com base <span class="process-math">\(e\text{.}\)</span> Dado que esta escolha da base funciona tão clara e facilmente em relação à derivação, esta base acaba por ser a escolha mais natural do logaritmo. É fácil usar logaritmos de uma base para calcular logaritmos com outra base:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
-\ln_q x\amp= \frac{\ln_e x}{\ln_e q}
+\log_q x\amp= \frac{\log_e x}{\log_e q}
 \end{align*}
 </div>
 <p class="continuation">Portanto, somos (relativamente) livres para escolher uma base que seja conveniente para os nossos propósitos.</p>
@@ -166,8 +166,8 @@ e^{\ln_e x}\amp= x
 <article class="assemblage assemblage-like" id="assemblage-log-prop"><h3 class="heading"><span class="title">Propriedades do Logaritmo.</span></h3>
 <ul id="p-11" class="disc">
 <li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(e^{\ln x}=x\text{,}\)</span></p></li>
-<li id="li-5"><p id="p-derived-li-5">for any real number <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(\ln \big(e^X\big)=X\text{,}\)</span></p></li>
-<li id="li-6"><p id="p-derived-li-6">for any <span class="process-math">\(a \gt 1\text{,}\)</span> <span class="process-math">\(\ln_a x=\tfrac{\ln x}{\ln a}\)</span> and <span class="process-math">\(\ln
+<li id="li-5"><p id="p-derived-li-5">para quelquer número <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\ln \big(e^x\big)=x\text{,}\)</span></p></li>
+<li id="li-6"><p id="p-derived-li-6">Para qualquer  <span class="process-math">\(a \gt 1\text{,}\)</span> <span class="process-math">\(\ln_a x=\tfrac{\ln x}{\ln a}\)</span> e <span class="process-math">\(\ln
 x=\tfrac{\ln_a x}{\ln_a e}\)</span></p></li>
 <li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\ln 1=0\text{,}\)</span> <span class="process-math">\(\ln e=1\)</span></p></li>
 <li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \ln(xy)=\ln x+\ln y\)</span></p></li>
@@ -314,12 +314,12 @@ g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
 <p class="continuation">como esperado.</p>
 </div></div>
 </div></article></div>
-<p id="p-26">Podemos estender o Teorema   <a href="" class="xref" data-knowl="./knowl/thm_diff_log.html" title="Teorema 1.2">Teorema 1.2</a> para calcular a derivada de logaritmos de outras bases de maneira direta. Visto que para qualquer positivo <span class="process-math">\(a \neq 1\text{:}\)</span></p>
+<p id="p-26">Podemos estender o    <a href="" class="xref" data-knowl="./knowl/thm_diff_log.html" title="Teorema 1.2">Teorema 1.2</a> para calcular a derivada de logaritmos de outras bases de maneira direta. Visto que para qualquer positivo <span class="process-math">\(a \neq 1\text{:}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_diff_log.html" id="md-16">
 \begin{align*}
-\ln_a x\amp= \frac{\ln x}{\ln a} = \frac{1}{\ln a} \cdot \ln x\amp
+\log_a x\amp= \frac{\log_e x}{\log_e a} = \frac{1}{\ln a} \cdot \ln x\amp
 \ct{já que $a$ é uma constante}\\
-\dfrac{\dd}{\dd x} \ln_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
+\dfrac{\dd}{\dd x} \log_a x\amp= \frac{1}{\ln a} \cdot \frac{1}{x}
 \end{align*}
 </div></section><article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h3 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
@@ -329,7 +329,7 @@ g'(x)\amp= \lim_{h\rightarrow 0} \frac{\ln|x+h|-\ln|x|}{h}
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
 <span class="type">Autoavaliação</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-29">Determine a derivada de <span class="process-math">\(y=\ln{3x+1}\text{.}\)</span></p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-29">Determine a derivada de <span class="process-math">\(y=\ln{(3x+1)}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Resposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-30"><span class="process-math">\(\frac{3}{3 \, x + 1}\)</span></p></div></div>
 </div></article></div>
@@ -372,7 +372,7 @@ f'(x)\amp= f(x) \cdot \ln a = a^x \cdot \ln a
 $a \gt 0, a \neq 1$}
 \end{align*}
 </div>
-<p class="continuation">onde <span class="process-math">\(\ln x\)</span> é o logaritmo natural.</p></article><p id="p-34">Lembre-se de que precisamos da ressalva <span class="process-math">\(a \neq 1\)</span> porque a base 1 do logaritmo não está bem definida. Isso ocorre porque <span class="process-math">\(1^x = 1\)</span> para qualquer <span class="process-math">\(x\text{.}\)</span> Não precisamos de uma advertência semelhante para a derivada da exponencial porque sabemos</p>
+<p class="continuation">onde <span class="process-math">\(\ln x\)</span> é o logaritmo natural de <span class="process-math">\(x\text{.}\)</span></p></article><p id="p-34">Lembre-se de que precisamos da ressalva <span class="process-math">\(a \neq 1\)</span> porque a base 1 do logaritmo não está bem definida. Isso ocorre porque <span class="process-math">\(1^x = 1\)</span> para qualquer <span class="process-math">\(x\text{.}\)</span> Não precisamos de uma advertência semelhante para a derivada da exponencial porque sabemos</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_2_10.html" id="md-20">
 \begin{align*}
 \dfrac{\dd}{\dd x} 1^x\amp= \dfrac{\dd}{\dd x} 1= 0\amp\ct{Enquanto o}\,
