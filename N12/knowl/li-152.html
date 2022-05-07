@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T13:21:26-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="period">.</span>
+</h4>Now consider the indeterminate form<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\lim_{x\to a} \frac{f(x)}{g(x)}
+\amp= \lim_{x\to a} \frac{f(x) - 0 }{g(x) - 0 }
+\amp \text{use }0=f(a)=g(a)\\
+\amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a) }
+\amp \text{multiply by } 1=\frac{(x-a)^{-1}}{(x-a)^{-1}}\\
+\amp= \lim_{x\to a} \frac{f(x) - f(a) }{g(x) - g(a) }\cdot\frac{(x-a)^{-1}}{(x-a)^{-1}} \amp
+\text{rearrange}\\
+\amp= \lim_{x\to a} \left[ \frac{ \dfrac{f(x) - f(a)}{x-a} }{ \dfrac{g(x) - g(a)}{x-a}}
+\right] \amp \text{use arithmetic of limits}\\
+\amp= \dfrac{\displaystyle \lim_{x\to a} \frac{f(x) - f(a)}{x-a} }
+{\displaystyle \lim_{x\to a} \frac{g(x) - g(a)}{x-a}} = \dfrac{f'(a)}{g'(a)}
+\end{align*}
+</div>We can justify this step and apply Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm_arith_lim" missing or not unique]</code>, since the limits in the numerator and denominator exist, because they are just <span class="process-math">\(f'(a)\)</span> and <span class="process-math">\(g'(a)\text{.}\)</span></article><span class="incontext"><a href="section-3.html#li-152" class="internal">em contexto</a></span>
+</body>
+</html>

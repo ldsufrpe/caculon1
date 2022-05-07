@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="pretext-taxas-relacionadas/problem1.pg">
+      <statement><p>Se o raio de uma esfera está aumentando a uma taxa constante de 1 <m>\rm{cm}/\rm{sec}</m>, então o volume está aumentando a uma taxa de <fillin name="AnSwEr0001" characters="15"/> <m>\rm{cm}^3/\rm{sec}</m> quando o raio é 4 <m>\rm{cm}</m>.</p>
+<p>Dica:  <m>\displaystyle\frac{dV}{dt} = \frac{dV}{dr} \cdot \frac{dr}{dt}</m>, e
+o volume de uma esfera é <m>V = \frac{4}{3} \pi r^3</m>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>201.061929829747</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
+    <static seed="10" source="pretext-taxas-relacionadas/problem11.pg">
+      <statement><p>Seja <m>A</m>  ser a área de um círculo com raio <m>r</m>. Se
+<m>\frac { dr }{ dt } = 2</m>, encontre
+<m>\frac { dA }{ dt }</m> quando <m>r = 4</m>.</p>
+<p>Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>50.2654824574367</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem11.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="pretext-taxas-relacionadas/problem2.pg">
+      <statement><p>Uma bola de neve esférica está derretendo de tal forma que seu diâmetro está diminuindo a uma taxa de 0.2 cm/min. A que taxa o volume da bola de neve está diminuindo quando o diâmetro é 10 cm. (Observe que a resposta é um número positivo)</p>
+<p><fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>0.2\cdot 1.33333\pi \cdot 0.5\cdot 3\!\left(\frac{10}{2}\right)^{2}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="pretext-taxas-relacionadas/problem3.pg">
+      <statement><p>Uma luz de rua está no topo de um poste 20 pés. Uma garota 4 pés de altura caminha ao longo de uma trajetória reta afastando-se do poste com uma velocidade de 3 pés por segundo.</p>
+<p>A que taxa a ponta de sua sombra está se afastando da luz (ou seja, longe do <alert> topo </alert> do poste) quando a garota está 30 pés longe do poste?</p>
+<p>Resposta: <fillin name="AnSwEr0001" characters="40"/></p>
+<p>Quão rápido sua sombra está se alongando?</p>
+<p>Resposta: <fillin name="AnSwEr0002" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\frac{\left(30+7.5\right)\!\left(3+0.75\right)}{42.5}</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\frac{3}{\frac{20}{4}-1}</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="pretext-taxas-relacionadas/problem4.pg">
+      <statement><p>Um balão esférico é inflado de modo que seu volume aumenta na
+taxa de 2.9 pés por minuto.
+Com que rapidez o diâmetro do balão está aumentando quando o diâmetro é 1.6 pés?</p>
+<p>O diâmetro aumenta em <fillin name="AnSwEr0001" characters="20"/> pés por minuto.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0.721171</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="pretext-taxas-relacionadas/problem5.pg">
+      <statement><p>Ao meio-dia, o navio A está a 30 milhas náuticas a oeste do navio B.
+O navio A está navegando para oeste a 19 nós e o navio B está navegando para o norte a 24 nós. Quão rápido (em nós) está mudando a distância entre os navios em 6 PM (a pós o meio-dia)?</p>
+<p>A distância está mudando em <fillin name="AnSwEr0001" characters="35"/> nós.</p>
+<p>(Nota: 1 nó é uma velocidade de 1 milha náutica por hora.)</p>
+</statement>
+      <answer>
+        <p>
+          <m>30.4056</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem5.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="pretext-taxas-relacionadas/problem6.pg">
+      <statement><p>Um tanque de água cônico com vértice para baixo tem um raio de 10 pés no topo e tem 27 pés de altura.</p>
+<p>Se a água flui para o tanque a uma taxa de 10 pés por minuto,
+quão rápido a profundidade da água está aumentando quando a água está a
+15 pés de profundidade?</p>
+<p>A profundidade da água aumenta em <fillin name="AnSwEr0001" characters="25"/> pés por minuto.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0.103132</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem6.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="pretext-taxas-relacionadas/problem7.pg">
+      <statement><p>Uma corda, presa a um peso, sobe por uma roldana no teto e desce até um trabalhador. O trabalhador segura a corda na mesma altura do ponto de conexão entre a corda e o peso. A distância do ponto de conexão ao teto é de 40 ft. Suponha que o trabalhador esteja diretamente próximo ao peso (ou seja, um comprimento total de corda de 80 ft) e comece a se afastar a uma taxa constante de 4 pés por segundo. Quão rápido o peso está subindo quando o trabalhador andou:</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>10 pés?  Resposta </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0001" characters="30"/></cell>
+</row>
+<row>
+<cell>30 pés? Resposta </cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0002" characters="30"/></cell>
+</row>
+</tabular>
+</sidebyside>
+</statement>
+      <answer>
+        <p>
+          <m>0.970143</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2.4</m>
+        </p>
+      </answer>
+      <solution><p>O trabalhador, o peso e a polia formam um triângulo retângulo com altura 40, comprimento da base <m>x</m> e hipotenusa <m>z</m>. A velocidade com que o peso sobe é a mesma que a velocidade com que a corda está sendo puxada.
+Isso significa que a taxa que estamos procurando é <m>\dfrac{dz}{dt}</m>.</p>
+<p>Pelo Teorema de Pitágoras
+<me>x^2 + 40^2 = z^2</me>
+Tome derivadas em relação a <m>t</m> de ambos os lados da
+equação. 
+<me>2x\dfrac{dx}{dt} = 2z\dfrac{dz}{dt}.</me></p>
+<p>Em seguida, faça <m>\dfrac{dx}{dt} = 4</m> e resolva para a taxa desconhecida.
+<me>\dfrac{dz}{dt} = \dfrac{4 x}{z}.</me></p>
+<p>Quando <m>x = 10</m>,
+<me>10^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{1700}.</me>
+<me>\Rightarrow \dfrac{dz}{dt} = \dfrac{40}{\sqrt{1700}}
+  \approx 0.970142500145332.</me></p>
+<p>Quando <m>x = 30</m>,
+<me>30^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{2500}.</me>
+<me>\Rightarrow \dfrac{dz}{dt} = \dfrac{120}{\sqrt{2500}}
+  \approx 2.4.</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="pretext-taxas-relacionadas/problem8.pg">
+      <statement><p>Uma loja de varejo estima que as vendas semanais <m>s</m> e os custos semanais de publicidade <m>x</m> (ambos em dólares) estão relacionados por
+<me>s = 70000 - 350000 e^{-0.0003 x}.</me>
+Os custos de publicidade semanais atuais são de 2.000 dólares e esses custos estão aumentando a uma taxa de 300 dólares por semana. Encontre a taxa atual de variação das vendas.</p>
+<p>Taxa de variação das vendas = <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>17287.5665369618</m>
+        </p>
+      </answer>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem8.pg"/>
+  </webwork-reps>
+  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
+    <static seed="9" source="pretext-taxas-relacionadas/problem10.pg">
+      <statement><p>Suponha <m>xy = 4</m>
+ e <m>\displaystyle{ \frac { dy }{ dt } = 4}</m>.
+Encontre <m>\displaystyle{\frac { dx }{ dt } }</m> quando  <m>x = 2</m>.</p>
+<p><m>\displaystyle{\frac { dx }{ dt } }</m> = <fillin name="AnSwEr0001" characters="20"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <solution><p>Derivando por ambos os lados da equaç~ao <m>x y = 4</m> em relação a  <m>t</m> obtemos
+<me>\frac{dx}{dt}y + x \frac{dy}{dt} = 0</me> 
+ou <me>\frac{dx}{dt} = - \frac{x}{y} \frac{dy}{dt}</me>
+Temos <m>y = \displaystyle \frac{4 }{x}</m>, então <m>y = 2</m>  quando <m>x = 2</m> .
+Substituindo <m>y = 2, \; x= 2</m> e <m>\displaystyle \frac{dy}{dt} = 4</m> na expressão para 
+<m>\displaystyle \frac{dx}{dt}</m>, temos
+<me>\frac{dx}{dt} = - \frac{2}{2} \cdot (4)  = -4</me></p>
+</solution>
+    </static>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
+    <pg source="pretext-taxas-relacionadas/problem10.pg"/>
+  </webwork-reps>
+</webwork-representations>

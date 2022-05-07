@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-21T13:21:26-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Finding the best viewing angle.</span>
+</h4>
+<p>The Statue of Liberty has height <span class="process-math">\(46\)</span>m and stands on a <span class="process-math">\(47\)</span>m tall pedestal. How far from the statue should an observer stand to maximize the angle subtended by the statue at the observer's eye, which is <span class="process-math">\(1.5\)</span>m above the base of the pedestal?</p>
+<p><em class="alert">Solution</em> Obviously if we stand too close then all the observer sees is the pedestal, while if they stand too far then everything is tiny. The best spot for taking a photograph is somewhere in between.</p>
+<ul class="disc">
+<li>
+<p>Draw a careful picture <a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Nota de rodapé 2.10"><sup> 10 </sup></a></p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><img src="images/liberty.svg" role="img" class="contained"></div></div></div>
+<p>and we can put in the relevant lengths and angles.</p>
+</li>
+<li><p>The height of the statue is <span class="process-math">\(h = 46\)</span>m, and the height of the pedestal (above the eye) is <span class="process-math">\(p = 47-1.5 = 45.5\)</span>m. The horizontal distance from the statue to the eye is <span class="process-math">\(x\text{.}\)</span> There are two relevant angles. First <span class="process-math">\(\theta\)</span> is the angle subtended by the statue, while <span class="process-math">\(\varphi\)</span> is the angle subtended by the portion of the pedestal above the eye.</p></li>
+<li><p>Some trigonometry gives us<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\tan \varphi \amp= \frac{p}{x}\\
+\tan (\varphi+\theta) \amp= \frac{p+h}{x}
+\end{align*}
+</div>Thus<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\varphi \amp= \arctan \frac{p}{x}\\
+\varphi+\theta \amp= \arctan \frac{p+h}{x}
+\end{align*}
+</div>and so<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\theta \amp= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.
+\end{align*}
+</div></p></li>
+<li>
+<p>If we allow the viewer to stand at any point in front of the statue, then <span class="process-math">\(0\le x
+\lt \infty\text{.}\)</span> Further observe that as <span class="process-math">\(x \rightarrow \infty\)</span> or <span class="process-math">\(x \rightarrow 0\)</span> the angle <span class="process-math">\(\theta \rightarrow 0\text{,}\)</span>  since</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =
+\lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}
+\end{equation*}
+</div>
+<p class="continuation">Clearly the largest value of <span class="process-math">\(\theta\)</span> will be strictly positive and so has to be taken for some <span class="process-math">\(0 \lt x \lt \infty\text{.}\)</span> (Note the strict inequalities.) This <span class="process-math">\(x\)</span> will be a local maximum as well as a global maximum. As <span class="process-math">\(\theta\)</span> is not singular at any <span class="process-math">\(0 \lt x \lt \infty\text{,}\)</span> we need only search for critical points.</p>
+<p>A careful application of the chain rule shows that the derivative is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\dfrac{\dd \theta}{\dd x}
+\amp=
+\frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) -
+\frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)\\
+\amp= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}
+\end{align*}
+</div>
+<p class="continuation">So a critical point occurs when</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\frac{(p+h)}{x^2+(p+h)^2} \amp= \frac{p}{x^2+p^2} \amp \text{cross multiply}\\
+(p+h)(x^2+p^2) \amp= p(x^2+(p+h)^2) \amp \text{collect $x$ terms}\\
+x^2 (p+h-p) \amp= p(p+h)^2 - p^2 (p+h) \amp \text{clean up}\\
+h x^2 \amp= p(p+h)(p+h-p) = ph(p+h)\\
+\amp\hskip1in \text{cancel common factors}\\
+x^2 \amp= p(p+h)\\
+x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m
+\end{align*}
+</div>
+</li>
+<li><p>Thus the best place to stand approximately <span class="process-math">\(64.9\)</span>m in front or behind the statue. At that point <span class="process-math">\(\theta \approx 0.348\)</span> radians or <span class="process-math">\(19.9^\circ\text{.}\)</span></p></li>
+</ul></article><span class="incontext"><a href="section-2.html#APPglobalMaxMinG" class="internal">em contexto</a></span>
+</body>
+</html>
