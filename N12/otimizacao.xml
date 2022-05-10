@@ -708,6 +708,47 @@
         </example>
 
     </subsection>
+
+
+    <subsection xml:id="sub-videos-2">
+        <title>
+            Sugestão de vídeos
+        </title>
+
+        <ul>
+            <li>
+                <p>
+                    <url href="https://youtu.be/uG4PNx-VHPw" visual="youtu.be/uG4PNx-VHPw">Introdução a pontos máximo e
+                        mínimos.
+                    </url>
+                </p>
+
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/-To9rLraJE4" visual="youtu.be/-To9rLraJE4">Cálculo de extremos locais.
+                    </url>
+                </p>
+
+            </li>
+
+
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/dHIBxAo5hF8" visual="youtu.be/dHIBxAo5hF8">Encontrados máximos e mínimos
+                        locais de
+                        <m>g(x)=x^4-x^5</m>.
+                    </url>
+                </p>
+
+            </li>
+
+        </ul>
+    </subsection>
+
+
     <subsection xml:id="ssec_find_maxmin">
         <title>Encontrando Máximos e Mínimos Globais</title>
         <p>
@@ -982,9 +1023,9 @@
                         <li>
                             <p>Para completar, também esboçamos o gráfico dessa função no mesmo intervalo.</p>
                             <figure>
-                            <sidebyside width="66%">
-                                <image source="images/globalMaxMinA"/>
-                            </sidebyside>
+                                <sidebyside width="66%">
+                                    <image source="images/globalMaxMinA"/>
+                                </sidebyside>
                             </figure>
 
                         </li>
@@ -995,1378 +1036,1418 @@
 
     </subsection>
 
-<!--    <subsection xml:id="sec_opt_eg">-->
-<!--        <title>Max/Min Examples</title>-->
-<!--        <p>-->
-<!--            As noted at the beginning of this section, the problem of finding maxima and minima is-->
-<!--            a very important application of differential calculus in the real world. We now turn to a-->
-<!--            number of examples of this process. But to guide the reader we will describe a general-->
-<!--            procedure to follow for these problems.-->
-<!--        </p>-->
 
-<!--        <p>-->
-<!--            <ol label="1">-->
-<!--                <li>Read-->
-<!--                    <mdash/>-->
-<!--                    read the problem carefully. Work out what information is given in the-->
-<!--                    statement of the problem and what we are being asked to compute.-->
-<!--                </li>-->
-<!--                <li>Diagram-->
-<!--                    <mdash/>-->
-<!--                    draw a diagram. This will typically help you to identify what you know-->
-<!--                    about the problem and what quantities you need to work out.-->
-<!--                </li>-->
-<!--                <li>Variables-->
-<!--                    <mdash/>-->
-<!--                    assign variables to the quantities in the problem along-->
-<!--                    with their units. It is typically a good idea to make sensible choices of variable names:-->
-<!--                    <m>A</m>-->
-<!--                    for area, <m>h</m> for height, <m>t</m> for time etc.-->
-<!--                </li>-->
-<!--                <li>Relations-->
-<!--                    <mdash/>-->
-<!--                    find relations between the variables. By now you should know the-->
-<!--                    quantity we are interested in (the one we want to maximise or minimise) and we-->
-<!--                    need to establish a relation between it and the other variables.-->
-<!--                </li>-->
-<!--                <li>Reduce-->
-<!--                    <mdash/>-->
-<!--                    the relation down to a function of one variable. In order to apply the-->
-<!--                    calculus we know, we must have a function of a single variable. To do this we need to use-->
-<!--                    all the information we have to eliminate variables. We should also work out-->
-<!--                    the domain of the resulting function.-->
-<!--                </li>-->
-<!--                <li>Maximise or minimise-->
-<!--                    <mdash/>-->
-<!--                    we can now apply the methods of Corollary-->
-<!--                    <nbsp/>-->
-<!--                    <xref ref="cor_find_maxmin"/>-->
-<!--                    to find the maximum or minimum of the quantity we need (as the problem dictates).-->
-<!--                </li>-->
-<!--                <li>Be careful-->
-<!--                    <mdash/>-->
-<!--                    make sure your answer makes sense. Make sure quantities are-->
-<!--                    physical. For example, lengths and areas cannot be negative.-->
-<!--                </li>-->
-<!--                <li>Answer the question-->
-<!--                    <mdash/>-->
-<!--                    be sure your answer really answers the question asked in-->
-<!--                    the problem.-->
-<!--                </li>-->
-<!--            </ol>-->
-<!--        </p>-->
+    <!--    <subsection xml:id="sec_opt_eg">-->
+    <!--        <title>Max/Min Examples</title>-->
+    <!--        <p>-->
+    <!--            As noted at the beginning of this section, the problem of finding maxima and minima is-->
+    <!--            a very important application of differential calculus in the real world. We now turn to a-->
+    <!--            number of examples of this process. But to guide the reader we will describe a general-->
+    <!--            procedure to follow for these problems.-->
+    <!--        </p>-->
 
-<!--        <p>Let us start with a relatively simple problem:</p>-->
+    <!--        <p>-->
+    <!--            <ol label="1">-->
+    <!--                <li>Read-->
+    <!--                    <mdash/>-->
+    <!--                    read the problem carefully. Work out what information is given in the-->
+    <!--                    statement of the problem and what we are being asked to compute.-->
+    <!--                </li>-->
+    <!--                <li>Diagram-->
+    <!--                    <mdash/>-->
+    <!--                    draw a diagram. This will typically help you to identify what you know-->
+    <!--                    about the problem and what quantities you need to work out.-->
+    <!--                </li>-->
+    <!--                <li>Variables-->
+    <!--                    <mdash/>-->
+    <!--                    assign variables to the quantities in the problem along-->
+    <!--                    with their units. It is typically a good idea to make sensible choices of variable names:-->
+    <!--                    <m>A</m>-->
+    <!--                    for area, <m>h</m> for height, <m>t</m> for time etc.-->
+    <!--                </li>-->
+    <!--                <li>Relations-->
+    <!--                    <mdash/>-->
+    <!--                    find relations between the variables. By now you should know the-->
+    <!--                    quantity we are interested in (the one we want to maximise or minimise) and we-->
+    <!--                    need to establish a relation between it and the other variables.-->
+    <!--                </li>-->
+    <!--                <li>Reduce-->
+    <!--                    <mdash/>-->
+    <!--                    the relation down to a function of one variable. In order to apply the-->
+    <!--                    calculus we know, we must have a function of a single variable. To do this we need to use-->
+    <!--                    all the information we have to eliminate variables. We should also work out-->
+    <!--                    the domain of the resulting function.-->
+    <!--                </li>-->
+    <!--                <li>Maximise or minimise-->
+    <!--                    <mdash/>-->
+    <!--                    we can now apply the methods of Corollary-->
+    <!--                    <nbsp/>-->
+    <!--                    <xref ref="cor_find_maxmin"/>-->
+    <!--                    to find the maximum or minimum of the quantity we need (as the problem dictates).-->
+    <!--                </li>-->
+    <!--                <li>Be careful-->
+    <!--                    <mdash/>-->
+    <!--                    make sure your answer makes sense. Make sure quantities are-->
+    <!--                    physical. For example, lengths and areas cannot be negative.-->
+    <!--                </li>-->
+    <!--                <li>Answer the question-->
+    <!--                    <mdash/>-->
+    <!--                    be sure your answer really answers the question asked in-->
+    <!--                    the problem.-->
+    <!--                </li>-->
+    <!--            </ol>-->
+    <!--        </p>-->
 
-<!--        <example xml:id="APPglobalMaxMinB">-->
-<!--            <title>Constructing a container of maximal volume</title>-->
-<!--            <p>-->
-<!--                A closed rectangular container with a square base is to be made-->
-<!--                from two different materials. The material for the base costs<dollar/>5 per square-->
-<!--                meter, while the material for the other five sides costs<dollar/>1 per square-->
-<!--                meter. Find the dimensions of the container which has the largest possible-->
-<!--                volume if the total cost of materials is<dollar/>72.-->
-<!--            </p>-->
+    <!--        <p>Let us start with a relatively simple problem:</p>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                We can follow the steps we outlined above to find the solution.-->
-<!--                <ul>-->
-<!--                    <li>We need to determine the area of the two types of materials used and the-->
-<!--                        corresponding total cost.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>Draw a picture of the box.</p>-->
-<!--                        <sidebyside width="90%">-->
-<!--                            <image source="images/container"/>-->
-<!--                        </sidebyside>-->
+    <!--        <example xml:id="APPglobalMaxMinB">-->
+    <!--            <title>Constructing a container of maximal volume</title>-->
+    <!--            <p>-->
+    <!--                A closed rectangular container with a square base is to be made-->
+    <!--                from two different materials. The material for the base costs<dollar/>5 per square-->
+    <!--                meter, while the material for the other five sides costs<dollar/>1 per square-->
+    <!--                meter. Find the dimensions of the container which has the largest possible-->
+    <!--                volume if the total cost of materials is<dollar/>72.-->
+    <!--            </p>-->
 
-<!--                        <p>The more useful picture is the unfolded box on the right.</p>-->
-<!--                    </li>-->
-<!--                    <li>In the picture we have already introduced two variables. The square base has-->
-<!--                        side-length <m>b</m> metres and it has height <m>h</m> metres. Let the area of the base be-->
-<!--                        <m>A_b</m>-->
-<!--                        and the area of the other fives sides be <m>A_s</m> (both in <m>m^2</m>), and the total cost be-->
-<!--                        <m>C</m>-->
-<!--                        (in dollars). Finally let the volume enclosed be <m>V m^3</m>.-->
-<!--                    </li>-->
-<!--                    <li>Some simple geometry tells us that-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A_b \amp= b^2-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                A_s \amp= 4 bh + b^2-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                V \amp= b^2h-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                C \amp= 5 \cdot A_b + 1\cdot A_s = 5b^2+4bh+b^2 = 6b^2+4bh.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>To eliminate one of the variables we use the fact that the total cost is<dollar/>72.-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                C \amp= 6b^2+4bh = 72 \amp \text{rearrange}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                4bh \amp= 72-6b^2 \amp \text{isolate } h-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                h \amp= \frac{72-6b^2}{4b} = \frac{3}{2} \cdot \frac{12-b^2}{b}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Substituting this into the volume gives-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                V\amp= b^2 h = \frac{3b}{2} (12-b^2) = 18b - \frac{3}{2} b^3-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Now note that since <m>b</m> is a length it cannot be negative, so <m>b \geq 0</m>. Further-->
-<!--                        since-->
-<!--                        volume cannot be negative, we must also have-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                12-b^2 \geq 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and so <m>b \leq \sqrt{12}</m>.-->
-<!--                    </li>-->
-<!--                    <li>Now we can apply Corollary-->
-<!--                        <nbsp/>-->
-<!--                        <xref ref="cor_find_maxmin"/>-->
-<!--                        on the above expression for-->
-<!--                        the volume with <m>0 \leq b \leq \sqrt{12}</m>. The endpoints give:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                V(0) \amp= 0-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                V(\sqrt{12}) \amp= 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                V'(b) \amp= 18 - \frac{9b^2}{2}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Since this is a polynomial there are no singular points. However we can solve-->
-<!--                        <m>V'(b) = 0</m>-->
-<!--                        to find critical points:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                18 - \frac{9b^2}{2} \amp= 0 \amp \text{divide by 9 and multiply by 2}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                4 - b^2 \amp= 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Hence <m>b = \pm 2</m>. Thus the only critical point in the domain is <m>b=2</m>. The-->
-<!--                        corresponding-->
-<!--                        volume is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                V(2) \amp= 18\times2 - \frac{3}{2} \times 2^3-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 36 - 12 = 24.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        So by Corollary-->
-<!--                        <nbsp/>-->
-<!--                        <xref ref="cor_find_maxmin"/>, the maximum volume is when 24 when <m>b=2</m> and-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                h \amp= \frac{3}{2} \cdot \frac{12-b^2}{b} = \frac{3}{2} \frac{12-4}{2} = 6.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>All our quantities make sense; lengths, areas and volumes are all non-negative.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>Checking the question again, we see that we are asked for the dimensions of the-->
-<!--                            container (rather than its volume) so we can answer with-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                We can follow the steps we outlined above to find the solution.-->
+    <!--                <ul>-->
+    <!--                    <li>We need to determine the area of the two types of materials used and the-->
+    <!--                        corresponding total cost.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>Draw a picture of the box.</p>-->
+    <!--                        <sidebyside width="90%">-->
+    <!--                            <image source="images/container"/>-->
+    <!--                        </sidebyside>-->
 
-<!--                        <blockquote>-->
-<!--                            <p>-->
-<!--                                The container with dimensions <m>2 \times 2 \times 6m</m> will be the largest possible.-->
-<!--                            </p>-->
-<!--                        </blockquote>-->
+    <!--                        <p>The more useful picture is the unfolded box on the right.</p>-->
+    <!--                    </li>-->
+    <!--                    <li>In the picture we have already introduced two variables. The square base has-->
+    <!--                        side-length <m>b</m> metres and it has height <m>h</m> metres. Let the area of the base be-->
+    <!--                        <m>A_b</m>-->
+    <!--                        and the area of the other fives sides be <m>A_s</m> (both in <m>m^2</m>), and the total cost be-->
+    <!--                        <m>C</m>-->
+    <!--                        (in dollars). Finally let the volume enclosed be <m>V m^3</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Some simple geometry tells us that-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A_b \amp= b^2-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                A_s \amp= 4 bh + b^2-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                V \amp= b^2h-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                C \amp= 5 \cdot A_b + 1\cdot A_s = 5b^2+4bh+b^2 = 6b^2+4bh.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>To eliminate one of the variables we use the fact that the total cost is<dollar/>72.-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                C \amp= 6b^2+4bh = 72 \amp \text{rearrange}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                4bh \amp= 72-6b^2 \amp \text{isolate } h-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                h \amp= \frac{72-6b^2}{4b} = \frac{3}{2} \cdot \frac{12-b^2}{b}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Substituting this into the volume gives-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                V\amp= b^2 h = \frac{3b}{2} (12-b^2) = 18b - \frac{3}{2} b^3-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Now note that since <m>b</m> is a length it cannot be negative, so <m>b \geq 0</m>. Further-->
+    <!--                        since-->
+    <!--                        volume cannot be negative, we must also have-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                12-b^2 \geq 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and so <m>b \leq \sqrt{12}</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Now we can apply Corollary-->
+    <!--                        <nbsp/>-->
+    <!--                        <xref ref="cor_find_maxmin"/>-->
+    <!--                        on the above expression for-->
+    <!--                        the volume with <m>0 \leq b \leq \sqrt{12}</m>. The endpoints give:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                V(0) \amp= 0-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                V(\sqrt{12}) \amp= 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                V'(b) \amp= 18 - \frac{9b^2}{2}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Since this is a polynomial there are no singular points. However we can solve-->
+    <!--                        <m>V'(b) = 0</m>-->
+    <!--                        to find critical points:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                18 - \frac{9b^2}{2} \amp= 0 \amp \text{divide by 9 and multiply by 2}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                4 - b^2 \amp= 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Hence <m>b = \pm 2</m>. Thus the only critical point in the domain is <m>b=2</m>. The-->
+    <!--                        corresponding-->
+    <!--                        volume is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                V(2) \amp= 18\times2 - \frac{3}{2} \times 2^3-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 36 - 12 = 24.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        So by Corollary-->
+    <!--                        <nbsp/>-->
+    <!--                        <xref ref="cor_find_maxmin"/>, the maximum volume is when 24 when <m>b=2</m> and-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                h \amp= \frac{3}{2} \cdot \frac{12-b^2}{b} = \frac{3}{2} \frac{12-4}{2} = 6.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>All our quantities make sense; lengths, areas and volumes are all non-negative.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>Checking the question again, we see that we are asked for the dimensions of the-->
+    <!--                            container (rather than its volume) so we can answer with-->
+    <!--                        </p>-->
 
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--                        <blockquote>-->
+    <!--                            <p>-->
+    <!--                                The container with dimensions <m>2 \times 2 \times 6m</m> will be the largest possible.-->
+    <!--                            </p>-->
+    <!--                        </blockquote>-->
 
-<!--        <example xml:id="APPglobalMaxMinC">-->
-<!--            <title>Constructing another box</title>-->
-<!--            <p>-->
-<!--                A rectangular sheet of cardboard is 6 inches by 9 inches. Four-->
-<!--                identical squares are cut from the corners of the cardboard, as shown in-->
-<!--                the figure below, and the remaining piece is folded into an open-->
-<!--                rectangular box. What should the size of the cut out squares be in-->
-<!--                order to maximize the volume of the box?-->
-<!--            </p>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                This one is quite similar to the previous one, so we perhaps don't need to go into-->
-<!--                so much detail.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>After reading carefully we produce the following picture:</p>-->
+    <!--        <example xml:id="APPglobalMaxMinC">-->
+    <!--            <title>Constructing another box</title>-->
+    <!--            <p>-->
+    <!--                A rectangular sheet of cardboard is 6 inches by 9 inches. Four-->
+    <!--                identical squares are cut from the corners of the cardboard, as shown in-->
+    <!--                the figure below, and the remaining piece is folded into an open-->
+    <!--                rectangular box. What should the size of the cut out squares be in-->
+    <!--                order to maximize the volume of the box?-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="50%">-->
-<!--                            <image source="images/box_vol"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>Let the height of the box be <m>x</m> inches, and the base be <m>\ell \times w</m> inches.-->
-<!--                        The volume of the box is then <m>V</m> cubic inches.-->
-<!--                    </li>-->
-<!--                    <li>Some simple geometry tells us that <m>\ell = 9-2x, w=6-2x</m> and so-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                V \amp= x(9-2x)(6-2x) \text{cubic inches}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 54x-30x^2+4x^3.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Notice that since all lengths must be non-negative, we must have-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                x,\ell,w \geq 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and so <m>0 \leq x \leq 3</m> (if <m>x \gt 3</m> then <m>w \lt 0</m>).-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>We can now apply Corollary-->
-<!--                            <nbsp/>-->
-<!--                            <xref ref="cor_find_maxmin"/>. First the endpoints of the-->
-<!--                            interval give-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    V(0) \amp= 0 \amp V(3) \amp= 0-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            The derivative is-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    V'(x) \amp= 54 - 60x +12x^2-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    \amp= 6(9-10x+2x^2)-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            Since this is a polynomial there are no singular points. To find critical points we solve-->
-<!--                            <m>V'(x) = 0</m>-->
-<!--                            to get-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    x_\pm \amp= \frac{10 \pm \sqrt{100 - 4\times2\times9}}{4}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    \amp= \frac{10 \pm \sqrt{28}}{4} = \frac{10 \pm 2\sqrt{7}}{4} = \frac{5 \pm-->
-<!--                                    \sqrt{7}}{2}-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            We can then use a calculator to approximate-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    x_+ \amp\approx 3.82 \amp x_- \amp\approx 1.18.-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            So <m>x_-</m> is inside the domain, while <m>x_+</m> lies outside.-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                This one is quite similar to the previous one, so we perhaps don't need to go into-->
+    <!--                so much detail.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>After reading carefully we produce the following picture:</p>-->
 
-<!--                        <p>Alternatively-->
-<!--                            <fn>Say if we do not have a calculator to hand, or your instructor-->
-<!--                                insists that the problem be done without one.-->
-<!--                            </fn>-->
-<!--                            , we can bound <m>x_\pm</m> by first noting that-->
-<!--                            <m>2 \leq \sqrt{7} \leq 3</m>. From this we know that-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    1=\frac{5-3}{2} \amp \leq x_- = \frac{5 - \sqrt{7}}{2} \leq \frac{5-2}{2} = 1.5-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    3.5=\frac{5+2}{2} \amp \leq x_+ = \frac{5 + \sqrt{7}}{2} \leq \frac{5+3}{2} = 4-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>Since the volume is zero when <m>x=0,3</m>, it must be the case that the volume is-->
-<!--                        maximised when <m>x = x_- = \frac{5 - \sqrt{7}}{2}</m>.-->
-<!--                    </li>-->
-<!--                    <li>Notice that since <m>0 \lt x_- \lt 3</m> we know that the other lengths are positive, so our-->
-<!--                        answer makes sense. Further, the question only asks for the length <m>x</m> and not the-->
-<!--                        resulting volume so we have answered the question.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--                        <sidebyside width="50%">-->
+    <!--                            <image source="images/box_vol"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>Let the height of the box be <m>x</m> inches, and the base be <m>\ell \times w</m> inches.-->
+    <!--                        The volume of the box is then <m>V</m> cubic inches.-->
+    <!--                    </li>-->
+    <!--                    <li>Some simple geometry tells us that <m>\ell = 9-2x, w=6-2x</m> and so-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                V \amp= x(9-2x)(6-2x) \text{cubic inches}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 54x-30x^2+4x^3.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Notice that since all lengths must be non-negative, we must have-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                x,\ell,w \geq 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and so <m>0 \leq x \leq 3</m> (if <m>x \gt 3</m> then <m>w \lt 0</m>).-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>We can now apply Corollary-->
+    <!--                            <nbsp/>-->
+    <!--                            <xref ref="cor_find_maxmin"/>. First the endpoints of the-->
+    <!--                            interval give-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    V(0) \amp= 0 \amp V(3) \amp= 0-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            The derivative is-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    V'(x) \amp= 54 - 60x +12x^2-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    \amp= 6(9-10x+2x^2)-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            Since this is a polynomial there are no singular points. To find critical points we solve-->
+    <!--                            <m>V'(x) = 0</m>-->
+    <!--                            to get-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    x_\pm \amp= \frac{10 \pm \sqrt{100 - 4\times2\times9}}{4}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    \amp= \frac{10 \pm \sqrt{28}}{4} = \frac{10 \pm 2\sqrt{7}}{4} = \frac{5 \pm-->
+    <!--                                    \sqrt{7}}{2}-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            We can then use a calculator to approximate-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    x_+ \amp\approx 3.82 \amp x_- \amp\approx 1.18.-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            So <m>x_-</m> is inside the domain, while <m>x_+</m> lies outside.-->
+    <!--                        </p>-->
 
-<!--        <p>There is a new wrinkle in the next two examples. Each involves finding the-->
-<!--            minimum value of a function <m>f(x)</m> with <m>x</m> running over all real numbers,-->
-<!--            rather than just over a finite interval as in Corollary-->
-<!--            <nbsp/>-->
-<!--            <xref ref="cor_find_maxmin"/>.-->
-<!--            Both in Example-->
-<!--            <nbsp/>-->
-<!--            <xref ref="APPglobalMaxMinD"/>-->
-<!--            and in Example-->
-<!--            <nbsp/>-->
-<!--            <xref ref="APPglobalMaxMinDist"/>-->
-<!--            the function <m>f(x)</m> tends to <m>+\infty</m> as <m>x</m> tends to either <m>+\infty</m> or-->
-<!--            <m>-\infty</m>. So the minimum value of <m>f(x)</m> will be achieved for some finite value-->
-<!--            of <m>x</m>, which will be a local minimum as well as a global minimum.-->
-<!--        </p>-->
+    <!--                        <p>Alternatively-->
+    <!--                            <fn>Say if we do not have a calculator to hand, or your instructor-->
+    <!--                                insists that the problem be done without one.-->
+    <!--                            </fn>-->
+    <!--                            , we can bound <m>x_\pm</m> by first noting that-->
+    <!--                            <m>2 \leq \sqrt{7} \leq 3</m>. From this we know that-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    1=\frac{5-3}{2} \amp \leq x_- = \frac{5 - \sqrt{7}}{2} \leq \frac{5-2}{2} = 1.5-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    3.5=\frac{5+2}{2} \amp \leq x_+ = \frac{5 + \sqrt{7}}{2} \leq \frac{5+3}{2} = 4-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>Since the volume is zero when <m>x=0,3</m>, it must be the case that the volume is-->
+    <!--                        maximised when <m>x = x_- = \frac{5 - \sqrt{7}}{2}</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Notice that since <m>0 \lt x_- \lt 3</m> we know that the other lengths are positive, so our-->
+    <!--                        answer makes sense. Further, the question only asks for the length <m>x</m> and not the-->
+    <!--                        resulting volume so we have answered the question.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--        <theorem xml:id="thm_maxMinOnR">-->
-<!--            <statement>-->
-<!--                <p>-->
-<!--                    Let <m>f(x)</m> be defined and continuous for all <m>-\infty \lt x \lt \infty</m>. Let <m>c</m> be a-->
-<!--                    finite-->
-<!--                    real number.-->
-<!--                </p>-->
+    <!--        <p>There is a new wrinkle in the next two examples. Each involves finding the-->
+    <!--            minimum value of a function <m>f(x)</m> with <m>x</m> running over all real numbers,-->
+    <!--            rather than just over a finite interval as in Corollary-->
+    <!--            <nbsp/>-->
+    <!--            <xref ref="cor_find_maxmin"/>.-->
+    <!--            Both in Example-->
+    <!--            <nbsp/>-->
+    <!--            <xref ref="APPglobalMaxMinD"/>-->
+    <!--            and in Example-->
+    <!--            <nbsp/>-->
+    <!--            <xref ref="APPglobalMaxMinDist"/>-->
+    <!--            the function <m>f(x)</m> tends to <m>+\infty</m> as <m>x</m> tends to either <m>+\infty</m> or-->
+    <!--            <m>-\infty</m>. So the minimum value of <m>f(x)</m> will be achieved for some finite value-->
+    <!--            of <m>x</m>, which will be a local minimum as well as a global minimum.-->
+    <!--        </p>-->
 
-<!--                <p>-->
-<!--                    <ol label="a">-->
-<!--                        <li>-->
-<!--                            <p>If <m>\displaystyle \lim_{x\rightarrow+\infty} f(x)=+\infty</m> and-->
-<!--                                <m>\displaystyle \lim_{x\rightarrow-\infty} f(x)=+\infty</m>-->
-<!--                                and if <m>f(x)</m> has a global-->
-<!--                                minimum at <m>x = c</m>, then there are 2 possibilities. Either-->
-<!--                                <ul>-->
-<!--                                    <li><m>f'(c) = 0</m>, or-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <m>f'(c)</m>-->
-<!--                                        does not exist-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                                That is, a global minimum must occur either at a critical point or at a singular point.-->
-<!--                            </p>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <p>If <m>\displaystyle \lim_{x\rightarrow+\infty} f(x)=-\infty</m> and-->
-<!--                                <m>\displaystyle \lim_{x\rightarrow-\infty} f(x)=-\infty</m>-->
-<!--                                and if <m>f(x)</m> has a global-->
-<!--                                maximum at <m>x = c</m>, then there are 2 possibilities. Either-->
-<!--                                <ul>-->
-<!--                                    <li><m>f'(c) = 0</m>, or-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <m>f'(c)</m>-->
-<!--                                        does not exist-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                                That is, a global maximum must occur either at a critical point or at a singular point.-->
-<!--                            </p>-->
-<!--                        </li>-->
-<!--                    </ol>-->
-<!--                </p>-->
-<!--            </statement>-->
-<!--        </theorem>-->
+    <!--        <theorem xml:id="thm_maxMinOnR">-->
+    <!--            <statement>-->
+    <!--                <p>-->
+    <!--                    Let <m>f(x)</m> be defined and continuous for all <m>-\infty \lt x \lt \infty</m>. Let <m>c</m> be a-->
+    <!--                    finite-->
+    <!--                    real number.-->
+    <!--                </p>-->
 
-<!--        <example xml:id="APPglobalMaxMinD">-->
-<!--            <title>How far from a point to a line</title>-->
-<!--            <p>-->
-<!--                Find the point on the line <m>y=6-3x</m> that is closest to the point <m>(7,5)</m>.-->
-<!--            </p>-->
+    <!--                <p>-->
+    <!--                    <ol label="a">-->
+    <!--                        <li>-->
+    <!--                            <p>If <m>\displaystyle \lim_{x\rightarrow+\infty} f(x)=+\infty</m> and-->
+    <!--                                <m>\displaystyle \lim_{x\rightarrow-\infty} f(x)=+\infty</m>-->
+    <!--                                and if <m>f(x)</m> has a global-->
+    <!--                                minimum at <m>x = c</m>, then there are 2 possibilities. Either-->
+    <!--                                <ul>-->
+    <!--                                    <li><m>f'(c) = 0</m>, or-->
+    <!--                                    </li>-->
+    <!--                                    <li>-->
+    <!--                                        <m>f'(c)</m>-->
+    <!--                                        does not exist-->
+    <!--                                    </li>-->
+    <!--                                </ul>-->
+    <!--                                That is, a global minimum must occur either at a critical point or at a singular point.-->
+    <!--                            </p>-->
+    <!--                        </li>-->
+    <!--                        <li>-->
+    <!--                            <p>If <m>\displaystyle \lim_{x\rightarrow+\infty} f(x)=-\infty</m> and-->
+    <!--                                <m>\displaystyle \lim_{x\rightarrow-\infty} f(x)=-\infty</m>-->
+    <!--                                and if <m>f(x)</m> has a global-->
+    <!--                                maximum at <m>x = c</m>, then there are 2 possibilities. Either-->
+    <!--                                <ul>-->
+    <!--                                    <li><m>f'(c) = 0</m>, or-->
+    <!--                                    </li>-->
+    <!--                                    <li>-->
+    <!--                                        <m>f'(c)</m>-->
+    <!--                                        does not exist-->
+    <!--                                    </li>-->
+    <!--                                </ul>-->
+    <!--                                That is, a global maximum must occur either at a critical point or at a singular point.-->
+    <!--                            </p>-->
+    <!--                        </li>-->
+    <!--                    </ol>-->
+    <!--                </p>-->
+    <!--            </statement>-->
+    <!--        </theorem>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                In this problem-->
-<!--            </p>-->
+    <!--        <example xml:id="APPglobalMaxMinD">-->
+    <!--            <title>How far from a point to a line</title>-->
+    <!--            <p>-->
+    <!--                Find the point on the line <m>y=6-3x</m> that is closest to the point <m>(7,5)</m>.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>A simple picture</p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                In this problem-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="75%">-->
-<!--                            <image source="images/line_dist"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>Some notation is already given to us. Let a point on the line have coordinates-->
-<!--                        <m>(x,y)</m>, and we do not need units. And let <m>\ell</m> be the distance from the point-->
-<!--                        <m>(x,y)</m>-->
-<!--                        to the point-->
-<!--                        <nbsp/>-->
-<!--                        <m>(7,5)</m>.-->
-<!--                    </li>-->
-<!--                    <li>Since the points are on the line the coordinates <m>(x,y)</m> must obey-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                y=6-3x-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Notice that <m>x</m> and <m>y</m> have no further constraints. The distance <m>\ell</m> is given-->
-<!--                        by-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (x-7)^2 + (y-5)^2-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>We can now eliminate the variable <m>y</m>:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (x-7)^2 + (y-5)^2-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= (x-7)^2 + (6-3x-5)^2 = (x-7)^2 + (1-3x)^2-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= x^2-14x+49 + 1-6x+9x^2 = 10x^2-20x+50-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 10(x^2-2x+5)-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \ell \amp= \sqrt{10} \cdot \sqrt{x^2-2x+5}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Notice that as <m>x \to \pm \infty</m> the distance <m>\ell \to +\infty</m>.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>We can now apply Theorem-->
-<!--                            <nbsp/>-->
-<!--                            <xref ref="thm_maxMinOnR"/>-->
-<!--                            <ul>-->
-<!--                                <li>Since the distance is defined for all real <m>x</m>, we do not have to check the-->
-<!--                                    endpoints of the domain-->
-<!--                                    <mdash/>-->
-<!--                                    there are none.-->
-<!--                                </li>-->
-<!--                                <li>Form the derivative:-->
-<!--                                    <md>-->
-<!--                                        <mrow>-->
-<!--                                            \dfrac{\dd \ell}{\dd x} \amp= \sqrt{10} \frac{2x-2}{2\sqrt{x^2-2x+5}}-->
-<!--                                        </mrow>-->
-<!--                                    </md>-->
-<!--                                    It is zero when <m>x=1</m>, and undefined if <m>x^2-2x+5 \lt 0</m>. However, since-->
-<!--                                    <md>-->
-<!--                                        <mrow>-->
-<!--                                            x^2-2x+5 \amp= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4-->
-<!--                                        </mrow>-->
-<!--                                    </md>-->
-<!--                                    we know that <m>x^2-2x+5 \geq 4</m>. Thus the function has no singular points and-->
-<!--                                    the only-->
-<!--                                    critical point occurs at <m>x=1</m>. The corresponding function value is then-->
-<!--                                    <md>-->
-<!--                                        <mrow>-->
-<!--                                            \ell(1) \amp=\sqrt{10} \sqrt{1-2+5} = 2 \sqrt{10}.-->
-<!--                                        </mrow>-->
-<!--                                    </md>-->
-<!--                                </li>-->
-<!--                                <li>Thus the minimum value of the distance is <m>\ell=2\sqrt{10}</m> and occurs at <m>-->
-<!--                                    x=1</m>.-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>This answer makes sense-->
-<!--                        <mdash/>-->
-<!--                        the distance is not negative.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>The question asks for the point that minimises the distance, not that minimum-->
-<!--                            distance. Hence the answer is <m>x=1, y=6-3 = 3</m>. I.e.-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>A simple picture</p>-->
 
-<!--                        <blockquote>-->
-<!--                            <p>-->
-<!--                                The point that minimises the distance is <m>(1,3)</m>.-->
-<!--                            </p>-->
-<!--                        </blockquote>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
+    <!--                        <sidebyside width="75%">-->
+    <!--                            <image source="images/line_dist"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>Some notation is already given to us. Let a point on the line have coordinates-->
+    <!--                        <m>(x,y)</m>, and we do not need units. And let <m>\ell</m> be the distance from the point-->
+    <!--                        <m>(x,y)</m>-->
+    <!--                        to the point-->
+    <!--                        <nbsp/>-->
+    <!--                        <m>(7,5)</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Since the points are on the line the coordinates <m>(x,y)</m> must obey-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                y=6-3x-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Notice that <m>x</m> and <m>y</m> have no further constraints. The distance <m>\ell</m> is given-->
+    <!--                        by-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (x-7)^2 + (y-5)^2-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>We can now eliminate the variable <m>y</m>:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (x-7)^2 + (y-5)^2-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= (x-7)^2 + (6-3x-5)^2 = (x-7)^2 + (1-3x)^2-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= x^2-14x+49 + 1-6x+9x^2 = 10x^2-20x+50-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 10(x^2-2x+5)-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \ell \amp= \sqrt{10} \cdot \sqrt{x^2-2x+5}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Notice that as <m>x \to \pm \infty</m> the distance <m>\ell \to +\infty</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>We can now apply Theorem-->
+    <!--                            <nbsp/>-->
+    <!--                            <xref ref="thm_maxMinOnR"/>-->
+    <!--                            <ul>-->
+    <!--                                <li>Since the distance is defined for all real <m>x</m>, we do not have to check the-->
+    <!--                                    endpoints of the domain-->
+    <!--                                    <mdash/>-->
+    <!--                                    there are none.-->
+    <!--                                </li>-->
+    <!--                                <li>Form the derivative:-->
+    <!--                                    <md>-->
+    <!--                                        <mrow>-->
+    <!--                                            \dfrac{\dd \ell}{\dd x} \amp= \sqrt{10} \frac{2x-2}{2\sqrt{x^2-2x+5}}-->
+    <!--                                        </mrow>-->
+    <!--                                    </md>-->
+    <!--                                    It is zero when <m>x=1</m>, and undefined if <m>x^2-2x+5 \lt 0</m>. However, since-->
+    <!--                                    <md>-->
+    <!--                                        <mrow>-->
+    <!--                                            x^2-2x+5 \amp= (x^2-2x+1)+4 = \underbrace{(x-1)^2}_{\geq0}+4-->
+    <!--                                        </mrow>-->
+    <!--                                    </md>-->
+    <!--                                    we know that <m>x^2-2x+5 \geq 4</m>. Thus the function has no singular points and-->
+    <!--                                    the only-->
+    <!--                                    critical point occurs at <m>x=1</m>. The corresponding function value is then-->
+    <!--                                    <md>-->
+    <!--                                        <mrow>-->
+    <!--                                            \ell(1) \amp=\sqrt{10} \sqrt{1-2+5} = 2 \sqrt{10}.-->
+    <!--                                        </mrow>-->
+    <!--                                    </md>-->
+    <!--                                </li>-->
+    <!--                                <li>Thus the minimum value of the distance is <m>\ell=2\sqrt{10}</m> and occurs at <m>-->
+    <!--                                    x=1</m>.-->
+    <!--                                </li>-->
+    <!--                            </ul>-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>This answer makes sense-->
+    <!--                        <mdash/>-->
+    <!--                        the distance is not negative.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>The question asks for the point that minimises the distance, not that minimum-->
+    <!--                            distance. Hence the answer is <m>x=1, y=6-3 = 3</m>. I.e.-->
+    <!--                        </p>-->
 
-<!--            <p>Notice that we can make the analysis easier by observing that the point that minimises-->
-<!--                the distance also minimises the squared-distance. So that instead of minimising the-->
-<!--                function <m>\ell</m>, we can just minimise <m>\ell^2</m>:-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \ell^2 \amp= 10(x^2-2x+5)-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                The resulting algebra is a bit easier and we don't have to hunt for singular points.-->
-<!--            </p>-->
+    <!--                        <blockquote>-->
+    <!--                            <p>-->
+    <!--                                The point that minimises the distance is <m>(1,3)</m>.-->
+    <!--                            </p>-->
+    <!--                        </blockquote>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
 
-<!--        </example>-->
+    <!--            <p>Notice that we can make the analysis easier by observing that the point that minimises-->
+    <!--                the distance also minimises the squared-distance. So that instead of minimising the-->
+    <!--                function <m>\ell</m>, we can just minimise <m>\ell^2</m>:-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \ell^2 \amp= 10(x^2-2x+5)-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                The resulting algebra is a bit easier and we don't have to hunt for singular points.-->
+    <!--            </p>-->
 
-<!--        <example xml:id="APPglobalMaxMinDist">-->
-<!--            <title>How far from a point to a curve</title>-->
-<!--            <p>-->
-<!--                Find the minimum distance from <m>(2,0)</m> to the curve <m>y^2=x^2+1</m>.-->
-<!--            </p>-->
+    <!--        </example>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                This is very much like the previous question.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>After reading the problem carefully we can draw a picture</p>-->
+    <!--        <example xml:id="APPglobalMaxMinDist">-->
+    <!--            <title>How far from a point to a curve</title>-->
+    <!--            <p>-->
+    <!--                Find the minimum distance from <m>(2,0)</m> to the curve <m>y^2=x^2+1</m>.-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="40%">-->
-<!--                            <image source="images/hyperbolaMaxMin"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>In this problem we do not need units and the variables <m>x,y</m> are supplied. We define-->
-<!--                        the distance to be <m>\ell</m> and it is given by-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (x-2)^2+y^2.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        As noted in the previous problem, we will minimise the squared-distance since that also-->
-<!--                        minimises the distance.-->
-<!--                    </li>-->
-<!--                    <li>Since <m>x,y</m> satisfy <m>y^2=x^2+1</m>, we can write the distance as a function of <m>x</m>:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (x-2)^2 + y^2 = (x-2)^2 + (x^2+1)-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Notice that as <m>x \to \pm \infty</m> the squared-distance <m>\ell^2 \to +\infty</m>.-->
-<!--                    </li>-->
-<!--                    <li>Since the squared-distance is a polynomial it will not have any singular points,-->
-<!--                        only critical points. The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-2) + 2x = 4x-4-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        so the only critical point occurs at <m>x=1</m>.-->
-<!--                    </li>-->
-<!--                    <li>When <m>x=1, y=\pm \sqrt{2}</m> and the distance is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (1-2)^2 + (1+1) = 3 \amp \ell=\sqrt{3}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and thus the minimum distance from the curve to <m>(2,0)</m> is <m>\sqrt{3}</m>.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                This is very much like the previous question.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>After reading the problem carefully we can draw a picture</p>-->
 
-<!--        <example xml:id="APPglobalMaxMinrain">-->
-<!--            <title>Constructing a trough</title>-->
-<!--            <p>-->
-<!--                A water trough is to be constructed from a metal sheet of width <m>45</m> cm-->
-<!--                by bending up one third of the sheet on each side through an angle-->
-<!--                <m>\theta</m>. Which <m>\theta</m> will allow the trough to carry the maximum-->
-<!--                amount of water?-->
-<!--            </p>-->
+    <!--                        <sidebyside width="40%">-->
+    <!--                            <image source="images/hyperbolaMaxMin"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>In this problem we do not need units and the variables <m>x,y</m> are supplied. We define-->
+    <!--                        the distance to be <m>\ell</m> and it is given by-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (x-2)^2+y^2.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        As noted in the previous problem, we will minimise the squared-distance since that also-->
+    <!--                        minimises the distance.-->
+    <!--                    </li>-->
+    <!--                    <li>Since <m>x,y</m> satisfy <m>y^2=x^2+1</m>, we can write the distance as a function of <m>x</m>:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (x-2)^2 + y^2 = (x-2)^2 + (x^2+1)-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Notice that as <m>x \to \pm \infty</m> the squared-distance <m>\ell^2 \to +\infty</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Since the squared-distance is a polynomial it will not have any singular points,-->
+    <!--                        only critical points. The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-2) + 2x = 4x-4-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        so the only critical point occurs at <m>x=1</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>When <m>x=1, y=\pm \sqrt{2}</m> and the distance is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (1-2)^2 + (1+1) = 3 \amp \ell=\sqrt{3}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and thus the minimum distance from the curve to <m>(2,0)</m> is <m>\sqrt{3}</m>.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                Clearly <m>0 \leq \theta \leq \pi</m>, so we are back in the domain-->
-<!--                <fn>Again, no-->
-<!--                    pun intended.-->
-<!--                </fn>-->
-<!--                of Corollary-->
-<!--                <nbsp/>-->
-<!--                <xref ref="cor_find_maxmin"/>.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>After reading the problem carefully we should realise that it is really asking us-->
-<!--                            to maximise the cross-sectional area. A figure really helps.-->
-<!--                        </p>-->
+    <!--        <example xml:id="APPglobalMaxMinrain">-->
+    <!--            <title>Constructing a trough</title>-->
+    <!--            <p>-->
+    <!--                A water trough is to be constructed from a metal sheet of width <m>45</m> cm-->
+    <!--                by bending up one third of the sheet on each side through an angle-->
+    <!--                <m>\theta</m>. Which <m>\theta</m> will allow the trough to carry the maximum-->
+    <!--                amount of water?-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="100%">-->
-<!--                            <image source="images/gutter"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>From this we are led to define the height-->
-<!--                        <m>h</m>-->
-<!--                        <m>cm</m>-->
-<!--                        and cross-sectional area-->
-<!--                        <m>A</m>-->
-<!--                        <m>cm^2</m>. Both are functions of <m>\theta</m>.-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                h \amp= 15 \sin \theta-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        while the area can be computed as the sum of the central <m>15 \times h</m> rectangle, plus-->
-<!--                        two triangles. Each triangle has height <m>h</m> and base <m>15 \cos \theta</m>. Hence-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A \amp= 15h + 2 \cdot \frac{1}{2} \cdot h \cdot 15 \cos \theta-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 15h \left(1 + \cos \theta \right)-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>Since <m>h = 15\sin \theta</m> we can rewrite the area as a function of just <m>\theta</m>:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(\theta) \amp= 225 \sin\theta \left(1 + \cos \theta \right)-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        where <m>0 \leq \theta \leq \pi</m>.-->
-<!--                    </li>-->
-<!--                    <li>Now we use Corollary-->
-<!--                        <nbsp/>-->
-<!--                        <xref ref="cor_find_maxmin"/>. The ends of the interval give-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(0) \amp= 225 \sin 0 (1 + \cos 0) = 0-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                A(\pi) \amp= 225 \sin \pi ( 1+ \cos \pi) = 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A'(\theta) \amp= 225 \cos\theta \cdot (1+\cos\theta) + 225 \sin\theta \cdot(-\sin\theta)-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 225 \left[ \cos \theta + \cos^2\theta - \sin^2\theta \right]-->
-<!--                                \qquad\text {recall }\sin^2\theta = 1 - \cos^2\theta-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 225 \left[ \cos\theta +2\cos^2\theta -1 \right]-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        This is a continuous function, so there are no singular points. However we can still hunt-->
-<!--                        for critical points by solving <m>A'(\theta) = 0</m>. That is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                2\cos^2\theta + \cos \theta -1 \amp= 0 \amp \text{factor carefully}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                (2\cos\theta -1)(\cos \theta+1) \amp= 0-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Hence we must have <m>\cos \theta =-1</m> or <m>\cos\theta = \half</m>. On the domain <m>0\leq-->
-<!--                            \theta-->
-<!--                            \leq \pi</m>, this means <m>\theta = \pi/3</m> or <m>\theta = \pi</m>.-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(\pi) \amp= 0-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                A(\pi/3) \amp= 225 \sin(\pi/3) (1 + \cos(\pi/3))-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp = 225 \cdot \frac{\sqrt{3}}{2} \cdot \left( 1 + \frac{1}{2} \right)-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= 225 \cdot \frac{3\sqrt{3}}{4} \approx 292.28-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>Thus the cross-sectional area is maximised when <m>\theta = \dfrac{\pi}{3}</m>.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                Clearly <m>0 \leq \theta \leq \pi</m>, so we are back in the domain-->
+    <!--                <fn>Again, no-->
+    <!--                    pun intended.-->
+    <!--                </fn>-->
+    <!--                of Corollary-->
+    <!--                <nbsp/>-->
+    <!--                <xref ref="cor_find_maxmin"/>.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>After reading the problem carefully we should realise that it is really asking us-->
+    <!--                            to maximise the cross-sectional area. A figure really helps.-->
+    <!--                        </p>-->
 
-<!--        <example xml:id="APPglobalMaxMinDD">-->
-<!--            <title>Closest and farthest points on a curve to a given point</title>-->
-<!--            <p>-->
-<!--                Find the points on the ellipse <m>\frac{x^2}{4}+y^2=1</m> that are nearest-->
-<!--                to and farthest from the point <m>(1,0)</m>.-->
-<!--            </p>-->
+    <!--                        <sidebyside width="100%">-->
+    <!--                            <image source="images/gutter"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>From this we are led to define the height-->
+    <!--                        <m>h</m>-->
+    <!--                        <m>cm</m>-->
+    <!--                        and cross-sectional area-->
+    <!--                        <m>A</m>-->
+    <!--                        <m>cm^2</m>. Both are functions of <m>\theta</m>.-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                h \amp= 15 \sin \theta-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        while the area can be computed as the sum of the central <m>15 \times h</m> rectangle, plus-->
+    <!--                        two triangles. Each triangle has height <m>h</m> and base <m>15 \cos \theta</m>. Hence-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A \amp= 15h + 2 \cdot \frac{1}{2} \cdot h \cdot 15 \cos \theta-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 15h \left(1 + \cos \theta \right)-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>Since <m>h = 15\sin \theta</m> we can rewrite the area as a function of just <m>\theta</m>:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(\theta) \amp= 225 \sin\theta \left(1 + \cos \theta \right)-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        where <m>0 \leq \theta \leq \pi</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Now we use Corollary-->
+    <!--                        <nbsp/>-->
+    <!--                        <xref ref="cor_find_maxmin"/>. The ends of the interval give-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(0) \amp= 225 \sin 0 (1 + \cos 0) = 0-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                A(\pi) \amp= 225 \sin \pi ( 1+ \cos \pi) = 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A'(\theta) \amp= 225 \cos\theta \cdot (1+\cos\theta) + 225 \sin\theta \cdot(-\sin\theta)-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 225 \left[ \cos \theta + \cos^2\theta - \sin^2\theta \right]-->
+    <!--                                \qquad\text {recall }\sin^2\theta = 1 - \cos^2\theta-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 225 \left[ \cos\theta +2\cos^2\theta -1 \right]-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        This is a continuous function, so there are no singular points. However we can still hunt-->
+    <!--                        for critical points by solving <m>A'(\theta) = 0</m>. That is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                2\cos^2\theta + \cos \theta -1 \amp= 0 \amp \text{factor carefully}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                (2\cos\theta -1)(\cos \theta+1) \amp= 0-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Hence we must have <m>\cos \theta =-1</m> or <m>\cos\theta = \half</m>. On the domain <m>0\leq-->
+    <!--                            \theta-->
+    <!--                            \leq \pi</m>, this means <m>\theta = \pi/3</m> or <m>\theta = \pi</m>.-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(\pi) \amp= 0-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                A(\pi/3) \amp= 225 \sin(\pi/3) (1 + \cos(\pi/3))-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp = 225 \cdot \frac{\sqrt{3}}{2} \cdot \left( 1 + \frac{1}{2} \right)-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= 225 \cdot \frac{3\sqrt{3}}{4} \approx 292.28-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>Thus the cross-sectional area is maximised when <m>\theta = \dfrac{\pi}{3}</m>.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                While this is another distance problem, the possible values of <m>x,y</m> are bounded,-->
-<!--                so we need Corollary-->
-<!--                <nbsp/>-->
-<!--                <xref ref="cor_find_maxmin"/>-->
-<!--                rather than Theorem-->
-<!--                <nbsp/>-->
-<!--                <xref ref="thm_maxMinOnR"/>.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>We start by drawing a picture:</p>-->
+    <!--        <example xml:id="APPglobalMaxMinDD">-->
+    <!--            <title>Closest and farthest points on a curve to a given point</title>-->
+    <!--            <p>-->
+    <!--                Find the points on the ellipse <m>\frac{x^2}{4}+y^2=1</m> that are nearest-->
+    <!--                to and farthest from the point <m>(1,0)</m>.-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="75%">-->
-<!--                            <image source="images/ellipseMaxMin"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>Let <m>\ell</m> be the distance from the point <m>(x,y)</m> on the ellipse to the point-->
-<!--                        <m>(1,0)</m>. As was the case above, we will maximise the squared-distance.-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2 \amp= (x-1)^2 + y^2.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>Since <m>(x,y)</m> lie on the ellipse we have-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \frac{x^2}{4}+y^2=1-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            Note that this also shows that <m>-2 \leq x \leq 2</m> and <m>-1 \leq y \leq 1</m>.-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                While this is another distance problem, the possible values of <m>x,y</m> are bounded,-->
+    <!--                so we need Corollary-->
+    <!--                <nbsp/>-->
+    <!--                <xref ref="cor_find_maxmin"/>-->
+    <!--                rather than Theorem-->
+    <!--                <nbsp/>-->
+    <!--                <xref ref="thm_maxMinOnR"/>.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>We start by drawing a picture:</p>-->
 
-<!--                        <p>Isolating <m>y^2</m> and substituting this into our expression for <m>\ell^2</m> gives-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \ell^2 \amp= (x-1)^2 + \underbrace{1-x^2/4}_{=y^2}.-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>Now we can apply Corollary-->
-<!--                        <nbsp/>-->
-<!--                        <xref ref="cor_find_maxmin"/>. The endpoints of the domain give-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2(-2) \amp= (-2-1)^2 + 1 - (-2)^2/4 = 3^2+1-1 = 9-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \ell^2(2) \amp= (2-1)^2 + 1 - 2^2/4 = 1+1-1 = 1-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-1) - x/2 = \frac{3x}{2} - 2-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Thus there are no singular points, but there is a critical point at <m>x = 4/3</m>. The-->
-<!--                        corresponding squared-distance is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell^2(4/3) \amp= \left( \frac{4}{3}-1\right)^2 +1 - \frac{(4/3)^2}{4}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= (1/3)^2 + 1 - (4/9) = 6/9 = 2/3.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>To summarise (and giving distances and coordinates of points):</p>-->
+    <!--                        <sidebyside width="75%">-->
+    <!--                            <image source="images/ellipseMaxMin"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>Let <m>\ell</m> be the distance from the point <m>(x,y)</m> on the ellipse to the point-->
+    <!--                        <m>(1,0)</m>. As was the case above, we will maximise the squared-distance.-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2 \amp= (x-1)^2 + y^2.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>Since <m>(x,y)</m> lie on the ellipse we have-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \frac{x^2}{4}+y^2=1-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            Note that this also shows that <m>-2 \leq x \leq 2</m> and <m>-1 \leq y \leq 1</m>.-->
+    <!--                        </p>-->
 
-<!--                        <sidebyside>-->
-<!--                            <tabular halign="center" bottom="minor" right="minor" left="minor" top="minor">-->
-<!--                                <row>-->
-<!--                                    <cell>-->
-<!--                                        <m>x</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>(x,y)</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>\ell</m>-->
-<!--                                    </cell>-->
-<!--                                </row>-->
-<!--                                <row>-->
-<!--                                    <cell>-->
-<!--                                        <m>-2</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>(-2,0)</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>3</m>-->
-<!--                                    </cell>-->
-<!--                                </row>-->
-<!--                                <row>-->
-<!--                                    <cell>-->
-<!--                                        <m>\frac{4}{3}</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>\big(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\big)</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>\sqrt{\frac{2}{3}}</m>-->
-<!--                                    </cell>-->
-<!--                                </row>-->
-<!--                                <row>-->
-<!--                                    <cell>-->
-<!--                                        <m>2</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>(2,0)</m>-->
-<!--                                    </cell>-->
-<!--                                    <cell>-->
-<!--                                        <m>1</m>-->
-<!--                                    </cell>-->
-<!--                                </row>-->
-<!--                            </tabular>-->
-<!--                        </sidebyside>-->
+    <!--                        <p>Isolating <m>y^2</m> and substituting this into our expression for <m>\ell^2</m> gives-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \ell^2 \amp= (x-1)^2 + \underbrace{1-x^2/4}_{=y^2}.-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>Now we can apply Corollary-->
+    <!--                        <nbsp/>-->
+    <!--                        <xref ref="cor_find_maxmin"/>. The endpoints of the domain give-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2(-2) \amp= (-2-1)^2 + 1 - (-2)^2/4 = 3^2+1-1 = 9-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2(2) \amp= (2-1)^2 + 1 - 2^2/4 = 1+1-1 = 1-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \dfrac{\dd }{\dd x} \ell^2 \amp= 2(x-1) - x/2 = \frac{3x}{2} - 2-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Thus there are no singular points, but there is a critical point at <m>x = 4/3</m>. The-->
+    <!--                        corresponding squared-distance is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell^2(4/3) \amp= \left( \frac{4}{3}-1\right)^2 +1 - \frac{(4/3)^2}{4}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= (1/3)^2 + 1 - (4/9) = 6/9 = 2/3.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>To summarise (and giving distances and coordinates of points):</p>-->
 
-<!--                        <p>The point of maximum distance is <m>(-2,0)</m>, and the point of minimum distance is-->
-<!--                            <m>\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)</m>.-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
+    <!--                        <sidebyside>-->
+    <!--                            <tabular halign="center" bottom="minor" right="minor" left="minor" top="minor">-->
+    <!--                                <row>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>x</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>(x,y)</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>\ell</m>-->
+    <!--                                    </cell>-->
+    <!--                                </row>-->
+    <!--                                <row>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>-2</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>(-2,0)</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>3</m>-->
+    <!--                                    </cell>-->
+    <!--                                </row>-->
+    <!--                                <row>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>\frac{4}{3}</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>\big(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\big)</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>\sqrt{\frac{2}{3}}</m>-->
+    <!--                                    </cell>-->
+    <!--                                </row>-->
+    <!--                                <row>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>2</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>(2,0)</m>-->
+    <!--                                    </cell>-->
+    <!--                                    <cell>-->
+    <!--                                        <m>1</m>-->
+    <!--                                    </cell>-->
+    <!--                                </row>-->
+    <!--                            </tabular>-->
+    <!--                        </sidebyside>-->
 
-<!--        </example>-->
+    <!--                        <p>The point of maximum distance is <m>(-2,0)</m>, and the point of minimum distance is-->
+    <!--                            <m>\left(\frac{4}{3},\pm\frac{\sqrt{5}}{3}\right)</m>.-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
 
-
-<!--        <example xml:id="APPglobalMaxMinE">-->
-<!--            <title>Largest rectangle inside a triangle</title>-->
-<!--            <p>-->
-<!--                Find the dimensions of the rectangle of largest area that can be inscribed in an-->
-<!--                equilateral triangle of side <m>a</m> if one side of the rectangle lies on the base-->
-<!--                of the triangle.-->
-<!--            </p>-->
-
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                Since the rectangle must sit inside the triangle, its dimensions are-->
-<!--                bounded and we will end up using Corollary-->
-<!--                <nbsp/>-->
-<!--                <xref ref="cor_find_maxmin"/>.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>Carefully draw a picture:</p>-->
-<!--                        <sidebyside widths="40% 55%">-->
-<!--                            <image source="images/inscribedB"/>-->
-<!--                            <image source="images/inscribed"/>-->
-<!--                        </sidebyside>-->
-<!--                        <p>We have drawn (on the left) the triangle in the <m>xy</m>-plane with its base on the-->
-<!--                            <m>x</m>-axis. The base has been drawn running from <m>(-a/2,0)</m> to <m>(a/2,0)</m> so-->
-<!--                            its centre lies at the origin. A little Pythagoras (or a little trigonometry)-->
-<!--                            tells us that the height of the triangle is-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \sqrt{a^2-(a/2)^2} \amp= \frac{\sqrt{3}}{2}\cdot a = a\cdot \sin\frac{\pi}{3}-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            Thus the vertex at the top of the triangle lies at-->
-<!--                            <m>\left(0,\frac{\sqrt{3}}{2}\cdot a\right)</m>.-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>If we construct a rectangle that does not touch the sides of the-->
-<!--                        triangle, then we can increase the dimensions of the rectangle until it touches-->
-<!--                        the triangle and so make its area larger. Thus we can assume that the-->
-<!--                        two top corners of the rectangle touch the triangle as drawn in the-->
-<!--                        right-hand figure above.-->
-<!--                    </li>-->
-<!--                    <li>Now let the rectangle be <m>2x</m> wide and <m>y</m> high. And let <m>A</m> denote its-->
-<!--                        area. Clearly-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A \amp= 2xy.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        where <m>0 \leq x \leq a/2</m> and <m>0\leq y\leq \frac{\sqrt{3}}{2}a</m>.-->
-<!--                    </li>-->
-<!--                    <li>Our construction means that the top-right corner of the rectangle will-->
-<!--                        have coordinates <m>(x,y)</m> and lie on the line joining the top vertex of the-->
-<!--                        triangle at <m>(0,\sqrt{3}a/2)</m> to the bottom-right vertex at <m>(a/2,0)</m>. In order-->
-<!--                        to write the area as a function of <m>x</m> alone, we need the equation for this-->
-<!--                        line since it will tell us how to write <m>y</m> as a function of <m>x</m>. The line has-->
-<!--                        slope-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \text{slope} \amp= \frac{\sqrt{3}a/2 - 0}{0-a/2} = -\sqrt{3}.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and passes through the point <m>(0,\sqrt{3}a/2)</m>, so any point <m>(x,y)</m> on that-->
-<!--                        line satisfies:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                y \amp= -\sqrt{3}x + \frac{\sqrt{3}}{2}a.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>We can now write the area as a function of <m>x</m> alone-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(x) \amp= 2x \left( -\sqrt{3}x + \frac{\sqrt{3}}{2}a \right)-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= \sqrt{3} x(a-2x).-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        with <m>0\leq x \leq a/2</m>.-->
-<!--                    </li>-->
-<!--                    <li>The ends of the domain give:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(0) \amp= 0 \amp A(a/2) \amp= 0.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A'(x) \amp= \sqrt{3} \left( x \cdot (-2) + 1 \cdot (a-2x) \right) = \sqrt{3}-->
-<!--                                (a-4x).-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Since this is a polynomial there are no singular points, but there is a-->
-<!--                        critical point at <m>x=a/4</m>. There-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                A(a/4) \amp= \sqrt{3} \cdot \frac{a}{4} \cdot (a - a/2) = \sqrt{3} \cdot-->
-<!--                                \frac{a^2}{8}.-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                y \amp= -\sqrt{3}\cdot (a/4) + \frac{\sqrt{3}}{2} a = \sqrt{3}\cdot \frac{a}{4}.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>Checking the question again, we see that we are asked for the dimensions-->
-<!--                            rather than the area, so the answer is <m>2x \times y</m>:-->
-<!--                        </p>-->
-
-<!--                        <blockquote>-->
-<!--                            <p>-->
-<!--                                The largest such rectangle has dimensions <m>\frac{a}{2} \times \frac{\sqrt{3}-->
-<!--                                a}{4}</m>.-->
-<!--                            </p>-->
-<!--                        </blockquote>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-
-<!--        </example>-->
-
-<!--        <p>This next one is a good physics example. In it we will derive Snell's-->
-<!--            Law-->
-<!--            <fn>Snell's law is named after the Dutch astronomer Willebrord Snellius-->
-<!--                who derived it in around 1621, though it was first stated accurately in 984 by-->
-<!--                Ibn Sahl.-->
-<!--            </fn>-->
-<!--            from Fermat's principle-->
-<!--            <fn>Named after Pierre de Fermat who-->
-<!--                described it in a letter in 1662. The beginnings of the idea, however, go back-->
-<!--                as far as Hero of Alexandria in around 60CE. Hero is credited with many-->
-<!--                inventions including the first vending machine, and a precursor of the steam-->
-<!--                engine called an aeolipile.-->
-<!--            </fn>-->
-<!--            .-->
-<!--        </p>-->
-
-<!--        <example xml:id="APPglobalMaxMinF">-->
-<!--            <title>Snell's law</title>-->
-<!--            <p>Consider the figure below which shows the trajectory of a ray of light as it-->
-<!--                passes through two different mediums (say air and water).-->
-<!--            </p>-->
-
-<!--            <sidebyside width="50%">-->
-<!--                <image source="images/snell"/>-->
-<!--            </sidebyside>-->
-
-<!--            <p>Let <m>c_a</m> be the speed of light in air and <m>c_w</m> be the speed of-->
-<!--                light in water. Fermat's principle states that a ray of light will always-->
-<!--                travel along a path that minimises the time taken. So if a ray of light travels-->
-<!--                from <m>P</m> (in air) to <m>Q</m> (in water) then it will <q>choose</q> the point <m>O</m> (on-->
-<!--                the interface) so as to minimise the total time taken. Use this idea to show-->
-<!--                Snell's law,-->
-<!--                <md>-->
-<!--                    <mrow>-->
-<!--                        \frac{\sin\theta_i}{\sin\theta_r}\amp=\frac{c_a}{c_w}-->
-<!--                    </mrow>-->
-<!--                </md>-->
-<!--                where <m>\theta_i</m> is the angle of incidence and <m>\theta_r</m> is the angle-->
-<!--                of refraction (as illustrated in the figure above).-->
-<!--            </p>-->
-
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                This problem is a little more abstract than the others we have examined,-->
-<!--                but we can still apply Theorem-->
-<!--                <nbsp/>-->
-<!--                <xref ref="thm_maxMinOnR"/>.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>We are given a figure in the statement of the problem and it contains-->
-<!--                            all the relevant points and angles. However it will simplify things if we-->
-<!--                            decide on a coordinate system. Let's assume that the point <m>O</m> lies on the-->
-<!--                            <m>x</m>-axis, at coordinates <m>(x,0)</m>. The point <m>P</m> then lies above the axis at-->
-<!--                            <m>(X_P,+Y_P)</m>, while <m>Q</m> lies below the axis at <m>(X_Q,-Y_Q)</m>. This is drawn-->
-<!--                            below.-->
-<!--                        </p>-->
-
-<!--                        <sidebyside width="80%">-->
-<!--                            <image source="images/snellB"/>-->
-<!--                        </sidebyside>-->
-<!--                    </li>-->
-<!--                    <li>The statement of Snell's law contains terms <m>\sin \theta_i</m> and <m>\sin-->
-<!--                        \theta_r</m>, so it is a good idea for us to see how to express these in terms of-->
-<!--                        the coordinates we have just introduced:-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \sin \theta_i \amp= \frac{\text{opposite}}{\text{hypotenuse}}-->
-<!--                                = \frac{(x-X_P)}{\sqrt{(X_P-x)^2 + Y_P^2}}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \sin \theta_r \amp= \frac{\text{opposite}}{\text{hypotenuse}}-->
-<!--                                = \frac{(X_Q-x)}{\sqrt{(X_Q-x)^2 + Y_Q^2}}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>Let <m>\ell_P</m> denote the distance <m>PO</m>, and <m>\ell_Q</m> denote the distance-->
-<!--                        <m>OQ</m>. Then we have-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell_P \amp= \sqrt{(X_P-x)^2+Y_P^2}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \ell_Q \amp= \sqrt{(X_Q-x)^2+Y_Q^2}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        If we then denote the total time taken by <m>T</m>, then-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}-->
-<!--                                = \frac{1}{c_a}\sqrt{(X_P-x)^2+Y_P^2} + \frac{1}{c_w}\sqrt{(X_Q-x)^2+Y_Q^2}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        which is written as a function of <m>x</m> since all the other terms are-->
-<!--                        constants.-->
-<!--                    </li>-->
-<!--                    <li>Notice that as <m>x \to +\infty</m> or <m>x\to-\infty</m> the total time <m>T \to-->
-<!--                        \infty-->
-<!--                    </m> and so we can apply Theorem-->
-<!--                        <nbsp/>-->
-<!--                        <xref ref="thm_maxMinOnR"/>. The derivative is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \dfrac{\dd T}{\dd x} \amp=-->
-<!--                                \frac{1}{c_a} \frac{-2(X_P-x)}{2\sqrt{(X_P-x)^2+Y_P^2}} +-->
-<!--                                \frac{1}{c_w} \frac{-2(X_Q-x)}{2\sqrt{(X_Q-x)^2+Y_Q^2}}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Notice that the terms inside the square-roots cannot be zero or negative since-->
-<!--                        they are both sums of squares and <m>Y_P,Y_Q \gt 0</m>. So there are no singular-->
-<!--                        points, but there is a critical point when <m>T'(x) = 0</m>, namely when-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                0 \amp= \frac{1}{c_a} \frac{X_P-x}{\sqrt{(X_P-x)^2+Y_P^2}} +-->
-<!--                                \frac{1}{c_w} \frac{X_Q-x}{\sqrt{(X_Q-x)^2+Y_Q^2}}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp= \frac{-\sin\theta_i}{c_a} + \frac{\sin\theta_r}{c_w}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Rearrange this to get-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \frac{\sin\theta_i}{c_a} \amp= \frac{\sin\theta_r}{c_w}-->
-<!--                            </mrow>-->
-<!--                            <intertext>move sines to one side</intertext>-->
-<!--                            <mrow>-->
-<!--                                \frac{\sin\theta_i}{\sin \theta_r} \amp= \frac{c_a}{c_w}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        which is exactly Snell's law.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--        </example>-->
 
 
-<!--        <example xml:id="APPglobalMaxMinG">-->
-<!--            <title>Finding the best viewing angle</title>-->
-<!--            <p>-->
-<!--                The Statue of Liberty has height <m>46</m>m and stands on a <m>47</m>m-->
-<!--                tall pedestal. How far from the statue should an observer stand-->
-<!--                to maximize the angle subtended by the statue at the observer's eye,-->
-<!--                which is <m>1.5</m>m above the base of the pedestal?-->
-<!--            </p>-->
+    <!--        <example xml:id="APPglobalMaxMinE">-->
+    <!--            <title>Largest rectangle inside a triangle</title>-->
+    <!--            <p>-->
+    <!--                Find the dimensions of the rectangle of largest area that can be inscribed in an-->
+    <!--                equilateral triangle of side <m>a</m> if one side of the rectangle lies on the base-->
+    <!--                of the triangle.-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                Obviously if we stand too close then all the observer sees is the-->
-<!--                pedestal, while if they stand too far then everything is tiny. The best spot-->
-<!--                for taking a photograph is somewhere in between.-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>Draw a careful picture-->
-<!--                            <fn>And make some healthy use of public domain clip art.</fn>-->
-<!--                        </p>-->
-<!--                        <sidebyside width="90%">-->
-<!--                            <image source="images/liberty"/>-->
-<!--                        </sidebyside>-->
-<!--                        <p>and we can put in the relevant lengths and angles.</p>-->
-<!--                    </li>-->
-<!--                    <li>The height of the statue is <m>h = 46</m>m, and the height of the pedestal (above the-->
-<!--                        eye) is <m>p = 47-1.5 = 45.5</m>m. The horizontal distance from the statue to the eye is <m>-->
-<!--                            x</m>.-->
-<!--                        There are two relevant angles. First <m>\theta</m> is the angle subtended by the statue, while-->
-<!--                        <m>\varphi</m>-->
-<!--                        is the angle subtended by the portion of the pedestal above the eye.-->
-<!--                    </li>-->
-<!--                    <li>Some trigonometry gives us-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \tan \varphi \amp= \frac{p}{x}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \tan (\varphi+\theta) \amp= \frac{p+h}{x}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        Thus-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \varphi \amp= \arctan \frac{p}{x}-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \varphi+\theta \amp= \arctan \frac{p+h}{x}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and so-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \theta \amp= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>If we allow the viewer to stand at any point in front of the statue, then <m>0\le x-->
-<!--                            \lt \infty</m>. Further observe that as <m>x \rightarrow \infty</m> or <m>x \rightarrow 0-->
-<!--                        </m> the angle-->
-<!--                            <m>\theta \rightarrow 0</m>, since-->
-<!--                            <me>-->
-<!--                                \lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =-->
-<!--                                \lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0-->
-<!--                            </me>-->
-<!--                            and-->
-<!--                            <me>-->
-<!--                                \lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =-->
-<!--                                \lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}-->
-<!--                            </me>-->
-<!--                            Clearly the largest value of <m>\theta</m> will be strictly positive and so has to be taken-->
-<!--                            for-->
-<!--                            some <m>0 \lt x \lt \infty</m>. (Note the strict inequalities.) This <m>x</m> will be a-->
-<!--                            local maximum as-->
-<!--                            well as a global maximum. As <m>\theta</m> is not singular at any <m>0 \lt x \lt \infty</m>,-->
-<!--                            we need only-->
-<!--                            search for critical points.-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                Since the rectangle must sit inside the triangle, its dimensions are-->
+    <!--                bounded and we will end up using Corollary-->
+    <!--                <nbsp/>-->
+    <!--                <xref ref="cor_find_maxmin"/>.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>Carefully draw a picture:</p>-->
+    <!--                        <sidebyside widths="40% 55%">-->
+    <!--                            <image source="images/inscribedB"/>-->
+    <!--                            <image source="images/inscribed"/>-->
+    <!--                        </sidebyside>-->
+    <!--                        <p>We have drawn (on the left) the triangle in the <m>xy</m>-plane with its base on the-->
+    <!--                            <m>x</m>-axis. The base has been drawn running from <m>(-a/2,0)</m> to <m>(a/2,0)</m> so-->
+    <!--                            its centre lies at the origin. A little Pythagoras (or a little trigonometry)-->
+    <!--                            tells us that the height of the triangle is-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \sqrt{a^2-(a/2)^2} \amp= \frac{\sqrt{3}}{2}\cdot a = a\cdot \sin\frac{\pi}{3}-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            Thus the vertex at the top of the triangle lies at-->
+    <!--                            <m>\left(0,\frac{\sqrt{3}}{2}\cdot a\right)</m>.-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>If we construct a rectangle that does not touch the sides of the-->
+    <!--                        triangle, then we can increase the dimensions of the rectangle until it touches-->
+    <!--                        the triangle and so make its area larger. Thus we can assume that the-->
+    <!--                        two top corners of the rectangle touch the triangle as drawn in the-->
+    <!--                        right-hand figure above.-->
+    <!--                    </li>-->
+    <!--                    <li>Now let the rectangle be <m>2x</m> wide and <m>y</m> high. And let <m>A</m> denote its-->
+    <!--                        area. Clearly-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A \amp= 2xy.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        where <m>0 \leq x \leq a/2</m> and <m>0\leq y\leq \frac{\sqrt{3}}{2}a</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>Our construction means that the top-right corner of the rectangle will-->
+    <!--                        have coordinates <m>(x,y)</m> and lie on the line joining the top vertex of the-->
+    <!--                        triangle at <m>(0,\sqrt{3}a/2)</m> to the bottom-right vertex at <m>(a/2,0)</m>. In order-->
+    <!--                        to write the area as a function of <m>x</m> alone, we need the equation for this-->
+    <!--                        line since it will tell us how to write <m>y</m> as a function of <m>x</m>. The line has-->
+    <!--                        slope-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \text{slope} \amp= \frac{\sqrt{3}a/2 - 0}{0-a/2} = -\sqrt{3}.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and passes through the point <m>(0,\sqrt{3}a/2)</m>, so any point <m>(x,y)</m> on that-->
+    <!--                        line satisfies:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                y \amp= -\sqrt{3}x + \frac{\sqrt{3}}{2}a.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>We can now write the area as a function of <m>x</m> alone-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(x) \amp= 2x \left( -\sqrt{3}x + \frac{\sqrt{3}}{2}a \right)-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= \sqrt{3} x(a-2x).-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        with <m>0\leq x \leq a/2</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>The ends of the domain give:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(0) \amp= 0 \amp A(a/2) \amp= 0.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A'(x) \amp= \sqrt{3} \left( x \cdot (-2) + 1 \cdot (a-2x) \right) = \sqrt{3}-->
+    <!--                                (a-4x).-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Since this is a polynomial there are no singular points, but there is a-->
+    <!--                        critical point at <m>x=a/4</m>. There-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                A(a/4) \amp= \sqrt{3} \cdot \frac{a}{4} \cdot (a - a/2) = \sqrt{3} \cdot-->
+    <!--                                \frac{a^2}{8}.-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                y \amp= -\sqrt{3}\cdot (a/4) + \frac{\sqrt{3}}{2} a = \sqrt{3}\cdot \frac{a}{4}.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>Checking the question again, we see that we are asked for the dimensions-->
+    <!--                            rather than the area, so the answer is <m>2x \times y</m>:-->
+    <!--                        </p>-->
 
-<!--                        <p>A careful application of the chain rule shows that-->
-<!--                            the derivative is-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \dfrac{\dd \theta}{\dd x}-->
-<!--                                    \amp=-->
-<!--                                    \frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) - -->
-<!--                                    \frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    \amp= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            So a critical point occurs when-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \frac{(p+h)}{x^2+(p+h)^2} \amp= \frac{p}{x^2+p^2} \amp \text{cross multiply}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    (p+h)(x^2+p^2) \amp= p(x^2+(p+h)^2) \amp \text{collect $x$ terms}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    x^2 (p+h-p) \amp= p(p+h)^2 - p^2 (p+h) \amp \text{clean up}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    h x^2 \amp= p(p+h)(p+h-p) = ph(p+h)-->
-<!--                                </mrow>-->
-<!--                                <mrow>\amp\hskip1in \text{cancel common factors}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    x^2 \amp= p(p+h)-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>Thus the best place to stand approximately <m>64.9</m>m in front or behind the statue.-->
-<!--                        At that point <m>\theta \approx 0.348</m> radians or <m>19.9^\circ</m>.-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
-<!--        </example>-->
+    <!--                        <blockquote>-->
+    <!--                            <p>-->
+    <!--                                The largest such rectangle has dimensions <m>\frac{a}{2} \times \frac{\sqrt{3}-->
+    <!--                                a}{4}</m>.-->
+    <!--                            </p>-->
+    <!--                        </blockquote>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+
+    <!--        </example>-->
+
+    <!--        <p>This next one is a good physics example. In it we will derive Snell's-->
+    <!--            Law-->
+    <!--            <fn>Snell's law is named after the Dutch astronomer Willebrord Snellius-->
+    <!--                who derived it in around 1621, though it was first stated accurately in 984 by-->
+    <!--                Ibn Sahl.-->
+    <!--            </fn>-->
+    <!--            from Fermat's principle-->
+    <!--            <fn>Named after Pierre de Fermat who-->
+    <!--                described it in a letter in 1662. The beginnings of the idea, however, go back-->
+    <!--                as far as Hero of Alexandria in around 60CE. Hero is credited with many-->
+    <!--                inventions including the first vending machine, and a precursor of the steam-->
+    <!--                engine called an aeolipile.-->
+    <!--            </fn>-->
+    <!--            .-->
+    <!--        </p>-->
+
+    <!--        <example xml:id="APPglobalMaxMinF">-->
+    <!--            <title>Snell's law</title>-->
+    <!--            <p>Consider the figure below which shows the trajectory of a ray of light as it-->
+    <!--                passes through two different mediums (say air and water).-->
+    <!--            </p>-->
+
+    <!--            <sidebyside width="50%">-->
+    <!--                <image source="images/snell"/>-->
+    <!--            </sidebyside>-->
+
+    <!--            <p>Let <m>c_a</m> be the speed of light in air and <m>c_w</m> be the speed of-->
+    <!--                light in water. Fermat's principle states that a ray of light will always-->
+    <!--                travel along a path that minimises the time taken. So if a ray of light travels-->
+    <!--                from <m>P</m> (in air) to <m>Q</m> (in water) then it will <q>choose</q> the point <m>O</m> (on-->
+    <!--                the interface) so as to minimise the total time taken. Use this idea to show-->
+    <!--                Snell's law,-->
+    <!--                <md>-->
+    <!--                    <mrow>-->
+    <!--                        \frac{\sin\theta_i}{\sin\theta_r}\amp=\frac{c_a}{c_w}-->
+    <!--                    </mrow>-->
+    <!--                </md>-->
+    <!--                where <m>\theta_i</m> is the angle of incidence and <m>\theta_r</m> is the angle-->
+    <!--                of refraction (as illustrated in the figure above).-->
+    <!--            </p>-->
+
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                This problem is a little more abstract than the others we have examined,-->
+    <!--                but we can still apply Theorem-->
+    <!--                <nbsp/>-->
+    <!--                <xref ref="thm_maxMinOnR"/>.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>We are given a figure in the statement of the problem and it contains-->
+    <!--                            all the relevant points and angles. However it will simplify things if we-->
+    <!--                            decide on a coordinate system. Let's assume that the point <m>O</m> lies on the-->
+    <!--                            <m>x</m>-axis, at coordinates <m>(x,0)</m>. The point <m>P</m> then lies above the axis at-->
+    <!--                            <m>(X_P,+Y_P)</m>, while <m>Q</m> lies below the axis at <m>(X_Q,-Y_Q)</m>. This is drawn-->
+    <!--                            below.-->
+    <!--                        </p>-->
+
+    <!--                        <sidebyside width="80%">-->
+    <!--                            <image source="images/snellB"/>-->
+    <!--                        </sidebyside>-->
+    <!--                    </li>-->
+    <!--                    <li>The statement of Snell's law contains terms <m>\sin \theta_i</m> and <m>\sin-->
+    <!--                        \theta_r</m>, so it is a good idea for us to see how to express these in terms of-->
+    <!--                        the coordinates we have just introduced:-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \sin \theta_i \amp= \frac{\text{opposite}}{\text{hypotenuse}}-->
+    <!--                                = \frac{(x-X_P)}{\sqrt{(X_P-x)^2 + Y_P^2}}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \sin \theta_r \amp= \frac{\text{opposite}}{\text{hypotenuse}}-->
+    <!--                                = \frac{(X_Q-x)}{\sqrt{(X_Q-x)^2 + Y_Q^2}}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>Let <m>\ell_P</m> denote the distance <m>PO</m>, and <m>\ell_Q</m> denote the distance-->
+    <!--                        <m>OQ</m>. Then we have-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell_P \amp= \sqrt{(X_P-x)^2+Y_P^2}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \ell_Q \amp= \sqrt{(X_Q-x)^2+Y_Q^2}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        If we then denote the total time taken by <m>T</m>, then-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                T \amp= \frac{\ell_P}{c_a} + \frac{\ell_Q}{c_w}-->
+    <!--                                = \frac{1}{c_a}\sqrt{(X_P-x)^2+Y_P^2} + \frac{1}{c_w}\sqrt{(X_Q-x)^2+Y_Q^2}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        which is written as a function of <m>x</m> since all the other terms are-->
+    <!--                        constants.-->
+    <!--                    </li>-->
+    <!--                    <li>Notice that as <m>x \to +\infty</m> or <m>x\to-\infty</m> the total time <m>T \to-->
+    <!--                        \infty-->
+    <!--                    </m> and so we can apply Theorem-->
+    <!--                        <nbsp/>-->
+    <!--                        <xref ref="thm_maxMinOnR"/>. The derivative is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \dfrac{\dd T}{\dd x} \amp=-->
+    <!--                                \frac{1}{c_a} \frac{-2(X_P-x)}{2\sqrt{(X_P-x)^2+Y_P^2}} +-->
+    <!--                                \frac{1}{c_w} \frac{-2(X_Q-x)}{2\sqrt{(X_Q-x)^2+Y_Q^2}}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Notice that the terms inside the square-roots cannot be zero or negative since-->
+    <!--                        they are both sums of squares and <m>Y_P,Y_Q \gt 0</m>. So there are no singular-->
+    <!--                        points, but there is a critical point when <m>T'(x) = 0</m>, namely when-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                0 \amp= \frac{1}{c_a} \frac{X_P-x}{\sqrt{(X_P-x)^2+Y_P^2}} +-->
+    <!--                                \frac{1}{c_w} \frac{X_Q-x}{\sqrt{(X_Q-x)^2+Y_Q^2}}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp= \frac{-\sin\theta_i}{c_a} + \frac{\sin\theta_r}{c_w}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Rearrange this to get-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \frac{\sin\theta_i}{c_a} \amp= \frac{\sin\theta_r}{c_w}-->
+    <!--                            </mrow>-->
+    <!--                            <intertext>move sines to one side</intertext>-->
+    <!--                            <mrow>-->
+    <!--                                \frac{\sin\theta_i}{\sin \theta_r} \amp= \frac{c_a}{c_w}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        which is exactly Snell's law.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
 
-<!--        <example xml:id="APPglobalMaxMinJ">-->
-<!--            <title>Moving objects around corners</title>-->
-<!--            <p>-->
-<!--                Find the length of the longest rod that can be carried horizontally (no-->
-<!--                tilting allowed) from a corridor <m>3</m>m wide into a corridor <m>2</m>m wide.-->
-<!--                The two corridors are perpendicular to each other.-->
-<!--            </p>-->
+    <!--        <example xml:id="APPglobalMaxMinG">-->
+    <!--            <title>Finding the best viewing angle</title>-->
+    <!--            <p>-->
+    <!--                The Statue of Liberty has height <m>46</m>m and stands on a <m>47</m>m-->
+    <!--                tall pedestal. How far from the statue should an observer stand-->
+    <!--                to maximize the angle subtended by the statue at the observer's eye,-->
+    <!--                which is <m>1.5</m>m above the base of the pedestal?-->
+    <!--            </p>-->
 
-<!--            <p>-->
-<!--                <alert>Solution</alert>-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <p>Suppose that we are carrying the rod around the corner, then if the rod is as long-->
-<!--                            as possible it must touch the corner and the outside walls of both corridors. A-->
-<!--                            picture of this is show below.-->
-<!--                        </p>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                Obviously if we stand too close then all the observer sees is the-->
+    <!--                pedestal, while if they stand too far then everything is tiny. The best spot-->
+    <!--                for taking a photograph is somewhere in between.-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>Draw a careful picture-->
+    <!--                            <fn>And make some healthy use of public domain clip art.</fn>-->
+    <!--                        </p>-->
+    <!--                        <sidebyside width="90%">-->
+    <!--                            <image source="images/liberty"/>-->
+    <!--                        </sidebyside>-->
+    <!--                        <p>and we can put in the relevant lengths and angles.</p>-->
+    <!--                    </li>-->
+    <!--                    <li>The height of the statue is <m>h = 46</m>m, and the height of the pedestal (above the-->
+    <!--                        eye) is <m>p = 47-1.5 = 45.5</m>m. The horizontal distance from the statue to the eye is <m>-->
+    <!--                            x</m>.-->
+    <!--                        There are two relevant angles. First <m>\theta</m> is the angle subtended by the statue, while-->
+    <!--                        <m>\varphi</m>-->
+    <!--                        is the angle subtended by the portion of the pedestal above the eye.-->
+    <!--                    </li>-->
+    <!--                    <li>Some trigonometry gives us-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \tan \varphi \amp= \frac{p}{x}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \tan (\varphi+\theta) \amp= \frac{p+h}{x}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        Thus-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \varphi \amp= \arctan \frac{p}{x}-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \varphi+\theta \amp= \arctan \frac{p+h}{x}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and so-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \theta \amp= \arctan \frac{p+h}{x} - \arctan\frac{p}{x}.-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>If we allow the viewer to stand at any point in front of the statue, then <m>0\le x-->
+    <!--                            \lt \infty</m>. Further observe that as <m>x \rightarrow \infty</m> or <m>x \rightarrow 0-->
+    <!--                        </m> the angle-->
+    <!--                            <m>\theta \rightarrow 0</m>, since-->
+    <!--                            <me>-->
+    <!--                                \lim_{x\rightarrow\infty} \arctan \frac{p+h}{x} =-->
+    <!--                                \lim_{x\rightarrow\infty} \arctan \frac{p}{x} = 0-->
+    <!--                            </me>-->
+    <!--                            and-->
+    <!--                            <me>-->
+    <!--                                \lim_{x\rightarrow 0^+} \arctan \frac{p+h}{x} =-->
+    <!--                                \lim_{x\rightarrow 0^+} \arctan \frac{p}{x} = \frac{\pi}{2}-->
+    <!--                            </me>-->
+    <!--                            Clearly the largest value of <m>\theta</m> will be strictly positive and so has to be taken-->
+    <!--                            for-->
+    <!--                            some <m>0 \lt x \lt \infty</m>. (Note the strict inequalities.) This <m>x</m> will be a-->
+    <!--                            local maximum as-->
+    <!--                            well as a global maximum. As <m>\theta</m> is not singular at any <m>0 \lt x \lt \infty</m>,-->
+    <!--                            we need only-->
+    <!--                            search for critical points.-->
+    <!--                        </p>-->
 
-<!--                        <sidebyside width="100%">-->
-<!--                            <image source="images/corridor"/>-->
-<!--                        </sidebyside>-->
+    <!--                        <p>A careful application of the chain rule shows that-->
+    <!--                            the derivative is-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \dfrac{\dd \theta}{\dd x}-->
+    <!--                                    \amp=-->
+    <!--                                    \frac{1}{1+(\frac{p+h}{x})^2}\cdot \left(\frac{-(p+h)}{x^2}\right) - -->
+    <!--                                    \frac{1}{1+(\frac{p}{x})^2}\cdot \left(\frac{-p}{x^2}\right)-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    \amp= \frac{-(p+h)}{x^2+(p+h)^2} + \frac{p}{x^2+p^2}-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            So a critical point occurs when-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \frac{(p+h)}{x^2+(p+h)^2} \amp= \frac{p}{x^2+p^2} \amp \text{cross multiply}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    (p+h)(x^2+p^2) \amp= p(x^2+(p+h)^2) \amp \text{collect $x$ terms}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    x^2 (p+h-p) \amp= p(p+h)^2 - p^2 (p+h) \amp \text{clean up}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    h x^2 \amp= p(p+h)(p+h-p) = ph(p+h)-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>\amp\hskip1in \text{cancel common factors}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    x^2 \amp= p(p+h)-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    x \amp= \pm\sqrt{p(p+h)} \approx \pm 64.9m-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>Thus the best place to stand approximately <m>64.9</m>m in front or behind the statue.-->
+    <!--                        At that point <m>\theta \approx 0.348</m> radians or <m>19.9^\circ</m>.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+    <!--        </example>-->
 
-<!--                        <p>You can see that this gives rise to two similar triangles, one inside each corridor. Also-->
-<!--                            the maximum length of the rod changes with the angle it makes with the walls of the-->
-<!--                            corridor.-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>Suppose that the angle between the rod and the inner wall of the <m>3</m>m-->
-<!--                        corridor is <m>\theta</m>, as illustrated in the figure above. At the same time it will make an-->
-<!--                        angle of <m>\frac{\pi}{2}-\theta</m> with the outer wall of the 2m corridor. Denote by-->
-<!--                        <m>\ell_1(\theta)</m>-->
-<!--                        the length of the part of the rod forming the hypotenuse of the upper-->
-<!--                        triangle in the figure above. Similarly, denote by <m>\ell_2(\theta)</m> the length of the part-->
-<!--                        of the rod forming the hypotenuse of the lower triangle in the figure above. Then-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell_1(\theta) = \frac{3}{\sin\theta}\qquad-->
-<!--                                \ell_2(\theta) = \frac{2}{\cos\theta}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        and the total length is-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell(\theta) = \ell_1(\theta) +\ell_2(\theta)-->
-<!--                                = \frac{3}{\sin\theta}+\frac{2}{\cos\theta}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                        where <m>0 \leq \theta \leq \frac{\pi}{2}</m>.-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>The length of the longest rod we can move through the corridor in this way is the-->
-<!--                            minimum of <m>\ell(\theta)</m>. Notice that <m>\ell(\theta)</m> is not defined at <m>\theta-->
-<!--                                = 0,-->
-<!--                                \frac{\pi}{2}</m>. Indeed we find that as <m>\theta \rightarrow 0^+</m> or <m>-->
-<!--                                \theta\rightarrow-->
-<!--                                \frac{\pi}{2}^-</m>, the length <m>\ell\rightarrow +\infty</m>. (You should be able to-->
-<!--                            picture-->
-<!--                            what happens to our rod in those two limits). Clearly the minimum allowed-->
-<!--                            <m>\ell(\theta)</m>-->
-<!--                            is going to be finite and will be achieved for some <m>0 \lt \theta \lt \frac{\pi}{2}</m> (note-->
-<!--                            the-->
-<!--                            strict inequalities) and so will be a local minimum as well as a global minimum. So we-->
-<!--                            only need to find zeroes of <m>\ell'(\theta)</m>.-->
-<!--                        </p>-->
 
-<!--                        <p>Differentiating <m>\ell</m> gives-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \dfrac{\dd \ell}{\dd \theta} \amp= -\frac{3 \cos\theta}{\sin^2\theta} +-->
-<!--                                    \frac{2\sin\theta}{\cos^2\theta}-->
-<!--                                    = \frac{-3\cos^3\theta +2 \sin^3\theta}{\sin^2\theta-->
-<!--                                    \cos^2\theta}.-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            This does not exist at <m>\theta = 0, \frac{\pi}{2}</m> (which we have already-->
-<!--                            analysed) but does exist at every <m>0 \lt \theta \lt \frac{\pi}{2}</m> and is equal to zero-->
-<!--                            when the-->
-<!--                            numerator is zero. Namely when-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    2\sin^3\theta \amp= 3 \cos^3 \theta \amp \text{divide by $\cos^3 \theta$}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    2 \tan^3\theta \amp= 3-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    \tan\theta \amp= \sqrt[3]{\frac{3}{2}}-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <p>From this we can recover <m>sin\theta</m> and  <m>cos\theta</m>, without having to compute <m>-->
-<!--                            \theta-->
-<!--                        </m> itself. We can, for example, construct a right-angle triangle with adjacent length-->
-<!--                            <m>\sqrt[3]{2}</m>-->
-<!--                            and opposite length <m>\sqrt[3]{3}</m> (so that <m>\tan\theta=\sqrt[3]{3/2}</m>):-->
-<!--                        </p>-->
+    <!--        <example xml:id="APPglobalMaxMinJ">-->
+    <!--            <title>Moving objects around corners</title>-->
+    <!--            <p>-->
+    <!--                Find the length of the longest rod that can be carried horizontally (no-->
+    <!--                tilting allowed) from a corridor <m>3</m>m wide into a corridor <m>2</m>m wide.-->
+    <!--                The two corridors are perpendicular to each other.-->
+    <!--            </p>-->
 
-<!--                        <sidebyside width="33%">-->
-<!--                            <image source="images/triangleCor"/>-->
-<!--                        </sidebyside>-->
+    <!--            <p>-->
+    <!--                <alert>Solution</alert>-->
+    <!--                <ul>-->
+    <!--                    <li>-->
+    <!--                        <p>Suppose that we are carrying the rod around the corner, then if the rod is as long-->
+    <!--                            as possible it must touch the corner and the outside walls of both corridors. A-->
+    <!--                            picture of this is show below.-->
+    <!--                        </p>-->
 
-<!--                        <p>It has hypotenuse <m>\sqrt{ 3^{2/3} + 2^{2/3}}</m>, and so-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    \sin \theta \amp= \frac{3^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}-->
-<!--                                </mrow>-->
-<!--                                <mrow>-->
-<!--                                    \cos \theta \amp= \frac{2^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            Alternatively could use the identities:-->
-<!--                            <md>-->
-<!--                                <mrow>-->
-<!--                                    1 + \tan^2\theta \amp= \sec^2\theta \amp 1+\cot^2\theta \amp= \csc^2\theta-->
-<!--                                </mrow>-->
-<!--                            </md>-->
-<!--                            to obtain expressions for <m>1/\cos\theta</m> and <m>1/\sin\theta</m>.-->
-<!--                        </p>-->
-<!--                    </li>-->
-<!--                    <li>Using the above expressions for <m>\sin\theta, \cos\theta</m> we find the minimum of-->
-<!--                        <m>\ell</m>-->
-<!--                        (which is the longest rod that we can move):-->
-<!--                        <md>-->
-<!--                            <mrow>-->
-<!--                                \ell \amp= \frac{3}{\sin\theta} + \frac{2}{\cos\theta}-->
-<!--                                =\frac{3}{ \frac{\root 3\of 3}-->
-<!--                                {\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }-->
-<!--                                +\frac{2}{ \frac{\root 3\of 2}{\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp =\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}-->
-<!--                                \big[3^{\frac{2}{3}}+2^{\frac{2}{3}}\big]-->
-<!--                            </mrow>-->
-<!--                            <mrow>-->
-<!--                                \amp ={\big[2^{\frac{2}{3}}+3^{\frac{2}{3}}\big]}^{\frac{3}{2}}-->
-<!--                                \approx 7.02\text{m}-->
-<!--                            </mrow>-->
-<!--                        </md>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </p>-->
+    <!--                        <sidebyside width="100%">-->
+    <!--                            <image source="images/corridor"/>-->
+    <!--                        </sidebyside>-->
 
-<!--        </example>-->
+    <!--                        <p>You can see that this gives rise to two similar triangles, one inside each corridor. Also-->
+    <!--                            the maximum length of the rod changes with the angle it makes with the walls of the-->
+    <!--                            corridor.-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>Suppose that the angle between the rod and the inner wall of the <m>3</m>m-->
+    <!--                        corridor is <m>\theta</m>, as illustrated in the figure above. At the same time it will make an-->
+    <!--                        angle of <m>\frac{\pi}{2}-\theta</m> with the outer wall of the 2m corridor. Denote by-->
+    <!--                        <m>\ell_1(\theta)</m>-->
+    <!--                        the length of the part of the rod forming the hypotenuse of the upper-->
+    <!--                        triangle in the figure above. Similarly, denote by <m>\ell_2(\theta)</m> the length of the part-->
+    <!--                        of the rod forming the hypotenuse of the lower triangle in the figure above. Then-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell_1(\theta) = \frac{3}{\sin\theta}\qquad-->
+    <!--                                \ell_2(\theta) = \frac{2}{\cos\theta}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        and the total length is-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell(\theta) = \ell_1(\theta) +\ell_2(\theta)-->
+    <!--                                = \frac{3}{\sin\theta}+\frac{2}{\cos\theta}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                        where <m>0 \leq \theta \leq \frac{\pi}{2}</m>.-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>The length of the longest rod we can move through the corridor in this way is the-->
+    <!--                            minimum of <m>\ell(\theta)</m>. Notice that <m>\ell(\theta)</m> is not defined at <m>\theta-->
+    <!--                                = 0,-->
+    <!--                                \frac{\pi}{2}</m>. Indeed we find that as <m>\theta \rightarrow 0^+</m> or <m>-->
+    <!--                                \theta\rightarrow-->
+    <!--                                \frac{\pi}{2}^-</m>, the length <m>\ell\rightarrow +\infty</m>. (You should be able to-->
+    <!--                            picture-->
+    <!--                            what happens to our rod in those two limits). Clearly the minimum allowed-->
+    <!--                            <m>\ell(\theta)</m>-->
+    <!--                            is going to be finite and will be achieved for some <m>0 \lt \theta \lt \frac{\pi}{2}</m> (note-->
+    <!--                            the-->
+    <!--                            strict inequalities) and so will be a local minimum as well as a global minimum. So we-->
+    <!--                            only need to find zeroes of <m>\ell'(\theta)</m>.-->
+    <!--                        </p>-->
 
-<!--    </subsection>-->
+    <!--                        <p>Differentiating <m>\ell</m> gives-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \dfrac{\dd \ell}{\dd \theta} \amp= -\frac{3 \cos\theta}{\sin^2\theta} +-->
+    <!--                                    \frac{2\sin\theta}{\cos^2\theta}-->
+    <!--                                    = \frac{-3\cos^3\theta +2 \sin^3\theta}{\sin^2\theta-->
+    <!--                                    \cos^2\theta}.-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            This does not exist at <m>\theta = 0, \frac{\pi}{2}</m> (which we have already-->
+    <!--                            analysed) but does exist at every <m>0 \lt \theta \lt \frac{\pi}{2}</m> and is equal to zero-->
+    <!--                            when the-->
+    <!--                            numerator is zero. Namely when-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    2\sin^3\theta \amp= 3 \cos^3 \theta \amp \text{divide by $\cos^3 \theta$}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    2 \tan^3\theta \amp= 3-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    \tan\theta \amp= \sqrt[3]{\frac{3}{2}}-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>-->
+    <!--                        <p>From this we can recover <m>sin\theta</m> and  <m>cos\theta</m>, without having to compute <m>-->
+    <!--                            \theta-->
+    <!--                        </m> itself. We can, for example, construct a right-angle triangle with adjacent length-->
+    <!--                            <m>\sqrt[3]{2}</m>-->
+    <!--                            and opposite length <m>\sqrt[3]{3}</m> (so that <m>\tan\theta=\sqrt[3]{3/2}</m>):-->
+    <!--                        </p>-->
 
+    <!--                        <sidebyside width="33%">-->
+    <!--                            <image source="images/triangleCor"/>-->
+    <!--                        </sidebyside>-->
+
+    <!--                        <p>It has hypotenuse <m>\sqrt{ 3^{2/3} + 2^{2/3}}</m>, and so-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    \sin \theta \amp= \frac{3^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}-->
+    <!--                                </mrow>-->
+    <!--                                <mrow>-->
+    <!--                                    \cos \theta \amp= \frac{2^{1/3}}{\sqrt{3^{2/3}+2^{2/3}}}-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            Alternatively could use the identities:-->
+    <!--                            <md>-->
+    <!--                                <mrow>-->
+    <!--                                    1 + \tan^2\theta \amp= \sec^2\theta \amp 1+\cot^2\theta \amp= \csc^2\theta-->
+    <!--                                </mrow>-->
+    <!--                            </md>-->
+    <!--                            to obtain expressions for <m>1/\cos\theta</m> and <m>1/\sin\theta</m>.-->
+    <!--                        </p>-->
+    <!--                    </li>-->
+    <!--                    <li>Using the above expressions for <m>\sin\theta, \cos\theta</m> we find the minimum of-->
+    <!--                        <m>\ell</m>-->
+    <!--                        (which is the longest rod that we can move):-->
+    <!--                        <md>-->
+    <!--                            <mrow>-->
+    <!--                                \ell \amp= \frac{3}{\sin\theta} + \frac{2}{\cos\theta}-->
+    <!--                                =\frac{3}{ \frac{\root 3\of 3}-->
+    <!--                                {\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }-->
+    <!--                                +\frac{2}{ \frac{\root 3\of 2}{\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}} }-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp =\sqrt{2^{\frac{2}{3}}+3^{\frac{2}{3}}}-->
+    <!--                                \big[3^{\frac{2}{3}}+2^{\frac{2}{3}}\big]-->
+    <!--                            </mrow>-->
+    <!--                            <mrow>-->
+    <!--                                \amp ={\big[2^{\frac{2}{3}}+3^{\frac{2}{3}}\big]}^{\frac{3}{2}}-->
+    <!--                                \approx 7.02\text{m}-->
+    <!--                            </mrow>-->
+    <!--                        </md>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </p>-->
+
+    <!--        </example>-->
+
+    <!--    </subsection>-->
+
+
+    <subsection xml:id="sub-videos-global">
+        <title>
+            Sugestão de vídeos
+        </title>
+
+        <ul>
+            <li>
+                <p>
+                    <url href="https://youtu.be/oE3SYza5j5E" visual="youtu.be/oE3SYza5j5E">Encontrando Máximo e
+                        Mínimos Globais (Extremos) de <m>f(x)=8\ln{x}-x^2</m> em <m>[1, 4]</m>.
+                    </url>
+                </p>
+
+            </li>
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/dP6GxjZkA9g" visual="youtu.be/dP6GxjZkA9g">Encontrando Máximo e Mínimo Globais (Extremos)
+                        de <m>g(x)=x^2\ln{x}</m> no seu domínio.
+                    </url>
+                </p>
+
+            </li>
+
+
+
+            <li>
+                <p>
+                    <url href="https://youtu.be/dHIBxAo5hF8" visual="youtu.be/dHIBxAo5hF8">Encontrados máximos e mínimos
+                        locais de
+                        <m>g(x)=x^4-x^5</m>.
+                    </url>
+                </p>
+
+            </li>
+
+        </ul>
+    </subsection>
 
     <exercises xml:id="exercises-max-min">
         <exercise>
-                    <webwork source="pretext-otimizacao/problem1.pg"/>
+            <webwork source="pretext-otimizacao/problem1.pg"/>
         </exercise>
 
         <exercise>
-                    <webwork source="pretext-otimizacao/problem2.pg"/>
+            <webwork source="pretext-otimizacao/problem2.pg"/>
         </exercise>
 
         <exercise>
-                    <webwork source="pretext-otimizacao/problem3.pg"/>
+            <webwork source="pretext-otimizacao/problem3.pg"/>
         </exercise>
 
         <exercise>
-                    <webwork source="pretext-otimizacao/problem4.pg"/>
+            <webwork source="pretext-otimizacao/problem4.pg"/>
         </exercise>
         <exercise>
-                    <webwork source="pretext-otimizacao/problem5.pg"/>
+            <webwork source="pretext-otimizacao/problem5.pg"/>
         </exercise>
-<!--        <exercise>-->
-<!--                    <webwork source="pretext-otimizacao/problem6.pg"/>-->
-<!--        </exercise>-->
+        <!--        <exercise>-->
+        <!--                    <webwork source="pretext-otimizacao/problem6.pg"/>-->
+        <!--        </exercise>-->
     </exercises>
 
 </section>
