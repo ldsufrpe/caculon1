@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-21T13:21:24-03:00       *-->
+<!--*       on 2022-05-10T11:25:43-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,97 +16,46 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.6.1</span><span class="period">.</span>
+<span class="type">Solução</span><span class="space"> </span><span class="codenumber">1.3.2.1</span><span class="period">.</span>
 </h4>
-<p>Se o tanque fosse vertical tudo seria muito mais fácil. Infelizmente o tanque está de lado, então vamos ter que trabalhar um pouco mais para estabelecer a relação entre a profundidade e o volume. Observe também que não recebemos unidades para este problema — então não precisamos declarar as unidades das nossas variáveis.</p>
-<p><p>A figura está uma vista final do tanque; a parte sombreada do círculo é preenchida com combustível.</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel2.svg" role="img" class="contained"></div></div></div> Vamos denotar por <span class="process-math">\(V(t)\)</span> o volume de combustível no tanque no momento <span class="process-math">\(t\)</span> e por <span class="process-math">\(h(t)\)</span> o nível de combustível no momento <span class="process-math">\(t\text{.}\)</span> Sabemos que  <span class="process-math">\(V'(t)=q\)</span>e precisamos determinar <span class="process-math">\(h'(t)\text{.}\)</span> Embora seja possível fazer isso encontrando uma fórmula relacionando <span class="process-math">\(V(t)\)</span> e <span class="process-math">\(h(t)\text{,}\)</span> acaba sendo um pouco mais fácil encontrar uma fórmula primeiro relacionando <span class="process-math">\(V\)</span> e o ângulo <span class="process-math">\(\theta\)</span> mostrado na visualização final. Podemos então traduzir isso de volta em uma fórmula em termos de <span class="process-math">\(h\)</span> usando a relação</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align}
-h(t) \amp= r - r\cos \theta(t).\tag{1.2}
-\end{align}
+<p>Sejam <span class="process-math">\(w\)</span> e <span class="process-math">\(h\)</span> denotar a largura da base e a altura do recipiente, respectivamente.</p>
+<p>Como o comprimento da base é duas vezes a largura, o volume do recipiente é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+V= (2w)(w)h =2 w^2 h =  14
+\end{equation*}
 </div>
-<p class="continuation">Uma vez que conhecemos <span class="process-math">\(\theta'(t)\text{,}\)</span> podemos obter facilmente <span class="process-math">\(h'(t)\)</span> derivando a Equação <a href="" class="xref" data-knowl="./knowl/eq-2.html" title="Equação 1.2">(1.2)</a>. Para facilitar, nos calculos a seguir vamos descartar o “<span class="process-math">\((t)\)</span>” nas variáveis <span class="process-math">\(V\)</span>m&gt;,<span class="process-math">\(h\)</span> e <span class="process-math">\(\theta\text{.}\)</span> O leitor nunca deve esquecer que essas três quantidades são realmente funções do tempo, enquanto <span class="process-math">\(r\)</span> e <span class="process-math">\(L\)</span> são constantes que não dependem do tempo. <p>O volume de combustível é <span class="process-math">\(L\)</span> vezes a área da seção transversal–preenchida pelo combustível. Ou seja,</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:0.5%;margin-right:0.5%;">
-<div class="sbspanel middle" style="width:25.2525252525253%;"><p></p></div>
-<div class="sbspanel middle" style="width:5.05050505050505%;"><p><span class="process-math">\(V =\)</span></p></div>
-<div class="sbspanel middle" style="width:20.2020202020202%;"><p><span class="process-math">\(L \times\)</span> Área de</p></div>
-<div class="sbspanel middle" style="width:20.2020202020202%;"><img src="images/fuel3.svg" role="img" class="contained"></div>
-<div class="sbspanel middle" style="width:25.2525252525253%;"><p></p></div>
-</div></div> <p>Embora não tenhamos uma fórmula fixa para a área de uma corda de um círculo como esta, é fácil expressar a área da corda em termos de duas áreas que podemos calcular.</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
-<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-39"></p></div>
-<div class="sbspanel middle" style="width:5.006257822277847%;"><p id="p-40"><span class="process-math">\(V\)</span></p></div>
-<div class="sbspanel middle" style="width:22.0275344180225%;"><p id="p-41"><span class="process-math">\(= L\times\text{Área de}\)</span></p></div>
-<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel3.svg" role="img" class="contained"></div>
-<div class="sbspanel middle" style="width:18.0225281602002%;"><p id="p-42"></p></div>
-<div class="sbspanel middle" style="width:20.0250312891114%;"><p id="p-43"></p></div>
-<div class="sbspanel middle" style="width:0%;"><p id="p-44"></p></div>
-<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-45"></p></div>
-</div></div><div class="sidebyside"><div class="sbsrow" style="margin-left:0.0625%;margin-right:0.0625%;">
-<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-46"></p></div>
-<div class="sbspanel middle" style="width:5.006257822277847%;"><p id="p-47"></p></div>
-<div class="sbspanel middle" style="width:22.0275344180225%;"><p id="p-48"><span class="process-math">\(= L\times\bigg[ \text{Área de}\)</span></p></div>
-<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel4.svg" role="img" class="contained"></div>
-<div class="sbspanel middle" style="width:18.0225281602002%;"><p id="p-49">- Área de</p></div>
-<div class="sbspanel middle" style="width:20.0250312891114%;"><img src="images/fuel5.svg" role="img" class="contained"></div>
-<div class="sbspanel middle" style="width:0%;"><p id="p-50"><span class="process-math">\(\bigg]\)</span></p></div>
-<div class="sbspanel middle" style="width:7.008760951188986%;"><p id="p-51"></p></div>
-</div></div> <p>O pedaço de "bolo"</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel4.svg" role="img" class="contained"></div></div></div> <p>é a fração <span class="process-math">\(\tfrac{2\theta}{2\pi}\)</span> do círculo completo, então sua área é <span class="process-math">\(\tfrac{2\theta}{2\pi}\pi r^2=\theta r^2\text{.}\)</span></p> <p>O triângulo</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel5.svg" role="img" class="contained"></div></div></div> <p>tem altura <span class="process-math">\(r\cos\theta\)</span> e base <span class="process-math">\(2r\sin\theta\)</span> e, portanto, tem área <span class="process-math">\(\frac{1}{2}(r\cos \theta)(2r\sin\theta)=r^2\sin\theta\cos\theta =
-\frac{r^2}{2} \sin(2\theta)\text{,}\)</span> onde usamos uma fórmula de ângulo duplo.</p> Subscrever essas duas áreas na expressão acima para <span class="process-math">\(V\)</span> produz</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-V \amp = L\times\left[\theta r^2- \frac{r^2}{2}\sin2\theta\right]
-= \frac{Lr^2}{2} \big[2\theta-\sin2\theta \big]
-\end{align*}
+<p class="continuation">assim</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h = \frac{14}{ 2 w^2}
+\end{equation*}
 </div>
-<p class="continuation">Agora podemos derivar para encontrar a taxa de variação. Lembrando que <span class="process-math">\(V=V(t)\)</span> e <span class="process-math">\(\theta=\theta(t)\text{,}\)</span> enquanto <span class="process-math">\(r\)</span> e <span class="process-math">\(L\)</span> são constantes,</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-V'
-\amp=\frac{Lr^2}{2} \left[ 2\theta' - 2\cos2\theta \cdot \theta' \right]\\
-\amp= Lr^2 \cdot \theta' \cdot \left[1 - \cos2\theta \right]
-\end{align*}
+<p class="continuation">Os lados têm área total <span class="process-math">\(2(2w)h+ 2wh = 6wh\text{,}\)</span> enquanto a base tem área <span class="process-math">\(w(2w) = 2 w^2\text{,}\)</span> assim o custo é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+7 \cdot (6wh ) + 12\cdot (2 w^2)
+\end{equation*}
 </div>
-<p class="continuation">Resolver isso para <span class="process-math">\(\theta'\)</span> e usar <span class="process-math">\(V'=q\)</span> dá</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-\theta' \amp= \frac{q}{Lr^2 (1-\cos2\theta)}
-\end{align*}
+<p class="continuation">Substituindo a expressão por <span class="process-math">\(h\)</span> dado</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C(w) = 7 \cdot 6 w\cdot  \frac{14}{ 2 w^2} + 12\cdot( 2 w^2 ) 
+= \frac{294}{w} + 24 w^2 \quad w &gt;0
+\end{equation*}
 </div>
-<p class="continuation">Essa é a taxa na qual <span class="process-math">\(\theta\)</span> está variando, mas precisamos da taxa na qual <span class="process-math">\(h\)</span> está variando. Recebemos isso da</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-h \amp= r - r\cos \theta \amp \text{derivando isso temos}\\
-h' \amp= r\sin\theta \cdot \theta'
-\end{align*}
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C'(w) = -\frac{294}{w^2} + 48 w  = \frac{-294+ 48 w^3}{w^2}
+\end{equation*}
 </div>
-<p class="continuation">Substituindo nossa expressão por <span class="process-math">\(\theta'\)</span> na expressão por <span class="process-math">\(h'\)</span> fornece</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-h' \amp= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)}
-\end{align*}
+<p class="continuation"><span class="process-math">\(\displaystyle w = \left({\textstyle\frac{49}{8}}\right)^{1/3}\)</span> é o número crítico. Há um mínimo absoluto neste número crítico, uma vez que <span class="process-math">\(C'(w) \lt 0\)</span> para <span class="process-math">\(0 \lt  w \lt   \left({\textstyle\frac{49}{8}}\right)^{1/3}\)</span> e <span class="process-math">\(C'(w) &gt;0\)</span> para <span class="process-math">\(w &gt; \left({\textstyle\frac{49}{8}}\right)^{1/3}\text{.}\)</span></p>
+<p>O custo mínimo total é</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C\left(\left({\textstyle\frac{49}{8}}\right)^{1/3} \right) \approx  \$241.03
+\end{equation*}
 </div>
-<p class="continuation">Podemos simplificar um pouco mais</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-2.html">
-\begin{align*}
-h'
-\amp= r\sin\theta \cdot \frac{q}{Lr^2 (1-\cos2\theta)} \amp \text{substitua
-$\cos2\theta =
-1-2\sin^2\theta$}\\
-\amp= r\sin\theta \cdot \frac{q}{Lr^2 \cdot 2\sin^2\theta} \amp \text{agora cancele os
-$r$'s
-e um $\sin\theta$}\\
-\amp= \frac{q}{2Lr\sin\theta}
-\end{align*}
-</div>
-<p class="continuation"><p>Mas podemos simplificar isso ainda mais — em vez de escrever essa taxa em termos de <span class="process-math">\(\theta\)</span> é mais natural escrevê-lo em termos de <span class="process-math">\(h\)</span> (já que o problema inicial é expresso em termos de <span class="process-math">\(h\)</span>). Do triângulo</p> <div class="sidebyside"><div class="sbsrow" style="margin-left:41%;margin-right:41%;"><div class="sbspanel top" style="width:100%;"><img src="images/fuel6.svg" role="img" class="contained"></div></div></div> <p>e Pitágoras temos</p><div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-\sin\theta =\frac{\sqrt{r^2-(r-h)^2}}{r}=\frac{\sqrt{2rh-h^2}}{r}
-\end{gather*}
-</div><p class="continuation">e portanto</p><div class="displaymath process-math" data-contains-math-knowls="">
-\begin{gather*}
-h' = \frac{q}{2L\sqrt{2rh-h^2}}.
-\end{gather*}
-</div> Como verificação, observe que <span class="process-math">\(h'\)</span> fica indefinido quando <span class="process-math">\(h \lt 0\)</span> e também quando <span class="process-math">\(h
-\gt 2r\text{,}\)</span> pois o argumento da raiz quadrada no denominador é negativa. Ambos fazem sentido — o nível de combustível no tanque deve obedecer a <span class="process-math">\(0\le h\le 2r\text{.}\)</span> &gt;</p>
 </div>
 <span class="incontext"><a href="section-1.html#solution-6" class="internal">em contexto</a></span>
 </body>

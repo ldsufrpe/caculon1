@@ -1,239 +1,251 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="pretext-taxas-relacionadas/problem1.pg">
-      <statement><p>Se o raio de uma esfera está aumentando a uma taxa constante de 1 <m>\rm{cm}/\rm{sec}</m>, então o volume está aumentando a uma taxa de <fillin name="AnSwEr0001" characters="15"/> <m>\rm{cm}^3/\rm{sec}</m> quando o raio é 4 <m>\rm{cm}</m>.</p>
-<p>Dica:  <m>\displaystyle\frac{dV}{dt} = \frac{dV}{dr} \cdot \frac{dr}{dt}</m>, e
-o volume de uma esfera é <m>V = \frac{4}{3} \pi r^3</m>.</p>
+    <static seed="1" source="pretext-otimizacao/problem1.pg">
+      <statement><p>Encontre o ponto da reta
+<m>2 x + 3 y + 5 =0</m>que é mais próxima do ponto <m>\left(4,-1\right)</m>.</p>
+<p>Resposta <fillin name="AnSwEr0001" characters="30"/></p>
 </statement>
       <answer>
         <p>
-          <m>201.061929829747</m>
+          <m>\left(2.5,-3.3\right)</m>
         </p>
       </answer>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-taxas-relacionadas/problem1.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem1.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-10" ww-id="webwork-10">
-    <static seed="10" source="pretext-taxas-relacionadas/problem11.pg">
-      <statement><p>Seja <m>A</m>  ser a área de um círculo com raio <m>r</m>. Se
-<m>\frac { dr }{ dt } = 2</m>, encontre
-<m>\frac { dA }{ dt }</m> quando <m>r = 4</m>.</p>
-<p>Resposta: <fillin name="AnSwEr0001" characters="20"/></p>
-</statement>
-      <answer>
-        <p>
-          <m>50.2654824574367</m>
-        </p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=10&amp;sourceFilePath=pretext-taxas-relacionadas/problem11.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem11.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-otimizacao/problem1.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-otimizacao/problem1.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-otimizacao/problem1.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=1&amp;sourceFilePath=pretext-otimizacao/problem1.pg</server-url>
+    <pg source="pretext-otimizacao/problem1.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
-    <static seed="2" source="pretext-taxas-relacionadas/problem2.pg">
-      <statement><p>Uma bola de neve esférica está derretendo de tal forma que seu diâmetro está diminuindo a uma taxa de 0.2 cm/min. A que taxa o volume da bola de neve está diminuindo quando o diâmetro é 10 cm. (Observe que a resposta é um número positivo)</p>
-<p><fillin name="AnSwEr0001" characters="20"/></p>
+    <static seed="2" source="pretext-otimizacao/problem2.pg">
+      <statement><p>Um recipiente de armazenamento retangular com a tampa aberta deve ter um volume de 14 metros cúbicos. O comprimento de sua base é o dobro da largura. O material para a base custa 12 dólares por metro quadrado. O material para os lados custa 7 dólares por metro quadrado. Encontre o custo dos materiais para o recipiente mais barato.</p>
+<p>Custo total = <fillin name="AnSwEr0001" characters="30"/>
+(Arredonde para o centavo mais próximo e inclua unidades monetárias. Por exemplo, se sua resposta for 1,095, digite $1,10 incluindo o cifrão e a segunda casa decimal.)</p>
 </statement>
       <answer>
         <p>
-          <m>0.2\cdot 1.33333\pi \cdot 0.5\cdot 3\!\left(\frac{10}{2}\right)^{2}</m>
+          <m>\$241.03</m>
         </p>
       </answer>
+      <solution><p>Sejam <m>w</m> e <m>h</m> denotar a largura da base e a altura do recipiente,
+respectivamente.</p>
+<p>Como o comprimento da base é duas vezes a largura, o volume do recipiente é
+<me>V= (2w)(w)h =2 w^2 h =  14</me>
+assim
+<me>h = \frac{14}{ 2 w^2}</me>
+Os lados têm área total <m>2(2w)h+ 2wh = 6wh</m>, enquanto a base tem área <m>w(2w) = 2 w^2</m>, assim o custo é
+<me>7 \cdot (6wh ) + 12\cdot (2 w^2)</me>
+Substituindo a expressão por <m>h</m> dado
+<me>C(w) = 7 \cdot 6 w\cdot  \frac{14}{ 2 w^2} + 12\cdot( 2 w^2 ) 
+= \frac{294}{w} + 24 w^2 \quad w &gt;0</me>
+<me>C'(w) = -\frac{294}{w^2} + 48 w  = \frac{-294+ 48 w^3}{w^2}</me>
+<m>\displaystyle w = \left({\textstyle\frac{49}{8}}\right)^{1/3}</m> é o número crítico. Há um mínimo absoluto neste número crítico, uma vez que <m>C'(w) \lt 0</m> para
+<m>0 \lt  w \lt   \left({\textstyle\frac{49}{8}}\right)^{1/3}</m> e <m>C'(w) &gt;0</m> para 
+<m>w &gt; \left({\textstyle\frac{49}{8}}\right)^{1/3}</m>.</p>
+<p>O custo mínimo total é
+<me>C\left(\left({\textstyle\frac{49}{8}}\right)^{1/3} \right) \approx  \$241.03</me></p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-taxas-relacionadas/problem2.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem2.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-otimizacao/problem2.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-otimizacao/problem2.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-otimizacao/problem2.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=2&amp;sourceFilePath=pretext-otimizacao/problem2.pg</server-url>
+    <pg source="pretext-otimizacao/problem2.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
-    <static seed="3" source="pretext-taxas-relacionadas/problem3.pg">
-      <statement><p>Uma luz de rua está no topo de um poste 20 pés. Uma garota 4 pés de altura caminha ao longo de uma trajetória reta afastando-se do poste com uma velocidade de 3 pés por segundo.</p>
-<p>A que taxa a ponta de sua sombra está se afastando da luz (ou seja, longe do <alert> topo </alert> do poste) quando a garota está 30 pés longe do poste?</p>
-<p>Resposta: <fillin name="AnSwEr0001" characters="40"/></p>
-<p>Quão rápido sua sombra está se alongando?</p>
-<p>Resposta: <fillin name="AnSwEr0002" characters="40"/></p>
+    <static seed="3" source="pretext-otimizacao/problem3.pg">
+      <statement><p>Se 1200 centímetros quadrados de material estão disponíveis para fazer uma caixa com base quadrada e tampa aberta, encontre o maior volume possível
+da caixa.</p>
+<p>Volume = <fillin name="AnSwEr0001" characters="30"/></p>
 </statement>
       <answer>
         <p>
-          <m>\frac{\left(30+7.5\right)\!\left(3+0.75\right)}{42.5}</m>
+          <m>4000\ {\rm cm^{3}}</m>
         </p>
       </answer>
-      <answer>
-        <p>
-          <m>\frac{3}{\frac{20}{4}-1}</m>
-        </p>
-      </answer>
+      <solution><p>Para resolver esse problema, precisaremos escrever uma fórmula para o volume da caixa em termos de uma de suas dimensões e, em seguida, usar derivadas para encontrar as dimensões nas quais a caixa tem volume máximo. Seja <m>x</m> o comprimento dos lados da base quadrada. Então, se <m>h</m> é a altura da caixa, o volume é dado por <m>x^2h</m>. Precisamos encontrar uma expressão para a altura <m>h</m> em termos de <m>x</m>.</p>
+<p>É aqui que usamos nossas informações sobre a quantidade de material usado na construção da caixa. Se a base da caixa tem lados de comprimento <m>x</m>, então <m>x^2</m> centímetros quadrados de material são usados para fazer a base. Portanto, temos apenas <m>1200 - x^2</m> centímetros quadrados de material para fazer os lados, dos quais existem quatro. Cada um dos lados usa <m>hx</m> centímetros quadrados de material. Assim, obtemos a fórmula:</p>
+<p><me>1200-x^2 = 4(hx) \Rightarrow h = \frac{1200-x^2}{4x}</me></p>
+<p>Colocando isso em nossa fórmula para volume, agora podemos escrever <m>v(x)</m> como:</p>
+<p><me>v(x) = x^2\left(\frac{1200-x^2}{4x}\right) = 
+           \frac{{1200}x - x^3}{4}</me></p>
+<p>Agora, tomamos a derivada desta expressão, usando as regras para derivar polinômios, para obter <m>v'(x) = \frac{1200}{4} -
+\frac{3}{4}x^2</m>. Definir isso como 0 nos dará os pontos críticos. Ao resolver, lembre-se de que esta é uma situação do mundo real, então
+não podemos ter um valor negativo para <m>x</m> (que é um comprimento).</p>
+<p><me>\begin{array}{rcl}
+    v'(x) \amp  = \amp  0 \\
+    \frac{1200}{4} - \frac{3}{4}x^2 \amp  = \amp  0 \\
+    \frac{3}{4}x^2 \amp  = \amp  \frac{1200}{4} \\
+    x^2 \amp  = \amp  \frac{1200}{3} \\
+    x \amp  = \amp  \sqrt{\frac{1200}{3}} \approx 20.00 \\
+  \end{array}</me></p>
+<p>Agora, substituindo essa largura em nossa fórmula para volume, <m>v(x)</m>, obtemoso volume máximo de <m>v(20.00) = !{4000\ {\rm cm^{3}}:\%5.2f}</m>.</p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-taxas-relacionadas/problem3.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem3.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-otimizacao/problem3.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-otimizacao/problem3.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-otimizacao/problem3.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=3&amp;sourceFilePath=pretext-otimizacao/problem3.pg</server-url>
+    <pg source="pretext-otimizacao/problem3.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-4" ww-id="webwork-4">
-    <static seed="4" source="pretext-taxas-relacionadas/problem4.pg">
-      <statement><p>Um balão esférico é inflado de modo que seu volume aumenta na
-taxa de 2.9 pés por minuto.
-Com que rapidez o diâmetro do balão está aumentando quando o diâmetro é 1.6 pés?</p>
-<p>O diâmetro aumenta em <fillin name="AnSwEr0001" characters="20"/> pés por minuto.</p>
+    <static seed="4" source="pretext-otimizacao/problem4.pg">
+      <statement><p>Uma janela Norman tem a forma de um semicírculo em cima de um retângulo, de modo que o diâmetro do semicírculo é igual à largura do retângulo. Qual é a área da maior janela normanda possível com um perímetro de 33 pés? <fillin name="AnSwEr0001" characters="30"/></p>
 </statement>
       <answer>
         <p>
-          <m>0.721171</m>
+          <m>76.2435</m>
         </p>
       </answer>
+      <solution><p>Para resolver este problema de maximização, devemos encontrar uma fórmula para a área da janela em função de uma de suas dimensões. Seja <m>h</m> a altura da parte retangular da janela e <m>x</m> a metade da largura da parte retangular (que é então o raio do topo semicircular). Então a área é dada por <m>2xh + \frac{{\pi}{x}^2}{2}</m> (já que temos metade de um círculo no topo do retângulo).</p>
+<p>Agora, precisamos encontrar uma expressão para a altura da parte retangular da janela em termos de largura, <m>2x</m>. É aqui que nós usamos a informação de que a janela inteira deve ter um perímetro de
+33 pés. O perímetro da janela é dado por <m>2x+2h+{\pi}x</m>, novamente já que estamos usando apenas metade de um círculo. Definindo esta equação igual a 33 e resolvendo para <m>h</m>, obtemos:
+<me>\begin{aligned}
+    2x+2h+{\pi}x \amp  = 33 \\
+    2h \amp  = 33 - 2x - {\pi}x \\
+    h \amp  = \frac{33 -2x - {\pi}x}{2} \\
+  \end{aligned}</me>
+Colocando isso em nossa expressão, obtemos uma fórmula para a área da janela em termos da largura da parte retangular. Ou seja:
+<me>a(x) = 2x\left(\frac{33-2x-{\pi}x}{2}\right) + \frac{{\pi}x^2}{2}
+        = {33}x - 2x^2 - \frac{\pi}{2}x^2</me></p>
+<p>Derivando isso e resolvendo para 0, temos:
+<me>\begin{aligned}
+    a'(x) \amp  = 33 - 4x - {\pi}x \\
+    a'(x) \amp  = 0 \\
+    33 - 4x - {\pi}x \amp  = 0 \\
+    4x+{\pi}x \amp  = 33 \\
+    x(4+\pi) \amp  = 33 \\
+    x \amp  = \frac{33}{4+\pi} \approx 4.6208 \\
+  \end{aligned}</me></p>
+<p>A verificação mostrará que este é de fato um máximo local, de modo que a área máxima da janela pode ser encontrada inserindo esse valor de <m>x</m> na fórmula para área. Isto é:
+<me>a(4.6208) \approx 76.24</me></p>
+</solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-taxas-relacionadas/problem4.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem4.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-otimizacao/problem4.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-otimizacao/problem4.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-otimizacao/problem4.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=4&amp;sourceFilePath=pretext-otimizacao/problem4.pg</server-url>
+    <pg source="pretext-otimizacao/problem4.pg"/>
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-5" ww-id="webwork-5">
-    <static seed="5" source="pretext-taxas-relacionadas/problem5.pg">
-      <statement><p>Ao meio-dia, o navio A está a 30 milhas náuticas a oeste do navio B.
-O navio A está navegando para oeste a 19 nós e o navio B está navegando para o norte a 24 nós. Quão rápido (em nós) está mudando a distância entre os navios em 6 PM (a pós o meio-dia)?</p>
-<p>A distância está mudando em <fillin name="AnSwEr0001" characters="35"/> nós.</p>
-<p>(Nota: 1 nó é uma velocidade de 1 milha náutica por hora.)</p>
-</statement>
-      <answer>
-        <p>
-          <m>30.4056</m>
-        </p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-taxas-relacionadas/problem5.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem5.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-6" ww-id="webwork-6">
-    <static seed="6" source="pretext-taxas-relacionadas/problem6.pg">
-      <statement><p>Um tanque de água cônico com vértice para baixo tem um raio de 10 pés no topo e tem 27 pés de altura.</p>
-<p>Se a água flui para o tanque a uma taxa de 10 pés por minuto,
-quão rápido a profundidade da água está aumentando quando a água está a
-15 pés de profundidade?</p>
-<p>A profundidade da água aumenta em <fillin name="AnSwEr0001" characters="25"/> pés por minuto.</p>
-</statement>
-      <answer>
-        <p>
-          <m>0.103132</m>
-        </p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=6&amp;sourceFilePath=pretext-taxas-relacionadas/problem6.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem6.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-7" ww-id="webwork-7">
-    <static seed="7" source="pretext-taxas-relacionadas/problem7.pg">
-      <statement><p>Uma corda, presa a um peso, sobe por uma roldana no teto e desce até um trabalhador. O trabalhador segura a corda na mesma altura do ponto de conexão entre a corda e o peso. A distância do ponto de conexão ao teto é de 40 ft. Suponha que o trabalhador esteja diretamente próximo ao peso (ou seja, um comprimento total de corda de 80 ft) e comece a se afastar a uma taxa constante de 4 pés por segundo. Quão rápido o peso está subindo quando o trabalhador andou:</p>
+    <static seed="5" source="pretext-otimizacao/problem5.pg">
+      <statement><p>Encontre os valores máximo absoluto e mínimo absoluto da função <me>f(x) = x^{3}+6x^{2}-63x+11</me> em cada um dos intervalos indicados.</p>
+<p>(a) Intervalo = <m>[-8, 0]</m>.</p>
 <sidebyside>
 <tabular>
 <row>
-<cell>10 pés?  Resposta </cell>
+<cell>1.</cell>
+<cell>Máximo Global</cell>
 <cell><m>=</m></cell>
-<cell><fillin name="AnSwEr0001" characters="30"/></cell>
+<cell><fillin name="AnSwEr0001" characters="25"/></cell>
 </row>
 <row>
-<cell>30 pés? Resposta </cell>
+<cell>2.</cell>
+<cell>Mínimo Global</cell>
 <cell><m>=</m></cell>
-<cell><fillin name="AnSwEr0002" characters="30"/></cell>
+<cell><fillin name="AnSwEr0002" characters="25"/></cell>
+</row>
+</tabular>
+</sidebyside>
+<p>(b) Intervalo = <m>[-5, 4]</m>.</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell>Máximo Global</cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0003" characters="25"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell>Mínimo Global</cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0004" characters="25"/></cell>
+</row>
+</tabular>
+</sidebyside>
+<p>(c) Intervalo = <m>[-8, 4]</m>.</p>
+<sidebyside>
+<tabular>
+<row>
+<cell>1.</cell>
+<cell>Máximo Global</cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0005" characters="25"/></cell>
+</row>
+<row>
+<cell>2.</cell>
+<cell>Mínimo Global</cell>
+<cell><m>=</m></cell>
+<cell><fillin name="AnSwEr0006" characters="25"/></cell>
 </row>
 </tabular>
 </sidebyside>
 </statement>
       <answer>
         <p>
-          <m>0.970143</m>
+          <m>403</m>
         </p>
       </answer>
       <answer>
         <p>
-          <m>2.4</m>
+          <m>11</m>
         </p>
       </answer>
-      <solution><p>O trabalhador, o peso e a polia formam um triângulo retângulo com altura 40, comprimento da base <m>x</m> e hipotenusa <m>z</m>. A velocidade com que o peso sobe é a mesma que a velocidade com que a corda está sendo puxada.
-Isso significa que a taxa que estamos procurando é <m>\dfrac{dz}{dt}</m>.</p>
-<p>Pelo Teorema de Pitágoras
-<me>x^2 + 40^2 = z^2</me>
-Tome derivadas em relação a <m>t</m> de ambos os lados da
-equação. 
-<me>2x\dfrac{dx}{dt} = 2z\dfrac{dz}{dt}.</me></p>
-<p>Em seguida, faça <m>\dfrac{dx}{dt} = 4</m> e resolva para a taxa desconhecida.
-<me>\dfrac{dz}{dt} = \dfrac{4 x}{z}.</me></p>
-<p>Quando <m>x = 10</m>,
-<me>10^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{1700}.</me>
-<me>\Rightarrow \dfrac{dz}{dt} = \dfrac{40}{\sqrt{1700}}
-  \approx 0.970142500145332.</me></p>
-<p>Quando <m>x = 30</m>,
-<me>30^2 + 40^2 = z^2 \;\Rightarrow\; z = \sqrt{2500}.</me>
-<me>\Rightarrow \dfrac{dz}{dt} = \dfrac{120}{\sqrt{2500}}
-  \approx 2.4.</me></p>
+      <answer>
+        <p>
+          <m>351</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-97</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>403</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-97</m>
+        </p>
+      </answer>
+      <solution><p><me>f'(x) = 3x^{2}+6\cdot 2x-63 = 3(x-3)(x+7)</me>
+Os pontos críticos saõ <m>x = 3</m> e <m>x = -7</m>.</p>
+<p>(a) Apenas o número crítico <m>x = -7</m> está no intervalo <m>[-8, 0]</m>.
+O valor da função neste número crítico é
+<me>f(-7) = 403</me>
+Os valores nos extremos são
+<me>f(-8) = 387 \quad \text{and} \quad f(0)=11</me>
+Comparando esses valores vemos que:</p>
+<p><B> 1. </B>   Máximo Global = <m>403</m></p>
+<p><B> 2. </B> Mínimo Global = <m>11</m>.</p>
+<p>(b) Apenas o número crítico  <m>x = 3</m> está no intervalo <m>[-5, 4]</m>.
+O valor da função neste número crítico é
+<me>f(3) = -97</me>
+Os valores nos extremos são
+<me>f(-5) = 351 \quad \text{and} \quad f(4)=-81</me>
+Comparando esses valores vemos que:</p>
+<p><B> 1. </B>   Máximo Global = <m>351</m></p>
+<p><B> 2. </B> Mínimo Global = <m>-97</m>.</p>
+<p>(c) Ambos os números críticos <m>x = -7</m> and <m>x = 3</m> estão no intervalo <m>[-8, 4]</m>.
+Os valores da função nesses números críticos são
+<me>f(-7) = 403 \quad \text{and} \quad f(3) = -97</me>
+Os valores nos extremos são
+<me>f(-8) = 387 \quad \text{and} \quad f(4)=-81</me>
+Comparando esses valores vemos que:</p>
+<p><B> 1. </B>   Máximo Global = <m>403</m></p>
+<p><B> 2. </B> Mínimo Global = <m>-97</m>.</p>
 </solution>
     </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=7&amp;sourceFilePath=pretext-taxas-relacionadas/problem7.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem7.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-8" ww-id="webwork-8">
-    <static seed="8" source="pretext-taxas-relacionadas/problem8.pg">
-      <statement><p>Uma loja de varejo estima que as vendas semanais <m>s</m> e os custos semanais de publicidade <m>x</m> (ambos em dólares) estão relacionados por
-<me>s = 70000 - 350000 e^{-0.0003 x}.</me>
-Os custos de publicidade semanais atuais são de 2.000 dólares e esses custos estão aumentando a uma taxa de 300 dólares por semana. Encontre a taxa atual de variação das vendas.</p>
-<p>Taxa de variação das vendas = <fillin name="AnSwEr0001" characters="20"/></p>
-</statement>
-      <answer>
-        <p>
-          <m>17287.5665369618</m>
-        </p>
-      </answer>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=8&amp;sourceFilePath=pretext-taxas-relacionadas/problem8.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem8.pg"/>
-  </webwork-reps>
-  <webwork-reps version="1" xml:id="extracted-webwork-9" ww-id="webwork-9">
-    <static seed="9" source="pretext-taxas-relacionadas/problem10.pg">
-      <statement><p>Suponha <m>xy = 4</m>
- e <m>\displaystyle{ \frac { dy }{ dt } = 4}</m>.
-Encontre <m>\displaystyle{\frac { dx }{ dt } }</m> quando  <m>x = 2</m>.</p>
-<p><m>\displaystyle{\frac { dx }{ dt } }</m> = <fillin name="AnSwEr0001" characters="20"/></p>
-</statement>
-      <answer>
-        <p>
-          <m>-4</m>
-        </p>
-      </answer>
-      <solution><p>Derivando por ambos os lados da equaç~ao <m>x y = 4</m> em relação a  <m>t</m> obtemos
-<me>\frac{dx}{dt}y + x \frac{dy}{dt} = 0</me> 
-ou <me>\frac{dx}{dt} = - \frac{x}{y} \frac{dy}{dt}</me>
-Temos <m>y = \displaystyle \frac{4 }{x}</m>, então <m>y = 2</m>  quando <m>x = 2</m> .
-Substituindo <m>y = 2, \; x= 2</m> e <m>\displaystyle \frac{dy}{dt} = 4</m> na expressão para 
-<m>\displaystyle \frac{dx}{dt}</m>, temos
-<me>\frac{dx}{dt} = - \frac{2}{2} \cdot (4)  = -4</me></p>
-</solution>
-    </static>
-    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
-    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
-    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
-    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=9&amp;sourceFilePath=pretext-taxas-relacionadas/problem10.pg</server-url>
-    <pg source="pretext-taxas-relacionadas/problem10.pg"/>
+    <server-url hint="yes" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-otimizacao/problem5.pg</server-url>
+    <server-url hint="yes" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-otimizacao/problem5.pg</server-url>
+    <server-url hint="no" solution="yes" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-otimizacao/problem5.pg</server-url>
+    <server-url hint="no" solution="no" domain="http://191.252.191.150">http://191.252.191.150/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;language=pt-BR&amp;problemSeed=5&amp;sourceFilePath=pretext-otimizacao/problem5.pg</server-url>
+    <pg source="pretext-otimizacao/problem5.pg"/>
   </webwork-reps>
 </webwork-representations>
