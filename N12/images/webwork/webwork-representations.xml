@@ -3,7 +3,7 @@
   <webwork-reps version="1" xml:id="extracted-webwork-1" ww-id="webwork-1">
     <static seed="1" source="pretext-otimizacao/problem1.pg">
       <statement><p>Encontre o ponto da reta
-<m>2 x + 3 y + 5 =0</m>que é mais próxima do ponto <m>\left(4,-1\right)</m>.</p>
+<m>2 x + 3 y + 5 =0</m> que é mais próxima do ponto <m>\left(4,-1\right)</m>.</p>
 <p>Resposta <fillin name="AnSwEr0001" characters="30"/></p>
 </statement>
       <answer>
