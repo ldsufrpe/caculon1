@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-10T12:14:48-03:00       *-->
+<!--*       on 2022-05-16T13:58:30-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,23 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Parágrafo</span></h5>
-<p>Uma janela Norman tem a forma de um semicírculo em cima de um retângulo, de modo que o diâmetro do semicírculo é igual à largura do retângulo. Qual é a área da maior janela normanda possível com um perímetro de 33 pés? <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span></p>
+<p>Agora, precisamos encontrar uma expressão para a altura da parte retangular da janela em termos de largura, <span class="process-math">\(2x\text{.}\)</span> É aqui que nós usamos a informação de que a janela inteira deve ter um perímetro de 33 pés. O perímetro da janela é dado por <span class="process-math">\(2x+2h+{\pi}x\text{,}\)</span> novamente já que estamos usando apenas metade de um círculo. Definindo esta equação igual a 33 e resolvendo para <span class="process-math">\(h\text{,}\)</span> obtemos:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+2x+2h+{\pi}x \amp  = 33 \\
+2h \amp  = 33 - 2x - {\pi}x \\
+h \amp  = \frac{33 -2x - {\pi}x}{2} \\
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Colocando isso em nossa expressão, obtemos uma fórmula para a área da janela em termos da largura da parte retangular. Ou seja:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a(x) = 2x\left(\frac{33-2x-{\pi}x}{2}\right) + \frac{{\pi}x^2}{2}
+= {33}x - 2x^2 - \frac{\pi}{2}x^2
+\end{equation*}
+</div>
 <span class="incontext"><a href="section-1.html#p-87" class="internal">em contexto</a></span>
 </body>
 </html>

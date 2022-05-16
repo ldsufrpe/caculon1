@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-21T13:21:25-03:00       *-->
+<!--*       on 2022-05-16T13:58:31-03:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,89 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Parágrafo</span></h4>
-<p>As noted at the beginning of this section, the problem of finding maxima and minima is a very important application of differential calculus in the real world. We now turn to a number of examples of this process. But to guide the reader we will describe a general procedure to follow for these problems.</p>
+<h5 class="heading"><span class="type">Parágrafo</span></h5>
+<p>Vamos aplicar o método do <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.17">Corolário 2.17</a>. Talvez seja mais fácil encontrar os valores nas extremidades dos intervalos e então passar para os valores em quaisquer pontos críticos ou singulares.</p>
+<ul class="disc">
+<li><p>Observe que podemos reescrever a função fatorando-a:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(x) \amp= 2x^{5/3}+3x^{2/3} = x^{2/3} \cdot \left(2x + 3\right)
+\end{align*}
+</div></p></li>
+<li><p>Vamos calcular a função nas extremidades do intervalo:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(1) \amp= 2 +3 = 5\\
+f(-1) \amp= 2 \cdot(-1)^{5/3} + 3\cdot (-1)^{2/3} =-2 + 3 = 1
+\end{align*}
+</div></p></li>
+<li><p>Para calcular a função nos pontos críticos e singulares, primeiro precisamos encontrar a derivada:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f'(x) \amp= 2 \cdot \frac{5}{3} x^{2/3} + 3 \cdot \frac{2}{3} x^{-1/3}\\
+\amp= \frac{10}{3} x^{2/3} + 2 x^{-1/3}\\
+\amp= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div></p></li>
+<li><p>Observe que o numerador e o denominador são definidos para todos os <span class="process-math">\(x\text{.}\)</span> O único lugar em que a derivada é indefinida é quando o denominador é zero. Portanto, o único ponto singular está em <span class="process-math">\(x=0\text{.}\)</span> O valor da função correspondente é<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(0) \amp= 0
+\end{align*}
+</div></p></li>
+<li><p>Para encontrar os pontos críticos, precisamos resolver <span class="process-math">\(f'(x) = 0\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+0 \amp= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div>Portanto, devemos ter <span class="process-math">\(10x=-6\)</span> ou <span class="process-math">\(x=-3/5\text{.}\)</span> O valor da função correspondente é<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(x) \amp= x^{2/3} \cdot \left(2x + 3\right)\\
+f(-3/5) \amp= (-3/5)^{2/3} \cdot\left(2 \cdot \frac{-3}{5} + 3 \right)\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{-6 + 15}{5}\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5} \approx 1.28
+\end{align*}
+</div>Observe que, se não quisermos aproximar a raiz (se, por exemplo, não tivermos uma calculadora à mão), também podemos escrever<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(-3/5) \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{25} \cdot 5\\
+\amp= 5 \cdot \left( \frac{9}{25} \right)^{4/3}
+\end{align*}
+</div>Já que <span class="process-math">\(0 \lt 9/25 \lt 1\text{,}\)</span> sabemos que <span class="process-math">\(0 \lt \left( \frac{9}{25} \right)^{4/3} \lt
+1\text{,}\)</span> e portanto<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+0 \lt f(-3/5) = 5 \cdot \left( \frac{9}{25} \right)^{4/3} \lt 5.
+\end{gather*}
+</div></p></li>
+<li>
+<p>Resumimos nosso trabalho nesta tabela</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(c\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-\frac{3}{5}\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">tipo</td>
+<td class="c m b1 r1 l0 t0 lines">ponto crítico</td>
+<td class="c m b1 r1 l0 t0 lines">ponto singular</td>
+<td class="c m b1 r1 l0 t0 lines">extremidade</td>
+<td class="c m b1 r1 l0 t0 lines">extremidade</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(f(c)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{9}{5}\root{3}\of{\frac{9}{25}}\approx 1.28\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+</table></div></div></div>
+</li>
+<li><p>O maior valor de <span class="process-math">\(f\)</span> na tabela é <span class="process-math">\(5\)</span> e o menor valor de <span class="process-math">\(f\)</span> na tabela é <span class="process-math">\(0\text{.}\)</span></p></li>
+<li><p>Assim, no intervalo <span class="process-math">\(-1\leq x \leq 1\)</span> o máximo global de <span class="process-math">\(f\)</span> é <span class="process-math">\(5\)</span> e é obtido em <span class="process-math">\(x= 1\text{,}\)</span> enquanto o valor mínimo global de <span class="process-math">\(f(x)\)</span> é <span class="process-math">\(0\)</span> e é obtido em <span class="process-math">\(x=0\text{.}\)</span></p></li>
+<li>
+<p>Para completar, também esboçamos o gráfico dessa função no mesmo intervalo.</p>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/globalMaxMinA.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</li>
+</ul>
 <span class="incontext"><a href="section-2.html#p-168" class="internal">em contexto</a></span>
 </body>
 </html>

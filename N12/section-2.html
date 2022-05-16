@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T13:58:30-03:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="pt-BR">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Otimização</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="http://191.252.191.150/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://191.252.191.150/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Executar (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Ir ao conteúdo principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{ct}[1]{\color{gray}{\text{#1}}}
+\newcommand{ctm}[1]{\color{gray}{#1}}
+
+\newcommand{\doubler}[1]{2#1}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ob}[2]{\color{gray}{\overbrace{\color{black}{#1}}^{#2}}}
+\newcommand{\ub}[2]{\color{gray}{\underbrace{\color{black}{#1}}_{#2}}}
+\newcommand{\integral}[2]{\displaystyle\int {#1}\,\dd {#2}}
+\newcommand{\integrald}[4]{\displaystyle\int_{#2}^{#3} {#1}\,\dd {#4}}
+\DeclareMathOperator{\arcsec}{arc \,sec}
+\DeclareMathOperator{\sin}{sen}
+\DeclareMathOperator{\arcsin}{arc \,sen}
+\DeclareMathOperator{\arccos}{arc \,cos}
+\DeclareMathOperator{\csc}{cossec}
+\DeclareMathOperator{\tan}{tg}
+\DeclareMathOperator{\arctan}{arc\,tg}
+\DeclareMathOperator{\cot}{cotg}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.dm.ufrpe.br" target="_blank"><img src="images/logo/projeto_logo_dm_2020_7.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="calc-limite-derivada.html"><span class="title">Aplicações das Derivadas: N10</span></a></h1>
+<p class="byline">Leon Silva</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Sumário</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-1.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a id="nextbutton" class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Sumário</button><a class="previous-button toolbar-item button" href="section-1.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="calc-limite-derivada.html" title="Acima">Acima</a><a class="next-button button toolbar-item" href="references-backmatter.html" title="Próximo">Próximo</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Pré-textual</span></a></li>
+<li class="link">
+<a href="section-1.html" data-scroll="section-1" class="internal"><span class="codenumber">1</span> <span class="title">Taxas Relacionadas</span></a><ul>
+<li><a href="section-1.html#subsection-1" data-scroll="subsection-1" class="internal">Taxa de Variação</a></li>
+<li><a href="section-1.html#subsection-2" data-scroll="subsection-2" class="internal">Sugestão de Vídeos</a></li>
+<li><a href="section-1.html#exercises-taxa-variacao" data-scroll="exercises-taxa-variacao" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="section-2.html" data-scroll="section-2" class="internal"><span class="codenumber">2</span> <span class="title">Otimização</span></a><ul>
+<li><a href="section-2.html#ssec_maxmin" data-scroll="ssec_maxmin" class="internal">Máximos e Mínimos Locais e Globais</a></li>
+<li><a href="section-2.html#sub-videos-2" data-scroll="sub-videos-2" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-2.html#ssec_find_maxmin" data-scroll="ssec_find_maxmin" class="internal">Encontrando Máximos e Mínimos Globais</a></li>
+<li><a href="section-2.html#sub-videos-global" data-scroll="sub-videos-global" class="internal">Sugestão de vídeos</a></li>
+<li><a href="section-2.html#exercises-max-min" data-scroll="exercises-max-min" class="internal">Exercícios</a></li>
+</ul>
+</li>
+<li class="link"><a href="references-backmatter.html" data-scroll="references-backmatter" class="internal"><span class="codenumber">3</span> <span class="title">Referências</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Feito com PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-2"><h2 class="heading hide-type">
+<span class="type">Seção</span> <span class="codenumber">2</span> <span class="title">Otimização</span>
+</h2>
+<article class="objectives goal-like" id="objectives-2"><h3 class="heading">
+<span class="type">Objetivos:</span><span class="space"> </span><span class="title">Estrutura</span>
+</h3>
+<ol class="decimal">
+<li id="li-14"><p id="p-110">Introduzir o conceito de otimização</p></li>
+<li id="li-15"><p id="p-111">Encontrar mínimos e maximos locais</p></li>
+<li id="li-16"><p id="p-112">Encontrar mínimos e maximos globais</p></li>
+</ol></article><section class="introduction" id="introduction-2"><p id="p-113">Uma aplicação importante do cálculo diferencial é encontrar o valor máximo (ou mínimo) de uma função. Isso geralmente encontra aplicações reais em problemas como os seguintes.</p>
+<article class="example example-like" id="eg_3_5_1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_3_5_1"><h3 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fechando um cercado.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_3_5_1"><article class="example example-like"><p id="p-114">Um agricultor tem 400 m de materiais para cercas. Qual é o maior cercado retangular que pode ser fechado?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
+<p id="p-115">Vamos supor que as dimensões do cercado sejam <span class="process-math">\(x\)</span> por <span class="process-math">\(y\)</span> em metros. A área fechada é <span class="process-math">\(A m^2\)</span> onde</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
+\begin{align*}
+A \amp= x \cdot y
+\end{align*}
+</div>
+<p class="continuation">Nesta fase não podemos aplicar o cálculo que desenvolvemos pois a área é função de duas variáveis e só sabemos trabalhar com funções de uma única variável. Precisamos eliminar uma variável. Sabemos que o perímetro do retângulo (e, portanto, as dimensões <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span>) são limitados pela quantidade de materiais de cerca que o agricultor tem à mão:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
+\begin{align*}
+2x+2y \amp\leq 400\\
+\end{align*}
+<p class="intertext">e assim temos</p>
+\begin{align*}
+y \amp\leq 200-x
+\end{align*}
+</div>
+<p class="continuation">Claramente a área do cercado é maximizada quando usamos todas as cercas possíveis, então</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-33">
+\begin{gather*}
+y = 200-x
+\end{gather*}
+</div>
+<p class="continuation">Agora substitua isso de volta na nossa expressão para a área</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-34">
+\begin{align*}
+A \amp= x \cdot (200-x)
+\end{align*}
+</div>
+<p class="continuation">Como a área não pode ser negativa (nem os comprimentos <span class="process-math">\(x,y\)</span>), também devemos ter</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-35">
+\begin{gather*}
+0 \leq x \leq 200
+\end{gather*}
+</div>
+<p class="continuation">Assim, o problema do maior cercado retangular fechado torna-se o problema de encontrar o valor máximo de</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-36">
+\begin{align*}
+A \amp= x \cdot (200-x) \amp\text{ sujeito à restrição $0 \leq x \leq 200$.}
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-116">O exemplo acima é suficientemente simples para que possamos determinar a resposta por vários métodos diferentes. Em geral, precisaremos de métodos mais sistemáticos para resolver problemas de forma:</p>
+<blockquote class="blockquote" id="blockquote-2"><p id="p-117">Encontre o valor máximo de <span class="process-math">\(y = f(x)\)</span> sujeito a <span class="process-math">\(a \leq x \leq b\)</span></p></blockquote>
+<p id="p-118">Para fazer isso, precisamos examinar como uma função se parece perto dos seus valores máximo e mínimo.</p></section><section class="subsection" id="ssec_maxmin"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.1</span> <span class="title">Máximos e Mínimos Locais e Globais</span>
+</h3>
+<p id="p-119">Começamos com a pergunta:</p>
+<blockquote class="blockquote" id="blockquote-3"><p id="p-120">Suponha que o valor máximo (ou mínimo) de <span class="process-math">\(f(x)\)</span> seja <span class="process-math">\(f(c)\)</span> então o que isso diz nos sobre <span class="process-math">\(c\text{?}\)</span></p></blockquote>
+<p id="p-121">Observe que ainda não tornamos as ideias de máximo e mínimo muito precisas. No momento, considere o máximo como “o maior valor” e o mínimo como “o menor valor”.</p>
+<article class="warning remark-like" id="warning-1"><h4 class="heading">
+<span class="type">Atenção</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h4>
+<p id="p-122">É importante distinguir entre “o menor valor” e “a menor magnitude”. Por exemplo, porque</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-37">
+\begin{gather*}
+-5 \lt -1
+\end{gather*}
+</div>
+<p class="continuation">o número <span class="process-math">\(-5\)</span> é menor que <span class="process-math">\(-1\text{.}\)</span> Mas a magnitude de <span class="process-math">\(-1\text{,}\)</span> que é <span class="process-math">\(|-1|=1\text{,}\)</span> é menor que a magnitude de <span class="process-math">\(-5\text{,}\)</span> que é <span class="process-math">\(|-5|=5\text{.}\)</span> Assim, o menor número do conjunto <span class="process-math">\(\{-1, -5\}\)</span> é <span class="process-math">\(-5\text{,}\)</span> enquanto o número no conjunto <span class="process-math">\(\{-1,-5\}\)</span> que tem o menor magnitude é <span class="process-math">\(-1\text{.}\)</span></p></article><p id="p-123">Agora, de volta a pensar sobre o que acontece em torno de um máximo. Suponha que o valor máximo de <span class="process-math">\(f(x)\)</span> seja <span class="process-math">\(f(c)\text{,}\)</span> então para todos os pontos “próximos”, a função deve ser menor.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/loc_max.svg" role="img" class="contained"></div></div></div>
+<p id="p-124">Considere a derivada de <span class="process-math">\(f\)</span> em <span class="process-math">\(c\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-38">
+\begin{align*}
+f'(c) \amp= \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}.
+\end{align*}
+</div>
+<p class="continuation">Divida o limite acima nos limites laterais à esquerda e à direita:</p>
+<ul class="disc">
+<li id="li-17"><p id="p-derived-li-17">Considere pontos à direta de <span class="process-math">\(x=c\text{,}\)</span> Para todo <span class="process-math">\(h \gt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-39">
+\begin{align*}
+f(c+h) \amp \le f(c) \amp \text{o que implica que}\\
+f(c+h)-f(c) \amp\le 0 \amp \text{o que também implica}\\
+\frac{f(c+h)-f(c)}{h} \amp \le 0 \amp \text{já que }
+\frac{\text{negativo}}{\text{positivo}} = \text{negativo}.
+\end{align*}
+</div>Mas agora se apertarmos <span class="process-math">\(h \to 0\)</span> obtemos<div class="displaymath process-math" data-contains-math-knowls="" id="md-40">
+\begin{align*}
+\lim_{h \to 0^+} \frac{f(c+h)-f(c)}{h} \amp\leq 0
+\end{align*}
+</div>(desde que o limite exista).</p></li>
+<li id="li-18"><p id="p-derived-li-18">Considere pontos à esquerda de <span class="process-math">\(x=c\text{.}\)</span> Para todo <span class="process-math">\(h \lt 0\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-41">
+\begin{align*}
+f(c+h) \amp \le f(c) \amp \text{o que implica que}\\
+f(c+h)-f(c) \amp\le 0 \amp \text{o que também implica}\\
+\frac{f(c+h)-f(c)}{h} \amp \ge 0 \amp \text{já que }
+\frac{\text{negativo}}{\text{negativo}} = \text{positivo}.
+\end{align*}
+</div>Mas agora se apertarmos <span class="process-math">\(h \to 0\)</span> obtemos<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
+\begin{align*}
+\lim_{h \to 0^-} \frac{f(c+h)-f(c)}{h} \amp\geq 0
+\end{align*}
+</div>(desde que o limite exista).</p></li>
+<li id="li-19"><p id="p-derived-li-19">Portanto, se a derivada <span class="process-math">\(f'(c)\)</span> existir, os limites à direita e à esquerda acima devem ser iguais, o que força <span class="process-math">\(f'(c) = 0\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Usando um raciocínio semelhante, pode-se concluir a mesma coisa supondo que o valor mínimo de <span class="process-math">\(f(x)\)</span> seja em <span class="process-math">\(f(c)\text{.}\)</span> Contudo, podemos concluir que</p>
+<article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Valor Máximo ou Mínimo e a Derivada.</span></h4>
+<ul id="p-125" class="disc">
+<li id="li-20"><p id="p-derived-li-20">Se o valor máximo de <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(f(c)\)</span> e <span class="process-math">\(f'(c)\)</span> existir, então <span class="process-math">\(f'( c)=0\text{.}\)</span></p></li>
+<li id="li-21"><p id="p-derived-li-21">Se o valor mínimo de <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(f(c)\)</span> e <span class="process-math">\(f'(c)\)</span> existir, então <span class="process-math">\(f'( c)=0\text{.}\)</span></p></li>
+</ul></article><p id="p-126">Observe duas coisas sobre o raciocínio acima:</p>
+<ul class="disc">
+<li id="li-22"><p id="p-derived-li-22">Em primeiro lugar, para que o argumento funcione, só precisa que <span class="process-math">\(f(x) \lt f(c)\)</span> para <span class="process-math">\(x\)</span> próximo de <span class="process-math">\(c\)</span> — não importa o que aconteça quando <span class="process-math">\(x\)</span> assume valores distantes de <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-23"><p id="p-derived-li-23">Em segundo lugar, no argumento acima, precisamos considerar <span class="process-math">\(f(x)\)</span> para <span class="process-math">\(x\)</span> tanto à esquerda quanto à direita de <span class="process-math">\(c\text{.}\)</span> Se a função <span class="process-math">\(f(x)\)</span> for definida em um intervalo fechado <span class="process-math">\([a,b]\text{,}\)</span> então o argumento acima só se aplica quando <span class="process-math">\(a \lt c \lt b\)</span> — não quando <span class="process-math">\(c\)</span> for um dos pontos de extremidade <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Considere a função abaixo</p>
+<figure class="figure figure-like" id="fig1-max-min"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="images/maxmin.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-127">Esta função tem apenas 1 valor máximo (o ponto verde médio no gráfico) e 1 valor mínimo (o ponto azul mais à direita), porém tem 4 pontos nos quais a derivada é zero. Nos pequenos intervalos em torno daqueles pontos onde a derivada é zero, podemos ver que a função é <em class="emphasis">localmente</em> um máximo ou mínimo, mesmo que não seja o máximo ou mínimo <em class="emphasis">global</em>. Precisamos ter mais cuidado na distinção entre esses casos.</p>
+<article class="definition definition-like" id="def_APPlocalMaxMin"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h4>
+<p id="p-128">Seja <span class="process-math">\(a\le b\)</span> e a função <span class="process-math">\(f(x)\)</span> seja definida para todos os <span class="process-math">\(x \in [a,b]\text{.}\)</span> Agora seja <span class="process-math">\(a \leq c \leq b\text{,}\)</span> então</p>
+<ul class="disc">
+<li id="li-24"><p id="p-derived-li-24">Dizemos que <span class="process-math">\(f(x)\)</span> tem um mínimo global (ou absoluto) em <span class="process-math">\(x=c\)</span> se <span class="process-math">\(f(x)\ge
+f(c)\)</span> para todos os <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+<li id="li-25"><p id="p-derived-li-25">Da mesma forma, dizemos que <span class="process-math">\(f(x)\)</span> tem um máximo global (ou absoluto) em <span class="process-math">\(x=c\)</span> se <span class="process-math">\(f(x)\le f(c)\)</span> para todos os <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Agora seja <span class="process-math">\(a \lt c \lt b\)</span> (observe as desigualdades estritas), então</p>
+<ul class="disc">
+<li id="li-26"><p id="p-derived-li-26">WDizemos que <span class="process-math">\(f(x)\)</span> tem um mínimo local em <span class="process-math">\(x=c\)</span> se houver <span class="process-math">\(a'\)</span> e <span class="process-math">\(b'\)</span> obedecendo <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> tal que <span class="process-math">\(f(x)\ge f(c)\)</span> para todos os <span class="process-math">\(x\)</span> obedecendo a <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span> Note a desigualdade <em class="emphasis">estrita</em> em <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
+<li id="li-27"><p id="p-derived-li-27">Da mesma forma, dizemos que <span class="process-math">\(f(x)\)</span> tem um máximo local em <span class="process-math">\(x=c\)</span> se houver <span class="process-math">\(a'\)</span> e <span class="process-math">\(b'\)</span> obedecendo <span class="process-math">\(a\le a' \lt c \lt b'\le b\)</span> tal que <span class="process-math">\(f(x)\le f(c)\)</span> para todos os <span class="process-math">\(x\)</span> obedecendo a <span class="process-math">\(a' \lt x \lt b'\text{.}\)</span> Note a desigualdade <em class="emphasis">estrita</em> em <span class="process-math">\(a' \lt c \lt b'\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Os máximos e mínimos globais de uma função são chamados <dfn class="terminology">extremos globais</dfn> da função, enquanto os máximos e mínimos locais são chamados <dfn class="terminology">extremos locais</dfn>.</p></article><p id="p-129">A função da <a href="" class="xref" data-knowl="./knowl/fig1-max-min.html" title="Figura 2.3">Figura 2.3</a> possui 2 máximos locais e 2 mínimos locais. O máximo global ocorre no ponto verde central (que também é um máximo local), enquanto o mínimo global ocorre no ponto azul mais à direita (que não é um mínimo local).</p>
+<p id="p-130">Usando a definição acima, podemos resumir o que aprendemos acima como o seguinte teorema</p>
+<article class="theorem theorem-like" id="thm_APPlocalMaxMin"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h4>
+<p id="p-131">Se uma função <span class="process-math">\(f(x)\)</span> tem um máximo local ou mínimo local em <span class="process-math">\(x=c\)</span> e se <span class="process-math">\(f'(c)\)</span> existir, então <span class="process-math">\(f'(c)=0\text{.}\)</span></p></article><ul id="p-132" class="disc">
+<li id="li-28"><p id="p-derived-li-28">Muitas vezes (mas nem sempre) acontece que, quando <span class="process-math">\(f(x)\)</span> tem um máximo local em <span class="process-math">\(x=c\text{,}\)</span> a função <span class="process-math">\(f(x)\)</span> aumenta estritamente à medida que <span class="process-math">\(x\)</span> se aproxima de <span class="process-math">\(c\)</span> pela esquerda e diminui estritamente quando <span class="process-math">\(x\)</span> se aproxima de  <span class="process-math">\(c\)</span> pela direita. Ou seja, <span class="process-math">\(f'(x) \gt 0\)</span> para <span class="process-math">\(x\)</span>  à esquerda de <span class="process-math">\(c\)</span> e <span class="process-math">\(f'(x) \lt 0\)</span> para <span class="process-math">\(x\)</span> apenas à direita de <span class="process-math">\(c\text{.}\)</span> Então, já que <span class="process-math">\(f'(x)\)</span> está diminuindo à medida que <span class="process-math">\(x\)</span> aumenta até <span class="process-math">\(c\text{,}\)</span> temos <span class="process-math">\(f''(c) \lt 0\text{.}\)</span></p></li>
+<li id="li-29"><p id="p-derived-li-29">Por outro lado, se <span class="process-math">\(f'(c)=0\)</span> e <span class="process-math">\(f''(c) \lt 0\text{,}\)</span> então, à direita de <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> deve ser negativo, de modo que <span class="process-math">\(f(x)\)</span> está diminuindo, e logo à esquerda de <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> deve ser positivo, de modo que <span class="process-math">\(f(x)\)</span> seja crescente. Então <span class="process-math">\(f(x)\)</span> tem um máximo local em <span class="process-math">\(c\text{.}\)</span></p></li>
+<li id="li-30"><p id="p-derived-li-30">Da mesma forma, muitas vezes acontece que, quando <span class="process-math">\(f(x)\)</span> tem um mínimo local em <span class="process-math">\(x=c\text{,}\)</span> <span class="process-math">\(f'(x) \lt 0\)</span> m&gt; para <span class="process-math">\(x\)</span> logo à esquerda de <span class="process-math">\(c\)</span> e <span class="process-math">\(f'(x) \gt 0\)</span> para <span class="process-math">\(x\)</span> apenas à direita de <span class="process-math">\(c\)</span> e <span class="process-math">\(f''(x) \gt 0\text{.}\)</span></p></li>
+<li id="li-31"><p id="p-derived-li-31">Por outro lado, se <span class="process-math">\(f'(c)=0\)</span> e <span class="process-math">\(f''(c) \gt 0\text{,}\)</span> então, à direita de <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> deve ser positivo, de modo que <span class="process-math">\(f(x)\)</span> está aumentando e, logo à esquerda de <span class="process-math">\(c\)</span> <span class="process-math">\(f'(x)\)</span> deve ser negativo, para que <span class="process-math">\(f(x)\)</span> seja decrescente. Portanto, <span class="process-math">\(f(x)\)</span> tem um mínimo local em <span class="process-math">\(c\text{.}\)</span></p></li>
+</ul>
+<article class="theorem theorem-like" id="thm_APPsecondDerivTest"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h4>
+<p id="p-133">Se <span class="process-math">\(f'(c)=0\)</span> e <span class="process-math">\(f''(c) \lt 0\text{,}\)</span> então <span class="process-math">\(f(x)\)</span> tem um máximo local em <span class="process-math">\(c\text{.}\)</span></p>
+<p id="p-134">Se <span class="process-math">\(f'(c)=0\)</span> e <span class="process-math">\(f''(c) \gt 0\text{,}\)</span> então <span class="process-math">\(f(x)\)</span> tem um mínimo local em <span class="process-math">\(c\text{.}\)</span></p></article><p id="p-135">O   <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.5">Teorema 2.5</a> diz que, quando <span class="process-math">\(f(x)\)</span> tem um máximo local ou mínimo em <span class="process-math">\(x=c\text{,}\)</span> existem duas possibilidades.</p>
+<ul class="disc">
+<li id="li-32">
+<p id="p-136">A derivada <span class="process-math">\(f'(c)=0\text{.}\)</span> Este caso é ilustrado na figura a seguir.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinDE.svg" role="img" class="contained"></div></div></div>
+<p id="p-137">Observe que, neste exemplo, <span class="process-math">\(f'(x)\)</span> muda continuamente de negativo para positivo no mínimo local, assumindo o valor zero no mínimo local (o ponto vermelho).</p>
+</li>
+<li id="li-33">
+<p id="p-138">A derivada <span class="process-math">\(f'(c)\)</span> não existe. Este caso é ilustrado na figura a seguir.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinFG.svg" role="img" class="contained"></div></div></div>
+<p id="p-139">Observe que, neste exemplo, <span class="process-math">\(f'(x)\)</span> muda de forma descontínua de negativo para positivo no mínimo local (<span class="process-math">\(x=0\)</span>) e <span class="process-math">\(f'(0)\)</span> não existe.</p>
+</li>
+</ul>
+<p class="continuation">Este teorema demonstra que os pontos em que a derivada é zero ou não existe são muito importantes. Por isso, na definição a seguir, tais pontos serão nomeados.</p>
+<article class="definition definition-like" id="def_APPcriticalPoint"><h4 class="heading">
+<span class="type">Definição</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
+</h4>
+<p id="p-140">Seja <span class="process-math">\(f(x)\)</span> uma função definida no intervalo <span class="process-math">\(a\lt x\lt b\)</span> e seja <span class="process-math">\(a \lt c\lt b\text{.}\)</span> Então</p>
+<ul class="disc">
+<li id="li-34"><p id="p-derived-li-34">se <span class="process-math">\(f'(c)\)</span> existir e for zero, chamamos <span class="process-math">\(x=c\)</span> de ponto crítico da função e</p></li>
+<li id="li-35"><p id="p-derived-li-35">se <span class="process-math">\(f'(c)\)</span> não existir então chamamos <span class="process-math">\(x=c\)</span> um ponto singular da função.</p></li>
+</ul></article><p id="p-141">Veremos agora alguns exemplos simples envolvendo máximos locais e mínimos, pontos críticos e pontos singulares. Em seguida, passaremos para máximos e mínimos globais.</p>
+<article class="example example-like" id="eg_localMinMaxA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxA"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Máximo e Mínimo local de <span class="process-math">\(x^3-6x\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxA"><article class="example example-like"><p id="p-142">Pocurar máximos e mínimos locais da função <span class="process-math">\(f(x) = x^3-6x\)</span> no intervalo  <span class="process-math">\(-2\le x\le 3\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<p id="p-143">Primeiro calculamos a derivada</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2-max-min.html" id="md-43">
+\begin{align*}
+f'(x) \amp= 3x^2-6.
+\end{align*}
+</div>
+<p class="continuation">Como este é um polinômio, ele é definido em todos os lugares do domínio e, portanto, não haverá pontos singulares. Então, agora procuramos os pontos críticos. Para isso, procuramos os zeros da derivada</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig2-max-min.html" id="md-44">
+\begin{align*}
+f'(x) \amp= 3x^2-6 = 3(x^2-2) = 3(x-\sqrt{2})(x+\sqrt{2}).
+\end{align*}
+</div>
+<p class="continuation">Esta derivada assume o valor <span class="process-math">\(0\)</span> em dois valores diferentes de <span class="process-math">\(x\text{.}\)</span> Nomeadamente <span class="process-math">\(x=c_-=-\sqrt{2}\)</span> e <span class="process-math">\(x=c_+=\sqrt{2}\text{.}\)</span> Aqui está um esboço do gráfico de <span class="process-math">\(f(x)\text{.}\)</span> <figure class="figure figure-like" id="fig2-max-min"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinA.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <p id="p-144">Da <a href="" class="xref" data-knowl="./knowl/fig2-max-min.html" title="Figura 2.9">Figura 2.9</a> vemos que</p><ul class="disc">
+<li id="li-36"><p id="p-derived-li-36"><span class="process-math">\(f(x)\)</span> tem um mínimo local em <span class="process-math">\(x=c_+\)</span> (ou seja, temos <span class="process-math">\(f(x)\ge f(c_+)\)</span> quando <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(c_+\)</span>) e</p></li>
+<li id="li-37"><p id="p-derived-li-37"><span class="process-math">\(f(x)\)</span> tem um máximo local em  <span class="process-math">\(x=c_-\)</span> (ou seja, temos <span class="process-math">\(f(x)\le f(c_-)\)</span> quando <span class="process-math">\(x\)</span> está próximo de <span class="process-math">\(c_-\)</span>) e</p></li>
+<li id="li-38"><p id="p-derived-li-38">o mínimo global de <span class="process-math">\(f(x)\text{,}\)</span> para <span class="process-math">\(x\)</span> mo intervalo <span class="process-math">\(-2\le x\le 3\text{,}\)</span> é <span class="process-math">\(x=c_+\)</span> ou seja, temos <span class="process-math">\(f(x)\ge f(c_+)\)</span> quando <span class="process-math">\(-2\le x\le 3\)</span>) e</p></li>
+<li id="li-39"><p id="p-derived-li-39">o máximo global de <span class="process-math">\(f(x)\text{,}\)</span> para <span class="process-math">\(x\)</span> no intervalo <span class="process-math">\(-2\le x\le 3\text{,}\)</span> é <span class="process-math">\(x=3\)</span> (ou seja, temos <span class="process-math">\(f(x)\le f(3)\)</span> quando <span class="process-math">\(-2\le x\le 3\)</span>).</p></li>
+</ul> <p id="p-145">Observe que construímos cuidadosamente este exemplo para ilustrar que o máximo global (ou mínimo) de uma função em um intervalo pode ou não ser também um máximo (ou mínimo) local da função.</p></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="eg_localMinMaxB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxB"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Máximo e Mínimo Local de <span class="process-math">\(x^3\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxB"><article class="example example-like"><p id="p-146">procurar máximos e mínimos locais da função <span class="process-math">\(f(x) = x^3\)</span> no intervalo <span class="process-math">\(-1\le x\le 1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
+<p id="p-147">Começamos calculando a derivada</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig3-max-min.html ./knowl/thm_APPlocalMaxMin.html" id="md-45">
+\begin{align*}
+f'(x) \amp= 3x^2.
+\end{align*}
+</div>
+<p class="continuation">Novamente, este é um polinômio e assim definido em todo o domínio. A função não terá pontos singulares, mas poderá ter pontos críticos. <p id="p-148">A derivada é zero somente quando <span class="process-math">\(x=0\text{,}\)</span> então <span class="process-math">\(x=c=0\)</span> é o único ponto crítico da função.</p> <p id="p-149">O gráfico de <span class="process-math">\(f(x)\)</span> é esboçado (ver<a href="" class="xref" data-knowl="./knowl/fig3-max-min.html" title="Figura 2.11">Figura 2.11</a>). A partir desse esboço, vemos que <span class="process-math">\(f(x)\)</span> <em class="emphasis">não tem</em> um máximo local <em class="emphasis">nem</em> um mínimo local em <span class="process-math">\(x=c\)</span> apesar do fato de que <span class="process-math">\(f'(c)=0\)</span> — temos <span class="process-math">\(f(x) \lt f(c)=0\)</span> para todo <span class="process-math">\(x \lt c=0\)</span> e <span class="process-math">\(f(x) \gt f(c)=0\)</span> para todo <span class="process-math">\(x \gt c=0\text{.}\)</span></p> <figure class="figure figure-like" id="fig3-max-min"><div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinB.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Observe que este exemplo foi construído para ilustrar que um ponto crítico (ou ponto singular) de uma função <em class="emphasis">não precisa ser um máximo local ou mínimo</em> para a função. O <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.5">Teorema 2.5</a> diz que “se  <span class="process-math">\(f(x)\)</span> tem um máximo/mínimo local em <span class="process-math">\(x=c\)</span> e se <span class="process-math">\(f\)</span> é derivável <span class="process-math">\(x=c\text{,}\)</span> então <span class="process-math">\(f'(c)=0\)</span>” . Isto <em class="alert">não diz</em> que “se <span class="process-math">\(f'(c)=0\)</span> então <span class="process-math">\(f\)</span> tem um máximo/mínimo local em <span class="process-math">\(x=c\)</span>” .</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="eg_localMinMaxC"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg_localMinMaxC"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Máximo e mínimo local de <span class="process-math">\(|x|\)</span> e <span class="process-math">\(x^{2/3}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg_localMinMaxC"><article class="example example-like"><p id="p-150">Procurar máximo e mínimo local para as funções</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
+\begin{align*}
+f(x) = |x| = \begin{cases}
+x \amp \text{se }x \ge 0\\
+-x \amp \text{se }x \lt 0
+\end{cases}
+\end{align*}
+</div>
+<p class="continuation">no intervalo <span class="process-math">\(-1\le x\le 1\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+g(x) = x^{2/3}
+\end{equation*}
+</div>
+<p class="continuation">no intervalo <span class="process-math">\(-1\le x\le 1\text{.}\)</span> Primeiro calculamos as derivadas</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/thm_APPlocalMaxMin.html" id="md-47">
+\begin{align*}
+f'(x) \amp= \begin{cases}
+1 \amp \text{se }x \gt 0\\
+\text{indefinida} \amp \text{se }x = 0\\
+-1 \amp \text{se }x \lt 0
+\end{cases}\\
+g'(x) \amp= \begin{cases}
+\frac{2}{3} x^{-1/3} \amp \text{se }x \ne 0\\
+\text{indefinida} \amp \text{se }x = 0
+\end{cases}
+\end{align*}
+</div>
+<p class="continuation">Essas derivadas <em class="emphasis">nunca</em> assumem o valor <span class="process-math">\(0\text{,}\)</span> então as funções <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\)</span> não possuem pontos críticos. No entanto, ambas as derivadas não existem no ponto <span class="process-math">\(x=0\text{,}\)</span> então esse ponto é um ponto singular para <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\text{.}\)</span> <p id="p-152">Aqui está um esboço dos gráficos de <span class="process-math">\(f(x)\)</span> e <span class="process-math">\(g(x)\text{:}\)</span></p> <figure class="figure figure-like" id="fig4-f"><div class="sidebyside"><div class="sbsrow" style="margin-left:22.5%;margin-right:22.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinC.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <figure class="figure figure-like" id="fig5-g"><div class="sidebyside"><div class="sbsrow" style="margin-left:21.5%;margin-right:21.5%;"><div class="sbspanel top" style="width:100%;"><img src="images/localMaxMinCC.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <p id="p-153">A partir das <a href="" class="xref" data-knowl="./knowl/fig4-f.html" title="Figura 2.13">Figura 2.13–2.14</a> , vemos que tanto <span class="process-math">\(f(x)\)</span> quanto <span class="process-math">\(g(x)\)</span> têm um mínimo local (e de fato global) em<span class="process-math">\(x=0\)</span> apesar de <span class="process-math">\(x=0\)</span> não ser um ponto crítico. O <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.5">Teorema 2.5</a> dis que, “se <span class="process-math">\(f(x)\)</span>tem um máximo/mínimo local em <span class="process-math">\(x=c\)</span> <em class="emphasis">e se <span class="process-math">\(f\)</span> é derivável em <span class="process-math">\(x=c\)</span></em> , então <span class="process-math">\(f'(c)=0\)</span>” . Não diz nada sobre o que acontece em pontos onde a derivada não existe. De fato, é por isso que temos que considerar tanto pontos críticos quanto pontos singulares quando procuramos máximos e mínimos.</p></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="sub-videos-2"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.2</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-40"><p id="p-154"><a class="external" href="https://youtu.be/uG4PNx-VHPw" target="_blank">Introdução a pontos máximo e mínimos.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 1 </sup></a></p></li>
+<li id="li-41"><p id="p-155"><a class="external" href="https://youtu.be/-To9rLraJE4" target="_blank">Cálculo de extremos locais.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 2 </sup></a></p></li>
+<li id="li-42"><p id="p-156"><a class="external" href="https://youtu.be/dHIBxAo5hF8" target="_blank">Encontrados máximos e mínimos locais de <span class="process-math">\(g(x)=x^4-x^5\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 3 </sup></a></p></li>
+</ul></section><section class="subsection" id="ssec_find_maxmin"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.3</span> <span class="title">Encontrando Máximos e Mínimos Globais</span>
+</h3>
+<p id="p-157">Agora temos uma técnica para encontrar máximos e mínimos locais — basta procurar valores de <span class="process-math">\(x\)</span> para os quais <span class="process-math">\(f'(x)=0\)</span> ou <span class="process-math">\(f'(x)\)</span> não existe. E quanto a encontrar máximos e mínimos globais? Começaremos afirmando explicitamente que, sob hipóteses apropriadas, os máximos e mínimos globais são garantidos.</p>
+<article class="theorem theorem-like" id="thm_APPglobalMaxMinExist"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
+</h4>
+<p id="p-158">Seja a função <span class="process-math">\(f(x)\)</span> definida e contínua em um intervalo fechado finito, <span class="process-math">\(-\infty \lt a\le x\le b \lt \infty\text{.}\)</span> Então <span class="process-math">\(f(x)\)</span>atinge um máximo e um mínimo pelo menos uma vez. Ou seja, existem números <span class="process-math">\(a\le x_m, x_M\le b\)</span> tais que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
+\begin{gather*}
+f(x_m)\le f(x)\le f(x_M)
+\qquad\text{for all }a\le x\le b
+\end{gather*}
+</div></article><p id="p-159">Então, vamos considerar novamente a questão</p>
+<blockquote class="blockquote" id="blockquote-4"><p id="p-160">Suponha que o valor máximo (ou mínimo) de <span class="process-math">\(f(x)\text{,}\)</span> para <span class="process-math">\(a\le x\le b\text{,}\)</span> seja <span class="process-math">\(f(c)\)</span> . O que isso nos diz sobre <span class="process-math">\(c\text{?}\)</span></p></blockquote>
+<p id="p-161">Se <span class="process-math">\(c\)</span> obedece a <span class="process-math">\(a \lt c \lt b\)</span> (observe as desigualdades estritas), então <span class="process-math">\(f\)</span> tem um máximo local (ou mínimo) em <span class="process-math">\(x=c\)</span> e o <a href="" class="xref" data-knowl="./knowl/thm_APPlocalMaxMin.html" title="Teorema 2.5">Teorema 2.5</a> nos diz que <span class="process-math">\(f'(c)=0\)</span> ou <span class="process-math">\(f'(c)\)</span> não existe. O único outro lugar em que um máximo ou mínimo pode ocorrer é nas extremidades do intervalo. Podemos resumir isso como:</p>
+<article class="theorem theorem-like" id="thm_APPglobalMaxMin"><h4 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
+</h4>
+<p id="p-162">Se <span class="process-math">\(f(x)\)</span> tiver um máximo global ou um mínimo global, para <span class="process-math">\(a\le x\le b\text{,}\)</span> em <span class="process-math">\(x=c\)</span> então existem 3 possibilidades. Ou</p>
+<ul class="disc">
+<li id="li-43"><p id="p-derived-li-43"><span class="process-math">\(f'(c)=0\text{,}\)</span> ou</p></li>
+<li id="li-44"><p id="p-derived-li-44"><span class="process-math">\(f'(c)\)</span> não existe, ou</p></li>
+<li id="li-45"><p id="p-derived-li-45"><span class="process-math">\(c=a\)</span> ou  <span class="process-math">\(c=b\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Ou seja, um máximo ou mínimo global deve ocorrer em um ponto crítico, um ponto singular ou nas extremidades do intervalo.</p></article><p id="p-163">O <a href="" class="xref" data-knowl="./knowl/thm_APPglobalMaxMin.html" title="Teorema 2.16">Teorema 2.16</a> fornece a base para um método para encontrar os valores máximo e mínimo de <span class="process-math">\(f(x)\)</span> para <span class="process-math">\(a\le x\le b\text{:}\)</span></p>
+<article class="corollary theorem-like" id="cor_find_maxmin"><h4 class="heading">
+<span class="type">Corolário</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
+</h4>
+<p id="p-164">Seja <span class="process-math">\(f(x)\)</span> uma função no intervalo <span class="process-math">\(a \leq x \leq b\text{.}\)</span> Então para encontrar o máximo e o mínimo global da função</p>
+<ul class="disc">
+<li id="li-46">
+<p id="p-165">Faça uma lista de todos os valores de <span class="process-math">\(c\text{,}\)</span> com <span class="process-math">\(a\le c\le b\text{,}\)</span> para os quais</p>
+<ul class="circle">
+<li id="li-47"><p id="p-derived-li-47"><span class="process-math">\(f'(c)=0\text{,}\)</span> ou</p></li>
+<li id="li-48"><p id="p-derived-li-48"><span class="process-math">\(f'(c)\)</span> não existe, ou</p></li>
+<li id="li-49"><p id="p-derived-li-49"><span class="process-math">\(c=a\)</span> ou <span class="process-math">\(c=b\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">Isto é — calcule a função em todos os pontos críticos, pontos singulares e os pontos extremos.</p>
+</li>
+<li id="li-50"><p id="p-derived-li-50">Avalie <span class="process-math">\(f(c)\)</span> para cada <span class="process-math">\(c\)</span> nessa lista. O maior (ou menor) desses valores é o maior (ou menor) valor de <span class="process-math">\(f(x)\)</span> para <span class="process-math">\(a\le x\le b\text{.}\)</span></p></li>
+</ul></article><p id="p-166">Vamos agora demonstrar como usar essa estratégia. A função neste primeiro exemplo não é muito simples — mas é um bom exemplo de uma função que contém um ponto singular e um ponto crítico.</p>
+<article class="example example-like" id="APPglobalMaxMinA"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-APPglobalMaxMinA"><h4 class="heading">
+<span class="type">Exemplo</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Encontrar o máximo e mínimo de <span class="process-math">\(2x^{5/3}+3x^{2/3}\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-APPglobalMaxMinA"><article class="example example-like"><p id="p-167">Encontre o maior e o menor valor da função <span class="process-math">\(f(x)=2x^{5/3}+3x^{2/3}\)</span> para <span class="process-math">\(-1\le
+x\le 1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solução</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
+<p id="p-168">Vamos aplicar o método do <a href="" class="xref" data-knowl="./knowl/cor_find_maxmin.html" title="Corolário 2.17">Corolário 2.17</a>. Talvez seja mais fácil encontrar os valores nas extremidades dos intervalos e então passar para os valores em quaisquer pontos críticos ou singulares.</p>
+<ul class="disc">
+<li id="li-51"><p id="p-derived-li-51">Observe que podemos reescrever a função fatorando-a:<div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
+\begin{align*}
+f(x) \amp= 2x^{5/3}+3x^{2/3} = x^{2/3} \cdot \left(2x + 3\right)
+\end{align*}
+</div></p></li>
+<li id="li-52"><p id="p-derived-li-52">Vamos calcular a função nas extremidades do intervalo:<div class="displaymath process-math" data-contains-math-knowls="" id="md-50">
+\begin{align*}
+f(1) \amp= 2 +3 = 5\\
+f(-1) \amp= 2 \cdot(-1)^{5/3} + 3\cdot (-1)^{2/3} =-2 + 3 = 1
+\end{align*}
+</div></p></li>
+<li id="li-53"><p id="p-derived-li-53">Para calcular a função nos pontos críticos e singulares, primeiro precisamos encontrar a derivada:<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
+\begin{align*}
+f'(x) \amp= 2 \cdot \frac{5}{3} x^{2/3} + 3 \cdot \frac{2}{3} x^{-1/3}\\
+\amp= \frac{10}{3} x^{2/3} + 2 x^{-1/3}\\
+\amp= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div></p></li>
+<li id="li-54"><p id="p-derived-li-54">Observe que o numerador e o denominador são definidos para todos os <span class="process-math">\(x\text{.}\)</span> O único lugar em que a derivada é indefinida é quando o denominador é zero. Portanto, o único ponto singular está em <span class="process-math">\(x=0\text{.}\)</span> O valor da função correspondente é<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
+\begin{align*}
+f(0) \amp= 0
+\end{align*}
+</div></p></li>
+<li id="li-55"><p id="p-derived-li-55">Para encontrar os pontos críticos, precisamos resolver <span class="process-math">\(f'(x) = 0\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
+\begin{align*}
+0 \amp= \frac{10 x + 6}{3 x^{1/3}}
+\end{align*}
+</div>Portanto, devemos ter <span class="process-math">\(10x=-6\)</span> ou <span class="process-math">\(x=-3/5\text{.}\)</span> O valor da função correspondente é<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
+\begin{align*}
+f(x) \amp= x^{2/3} \cdot \left(2x + 3\right)\\
+f(-3/5) \amp= (-3/5)^{2/3} \cdot\left(2 \cdot \frac{-3}{5} + 3 \right)\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{-6 + 15}{5}\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5} \approx 1.28
+\end{align*}
+</div>Observe que, se não quisermos aproximar a raiz (se, por exemplo, não tivermos uma calculadora à mão), também podemos escrever<div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
+\begin{align*}
+f(-3/5) \amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{5}\\
+\amp= \left(\frac{9}{25}\right)^{1/3} \cdot \frac{9}{25} \cdot 5\\
+\amp= 5 \cdot \left( \frac{9}{25} \right)^{4/3}
+\end{align*}
+</div>Já que <span class="process-math">\(0 \lt 9/25 \lt 1\text{,}\)</span> sabemos que <span class="process-math">\(0 \lt \left( \frac{9}{25} \right)^{4/3} \lt
+1\text{,}\)</span> e portanto<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+\begin{gather*}
+0 \lt f(-3/5) = 5 \cdot \left( \frac{9}{25} \right)^{4/3} \lt 5.
+\end{gather*}
+</div></p></li>
+<li id="li-56">
+<p id="p-169">Resumimos nosso trabalho nesta tabela</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines"><span class="process-math">\(c\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-\frac{3}{5}\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">tipo</td>
+<td class="c m b1 r1 l0 t0 lines">ponto crítico</td>
+<td class="c m b1 r1 l0 t0 lines">ponto singular</td>
+<td class="c m b1 r1 l0 t0 lines">extremidade</td>
+<td class="c m b1 r1 l0 t0 lines">extremidade</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(f(c)\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{9}{5}\root{3}\of{\frac{9}{25}}\approx 1.28\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+</table></div></div></div>
+</li>
+<li id="li-57"><p id="p-derived-li-57">O maior valor de <span class="process-math">\(f\)</span> na tabela é <span class="process-math">\(5\)</span> e o menor valor de <span class="process-math">\(f\)</span> na tabela é <span class="process-math">\(0\text{.}\)</span></p></li>
+<li id="li-58"><p id="p-derived-li-58">Assim, no intervalo <span class="process-math">\(-1\leq x \leq 1\)</span> o máximo global de <span class="process-math">\(f\)</span> é <span class="process-math">\(5\)</span> e é obtido em <span class="process-math">\(x= 1\text{,}\)</span> enquanto o valor mínimo global de <span class="process-math">\(f(x)\)</span> é <span class="process-math">\(0\)</span> e é obtido em <span class="process-math">\(x=0\text{.}\)</span></p></li>
+<li id="li-59">
+<p id="p-170">Para completar, também esboçamos o gráfico dessa função no mesmo intervalo.</p>
+<figure class="figure figure-like" id="figure-6"><div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel top" style="width:100%;"><img src="images/globalMaxMinA.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figura</span><span class="space"> </span><span class="codenumber">2.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</li>
+</ul>
+</div></div>
+</div></article></div></section><section class="subsection" id="sub-videos-global"><h3 class="heading hide-type">
+<span class="type">Subseção</span> <span class="codenumber">2.4</span> <span class="title">Sugestão de vídeos</span>
+</h3>
+<ul class="disc">
+<li id="li-60"><p id="p-171"><a class="external" href="https://youtu.be/oE3SYza5j5E" target="_blank">Encontrando Máximo e Mínimos Globais (Extremos) de <span class="process-math">\(f(x)=8\ln{x}-x^2\)</span> em <span class="process-math">\([1, 4]\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 4 </sup></a></p></li>
+<li id="li-61"><p id="p-172"><a class="external" href="https://youtu.be/dP6GxjZkA9g" target="_blank">Encontrando Máximo e Mínimo Globais (Extremos) de <span class="process-math">\(g(x)=x^2\ln{x}\)</span> no seu domínio.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 5 </sup></a></p></li>
+<li id="li-62"><p id="p-173"><a class="external" href="https://youtu.be/dHIBxAo5hF8" target="_blank">Encontrados máximos e mínimos locais de <span class="process-math">\(g(x)=x^4-x^5\text{.}\)</span></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 6 </sup></a></p></li>
+</ul></section><section class="exercises" id="exercises-max-min"><h3 class="heading hide-type">
+<span class="type">Exercícios</span> <span class="codenumber">2.5</span> <span class="title">Exercícios</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/uG4PNx-VHPw</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/-To9rLraJE4</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/dHIBxAo5hF8</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/oE3SYza5j5E</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/dP6GxjZkA9g</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">youtu.be/dHIBxAo5hF8</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

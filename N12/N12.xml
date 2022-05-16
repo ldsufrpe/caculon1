@@ -82,7 +82,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </docinfo>
 
     <article xml:id="calc-limite-derivada">
-        <title>Derivadas: N12</title>
+        <title>Aplicações das Derivadas: N10</title>
 
         <frontmatter>
 
@@ -110,7 +110,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </introduction>
 
 
-
+        <xi:include href="./taxa-variacao.xml" />
         <xi:include href="./otimizacao.xml" />
 
 
