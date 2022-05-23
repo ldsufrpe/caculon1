@@ -129,7 +129,7 @@
 
                 <p>
                     Considere um balão de hélio subindo verticalmente de um ponto fixo a <m>200m</m> de distância de um
-                    observador.
+                    observador. Quando ângulo é de  <m>\pi/4</m> o mesmo varia a uma taxa de <m>0,05</m> radianos por segundo.
                     O quão rápido o balão sobe?.
                 </p>
             </statement>
@@ -137,9 +137,8 @@
             <solution>
                 <p>
 
-                    Calcular a velocidade diretamente é difícil, mas podemos medir ângulos. Observe que quando o ângulo
-                    é de  <m>\pi/4</m> o mesmo varia a uma taxa de <m>0,05</m> radianos por segundo.
-                    A figura a seguir destaca as variaveis do problema:
+
+                    A figura a seguir destaca as variáveis do problema:
 
                     <sidebyside width="65%">
                         <image source="images/balloon1"/>
