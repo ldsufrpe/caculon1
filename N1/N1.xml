@@ -1415,7 +1415,7 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
 <example xml:id="ex-12">
     <statement>
         <p>
-            Encontre as assíntotas verticais para <m>f(x)=\dfrac{x^2-2x}{3x-2x^2}</m>.
+            Encontre as assíntotas verticais para <m>f(x)=\dfrac{x^2+1}{3x-2x^2}</m>.
         </p>
     </statement>
     <solution>
@@ -1430,17 +1430,17 @@ quando o valor da função <m>f(x)</m> torna-se arbitrariamente grande e negativ
             
 <p>            
 Se <m>x</m> está próximo de <m>0</m> mas maior que <m>0</m>, então o denominador <m>x(3-2x)</m> é um 
-        número positivo pequeno. Portanto, o quociente <m>\dfrac{x^2-2x}{3x-2x^2}</m> é um número positivo grande. 
-        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=+\infty.</me>
+        número positivo pequeno. Portanto, o quociente <m>\dfrac{x^2+1}{3x-2x^2}</m> é um número positivo grande.
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2+1}{3x-2x^2}=+\infty.</me>
         
     Analogamente, 
 
 Se <m>x</m> está próximo de <m>\frac{3}{2}</m> mas maior que <m>\frac{3}{2}</m>, então o denominador <m>x(3-2x)</m> é um 
-        número negativo pequeno. Portanto, o quociente <m>\dfrac{x^2-2x}{3x-2x^2}</m> é um número negativo grande. 
-        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2-2x}{3x-2x^2}=-\infty.</me>
+        número negativo pequeno. Portanto, o quociente <m>\dfrac{x^2+1}{3x-2x^2}</m> é um número negativo grande.
+        Então, intuitivamente, temos que <me>\lim\limits_{x\to 3^+}\dfrac{x^2+1}{3x-2x^2}=-\infty.</me>
      
     Por fim, de acordo com a <xref ref="def-assintota-vertical"/> as retas <m>x=0</m> e <m>x=\frac{3}{2}</m> são assíntotas verticas 
-    ao gráfico de <m>f(x)=\dfrac{x^2-2x}{3x-2x^2}</m>.
+    ao gráfico de <m>f(x)=\dfrac{x^2+1}{3x-2x^2}</m>.
     </p>
     </solution>
 </example>
