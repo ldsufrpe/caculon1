@@ -170,13 +170,13 @@ usando as operações de soma, subtração, divisão e composição.
 <subsection xml:id="subsec-lim-basico"><title>Limites básicos</title>
 
 <p>
-  Começamos com o limites de duas funções muito simples: uma função constante e uma função linear. 
+  Começamos com o limite de duas funções muito simples: uma função constante e uma função linear.
 </p>
 
 
 <assemblage xml:id="th-triviais"><title>Limites essenciais</title>
 <p>
-Seja <m>a,c</m> números reais. Os seguintes limites são verdadeiros
+Sejam <m>a</m> e <m>c</m> números reais. Os seguintes limites são verdadeiros
 <md>
 <mrow>
     \lim\limits_{x \to a} c \amp = c \amp \text{ e }\amp\amp
@@ -193,7 +193,7 @@ Em seguida apresentaremos o teorema que sintetiza todas as propriedades aritmét
 
 <theorem xml:id="th-prop-limt"><title>Propriedades de limites</title>
 <statement><p>
-Seja m <m>a,c </m> números reais,  <m>f(x)</m> e <m>g(x)</m> funções em que o limite existe quando <m>x</m> tente para <m>a</m>. Então,
+Sejam <m>a</m> e <m>c</m>  números reais,  <m>f(x)</m> e <m>g(x)</m> funções em que o limite existe quando <m>x</m> tente para <m>a</m>. Então,
 
 
 <ol>
@@ -475,7 +475,7 @@ Como o limite do denominador é diferente de zero, usamos as propriedades para o
 
 Devemos ter cuidado ao calcular o limite de um quociente <mdash/> que é o quociente dos limites, exceto quando o limite do denominador é zero.
  Quando o limite do denominador é zero o <xref ref="th-prop-limt"/>  <alert>não se aplica</alert>, e 
- algumas das possibilidade a seguir podem acontecer:</p>
+ algumas das possibilidadez a seguir podem acontecer:</p>
 <p>
 <ol>
 <li>
@@ -530,7 +530,7 @@ Se o limite do numerador for zero, então o <xref ref="th-prop-limt"/>  não nos
 
   <figure xml:id="fig1">
   <caption></caption>
-  <image source="images/image9-sage.svg" width="40%">
+  <image source="images/fig1.svg" width="40%">
     <description>(for accessibility)</description>
   </image>
 </figure>
@@ -1045,7 +1045,7 @@ de encontrar os fatores comuns. Podemos simplificar o denominador <m>\sqrt{1+x}-
 <mrow>
   \frac{x}{\sqrt{1+x}-1}
   \amp=\frac{x}{\sqrt{1+x}-1} \times \frac{\sqrt{1+x}+1}{\sqrt{1+x}+1}
-  \amp \ct{multiplica por $\frac{\text{conjugate}}{\text{conjugate}}=1$}
+  \amp \ct{multiplica por $\frac{\text{conjugado}}{\text{conjugado}}=1$}
 </mrow><mrow>
     \amp=\frac{x \left( \sqrt{1+x}+1\right)}
   {\left(\sqrt{1+x}-1\right)\left(\sqrt{1+x}+1\right)}
