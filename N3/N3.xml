@@ -533,7 +533,7 @@ Usando a definição de continuidade lateral, podemos agora definir o que signif
 
      
         <p>
-        Esse caso é similar aos anteriores. Note que para <m>x \neq 1</m> <m>h(x)</m> é uma função racional, e portanto,  contínua. 
+        Esse caso é similar aos anteriores. Note que para <m>x \neq 1</m> <m>h(x)</m> é uma função racional, e portanto, contínua.
         Resta verificar o caso em <m>x=1</m>. Por definição de <m>h(x)</m>, <m>h(1) = 0</m>. Vamos calcular o limite quando <m>x\to 1</m> 
          e depois verificar se está de acordo com a <xref ref="def_1_6_1"/>. Para isso,
 <md>
@@ -629,7 +629,7 @@ são contínuas em todos os números rais.
 <p>
 Agora, como podemos obter qualquer polinômio e qualquer função racional adicionando, subtraindo,
  multiplicando e dividindo cuidadosamente as funções <m>f(x)=x</m> e <m>g(x)=c</m>,
- o <xref ref="lem_1_6_1"/> acima combina com o  <xref ref="thm_arith_cont"/> para nos dar o resultado que queremos:
+ o <xref ref="lem_1_6_1"/> acima combinado com o  <xref ref="thm_arith_cont"/> para nos dar o resultado que queremos:
 </p>
 
 <theorem><title>Continuidade de polinômios e funções racionais</title>
@@ -638,7 +638,7 @@ Todo polinômio é contínuo em todos os lugares. Da mesma forma, toda função 
  exceto onde seu denominador é zero (ou seja, em todo o seu domínio).</p></statement>
 </theorem>
 
-<p>Com um pouco mais de trabalho, esse resultado pode ser estendido para tipos mais amplos de funções::</p>
+<p>Com um pouco mais de trabalho, esse resultado pode ser estendido para tipos mais amplos de funções:</p>
 
 <theorem xml:id="th-tipos-continuas">
 <statement><p>
@@ -810,7 +810,7 @@ Para que <m>g(x)</m> seja definido e contínuo, devemos restringir <m>x</m> para
 
 
 Portanto, <m>\sin(x)\geq 0</m> quando <m>x\in[0,\pi]</m> ou <m>x\in [2\pi,3\pi]</m> ou <m>x\in[-2\pi,-\pi]</m> ou<ellipsis/>. Para ser mais preciso, <m>\sin(x)</m> 
-é positivo quando <m>x \in [2n\pi,(2n+1)\pi]</m> para qualquer inteiro <m>n</m>. Portanto, <m>g(x)</m> é contínua quando <m>x \n [2 n\pi,(2n+1)\pi]</m> para qualquer número inteiro <m>n</m> .
+é positivo quando <m>x \in [2n\pi,(2n+1)\pi]</m> para qualquer inteiro <m>n</m>. Portanto, <m>g(x)</m> é contínua quando <m>x \in [2 n\pi,(2n+1)\pi]</m> para qualquer número inteiro <m>n</m> .
 </p>
 
 

@@ -151,8 +151,8 @@ da mesma forma <m>f(c) = f(1) = 3 + 4 + 3 = 10</m>. Assim, como <m>f</m> é cont
   <webwork-reps version="1" xml:id="extracted-webwork-2" ww-id="webwork-2">
     <static seed="2" source="pretext-continuidade/problem3.pg">
       <statement><p>Encontre o valor da constante <m>c</m> que torna a função abaixo contínua em <m>(-\infty,\infty)</m>.
-<me>f(y) = \begin{cases}\displaystyle{cy+6}\amp \text{if}\ y\in \left(-\infty ,5\right]\cr
-\displaystyle{cy^{2}-6}\amp \text{if}\ y\in \left(5,\infty \right)\end{cases}</me></p>
+<me>f(y) = \begin{cases}\displaystyle{cy+6}\amp \text{se}\ y\in \left(-\infty ,5\right]\cr
+\displaystyle{cy^{2}-6}\amp \text{se}\ y\in \left(5,\infty \right)\end{cases}</me></p>
 <p><m>c=</m> <fillin name="AnSwEr0001" characters="25"/></p>
 </statement>
       <answer>
@@ -169,8 +169,8 @@ da mesma forma <m>f(c) = f(1) = 3 + 4 + 3 = 10</m>. Assim, como <m>f</m> é cont
   </webwork-reps>
   <webwork-reps version="1" xml:id="extracted-webwork-3" ww-id="webwork-3">
     <static seed="3" source="pretext-continuidade/problem4.pg">
-      <statement><p>Mostre que <me>f(x) = \begin{cases}\displaystyle{4x-1}\amp \text{if}\ x \lt  9\cr
-\displaystyle{\frac{1}{x+6}}\amp \text{if}\ x \ge 9\end{cases}</me> tem uma descontinuidade de salto em <m>9</m> calculando o limite quando <m>x</m> se aproxima de 9 pela esquerda e pela direita.</p>
+      <statement><p>Mostre que <me>f(x) = \begin{cases}\displaystyle{4x-1}\amp \text{se}\ x \lt  9\cr
+\displaystyle{\frac{1}{x+6}}\amp \text{se}\ x \ge 9\end{cases}</me> tem uma descontinuidade de salto em <m>9</m> calculando o limite quando <m>x</m> se aproxima de 9 pela esquerda e pela direita.</p>
 <p><m>\displaystyle{\lim_{x\to 9^-}f(x)} =</m><fillin name="AnSwEr0001" characters="15"/></p>
 <p><m>\displaystyle{\lim_{x\to 9^+}f(x)} =</m><fillin name="AnSwEr0002" characters="15"/></p>
 <p>Esboce o gráfico de <m>f</m>.</p>
@@ -311,8 +311,8 @@ esses valores causariam divisão por zero.</p>
 <p><alert> 3.</alert> Os limites à esquerda e à direita direita não são iguais.</p>
 <p>Seja <m>f(x) =
        \begin{cases}
-           8 x - 3, \amp \text{if}\ x\lt 9\\
-           \frac{1}{x+9}, \amp \text{if}\ x\geq 9 
+           8 x - 3, \amp \text{se}\ x\lt 9\\
+           \frac{1}{x+9}, \amp \text{se}\ x\geq 9
        \end{cases}</m></p>
 <p>Mostre que <m>f(x)</m> tem uma descontinuidade de salto em <m>x=9</m> calculando os limites da esquerda e da direita em <m>x=9</m>.</p>
 <p><m>\displaystyle{
