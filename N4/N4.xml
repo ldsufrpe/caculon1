@@ -144,7 +144,7 @@ mas os detalhes são um pouco diferentes. Aqui vamos discutir sobre a distinçã
 </p>
 
 
-<definition xml:id="def_1_5_1"><title>Limits at infinity <mdash/> informal</title>
+<definition xml:id="def_1_5_1"><title>Limites no infinito <mdash/> informal</title>
 <statement><p>
 Escrevemos
 <md>
@@ -192,7 +192,7 @@ alguns resultados bem simples.
 
 <theorem xml:id="thm_basic_lim_inf">
 <statement><p>
-Seja  uma constante então os seguintes limites são verdadeiros
+Seja <m>c</m> uma constante então os seguintes limites são verdadeiros
 <md>
 <mrow>
   \lim_{x \to \infty} c \amp= c \amp \lim_{x \to -\infty} c \amp= c
