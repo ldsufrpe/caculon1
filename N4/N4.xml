@@ -709,7 +709,7 @@ mas não pode ser determinado a partir das informações fornecidas no teorema. 
 <example xml:id="ex-5"><title>Atenção com a aritmética de limites infinitos</title>
 <statement>
     <p>
-        Consider the following 3 functions:
+       Considere as funções a seguir:
 <md>
 <mrow>
 f(x)\amp=x^{-2} \amp g(x)\amp=2x^{-2} \amp h(x)\amp=x^{-2}-1.
@@ -872,9 +872,9 @@ O <xref ref="thm_arith_inf_lim"/> não pode nos ajudar a calcular essas diferen�
             <md>
                 <mrow>\lim\limits_{x\to +\infty}\dfrac{x^2-1}{x^2+1} \amp =  \lim\limits_{x \to +\infty}\frac{x^2\left(1 - \dfrac{1}{x^2}\right)}{x^2\left(1 + \dfrac{1}{x^2}\right)}</mrow>
                 <mrow> \amp = \frac{\lim\limits_{x\to +\infty} 1- \lim\limits_{x\to +\infty}\dfrac{1}{x^2}}{\lim\limits_{x\to +\infty} 1+ \lim\limits_{x\to +\infty}\dfrac{1}{x^2}} </mrow>
-                <md>
+
                     <mrow> \amp =\frac{1-0}{1+0}=1 </mrow>
-                </md>
+
             </md>
         </p>
 
