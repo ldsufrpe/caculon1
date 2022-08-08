@@ -155,7 +155,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </definition>
 
                 <p>
-                    O gráfico nde uma função afim é uma reta cuja inclinação é <m>m</m>  e cuja intersecção com o eixo
+                    O gráfico de uma função afim é uma reta cuja inclinação é <m>m</m>  e cuja intersecção com o eixo
                     <m>y</m>
                     é <m>(0,b)</m>. Fazendo <m>y=f(x)</m>, a função afim <m>y=mx+b</m> é também chamada de
                     <term>equação reduzida da reta</term>.
@@ -369,7 +369,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <introduction>
                     <p>
-                        Seja <m>f</m> uma função e <m>P=(a, f(a))</m> e <m>Q=(x, f(x)</m> (ver<xref ref="fig1-1"/>). A
+                        Seja <m>f</m> uma função e <m>P=(a, f(a))</m> e <m>Q=(x, f(x))</m> (ver<xref ref="fig1-1"/>). A
                         inclinação da reta secante <m>PQ</m> é dada por
 
                         <mdn>
@@ -476,7 +476,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </example>
 
                 <p>
-                    Na Figura
+                    Na
                     <xref ref="fig3-2"/>
                     ilustramos outra possibilidade para a expressão da inclinação da reta tangente que é, às vezes, mais
                     fácil de ser
@@ -1029,7 +1029,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
                             <md>
-                                <mrow>f'(0) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
+                                <mrow>f'(x) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{|x+h|-|x|}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{x+h-x}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{h}{h}=1 .</mrow>
@@ -1042,7 +1042,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
                             <md>
-                                <mrow>f'(0) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
+                                <mrow>f'(x) =\amp =\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{|x+h|-|x|}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{-(x+h) + x}{h}</mrow>
                                 <mrow>= \amp \lim_{h\to 0}\frac{-h}{h}=-1 .</mrow>
@@ -1054,8 +1054,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                             <me>
                                 f'(x)=\begin{cases}
-                                x \amp\text{ se } x \gt 0\\
-                                -x \amp\text{ se } x\lt 0
+                                1 \amp\text{ se } x \gt 0\\
+                                -1 \amp\text{ se } x\lt 0
                                 \end{cases}
                             </me>
 
@@ -1082,7 +1082,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     é um exemplo clássico de que a recíproca do
                     <xref ref="th-1"/>
                     não é verdadeira. Ou seja, nem toda a função contínua é
-                    derivável. Note que a função  <m>f(x)</m>=|x| é continua em <m>(-\infy, +\infty)</m> mas não é
+                    derivável. Note que a função  <m>f(x)</m>=|x| é continua em <m>(-\infty, +\infty)</m> mas não é
                     derivável em <m>x=0</m>.
                 </p>
 
